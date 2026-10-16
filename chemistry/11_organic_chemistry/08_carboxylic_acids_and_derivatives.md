@@ -18,8 +18,6 @@ Nguyên nhân chính là điện tích âm của carboxylate được phi địn
 
 Ngược lại, cơ sở (base / 기반) liên hợp alkoxide của alcohol tập trung điện tích âm mạnh hơn trên một oxygen nên kém bền hơn.
 
-> **Nối mạch:** Cộng hưởng ổn định carboxylate nên quyết định độ acid; nhóm thế điều chỉnh ổn định đó, rồi các dẫn xuất acyl được so sánh theo khả năng rời nhóm và chuyển acyl.
-
 ## Ảnh hưởng nhóm thế tới độ acid
 
 Nhóm hút electron ổn định carboxylate qua hiệu ứng cảm ứng và làm tăng độ acid.
@@ -33,8 +31,6 @@ CH3CO2H < ClCH2CO2H < Cl2CHCO2H < Cl3CCO2H
 Hiệu ứng cảm ứng giảm theo khoảng cách, nên halogen càng xa nhóm \(CO_2H\) thì ảnh hưởng lên \(pK_a\) càng nhỏ.
 
 Ở hệ thơm, nhóm thế còn có thể ảnh hưởng qua cả cảm ứng và cộng hưởng tùy vị trí.
-
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Các dẫn xuất acyl như một họ khả năng phản ứng** nối từ **Ảnh hưởng nhóm thế tới độ acid** sang **Vì sao acid chloride phản ứng mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các dẫn xuất acyl như một họ khả năng phản ứng
 
@@ -55,15 +51,11 @@ acid chloride > anhydride > thioester ≳ ester > amide
 
 Chi tiết phụ thuộc môi trường, nhưng lô-gic (logic / 논리) chung khá bền: khả năng phản ứng được quyết định bởi **tính ái điện của carbonyl + khả năng rời của Y + mức cho electron cộng hưởng từ Y**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Vì sao acid chloride phản ứng mạnh** nối từ **Các dẫn xuất acyl như một họ khả năng phản ứng** sang **Vì sao amide bền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao acid chloride phản ứng mạnh
 
 Cl hút electron theo cảm ứng và cho electron theo cộng hưởng kém hơn O/N. Chloride cũng là nhóm rời tương đối bền.
 
 Vì vậy carbonyl trong acid chloride có tính ái điện cao và phản ứng thế acyl xảy ra dễ.
-
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Vì sao amide bền** nối từ **Vì sao acid chloride phản ứng mạnh** sang **Cơ chế thế acyl ái nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao amide bền
 
@@ -84,8 +76,6 @@ Hệ quả:
 
 Độ bền của liên kết peptide cũng bắt nguồn từ cùng hóa học này.
 
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Vì sao amide bền** đặt đầu vào cho **Cơ chế thế acyl ái nhân**, rồi **Chất trung gian tứ diện là trung tâm** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Cơ chế thế acyl ái nhân
 
 Con đường tổng quát:
@@ -100,15 +90,11 @@ Nu tấn công carbonyl carbon
 
 Điểm khác với cộng aldehyde/ketone là aldehyde và ketone không có nhóm Y gắn trực tiếp với carbonyl đủ tốt để rời đi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Cơ chế thế acyl ái nhân** đặt đầu vào cho **Chất trung gian tứ diện là trung tâm**, rồi **Chiều chuyển đổi giữa các dẫn xuất acyl** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Chất trung gian tứ diện là trung tâm
 
 Khi nucleophile tấn công carbonyl carbon sp2, hình học chuyển sang tứ diện. Số phận chất trung gian phụ thuộc độ bền tương đối của các nhóm có thể rời và trạng thái proton hóa.
 
 Xúc tác acid/cơ sở (base / 기반) thường hoạt động bằng cách làm nucleophile phản ứng mạnh hơn hoặc biến nhóm rời kém thành tiểu phân trung hòa dễ rời hơn.
-
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Chiều chuyển đổi giữa các dẫn xuất acyl** nối từ **Chất trung gian tứ diện là trung tâm** sang **Ester hóa Fischer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chiều chuyển đổi giữa các dẫn xuất acyl
 
@@ -124,8 +110,6 @@ Chiều ngược thường cần hoạt hóa vì phải thay một nhóm rời k
 
 Thứ bậc này là công cụ hữu ích khi lập kế hoạch tổng hợp.
 
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Ester hóa Fischer** nối từ **Chiều chuyển đổi giữa các dẫn xuất acyl** sang **Thủy phân ester xúc tác acid**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ester hóa Fischer
 
 Acid carboxylic + alcohol dưới xúc tác acid:
@@ -138,15 +122,11 @@ Cơ chế gồm proton hóa carbonyl, alcohol tấn công, chuyển proton và l
 
 Phản ứng thuận nghịch. Muốn tăng hiệu suất phải quản lý cân bằng bằng cách dùng dư một chất hoặc loại nước/sản phẩm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Thủy phân ester xúc tác acid** nối từ **Ester hóa Fischer** sang **Thủy phân cơ sở (base / 기반) — xà phòng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thủy phân ester xúc tác acid
 
 Vì ester hóa Fischer thuận nghịch, thủy phân ester trong acid nước đi theo con đường ngược.
 
 Chất xúc tác làm thay đổi tốc độ, không tự thay đổi hằng số cân bằng cơ bản của phản ứng.
-
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Thủy phân cơ sở (base / 기반) — xà phòng hóa** nối từ **Thủy phân ester xúc tác acid** sang **Trao đổi ester**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thủy phân cơ sở (base / 기반) — xà phòng hóa
 
@@ -160,8 +140,6 @@ Sự hình thành carboxylate kéo phản ứng theo chiều thuận trong môi 
 
 Trong xà phòng hóa thông thường, hydroxide bị tiêu thụ theo hóa lượng; nó không chỉ đóng vai trò xúc tác.
 
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Trao đổi ester** nối từ **Thủy phân cơ sở (base / 기반) — xà phòng hóa** sang **Tạo amide — vì sao acid + amine trực tiếp không dễ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trao đổi ester
 
 **Trao đổi ester (transesterification)** thay nhóm alkoxy của ester bằng alcohol khác dưới xúc tác acid hoặc cơ sở (base / 기반).
@@ -169,8 +147,6 @@ Trong xà phòng hóa thông thường, hydroxide bị tiêu thụ theo hóa lư
 Quá trình này quan trọng trong sản xuất biodiesel, hóa polymer và hệ cộng hóa trị động.
 
 Một lần nữa, kiểm soát cân bằng là yếu tố trung tâm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Tạo amide — vì sao acid + amine trực tiếp không dễ** nối từ **Trao đổi ester** sang **Thuốc thử ghép và hoạt hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo amide — vì sao acid + amine trực tiếp không dễ
 
@@ -190,8 +166,6 @@ Do đó tổng hợp amide thường phải hoạt hóa acid bằng:
 - ester hoạt hóa;
 - cơ chế hoạt hóa dùng enzyme/ATP trong sinh học.
 
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Thuốc thử ghép và hoạt hóa** nối từ **Tạo amide — vì sao acid + amine trực tiếp không dễ** sang **Thioester — chất cho acyl đã được hoạt hóa trong sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thuốc thử ghép và hoạt hóa
 
 Các thuốc thử như DCC, EDC, HATU hoặc hệ tương tự biến nhóm OH có khả năng rời kém thành chất trung gian phản ứng mạnh hơn.
@@ -199,8 +173,6 @@ Các thuốc thử như DCC, EDC, HATU hoặc hệ tương tự biến nhóm OH 
 Mục tiêu khái niệm là giống nhau: **tăng khả năng cho acyl đồng thời tạo điều kiện để amine tấn công**.
 
 Trong tổng hợp peptide, chiến lược ghép còn phải hạn chế racemic hóa và phản ứng phụ.
-
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Thioester — chất cho acyl đã được hoạt hóa trong sinh học** nối từ **Thuốc thử ghép và hoạt hóa** sang **Acyl phosphate và anhydride hỗn hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thioester — chất cho acyl đã được hoạt hóa trong sinh học
 
@@ -212,8 +184,6 @@ Acetyl-CoA khai thác thioester để mang nhóm acetyl đã hoạt hóa trong c
 
 Sinh học thường dùng thủy phân hoặc chuyển acyl từ thioester để ghép với các biến đổi vốn bất lợi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Acyl phosphate và anhydride hỗn hợp** nối từ **Thioester — chất cho acyl đã được hoạt hóa trong sinh học** sang **Lactone và lactam**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Acyl phosphate và anhydride hỗn hợp
 
 Hệ sinh học cũng hoạt hóa carboxylate bằng cách tạo anhydride hỗn hợp với phosphate.
@@ -221,8 +191,6 @@ Hệ sinh học cũng hoạt hóa carboxylate bằng cách tạo anhydride hỗn
 Chất trung gian acyl phosphate có thể chuyển acyl hoặc phosphate nhờ nhóm rời thuận lợi.
 
 Điều này nối hóa học acyl hữu cơ với chuyển hóa ghép ATP.
-
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Lactone và lactam** nối từ **Acyl phosphate và anhydride hỗn hợp** sang **Khử dẫn xuất acid carboxylic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lactone và lactam
 
@@ -232,8 +200,6 @@ Kích thước vòng rất quan trọng. Vòng năm và sáu cạnh thường th
 
 Kháng sinh β-lactam chứa vòng amide bốn cạnh bị ứng suất. Ứng suất làm giảm cộng hưởng amide thông thường và tăng tính ái điện của carbonyl, cho phép acyl hóa cộng hóa trị enzyme của vi khuẩn.
 
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Khử dẫn xuất acid carboxylic** nối từ **Lactone và lactam** sang **Grignard với ester**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khử dẫn xuất acid carboxylic
 
 Các dẫn xuất khác nhau cần độ mạnh thuốc thử khác nhau.
@@ -241,8 +207,6 @@ Các dẫn xuất khác nhau cần độ mạnh thuốc thử khác nhau.
 LiAlH4 khử mạnh nhiều ester, acid và amide. DIBAL trong điều kiện nhiệt độ thấp kiểm soát có thể dừng một số ester/nitrile ở aldehyde. Borohydride thông thường khử aldehyde/ketone nhanh hơn nhiều so với ester/amide.
 
 Tính chọn lọc phản ánh tính ái điện của chất nền, khả năng cho hydride của thuốc thử và kiểm soát động học.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Grignard với ester** nối từ **Khử dẫn xuất acid carboxylic** sang **Organocuprate và acyl hóa chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grignard với ester
 
@@ -252,15 +216,11 @@ Vì vậy ester + dư Grignard thường cho alcohol bậc ba sau xử lý, vớ
 
 Acid chloride có thể hành xử tương tự nếu không dùng thuốc thử hoặc xúc tác đặc biệt để dừng ở ketone.
 
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Organocuprate và acyl hóa chọn lọc** nối từ **Grignard với ester** sang **Khử carboxyl**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Organocuprate và acyl hóa chọn lọc
 
 Organocuprate kiểu Gilman có thể phản ứng với acid chloride tạo ketone mà ít có xu hướng cộng quá mức như Grignard.
 
 Điều này minh họa nguyên lý tổng hợp rộng hơn: độ phản ứng của thuốc thử phải phù hợp với trạng thái oxy hóa mục tiêu.
-
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Khử carboxyl** nối từ **Organocuprate và acyl hóa chọn lọc** sang **Ngưng tụ Claisen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khử carboxyl
 
@@ -270,8 +230,6 @@ Organocuprate kiểu Gilman có thể phản ứng với acid chloride tạo ket
 
 Enzyme decarboxylase trong sinh học dùng cofactor để ổn định chất trung gian giống carbanion.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Ngưng tụ Claisen** nối từ **Khử carboxyl** sang **Vòng hóa Dieckmann**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngưng tụ Claisen
 
 Enolate của ester tấn công ester khác, sau đó xảy ra thế acyl để tạo β-keto ester.
@@ -280,15 +238,11 @@ Khác aldol đơn giản, Claisen cần nhóm rời trên chất cho acyl.
 
 Khử proton cuối cùng của sản phẩm β-dicarbonyl có tính acid cao giúp kéo phản ứng đi tới, nên lượng cơ sở (base / 기반) và xử lý sau phản ứng đều quan trọng.
 
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Vòng hóa Dieckmann** nối từ **Ngưng tụ Claisen** sang **Dẫn xuất acid trong polymer**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vòng hóa Dieckmann
 
 Ngưng tụ Claisen nội phân tử tạo β-keto ester vòng. Độ thuận lợi phụ thuộc chiều dài mạch và kích thước vòng.
 
 Phản ứng này cho thấy hóa học acyl, hóa học enolate và entropy cấu dạng có thể kết hợp trong cùng một biến đổi.
-
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Dẫn xuất acid trong polymer** nối từ **Vòng hóa Dieckmann** sang **Lipid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dẫn xuất acid trong polymer
 
@@ -298,8 +252,6 @@ PET hình thành từ hóa học terephthalate + ethylene glycol; nylon từ ch�
 
 Khả năng chống thủy phân và tính chất cơ phụ thuộc cộng hưởng, độ kết tinh và kiến trúc chuỗi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Lipid** nối từ **Dẫn xuất acid trong polymer** sang **Độ acid của hydrogen α**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lipid
 
 Triacylglycerol là ester của glycerol và acid béo. Thủy phân giải phóng acid béo/glycerol; thủy phân cơ sở (base / 기반) tạo xà phòng.
@@ -308,8 +260,6 @@ Phospholipid kết hợp hóa học ester/ether, phosphate và tự lắp ghép 
 
 Vì vậy hóa học acyl mở rộng trực tiếp từ tổng hợp phân tử nhỏ tới sinh học màng.
 
-> **Nối mạch:** Trong **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Độ acid của hydrogen α** nối từ **Lipid** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ acid của hydrogen α
 
 Dẫn xuất acid carboxylic có thể tạo enolate ở carbon α nếu cơ sở (base / 기반) đủ mạnh. Độ bền enolate thay đổi theo loại dẫn xuất và nhóm thế.
@@ -317,8 +267,6 @@ Dẫn xuất acid carboxylic có thể tạo enolate ở carbon α nếu cơ s�
 Hợp chất β-dicarbonyl acid hơn nhiều vì điện tích âm có thể phi định xứ trên hai hệ carbonyl.
 
 Đây là nền tảng của Claisen, tổng hợp malonic ester và acetoacetic ester.
-
-> **Nối mạch:** Ở chặng này của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Những hiểu lầm thường gặp** nối từ **Độ acid của hydrogen α** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -337,8 +285,6 @@ Không. Cơ chế và nhiệt động khác nhau; sự tạo carboxylate làm co
 ### “Nitrogen amide giống nitrogen amine”
 
 Không. Cặp electron của amide bị phi định xứ mạnh, làm N kém cơ sở (base / 기반) và kém ái nhân hơn nhiều.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid carboxylic và dẫn xuất — chuyển acyl, hoạt hóa và hóa học sinh học**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

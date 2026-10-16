@@ -12,8 +12,6 @@ Hạt nhân Linux (Linux kernel / 커널) cung cấp các lớp trừu tượng 
 
 Đây là bước chuyển quan trọng trong **mô hình tư duy (mental model / 사고 모델)**: Linux không chủ yếu là một bộ sưu tập câu lệnh. Nó là một hệ thống quản lý tài nguyên (resource management) thông qua các lớp trừu tượng có quy tắc rõ ràng.
 
-> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Linux, Unix và GNU** nối từ **Vì sao cần hệ điều hành?** sang **Triết lý Unix và khả năng kết hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Linux, Unix và GNU
 
 **Unix** ban đầu là một họ hệ điều hành và đồng thời tạo ra nhiều quy ước có ảnh hưởng lâu dài: hệ thống tệp phân cấp, mô hình tiến trình, quyền người dùng/nhóm, bộ mô tả tệp (file descriptor) và các tiện ích nhỏ có thể kết hợp bằng đường ống (pipe). **Linux** chính xác hơn là một hạt nhân do Linus Torvalds khởi đầu năm 1991. Một bản phân phối Linux (Linux distribution / 리눅스 배포판) như Ubuntu, Debian hoặc RHEL kết hợp hạt nhân Linux với công cụ không gian người dùng (user-space tools), thư viện, trình quản lý gói, hệ thống khởi tạo và nhiều phần mềm khác.
@@ -21,8 +19,6 @@ Hạt nhân Linux (Linux kernel / 커널) cung cấp các lớp trừu tượng 
 Nhiều câu lệnh quen thuộc như `ls`, `cp`, `grep` thường đến từ GNU Coreutils hoặc những dự án không gian người dùng khác chứ không phải bản thân kernel. Sự phân biệt này giải thích vì sao hai bản phân phối cùng dùng Linux kernel nhưng tùy chọn câu lệnh, trình quản lý gói hoặc cách bố trí cấu hình có thể khác nhau.
 
 Trong môi trường Hàn Quốc, Linux thường được gọi là **리눅스**, kernel là **커널**, hệ điều hành là **운영체제** và bản phân phối Linux là **리눅스 배포판**.
-
-> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Triết lý Unix và khả năng kết hợp** nối từ **Linux, Unix và GNU** sang **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triết lý Unix và khả năng kết hợp
 
@@ -38,8 +34,6 @@ journalctl -u app | grep ERROR | tail -n 20
 
 Điều này liên hệ trực tiếp với kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): một thành phần dễ kết hợp khi nó có trách nhiệm và giao diện rõ ràng. Chuỗi xử lý Unix (Unix pipeline) là một ví dụ sớm của tư duy mô-đun (modularity).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** nối từ **Triết lý Unix và khả năng kết hợp** sang **Vùng tên: tên không phải là đối tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## "Everything is a tệp (file / 파일)" thực sự có nghĩa gì?
 
 Câu "mọi thứ đều là tệp" hữu ích như một mô hình tư duy nhưng sẽ sai nếu hiểu theo nghĩa đen. Tệp thông thường, thư mục, thiết bị, pipe và socket không phải cùng một loại đối tượng. Ý tưởng sâu hơn là Linux cố gắng đưa nhiều loại tài nguyên về một **giao diện vào/ra (I/O interface) tương đối thống nhất**. Tiến trình nhận một số nguyên gọi là **bộ mô tả tệp (file descriptor)** rồi có thể thực hiện các thao tác như đọc và ghi trên nhiều loại tài nguyên.
@@ -47,8 +41,6 @@ Câu "mọi thứ đều là tệp" hữu ích như một mô hình tư duy như
 Ví dụ `/dev/null` không phải tệp dữ liệu thông thường trên đĩa. Nó là một điểm cuối thiết bị: dữ liệu ghi vào đó bị bỏ đi. Pipe cũng không phải tệp lưu trữ lâu dài, nhưng tiến trình vẫn có thể đọc hoặc ghi thông qua bộ mô tả tệp.
 
 Xem sâu hơn tại [Tệp, luồng dữ liệu và bộ mô tả tệp](../01_filesystem/files_streams_descriptors.md).
-
-> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Vùng tên: tên không phải là đối tượng** nối từ **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** sang **Không gian người dùng và không gian hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng tên: tên không phải là đối tượng
 
@@ -58,8 +50,6 @@ Sự phân biệt này giải thích nhiều hiện tượng tưởng như lạ.
 
 Vì vậy khi xử lý sự cố trong môi trường vận hành thực tế (production), cần kiểm tra nhiều lớp thay vì suy luận từ một dấu hiệu duy nhất.
 
-> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Không gian người dùng và không gian hạt nhân** nối từ **Vùng tên: tên không phải là đối tượng** sang **Trạng thái, quan sát và thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Không gian người dùng và không gian hạt nhân
 
 Ứng dụng thông thường chạy trong **không gian người dùng (user space / 사용자 공간)** với quyền CPU bị giới hạn. Kernel chạy ở mức đặc quyền cao hơn và quản lý ánh xạ bộ nhớ, bộ lập lịch (scheduler), hệ thống tệp, ngăn xếp mạng và trình điều khiển phần cứng. Khi ứng dụng cần thao tác một tài nguyên do kernel quản lý, nó đi qua ranh giới của **lời gọi hệ thống (system call / 시스템 호출)**.
@@ -68,8 +58,6 @@ Ví dụ Java gọi API để đọc tệp. Sau nhiều lớp của môi trườ
 
 Xem chi tiết tại [Kernel, không gian người dùng và lời gọi hệ thống](./kernel_userspace_syscalls.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Trạng thái, quan sát và thay đổi** nối từ **Không gian người dùng và không gian hạt nhân** sang **Các bản phân phối khác nhau ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái, quan sát và thay đổi
 
 Hầu hết câu lệnh quản trị có thể nhìn theo hai vai trò. Một nhóm dùng để **quan sát trạng thái**, ví dụ `ps`, `ss`, `df`, `free`, `ip`, `journalctl`. Nhóm còn lại dùng để **thay đổi trạng thái**, ví dụ `kill`, `rm`, `chmod`, `systemctl restart`, `ip route add`.
@@ -77,8 +65,6 @@ Hầu hết câu lệnh quản trị có thể nhìn theo hai vai trò. Một nh
 Trong vận hành hệ thống ở mức nâng cao, nguyên tắc quan trọng là ưu tiên quan sát trước khi can thiệp. Nếu ứng dụng lỗi và ta khởi động lại ngay, triệu chứng có thể biến mất nhưng bằng chứng như trạng thái tiến trình, trạng thái luồng hoặc áp lực tài nguyên tạm thời cũng có thể mất theo. Quy trình tốt hơn là thu thập đủ bằng chứng để hình thành giả thuyết, sau đó mới thay đổi trạng thái.
 
 Đây chính là phương pháp khoa học (scientific method) ở quy mô vận hành hệ thống: **quan sát → giả thuyết → kiểm tra → can thiệp → xác minh**.
-
-> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Các bản phân phối khác nhau ở đâu?** nối từ **Trạng thái, quan sát và thay đổi** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các bản phân phối khác nhau ở đâu?
 
@@ -92,15 +78,11 @@ uname -a
 command -v lsof
 ```
 
-> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các bản phân phối khác nhau ở đâu?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Có thể hình dung Linux như một thành phố có nhiều lớp quản lý. Phần cứng là hạ tầng vật lý. Kernel là lớp điều phối tài nguyên và thực thi ranh giới bảo vệ. Tiến trình là các hoạt động đang diễn ra. Hệ thống tệp cung cấp vùng tên để tìm dữ liệu và tài nguyên. Người dùng, nhóm và quyền truy cập quyết định ai được phép làm gì. Shell là công cụ để yêu cầu các chương trình quan sát hoặc thay đổi hệ thống.
 
 Phép so sánh này chỉ hữu ích nếu nhớ rằng kernel không phải một "tiến trình quản trị" thông thường; nó hoạt động trong miền đặc quyền khác với tiến trình người dùng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối sang chương tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -111,8 +93,6 @@ Phép so sánh này chỉ hữu ích nếu nhớ rằng kernel không phải m�
 **"Tiến trình đang chạy nghĩa là dịch vụ hoạt động bình thường."** Tiến trình có thể vẫn tồn tại nhưng bị deadlock, chưa gắn cổng, kiểm tra sức khỏe (health check) thất bại hoặc phụ thuộc bên ngoài bị lỗi. Sức khỏe của hệ thống môi trường vận hành (production / 운영 환경) là kết quả của nhiều lớp.
 
 **"gốc (root / 루트) có nghĩa là không còn giới hạn."** `root` có đặc quyền rất lớn trong host nhưng vẫn chịu các quy tắc của kernel, trạng thái hệ thống tệp, giới hạn tài nguyên, không gian tên (namespace / 네임스페이스) của bộ chứa (container / 컨테이너), cơ chế kiểm soát truy cập bắt buộc và nhiều ranh giới khác.
-
-> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Kết nối sang chương tiếp theo** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối sang chương tiếp theo
 

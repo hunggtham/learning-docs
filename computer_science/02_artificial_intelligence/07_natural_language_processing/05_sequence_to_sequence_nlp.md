@@ -189,7 +189,7 @@ Metric tổng hợp cho biết mức thay đổi, còn lỗi theo chuỗi cho bi
 
 ## Sequence-Level lỗi (error / 오류)
 
-A single early decoding lỗi (error / 오류) changes subsequent lịch sử (history / 이력). đơn vị từ (token / 토큰) accuracy does not capture toàn cục (global / 전역) coherence.
+A single early decoding lỗi (error / 오류) changes subsequent lịch sử (history / 이력). token (토큰) accuracy does not capture toàn cục (global / 전역) coherence.
 
 Evaluation should inspect:
 

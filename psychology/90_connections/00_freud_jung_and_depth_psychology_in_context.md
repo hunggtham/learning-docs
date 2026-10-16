@@ -25,8 +25,6 @@ Mô hình tư duy (mental model / 사고 모델) quan trọng:
 
 > “Một phần tâm trí hoạt động ngoài awareness” có bằng chứng (evidence / 증거) mạnh; “một symptom cụ thể xuất hiện vì psychosexual xung đột (conflict / 충돌) bị repress” là claim riêng và cần bằng chứng (evidence / 증거) riêng.
 
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Id, ego và superego** nối từ **Freud đã thay đổi câu hỏi nào?** sang **Defense mechanisms**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Id, ego và superego
 
 Mô hình id–ego–superego có vai trò lịch sử rất lớn trong cách văn hóa phổ thông nói về xung đột (conflict / 충돌) nội tâm.
@@ -36,8 +34,6 @@ Mô hình id–ego–superego có vai trò lịch sử rất lớn trong cách v
 Hiện đại (modern / 현대적) cognitive science và neuroscience không dùng id, ego, superego như ba mô-đun (module / 모듈) chuẩn của mind/brain. Các hiện tượng mà Freud cố mô tả — impulse, điều khiển (control / 제어), norm, xung đột (conflict / 충돌) — hiện được nghiên cứu bằng nhiều construct khác như reward valuation, executive điều khiển (control / 제어), inhibition, self-regulation, xã hội (social / 사회적) norm và moral cognition.
 
 Việc các construct hiện đại nghiên cứu “xung đột (conflict / 충돌)” không xác nhận kiến trúc id–ego–superego.
-
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Id, ego và superego** đặt đầu vào cho **Defense mechanisms**, rồi **Repression và traumatic bộ nhớ (memory / 메모리)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Defense mechanisms
 
@@ -50,8 +46,6 @@ Ví dụ, một người intellectualize grief có thể tập trung vào logist
 Hiện đại (modern / 현대적) ngôn ngữ (language / 언어) có thể phân tích cùng hiện tượng bằng avoidance, suppression, reappraisal, affect regulation hoặc self-protective cognition tùy cơ chế (mechanism / 메커니즘) thực tế.
 
 Xem [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]] và [[../05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Defense mechanisms** đặt đầu vào cho **Repression và traumatic bộ nhớ (memory / 메모리)**, rồi **Psychosexual stages** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Repression và traumatic bộ nhớ (memory / 메모리)
 
@@ -69,8 +63,6 @@ Các rà soát (review / 검토) hiện đại nhấn mạnh rằng recovered b�
 
 Xem [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]] và [[../02_learning_and_cognition/11_emotion_memory_and_affective_cognition]].
 
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Psychosexual stages** nối từ **Repression và traumatic bộ nhớ (memory / 메모리)** sang **Dream interpretation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychosexual stages
 
 Freud đề xuất các giai đoạn psychosexual và cho rằng fixation/xung đột (conflict / 충돌) ở từng giai đoạn có thể ảnh hưởng personality sau này.
@@ -80,8 +72,6 @@ Freud đề xuất các giai đoạn psychosexual và cho rằng fixation/xung �
 Hiện đại (modern / 현대적) developmental psychology có bằng chứng (evidence / 증거) rất mạnh rằng early môi trường (environment / 환경), caregiving, temperament và developmental timing ảnh hưởng later outcomes, nhưng điều đó **không xác nhận** psychosexual-stage mô hình (model / 모델) của Freud. Hai hệ thống khác nhau về construct, cơ chế (mechanism / 메커니즘) và prediction.
 
 Xem [[../03_human_development_and_person/00_lifespan_development]] và [[../03_human_development_and_person/01_attachment_and_relationships]].
-
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Dream interpretation** nối từ **Psychosexual stages** sang **Jung tách khỏi Freud ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dream interpretation
 
@@ -95,8 +85,6 @@ Dream có thể có **personal meaning**, nhưng personal meaning khác với cl
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Jung tách khỏi Freud ở đâu?** nối từ **Dream interpretation** sang **Archetype: cần tách hai mức claim**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Jung tách khỏi Freud ở đâu?
 
 Carl Jung ban đầu hợp tác với Freud nhưng phát triển **tâm lý học phân tích (Analytical Psychology)** riêng. Jung quan tâm symbol, myth, archetype, collective unconscious, psychological types và individuation.
@@ -104,8 +92,6 @@ Carl Jung ban đầu hợp tác với Freud nhưng phát triển **tâm lý họ
 > **Trạng thái tổng quát:** Historical lý thuyết (theory / 이론) với một số interpretive constructs vẫn có ảnh hưởng trong psychotherapy, humanities và cultural phân tích (analysis / 분석).
 
 Jung cũng nhấn mạnh spiritual/existential dimension của psyche mạnh hơn Freud và xem development của personality như quá trình có thể tiếp tục xuyên lifespan.
-
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Archetype: cần tách hai mức claim** nối từ **Jung tách khỏi Freud ở đâu?** sang **Collective unconscious**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Archetype: cần tách hai mức claim
 
@@ -133,8 +119,6 @@ Hiện đại (modern / 현대적) explanation thay thế có thể hỏi:
 
 Recurring motif không tự động chứng minh một inherited ảnh (image / 이미지) thư viện (library / 라이브러리).
 
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Collective unconscious** nối từ **Archetype: cần tách hai mức claim** sang **Shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Collective unconscious
 
 **Vô thức tập thể (collective unconscious)** là construct trung tâm của Jung.
@@ -142,8 +126,6 @@ Recurring motif không tự động chứng minh một inherited ảnh (image / 
 > **Trạng thái bằng chứng:** Historical lý thuyết (theory / 이론).
 
 Không có operationalization và đo lường (measurement / 측정) khung phần mềm (framework / 프레임워크) consensus cho collective unconscious trong mainstream psychology. Neuroscience về implicit processing hoặc evolutionary predisposition không nên được dùng như bằng chứng trực tiếp cho construct này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Shadow** nối từ **Collective unconscious** sang **Individuation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Shadow
 
@@ -157,8 +139,6 @@ Ví dụ, một người xây định danh (identity / 식별자) “tôi luôn 
 
 Xem [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]] và [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Individuation** nối từ **Shadow** sang **Psychological types và MBTI**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Individuation
 
 **Individuation** trong Jung mô tả quá trình tích hợp các phần khác nhau của psyche để self trở nên toàn vẹn hơn.
@@ -166,8 +146,6 @@ Xem [[../03_human_development_and_person/09_self_concept_identity_and_self_regul
 > **Trạng thái bằng chứng:** Historical/interpretive construct.
 
 Hiện đại (modern / 현대적) research có định danh (identity / 식별자) tích hợp (integration / 통합), self-complexity, narrative định danh (identity / 식별자), meaning-making và lifespan development. Các construct này có thể giúp translate một số câu hỏi của individuation sang research hiện đại, nhưng không có chỉ số (metric / 지표) consensus đo “mức individuation” như một variable chuẩn.
-
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Psychological types và MBTI** nối từ **Individuation** sang **Symbol, narrative và meaning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychological types và MBTI
 
@@ -181,8 +159,6 @@ Big Five và các dimensional trait các mô hình (models / 모델들) không �
 
 Xem [[../03_human_development_and_person/03_personality]] và [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Symbol, narrative và meaning** nối từ **Psychological types và MBTI** sang **Jungian psychotherapy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Symbol, narrative và meaning
 
 Jung đúng ở một mức rất rộng khi nhấn mạnh con người phản ứng với meaning chứ không chỉ vật lý (physical / 물리적) stimulus.
@@ -193,8 +169,6 @@ Jung đúng ở một mức rất rộng khi nhấn mạnh con người phản �
 
 Hiện đại (modern / 현대적) psychology nghiên cứu meaning qua xã hội (social / 사회적) cognition, narrative định danh (identity / 식별자), cultural psychology, framing và placebo/nocebo. Cùng quan tâm tới meaning không có nghĩa lý thuyết (theory / 이론) sử dụng cùng cơ chế (mechanism / 메커니즘).
 
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Jungian psychotherapy** nối từ **Symbol, narrative và meaning** sang **Hiện đại (modern / 현대적) psychodynamic psychotherapy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Jungian psychotherapy
 
 Có empirical kết quả (outcome / 결과) literature cho Jungian psychotherapy, nhưng bằng chứng (evidence / 증거) cơ sở (base / 기반) nhỏ hơn và ít standardized trials hơn so với những treatment family được nghiên cứu rộng.
@@ -202,8 +176,6 @@ Có empirical kết quả (outcome / 결과) literature cho Jungian psychotherap
 > **Trạng thái bằng chứng:** Limited/moderate treatment bằng chứng (evidence / 증거), cần đọc cùng limitation về thiết kế (design / 설계) và mẫu (sample / 표본).
 
 Ngay cả khi Jungian psychotherapy giúp một số máy khách (client / 클라이언트), kết quả (outcome / 결과) đó không xác nhận collective unconscious hoặc archetype theo nghĩa biological mạnh.
-
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Hiện đại (modern / 현대적) psychodynamic psychotherapy** nối từ **Jungian psychotherapy** sang **Freud, Adler và Jung không phải một lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện đại (modern / 현대적) psychodynamic psychotherapy
 
@@ -221,8 +193,6 @@ All Freudian metapsychology is true
 
 Treatment efficacy và theoretical truth là hai câu hỏi khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Freud, Adler và Jung không phải một lý thuyết (theory / 이론)** nối từ **Hiện đại (modern / 현대적) psychodynamic psychotherapy** sang **Giao thức (protocol / 프로토콜) khi đọc historical psychology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Freud, Adler và Jung không phải một lý thuyết (theory / 이론)
 
 Adler rời Freud và phát triển **Individual Psychology**, nhấn mạnh goal, competence, inferiority/compensation, xã hội (social / 사회적) interest và family ngữ cảnh (context / 맥락). Jung đi theo hướng symbol, archetype và individuation.
@@ -230,8 +200,6 @@ Adler rời Freud và phát triển **Individual Psychology**, nhấn mạnh goa
 Đọc cả ba dưới nhãn “độ sâu (depth / 깊이) psychology” có thể tiện cho lịch sử (history / 이력) nhưng dễ làm mất khác biệt.
 
 Xem chapter riêng [[05_adler_individual_psychology_in_context]] và ma trận [[06_historical_theories_and_modern_evidence_matrix]].
-
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Giao thức (protocol / 프로토콜) khi đọc historical psychology** nối từ **Freud, Adler và Jung không phải một lý thuyết (theory / 이론)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giao thức (protocol / 프로토콜) khi đọc historical psychology
 
@@ -249,8 +217,6 @@ Mục này bàn giao kiến thức sang các domain liên quan. Hãy theo từng
 
 Giao thức (protocol / 프로토콜) này cho phép học lịch sử (history / 이력) sâu mà không phải lựa chọn giữa “tin hết” và “bỏ hết”.
 
-> **Nối mạch:** Ở chặng này của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Những hiểu lầm phổ biến** nối từ **Giao thức (protocol / 프로토콜) khi đọc historical psychology** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Những hiểu lầm phổ biến
 
 **“hiện đại (modern / 현대적) psychology chứng minh Freud/Jung sai hoàn toàn.”** Quá rộng. Một số claim không được hỗ trợ (support / 지원), một số được reformulate thành construct khác, và một số chủ yếu có historical/interpretive giá trị (value / 값).
@@ -265,15 +231,11 @@ Giao thức (protocol / 프로토콜) này cho phép học lịch sử (history 
 
 **“Ký ức rất sống động được recovered trong therapy chắc chắn là historical fact.”** Vividness và confidence không đủ xác định accuracy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy đọc Freud và Jung như **bản đồ lịch sử của các câu hỏi về tâm trí**. Một số câu hỏi vẫn rất quan trọng; một số cơ chế (mechanism / 메커니즘) đã được vẽ lại bằng đo lường (measurement / 측정) tốt hơn; một số construct vẫn hữu ích như metaphor hoặc clinical ngôn ngữ (language / 언어); một số claim không còn phù hợp với bằng chứng (evidence / 증거) hiện đại.
 
 Giá trị lịch sử không cần được biến thành scientific consensus để đáng học.
-
-> **Nối mạch:** Trong **Freud, Jung và độ sâu (depth / 깊이) psychology trong bối cảnh tâm lý học hiện đại**, **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối
 

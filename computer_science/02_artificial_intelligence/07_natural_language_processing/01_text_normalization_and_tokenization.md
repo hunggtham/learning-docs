@@ -144,13 +144,13 @@ SentencePiece không phụ thuộc bộ tách từ có sẵn và có thể dùng
 
 ## Tokenization là learned compression scheme
 
-Dùng chung (common / 공통) strings become longer đơn vị từ (token / 토큰) pieces; rare patterns decompose smaller. Thus tokenizer allocates vocabulary sức chứa (capacity / 용량) according to corpus frequency.
+Dùng chung (common / 공통) strings become longer token (토큰) pieces; rare patterns decompose smaller. Thus tokenizer allocates vocabulary sức chứa (capacity / 용량) according to corpus frequency.
 
 This creates distributional độ lệch (bias / 편향): languages underrepresented during tokenizer huấn luyện (training / 학습) may require more tokens per sentence, increasing chi phí (cost / 비용)/ngữ cảnh (context / 맥락) usage.
 
 Tokenizer phân bổ sức chứa vocabulary theo tần suất corpus; phần multilingual efficiency đo chi phí mà phân bổ đó tạo ra giữa các ngôn ngữ.
 
-## Multilingual đơn vị từ (token / 토큰) Efficiency
+## Multilingual token (토큰) Efficiency
 
 Nếu English phrase 10 tokens nhưng Vietnamese/Korean equivalent 18 tokens, same ngữ nghĩa (semantic / 의미적) content consumes more ngữ cảnh (context / 맥락) and suy luận (inference / 추론) compute.
 
@@ -219,15 +219,15 @@ Examples:
 
 Chat các mô hình (models / 모델들) add role/điều khiển (control / 제어) tokens delimiting hệ thống (system / 시스템)/người dùng (user / 사용자)/assistant turns.
 
-These tokens are part mô hình (model / 모델) giao thức (protocol / 프로토콜). Manually formatting prompt incorrectly can thay đổi (change / 변경) hành vi (behavior / 동작) because mô hình (model / 모델) sees different đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스) than huấn luyện (training / 학습) format.
+These tokens are part mô hình (model / 모델) giao thức (protocol / 프로토콜). Manually formatting prompt incorrectly can thay đổi (change / 변경) hành vi (behavior / 동작) because mô hình (model / 모델) sees different token (토큰) chuỗi (sequence / 시퀀스) than huấn luyện (training / 학습) format.
 
 Special tokens là một phần của giao thức mô hình; vì vậy ID của vocabulary chỉ là chỉ mục, không phải đại lượng có thứ tự ngữ nghĩa.
 
 ## Vocabulary IDs are arbitrary
 
-Đơn vị từ (token / 토큰) ID `50256` is not numerically “larger meaning” than đơn vị từ (token / 토큰) ID `42`. IDs chỉ mục (index / 인덱스) embedding rows.
+Đơn vị từ (token / 토큰) ID `50256` is not numerically “larger meaning” than token (토큰) ID `42`. IDs chỉ mục (index / 인덱스) embedding rows.
 
-Never feed raw đơn vị từ (token / 토큰) IDs as continuous scalar features.
+Never feed raw token (토큰) IDs as continuous scalar features.
 
 ID chỉ trỏ tới hàng embedding, nên không thể dùng như đặc trưng vô hướng; tiếp theo, ta xem tokenization tương tác với cửa sổ ngữ cảnh ra sao.
 
@@ -235,7 +235,7 @@ ID chỉ trỏ tới hàng embedding, nên không thể dùng như đặc trưng
 
 Ngữ cảnh (context / 맥락) limit measured tokens, not characters/words.
 
-Document chunking must inspect actual tokenizer. “500 words” may vary đơn vị từ (token / 토큰) count widely by ngôn ngữ (language / 언어)/content.
+Document chunking must inspect actual tokenizer. “500 words” may vary token (토큰) count widely by ngôn ngữ (language / 언어)/content.
 
 Mã (code / 코드)/JSON tables often tokenize differently from prose.
 
@@ -243,7 +243,7 @@ Giới hạn ngữ cảnh được tính theo token chứ không theo số từ;
 
 ## Tokenization and Generation
 
-Mô hình (model / 모델) predicts đơn vị từ (token / 토큰), not word/character directly.
+Mô hình (model / 모델) predicts token (토큰), not word/character directly.
 
 A generated word may require multiple decoding steps. xác suất (probability / 확률) of string is sản phẩm (product / 제품) over its tokenization chuỗi (sequence / 시퀀스).
 
@@ -253,7 +253,7 @@ Generation phụ thuộc cách prompt được token hóa và cắt theo context
 
 ## Unknown / Invalid Byte Handling
 
-Byte fallback guarantees arbitrary Unicode strings, but decoded partial byte sequences during intermediate đơn vị từ (token / 토큰) stream may temporarily be invalid UTF-8. Libraries should decode through tokenizer, not concatenate guessed đơn vị từ (token / 토큰) strings naïvely.
+Byte fallback guarantees arbitrary Unicode strings, but decoded partial byte sequences during intermediate token (토큰) stream may temporarily be invalid UTF-8. Libraries should decode through tokenizer, not concatenate guessed token (토큰) strings naïvely.
 
 Xử lý byte không hợp lệ cần bảo toàn khả năng truy nguyên và tránh crash; normalization cũng phải được xem như một bề mặt bảo mật.
 
@@ -279,7 +279,7 @@ Tokenizer học từ corpus nên có thể ghi nhớ chuỗi nhạy cảm; khi t
 
 ## Tokenizer phiên bản (version / 버전) = mô hình (model / 모델) tính tương thích (compatibility / 호환성)
 
-Embedding/đầu ra (output / 출력) matrices indexed vocabulary. thay đổi (change / 변경) đơn vị từ (token / 토큰) IDs/vocabulary without retraining breaks mô hình (model / 모델) ngữ nghĩa (semantics / 의미론).
+Embedding/đầu ra (output / 출력) matrices indexed vocabulary. thay đổi (change / 변경) token (토큰) IDs/vocabulary without retraining breaks mô hình (model / 모델) ngữ nghĩa (semantics / 의미론).
 
 Tokenizer is part of mô hình (model / 모델) sản phẩm tạo ra (artifact / 산출물) and must phiên bản (version / 버전)/deploy together.
 
@@ -307,7 +307,7 @@ Mental model nối encoding, segmentation, vocabulary và runtime behavior; ph�
 
 ## Dùng chung (common / 공통) Misconceptions
 
-### “1 đơn vị từ (token / 토큰) ≈ 1 word”
+### “1 token (토큰) ≈ 1 word”
 
 Không. Subword/byte tokenization varies by ngôn ngữ (language / 언어)/string.
 
@@ -321,7 +321,7 @@ For hiện đại (modern / 현대적) LMs it can destroy meaningful cú pháp (
 
 ### “Can swap tokenizer if vocabulary kích thước (size / 크기) same”
 
-No. đơn vị từ (token / 토큰) IDs/segmentations must match trained embedding/đầu ra (output / 출력) matrices exactly.
+No. token (토큰) IDs/segmentations must match trained embedding/đầu ra (output / 출력) matrices exactly.
 
 Những ngộ nhận về token thường xuất phát từ việc đồng nhất token với từ hoặc ID với giá trị; phần liên kết kiến thức chỉ rõ tài liệu cần đọc tiếp.
 

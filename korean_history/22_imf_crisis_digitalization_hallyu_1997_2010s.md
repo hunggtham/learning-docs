@@ -6,13 +6,9 @@
 
 Khủng hoảng năm 1997 phơi bày điểm yếu trong nợ nước ngoài ngắn hạn, đòn bẩy doanh nghiệp và giám sát tài chính. Hàn Quốc nhận gói cứu trợ do IMF dẫn dắt kèm các điều kiện cải cách. Tỷ giá, phá sản và thất nghiệp tạo ra cú sốc xã hội lớn.
 
-> **Chuyển mạch:** IMF crisis phơi bày fragility của corporate finance và labor market; restructuring thay đổi phân phối rủi ro, rồi broadband infrastructure mở không gian cho digitalization và Hallyu.
-
 ## Corporate restructuring và labor thị trường (market / 시장)
 
 Chaebol restructuring, financial reform và labor-market flexibility tăng. thời gian tồn tại (lifetime / 수명) employment expectation suy yếu trong nhiều sector; irregular employment trở nên visible hơn. Vì vậy post-1997 culture of competition và credential pressure có economic lịch sử (history / 이력) cụ thể.
-
-> **Chuyển mạch:** Corporate restructuring sau IMF làm thay đổi rủi ro việc làm và áp lực cạnh tranh; **broadband infrastructure** là điều kiện vật chất mở ra PC bang, portal, gaming và phân phối nội dung. Từ hạ tầng đó, **Hallyu** cho thấy cải cách kinh tế có thể tạo một hệ sinh thái xuất khẩu văn hóa như thế nào.
 
 ## Broadband hạ tầng (infrastructure / 인프라)
 
@@ -20,49 +16,33 @@ Late 1990s–2000s, broadband rollout rất nhanh. Dense urban housing, telecom 
 
 Mạng (network / 네트워크) tác động (effect / 효과) làm online portal, gaming và messenger ecosystem phát triển. Technology không chỉ thêm convenience; nó thay đổi coordination chi phí (cost / 비용) của communities, fandom và commerce.
 
-> **Chuyển mạch:** Broadband làm giảm chi phí sản xuất và phân phối nội dung; **Hallyu** biến năng lực kết nối thành chuỗi xuất khẩu gồm công ty, fan, nền tảng và diaspora. **World Cup 2002** mở rộng cùng năng lực ấy sang tham gia đại chúng và nation branding.
-
 ## Hallyu
 
 Korean Wave (한류) ban đầu nổi ở East Asia qua television drama rồi mở rộng sang K-pop, film, games, webtoon, beauty và food. Hallyu không thể giải thích chỉ bằng “government made it”. Entertainment firms, huấn luyện (training / 학습) hệ thống (system / 시스템), broadband, nền tảng (platform / 플랫폼) phân phối (distribution / 분포), diaspora, fan labor và toàn cục (global / 전역) media shifts đều tham gia.
-
-> **Chuyển mạch:** Hallyu chứng minh năng lực xuất khẩu văn hóa, còn World Cup 2002 cho thấy spectacle có thể huy động không gian công cộng và thương hiệu quốc gia. **Mô hình tư duy** cần nối ba đường dây: cải cách sau khủng hoảng, hạ tầng số và soft power.
 
 ## 2002 World Cup
 
 Co-hosted 2002 FIFA World Cup tạo mass street cheering và new ảnh (image / 이미지) of civic công khai (public / 공개) không gian (space / 공간). sự kiện (event / 이벤트) trở thành generational bộ nhớ (memory / 메모리) và nation-branding moment.
 
-> **Chuyển mạch:** World Cup 2002 cho thấy hạ tầng số và cải cách thể chế không chỉ tạo ngành công nghiệp mà còn tạo ký ức, participation và branding. Mặt trái của cùng quá trình là **labor dualization**, nơi lợi ích đổi mới phân bổ không đều giữa regular và non-regular workers.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Post-1997 Korea là câu chuyện một shock economic buộc institutions restructure, trong khi digital hạ tầng (infrastructure / 인프라) đồng thời tạo những industry và xã hội (social / 사회적) mạng (network / 네트워크) mới. Crisis và innovation không phải hai câu chuyện tách rời.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Mô hình tư duy (mental model / 사고 모델)** cho ta quy tắc; **Labor dualization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Venture boom and trạng thái (state / 상태) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Labor dualization
 
 Post-crisis reform made firms more able to restructure workforce. cốt lõi (core / 핵심) regular employees and non-regular workers increasingly experienced different bảo mật (security / 보안), benefit and bargaining power. This dualization affects marriage, fertility and housing decisions because income rủi ro (risk / 위험) is household planning đầu vào (input / 입력).
 
-> **Chuyển mạch:** Trong **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Labor dualization** cho ta quy tắc; **Venture boom and trạng thái (state / 상태) chính sách (policy / 정책)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Online gaming and virtual economies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Venture boom and trạng thái (state / 상태) chính sách (policy / 정책)
 
 Chính phủ thúc đẩy startup CNTT và băng thông rộng; chaebol cũng đầu tư mạnh. Làn sóng bùng nổ kiểu dot-com có thất bại, nhưng thất bại vẫn có thể xây dựng đội ngũ kỹ sư và tri thức khởi nghiệp. Hệ sinh thái học tập còn lại ngay cả khi từng doanh nghiệp biến mất.
-
-> **Chuyển mạch:** **Venture boom và state policy** tạo vốn và hạ tầng; **online gaming và virtual economies** cho thấy mô hình kinh doanh mới, rồi **cultural production** nối công nghệ với công nghiệp nội dung.
 
 ## Online gaming and virtual economies
 
 PC bang density plus broadband enabled competitive online games and esports. Game máy chủ (server / 서버), độ trễ (latency / 지연 시간), ranking and persistent account định danh (identity / 식별자) produced new xã hội (social / 사회적) spaces. lịch sử (history / 이력) of technology becomes lịch sử (history / 이력) of leisure, profession and fandom simultaneously.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Online gaming and virtual economies** xác định đầu vào; **Cultural môi trường vận hành (production / 운영 환경) as industrial tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cultural môi trường vận hành (production / 운영 환경) as industrial tiến trình (process / 프로세스)
 
 K-pop huấn luyện (training / 학습), choreography, music môi trường vận hành (production / 운영 환경), video, xã hội (social / 사회적) media and fan translation form a supply chuỗi (chain / 사슬). Cultural success still depends creativity, but môi trường vận hành (production / 운영 환경)/phân phối (distribution / 분포) hạ tầng (infrastructure / 인프라) changes xác suất (probability / 확률) that creativity reaches toàn cục (global / 전역) audience.
-
-> **Chuyển mạch:** Trong **1997 IMF crisis, số hoá và Làn sóng Hàn Quốc (한류 / Hallyu, Korean Wave)**, **Cultural môi trường vận hành (production / 운영 환경) as industrial tiến trình (process / 프로세스)** xác định đầu vào; **Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Việt Nam cùng thời: Internet, khủng hoảng và sản xuất xuất khẩu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ
 
@@ -70,19 +50,13 @@ Sau **1997**, mất việc và việc làm không ổn định làm thay đổi 
 
 Hallyu cũng cần được nhìn như **chuỗi giá trị văn hóa (cultural value chain / 문화 가치사슬)**: đào tạo nghệ sĩ, sản xuất âm thanh–hình ảnh, phụ đề, nền tảng phân phối, quảng cáo, du lịch và lao động người hâm mộ. Nhà nước có thể hỗ trợ hạ tầng hoặc xuất khẩu, nhưng không thể một mình quyết định bài hát nào được yêu thích. Cách đọc này giữ được cả năng lực sáng tạo và điều kiện kinh tế.
 
-> **Chuyển mạch:** **Khủng hoảng đi qua bàn ăn, mạng băng rộng đi qua căn hộ** mô tả thay đổi trong gia đình và hạ tầng; **Việt Nam cùng thời** đối chiếu đường đi khác, rồi **Địa điểm của số hóa** kiểm tra ký ức đại chúng bằng không gian cụ thể.
-
 ## Việt Nam cùng thời: Internet, khủng hoảng và sản xuất xuất khẩu
 
 Việt Nam ký Hiệp định Thương mại Việt–Mỹ năm **2000**, gia nhập WTO năm **2007** và phổ cập Internet trong thập niên 2000. Cả hai xã hội đều chứng kiến điện thoại, quán mạng và sản xuất hướng xuất khẩu mở rộng, nhưng quy mô tập đoàn, chính sách truyền thông và đường đi chính trị khác nhau. So sánh hữu ích nhất là hỏi công nghệ làm giảm chi phí phối hợp nào và nhóm nào vẫn bị loại khỏi cơ hội đó.
 
-> **Chuyển mạch:** **Địa điểm của số hóa và ký ức đại chúng** cho thấy nền tảng phân phối trải nghiệm và ký ức thế nào; **Cầu nối sang 2010–2020** theo dõi khi logic đó mở rộng thành nền kinh tế nền tảng.
-
 ## Địa điểm của số hóa và ký ức đại chúng
 
 Khu **Yongsan Electronics Market**, các quán PC bang còn lại và những sân vận động của World Cup **2002** cho thấy công nghệ, giải trí và không gian công cộng đã liên kết ra sao. Các không gian triển lãm về Hallyu hoặc K-pop nên được đọc cùng hồ sơ lao động hậu khủng hoảng để không biến xuất khẩu văn hóa thành câu chuyện thành công không có chi phí.
-
-> **Chuyển mạch:** **Cầu nối sang 2010–2020** khép chuỗi từ khủng hoảng đến số hóa và Hallyu, đồng thời giữ rõ ranh giới giữa dữ liệu kinh tế, thay đổi văn hóa và diễn giải nhân quả.
 
 ## Cầu nối sang những năm 2010–2020
 

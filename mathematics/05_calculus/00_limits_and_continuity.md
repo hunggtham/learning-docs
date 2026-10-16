@@ -32,8 +32,6 @@ Mathematics cần statement không phụ thuộc cảm giác. Khi viết
 
 Đây là một đặc tả hợp đồng (contract / 계약) giữa **đầu vào (input / 입력) tolerance** và **đầu ra (output / 출력) tolerance**.
 
-> **Nối mạch:** “Gần” chỉ có nghĩa toán học khi được gắn với tolerance của đầu ra; ví dụ hàm không định nghĩa tại điểm cho thấy limit xét lân cận chứ không xét riêng giá trị đó. **Epsilon–delta** tiếp theo biến trực giác này thành hợp đồng định lượng giữa (\varepsilon) và (\delta).
-
 ## Một ví dụ quan trọng: hàm (function / 함수) không cần được định nghĩa tại điểm (point / 지점)
 
 Xét
@@ -71,8 +69,6 @@ f(1)=100
 ```
 
 mà limit vẫn là `2`, vì một isolated điểm (point / 지점) không thay hành vi (behavior / 동작) của nearby values.
-
-> **Nối mạch:** Ví dụ khử nhân tử cho thấy một lỗ hổng tại (x=a) không ngăn limit tồn tại; **epsilon–delta** giải thích chính xác vì sao mọi (x) đủ gần nhưng khác (a) đều cho đầu ra gần (L). Ví dụ epsilon–delta đơn giản tiếp theo luyện cách chọn (\delta) từ yêu cầu (\varepsilon).
 
 ## Epsilon–delta: biến “gần” thành đặc tả hợp đồng (contract / 계약) định lượng
 
@@ -117,8 +113,6 @@ Tưởng tượng một người thách thức chọn bất kỳ `ε>0`, dù c�
 Nếu ta luôn làm được, limit là `L`.
 
 Cách nhìn này giải thích vì sao definition dùng “for every `ε`” trước “there exists `δ`”. Ta không được chọn một tolerance dễ rồi tuyên bố limit tồn tại; phải đáp ứng mọi độ chính xác được yêu cầu.
-
-> **Nối mạch:** Định nghĩa epsilon–delta là tiêu chuẩn tổng quát; ví dụ đơn giản cho thấy cách biến (|f(x)-L|) thành một biểu thức bị chặn bởi (|x-a|). Khi kỹ thuật này rõ, **limit laws** cho phép ghép các giới hạn đã biết thay vì chứng minh lại từ đầu.
 
 ## Epsilon–delta example đơn giản
 
@@ -166,8 +160,6 @@ suy ra
 
 Proof này cho thấy epsilon–delta không phải nghi thức formal vô nghĩa. Nó tường minh (explicit / 명시적) hóa sensitivity giữa đầu vào (input / 입력) và đầu ra (output / 출력).
 
-> **Nối mạch:** Ví dụ epsilon–delta chứng minh một limit cụ thể, còn **limit laws** cung cấp phép cộng, nhân và chia có điều kiện để mở rộng kết quả. Bước kế tiếp hỏi khi nào có thể **direct substitution**, và khi nào mẫu số bằng 0 hoặc gián đoạn buộc phải biến đổi thêm.
-
 ## Limit laws: tại sao ta không phải chứng minh từ đầu mọi lần?
 
 Nếu
@@ -202,8 +194,6 @@ Các laws này follow từ epsilon–delta cấu trúc (structure / 구조). M�
 
 Đây là mẫu (pattern / 패턴) chung của mathematics: formal foundation được xây kỹ để later lập luận (reasoning / 추론) có thể dùng theorem thay vì re-prove mọi detail.
 
-> **Nối mạch:** Limit laws cho phép thế trực tiếp khi các phép toán vẫn xác định và liên tục tại điểm; **direct substitution** vì thế là kết luận có điều kiện, không phải mẹo phổ quát. Khi gặp dạng (0/0) hoặc (infty/infty), **indeterminate form** chỉ báo cần phân tích thêm chứ chưa phải đáp án.
-
 ## Khi direct substitution đúng?
 
 Nếu `f` continuous tại `a`, thì
@@ -223,8 +213,6 @@ Ví dụ
 Nhưng direct substitution không phải definition của limit. Nó là shortcut justified bởi continuity.
 
 Khi substitution cho `0/0`, ta không thể conclude limit là `0/0`; đó là **indeterminate form**, tín hiệu (signal / 신호) rằng cần analyze cấu trúc (structure / 구조) sâu hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Indeterminate form không phải answer** nối từ **Khi direct substitution đúng?** sang **One-sided limits: approach direction có thể matter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Indeterminate form không phải answer
 
@@ -253,8 +241,6 @@ Một expression khác,
 cũng cho `0/0` khi substitute `1`, nhưng limit là `0`.
 
 Do đó same indeterminate form có thể dẫn tới different limits. Form cho biết “cần thêm phân tích (analysis / 분석)”, không quyết định kết quả (result / 결과).
-
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Indeterminate form không phải answer** đặt tiêu chí; **One-sided limits: approach direction có thể matter** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Infinite limits: unbounded hành vi (behavior / 동작), không phải “giá trị infinity”** mở rộng hệ quả.
 
 ## One-sided limits: approach direction có thể matter
 
@@ -308,8 +294,6 @@ không tồn tại.
 
 Piecewise pricing, tax threshold, activation functions và điều khiển (control / 제어) lô-gic (logic / 논리) đều có thể tạo kiểu hành vi (behavior / 동작) này.
 
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **One-sided limits: approach direction có thể matter** đặt tiêu chí; **Infinite limits: unbounded hành vi (behavior / 동작), không phải “giá trị infinity”** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Limits at infinity: long-run hành vi (behavior / 동작)** mở rộng hệ quả.
-
 ## Infinite limits: unbounded hành vi (behavior / 동작), không phải “giá trị infinity”
 
 Khi viết
@@ -331,8 +315,6 @@ Tương tự,
 Vì hành vi (behavior / 동작) hai sides khác sign, không có single two-sided infinite hành vi (behavior / 동작).
 
 Vertical asymptote thường liên quan kiểu unbounded cục bộ (local / 로컬) hành vi (behavior / 동작) này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Infinite limits: unbounded hành vi (behavior / 동작), không phải “giá trị infinity”** đặt tiêu chí; **Limits at infinity: long-run hành vi (behavior / 동작)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Rates of growth và dominant terms** mở rộng hệ quả.
 
 ## Limits at infinity: long-run hành vi (behavior / 동작)
 
@@ -359,8 +341,6 @@ Chia numerator và denominator cho `x^2`:
 Khi `x→∞`, terms `1/x^2` và `5/x^2` tiến về 0, để lại ratio `3`.
 
 Điều này phản ánh principle “highest-order terms dominate” cho rational functions ở large magnitude.
-
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Limits at infinity: long-run hành vi (behavior / 동작)** đặt tiêu chí; **Rates of growth và dominant terms** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Continuity: khi hàm (function / 함수) giá trị (value / 값) khớp với cục bộ (local / 로컬) hành vi (behavior / 동작)** mở rộng hệ quả.
 
 ## Rates of growth và dominant terms
 
@@ -390,8 +370,6 @@ với `a>0`.
 
 Hierarchy này rất quan trọng trong thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도) và asymptotic phân tích (analysis / 분석).
 
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Continuity: khi hàm (function / 함수) giá trị (value / 값) khớp với cục bộ (local / 로컬) hành vi (behavior / 동작)** nối từ **Rates of growth và dominant terms** sang **Continuity trên interval**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Continuity: khi hàm (function / 함수) giá trị (value / 값) khớp với cục bộ (local / 로컬) hành vi (behavior / 동작)
 
 Hàm (function / 함수) `f` continuous tại `a` nếu
@@ -416,8 +394,6 @@ Epsilon–delta form của continuity là:
 
 Khác limit definition ở chỗ `x=a` không cần bị exclude và mục tiêu (target / 대상) đầu ra (output / 출력) là chính `f(a)`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Continuity trên interval** nối từ **Continuity: khi hàm (function / 함수) giá trị (value / 값) khớp với cục bộ (local / 로컬) hành vi (behavior / 동작)** sang **Intermediate giá trị (value / 값) Theorem và gốc (root / 루트) existence**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Continuity trên interval
 
 Một hàm (function / 함수) continuous trên interval nếu continuous tại mọi interior điểm (point / 지점) và appropriate one-sided continuity tại endpoints.
@@ -429,8 +405,6 @@ Continuous functions có nhiều stability properties. Hai theorem đặc biệt
 **Intermediate giá trị (value / 값) Theorem:** hàm (function / 함수) nhận mọi giá trị (value / 값) giữa `f(a)` và `f(b)`.
 
 Continuity vì thế không chỉ là “đồ thị (graph / 그래프) mượt”. Nó guarantee existence của values/extrema dưới conditions cụ thể.
-
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Intermediate giá trị (value / 값) Theorem và gốc (root / 루트) existence** nối từ **Continuity trên interval** sang **Types of discontinuity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intermediate giá trị (value / 값) Theorem và gốc (root / 루트) existence
 
@@ -449,8 +423,6 @@ f(c)=0.
 Đây là theoretical foundation của bisection.
 
 Lưu ý theorem chỉ guarantee **existence**, không uniqueness. hàm (function / 함수) có thể cross zero nhiều lần trong interval.
-
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Types of discontinuity** nối từ **Intermediate giá trị (value / 값) Theorem và gốc (root / 루트) existence** sang **Continuous không có nghĩa differentiable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Types of discontinuity
 
@@ -488,8 +460,6 @@ khi `x→0` oscillate ngày càng nhanh giữa `-1` và `1`, nên không approac
 
 Ví dụ này quan trọng vì limit có thể thất bại (fail / 실패) mà không jump và không blow up.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Continuous không có nghĩa differentiable** nối từ **Types of discontinuity** sang **Differentiability như cục bộ (local / 로컬) linearity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Continuous không có nghĩa differentiable
 
 Absolute giá trị (value / 값)
@@ -506,8 +476,6 @@ Nếu hàm (function / 함수) differentiable tại `a`, nó continuous tại `a
 
 Geometrically, derivative cần cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation; continuity chỉ yêu cầu no đầu ra (output / 출력) jump under arbitrarily small đầu vào (input / 입력) perturbation.
 
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Differentiability như cục bộ (local / 로컬) linearity** nối từ **Continuous không có nghĩa differentiable** sang **Chuỗi (sequence / 시퀀스) viewpoint của limits**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Differentiability như cục bộ (local / 로컬) linearity
 
 Limit mở đường cho derivative:
@@ -521,8 +489,6 @@ Expression bên trong là average slope trên interval kích thước (size / �
 Vì vậy derivative không phải “đặt `h=0`”. Ta không bao giờ divide by zero. Ta analyze ratio cho nonzero `h` rồi lấy limit.
 
 Đây là conceptual reason limits nằm trước derivatives trong calculus.
-
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Differentiability như cục bộ (local / 로컬) linearity** đặt tiêu chí; **Chuỗi (sequence / 시퀀스) viewpoint của limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Limits và infinite series** mở rộng hệ quả.
 
 ## Chuỗi (sequence / 시퀀스) viewpoint của limits
 
@@ -550,8 +516,6 @@ f(x)=\sin\frac1x,
 
 ta chọn sequences làm `1/x` rơi vào peaks `π/2+2πn` và troughs `3π/2+2πn`; hàm (function / 함수) values lần lượt tiến theo subsequences `1` và `-1`. Vì vậy không có single limit tại 0.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Chuỗi (sequence / 시퀀스) viewpoint của limits** đặt tiêu chí; **Limits và infinite series** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Uniform continuity: cùng một δ cho cả region** mở rộng hệ quả.
-
 ## Limits và infinite series
 
 Series
@@ -576,8 +540,6 @@ Infinite sum tồn tại khi chuỗi (sequence / 시퀀스) partial sums converg
 
 Limit vì thế là cơ chế (mechanism / 메커니즘) biến “infinite tiến trình (process / 프로세스)” thành finite mathematical đối tượng (object / 객체) thông qua convergence.
 
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Limits và infinite series** đặt tiêu chí; **Uniform continuity: cùng một δ cho cả region** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Continuity trong nhiều dimensions** mở rộng hệ quả.
-
 ## Uniform continuity: cùng một `δ` cho cả region
 
 Ordinary continuity cho phép `δ` phụ thuộc cả `ε` và điểm (point / 지점) `a`.
@@ -591,8 +553,6 @@ Uniform continuity yêu cầu với mỗi `ε`, một single `δ` hoạt động
 Continuous hàm (function / 함수) trên closed bounded interval `[a,b]` luôn uniformly continuous.
 
 Distinction này quan trọng trong phân tích (analysis / 분석) vì nó kiểm soát sensitivity globally hơn cục bộ (local / 로컬) pointwise continuity.
-
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Continuity trong nhiều dimensions** nối từ **Uniform continuity: cùng một δ cho cả region** sang **Limit và numerical computing là hai tầng khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Continuity trong nhiều dimensions
 
@@ -613,8 +573,6 @@ continuity generalize bằng distance/norm:
 Ta thấy essence không phụ thuộc one-dimensional đồ thị (graph / 그래프). Continuity là preservation của nearness.
 
 Topology sau này abstract hóa idea này hơn nữa, thậm chí bỏ tường minh (explicit / 명시적) chỉ số (metric / 지표) trong nhiều contexts.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Continuity trong nhiều dimensions** đặt tiêu chí; **Limit và numerical computing là hai tầng khác nhau** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Limits trong asymptotic độ phức tạp (complexity / 복잡도)** mở rộng hệ quả.
 
 ## Limit và numerical computing là hai tầng khác nhau
 
@@ -637,8 +595,6 @@ có truncation lỗi (error / 오류) khi `h` lớn nhưng cancellation/rounding
 Limit là ideal mathematical đối tượng (object / 객체); numerical thuật toán (algorithm / 알고리즘) phải chọn finite step trong finite precision.
 
 Nhầm hai tầng này dẫn đến misconception kiểu “đặt `h=10^{-100}` sẽ gần derivative hơn”. Trên floating điểm (point / 지점), `x+h` thậm chí có thể round thành đúng `x`.
-
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Limit và numerical computing là hai tầng khác nhau** đặt tiêu chí; **Limits trong asymptotic độ phức tạp (complexity / 복잡도)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và robust các hệ thống (systems / 시스템들)** mở rộng hệ quả.
 
 ## Limits trong asymptotic độ phức tạp (complexity / 복잡도)
 
@@ -668,8 +624,6 @@ Nếu ratio tiến tới positive finite constant, hai functions có cùng asymp
 
 Vì vậy limit không chỉ là calculus technique; nó là ngôn ngữ (language / 언어) của asymptotics trong algorithms.
 
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Limits trong asymptotic độ phức tạp (complexity / 복잡도)** đặt tiêu chí; **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và robust các hệ thống (systems / 시스템들)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và robust các hệ thống (systems / 시스템들)
 
 Trong kỹ thuật (engineering / 엔지니어링), continuity là thành phần nguyên thủy (primitive / 기본 요소) form của robustness: small thay đổi (change / 변경) đầu vào (input / 입력) không tạo arbitrary large jump đầu ra (output / 출력).
@@ -680,8 +634,6 @@ Nhưng continuity không guarantee practical robustness đủ mạnh. hàm (func
 
 Continuity trả lời “có catastrophic jump do infinitesimal perturbation không?”; conditioning trả lời “amplification mạnh đến mức nào?”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và tối ưu hóa (optimization / 최적화)** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và robust các hệ thống (systems / 시스템들)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và tối ưu hóa (optimization / 최적화)
 
 Continuous mục tiêu (objective / 목표) trên compact feasible set đạt toàn cục (global / 전역) min/max theo Extreme giá trị (value / 값) Theorem. Đây là existence guarantee trước khi bàn thuật toán (algorithm / 알고리즘) nào tìm optimum.
@@ -690,13 +642,9 @@ Differentiability cho gradient-based methods thêm cục bộ (local / 로컬) h
 
 Mathematical tối ưu hóa (optimization / 최적화) tốt cần phân biệt rõ các tầng guarantee này.
 
-> **Nối mạch:** Trong **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결) — continuity và tối ưu hóa (optimization / 최적화)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Limit là một **tolerance đặc tả hợp đồng (contract / 계약)**: nếu ta yêu cầu đầu ra (output / 출력) gần mục tiêu (target / 대상) đến bất kỳ mức nào, liệu có thể ép đầu vào (input / 입력) đủ gần điểm (point / 지점) để guarantee điều đó không? Continuity nói hàm (function / 함수) giá trị (value / 값) tại điểm (point / 지점) đồng ý với cục bộ (local / 로컬) limit. Derivative dùng limit để biến shrinking interval thành instantaneous tỷ lệ (rate / 비율); integral và infinite series dùng limit để biến increasingly fine/long finite approximations thành mathematical đối tượng (object / 객체). Limit là cây cầu giữa finite lập luận (reasoning / 추론) và idealized infinitesimal/infinite hành vi (behavior / 동작).
-
-> **Nối mạch:** Ở chặng này của **Giới hạn và tính liên tục: làm chính xác ý tưởng “tiến gần”**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

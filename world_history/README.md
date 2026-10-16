@@ -39,8 +39,6 @@ Các chương không tuyên bố rằng lịch sử đi theo một đường th�
 
 Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và chuẩn gốc (canonical / 정본) files, nhưng làm dày 14 nút (node / 노드) từ Agricultural Revolution đến post-1991. Khi đọc các nút (node / 노드) này, theo chuỗi: `initial conditions → actors → institutions/material constraints → mechanism → event sequence → competing interpretations → consequences → path dependence`. Đây là tài liệu học độc lập ở mức advanced foundation, không phải chuyên khảo thay thế nguồn (source / 소스) workbench.
 
-> **Nối mạch:** Bắt đầu từ đâu chọn tuyến theo owner; Phạm vi và ranh giới ngăn world history lấn sang domain khác. **Quy tắc đọc một giai đoạn** sau đó đặt cùng một khung so sánh lên từng chapter.
-
 ## Phạm vi và ranh giới
 
 - `world_history/` tập trung vào cơ chế xuyên vùng và so sánh; không thay thế lịch sử quốc gia chuyên sâu như [`korean_history/`](../korean_history/).
@@ -49,8 +47,6 @@ Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và ch
 - Nhà nước, luật, quyền công dân, thuộc địa và chủ quyền được đặt cạnh [`korea_law_civic_life/`](../korea_law_civic_life/) khi cần một trường hợp (case / 사례) hiện đại.
 - Tôn giáo, gia đình, giới, lao động, ký ức và đời sống thường ngày được đọc như institutions và xã hội (social / 사회적) practices; không giản lược chúng thành “văn hoá” bất biến.
 
-> **Nối mạch:** Khung scale–stock/flow–shock biến từng giai đoạn thành một lập luận có thể so sánh. **Chất lượng và bằng chứng** kiểm tra lập luận ấy bằng nguồn, cơ chế và counterfactual.
-
 ## Quy tắc đọc một giai đoạn
 
 1. Xác định **quy mô (scale / 규모)**: hộ gia đình, thành phố, đế chế, đại dương hay hệ thống toàn cầu.
@@ -58,8 +54,6 @@ Vòng độ sâu (depth / 깊이) pass hiện tại giữ nguyên tuyến và ch
 3. Tách **shock** khỏi xu hướng dài hạn: chiến tranh có thể ngắn nhưng làm đổi thuế, biên giới và quyền sở hữu nhiều thế hệ.
 4. Kiểm tra **winners, losers, coercion và agency**; tăng trưởng của một mạng thường dựa trên chi phí bị đẩy sang nhóm khác.
 5. So sánh ít nhất hai vùng và ghi rõ nơi mô hình không áp dụng.
-
-> **Nối mạch:** Chất lượng và bằng chứng khép README bằng yêu cầu claim phải có cơ chế, quy mô, bất định và nguồn đủ mạnh; chỉ khi đạt mới chuyển sang chapter kế tiếp theo owner.
 
 ## Chất lượng và bằng chứng
 

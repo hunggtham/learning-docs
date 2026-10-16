@@ -16,8 +16,6 @@ Tuy nhiên, từ fact “một doctrine có official constitutional role” khô
 
 Nguồn chính thức: Cổng Thông tin điện tử Chính phủ, Hiến pháp 2013, Chương I: https://chinhphu.vn/hien-phap-nam-2013/chuong-i-che-do-chinh-tri-10052990
 
-> **Chuyển mạch:** Trong **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Vì sao sinh viên đại học gặp các môn này** tiếp nhận điểm tựa từ **Vị trí trong constitutional khung phần mềm (framework / 프레임워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Curriculum luồng (flow / 흐름) và research luồng (flow / 흐름) không hoàn toàn giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vì sao sinh viên đại học gặp các môn này
 
 Chương trình lý luận chính trị ở higher education Việt Nam đã thay đổi cấu trúc qua thời gian. Quyết định 52/2008/QĐ-BGDĐT từng tổ chức khối không chuyên quanh *Những nguyên lý cơ bản của chủ nghĩa Mác–Lênin*, *Tư tưởng Hồ Chí Minh* và *Đường lối cách mạng của Đảng Cộng sản Việt Nam*.
@@ -35,8 +33,6 @@ Triết học Mác–Lênin
 Bộ giáo trình lý luận chính trị dành cho bậc đại học được Bộ Giáo dục và Đào tạo cùng Nhà xuất bản Chính trị quốc gia Sự thật giới thiệu theo năm môn tương ứng.
 
 Điểm quan trọng về học tập (learning / 학습) kiến trúc (architecture / 아키텍처) là ba môn đầu tương ứng với ba tầng (layer / 계층) thường dùng để systematize Marxism–Leninism ở Việt Nam: philosophy/worldview-method, political economy và scientific socialism. Hai môn sau chuyển sang Vietnamese intellectual-political ngữ cảnh (context / 맥락) và historical development của Communist Party of Vietnam.
-
-> **Chuyển mạch:** Ở chặng này của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Vì sao sinh viên đại học gặp các môn này** xác định đầu vào; **Curriculum luồng (flow / 흐름) và research luồng (flow / 흐름) không hoàn toàn giống nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Triết học Mác–Lênin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Curriculum luồng (flow / 흐름) và research luồng (flow / 흐름) không hoàn toàn giống nhau
 
@@ -58,8 +54,6 @@ Luồng (flow / 흐름) này giúp người đọc quay lại university materia
 
 Ví dụ, khi giáo trình nói về **historical materialism**, ta có thể quay về [Marx — alienation, history, class và ideology](01_marx_alienation_history_class_and_ideology.md) để hỏi Marx’s nguồn (source / 소스) texts và scholarly disputes. Khi gặp **surplus giá trị (value / 값)**, quay về [Marxian Political Economy](02_marxian_political_economy.md). Khi gặp **party leadership**, **trạng thái (state / 상태)** hoặc **imperialism**, quay về [Lenin](04_lenin_party_state_revolution_and_imperialism.md). Khi gặp một proposition được trình bày như complete Marxist-Leninist worldview, xem [Doctrine and Variation](05_marxism_leninism_doctrine_and_variation.md) để phân biệt later systematization với original texts.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Curriculum luồng (flow / 흐름) và research luồng (flow / 흐름) không hoàn toàn giống nhau** xác định đầu vào; **Triết học Mác–Lênin** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kinh tế chính trị Mác–Lênin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Triết học Mác–Lênin
 
 Trong university curriculum, học phần này thường xây worldview và methodology trước khi đi sang political economy và scientific socialism. Các nút (node / 노드) phổ biến gồm materialism, dialectics, lý thuyết (theory / 이론) of kiến thức (knowledge / 지식) và historical materialism.
@@ -67,8 +61,6 @@ Trong university curriculum, học phần này thường xây worldview và meth
 Để học sâu hơn textbook, mỗi nút (node / 노드) nên được translated thành philosophical question. “Materialism” hỏi ontology và explanation. “Dialectics” hỏi quan hệ (relation / 관계), thay đổi (change / 변경) và contradiction. “Lý thuyết (theory / 이론) of kiến thức (knowledge / 지식)” hỏi justification và practice. “Historical materialism” hỏi nhân quả (causal / 인과적) cấu trúc (structure / 구조) của xã hội (social / 사회적) thay đổi (change / 변경).
 
 Sau đó dùng đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) khác trong repo để kiểm tra ranh giới (boundary / 경계): [Epistemology](../../01_epistemology/), [Metaphysics](../../02_metaphysics/) và [Philosophy of Science](../../03_philosophy_of_science/) giúp so sánh terminology Marxist-Leninist với wider philosophical debates.
-
-> **Chuyển mạch:** Trong **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Kinh tế chính trị Mác–Lênin** tiếp nhận điểm tựa từ **Triết học Mác–Lênin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chủ nghĩa xã hội khoa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kinh tế chính trị Mác–Lênin
 
@@ -78,8 +70,6 @@ University course thường đưa commodity, thị trường (market / 시장), 
 
 Mục tiêu không phải thay thế Marxian vocabulary bằng neoclassical vocabulary hay ngược lại; mục tiêu là biết hai frameworks đang định nghĩa đối tượng (object / 객체) khác nhau ở đâu và claim nào có thể kiểm tra bằng dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Chủ nghĩa xã hội khoa học** tiếp nhận điểm tựa từ **Kinh tế chính trị Mác–Lênin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tư tưởng Hồ Chí Minh và Lịch sử Đảng là đơn vị sở hữu (owner / 오너) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chủ nghĩa xã hội khoa học
 
 Học phần này chuyển từ description/critique sang questions về socialist chuyển tiếp (transition / 전이), lớp (class / 클래스), political organization, democracy, trạng thái (state / 상태), xã hội (social / 사회적) cấu trúc (structure / 구조) và historical đường dẫn (path / 경로).
@@ -87,8 +77,6 @@ Học phần này chuyển từ description/critique sang questions về sociali
 Đây là nơi distinction giữa **normative goal**, **nhân quả (causal / 인과적) prediction** và **institutional cơ chế (mechanism / 메커니즘)** đặc biệt quan trọng. Một desired xã hội (social / 사회적) kết quả (outcome / 결과) không tự chứng minh cơ chế (mechanism / 메커니즘) để đạt nó. Một historical prediction cần bằng chứng (evidence / 증거). Một institutional thiết kế (design / 설계) cần được đánh giá qua incentive, thông tin (information / 정보), accountability, sức chứa (capacity / 용량) và lỗi (error / 오류) correction.
 
 Vì vậy [Historical Implementation and Evidence](06_historical_implementation_and_evidence.md) là companion chapter bắt buộc nếu muốn hiểu phần này beyond terminology.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, sau nội dung của **Chủ nghĩa xã hội khoa học**, **Tư tưởng Hồ Chí Minh và Lịch sử Đảng là đơn vị sở hữu (owner / 오너) riêng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Đổi Mới: một cầu nối (bridge / 브리지) quan trọng giữa ideology và institutions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tư tưởng Hồ Chí Minh và Lịch sử Đảng là đơn vị sở hữu (owner / 오너) riêng
 
@@ -98,8 +86,6 @@ Hai môn này có quan hệ (relation / 관계) chặt với Marxism–Leninism 
 
 Nếu Học tập (learning / 학습) Docs mở rộng hai mảng này về sau, nên tạo đơn vị sở hữu (owner / 오너) riêng dưới Vietnam/modern-history hoặc political-history thay vì nhét nội dung vào mô-đun (module / 모듈) Marxism–Leninism. Nội bộ (internal / 내부) links có thể mạnh nhưng quyền sở hữu (ownership / 소유권) phải rõ để tránh duplicate và category lỗi (error / 오류).
 
-> **Chuyển mạch:** Trong **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Đổi Mới: một cầu nối (bridge / 브리지) quan trọng giữa ideology và institutions** tiếp nhận điểm tựa từ **Tư tưởng Hồ Chí Minh và Lịch sử Đảng là đơn vị sở hữu (owner / 오너) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học tập (learning / 학습) handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Đổi Mới: một cầu nối (bridge / 브리지) quan trọng giữa ideology và institutions
 
 Đổi Mới từ 1986 là trường hợp (case / 사례) rất hữu ích để thấy rằng official ideological continuity không đồng nghĩa economic institutions không thay đổi. World Bank mô tả reform tiến trình (process / 프로세스) của Việt Nam như chuyển tiếp (transition / 전이) lớn sang thị trường (market / 시장) mechanisms, expansion of private economic activity, agricultural reform và deeper toàn cục (global / 전역) tích hợp (integration / 통합), trong khi Vietnamese constitutional khung phần mềm (framework / 프레임워크) vẫn giữ Marxism–Leninism và Hồ Chí Minh Thought ở vị trí ideological foundation.
@@ -107,8 +93,6 @@ Nếu Học tập (learning / 학습) Docs mở rộng hai mảng này về sau,
 Vì vậy khi học contemporary Vietnam, không nên dùng nhị phân (binary / 이진) đơn giản “socialist = no thị trường (market / 시장)” hoặc “thị trường (market / 시장) = no socialist ideology”. Cần phân tích cụ thể quyền sở hữu (ownership / 소유권) forms, thị trường (market / 시장) coordination, trạng thái (state / 상태) role, fiscal institutions, trade regime và political institutions.
 
 Đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) cho economic side là [Economics](../../../economics/README.md); mô-đun (module / 모듈) này chỉ giữ liên kết (connection / 연결) với ideology and political philosophy.
-
-> **Chuyển mạch:** Ở chặng này của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Học tập (learning / 학습) handoff** tiếp nhận điểm tựa từ **Đổi Mới: một cầu nối (bridge / 브리지) quan trọng giữa ideology và institutions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Học tập (learning / 학습) handoff
 
@@ -132,8 +116,6 @@ Lịch sử Đảng Cộng sản Việt Nam
 ```
 
 Ranh giới (boundary / 경계) cuối cùng cần nhớ: **học Marxism–Leninism như một official curriculum, học Marx/Lenin như intellectual lịch sử (history / 이력), và đánh giá claim bằng philosophy/lịch sử (history / 이력)/economics là ba hoạt động liên quan nhưng không giống nhau**. Học tập (learning / 학습) Docs nên cho phép chuyển qua lại giữa cả ba mà không trộn chúng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vietnam ngữ cảnh (context / 맥락) — vì sao Marxism–Leninism xuất hiện trong đại học Việt Nam**, **Học tập (learning / 학습) handoff** nêu điều cần giải thích; **Sources và reading anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Sources và reading anchors
 

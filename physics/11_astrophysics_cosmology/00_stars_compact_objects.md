@@ -8,8 +8,6 @@ Phần lớn vật thể thiên văn không thể đưa vào phòng thí nghiệ
 
 Vật lý thiên văn (Astrophysics / 천체물리학) vì thế là một bài học lớn về suy luận: từ phổ, độ sáng, biến thiên theo thời gian, phân cực và chuyển động, ta có thể suy ra nhiệt độ, thành phần hóa học, vận tốc, khối lượng, từ trường và nhiều tính chất khác của vật thể ở rất xa.
 
-> **Nối mạch:** Trong **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Ánh sáng là tín hiệu mang thông tin** nối từ **Thiên văn học trở thành vật lý bằng cách nào?** sang **Vạch quang phổ là “dấu vân tay” nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ánh sáng là tín hiệu mang thông tin
 
 Một vật gần vật đen (blackbody) có bước sóng cực đại liên hệ với nhiệt độ qua định luật Wien:
@@ -38,15 +36,11 @@ F=\frac{L}{4\pi d^2}.
 
 Kết hợp phổ, độ sáng biểu kiến và khoảng cách cho phép suy ra nhiều tính chất của sao.
 
-> **Nối mạch:** Ở chặng này của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Vạch quang phổ là “dấu vân tay” nguyên tử** nối từ **Ánh sáng là tín hiệu mang thông tin** sang **Sao cân bằng giữa hấp dẫn và áp suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vạch quang phổ là “dấu vân tay” nguyên tử
 
 Các vạch hấp thụ và phát xạ xuất hiện do chuyển mức lượng tử của nguyên tử hay ion. Mẫu vạch cho biết nguyên tố hóa học; độ dịch vạch cho thông tin về vận tốc qua hiệu ứng Doppler; độ rộng vạch chứa thông tin về nhiệt độ, va chạm hay chuyển động rối; tách vạch Zeeman có thể cho biết từ trường.
 
 Vì vậy máy quang phổ gắn với kính thiên văn hoạt động như một “phòng thí nghiệm từ xa”. Vật lý lượng tử của nguyên tử cho phép ta đọc thành phần hóa học của một ngôi sao cách hàng nghìn năm ánh sáng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Sao cân bằng giữa hấp dẫn và áp suất** nối từ **Vạch quang phổ là “dấu vân tay” nguyên tử** sang **Nhiệt hạch và tuổi thọ của sao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sao cân bằng giữa hấp dẫn và áp suất
 
@@ -68,15 +62,11 @@ Khối lượng bên trong bán kính `r` thỏa
 
 Một ngôi sao vì thế là một hệ plasma nhiệt động lực học tự hấp dẫn, không đơn giản là một “quả cầu lửa”.
 
-> **Nối mạch:** Trong **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Nhiệt hạch và tuổi thọ của sao** nối từ **Sao cân bằng giữa hấp dẫn và áp suất** sang **Tiến hóa sao (stellar evolution)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệt hạch và tuổi thọ của sao
 
 Trong lõi sao, nhiệt độ và mật độ đủ lớn để các hạt nhân hydro có thể phản ứng nhờ cả chuyển động nhiệt lẫn xuyên hầm lượng tử (quantum tunneling). Phản ứng nhiệt hạch giải phóng năng lượng vì sản phẩm như heli có năng lượng liên kết trên nucleon lớn hơn trạng thái ban đầu.
 
 Sao khối lượng lớn có nhiều nhiên liệu hơn nhưng độ sáng tăng rất nhanh theo khối lượng. Vì tốc độ tiêu thụ nhiên liệu tăng mạnh, chúng thường sống ngắn hơn các sao khối lượng nhỏ.
-
-> **Nối mạch:** Ở chặng này của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Tiến hóa sao (stellar evolution)** nối từ **Nhiệt hạch và tuổi thọ của sao** sang **Sao lùn trắng và áp suất suy biến electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiến hóa sao (stellar evolution)
 
@@ -84,23 +74,17 @@ Khi hydro trong lõi cạn dần, cấu trúc sao phải điều chỉnh. Sao kh
 
 Phần còn lại có thể là sao neutron hoặc lỗ đen, tùy khối lượng và điều kiện tiến hóa. Đường tiến hóa thực tế còn phụ thuộc độ kim loại (metallicity), tốc độ quay, hệ sao đôi và mức mất khối lượng, nên không có một sơ đồ duy nhất áp dụng tuyệt đối cho mọi sao.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Sao lùn trắng và áp suất suy biến electron** nối từ **Tiến hóa sao (stellar evolution)** sang **Sao neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sao lùn trắng và áp suất suy biến electron
 
 Áp suất suy biến electron (electron degeneracy pressure) xuất phát từ nguyên lý loại trừ Pauli, không cần nhiệt độ cao như áp suất khí lý tưởng. Khi electron bị nén vào thể tích nhỏ, chúng phải chiếm những trạng thái động lượng khác nhau, tạo áp suất lượng tử chống lại hấp dẫn.
 
 Giới hạn Chandrasekhar cho thấy có một thang khối lượng tối đa mà áp suất suy biến electron có thể giữ sao lùn trắng ổn định. Khi khối lượng vượt quá miền này, các hiệu ứng tương đối tính và động lực học sụp đổ trở nên quan trọng.
 
-> **Nối mạch:** Trong **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Sao neutron** nối từ **Sao lùn trắng và áp suất suy biến electron** sang **Lỗ đen và bồi tụ vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sao neutron
 
 Trong sụp đổ lõi, electron và proton có thể kết hợp tạo vật chất giàu neutron. Sao neutron có mật độ gần thang mật độ hạt nhân và được nâng đỡ bởi áp suất suy biến cùng các tương tác hạt nhân mạnh.
 
 Pulsar là sao neutron quay nhanh và có từ trường mạnh. Bức xạ phát theo chùm quét qua không gian tạo tín hiệu tuần hoàn rất ổn định, khiến một số pulsar hoạt động như những “đồng hồ vũ trụ”.
-
-> **Nối mạch:** Ở chặng này của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Lỗ đen và bồi tụ vật chất** nối từ **Sao neutron** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗ đen và bồi tụ vật chất
 
@@ -114,13 +98,9 @@ r_s=\frac{2GM}{c^2}.
 
 Đây là một kết quả của thuyết tương đối rộng, không phải bán kính của một bề mặt vật chất rắn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Lỗ đen và bồi tụ vật chất** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một ngôi sao là hệ tự hấp dẫn trong đó hấp dẫn ép vật chất vào trong, áp suất chống lại sự nén, phản ứng hạt nhân cung cấp năng lượng và các cơ chế vận chuyển đưa năng lượng ra ngoài. Khi nhiên liệu, thành phần hay cơ chế tạo áp suất thay đổi, cấu trúc cân bằng của sao cũng thay đổi và dẫn đến tiến hóa sao.
-
-> **Nối mạch:** Trong **Vật lý sao, tiến hóa sao và các thiên thể đặc**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

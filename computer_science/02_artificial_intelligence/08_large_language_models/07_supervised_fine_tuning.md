@@ -58,7 +58,7 @@ Ví dụ tốt chỉ có tác dụng khi pipeline gán đúng role và vị trí
 
 ## Mất mát (loss / 손실) masking và conversation templates
 
-Chat template quyết định đơn vị từ (token / 토큰) nào đại diện role boundaries. Một mismatch giữa huấn luyện (training / 학습) template và serving template có thể làm mô hình (model / 모델) hành vi (behavior / 동작) giảm dù weights không đổi.
+Chat template quyết định token (토큰) nào đại diện role boundaries. Một mismatch giữa huấn luyện (training / 학습) template và serving template có thể làm mô hình (model / 모델) hành vi (behavior / 동작) giảm dù weights không đổi.
 
 Ví dụ mô hình (model / 모델) được train với special tokens:
 

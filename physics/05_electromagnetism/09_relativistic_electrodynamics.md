@@ -14,8 +14,6 @@ Trong hệ quy chiếu chuyển động cùng điện tích thử, vận tốc t
 
 Thuyết tương đối hẹp giải quyết điều này bằng cách cho thấy `\mathbf E` và `\mathbf B` không phải hai trường hoàn toàn độc lập. Chúng là các thành phần khác nhau của cùng tensor điện từ; người quan sát chuyển động tương đối với nhau sẽ phân tách tensor đó thành điện trường và từ trường khác nhau.
 
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Bốn-thế điện từ** nối từ **Vì sao từ trường phụ thuộc hệ quy chiếu?** sang **Tensor trường điện từ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bốn-thế điện từ
 
 Điện thế vô hướng `\phi` và thế vectơ `\mathbf A` có thể ghép thành bốn-thế
@@ -40,8 +38,6 @@ Gauge Lorenz là
 
 Viết bằng bốn-vectơ làm đối xứng Lorentz của điện từ học hiện ra rõ hơn nhiều so với biểu diễn chỉ bằng các vectơ ba chiều.
 
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Tensor trường điện từ** nối từ **Bốn-thế điện từ** sang **Một ví dụ định tính về biến đổi trường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tensor trường điện từ
 
 Tensor điện từ được định nghĩa bởi
@@ -64,8 +60,6 @@ F^{\alpha\beta}.
 
 Do đó một phép boost có thể trộn điện trường và từ trường.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Tensor trường điện từ** nêu quy tắc; **Một ví dụ định tính về biến đổi trường** thử quy tắc trong tình huống, rồi **Lực Lorentz ở dạng hiệp biến** mở rộng hệ quả.
-
 ## Một ví dụ định tính về biến đổi trường
 
 Nếu trong một hệ `S` chỉ có điện trường, một người quan sát chuyển động ngang so với trường thường sẽ thấy cả điện trường và từ trường.
@@ -73,8 +67,6 @@ Nếu trong một hệ `S` chỉ có điện trường, một người quan sát
 Vì vậy câu “tại đây có từ trường hay không?” có thể phụ thuộc hệ quy chiếu, giống như khái niệm đồng thời trong thuyết tương đối.
 
 Đối tượng hình học chung là `F^{\mu\nu}`; cách tách thành `\mathbf E` và `\mathbf B` phụ thuộc người quan sát.
-
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Một ví dụ định tính về biến đổi trường** nêu quy tắc; **Lực Lorentz ở dạng hiệp biến** thử quy tắc trong tình huống, rồi **Bốn-dòng điện** mở rộng hệ quả.
 
 ## Lực Lorentz ở dạng hiệp biến
 
@@ -92,8 +84,6 @@ Phần không gian của phương trình này trở về
 ```
 
 Dạng hiệp biến cho thấy lực điện và lực từ chỉ là các thành phần của một định luật không-thời gian thống nhất.
-
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Bốn-dòng điện** nối từ **Lực Lorentz ở dạng hiệp biến** sang **Phương trình Maxwell ở dạng hiệp biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bốn-dòng điện
 
@@ -118,8 +108,6 @@ trở thành
 
 Bảo toàn điện tích vì vậy có dạng hình học tương đối tính tự nhiên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Phương trình Maxwell ở dạng hiệp biến** nối từ **Bốn-dòng điện** sang **Hai bất biến điện từ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương trình Maxwell ở dạng hiệp biến
 
 Hai phương trình Maxwell chứa nguồn có thể gộp thành
@@ -131,8 +119,6 @@ Hai phương trình Maxwell chứa nguồn có thể gộp thành
 Hai phương trình Maxwell không chứa nguồn có thể viết bằng tensor đối ngẫu hoặc từ đồng nhất thức đạo hàm của tensor phản đối xứng.
 
 Việc bốn phương trình Maxwell được gom thành các phương trình tensor không chỉ làm ký hiệu ngắn hơn. Nó cho thấy cấu trúc của lý thuyết tương thích tự nhiên với đối xứng Lorentz.
-
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Hai bất biến điện từ** nối từ **Phương trình Maxwell ở dạng hiệp biến** sang **Tensor năng lượng–động lượng của trường điện từ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hai bất biến điện từ
 
@@ -151,8 +137,6 @@ I_2=\mathbf E\cdot\mathbf B.
 Các bất biến này giúp phân loại cấu hình trường và trả lời những câu hỏi như: có tồn tại hệ quy chiếu nào trong đó `\mathbf B'=0` hay `\mathbf E'=0` hay không?
 
 Không thể tùy ý boost để loại bỏ cả điện trường và từ trường trong mọi cấu hình.
-
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Tensor năng lượng–động lượng của trường điện từ** nối từ **Hai bất biến điện từ** sang **Relativistic beaming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tensor năng lượng–động lượng của trường điện từ
 
@@ -174,8 +158,6 @@ Mật độ động lượng liên hệ với véc-tơ (vector / 벡터) Poyntin
 
 Áp suất bức xạ vì vậy không phải phép ẩn dụ. Ánh sáng mang dòng động lượng và có thể truyền lực lên vật chất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Relativistic beaming** nối từ **Tensor năng lượng–động lượng của trường điện từ** sang **Có thể nói “từ tính là hiệu ứng tương đối tính của điện học” không?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Relativistic beaming
 
 Một nguồn chuyển động tương đối tính không nhất thiết phát đẳng hướng trong hệ phòng thí nghiệm, ngay cả khi phát xạ đơn giản trong hệ nghỉ của nguồn.
@@ -193,8 +175,6 @@ Nó xuất hiện trong jet tương đối tính và thiên văn năng lượng 
 
 Độ sáng quan sát và thang thời gian có thể bị thay đổi mạnh bởi beaming, nên suy ra tính chất nội tại của nguồn phải xét đúng phép biến đổi hệ quy chiếu.
 
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Có thể nói “từ tính là hiệu ứng tương đối tính của điện học” không?** nối từ **Relativistic beaming** sang **Minimal coupling và hạt tương đối tính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Có thể nói “từ tính là hiệu ứng tương đối tính của điện học” không?
 
 Có những ví dụ sư phạm cho thấy lực từ giữa các dòng điện có thể được phân tích lại bằng điện trường và co độ dài trong một hệ khác.
@@ -202,8 +182,6 @@ Có những ví dụ sư phạm cho thấy lực từ giữa các dòng điện 
 Điều này hữu ích để thấy mối liên hệ giữa điện học, từ học và tương đối tính.
 
 Tuy nhiên không nên rút gọn thành câu “từ trường chỉ là điện trường giả”. Đối tượng thống nhất là trường điện từ; cách phân tách thành phần điện và từ phụ thuộc người quan sát. Cả hai đều có ý nghĩa vật lý đầy đủ trong hệ đang xét.
-
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Minimal coupling và hạt tương đối tính** nối từ **Có thể nói “từ tính là hiệu ứng tương đối tính của điện học” không?** sang **Worked lập luận (reasoning / 추론): dây dẫn có dòng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Minimal coupling và hạt tương đối tính
 
@@ -219,8 +197,6 @@ Cấu trúc minimal coupling này xuất hiện lại trong cơ học lượng t
 
 Đây là cầu nối trực tiếp giữa thuyết tương đối, gauge potential và vật lý hạt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Minimal coupling và hạt tương đối tính** nêu quy tắc; **Worked lập luận (reasoning / 추론): dây dẫn có dòng điện** thử quy tắc trong tình huống, rồi **Trường điện từ ở giới hạn vận tốc thấp** mở rộng hệ quả.
-
 ## Worked lập luận (reasoning / 추론): dây dẫn có dòng điện
 
 Một dây trung hòa trong hệ phòng thí nghiệm gồm mạng ion dương gần đứng yên và electron dẫn chuyển động.
@@ -233,15 +209,11 @@ Hai hệ quy chiếu vẫn cho cùng dự đoán vật lý nếu trường và l
 
 Ví dụ này cho trực giác rằng từ tính có nguồn gốc tương đối tính, nhưng không thay thế formalism tensor đầy đủ.
 
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, trường hợp ở **Worked lập luận (reasoning / 추론): dây dẫn có dòng điện** cho thấy quy tắc hoạt động; **Trường điện từ ở giới hạn vận tốc thấp** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Kiểm tra bất biến trước khi biến đổi từng thành phần** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Trường điện từ ở giới hạn vận tốc thấp
 
 Ở vận tốc nhỏ so với `c`, một số hiệu ứng từ có thể có bậc nhỏ hơn hiệu ứng điện với hệ số kiểu `v/c` hoặc `(v/c)^2`, tùy cấu hình.
 
 Đây là lý do từ học đôi khi trông giống một hiệu chỉnh nhỏ của điện học trong hệ điện tích chậm. Nhưng trong plasma tương đối tính, beam năng lượng cao hay bức xạ, điện và từ phải được xử lý ngang hàng.
-
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Trường điện từ ở giới hạn vận tốc thấp** đặt tiêu chí; **Kiểm tra bất biến trước khi biến đổi từng thành phần** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Miền áp dụng và quy ước** mở rộng hệ quả.
 
 ## Kiểm tra bất biến trước khi biến đổi từng thành phần
 
@@ -259,15 +231,11 @@ Nếu `I_2\neq0`, chẳng hạn, không thể tìm hệ trong đó một trườ
 
 Bất biến giúp loại bỏ nhiều khả năng trước khi làm đại số chi tiết.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Miền áp dụng và quy ước** nối từ **Kiểm tra bất biến trước khi biến đổi từng thành phần** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Miền áp dụng và quy ước
 
 Dấu trong `F^{\mu\nu}`, `A^\mu` và tensor chỉ số (metric / 지표) phụ thuộc quy ước ký hiệu. Khi so sánh giáo trình, cần kiểm tra chỉ số (metric / 지표) signature và định nghĩa thành phần.
 
 Điện động lực học cổ điển tương đối tính vẫn là lý thuyết cổ điển. Khi phát xạ từng photon, hiệu ứng chân không lượng tử hoặc quá trình tạo–hủy hạt quan trọng, cần điện động lực học lượng tử.
-
-> **Nối mạch:** Trong **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Miền áp dụng và quy ước** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -283,8 +251,6 @@ four-potential Aμ
 → stress-energy tensor
 → energy / momentum / radiation in different frames
 ```
-
-> **Nối mạch:** Ở chặng này của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -303,8 +269,6 @@ Hiệu chỉnh số có thể nhỏ ở vận tốc thấp, nhưng cấu trúc k
 ### “Dạng tensor chỉ là ký hiệu sang trọng”
 
 Không. Nó làm các bất biến và tính hiệp biến hiện rõ, đồng thời giảm nguy cơ áp dụng sai công thức ba-vectơ giữa các hệ quy chiếu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện động lực học tương đối tính: điện trường và từ trường như một trường thống nhất**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

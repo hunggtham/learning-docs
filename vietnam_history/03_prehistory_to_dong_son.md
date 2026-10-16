@@ -8,8 +8,6 @@ Ta đã biết từ [`02_geography_and_historical_space.md`](02_geography_and_hi
 
 Mục tiêu không phải học thuộc taxonomy khảo cổ. Phùng Nguyên → Đồng Đậu → Gò Mun → Đông Sơn được dùng như các coordinate để nhìn một tiến trình (process / 프로세스) kéo dài nhiều thế kỷ. Niên đại của từng culture thay đổi đôi chút theo site và scholarship, nên các phạm vi (range / 범위) dưới đây là xấp xỉ.
 
-> **Nối mạch:** **Prerequisite, phạm vi và câu hỏi trung tâm** đặt giới hạn đọc; **timeline vật chất** theo dõi đất, công cụ và settlement trước khi hỏi farming tạo surplus bằng cơ chế nào.
-
 ## Một timeline vật chất thay vì timeline vua chúa
 
 Ở Bắc Bộ, chuỗi (sequence / 시퀀스) thường được mô tả gần đúng như sau:
@@ -26,8 +24,6 @@ Gò Mun            ~ cuối thiên niên kỷ II → đầu thiên niên kỷ I 
 
 Các mốc không phải hard ranh giới (boundary / 경계). Một technology không biến mất vào đúng ngày culture label đổi tên. Archaeologist dùng pottery style, metallurgy, burial, settlement tầng (layer / 계층) và nhiều indicator khác để periodize material thay đổi (change / 변경).
 
-> **Nối mạch:** Từ timeline vật chất, **farming settlement đến surplus** giải thích tổ chức lao động và phân phối; **bronze metallurgy** tiếp tục bằng câu hỏi về năng lượng, kỹ năng và mạng trao đổi.
-
 ## Từ farming settlement đến surplus: “kinh tế” thời này trông như thế nào?
 
 Không có GDP, coinage thống nhất hay tax bản ghi (record / 레코드) để ta đo trực tiếp. Economic lịch sử (history / 이력) phải reconstruct từ dấu tích sản xuất và consumption. Wet-rice agriculture có vai trò quan trọng, nhưng cư dân còn fishing, hunting, gathering, animal husbandry và khai thác river/wetland resources. Stone, bone, bronze và về sau iron tools thay đổi năng suất và phạm vi việc có thể làm.
@@ -35,8 +31,6 @@ Không có GDP, coinage thống nhất hay tax bản ghi (record / 레코드) đ
 Điểm quan trọng là **lưu trữ (storage / 저장소) và surplus**. Khi một settlement tạo được food dư tương đối ổn định, không phải mọi household member đều phải dành toàn bộ thời gian tìm food. Một phần labor có thể chuyển sang pottery, weaving, metallurgy, boat building, ritual môi trường vận hành (production / 운영 환경) hoặc warfare. Từ đây xuất hiện **craft specialization (chuyên môn hóa thủ công)**.
 
 Surplus không tự động tạo elite, nhưng nó tạo thứ có thể được điều khiển (control / 제어), exchange, redistribute hoặc display. Khi burial goods và labor chi phí (cost / 비용) của mộ khác nhau đáng kể, ta có bằng chứng (evidence / 증거) rằng xã hội (social / 사회적) differentiation đã tăng — dù archaeology không thể luôn cho biết title chính xác của từng người.
-
-> **Nối mạch:** **Bronze metallurgy** nối surplus với sản xuất và trao đổi; **Đông Sơn không phải một “dân tộc đóng hộp”** nhắc rằng cùng một vật liệu không đủ để suy ra một cộng đồng đồng nhất.
 
 ## Bronze metallurgy là môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템), không chỉ là “biết đúc đồng”
 
@@ -46,23 +40,17 @@ Một bronze drum hoặc weapon hoàn thiện che khuất supply chuỗi (chain 
 
 Tại Cổ Loa, các phát hiện liên quan khuôn đúc và lượng lớn mũi tên đồng là một lý do quan trọng để chapter tiếp theo đặt câu hỏi về centralized môi trường vận hành (production / 운영 환경) và political sức chứa (capacity / 용량).
 
-> **Nối mạch:** Sau khi tránh gán nhãn dân tộc từ hiện vật, **Đời sống thường ngày** tách điều có thể suy ra khỏi điều còn thiếu bằng chứng từ nhà ở, mộ táng và đồ dùng.
-
 ## Đông Sơn không phải một “dân tộc đóng hộp”
 
 **Đông Sơn culture (văn hóa Đông Sơn)** là category khảo cổ học được nhận diện qua assemblage vật chất và phân bố site. Không nên biến category này thành một định danh (identity / 식별자) hiện đại với ranh giới (boundary / 경계) tuyệt đối. Các community giao lưu với vùng nam Trung Hoa và Đông Nam Á; vật liệu, motif, technology và goods di chuyển qua mạng (network / 네트워크) rộng.
 
 Điều này không làm lịch sử “kém Việt Nam”. Ngược lại, nó cho thấy societies hình thành trong tương tác (interaction / 상호작용). Định danh (identity / 식별자), trạng thái (state / 상태) và culture hiếm khi phát triển trong isolation.
 
-> **Nối mạch:** Từ bằng chứng đời sống, **technology đến political complexity** kiểm tra chuỗi nhân quả từng bước, không nhảy thẳng từ công cụ sang nhà nước.
-
 ## Đời sống thường ngày: có thể biết gì, và không biết gì?
 
 Từ settlement, công cụ (tool / 도구), pottery, plant/animal remains và burial, ta có thể reconstruct một phần diet, môi trường vận hành (production / 운영 환경) và household activity. Nhưng cần phân biệt **probable mẫu (pattern / 패턴)** với cinematic detail. Ta có thể nói agriculture, river resources và craft đều quan trọng; khó hơn nhiều để nói chính xác một gia đình cụ thể ăn gì vào một ngày cụ thể hay dùng xã hội (social / 사회적) title nào nếu không có nguồn (source / 소스).
 
 Một cách tưởng tượng có kiểm soát là đi từ ràng buộc (constraint / 제약조건): monsoon quyết định season; rice cultivation tạo công việc (work / 작업) peak; river cung cấp vận chuyển (transport / 전송) và fish; house/lưu trữ (storage / 저장소) phải thích nghi humidity/flood; công cụ (tool / 도구) technology giới hạn năng suất. Đây là reconstruction từ môi trường (environment / 환경) + bằng chứng (evidence / 증거), không phải fiction.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Từ tiền sử đến Đông Sơn: economy, technology và xã hội trước nhà nước thành văn**, **Đời sống thường ngày: có thể biết gì, và không biết gì?** đặt đầu vào cho **Từ technology đến political độ phức tạp (complexity / 복잡도): chuỗi nhân quả (causal chain / 인과 사슬) nào hợp lý?**, rồi **Địa điểm và hiện vật để “neo” kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Từ technology đến political độ phức tạp (complexity / 복잡도): chuỗi nhân quả (causal chain / 인과 사슬) nào hợp lý?
 
@@ -83,8 +71,6 @@ larger political organization becomes possible
 
 Mỗi mũi tên là hypothesis cần bằng chứng (evidence / 증거); không phải law của lịch sử. Nhưng chuỗi (chain / 사슬) này giải thích vì sao chapter về Đông Sơn phải đứng trước Cổ Loa: monumental fortification không xuất hiện trong vacuum.
 
-> **Nối mạch:** Trong **Từ tiền sử đến Đông Sơn: economy, technology và xã hội trước nhà nước thành văn**, **Từ technology đến political độ phức tạp (complexity / 복잡도): chuỗi nhân quả (causal chain / 인과 사슬) nào hợp lý?** đặt đầu vào cho **Địa điểm và hiện vật để “neo” kiến thức**, rồi **Đông Sơn và ký ức Việt Nam hôm nay** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Địa điểm và hiện vật để “neo” kiến thức
 
 **Di chỉ Đông Sơn (Thanh Hóa)** nằm bên hệ thống sông Mã và là địa điểm đặt tên cho archaeological culture. Đến vùng này, điều cần nhớ không phải “Thanh Hóa = nơi duy nhất có Đông Sơn”, mà là lưu vực sông Mã là một nút (node / 노드) quan trọng trong mạng (network / 네트워크) rộng ở miền Bắc và Bắc Trung Bộ.
@@ -93,13 +79,9 @@ Mỗi mũi tên là hypothesis cần bằng chứng (evidence / 증거); không 
 
 **Cổ Loa (Đông Anh, Hà Nội)** là checkpoint kế tiếp: nơi archaeological chuỗi (sequence / 시퀀스), metallurgy và massive earthworks gặp nhau. Cục Di sản Văn hóa mô tả khu vực có nhiều lớp cư trú từ trước Đông Sơn, còn nghiên cứu khảo cổ hiện đại đặt monumental construction của Cổ Loa trong cuối thiên niên kỷ I TCN.
 
-> **Nối mạch:** **Địa điểm và hiện vật** neo claim vào bối cảnh; **Đông Sơn và ký ức Việt Nam hôm nay** tách lịch sử vật chất khỏi cách tưởng niệm hiện đại trước khi recap.
-
 ## Đông Sơn và ký ức Việt Nam hôm nay
 
 Trống đồng xuất hiện như symbol trong museum, visual thiết kế (design / 설계) và national narrative hiện đại. Đây là ví dụ tốt về **afterlife of artifacts**: một đối tượng (object / 객체) có chức năng/status trong xã hội cổ nhưng được gán thêm meaning ở thời hiện đại. Thư viện (library / 라이브러리) sẽ không coi hiện đại (modern / 현대적) symbolic use là bằng chứng cho original meaning; thay vào đó nó là dữ liệu (data / 데이터) cho công khai (public / 공개) bộ nhớ (memory / 메모리).
-
-> **Nối mạch:** **Recap, ranh giới và đường đọc tiếp** gom lại điều đã chứng minh, điều chưa chắc và owner cần mở tiếp, để không biến một case khảo cổ thành kết luận toàn bộ lịch sử Việt Nam.
 
 ## Recap, ranh giới (boundary / 경계) và đường đọc tiếp
 

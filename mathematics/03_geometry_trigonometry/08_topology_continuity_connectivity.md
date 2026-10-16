@@ -20,8 +20,6 @@ Topology trừu tượng hóa idea “nearby” mà không bắt buộc có nume
 
 Điểm quan trọng không phải học thuộc axioms, mà nhận ra: topology giữ cấu trúc (structure / 구조) tối thiểu cần để nói về continuity và connectivity ngay cả khi không có ruler.
 
-> **Nối mạch:** Trong **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Continuity dưới góc nhìn topology** nối từ **Từ distance đến neighborhood** sang **Connectedness: đối tượng (object / 객체) có thể tách thành hai phần rời không?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Continuity dưới góc nhìn topology
 
 Trong calculus, ta học hàm (function / 함수) `f` continuous tại `a` nếu small changes ở đầu vào (input / 입력) gây small changes ở đầu ra (output / 출력). Dạng epsilon-delta là
@@ -35,8 +33,6 @@ Topology cho một formulation tổng quát hơn: một hàm (function / 함수)
 
 Nếu một continuous hàm (function / 함수) biến một connected interval thành đầu ra (output / 출력), đầu ra (output / 출력) ảnh (image / 이미지) cũng connected. Đây là cấu trúc (structure / 구조) đằng sau Intermediate giá trị (value / 값) Theorem. Khi một continuous hàm (function / 함수) đi từ negative giá trị (value / 값) sang positive giá trị (value / 값) trên interval, nó phải đi qua zero; nó không thể teleport qua zero nếu ảnh (image / 이미지) vẫn connected.
 
-> **Nối mạch:** Ở chặng này của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Connectedness: đối tượng (object / 객체) có thể tách thành hai phần rời không?** nối từ **Continuity dưới góc nhìn topology** sang **Compactness: vô hạn nhưng vẫn kiểm soát được**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Connectedness: đối tượng (object / 객체) có thể tách thành hai phần rời không?
 
 Một không gian (space / 공간) **liên thông (Connected / 연결된)** nếu không thể chia nó thành hai open regions không rỗng, không giao nhau mà union lại là toàn không gian (space / 공간). Trực giác: đối tượng (object / 객체) “một mảnh”.
@@ -47,8 +43,6 @@ Trong dữ liệu (data / 데이터) science, clustering thường cố phát hi
 
 Đồ thị (graph / 그래프) lý thuyết (theory / 이론) cũng có connected components, nhưng đồ thị (graph / 그래프) connectivity là discrete analogue: vertices connected nếu có đường dẫn (path / 경로). Topological connectedness và đồ thị (graph / 그래프) connectivity không giống hệt nhau, nhưng cùng một mô hình tư duy (mental model / 사고 모델) “có thể di chuyển trong cấu trúc (structure / 구조) mà không phải nhảy qua khoảng trống”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Compactness: vô hạn nhưng vẫn kiểm soát được** nối từ **Connectedness: đối tượng (object / 객체) có thể tách thành hai phần rời không?** sang **Homeomorphism: cùng topology dù hình học (geometry / 기하학) khác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Compactness: vô hạn nhưng vẫn kiểm soát được
 
 Một khái niệm trung tâm khác là **compactness / 콤팩트성**. Trong Euclidean không gian (space / 공간), Heine–Borel theorem nói subset compact iff nó closed và bounded. Vì vậy closed interval `[a,b]` compact, còn `(a,b)` không compact.
@@ -57,8 +51,6 @@ Compactness mạnh vì nó biến nhiều statements cục bộ (local / 로컬)
 
 Một chuỗi (sequence / 시퀀스) trong compact set có convergent subsequence nằm lại trong set. Idea này xuất hiện khắp phân tích (analysis / 분석) và numerical mathematics: nếu các approximations không thể “chạy ra vô hạn” và không gian (space / 공간) có compactness thích hợp, ta có cơ hội trích ra convergent hành vi (behavior / 동작).
 
-> **Nối mạch:** Trong **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Homeomorphism: cùng topology dù hình học (geometry / 기하학) khác** nối từ **Compactness: vô hạn nhưng vẫn kiểm soát được** sang **Ranh giới (boundary / 경계), interior và closure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Homeomorphism: cùng topology dù hình học (geometry / 기하학) khác
 
 Hai spaces **homeomorphic / 위상동형** nếu có một continuous bijection với continuous inverse giữa chúng. Homeomorphism nói chúng có cùng topological cấu trúc (structure / 구조).
@@ -66,8 +58,6 @@ Hai spaces **homeomorphic / 위상동형** nếu có một continuous bijection 
 Circle và ellipse homeomorphic. Một coffee mug có một handle và một torus thường được dùng làm analogy vì mỗi đối tượng (object / 객체) có một “hole” topologically, dù hình học (geometry / 기하학) cụ thể hoàn toàn khác.
 
 Analogy này hữu ích nhưng phải cẩn thận: topology không nói mug và torus giống nhau về distance, curvature, material hay physics. Nó chỉ nói certain connectivity/hole cấu trúc (structure / 구조) có thể được bảo toàn dưới continuous deformation.
-
-> **Nối mạch:** Ở chặng này của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Homeomorphism: cùng topology dù hình học (geometry / 기하학) khác** đặt tiêu chí; **Ranh giới (boundary / 경계), interior và closure** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Topology trong dữ liệu (data / 데이터) và computation** mở rộng hệ quả.
 
 ## Ranh giới (boundary / 경계), interior và closure
 
@@ -85,15 +75,11 @@ Ví dụ với interval `(0,1)` trên real line:
 
 Concept này nối trực tiếp với feasible regions trong tối ưu hóa (optimization / 최적화), ranh giới (boundary / 경계) conditions trong differential equations và quyết định (decision / 결정) boundaries trong machine học tập (learning / 학습).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Ranh giới (boundary / 경계), interior và closure** đặt tiêu chí; **Topology trong dữ liệu (data / 데이터) và computation** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
-
 ## Topology trong dữ liệu (data / 데이터) và computation
 
 **Topological dữ liệu (data / 데이터) phân tích (analysis / 분석)** nghiên cứu cấu trúc (structure / 구조) như connected components, loops và voids khi dữ liệu (data / 데이터) được nhìn ở nhiều distance scales. Persistent homology là một công cụ nổi tiếng của lĩnh vực này: thay vì tin vào một threshold distance duy nhất, ta theo dõi topological features tồn tại bền vững qua nhiều scales.
 
 Trong robotics, cấu hình (configuration / 구성) không gian (space / 공간) có thể chứa obstacles; đường dẫn (path / 경로) planning trở thành câu hỏi về connected components và holes. Trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들), topology thường được dùng theo nghĩa mạng (network / 네트워크) topology, không phải topology toán học formal, nhưng idea về adjacency/connectivity vẫn gần nhau.
-
-> **Nối mạch:** Trong **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Topology trong dữ liệu (data / 데이터) và computation** đặt vấn đề; **Liên kết kiến thức (knowledge connection / 지식 연결)** đối chiếu bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -101,13 +87,9 @@ Topology nối trực tiếp với limits và continuity: calculus trên real nu
 
 Nó cũng giúp phân biệt hai loại thông tin. chỉ số (metric / 지표) hình học (geometry / 기하학) hỏi “bao xa, góc bao nhiêu, độ cong thế nào?”. Topology hỏi “có connected không, có ranh giới (boundary / 경계)/hole không, có thể deform liên tục thành nhau không?”. Khi đổi biểu diễn (representation / 표현), biết mình đang giữ loại cấu trúc (structure / 구조) nào là cực kỳ quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hình học (geometry / 기하학) cần một cây thước; topology trước hết cần khái niệm “ở gần nhau” và “có thể biến đổi liên tục”. Nó bỏ bớt distance để giữ lại connectivity và continuity. Vì vậy topology là ngôn ngữ để nói về shape ở mức cấu trúc (structure / 구조), không phải kích thước.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhập môn topology: continuity, connectivity và shape không phụ thuộc thước đo**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

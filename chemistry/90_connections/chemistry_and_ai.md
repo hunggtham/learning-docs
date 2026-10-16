@@ -12,8 +12,6 @@ Một bài toán phổ biến là nhận đầu vào dưới dạng cấu trúc 
 
 Điểm quan trọng là mô hình không “nhìn thấy phân tử” theo cách nhà hóa học nhìn cấu trúc Lewis. Nó chỉ nhận một biểu diễn, vì vậy giới hạn của biểu diễn sẽ trở thành giới hạn của mô hình.
 
-> **Nối mạch:** Structure-to-property prediction tạo feature space; reaction prediction mở rộng sang transformation space, còn molecular generation phải giữ chemical validity và uncertainty thay vì chỉ tối ưu score.
-
 ## Dự đoán phản ứng
 
 AI có thể dự đoán sản phẩm từ chất phản ứng và thuốc thử, đề xuất điều kiện phản ứng hoặc giải bài toán **phân tích ngược tổng hợp (retrosynthesis)** để tìm đường tổng hợp một phân tử mục tiêu.
@@ -22,23 +20,17 @@ Tuy nhiên độ chính xác cao trên bộ dữ liệu chuẩn không đồng n
 
 Vì vậy cần tách hai câu hỏi: mô hình dự đoán đúng đến mức nào, và nó có đang suy luận theo các ràng buộc hóa học hợp lý hay chỉ nhận diện mẫu quen thuộc?
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Hóa học sinh phân tử** nối từ **Dự đoán phản ứng** sang **Cấu trúc protein và phức phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học sinh phân tử
 
 **Mô hình sinh (generative model)** có thể đề xuất phân tử mới thỏa các tính chất mục tiêu. Nhưng thiết kế phân tử thực tế luôn là bài toán nhiều mục tiêu: hoạt tính, độ chọn lọc, độ tan, độc tính, độ ổn định, khả năng tổng hợp, chi phí và ràng buộc sở hữu trí tuệ có thể xung đột nhau.
 
 Do đó phân tử được sinh ra chỉ là giả thuyết. Nó vẫn cần kiểm tra hóa trị, điện tích, độ bền, khả năng tổng hợp, độ mới và cuối cùng là xác nhận thực nghiệm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Cấu trúc protein và phức phân tử** nối từ **Hóa học sinh phân tử** sang **Khám phá vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu trúc protein và phức phân tử
 
 Học sâu (**deep learning**) có thể suy ra cấu trúc protein hoặc phức từ trình tự, thông tin tiến hóa và dữ liệu cấu trúc. Điều này rút ngắn mạnh giai đoạn tạo giả thuyết trong sinh học cấu trúc và phát triển thuốc.
 
 Tuy vậy protein thật tồn tại dưới dạng một tập hợp cấu dạng động, có thể phụ thuộc ligand, màng, pH, ion kim loại và môi trường tế bào. Một cấu trúc dự đoán tốt vẫn không thay thế hoàn toàn động lực học phân tử và dữ liệu thực nghiệm.
-
-> **Nối mạch:** Trong **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Khám phá vật liệu** nối từ **Cấu trúc protein và phức phân tử** sang **Giải thích phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khám phá vật liệu
 
@@ -48,15 +40,11 @@ Một hướng quan trọng là dùng **mô hình thay thế (surrogate model)**
 
 **Học chủ động (active learning)** mở rộng ý tưởng này bằng cách cho hệ thống tự chọn thí nghiệm hoặc phép tính tiếp theo sao cho thu được nhiều thông tin nhất.
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Giải thích phổ** nối từ **Khám phá vật liệu** sang **Độ không đảm bảo và dữ liệu ngoài miền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Giải thích phổ
 
 Mô hình học máy có thể hỗ trợ nhận dạng hoặc giải thích phổ IR, NMR và khối phổ. Một số hệ dùng mô hình hoàn toàn dựa trên dữ liệu; các hệ mạnh hơn thường kết hợp mô phỏng vật lý với phần hiệu chỉnh học từ dữ liệu.
 
 Cách kết hợp này hữu ích vì định luật vật lý giúp giới hạn không gian lời giải, còn dữ liệu giúp bù các xấp xỉ chưa hoàn hảo của mô hình lý thuyết.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Giải thích phổ** đặt vấn đề; **Độ không đảm bảo và dữ liệu ngoài miền** đối chiếu bằng chứng, rồi **Mô hình có thông tin vật lý** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ không đảm bảo và dữ liệu ngoài miền
 
@@ -66,15 +54,11 @@ Không gian hóa học rất không đồng nhất. Một mô hình huấn luy�
 
 Mô hình không biết mình không biết là một rủi ro lớn hơn mô hình có sai số trung bình hơi cao nhưng biết báo độ không chắc chắn.
 
-> **Nối mạch:** Trong **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Độ không đảm bảo và dữ liệu ngoài miền** đặt vấn đề; **Mô hình có thông tin vật lý** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình có thông tin vật lý
 
 Các mô hình **có thông tin vật lý (physics-informed)** đưa trực tiếp các ràng buộc như tính đối xứng, bảo toàn, tính tương đương quay–tịnh tiến hoặc cấu trúc năng lượng vào kiến trúc mô hình.
 
 Điều này giúp giảm lượng dữ liệu cần thiết và hạn chế các dự đoán vi phạm vật lý. Với dữ liệu phân tử ba chiều, các mạng có tính tương đương hình học (**equivariant networks**) đặc biệt hữu ích vì kết quả vật lý không nên thay đổi tùy cách xoay hệ tọa độ.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Trí tuệ nhân tạo — dự đoán trong không gian hóa học**, **Mô hình tư duy** tổng hợp từ **Mô hình có thông tin vật lý** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

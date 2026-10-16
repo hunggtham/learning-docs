@@ -12,8 +12,6 @@ Do đó một đồng vị phóng xạ có thể đi theo gần cùng con đư�
 
 Điều này cho phép theo dõi chất ở nồng độ rất thấp mà không cần bổ sung lượng hóa học lớn làm xáo trộn hệ.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Có chất mang và gần không có chất mang** nối từ **Vì sao đồng vị là chất đánh dấu tốt** sang **Hoạt độ mol**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Có chất mang và gần không có chất mang
 
 Một radionuclide có thể tồn tại cùng lượng lớn đồng vị bền của cùng nguyên tố hoặc gần như không có đồng vị bền đi kèm.
@@ -28,8 +26,6 @@ Nếu lượng chất mang bền ít hơn, hoạt độ riêng thường cao hơ
 
 Đại lượng này quan trọng khi receptor hoặc enzyme sinh học có thể bị bão hòa bởi tổng lượng chất hóa học chứ không chỉ bởi số nguyên tử phóng xạ.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hoạt độ mol** nối từ **Có chất mang và gần không có chất mang** sang **Hiệu ứng đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hoạt độ mol
 
 Đối với dược chất đánh dấu, hoạt độ trên mỗi mol thường có ý nghĩa hóa học trực tiếp hơn hoạt độ trên mỗi gram.
@@ -37,8 +33,6 @@ Nếu lượng chất mang bền ít hơn, hoạt độ riêng thường cao hơ
 **Hoạt độ mol (molar activity)** cao cho phép tạo tín hiệu phóng xạ đo được trong khi đưa vào hệ một lượng chất hóa học rất nhỏ.
 
 Điều này đặc biệt quan trọng trong chẩn đoán receptor, nơi chất đánh dấu lý tưởng nên quan sát hệ mà không làm hệ thay đổi đáng kể.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hiệu ứng đồng vị** nối từ **Hoạt độ mol** sang **Đánh dấu phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng đồng vị
 
@@ -48,8 +42,6 @@ Thay hydrogen bằng deuterium có thể tạo **hiệu ứng đồng vị độ
 
 Hiệu ứng này được dùng để suy luận xem việc phá liên kết C–H có đóng vai trò quan trọng trong trạng thái chuyển tiếp kiểm soát tốc độ hay không.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Đánh dấu phóng xạ** nối từ **Hiệu ứng đồng vị** sang **Một số đồng vị đánh dấu thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đánh dấu phóng xạ
 
 Một phân tử có thể được tổng hợp sao cho nguyên tử phóng xạ nằm ở vị trí đã chọn.
@@ -58,15 +50,11 @@ Vị trí đánh dấu phải đủ bền trong điều kiện thí nghiệm. N�
 
 Vì vậy thiết kế đánh dấu phóng xạ đòi hỏi hiểu đồng thời hóa hữu cơ, chuyển hóa và hành vi đồng vị.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Một số đồng vị đánh dấu thường gặp** nối từ **Đánh dấu phóng xạ** sang **Ghép chu kỳ bán rã với thang thời gian của quá trình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Một số đồng vị đánh dấu thường gặp
 
 Trong nghiên cứu và y học có thể gặp `3H`, `14C`, `18F`, `32P`, `35S`, `99mTc`, `123I`, `125I` hoặc `131I`.
 
 Việc chọn đồng vị phụ thuộc chu kỳ bán rã, loại bức xạ, hóa học nguyên tố, độ thuận tiện sản xuất và phương pháp phát hiện.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Ghép chu kỳ bán rã với thang thời gian của quá trình** nối từ **Một số đồng vị đánh dấu thường gặp** sang **Chụp PET**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghép chu kỳ bán rã với thang thời gian của quá trình
 
@@ -76,8 +64,6 @@ Chu kỳ quá ngắn làm tổng hợp, vận chuyển và đo khó thực hiệ
 
 Lựa chọn tối ưu phải cân bằng cường độ tín hiệu, hóa học, logistics và thời gian của quá trình sinh học hoặc công nghiệp.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chụp PET** nối từ **Ghép chu kỳ bán rã với thang thời gian của quá trình** sang **Ví dụ 18F-FDG**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chụp PET
 
 **Chụp cắt lớp phát xạ positron (Positron Emission Tomography, PET / 양전자 방출 단층촬영)** dùng các đồng vị phát positron.
@@ -85,8 +71,6 @@ Lựa chọn tối ưu phải cân bằng cường độ tín hiệu, hóa học
 Positron hủy cặp với electron, tạo hai photon gamma có năng lượng khoảng 511 keV phát gần theo hai hướng đối nhau.
 
 Hệ thống phát hiện trùng phùng dùng cặp photon này để tái dựng phân bố không gian của chất đánh dấu trong cơ thể.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chụp PET** nêu quy tắc; **Ví dụ 18F-FDG** thử quy tắc trong tình huống, rồi **Vì sao fluorine-18 phù hợp với PET** mở rộng hệ quả.
 
 ## Ví dụ 18F-FDG
 
@@ -96,23 +80,17 @@ Mức hấp thu cao phản ánh chuyển hóa glucose mạnh, vì vậy kỹ thu
 
 Tuy nhiên tín hiệu là phân bố của chất đánh dấu và mức chuyển hóa, không phải hình ảnh trực tiếp đặc hiệu tuyệt đối của tế bào ung thư.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Ví dụ 18F-FDG** nêu quy tắc; **Vì sao fluorine-18 phù hợp với PET** thử quy tắc trong tình huống, rồi **Chụp SPECT** mở rộng hệ quả.
-
 ## Vì sao fluorine-18 phù hợp với PET
 
 `18F` kết hợp ba đặc điểm hữu ích: phát positron phù hợp PET, chu kỳ bán rã tương đối ngắn và hóa học fluorine cho phép gắn vào nhiều phân tử hữu cơ.
 
 Đổi lại, việc sản xuất và phân phối cần cơ sở cyclotron hoặc mạng logistics phù hợp vì đồng vị mất hoạt độ nhanh theo thời gian.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chụp SPECT** nối từ **Vì sao fluorine-18 phù hợp với PET** sang **Technetium-99m**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chụp SPECT
 
 **Chụp cắt lớp phát xạ đơn photon (Single-Photon Emission Computed Tomography, SPECT / 단일광자방출단층촬영)** phát hiện photon gamma được radionuclide phát trực tiếp.
 
 `99mTc` được dùng rộng rãi vì năng lượng gamma và chu kỳ bán rã thuận tiện, đồng thời hóa học phối trí của technetium hỗ trợ nhiều loại dược chất phóng xạ.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Technetium-99m** nối từ **Chụp SPECT** sang **Nguyên lý máy phát đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Technetium-99m
 
@@ -122,15 +100,11 @@ Nó chủ yếu chuyển về `99Tc` qua chuyển mức đồng phân và phát 
 
 Hệ máy phát đồng vị có thể tạo `99mTc` từ hạt nhân mẹ `99Mo`, nhờ đó cơ sở y tế có thể sử dụng đồng vị sống ngắn mà không cần lò phản ứng hoặc cyclotron ngay tại chỗ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Nguyên lý máy phát đồng vị** nối từ **Technetium-99m** sang **Radionuclide điều trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên lý máy phát đồng vị
 
 Một hạt nhân mẹ có chu kỳ bán rã dài hơn phân rã thành hạt nhân con sống ngắn hơn. Hạt nhân con được tách hóa học định kỳ để sử dụng.
 
 Đây là ứng dụng trực tiếp của **động học chuỗi phân rã + hóa học phân tách**.
-
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Radionuclide điều trị** nối từ **Nguyên lý máy phát đồng vị** sang **Iodine và tuyến giáp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Radionuclide điều trị
 
@@ -140,8 +114,6 @@ Trong điều trị radionuclide, đồng vị phóng xạ được gắn hoặc
 
 Việc chọn chất phát alpha hay beta phụ thuộc tầm đi, mật độ truyền năng lượng tuyến tính, kích thước mục tiêu và khả năng đưa chất tới đúng vị trí.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Iodine và tuyến giáp** nối từ **Radionuclide điều trị** sang **Điều trị alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Iodine và tuyến giáp
 
 Tuyến giáp chủ động thu nhận iodide.
@@ -149,8 +121,6 @@ Tuyến giáp chủ động thu nhận iodide.
 Các đồng vị iodine phóng xạ khai thác chính đặc tính vận chuyển sinh hóa này để chẩn đoán hoặc điều trị.
 
 Đây là ví dụ điển hình cho việc **hóa học và sinh học quyết định vị trí của nguồn phóng xạ**, còn phân rã hạt nhân cung cấp tín hiệu hoặc liều.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Điều trị alpha** nối từ **Iodine và tuyến giáp** sang **Chiếu xạ ngoài và điều trị radionuclide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều trị alpha
 
@@ -160,8 +130,6 @@ Về nguyên lý, điều này có thể tạo tổn thương mạnh tại vùng
 
 Thách thức nằm ở hóa học gắn đồng vị, sản xuất, đo liều và sự giật lùi của hạt nhân con sau phân rã.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chiếu xạ ngoài và điều trị radionuclide** nối từ **Điều trị alpha** sang **Tự chụp phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chiếu xạ ngoài và điều trị radionuclide
 
 Trong xạ trị chùm ngoài, nguồn bức xạ nằm bên ngoài cơ thể và chùm tia được định hướng tới mô.
@@ -170,15 +138,11 @@ Trong điều trị radionuclide, nguồn được phân bố bên trong theo d�
 
 Hai phương pháp vì vậy có phân bố liều và chiến lược kiểm soát rất khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Tự chụp phóng xạ** nối từ **Chiếu xạ ngoài và điều trị radionuclide** sang **Đếm nhấp nháy lỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự chụp phóng xạ
 
 **Tự chụp phóng xạ (autoradiography)** sử dụng chất đánh dấu phóng xạ trong mô hoặc vật liệu để tạo ảnh phân bố trên phim hoặc màn phosphor.
 
 Kỹ thuật này hữu ích trong sinh học, dược lý và khoa học vật liệu khi cần biết vị trí của chất đánh dấu chứ không chỉ tổng hoạt độ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Đếm nhấp nháy lỏng** nối từ **Tự chụp phóng xạ** sang **Phổ gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đếm nhấp nháy lỏng
 
@@ -188,8 +152,6 @@ Năng lượng beta kích thích dung môi và chất nhấp nháy, tạo photon
 
 Hiện tượng **dập tắt tín hiệu (quenching)** làm lượng ánh sáng thu được giảm và cần được hiệu chỉnh khi định lượng.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Phổ gamma** nối từ **Đếm nhấp nháy lỏng** sang **Phân tích kích hoạt neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phổ gamma
 
 Radionuclide phát gamma tạo các photon có năng lượng đặc trưng.
@@ -198,15 +160,11 @@ Phổ năng lượng có thể dùng để nhận dạng đồng vị và, sau h
 
 Đầu dò germanium siêu tinh khiết có thể đạt độ phân giải năng lượng cao cho các ứng dụng phổ gamma chính xác.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Phân tích kích hoạt neutron** nối từ **Phổ gamma** sang **Phân tích pha loãng đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân tích kích hoạt neutron
 
 Trong **phân tích kích hoạt neutron (Neutron Activation Analysis, NAA)**, mẫu được chiếu neutron, sau đó các sản phẩm phóng xạ phát gamma đặc trưng.
 
 Kỹ thuật có thể đo nhiều nguyên tố vết với chuẩn bị hóa học tương đối ít. Hạn chế chính là cần nguồn neutron phù hợp và phải quản lý mẫu sau kích hoạt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Phân tích pha loãng đồng vị** nối từ **Phân tích kích hoạt neutron** sang **Chất đánh dấu đồng vị bền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tích pha loãng đồng vị
 
@@ -216,15 +174,11 @@ Vì chất chuẩn và chất phân tích cùng trải qua những mất mát sa
 
 Đây là một trong những chiến lược định lượng mạnh nhất của hóa phân tích.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chất đánh dấu đồng vị bền** nối từ **Phân tích pha loãng đồng vị** sang **Phân tích dòng chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất đánh dấu đồng vị bền
 
 Không phải mọi thí nghiệm đồng vị đều cần phóng xạ. `13C`, `15N`, `18O` và deuterium có thể được theo dõi bằng khối phổ hoặc NMR.
 
 Đồng vị bền thường được ưu tiên khi không cần tín hiệu phóng xạ hoặc khi thí nghiệm kéo dài lâu.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Phân tích dòng chuyển hóa** nối từ **Chất đánh dấu đồng vị bền** sang **Tỉ lệ đồng vị trong địa hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tích dòng chuyển hóa
 
@@ -234,8 +188,6 @@ Khối phổ hoặc NMR đo những mẫu này; mô hình tính toán sau đó s
 
 Đây là điểm giao trực tiếp giữa Hóa học, Sinh học và tối ưu hóa số.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Tỉ lệ đồng vị trong địa hóa** nối từ **Phân tích dòng chuyển hóa** sang **Định tuổi phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tỉ lệ đồng vị trong địa hóa
 
 Các tỉ lệ như `18O/16O`, `13C/12C`, Sr hoặc Pb mang thông tin về nguồn gốc và quá trình địa chất.
@@ -243,8 +195,6 @@ Các tỉ lệ như `18O/16O`, `13C/12C`, Sr hoặc Pb mang thông tin về ngu�
 Phân đoạn đồng vị xuất hiện vì các đồng vị phản ứng hoặc phân bố giữa các pha hơi khác nhau.
 
 Địa hóa đồng vị dùng những sai khác nhỏ đó để tái dựng khí hậu, nguồn nước và lịch sử đá.
-
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Định tuổi phóng xạ** nối từ **Tỉ lệ đồng vị trong địa hóa** sang **Khái niệm concordia U–Pb**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định tuổi phóng xạ
 
@@ -258,8 +208,6 @@ Ví dụ:
 
 Định tuổi không chỉ là thay số vào hàm mũ; nó là sự kết hợp của cân bằng khối lượng, động học phân rã và bối cảnh địa chất.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Khái niệm concordia U–Pb** nối từ **Định tuổi phóng xạ** sang **Đồng vị đánh dấu môi trường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khái niệm concordia U–Pb
 
 Uranium có hai chuỗi phân rã sống lâu dẫn tới các đồng vị Pb khác nhau.
@@ -267,8 +215,6 @@ Uranium có hai chuỗi phân rã sống lâu dẫn tới các đồng vị Pb k
 Nếu hai đồng hồ đồng vị độc lập cho kết quả phù hợp, độ tin cậy của tuổi tăng. Nếu chúng lệch nhau, sự sai lệch có thể cho biết hệ đã bị xáo trộn sau khi hình thành.
 
 Đây là ví dụ về sức mạnh của phép đo dư thừa trong hệ đồng vị.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Đồng vị đánh dấu môi trường** nối từ **Khái niệm concordia U–Pb** sang **Chụp bức xạ công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị đánh dấu môi trường
 
@@ -278,8 +224,6 @@ Tritium, radon, `210Pb` hoặc `137Cs` là những ví dụ có thể phù hợp
 
 Việc chọn tracer phải phù hợp cả hóa học môi trường lẫn chu kỳ bán rã.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chụp bức xạ công nghiệp** nối từ **Đồng vị đánh dấu môi trường** sang **Đo độ dày và mức vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chụp bức xạ công nghiệp
 
 Tia gamma hoặc tia X xuyên qua mối hàn và vật đúc với mức suy giảm phụ thuộc độ dày và thành phần.
@@ -288,15 +232,11 @@ Sự khác biệt suy giảm tạo độ tương phản cho phép phát hiện k
 
 Về nguyên lý, đây là chụp X-quang ứng dụng cho cấu kiện kỹ thuật.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Đo độ dày và mức vật liệu** nối từ **Chụp bức xạ công nghiệp** sang **Đầu báo khói ion hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đo độ dày và mức vật liệu
 
 Suy giảm bức xạ có thể được dùng để suy ra độ dày, mật độ hoặc mức chứa bên trong thiết bị kín.
 
 Phương pháp hữu ích trong môi trường khắc nghiệt nơi cảm biến tiếp xúc trực tiếp khó sử dụng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Đầu báo khói ion hóa** nối từ **Đo độ dày và mức vật liệu** sang **Khử trùng bằng bức xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu báo khói ion hóa
 
@@ -304,15 +244,11 @@ Một số đầu báo khói ion hóa dùng nguồn alpha rất nhỏ để ion 
 
 Đây là ví dụ biến ion hóa hạt nhân thành tín hiệu điện đơn giản.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Khử trùng bằng bức xạ** nối từ **Đầu báo khói ion hóa** sang **Chiếu xạ thực phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khử trùng bằng bức xạ
 
 Gamma hoặc chùm electron có thể làm hỏng DNA của vi sinh vật và được dùng để khử trùng một số sản phẩm y tế.
 
 Ưu điểm là có thể xử lý qua bao bì và không cần nhiệt độ cao, nhưng độ tương thích vật liệu và liều xử lý vẫn phải được thẩm định.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chiếu xạ thực phẩm** nối từ **Khử trùng bằng bức xạ** sang **Phân ly bức xạ của nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chiếu xạ thực phẩm
 
@@ -321,8 +257,6 @@ Bức xạ ion hóa có thể giảm vi sinh vật gây bệnh, côn trùng ho�
 Trong các chế độ photon/electron được phê duyệt thông thường, thực phẩm không tự trở thành chất phóng xạ đáng kể vì năng lượng xử lý không tạo kích hoạt hạt nhân đáng kể.
 
 Các biến đổi hóa học chủ yếu liên quan **phân ly bức xạ (radiolysis)** và các gốc phản ứng, tương tự nhiều hệ chịu bức xạ ion hóa khác.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Phân ly bức xạ của nước** nối từ **Chiếu xạ thực phẩm** sang **Hóa phóng xạ và hóa học bức xạ khác nhau thế nào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân ly bức xạ của nước
 
@@ -336,8 +270,6 @@ Các tiểu phân này có thể thúc đẩy phản ứng oxy hóa hoặc khử
 
 Nhiều tổn thương do bức xạ thực tế xảy ra gián tiếp qua các gốc tự do như vậy.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hóa phóng xạ và hóa học bức xạ khác nhau thế nào** nối từ **Phân ly bức xạ của nước** sang **Hóa học tái xử lý nhiên liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa phóng xạ và hóa học bức xạ khác nhau thế nào
 
 **Hóa phóng xạ (radiochemistry)** tập trung vào radionuclide và hành vi hóa học của chúng.
@@ -345,8 +277,6 @@ Nhiều tổn thương do bức xạ thực tế xảy ra gián tiếp qua các 
 **Hóa học bức xạ (radiation chemistry)** tập trung vào các biến đổi hóa học do bức xạ ion hóa gây ra, kể cả khi vật liệu ban đầu không phóng xạ.
 
 Hai lĩnh vực giao nhau nhưng không đồng nhất.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hóa học tái xử lý nhiên liệu** nối từ **Hóa phóng xạ và hóa học bức xạ khác nhau thế nào** sang **Hóa học actinide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học tái xử lý nhiên liệu
 
@@ -356,8 +286,6 @@ Các phương pháp phân tách hóa học có thể thu hồi chọn lọc mộ
 
 Ở cấp độ thư viện này, trọng tâm nên nằm ở nguyên lý hóa học phân tách và phối trí, không đi vào quy trình vận hành chi tiết của cơ sở hạt nhân.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hóa học actinide** nối từ **Hóa học tái xử lý nhiên liệu** sang **Hành vi môi trường của radionuclide**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học actinide
 
 Actinide có orbital 5f và nhiều trạng thái oxy hóa khả dụng.
@@ -365,8 +293,6 @@ Actinide có orbital 5f và nhiều trạng thái oxy hóa khả dụng.
 Hóa học phối trí của chúng khác kim loại chuyển tiếp và thay đổi dọc chuỗi nguyên tố.
 
 Điều khiển trạng thái oxy hóa là yếu tố trung tâm trong phân tách, xử lý và dự đoán độ linh động môi trường của actinide.
-
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hành vi môi trường của radionuclide** nối từ **Hóa học actinide** sang **Cố định chất thải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hành vi môi trường của radionuclide
 
@@ -376,8 +302,6 @@ Khả năng di chuyển phụ thuộc mạnh vào dạng hóa học.
 
 Vì vậy bản sắc hạt nhân không đủ để dự đoán vận chuyển môi trường; phải biết **dạng tồn tại hóa học (speciation)**.
 
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Cố định chất thải** nối từ **Hành vi môi trường của radionuclide** sang **Hư hại vật liệu do bức xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cố định chất thải
 
 Chất thải phóng xạ có thể được đưa vào nền thủy tinh hoặc gốm để tạo pha rắn bền hóa học.
@@ -385,8 +309,6 @@ Chất thải phóng xạ có thể được đưa vào nền thủy tinh hoặc
 Mục tiêu là làm tốc độ giải phóng radionuclide ra môi trường rất chậm trong khi hoạt độ giảm dần theo thời gian.
 
 Đây là điểm giao giữa hóa phóng xạ và hóa học vật liệu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hư hại vật liệu do bức xạ** nối từ **Cố định chất thải** sang **Hóa học đo liều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hư hại vật liệu do bức xạ
 
@@ -396,15 +318,11 @@ Polymer có thể bị liên kết ngang hoặc cắt mạch; tinh thể tích l
 
 Do đó lựa chọn vật liệu cho môi trường hạt nhân hoặc không gian cần xét đồng thời hóa học bức xạ và khoa học vật liệu.
 
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Hóa học đo liều** nối từ **Hư hại vật liệu do bức xạ** sang **Nguyên tắc an toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học đo liều
 
 Một số liều kế dựa trên biến đổi vật lý hoặc hóa học tỉ lệ với liều hấp thụ.
 
 Có thể gặp hệ phát quang nhiệt, phim hoặc các hệ đo liều hóa học. Hiệu chuẩn liên kết tín hiệu đo với trường liều chuẩn đã biết.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Nguyên tắc an toàn** nối từ **Hóa học đo liều** sang **Chiếu xạ và nhiễm bẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên tắc an toàn
 
@@ -414,8 +332,6 @@ Các nguyên lý khái niệm gồm giảm thời gian phơi nhiễm, tăng kho�
 
 Nguy cơ chiếu ngoài và nguy cơ do chất phóng xạ đi vào cơ thể khác nhau, vì vậy ngăn nhiễm bẩn đặc biệt quan trọng với nguồn hở.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Chiếu xạ và nhiễm bẩn** nối từ **Nguyên tắc an toàn** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chiếu xạ và nhiễm bẩn
 
 **Chiếu xạ (irradiation)** nghĩa một vật hoặc người nằm trong trường bức xạ.
@@ -423,8 +339,6 @@ Nguy cơ chiếu ngoài và nguy cơ do chất phóng xạ đi vào cơ thể kh
 **Nhiễm bẩn phóng xạ (radioactive contamination)** nghĩa vật liệu phóng xạ thật sự hiện diện trên hoặc trong vật, bề mặt hay cơ thể.
 
 Một người có thể bị chiếu xạ mà không bị nhiễm bẩn. Phân biệt này rất quan trọng khi đánh giá và giám sát sự cố.
-
-> **Nối mạch:** Trong **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Những hiểu lầm thường gặp** nối từ **Chiếu xạ và nhiễm bẩn** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -443,8 +357,6 @@ Không. Chiếu gamma hoặc electron trong điều kiện thông thường khô
 ### “Hóa phóng xạ chỉ liên quan điện hạt nhân”
 
 Không. Lĩnh vực này còn có vai trò trong y học, phân tích, địa chất, Sinh học, công nghiệp và Khoa học môi trường.
-
-> **Nối mạch:** Ở chặng này của **Hóa phóng xạ và ứng dụng — hóa học đồng vị, chất đánh dấu, y học và phân tích**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -12,8 +12,6 @@ Một bit chỉ phân biệt hai khả năng. Với `n` bit, ta có tối đa `2
 
 Tám bit thường được nhóm thành một **byte** (바이트). Byte trở thành đơn vị addressable phổ biến trong bộ nhớ (memory / 메모리) và lưu trữ (storage / 저장소), nhưng byte không mang nghĩa cố định. `01000001` có thể là integer 65 hay ký tự ASCII `A`.
 
-> **Nối mạch:** Bit là pattern vật lý; encoding là agreement ánh xạ pattern sang meaning, từ đó ASCII/Unicode/UTF-8 giải quyết text, compatibility và byte boundaries.
-
 ## Encoding là agreement giữa bit mẫu (pattern / 패턴) và meaning
 
 Encoding (mã hóa biểu diễn / 인코딩) là quy tắc ánh xạ (mapping / 매핑) giữa concept ở tầng cao và bit patterns. Nếu sender dùng UTF-8 nhưng receiver diễn giải bytes như EUC-KR, cùng một byte chuỗi (sequence / 시퀀스) có thể thành ký tự sai. Đây không phải “dữ liệu (data / 데이터) bị đổi”; interpretation bị mismatch.
@@ -32,8 +30,6 @@ voltage / charge / magnetic state
 
 Khi đọc ngược, hardware/software decode biểu diễn (representation / 표현) để tái tạo symbol/giá trị (value / 값) rồi ứng dụng (application / 애플리케이션) gán ý nghĩa (semantic meaning / 의미적 뜻).
 
-> **Nối mạch:** **Văn bản (text / 텍스트): từ ASCII tới Unicode và UTF-8** nối từ **Encoding là agreement giữa bit mẫu (pattern / 패턴) và meaning** sang **Ảnh (image / 이미지) và audio: sampling + quantization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Văn bản (text / 텍스트): từ ASCII tới Unicode và UTF-8
 
 ASCII ban đầu gán 7-bit codes cho 128 symbols, đủ cho English letters, digits và điều khiển (control / 제어) characters. Ví dụ `A = 65 = 0x41`. Khi computer trở thành hệ thống toàn cầu, mỗi khu vực tạo mã (code / 코드) page riêng; cùng byte có thể mang ký tự khác nhau, gây incompatibility.
@@ -44,8 +40,6 @@ UTF-8 có tính chất quan trọng: ASCII giữ nguyên một byte, còn mã (c
 
 Đây là ví dụ điển hình cho lớp trừu tượng (abstraction / 추상화) leak: UI muốn cắt “10 ký tự” nhưng nếu hiện thực (implementation / 구현) cắt tùy tiện theo byte có thể phá encoding.
 
-> **Nối mạch:** **Ảnh (image / 이미지) và audio: sampling + quantization** nối từ **Văn bản (text / 텍스트): từ ASCII tới Unicode và UTF-8** sang **Structured dữ liệu (data / 데이터) cần format ngoài encoding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ảnh (image / 이미지) và audio: sampling + quantization
 
 Một ảnh raster là lưới samples. Mỗi điểm ảnh (pixel / 픽셀) chứa values như RGB. Nếu mỗi channel dùng 8 bit, một điểm ảnh (pixel / 픽셀) RGB thường cần 24 bit trước compression. Nhưng màu thực tế liên tục hơn nhiều; digital ảnh (image / 이미지) phải **quantize** (양자화 / lượng tử hóa) thành số mức hữu hạn.
@@ -54,15 +48,11 @@ Audio cũng tương tự. Microphone tạo tín hiệu (signal / 신호) liên t
 
 Điểm chung là digital biểu diễn (representation / 표현) không “sao chép thế giới thật hoàn hảo”; nó chọn resolution và phạm vi (range / 범위) đủ cho mục đích, đánh đổi lưu trữ (storage / 저장소)/bandwidth với fidelity.
 
-> **Nối mạch:** **Ảnh (image / 이미지) và audio: sampling + quantization** đặt vấn đề; **Structured dữ liệu (data / 데이터) cần format ngoài encoding** kiểm tra bằng chứng, rồi **Compression: bỏ redundancy chứ không tạo phép màu** mở rộng hệ quả.
-
 ## Structured dữ liệu (data / 데이터) cần format ngoài encoding
 
 Giả sử có bytes `31 30 30`. Nếu diễn giải ASCII/UTF-8, đó là chuỗi `100`; nếu muốn integer 100, ta cần parse. Nếu tệp (file / 파일) chứa nhiều fields, ta còn phải biết ranh giới (boundary / 경계), kiểu (type / 타입) và thứ tự (order / 순서). Đây là vai trò của serialization format như JSON, giao thức (protocol / 프로토콜) Buffers, MessagePack hoặc custom nhị phân (binary / 이진) protocols.
 
 JSON biểu diễn number/văn bản (text / 텍스트)/đối tượng (object / 객체) bằng văn bản (text / 텍스트) cú pháp (syntax / 문법) dễ đọc nhưng có overhead. nhị phân (binary / 이진) format có thể compact hơn và giữ kiểu (type / 타입) chặt hơn, nhưng khó inspect thủ công. mạng (network / 네트워크) giao thức (protocol / 프로토콜) và lưu trữ (storage / 저장소) format luôn phải quyết định cùng loại sự đánh đổi (trade-off / 트레이드오프).
-
-> **Nối mạch:** **Structured dữ liệu (data / 데이터) cần format ngoài encoding** đặt vấn đề; **Compression: bỏ redundancy chứ không tạo phép màu** kiểm tra bằng chứng, rồi **Lỗi (error / 오류) detection và correction** mở rộng hệ quả.
 
 ## Compression: bỏ redundancy chứ không tạo phép màu
 
@@ -72,15 +62,11 @@ Không phải mọi dữ liệu đều nén được nhiều. Nếu một chuỗ
 
 Xem thêm: [Information Theory](../../mathematics/07_discrete_cs/06_information_theory_and_coding.md).
 
-> **Nối mạch:** **Lỗi (error / 오류) detection và correction** nối từ **Compression: bỏ redundancy chứ không tạo phép màu** sang **Units: KB, KiB và sự nhầm lẫn thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lỗi (error / 오류) detection và correction
 
 Lưu trữ (storage / 저장소) và mạng (network / 네트워크) không tuyệt đối hoàn hảo: bit có thể flip. Ta có thể thêm redundancy có chủ đích để detect/correct lỗi. Parity bit là ví dụ đơn giản: thêm một bit sao cho tổng số 1 theo quy ước là chẵn/lẻ. CRC mạnh hơn cho burst errors trong transmission. ECC bộ nhớ (memory / 메모리) dùng error-correcting codes để sửa một số lỗi bit.
 
 Điều thú vị là redundancy đôi khi bị loại bỏ để compression, nhưng đôi khi lại được thêm vào để độ tin cậy (reliability / 신뢰성). Mục tiêu khác nhau tạo ra thiết kế (design / 설계) khác nhau.
-
-> **Nối mạch:** **Lỗi (error / 오류) detection và correction** đặt tiêu chí; **Units: KB, KiB và sự nhầm lẫn thường gặp** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Units: KB, KiB và sự nhầm lẫn thường gặp
 
@@ -88,13 +74,9 @@ Trong SI, `1 kB = 1000 bytes`, `1 MB = 10^6 bytes`. nhị phân (binary / 이진
 
 Bandwidth thường được quảng cáo bằng bit/s, trong khi tệp (file / 파일) kích thước (size / 크기) bằng byte. Link 100 Mbps không có nghĩa tải 100 MB mỗi giây; upper bound trước giao thức (protocol / 프로토콜) overhead là khoảng 12.5 MB/s.
 
-> **Nối mạch:** **Units: KB, KiB và sự nhầm lẫn thường gặp** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Bits không có meaning cố định. Meaning xuất hiện khi một tầng (layer / 계층) áp encoding/lược đồ (schema / 스키마)/giao thức (protocol / 프로토콜) lên bit patterns.** Khi dữ liệu “bị sai”, hãy hỏi mismatch nằm ở biểu diễn (representation / 표현), ranh giới (boundary / 경계), kiểu (type / 타입), byte thứ tự (order / 순서), character encoding hay ngữ nghĩa (semantic / 의미적) interpretation.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -103,8 +85,6 @@ Bandwidth thường được quảng cáo bằng bit/s, trong khi tệp (file / 
 **“Một ký tự luôn là một byte.”** Chỉ đúng với một subset và một số encoding. UTF-8 dùng 1–4 bytes cho một Unicode scalar giá trị (value / 값); grapheme người dùng thấy còn có thể gồm nhiều mã (code / 코드) points.
 
 **“nhị phân (binary / 이진) chính xác hơn decimal.”** nhị phân (binary / 이진) chỉ là cơ sở (base / 기반) biểu diễn (representation / 표현). Độ chính xác phụ thuộc kiểu (type / 타입) và số bit. Floating-point nhị phân (binary / 이진) còn không biểu diễn chính xác nhiều decimal fractions như 0.1.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

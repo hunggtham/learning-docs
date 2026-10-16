@@ -25,8 +25,6 @@ Khi một người nói “tôi không có động lực”, ít nhất các pos
 
 Vì vậy “cố gắng hơn” rarely is a complete explanation.
 
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **1. “Thiếu động lực” không phải cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **2. Expectancy–giá trị (value / 값)**, rồi **3. Self-efficacy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Expectancy–giá trị (value / 값)
 
 Các **mô hình kỳ vọng–giá trị (expectancy–value models)** propose hành động (action / 동작) investment depends partly on perceived giá trị (value / 값) and expectation of success.
@@ -41,8 +39,6 @@ Motivational pull ≈ value × expectancy − perceived cost
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론) family:** expectancy–giá trị (value / 값) các mô hình (models / 모델들) have extensive educational/motivational bằng chứng (evidence / 증거), but chính xác (exact / 정확한) components and equations vary by mô hình (model / 모델).
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **3. Self-efficacy** nối từ **2. Expectancy–giá trị (value / 값)** sang **4. Intrinsic và extrinsic motivation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Self-efficacy
 
 **Tự hiệu quả (self-efficacy)** là belief về khả năng thực hiện hành động cụ thể để đạt kết quả (outcome / 결과), not toàn cục (global / 전역) self-worth.
@@ -51,8 +47,6 @@ Self-efficacy can influence persistence, challenge selection and effort. It is b
 
 High self-efficacy can be useful when calibrated; overconfidence can produce poor planning.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **4. Intrinsic và extrinsic motivation** nối từ **3. Self-efficacy** sang **5. Self-Determination lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Intrinsic và extrinsic motivation
 
 **Động lực nội tại (intrinsic motivation)** means activity itself is rewarding/interesting. **Động lực ngoại tại (extrinsic motivation)** means hành động (action / 동작) serves another kết quả (outcome / 결과) such as money, grade, certificate or avoidance of punishment.
@@ -60,8 +54,6 @@ High self-efficacy can be useful when calibrated; overconfidence can produce poo
 These are not opposites that cannot coexist.
 
 A nhà phát triển (developer / 개발자) can enjoy solving technical problems and giá trị (value / 값) salary simultaneously.
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **5. Self-Determination lý thuyết (theory / 이론)** nối từ **4. Intrinsic và extrinsic motivation** sang **6. Goal xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Self-Determination lý thuyết (theory / 이론)
 
@@ -74,8 +66,6 @@ A nhà phát triển (developer / 개발자) can enjoy solving technical problem
 > **hiện tại (current / 현재) lý thuyết (theory / 이론) with broad research program:** SDT has substantial supportive bằng chứng (evidence / 증거) across domains, but needs should not be treated as simple universal switches explaining every kết quả (outcome / 결과).
 
 Autonomy does not mean “no rules”. Clear các ràng buộc (constraints / 제약조건들) can coexist with meaningful choice and rationale.
-
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **6. Goal xung đột (conflict / 충돌)** nối từ **5. Self-Determination lý thuyết (theory / 이론)** sang **7. Temporal discounting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Goal xung đột (conflict / 충돌)
 
@@ -93,8 +83,6 @@ What opportunity cost is perceived?
 
 Self-regulation often means restructuring xung đột (conflict / 충돌) rather than increasing willpower.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **7. Temporal discounting** nối từ **6. Goal xung đột (conflict / 충돌)** sang **8. Reward học tập (learning / 학습) and dopamine**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Temporal discounting
 
 Humans often giá trị (value / 값) immediate outcomes more than delayed outcomes. **Temporal discounting** helps explain procrastination, saving difficulty and health hành vi (behavior / 동작).
@@ -102,8 +90,6 @@ Humans often giá trị (value / 값) immediate outcomes more than delayed outco
 Discounting is not always irrational: future rewards are uncertain. độ lệch (bias / 편향) arises when short-term weighting conflicts with person's own stable long-term goals.
 
 Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **8. Reward học tập (learning / 학습) and dopamine** nối từ **7. Temporal discounting** sang **9. Incentives can thay đổi (change / 변경) hành vi (behavior / 동작) without changing values**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Reward học tập (learning / 학습) and dopamine
 
@@ -113,15 +99,11 @@ A key computational concept is **reward prediction lỗi (error / 오류)**: dif
 
 > **Established/hiện tại (current / 현재) distinction:** dopamine-related prediction-error signals are well-supported in học tập (learning / 학습) neuroscience; ánh xạ (mapping / 매핑) every human motivation bài toán (problem / 문제) to “dopamine mức (level / 수준)” is pseudoscientific simplification.
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **9. Incentives can thay đổi (change / 변경) hành vi (behavior / 동작) without changing values** nối từ **8. Reward học tập (learning / 학습) and dopamine** sang **10. Approach and avoidance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Incentives can thay đổi (change / 변경) hành vi (behavior / 동작) without changing values
 
 Bên ngoài (external / 외부) reward can increase mục tiêu (target / 대상) hành vi (behavior / 동작) while present. Whether hành vi (behavior / 동작) persists after reward removal depends on học tập (learning / 학습), định danh (identity / 식별자), skill and ngữ cảnh (context / 맥락).
 
 Claims that “rewards always destroy intrinsic motivation” are too broad. Effects depend tác vụ (task / 작업), reward contingency, điều khiển (control / 제어) perception and baseline interest.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **10. Approach and avoidance** nối từ **9. Incentives can thay đổi (change / 변경) hành vi (behavior / 동작) without changing values** sang **11. Emotion is multi-component**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Approach and avoidance
 
@@ -130,8 +112,6 @@ Motivation includes **approach** toward desired outcomes and **avoidance** of th
 Avoidance can be adaptive in danger but become self-reinforcing in anxiety because immediate relief prevents học tập (learning / 학습) that feared kết quả (outcome / 결과) may be tolerable or unlikely.
 
 Xem [[../04_mental_health/02_anxiety_ocd_and_trauma]].
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **11. Emotion is multi-component** nối từ **10. Approach and avoidance** sang **12. Basic-emotion approaches**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Emotion is multi-component
 
@@ -147,8 +127,6 @@ An emotion episode can involve:
 
 No single thành phần (component / 컴포넌트) alone defines all emotion.
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **12. Basic-emotion approaches** nối từ **11. Emotion is multi-component** sang **13. Appraisal theories**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Basic-emotion approaches
 
 **Basic Emotion Theories (BETs)** propose some emotion families have evolved biological organization and partially distinct expressive/hành động (action / 동작) patterns.
@@ -156,8 +134,6 @@ No single thành phần (component / 컴포넌트) alone defines all emotion.
 Bằng chứng (evidence / 증거) supports cross-cultural regularities and biologically relevant patterns, but expression is more context-sensitive and multidimensional than popular “six universal faces” diagrams suggest.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론):** basic-emotion approaches remain active scientific frameworks, not settled final mô hình (model / 모델).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **13. Appraisal theories** nối từ **12. Basic-emotion approaches** sang **14. Constructionist approaches**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Appraisal theories
 
@@ -167,8 +143,6 @@ Recent meta-analytic công việc (work / 작업) across hundreds of studies sup
 
 > **Substantial bằng chứng (evidence / 증거) for appraisal–emotion relations; chính xác (exact / 정확한) nhân quả (causal / 인과적) kiến trúc (architecture / 아키텍처) remains theory-dependent.**
 
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **14. Constructionist approaches** nối từ **13. Appraisal theories** sang **15. Theories may mục tiêu (target / 대상) different levels**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Constructionist approaches
 
 **Constructionist theories** emphasize cốt lõi (core / 핵심) affect/body trạng thái (state / 상태), conceptual kiến thức (knowledge / 지식), ngữ cảnh (context / 맥락) and ngôn ngữ (language / 언어) in constructing emotion categories.
@@ -176,8 +150,6 @@ Recent meta-analytic công việc (work / 작업) across hundreds of studies sup
 They challenge idea that each emotion has one fixed physiological/facial signature.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론) / active debate:** constructionist approaches explain important variability, but should not be presented as having “disproved” all basic-emotion bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **15. Theories may mục tiêu (target / 대상) different levels** nối từ **14. Constructionist approaches** sang **16. James–Lange, Cannon–Bard và Schachter–Singer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Theories may mục tiêu (target / 대상) different levels
 
@@ -196,8 +168,6 @@ A lý thuyết (theory / 이론) can be strong at one mức (level / 수준) and
 
 This is why thư viện (library / 라이브러리) does not choose a single winner by slogan.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **16. James–Lange, Cannon–Bard và Schachter–Singer** nối từ **15. Theories may mục tiêu (target / 대상) different levels** sang **17. Interoception and emotion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. James–Lange, Cannon–Bard và Schachter–Singer
 
 These are historically important theories illustrating body–brain–interpretation relationships.
@@ -205,8 +175,6 @@ These are historically important theories illustrating body–brain–interpreta
 Hiện đại (modern / 현대적) affective science is more complex than textbook chuỗi (sequence / 시퀀스) where one old lý thuyết (theory / 이론) “replaced” another.
 
 Use them to understand lịch sử (history / 이력) of questions, not as the complete hiện tại (current / 현재) taxonomy.
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **17. Interoception and emotion** nối từ **16. James–Lange, Cannon–Bard và Schachter–Singer** sang **18. hành động (action / 동작) tendencies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Interoception and emotion
 
@@ -217,8 +185,6 @@ Heart tỷ lệ (rate / 비율), breathing, gut sensation and arousal are interp
 > **hiện tại (current / 현재) bằng chứng (evidence / 증거):** interoception matters for emotion and anxiety-related processes, but no single “body tín hiệu (signal / 신호) → chính xác (exact / 정확한) emotion” ánh xạ (mapping / 매핑) exists.
 
 Xem [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]].
-
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **18. hành động (action / 동작) tendencies** nối từ **17. Interoception and emotion** sang **19. Emotion and rationality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. hành động (action / 동작) tendencies
 
@@ -232,15 +198,11 @@ Emotion can độ lệch (bias / 편향) hành động (action / 동작) readine
 
 These are tendencies, not commands. ngữ cảnh (context / 맥락) and regulation can override them.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **19. Emotion and rationality** nối từ **18. hành động (action / 동작) tendencies** sang **20. Emotion regulation tiến trình (process / 프로세스) mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Emotion and rationality
 
 Emotion is not opposite of reason. quyết định (decision / 결정) requires valuation: what matters, what is risky, what should be prioritized.
 
 Bài toán (problem / 문제) occurs when emotional tín hiệu (signal / 신호) reflects outdated học tập (learning / 학습), misleading cue or extreme trạng thái (state / 상태) that dominates broader bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **19. Emotion and rationality** đặt đầu vào cho **20. Emotion regulation tiến trình (process / 프로세스) mô hình (model / 모델)**, rồi **21. Reappraisal** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Emotion regulation tiến trình (process / 프로세스) mô hình (model / 모델)
 
@@ -254,8 +216,6 @@ Gross-style tiến trình (process / 프로세스) các mô hình (models / 모�
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론) with substantial empirical use:** useful khung phần mềm (framework / 프레임워크), but strategies are not universally good/bad.
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **20. Emotion regulation tiến trình (process / 프로세스) mô hình (model / 모델)** đặt đầu vào cho **21. Reappraisal**, rồi **22. Expressive suppression** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. Reappraisal
 
 **Tái đánh giá nhận thức (cognitive reappraisal)** changes interpretation of sự kiện (event / 이벤트).
@@ -263,8 +223,6 @@ Gross-style tiến trình (process / 프로세스) các mô hình (models / 모�
 On average it often relates to more adaptive emotional kết quả (outcome / 결과) than chronic expressive suppression, but ngữ cảnh (context / 맥락) matters.
 
 Reappraising real danger as “nothing” can be maladaptive. Effective reappraisal should cập nhật (update / 업데이트) meaning using bằng chứng (evidence / 증거), not forced positivity.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **22. Expressive suppression** nối từ **21. Reappraisal** sang **23. Regulatory flexibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Expressive suppression
 
@@ -274,15 +232,11 @@ It can have xã hội (social / 사회적)/cognitive costs in some contexts, but
 
 No chiến lược (strategy / 전략) should be moralized independent of ngữ cảnh (context / 맥락).
 
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **23. Regulatory flexibility** nối từ **22. Expressive suppression** sang **24. Acceptance and avoidance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Regulatory flexibility
 
 **Linh hoạt điều chỉnh cảm xúc (regulatory flexibility)** means selecting chiến lược (strategy / 전략) based on controllability, xã hội (social / 사회적) ngữ cảnh (context / 맥락), intensity and goal.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론)/construct:** flexibility is increasingly emphasized because fixed chiến lược (strategy / 전략) rankings thất bại (fail / 실패) across contexts. đo lường (measurement / 측정) and nhân quả (causal / 인과적) mechanisms remain active research.
-
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **24. Acceptance and avoidance** nối từ **23. Regulatory flexibility** sang **25. Emotion granularity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Acceptance and avoidance
 
@@ -292,8 +246,6 @@ Acceptance-based approaches distinguish feeling from hành động (action / 동
 
 This supports everyday self-regulation but should not be turned into “accept everything” slogan.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **25. Emotion granularity** nối từ **24. Acceptance and avoidance** sang **26. Affective forecasting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Emotion granularity
 
 **Độ phân biệt cảm xúc (emotion granularity)** is ability to distinguish emotional states more specifically.
@@ -301,8 +253,6 @@ This supports everyday self-regulation but should not be turned into “accept e
 Higher granularity is associated in some literature with better regulation/wellbeing, but causality and đo lường (measurement / 측정) vary.
 
 > **bằng chứng (evidence / 증거) status:** promising association/hiện tại (current / 현재) research, not universal nhân quả (causal / 인과적) law.
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **26. Affective forecasting** nối từ **25. Emotion granularity** sang **27. Stress and emotion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Affective forecasting
 
@@ -312,8 +262,6 @@ This affects career, relationship and purchase decisions.
 
 But forecasting lỗi (error / 오류) magnitude varies; humans are not uniformly poor predictors.
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **27. Stress and emotion** nối từ **26. Affective forecasting** sang **28. Motivation and depression**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Stress and emotion
 
 Stress changes attention, arousal and điều khiển (control / 제어). Acute stress can facilitate hiệu năng (performance / 성능) on some simple/well-learned tasks but impair flexible điều khiển (control / 제어) under other conditions.
@@ -322,15 +270,11 @@ Stress changes attention, arousal and điều khiển (control / 제어). Acute 
 
 Xem [[06_stress_coping_and_emotion_regulation]] và [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **28. Motivation and depression** nối từ **27. Stress and emotion** sang **29. xã hội (social / 사회적) motivation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Motivation and depression
 
 Depression can involve reduced reward sensitivity, anhedonia, fatigue, hopelessness and avoidance, so “motivation bài toán (problem / 문제)” may reflect clinical syndrome.
 
 Self-discipline advice should not replace assessment when impairment is broad/severe.
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **29. xã hội (social / 사회적) motivation** nối từ **28. Motivation and depression** sang **30. Culture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. xã hội (social / 사회적) motivation
 
@@ -340,15 +284,11 @@ Nhóm (team / 팀) hành vi (behavior / 동작) may depend on psychological an t
 
 Xem [[10_group_dynamics_collective_behavior_and_cooperation]] and [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **30. Culture** nối từ **29. xã hội (social / 사회적) motivation** sang **31. Adler liên kết (connection / 연결): similarity without kiểm tra hợp lệ (validation / 검증)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Culture
 
 Culture shapes which goals are normative, how emotion is labeled/displayed and what autonomy/relatedness mean in practice.
 
 Cross-cultural variation does not mean biology absent; it means expression and interpretation occur in xã hội (social / 사회적) các hệ thống (systems / 시스템들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, sau nội dung của **30. Culture**, **31. Adler liên kết (connection / 연결): similarity without kiểm tra hợp lệ (validation / 검증)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. Everyday ứng dụng (application / 애플리케이션): cơ chế (mechanism / 메커니즘) first** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. Adler liên kết (connection / 연결): similarity without kiểm tra hợp lệ (validation / 검증)
 
@@ -357,8 +297,6 @@ Adler emphasized goal direction, inferiority/compensation and xã hội (social 
 Hiện đại (modern / 현대적) motivation research studies goals, self-efficacy, status and belonging, but this does not validate Adler's entire Individual Psychology.
 
 Xem [[../90_connections/05_adler_individual_psychology_in_context]].
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **31. Adler liên kết (connection / 연결): similarity without kiểm tra hợp lệ (validation / 검증)** đặt đầu vào cho **32. Everyday ứng dụng (application / 애플리케이션): cơ chế (mechanism / 메커니즘) first**, rồi **33. dùng chung (common / 공통) misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Everyday ứng dụng (application / 애플리케이션): cơ chế (mechanism / 메커니즘) first
 
@@ -377,8 +315,6 @@ Anxiety/avoidance?
 Different cơ chế (mechanism / 메커니즘) → different intervention.
 
 This is more evidence-aligned than “increase motivation”.
-
-> **Nối mạch:** Ở chặng này của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **32. Everyday ứng dụng (application / 애플리케이션): cơ chế (mechanism / 메커니즘) first** đặt đầu vào cho **33. dùng chung (common / 공통) misconceptions**, rồi **34. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. dùng chung (common / 공통) misconceptions
 
@@ -401,8 +337,6 @@ No. It means changing interpretation, ideally consistent with bằng chứng (ev
 ### “Emotion should be controlled away”
 
 No. Emotion supplies thông tin (information / 정보)/hành động (action / 동작) tendency; regulation concerns relationship between emotion, ngữ cảnh (context / 맥락) and hành động (action / 동작).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **34. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **33. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. mô hình tư duy (mental model / 사고 모델)
 
@@ -432,8 +366,6 @@ Action tendency
         ↓
 Regulation / behavior
 ```
-
-> **Nối mạch:** Trong **Động lực và cảm xúc — Motivation & Emotion / 동기와 정서**, **Kết nối kiến thức** tổng hợp từ **34. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

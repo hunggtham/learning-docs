@@ -73,8 +73,6 @@ e1 --causes/constrains--> e2
 
 và xác định edge nào mạnh, edge nào chỉ correlation.
 
-> **Chuyển mạch:** Mental model supplies the four anchors—time, institution, actors and consequence; timeline then orders events without pretending dates alone explain causality.
-
 ## Cách dùng timeline với bốn neo
 
 Mỗi mốc dưới đây nên được đọc ít nhất qua bốn câu hỏi: **điều gì thay đổi trong thể chế**, **surplus hoặc chi phí đi qua nền kinh tế ra sao**, **Việt Nam cùng thời đang ở đâu**, và **địa điểm nào còn giữ bằng chứng**.

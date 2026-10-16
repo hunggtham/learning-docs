@@ -2,7 +2,6 @@
 
 > **Mạch đọc:** [README](./README.md) là owner của tuyến correctness nâng cao. File tách ba lớp thường bị trộn lẫn—coherence của cache, ordering của hardware/ISA và happens-before của ngôn ngữ—rồi nối chúng với publication, atomicity, false sharing và bằng chứng vận hành.
 
-
 Lỗi đồng thời thường bị rút gọn thành câu “CPU reorder instruction”. Cách giải thích đó quá thấp tầng để sửa mã (code / 코드) và cũng quá đơn giản để giải thích hành vi (behavior / 동작) thật. Tính đúng đắn của chương trình concurrent là một hợp đồng xuyên nhiều lớp trừu tượng (abstraction / 추상화): mã nguồn (source code / 소스 코드) → mô hình bộ nhớ của ngôn ngữ (language memory model) → trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) → thành phần nguyên thủy (primitive / 기본 요소) đồng bộ của OS → ISA và bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) → bộ nhớ đệm (cache / 캐시)/coherence → phần cứng thật.
 
 Điểm quan trọng không phải nhớ từng fence instruction. Ta cần biết **bất biến (invariant / 불변식) nào mỗi tầng phải giữ**, tầng nào được phép reorder, và bằng chứng (evidence / 증거) nào chứng minh đặc tả hợp đồng (contract / 계약) đã bị vi phạm.
@@ -51,8 +50,6 @@ Bất biến (invariant / 불변식) của hardware không phải “mọi cốt
 
 Đọc sâu hơn tại [Memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md).
 
-> **Nối mạch:** Cache coherence chỉ đảm bảo từng line; quan hệ giữa nhiều biến còn phụ thuộc compiler reordering và memory model của ngôn ngữ, nên correctness phải đi qua cả hai tầng.
-
 ## 4. trình biên dịch (compiler / 컴파일러) cũng reorder, nhưng theo đặc tả hợp đồng (contract / 계약) khác
 
 Trình biên dịch (compiler / 컴파일러) không chỉ chuyển dòng mã nguồn (source line / 소스 코드 줄) thành lệnh máy (machine instruction / 기계 명령어) một-một. Nó có thể hoist tải (load / 로드), eliminate redundant read, giữ giá trị (value / 값) trong register, vectorize hoặc reorder operations nếu transformation giữ hành vi (behavior / 동작) mà ngôn ngữ (language / 언어) specification cho phép.
@@ -81,8 +78,6 @@ read data
 
 Nếu chuỗi edge tồn tại, software có cơ sở để yêu cầu thời gian chạy (runtime / 런타임)/trình biên dịch (compiler / 컴파일러)/hardware giữ visibility cần thiết. Nếu không có edge, việc “thường xuyên thấy đúng” chỉ là accidental hành vi (behavior / 동작).
 
-> **Nối mạch:** Happens-before biến giả định về visibility thành quan hệ có thể lập luận; **6. Publication bug** cho thấy invariant đó hỏng thế nào trong một object cụ thể.
-
 ## 6. Publication bug: đối tượng (object / 객체) đã có tham chiếu (reference / 참조) nhưng trạng thái (state / 상태) chưa hợp lệ
 
 Giả sử một luồng thực thi (thread / 스레드) khởi tạo đối tượng (object / 객체) rồi publish tham chiếu (reference / 참조) cho luồng thực thi (thread / 스레드) khác mà không có synchronization đúng. bất biến (invariant / 불변식) mong muốn là:
@@ -106,8 +101,6 @@ Atomicity: operation có bị interleave thành lost update không?
 Visibility: write có được reader hợp lệ quan sát không?
 Ordering: reader được phép suy luận các operation khác trước/sau nó thế nào?
 ```
-
-> **Nối mạch:** Tách atomicity, visibility và ordering giúp tránh sửa nhầm bằng scheduler; **8. OS scheduler** chỉ thay interleaving, không tự tạo memory guarantee.
 
 ## 8. OS scheduler quyết định interleaving, không quyết định bộ nhớ (memory / 메모리) ngữ nghĩa (semantics / 의미론)
 

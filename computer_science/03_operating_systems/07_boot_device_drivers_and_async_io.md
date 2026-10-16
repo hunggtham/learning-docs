@@ -12,8 +12,6 @@ Kernel sau đó thiết lập bộ nhớ (memory / 메모리) management, interr
 
 Boot chuỗi (sequence / 시퀀스) cho thấy OS không xuất hiện “từ hư không”; nó phải tự xây những abstractions mà applications sau đó coi là mặc định.
 
-> **Nối mạch:** **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** nối từ **Từ power-on đến người dùng (user / 사용자) không gian (space / 공간)** sang **Memory-mapped I/O và cổng (port / 포트) I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)
 
 Driver (장치 드라이버) biết registers, command queues và interrupt hành vi (behavior / 동작) của thiết bị (device / 장치), đồng thời expose giao diện (interface / 인터페이스) mà kernel subsystems hiểu.
@@ -22,15 +20,11 @@ Filesystem không nên biết chi tiết từng NVMe controller; mạng (network
 
 Một buggy kernel driver nguy hiểm vì chạy privileged. User-space drivers và sandboxing được dùng ở một số architectures để giảm blast radius.
 
-> **Nối mạch:** **Memory-mapped I/O và cổng (port / 포트) I/O** nối từ **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** sang **Interrupt và polling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Memory-mapped I/O và cổng (port / 포트) I/O
 
 Nhiều devices expose điều khiển (control / 제어)/status registers vào bộ nhớ (memory / 메모리) address không gian (space / 공간). CPU đọc/ghi addresses đặc biệt để command thiết bị (device / 장치). Đây là memory-mapped I/O (MMIO).
 
 Các accesses này có thứ tự (ordering / 순서)/volatility ngữ nghĩa (semantics / 의미론) khác normal RAM; trình biên dịch (compiler / 컴파일러)/CPU không được tự do optimize như ordinary bộ nhớ (memory / 메모리). Hardware programming vì vậy gắn chặt với bộ nhớ (memory / 메모리) barriers và kiến trúc (architecture / 아키텍처) rules.
-
-> **Nối mạch:** **Interrupt và polling** nối từ **Memory-mapped I/O và cổng (port / 포트) I/O** sang **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interrupt và polling
 
@@ -38,15 +32,11 @@ Nếu CPU liên tục hỏi thiết bị (device / 장치) “xong chưa?” th�
 
 Interrupt cho thiết bị (device / 장치) báo CPU khi cần attention. Interrupt có overhead ngữ cảnh (context / 맥락)/handler, nên hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) có hybrid strategies như interrupt moderation hoặc busy polling trong high-performance networking.
 
-> **Nối mạch:** **Interrupt và polling** đặt vấn đề; **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** kiểm tra bằng chứng, rồi **Blocking, non-blocking và asynchronous I/O** mở rộng hệ quả.
-
 ## DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte
 
 Direct bộ nhớ (memory / 메모리) truy cập (access / 접근) (DMA) cho thiết bị (device / 장치) đọc/ghi RAM theo descriptors do driver thiết lập. CPU setup transfer, thiết bị (device / 장치) thực hiện bulk dữ liệu (data / 데이터) movement, rồi completion được báo bằng interrupt hoặc hàng đợi (queue / 큐) polling.
 
 DMA tăng hiệu năng (performance / 성능) nhưng tạo bảo mật (security / 보안) yêu cầu (requirement / 요구사항): thiết bị (device / 장치) không được tùy ý truy cập (access / 접근) toàn bộ nhớ (memory / 메모리). IOMMU cung cấp address translation/isolation cho thiết bị (device / 장치) tương tự virtual bộ nhớ (memory / 메모리) cho CPU.
-
-> **Nối mạch:** **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** đặt vấn đề; **Blocking, non-blocking và asynchronous I/O** kiểm tra bằng chứng, rồi **Thundering herd và sự kiện (event / 이벤트) loops** mở rộng hệ quả.
 
 ## Blocking, non-blocking và asynchronous I/O
 
@@ -56,15 +46,11 @@ Readiness APIs như `select`, `poll`, `epoll`, `kqueue` báo descriptors nào s�
 
 Async cú pháp (syntax / 문법) trong ngôn ngữ (language / 언어) không tự quyết OS I/O mô hình (model / 모델). Một `async/await` thời gian chạy (runtime / 런타임) có thể đứng trên readiness, completion ports, luồng thực thi (thread / 스레드) pool hoặc combination.
 
-> **Nối mạch:** **Thundering herd và sự kiện (event / 이벤트) loops** nối từ **Blocking, non-blocking và asynchronous I/O** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thundering herd và sự kiện (event / 이벤트) loops
 
 Nếu nhiều workers cùng thức dậy vì một sự kiện (event / 이벤트) nhưng chỉ một worker có công việc (work / 작업), hệ thống lãng phí scheduling/ngữ cảnh (context / 맥락) switches. Kernel/thời gian chạy (runtime / 런타임) designs cố tránh thundering herd bằng wakeup policies và hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권).
 
 Vòng lặp sự kiện (event loop / 이벤트 루프) xử lý nhiều concurrent connections với ít threads bằng cách multiplex I/O readiness/completions. Nó hiệu quả khi tasks chủ yếu I/O-bound và handlers không khối (block / 블록) dài.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Thundering herd và sự kiện (event / 이벤트) loops** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -74,13 +60,9 @@ Vòng lặp sự kiện (event loop / 이벤트 루프) xử lý nhiều concurr
 
 **“Driver chỉ là thư viện.”** Kernel driver có privilege và hardware truy cập (access / 접근) đặc biệt; thất bại (failure / 실패) impact khác user-space thư viện (library / 라이브러리).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > I/O là chuỗi xử lý (pipeline / 파이프라인) điều phối giữa CPU, bộ nhớ (memory / 메모리) và thiết bị (device / 장치). OS chọn khi CPU nên chạy, khi nên ngủ, ai sở hữu buffer và completion được báo bằng cơ chế nào.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

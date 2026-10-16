@@ -36,7 +36,7 @@ Dữ liệu ghi lại quan sát, thông tin thêm ngữ cảnh, còn knowledge g
 
 ## Symbol và referent
 
-A symbol như `Seoul`, `Person123`, `ParentOf` là đơn vị từ (token / 토큰) trong hệ thống (system / 시스템). Nó **refers** tới thực thể (entity / 엔터티)/quan hệ (relation / 관계) theo interpretation.
+A symbol như `Seoul`, `Person123`, `ParentOf` là token (토큰) trong hệ thống (system / 시스템). Nó **refers** tới thực thể (entity / 엔터티)/quan hệ (relation / 관계) theo interpretation.
 
 Machine thao tác symbols theo rules; meaning đến từ ánh xạ (mapping / 매핑) giữa symbols và lĩnh vực (domain / 도메인).
 

@@ -10,8 +10,6 @@ Bộ nhớ (memory / 메모리) có thể hình dung như một dãy bytes, mỗ
 
 Một array của 1 triệu integers contiguous tạo mẫu (pattern / 패턴) địa chỉ đều. CPU prefetcher và bộ nhớ đệm (cache / 캐시) line có thể lấy nhiều neighboring values cùng lúc. Linked danh sách (list / 목록) đặt nodes rải rác, mỗi pointer dereference có thể dẫn tới trượt bộ nhớ đệm (cache miss / 캐시 미스).
 
-> **Nối mạch:** Address model cho biết cách truy cập; spatial/temporal locality giải thích cache, còn contiguous và linked layout đổi trade-off giữa locality, insertion cost và pointer overhead.
-
 ## Spatial và temporal locality
 
 Spatial locality (공간 지역성 / tính cục bộ không gian): nếu vừa truy cập (access / 접근) address x, có khả năng sắp truy cập (access / 접근) addresses gần x. Temporal locality (시간 지역성): dữ liệu vừa dùng có khả năng được dùng lại sớm.
@@ -19,8 +17,6 @@ Spatial locality (공간 지역성 / tính cục bộ không gian): nếu vừa 
 Bộ nhớ đệm (cache / 캐시) hoạt động tốt vì programs thường có locality. Array iteration có spatial locality. vòng lặp (loop / 루프) dùng đi dùng lại small lookup bảng (table / 테이블) có temporal locality.
 
 Thuật toán (algorithm / 알고리즘) thiết kế (design / 설계) và dữ liệu (data / 데이터) bố cục (layout / 레이아웃) có thể tăng locality mà không đổi Big O.
-
-> **Nối mạch:** **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** nối từ **Spatial và temporal locality** sang **Array of Structures và cấu trúc (structure / 구조) of Arrays**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)
 
@@ -30,8 +26,6 @@ Linked structures dùng pointers để nối nodes. Insert/delete tại known n�
 
 Vì vậy câu “linked danh sách (list / 목록) insert nhanh hơn array” thiếu ngữ cảnh (context / 맥락). Nếu tải công việc (workload / 워크로드) chủ yếu scan, động (dynamic / 동적) array thường tốt hơn đáng kể.
 
-> **Nối mạch:** **Array of Structures và cấu trúc (structure / 구조) of Arrays** nối từ **Contiguous biểu diễn (representation / 표현) và linked biểu diễn (representation / 표현)** sang **Alignment, padding và đối tượng (object / 객체) overhead**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Array of Structures và cấu trúc (structure / 구조) of Arrays
 
 Giả sử có points `{x,y,z,type}`. Array of Structures (AoS) lưu toàn bộ bản ghi (record / 레코드) liên tiếp. cấu trúc (structure / 구조) of Arrays (SoA) lưu riêng arrays x[], y[], z[], kiểu (type / 타입)[].
@@ -39,8 +33,6 @@ Giả sử có points `{x,y,z,type}`. Array of Structures (AoS) lưu toàn bộ 
 Nếu computation cần tất cả fields của từng điểm (point / 지점), AoS tự nhiên. Nếu vectorized vòng lặp (loop / 루프) chỉ cần x và y cho hàng triệu points, SoA giảm bytes không cần thiết vào bộ nhớ đệm (cache / 캐시) và phù hợp SIMD hơn.
 
 Data-oriented thiết kế (design / 설계) bắt đầu từ truy cập (access / 접근) mẫu (pattern / 패턴) chứ không chỉ đối tượng (object / 객체) modeling.
-
-> **Nối mạch:** **Alignment, padding và đối tượng (object / 객체) overhead** nối từ **Array of Structures và cấu trúc (structure / 구조) of Arrays** sang **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Alignment, padding và đối tượng (object / 객체) overhead
 
@@ -50,8 +42,6 @@ Hàng triệu tiny objects vì vậy có bộ nhớ (memory / 메모리) footpri
 
 Xem biểu diễn (representation / 표현) chi tiết tại [Numbers & machine representation](../00_computation_information/02_numbers_and_machine_representation.md).
 
-> **Nối mạch:** **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Alignment, padding và đối tượng (object / 객체) overhead**; **Pointer chasing và indirection** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)
 
 Ở thời gian chạy (runtime / 런타임), ngăn xếp lời gọi (call stack / 호출 스택) thường giữ activation records: return address, cục bộ (local / 로컬) dữ liệu (data / 데이터), saved registers. vùng nhớ động (heap / 힙) phục vụ allocations có thời gian tồn tại (lifetime / 수명) linh hoạt. Nhưng ngôn ngữ (language / 언어) ngữ nghĩa (semantics / 의미론) không nên đồng nhất tuyệt đối với vật lý (physical / 물리적) ngăn xếp (stack / 스택)/vùng nhớ động (heap / 힙): trình biên dịch (compiler / 컴파일러) có thể scalar-replace đối tượng (object / 객체), allocate closure differently hoặc escape-analyze.
@@ -60,15 +50,11 @@ Xem biểu diễn (representation / 표현) chi tiết tại [Numbers & machine 
 
 Phần language-level bộ nhớ (memory / 메모리) được giải thích ở [Types, values, references and memory](../04_programming_languages/01_types_values_references_and_memory.md).
 
-> **Nối mạch:** **Pointer chasing và indirection** tổng hợp từ **Ngăn xếp (stack / 스택), vùng nhớ động (heap / 힙) và thời gian tồn tại (lifetime / 수명) như một mô hình tư duy (mental model / 사고 모델)**; **Compactness và encoded representations** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Pointer chasing và indirection
 
 Lớp trừu tượng (abstraction / 추상화) thường thêm indirection: pointer → đối tượng (object / 객체) → child pointer → giá trị (value / 값). Mỗi indirection có thể là dependent bộ nhớ (memory / 메모리) tải (load / 로드); CPU khó song song hóa nếu address tiếp theo chỉ biết sau tải (load / 로드) trước. cây (tree / 트리) có theoretical `O(log n)` nhưng B-tree thường outperform nhị phân (binary / 이진) cây (tree / 트리) trên lưu trữ (storage / 저장소)/bộ nhớ đệm (cache / 캐시) vì mỗi nút (node / 노드) chứa nhiều keys, giảm độ sâu (depth / 깊이) và tăng locality.
 
 Đây chính là lý do cơ sở dữ liệu (database / 데이터베이스) indexes thích B/B+ trees.
-
-> **Nối mạch:** **Compactness và encoded representations** nối từ **Pointer chasing và indirection** sang **Mutability và sharing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compactness và encoded representations
 
@@ -76,21 +62,15 @@ Bitsets pack booleans thành bits thay vì bytes/objects. Integer compression, d
 
 Tuy nhiên compression cần CPU decode. Đây là time-space-bandwidth sự đánh đổi (trade-off / 트레이드오프).
 
-> **Nối mạch:** **Mutability và sharing** nối từ **Compactness và encoded representations** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mutability và sharing
 
 Immutable persistent dữ liệu (data / 데이터) structures có thể share cấu trúc (structure / 구조) giữa versions thay vì bản sao (copy / 복사) toàn bộ. Điều này giúp tính đồng thời (concurrency / 동시성) lập luận (reasoning / 추론) nhưng thêm indirection/allocation. sao chép khi ghi (copy-on-write / 쓰기 시 복사) cũng delay duplication cho tới khi mutate.
 
 Dữ liệu (data / 데이터) bố cục (layout / 레이아웃) vì vậy chịu ảnh hưởng không chỉ bởi hiệu năng (performance / 성능) mà cả ngữ nghĩa (semantic / 의미적) requirements như immutability, snapshot và isolation.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Mutability và sharing**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > cấu trúc dữ liệu (data structure / 자료구조) có hai mặt: **abstract operations** và **vật lý (physical / 물리적) biểu diễn (representation / 표현)/truy cập (access / 접근) mẫu (pattern / 패턴)**. Big O mô tả mặt thứ nhất; bộ nhớ đệm (cache / 캐시) line, pointer, allocation và bố cục (layout / 레이아웃) quyết định rất nhiều ở mặt thứ hai.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -99,8 +79,6 @@ Dữ liệu (data / 데이터) bố cục (layout / 레이아웃) vì vậy ch�
 **“đối tượng (object / 객체) nhỏ thì bộ nhớ (memory / 메모리) nhỏ.”** Header, alignment, references và allocator overhead có thể lớn hơn fields.
 
 **“Linked danh sách (list / 목록) luôn phù hợp insert/delete nhiều.”** Chỉ khi đã có vị trí/nút (node / 노드) phù hợp và locality/traversal không chi phối.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

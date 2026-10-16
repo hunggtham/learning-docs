@@ -10,15 +10,11 @@ Producer may create công việc (work / 작업) faster temporarily than bên ti
 
 But for sustained arrival `λ > μ` dịch vụ (service / 서비스) tỷ lệ (rate / 비율), hàng đợi (queue / 큐) grows without bound. Stable hệ thống (system / 시스템) requires long-term dịch vụ (service / 서비스) sức chứa (capacity / 용량) exceed admitted tải (load / 로드) or rejection/degradation.
 
-> **Nối mạch:** Queue tách producer khỏi consumer; bounded queue biến bộ nhớ thành giới hạn rõ ràng, còn backpressure lan tín hiệu chậm lại thay vì để backlog phình vô hạn.
-
 ## Bounded vs unbounded hàng đợi (queue / 큐)
 
 Unbounded hàng đợi (queue / 큐) converts overload into ever-growing độ trễ (latency / 지연 시간) and eventually bộ nhớ (memory / 메모리)/disk exhaustion. Bounded hàng đợi (queue / 큐) forces tường minh (explicit / 명시적) chính sách (policy / 정책): khối (block / 블록) producer, reject new, drop oldest/newest, prioritize or spill elsewhere.
 
 Choice is nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론): dropping metrics may be acceptable; dropping payment command not.
-
-> **Nối mạch:** **Backpressure** nối từ **Bounded vs unbounded hàng đợi (queue / 큐)** sang **Messaging ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backpressure
 
@@ -26,15 +22,11 @@ Backpressure propagates tín hiệu (signal / 신호) upstream that bên tiêu t
 
 If upstream ignores tín hiệu (signal / 신호) and buffers locally, hệ thống (system / 시스템) has not solved overload. Backpressure must extend through chuỗi (chain / 사슬) or termination chính sách (policy / 정책) apply.
 
-> **Nối mạch:** **Messaging ngữ nghĩa (semantics / 의미론)** nối từ **Backpressure** sang **Thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Messaging ngữ nghĩa (semantics / 의미론)
 
 At-most-once may lose but no thử lại (retry / 재시도) duplicates; at-least-once retries but duplicates possible; exactly-once effects require stronger coordination/deduplication and phạm vi (scope / 범위) definition.
 
 Message broker delivery acknowledgement is not same as nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션) completion. bên tiêu thụ (consumer / 소비자) may lần ghi nhận (commit / 커밋) DB then crash before ack → redelivery; idempotent handler/outbox/inbox patterns handle.
-
-> **Nối mạch:** **Thứ tự (ordering / 순서)** nối từ **Messaging ngữ nghĩa (semantics / 의미론)** sang **Trạng thái (state / 상태) placement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ tự (ordering / 순서)
 
@@ -42,15 +34,11 @@ Toàn cục (global / 전역) total thứ tự (order / 순서) expensive and of
 
 Tính đồng thời (concurrency / 동시성) can reorder completion even if dequeue thứ tự (order / 순서) fixed. thứ tự (ordering / 순서) đặc tả hợp đồng (contract / 계약) must specify enqueue, delivery, processing or lần ghi nhận (commit / 커밋) thứ tự (order / 순서).
 
-> **Nối mạch:** **Trạng thái (state / 상태) placement** nối từ **Thứ tự (ordering / 순서)** sang **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái (state / 상태) placement
 
 Trạng thái (state / 상태) can live máy khách (client / 클라이언트), ứng dụng (application / 애플리케이션) bộ nhớ (memory / 메모리), bộ nhớ đệm (cache / 캐시), cơ sở dữ liệu (database / 데이터베이스), log or bên ngoài (external / 외부) dịch vụ (service / 서비스). Placement affects availability, scaling and khôi phục (recovery / 복구). cục bộ (local / 로컬) in-memory session makes horizontal scaling need sticky routing/replication; bên ngoài (external / 외부) session store adds mạng (network / 네트워크) phụ thuộc (dependency / 의존성).
 
 “Stateless dịch vụ (service / 서비스)” usually means durable/người dùng (user / 사용자) session trạng thái (state / 상태) externalized, not literally no temporary trạng thái (state / 상태).
-
-> **Nối mạch:** **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** nối từ **Trạng thái (state / 상태) placement** sang **Backpressure vs tỷ lệ (rate / 비율) limiting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự kiện (event / 이벤트) log and trạng thái (state / 상태)
 
@@ -58,25 +46,17 @@ Event-sourcing stores chuỗi (sequence / 시퀀스) of lĩnh vực (domain / �
 
 Thay đổi (change / 변경) dữ liệu (data / 데이터) Capture streams cơ sở dữ liệu (database / 데이터베이스) changes to downstream indexes/analytics; consistency lag must be accepted/monitored.
 
-> **Nối mạch:** **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** đặt tiêu chí; **Backpressure vs tỷ lệ (rate / 비율) limiting** dùng nó để kiểm tra ranh giới, rồi **Queueing and thử lại (retry / 재시도) storms** mở rộng hệ quả.
-
 ## Backpressure vs tỷ lệ (rate / 비율) limiting
 
 Tỷ lệ (rate / 비율) limiter protects ranh giới (boundary / 경계) by limiting admitted yêu cầu (request / 요청) tỷ lệ (rate / 비율) per định danh (identity / 식별자)/hệ thống (system / 시스템). Backpressure is động (dynamic / 동적) downstream pressure. Both may coexist: limiter prevents abuse/overload; backpressure reacts hiện tại (current / 현재) sức chứa (capacity / 용량).
-
-> **Nối mạch:** **Backpressure vs tỷ lệ (rate / 비율) limiting** đặt tiêu chí; **Queueing and thử lại (retry / 재시도) storms** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Queueing and thử lại (retry / 재시도) storms
 
 If phụ thuộc (dependency / 의존성) slows, queues grow; hết thời gian chờ (timeout / 타임아웃) triggers retries; retries increase arrival tỷ lệ (rate / 비율); overload worsens. Circuit breaker, thử lại (retry / 재시도) ngân sách (budget / 예산), bounded queues and deadlines break vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Queueing and thử lại (retry / 재시도) storms**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hàng đợi (queue / 큐) is **stored waiting thời gian (time / 시간)**. It absorbs burst, not sustained sức chứa (capacity / 용량) deficit. Every hàng đợi (queue / 큐) should have sức chứa (capacity / 용량), admission chính sách (policy / 정책), thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), thứ tự (ordering / 순서) phạm vi (scope / 범위) and khả năng quan sát (observability / 관측 가능성).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -85,8 +65,6 @@ If phụ thuộc (dependency / 의존성) slows, queues grow; hết thời gian 
 **“Kafka/RabbitMQ guarantees exactly once everywhere.”** Broker guarantees have phạm vi (scope / 범위); bên ngoài (external / 외부) DB/API side effects need coordination/idempotency.
 
 **“Unbounded hàng đợi (queue / 큐) is safer because không reject.”** It often fails later with worse độ trễ (latency / 지연 시간)/tài nguyên (resource / 자원) exhaustion.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

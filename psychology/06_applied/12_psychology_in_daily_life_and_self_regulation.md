@@ -34,8 +34,6 @@ Thất bại (failure / 실패) có thể xảy ra ở nhiều nơi: goal mơ h�
 
 Điều này quan trọng vì “thiếu ý chí” thường là explanation quá nghèo.
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **2. Thought không phải command** nối từ **1. Self-regulation là vòng điều khiển (control loop / 제어 루프)** sang **3. Suppression và rebound**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Thought không phải command
 
 Một thought có thể xuất hiện tự động mà không phải belief, intention hay prediction đáng tin.
@@ -44,8 +42,6 @@ Một thought có thể xuất hiện tự động mà không phải belief, int
 
 > **ranh giới (boundary / 경계):** defusion không chứng minh thought sai; nó chỉ giảm việc treat thought như command hoặc fact tự động.
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **3. Suppression và rebound** nối từ **2. Thought không phải command** sang **4. Attention là tài nguyên (resource / 자원) bị cạnh tranh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Suppression và rebound
 
 Cố “đừng nghĩ đến X” có thể làm monitoring của X tăng trong một số điều kiện (condition / 조건). Đây là lý do suppression không phải chiến lược (strategy / 전략) universal.
@@ -53,8 +49,6 @@ Cố “đừng nghĩ đến X” có thể làm monitoring của X tăng trong 
 Mục tiêu thực tế hơn thường là giảm **secondary phản hồi (response / 응답)**: rumination, checking, avoidance hoặc compulsive hành động (action / 동작) sau khi thought xuất hiện.
 
 Không nên biến rebound research thành claim “càng cố kiểm soát thought càng tệ trong mọi trường hợp”; tác động (effect / 효과) phụ thuộc tác vụ (task / 작업) và ngữ cảnh (context / 맥락).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **3. Suppression và rebound** đặt vấn đề; **4. Attention là tài nguyên (resource / 자원) bị cạnh tranh** đối chiếu bằng chứng, rồi **5. Reappraisal** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Attention là tài nguyên (resource / 자원) bị cạnh tranh
 
@@ -66,8 +60,6 @@ Cơ chế ở đây không phải “hack dopamine”; nó đơn giản là gi�
 
 Xem [[../01_brain_and_mind/07_attention_consciousness_and_awareness]].
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **4. Attention là tài nguyên (resource / 자원) bị cạnh tranh** đặt vấn đề; **5. Reappraisal** đối chiếu bằng chứng, rồi **6. Acceptance** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 5. Reappraisal
 
 **Đánh giá lại nhận thức (cognitive reappraisal)** thay interpretation của situation để thay emotional phản hồi (response / 응답).
@@ -76,8 +68,6 @@ Reappraisal hữu ích khi có alternative interpretation plausible. Nó kém ph
 
 Ví dụ, “manager hỏi lại vì họ đánh giá mình kém” có thể được mở rộng thành “họ có thể cần thêm ngữ cảnh (context / 맥락) để quyết định”. Đây là hypothesis alternative, không phải forced positivity.
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **6. Acceptance** nối từ **5. Reappraisal** sang **7. Rumination và bài toán (problem / 문제) solving**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Acceptance
 
 **Acceptance** giảm việc coi “xóa nội bộ (internal / 내부) experience” là điều kiện bắt buộc trước khi hành động.
@@ -85,8 +75,6 @@ Ví dụ, “manager hỏi lại vì họ đánh giá mình kém” có thể đ
 Nó đặc biệt liên quan bất định (uncertainty / 불확실성), chronic symptom, grief hoặc emotion không thể biến mất ngay.
 
 Acceptance không nghĩa đồng ý với injustice hoặc ngừng bài toán (problem / 문제) solving. Nó áp dụng cho phần experience chưa thể thay đổi ở thời điểm hiện tại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **7. Rumination và bài toán (problem / 문제) solving** nối từ **6. Acceptance** sang **8. Intolerance of bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Rumination và bài toán (problem / 문제) solving
 
@@ -103,8 +91,6 @@ sau 10–20 phút suy nghĩ
 
 Đây không phải diagnostic kiểm thử (test / 테스트), chỉ là heuristic thực dụng.
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **8. Intolerance of bất định (uncertainty / 불확실성)** nối từ **7. Rumination và bài toán (problem / 문제) solving** sang **9. Procrastination như short-term emotion regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Intolerance of bất định (uncertainty / 불확실성)
 
 Một số overthinking được duy trì bởi nỗ lực đạt certainty gần 100% trước khi hành động (action / 동작).
@@ -114,8 +100,6 @@ Trong nhiều quyết định (decision / 결정), thêm thông tin (information
 **quyết định (decision / 결정) threshold** là cách tách “thông tin (information / 정보) đủ để quyết định” khỏi “thông tin (information / 정보) dùng để làm mình cảm thấy chắc hơn”.
 
 Xem [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
-
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **9. Procrastination như short-term emotion regulation** nối từ **8. Intolerance of bất định (uncertainty / 불확실성)** sang **10. hiện thực (implementation / 구현) intentions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Procrastination như short-term emotion regulation
 
@@ -127,8 +111,6 @@ Một intervention hợp cơ chế (mechanism / 메커니즘) có thể giảm t
 
 Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **10. hiện thực (implementation / 구현) intentions** nối từ **9. Procrastination như short-term emotion regulation** sang **11. Habit và môi trường (environment / 환경) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. hiện thực (implementation / 구현) intentions
 
 **Ý định thực thi (implementation intention)** có dạng “nếu X xảy ra, tôi sẽ làm Y”, giúp link cue với hành động (action / 동작).
@@ -136,8 +118,6 @@ Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_
 Nó hữu ích khi bài toán (problem / 문제) là forgetting, initiation hoặc competing habit.
 
 Nó không giải quyết tốt situation nơi goal xung đột (conflict / 충돌) sâu, môi trường (environment / 환경) impossible hoặc tác vụ (task / 작업) đòi skill chưa có.
-
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **11. Habit và môi trường (environment / 환경) thiết kế (design / 설계)** nối từ **10. hiện thực (implementation / 구현) intentions** sang **12. Exposure và avoidance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Habit và môi trường (environment / 환경) thiết kế (design / 설계)
 
@@ -147,8 +127,6 @@ Ví dụ giảm visibility/truy cập (access / 접근) của distracting app th
 
 Xem [[01_education_learning_and_habit_design]].
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **12. Exposure và avoidance** nối từ **11. Habit và môi trường (environment / 환경) thiết kế (design / 설계)** sang **13. Behavioral activation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Exposure và avoidance
 
 Avoidance giảm fear ngắn hạn nên dễ được negative reinforcement. **Exposure** trong clinical/behavioral ngữ cảnh (context / 맥락) tạo cơ hội học rằng feared kết quả (outcome / 결과) không xảy ra như predicted hoặc distress có thể tolerated mà không cần an toàn (safety / 안전) hành vi (behavior / 동작).
@@ -157,8 +135,6 @@ Avoidance giảm fear ngắn hạn nên dễ được negative reinforcement. **
 
 Xem [[../04_mental_health/02_anxiety_ocd_and_trauma]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **13. Behavioral activation** nối từ **12. Exposure và avoidance** sang **14. Low-energy regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Behavioral activation
 
 Khi mood thấp, hành động (action / 동작) thường giảm; activity mất mát (loss / 손실) lại làm reward và mastery opportunity giảm tiếp.
@@ -166,8 +142,6 @@ Khi mood thấp, hành động (action / 동작) thường giảm; activity mấ
 **Behavioral activation** mục tiêu (target / 대상) vòng này bằng scheduled hành động (action / 동작) linked với giá trị (value / 값)/reward.
 
 Điểm cốt lõi không phải “cứ bận rộn là hết depression”. Clinical depression cần assessment và treatment ngữ cảnh (context / 맥락); cơ chế (mechanism / 메커니즘) chỉ giải thích tại sao hành động (action / 동작) có thể là một phần intervention.
-
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **14. Low-energy regulation** nối từ **13. Behavioral activation** sang **15. Anger**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Low-energy regulation
 
@@ -187,8 +161,6 @@ goal conflict?
 
 Không nên gắn mọi thất bại (failure / 실패) với character.
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **15. Anger** nối từ **14. Low-energy regulation** sang **16. Craving**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Anger
 
 Anger thường xuất hiện khi situation được appraise là violation, injustice hoặc obstruction.
@@ -198,8 +170,6 @@ High arousal có thể thu hẹp hành động (action / 동작) repertoire. Do 
 Nhưng anger không phải tín hiệu (signal / 신호) hoàn hảo rằng injustice thật sự xảy ra; appraisal vẫn có thể sai hoặc incomplete.
 
 Xem [[03_interpersonal_communication_and_conflict]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **16. Craving** nối từ **15. Anger** sang **17. xã hội (social / 사회적) comparison**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Craving
 
@@ -211,8 +181,6 @@ Delay, cue management và alternative phản hồi (response / 응답) có thể
 
 Xem [[../04_mental_health/08_substance_use_and_addictive_behavior]].
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **17. xã hội (social / 사회적) comparison** nối từ **16. Craving** sang **18. quyết định (decision / 결정) hygiene**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. xã hội (social / 사회적) comparison
 
 Comparison có thể cung cấp benchmark nhưng dễ độ lệch (bias / 편향) khi mẫu (sample / 표본) không representative, ví dụ so hậu trường của mình với highlight của người khác.
@@ -220,8 +188,6 @@ Comparison có thể cung cấp benchmark nhưng dễ độ lệch (bias / 편�
 Question hữu ích hơn “họ hơn mình không?” là “comparison này có cung cấp thông tin (information / 정보) action-relevant không?”.
 
 Xem [[05_digital_psychology_social_media_and_online_behavior]].
-
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **18. quyết định (decision / 결정) hygiene** nối từ **17. xã hội (social / 사회적) comparison** sang **19. Self-efficacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. quyết định (decision / 결정) hygiene
 
@@ -231,8 +197,6 @@ Quyết định (decision / 결정) log giữ prediction, xác suất (probabili
 
 Xem [[../02_learning_and_cognition/02_thinking_language_and_decision]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **19. Self-efficacy** nối từ **18. quyết định (decision / 결정) hygiene** sang **20. Lapse và relapse**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Self-efficacy
 
 **Tự hiệu quả (self-efficacy)** là belief về khả năng thực hiện hành vi (behavior / 동작) cần thiết trong ngữ cảnh (context / 맥락) cụ thể.
@@ -240,8 +204,6 @@ Xem [[../02_learning_and_cognition/02_thinking_language_and_decision]].
 Mastery experience thường là nguồn (source / 소스) quan trọng. Affirmation không tạo same bằng chứng (evidence / 증거) nếu không có successful hành động (action / 동작).
 
 Tuy nhiên self-efficacy không phải magic nhân quả (causal / 인과적) variable; actual skill, opportunity và resources vẫn matter.
-
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **20. Lapse và relapse** nối từ **19. Self-efficacy** sang **21. N-of-1 self-experiment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Lapse và relapse
 
@@ -257,8 +219,6 @@ friction nào?
 feedback nào thiếu?
 ```
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **21. N-of-1 self-experiment** nối từ **20. Lapse và relapse** sang **22. AI-assisted self-regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. N-of-1 self-experiment
 
 Với thay đổi low-risk, repeated self-observation có thể useful hơn bộ nhớ (memory / 메모리) impression.
@@ -268,8 +228,6 @@ Ví dụ muốn kiểm thử (test / 테스트) việc để phone ngoài phòng
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** N-of-1 informal dữ liệu (data / 데이터) có giá trị (value / 값) cho personal calibration nhưng không thay randomized clinical bằng chứng (evidence / 증거) và dễ bị confounding/thời gian (time / 시간) trend.
 
 Xem [[../00_foundations/07_ecological_momentary_assessment_and_real_world_measurement]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **22. AI-assisted self-regulation** nối từ **21. N-of-1 self-experiment** sang **23. Chọn chiến lược (strategy / 전략) theo cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. AI-assisted self-regulation
 
@@ -288,8 +246,6 @@ Short-term tác vụ (task / 작업) completion với AI không đồng nghĩa n
 
 Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **22. AI-assisted self-regulation** đặt đầu vào cho **23. Chọn chiến lược (strategy / 전략) theo cơ chế (mechanism / 메커니즘)**, rồi **24. Khi cần professional assessment** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 23. Chọn chiến lược (strategy / 전략) theo cơ chế (mechanism / 메커니즘)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → bằng chứng → giới hạn → ứng dụng. Hãy đọc sơ đồ như công cụ suy luận, không như một nhãn kết luận tự động.
@@ -305,15 +261,11 @@ Phần này chốt mental model thành một chuỗi có thể dùng lại: bố
 
 Bảng (table / 테이블) này là map cơ chế (mechanism / 메커니즘), không phải prescription.
 
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **23. Chọn chiến lược (strategy / 전략) theo cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **24. Khi cần professional assessment**, rồi **25. dùng chung (common / 공통) misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 24. Khi cần professional assessment
 
 Self-regulation skills không thay clinical care khi có suicidality, self-harm, psychosis, mania, severe withdrawal, severe trauma symptoms hoặc functional impairment lớn.
 
 Trong những situation đó, assessment phù hợp quan trọng hơn việc tiếp tục thử thêm “technique”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trong đời sống và tự điều chỉnh**, **25. dùng chung (common / 공통) misconceptions** nối từ **24. Khi cần professional assessment** sang **26. mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. dùng chung (common / 공통) misconceptions
 
@@ -327,15 +279,11 @@ Trong những situation đó, assessment phù hợp quan trọng hơn việc ti�
 
 **“Tâm lý học ứng dụng = self-help.”** Không. ứng dụng (application / 애플리케이션) tốt phải nêu cơ chế (mechanism / 메커니즘), bằng chứng (evidence / 증거), limitation và điều kiện (condition / 조건) of use.
 
-> **Nối mạch:** Trong **Tâm lý trong đời sống và tự điều chỉnh**, **26. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **25. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 26. mô hình tư duy (mental model / 사고 모델)
 
 > Không cần kiểm soát mọi thứ xuất hiện trong đầu. Mục tiêu thực tế hơn là cải thiện khả năng lựa chọn **điều gì được làm tiếp theo**, trong giới hạn của biology, môi trường (environment / 환경) và bất định (uncertainty / 불확실성).
 
 Self-regulation tốt không phải trạng thái không bao giờ dao động; nó là hệ thống phát hiện lệch hướng, chọn chiến lược (strategy / 전략) phù hợp và cập nhật (update / 업데이트) từ phản hồi (feedback / 피드백).
-
-> **Nối mạch:** Ở chặng này của **Tâm lý trong đời sống và tự điều chỉnh**, **Kết nối kiến thức** tổng hợp từ **26. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

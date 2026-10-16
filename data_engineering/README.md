@@ -27,8 +27,6 @@ problem → mental model → mechanism → invariant
 
 Nếu một phần chỉ mô tả API hoặc tên sản phẩm mà không nói guarantee và hành vi khi thất bại (failure behavior / 실패 동작), nó là hiện thực (implementation / 구현) ghi chú (note / 노트) chứ chưa phải kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** **Chuẩn độ sâu của chapter** định nghĩa evidence và failure semantics; **P1 — Trạng thái triển khai** biến chúng thành trạng thái thật của thư viện, rồi **Lộ trình chuẩn gốc** chỉ đường về owner.
-
 ## P1 — Trạng thái triển khai
 
 P1 của kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) đã được triển khai, không còn là phần `Planned`. Bốn foundation chapter ban đầu được nối tiếp bằng các chapter dạng directory dưới đây. Tên trong rà soát (review / 검토) được giữ làm nhãn conceptual; tên chuẩn gốc (canonical / 정본) trong repository dài hơn để nêu rõ ranh giới (boundary / 경계) của từng chapter và tránh các thư mục mơ hồ.
@@ -47,8 +45,6 @@ P1 của kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
 
 Mỗi chapter có mô hình tư duy (mental model / 사고 모델), cơ chế (mechanism / 메커니즘), bất biến (invariant / 불변식), thất bại (failure / 실패)/trường hợp biên (edge case / 경계 사례), bằng chứng (evidence / 증거), sự đánh đổi (trade-off / 트레이드오프) và liên kết phụ thuộc (dependency / 의존성); `COVERAGE_AUDIT.md` là checklist kiểm tra coverage và bất biến (invariant / 불변식) của toàn bộ ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, sau nội dung của **P1 — Trạng thái triển khai**, **Lộ trình chuẩn gốc (canonical / 정본)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Lộ trình chuẩn gốc (canonical / 정본)
 
 Bắt đầu với [01 — Data Engineering từ first principles](01_foundations.md). Chapter này thiết lập mô hình tư duy (mental model / 사고 모델) về dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기), batch/streaming, OLTP/OLAP, tính đúng đắn (correctness / 정확성) và vì sao chuỗi xử lý (pipeline / 파이프라인) không đơn giản là "bản sao (copy / 복사) dữ liệu từ A sang B".
@@ -58,8 +54,6 @@ Tiếp theo đọc [02 — Kiến trúc pipeline và semantics](02_pipeline_arch
 Sau đó đọc [03 — Storage, file format và analytical layout](03_storage_and_formats.md). Phần này giải thích row/column bố cục (layout / 레이아웃), Parquet, compression, partitioning, small-file bài toán (problem / 문제) và tại sao cách đặt dữ liệu vật lý ảnh hưởng trực tiếp đến truy vấn (query / 쿼리) chi phí (cost / 비용).
 
 Cuối cùng đọc [04 — Reliability, quality và production reasoning](04_reliability_and_production.md), nơi chuỗi xử lý (pipeline / 파이프라인) được nhìn như một môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템): dữ liệu (data / 데이터) chất lượng (quality / 품질), contracts, lineage, khả năng quan sát (observability / 관측 가능성), thử lại (retry / 재시도), khôi phục (recovery / 복구), bảo mật (security / 보안) và chi phí (cost / 비용).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **Lộ trình chuẩn gốc (canonical / 정본)** đã nêu tiêu chí phân biệt, còn **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)
 
@@ -99,8 +93,6 @@ Sau bốn foundation chapters, đi theo các ranh giới (boundary / 경계) sau
 
 Kafka, Spark, Flink, Airflow, dbt, warehouse và cloud services chỉ nên xuất hiện như hiện thực (implementation / 구현) ánh xạ (mapping / 매핑) sau khi các chapter tương ứng đã giải thích mô hình tư duy (mental model / 사고 모델). Một công cụ (tool / 도구) mới phải trả lời được: nó duy trì bất biến (invariant / 불변식) nào, thất bại (failure / 실패) ranh giới (boundary / 경계) ở đâu, và bằng chứng (evidence / 증거) nào chứng minh guarantee đó trong môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **Lộ trình mở rộng theo conceptual ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)
 
 Repository hiện có `sql/` chứa tài liệu SQL và mô hình dữ liệu. Không di chuyển thư mục đó một cách cơ học. SQL sau này sẽ được consolidate vào kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) theo ranh giới (boundary / 경계) sau.
@@ -108,8 +100,6 @@ Repository hiện có `sql/` chứa tài liệu SQL và mô hình dữ liệu. K
 Kiến thức về relational mô hình (model / 모델), truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론), joins, aggregation, cửa sổ (window / 윈도우) functions, analytical SQL và cách SQL tham gia transformation thuộc lộ trình học (learning path / 학습 경로) kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링). Kiến thức về giao dịch (transaction / 트랜잭션) engine, MVCC, WAL, B-tree, buffer pool, optimizer internals và tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) là nền tảng cơ sở dữ liệu (database / 데이터베이스) các hệ thống (systems / 시스템들); kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) sẽ cross-link thay vì bản sao (copy / 복사) lại toàn bộ.
 
 Trong giai đoạn di chuyển (migration / 마이그레이션), `sql/` vẫn là nguồn chuẩn gốc (canonical / 정본) cho nội dung SQL hiện có. Khi di chuyển (migration / 마이그레이션) diễn ra, link cũ phải được kiểm tra trước khi đổi đường dẫn (path / 경로) và raw/nguồn (source / 소스) material không được xóa chỉ vì chuẩn gốc (canonical / 정본) reading material đã chuyển nơi.
-
-> **Chuyển mạch:** **Ranh giới với SQL và database** giữ phần semantics truy vấn ở đúng owner; **Mental model xuyên suốt** nối nó với ingestion, storage, orchestration và serving trong data engineering.
 
 ## Mô hình tư duy (mental model / 사고 모델) xuyên suốt
 

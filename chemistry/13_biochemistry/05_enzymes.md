@@ -41,8 +41,6 @@ thời gian đạt cân bằng:     thay đổi mạnh
 
 Nếu cân bằng ưu tiên cơ chất, thêm enzyme chỉ làm hệ đạt cân bằng nhanh hơn; nó không ép sản phẩm vượt giới hạn nhiệt động.
 
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Vị trí hoạt động là một vi môi trường hóa học** nối từ **Nhiệt động lực học và động học — nguyên lý đầu tiên** sang **Các chiến lược xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vị trí hoạt động là một vi môi trường hóa học
 
 **Vị trí hoạt động (active site / 활성 부위)** không chỉ là “lỗ vừa với cơ chất”. Đây là môi trường được tổ chức gồm residue xúc tác, nước liên kết, ion kim loại, cofactor và trường tĩnh điện.
@@ -56,8 +54,6 @@ Các tính chất cục bộ có thể khác dung dịch khối:
 - điện tích của trạng thái chuyển tiếp được ổn định chọn lọc.
 
 Vì vậy xúc tác enzyme có thể được nhìn như **kỹ thuật môi trường phản ứng ở thang nanomet**.
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Các chiến lược xúc tác** nối từ **Vị trí hoạt động là một vi môi trường hóa học** sang **Năng lượng liên kết, khớp cảm ứng và ensemble cấu dạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các chiến lược xúc tác
 
@@ -119,8 +115,6 @@ Loại một phần dung môi có thể làm nó phản ứng mạnh hơn nếu 
 
 Enzyme vì vậy có thể đổi solvat hóa khối lấy môi trường phản ứng được tổ chức chính xác hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, sau nội dung của **Các chiến lược xúc tác**, **Năng lượng liên kết, khớp cảm ứng và ensemble cấu dạng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình Michaelis–Menten** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Năng lượng liên kết, khớp cảm ứng và ensemble cấu dạng
 
 Mô hình **ổ khóa–chìa khóa (lock-and-key)** diễn đạt được độ chọn lọc nhưng quá cứng.
@@ -128,8 +122,6 @@ Mô hình **ổ khóa–chìa khóa (lock-and-key)** diễn đạt được đ�
 Protein liên tục dao động giữa nhiều cấu dạng. Cơ chất có thể ưu tiên một số cấu dạng có sẵn rồi làm hệ điều chỉnh thêm — kết hợp giữa **chọn lọc cấu dạng (conformational selection)** và **khớp cảm ứng (induced fit)**.
 
 Enzyme vì vậy là một **ensemble động**, không phải cấu trúc bất động.
-
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Mô hình Michaelis–Menten** nối từ **Năng lượng liên kết, khớp cảm ứng và ensemble cấu dạng** sang **KM không đồng nhất với ái lực liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Michaelis–Menten
 
@@ -199,8 +191,6 @@ v=\frac{V_{max}}2
 
 Quan hệ này giúp `KM` dễ diễn giải thực nghiệm, nhưng không có nghĩa `KM` luôn là hằng số ái lực.
 
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, sau nội dung của **Mô hình Michaelis–Menten**, **KM không đồng nhất với ái lực liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Số vòng xúc tác và hiệu suất xúc tác** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## KM không đồng nhất với ái lực liên kết
 
 Hằng số Michaelis:
@@ -229,8 +219,6 @@ K_M\approx K_D
 
 Vì vậy `KM` là tham số động học tổng hợp chứ không phải “ái lực” phổ quát.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Số vòng xúc tác và hiệu suất xúc tác** nối từ **KM không đồng nhất với ái lực liên kết** sang **Ý tưởng trạng thái ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Số vòng xúc tác và hiệu suất xúc tác
 
 \[
@@ -257,8 +245,6 @@ Khi đó cải thiện hóa học nội tại thêm nữa không giúp nhiều n
 
 Đây là cầu nối tới [khuếch tán trong chất lỏng](../03_matter_and_phases/01_liquids.md) và [giới hạn vận chuyển trong động học](../06_chemical_kinetics/04_catalysis.md).
 
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ý tưởng trạng thái ổn định** nối từ **Số vòng xúc tác và hiệu suất xúc tác** sang **Ức chế enzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ý tưởng trạng thái ổn định
 
 Với phức `ES`:
@@ -278,8 +264,6 @@ Giả định trạng thái ổn định nói rằng sau giai đoạn đầu ng�
 Điều này **không đồng nghĩa cân bằng nhiệt động**. Đây là trạng thái ổn định động học của một chất trung gian.
 
 Xem thêm [cơ chế phản ứng và steady-state approximation](../06_chemical_kinetics/02_reaction_mechanisms.md).
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ức chế enzyme** nối từ **Ý tưởng trạng thái ổn định** sang **Ức chế không thuận nghịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ức chế enzyme
 
@@ -319,8 +303,6 @@ Khi đó `Vmax` giảm còn `KM` gần như không đổi trong mô hình lý t�
 
 Enzyme thật thường có hành vi phức tạp hơn các nhãn hoàn hảo này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ức chế không thuận nghịch** nối từ **Ức chế enzyme** sang **Lineweaver–Burk và giới hạn của tuyến tính hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ức chế không thuận nghịch
 
 Một số chất ức chế tạo liên kết cộng hóa trị hoặc làm enzyme mất hoạt tính lâu hơn thang thời gian thí nghiệm.
@@ -328,8 +310,6 @@ Một số chất ức chế tạo liên kết cộng hóa trị hoặc làm enz
 Trong trường hợp này, hằng số cân bằng `Ki` đơn giản không đủ; các tham số phụ thuộc thời gian như `kinact` và hằng số liên kết biểu kiến trở nên quan trọng.
 
 Nhiều thuốc khai thác ức chế cộng hóa trị có chủ đích, nhưng sự đánh đổi (trade-off / 트레이드오프) là phải đạt độ chọn lọc cao để tránh phản ứng ngoài mục tiêu.
-
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ức chế không thuận nghịch** đặt tiêu chí; **Lineweaver–Burk và giới hạn của tuyến tính hóa** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Dị lập thể và tính hợp tác** mở rộng hệ quả.
 
 ## Lineweaver–Burk và giới hạn của tuyến tính hóa
 
@@ -346,8 +326,6 @@ Cách này hữu ích về lịch sử và trực quan hóa, nhưng phép nghị
 Phân tích hiện đại thường khớp trực tiếp mô hình phi tuyến.
 
 Đây là bài học thống kê quan trọng: **biến đổi đại số thành đường thẳng không đồng nghĩa tạo ước lượng tốt hơn**.
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Lineweaver–Burk và giới hạn của tuyến tính hóa** đặt tiêu chí; **Dị lập thể và tính hợp tác** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Phụ thuộc pH** mở rộng hệ quả.
 
 ## Dị lập thể và tính hợp tác
 
@@ -371,8 +349,6 @@ Ligand ưu tiên một trạng thái và làm phân bố dân số cấu dạng 
 
 Dị lập thể vì vậy có thể được hiểu như **tái phân bố ensemble cấu dạng**, không phải công tắc cơ học cứng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Phụ thuộc pH** nối từ **Dị lập thể và tính hợp tác** sang **Phụ thuộc nhiệt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phụ thuộc pH
 
 Residue xúc tác phải có trạng thái proton hóa phù hợp.
@@ -387,8 +363,6 @@ pH tối ưu quan sát được phụ thuộc:
 - bước giới hạn tốc độ.
 
 Vì vậy “pH tối ưu” không phải một con số cố định độc lập với điều kiện.
-
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Phụ thuộc nhiệt độ** nối từ **Phụ thuộc pH** sang **Cofactor và coenzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phụ thuộc nhiệt độ
 
@@ -406,8 +380,6 @@ nhưng đồng thời
 ```
 
 Do đó nhiệt độ tối ưu không phải bằng chứng rằng enzyme “thích” một nhiệt độ theo nghĩa đơn giản; nó là điểm cân bằng giữa động học và ổn định cấu trúc.
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Cofactor và coenzyme** nối từ **Phụ thuộc nhiệt độ** sang **Độ đặc hiệu enzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cofactor và coenzyme
 
@@ -432,8 +404,6 @@ Ví dụ:
 
 Nhiều vitamin là tiền chất coenzyme, giải thích vì sao phân tử dinh dưỡng nhỏ có thể ảnh hưởng mạng chuyển hóa rất rộng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Độ đặc hiệu enzyme** nối từ **Cofactor và coenzyme** sang **Kỹ thuật enzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ đặc hiệu enzyme
 
 Độ đặc hiệu xuất phát từ tổng hợp của:
@@ -448,8 +418,6 @@ Vì protein có tính đối quang, vị trí hoạt động có thể phân bi�
 
 Độ đặc hiệu hiếm khi tuyệt đối. Enzyme có thể nhận chất tương tự hoặc thực hiện phản ứng phụ; tiến hóa và công nghệ sinh học có thể khai thác chính tính mềm dẻo này.
 
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Kỹ thuật enzyme** nối từ **Độ đặc hiệu enzyme** sang **Đo động học enzyme đúng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kỹ thuật enzyme
 
 **Tiến hóa định hướng (directed evolution)** lặp lại chu trình tạo biến thể và chọn lọc để tăng hoạt tính, độ chọn lọc hoặc độ bền.
@@ -457,8 +425,6 @@ Vì protein có tính đối quang, vị trí hoạt động có thể phân bi�
 Thiết kế dựa trên cấu trúc/cơ chế có thể thay residue ở vị trí hoạt động.
 
 Máy học có thể giúp ưu tiên biến thể trình tự, nhưng sàng lọc thực nghiệm vẫn thiết yếu vì cảnh quan năng lượng protein và tương tác epistasis rất phức tạp.
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Đo động học enzyme đúng cách** nối từ **Kỹ thuật enzyme** sang **Ví dụ suy luận: vì sao enzyme có KM thấp chưa chắc “tốt hơn”?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đo động học enzyme đúng cách
 
@@ -476,8 +442,6 @@ Một thí nghiệm đáng tin cậy phải kiểm soát:
 
 Tốc độ ban đầu thường được dùng để giảm ảnh hưởng của cạn cơ chất và tích lũy sản phẩm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Đo động học enzyme đúng cách** nêu quy tắc; **Ví dụ suy luận: vì sao enzyme có KM thấp chưa chắc “tốt hơn”?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao tăng nồng độ enzyme không làm thay đổi cân bằng?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao enzyme có KM thấp chưa chắc “tốt hơn”?
 
 `KM` thấp có thể xuất hiện vì cơ chất liên kết thuận lợi, nhưng hiệu quả xúc tác còn phụ thuộc `kcat`.
@@ -486,8 +450,6 @@ Một enzyme giữ cơ chất rất chặt nhưng chuyển hóa rất chậm có
 
 Ở nồng độ cơ chất thấp, `kcat/KM` thường có ý nghĩa so sánh hơn một mình `KM`.
 
-> **Nối mạch:** Trong **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ví dụ suy luận: vì sao enzyme có KM thấp chưa chắc “tốt hơn”?** nêu quy tắc; **Ví dụ suy luận: vì sao tăng nồng độ enzyme không làm thay đổi cân bằng?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao tăng nồng độ enzyme không làm thay đổi cân bằng?
 
 Tăng enzyme làm cả chiều thuận và chiều nghịch đạt trạng thái cân bằng nhanh hơn.
@@ -495,8 +457,6 @@ Tăng enzyme làm cả chiều thuận và chiều nghịch đạt trạng thái
 Nếu trạng thái cuối được quyết định bởi `ΔG` và `K`, thêm chất xúc tác không làm thay đổi tỉ lệ cân bằng.
 
 Đây là cách kiểm tra trực tiếp sự khác biệt giữa **kinetics** và **thermodynamics**.
-
-> **Nối mạch:** Ở chặng này của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Ví dụ suy luận: vì sao tăng nồng độ enzyme không làm thay đổi cân bằng?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -523,8 +483,6 @@ Chỉ đúng trong vùng protein vẫn duy trì đủ cấu trúc hoạt động
 ### “Steady trạng thái (state / 상태) nghĩa là equilibrium”
 
 Không. Trạng thái ổn định có thể có dòng vật chất liên tục; cân bằng nhiệt động không có dòng ròng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Enzyme — chất xúc tác phân tử và kiểm soát động học**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

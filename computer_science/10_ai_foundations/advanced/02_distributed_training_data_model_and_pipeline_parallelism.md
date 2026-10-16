@@ -20,8 +20,6 @@ model fit nhưng training quá chậm
 
 Dữ liệu (data / 데이터) parallelism thường giải thông lượng (throughput / 처리량); tensor/mô hình (model / 모델)/chuỗi xử lý (pipeline / 파이프라인)/sharded-state approaches giúp cả bộ nhớ (memory / 메모리) và compute. Chọn parallelism phải bắt đầu từ pressure nào đang dominate.
 
-> **Nối mạch:** **2. bất biến (invariant / 불변식) huấn luyện (training / 학습) step: workers phải agree trạng thái (state / 상태) theo thuật toán (algorithm / 알고리즘) đặc tả hợp đồng (contract / 계약)** nối từ **1. Bài toán ban đầu: một thiết bị (device / 장치) không đủ sức chứa (capacity / 용량) hoặc thông lượng (throughput / 처리량)** sang **3. dữ liệu (data / 데이터) parallelism nhân batch công việc (work / 작업), rồi phải reconcile gradients**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. bất biến (invariant / 불변식) huấn luyện (training / 학습) step: workers phải agree trạng thái (state / 상태) theo thuật toán (algorithm / 알고리즘) đặc tả hợp đồng (contract / 계약)
 
 Với synchronous dữ liệu (data / 데이터) parallelism, bất biến (invariant / 불변식) đơn giản hóa là:
@@ -31,8 +29,6 @@ Với synchronous dữ liệu (data / 데이터) parallelism, bất biến (inva
 Nếu worker dùng stale parameter phiên bản (version / 버전) hoặc collective thiếu một subset ngoài giao thức (protocol / 프로토콜), kết quả (result / 결과) có thể không còn tương đương thuật toán (algorithm / 알고리즘) intended.
 
 Phân tán (distributed / 분산) thời gian chạy (runtime / 런타임) vì vậy không chỉ “send tensors”; nó duy trì step membership, thứ tự (ordering / 순서) và trạng thái (state / 상태) phiên bản (version / 버전).
-
-> **Nối mạch:** **2. bất biến (invariant / 불변식) huấn luyện (training / 학습) step: workers phải agree trạng thái (state / 상태) theo thuật toán (algorithm / 알고리즘) đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **3. dữ liệu (data / 데이터) parallelism nhân batch công việc (work / 작업), rồi phải reconcile gradients** kiểm tra bằng chứng, rồi **4. toàn cục (global / 전역) batch kích thước (size / 크기) là thuật toán (algorithm / 알고리즘) parameter, không chỉ các hệ thống (systems / 시스템들) knob** mở rộng hệ quả.
 
 ## 3. dữ liệu (data / 데이터) parallelism nhân batch công việc (work / 작업), rồi phải reconcile gradients
 
@@ -50,8 +46,6 @@ same parameter state
 
 Nếu compute per step nhỏ so với độ dốc (gradient / 기울기) bytes, communication dominates và scaling efficiency giảm.
 
-> **Nối mạch:** **3. dữ liệu (data / 데이터) parallelism nhân batch công việc (work / 작업), rồi phải reconcile gradients** đặt vấn đề; **4. toàn cục (global / 전역) batch kích thước (size / 크기) là thuật toán (algorithm / 알고리즘) parameter, không chỉ các hệ thống (systems / 시스템들) knob** kiểm tra bằng chứng, rồi **5. Collective communication có topology và đường găng (critical path / 임계 경로)** mở rộng hệ quả.
-
 ## 4. toàn cục (global / 전역) batch kích thước (size / 크기) là thuật toán (algorithm / 알고리즘) parameter, không chỉ các hệ thống (systems / 시스템들) knob
 
 Tăng data-parallel workers thường tăng toàn cục (global / 전역) batch nếu per-device batch giữ nguyên. Điều này có thể đổi tối ưu hóa (optimization / 최적화) dynamics, learning-rate schedule và generalization.
@@ -64,8 +58,6 @@ weak scaling: work/batch grows with workers
 ```
 
 Thông lượng (throughput / 처리량) speedup không tự chứng minh same huấn luyện (training / 학습) ngữ nghĩa (semantics / 의미론)/chất lượng (quality / 품질) trajectory.
-
-> **Nối mạch:** **4. toàn cục (global / 전역) batch kích thước (size / 크기) là thuật toán (algorithm / 알고리즘) parameter, không chỉ các hệ thống (systems / 시스템들) knob** đặt đầu vào cho **5. Collective communication có topology và đường găng (critical path / 임계 경로)**, rồi **6. Overlap compute và communication chỉ hiệu quả khi phụ thuộc (dependency / 의존성) cho phép** mở rộng hệ quả.
 
 ## 5. Collective communication có topology và đường găng (critical path / 임계 경로)
 
@@ -81,8 +73,6 @@ fast local links first
 
 Nếu placement sai, same GPU count có thông lượng (throughput / 처리량) rất khác.
 
-> **Nối mạch:** **5. Collective communication có topology và đường găng (critical path / 임계 경로)** đặt đầu vào cho **6. Overlap compute và communication chỉ hiệu quả khi phụ thuộc (dependency / 의존성) cho phép**, rồi **7. Straggler biến synchronous step thành barrier độ trễ (latency / 지연 시간)** mở rộng hệ quả.
-
 ## 6. Overlap compute và communication chỉ hiệu quả khi phụ thuộc (dependency / 의존성) cho phép
 
 Backward pass tạo gradients layer-by-layer. thời gian chạy (runtime / 런타임) có thể bucket và start communication cho earlier gradients trong khi lower layers vẫn compute.
@@ -95,8 +85,6 @@ optimizer step chỉ dùng aggregate đúng step
 ```
 
 Bucket quá lớn trì hoãn communication; quá nhỏ tăng launch/giao thức (protocol / 프로토콜) overhead. hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) là schedule phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), không chỉ tăng bandwidth.
-
-> **Nối mạch:** **7. Straggler biến synchronous step thành barrier độ trễ (latency / 지연 시간)** nối từ **6. Overlap compute và communication chỉ hiệu quả khi phụ thuộc (dependency / 의존성) cho phép** sang **8. Tensor/mô hình (model / 모델) parallelism chia thao tác (operation / 연산) nhưng tăng communication frequency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Straggler biến synchronous step thành barrier độ trễ (latency / 지연 시간)
 
@@ -116,8 +104,6 @@ imbalanced batch/sequence lengths
 
 Một worker chậm 20% có thể làm nhiều workers rảnh chờ. Average GPU utilization không đủ; cần per-rank timeline/skew.
 
-> **Nối mạch:** **8. Tensor/mô hình (model / 모델) parallelism chia thao tác (operation / 연산) nhưng tăng communication frequency** nối từ **7. Straggler biến synchronous step thành barrier độ trễ (latency / 지연 시간)** sang **9. chuỗi xử lý (pipeline / 파이프라인) parallelism chia layers thành stages**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Tensor/mô hình (model / 모델) parallelism chia thao tác (operation / 연산) nhưng tăng communication frequency
 
 Khi tầng (layer / 계층)/mô hình (model / 모델) không fit một accelerator, ma trận (matrix / 행렬)/tensors có thể shard. Mỗi forward/backward tầng (layer / 계층) thường cần collective exchange.
@@ -133,8 +119,6 @@ collective communication + synchronization ↑
 
 Granularity quá nhỏ làm compute kernel ngắn nhưng collective overhead gần như giữ nguyên, dẫn efficiency collapse.
 
-> **Nối mạch:** **8. Tensor/mô hình (model / 모델) parallelism chia thao tác (operation / 연산) nhưng tăng communication frequency** đặt đầu vào cho **9. chuỗi xử lý (pipeline / 파이프라인) parallelism chia layers thành stages**, rồi **10. chuỗi xử lý (pipeline / 파이프라인) schedule đổi memory-vs-bubble sự đánh đổi (trade-off / 트레이드오프)** mở rộng hệ quả.
-
 ## 9. chuỗi xử lý (pipeline / 파이프라인) parallelism chia layers thành stages
 
 Stages nhận micro-batches theo chuỗi xử lý (pipeline / 파이프라인):
@@ -146,8 +130,6 @@ Stage 1 → Stage 2 → Stage 3 → Stage 4
 Bottleneck stage quyết định thông lượng (throughput / 처리량). Fill/drain tạo **chuỗi xử lý (pipeline / 파이프라인) bubbles**.
 
 Partition phải cân compute + activation transfer, không chỉ equal number of layers. Một stage attention/communication-heavy có thể chậm hơn nhiều dù có cùng tầng (layer / 계층) count.
-
-> **Nối mạch:** **9. chuỗi xử lý (pipeline / 파이프라인) parallelism chia layers thành stages** đặt đầu vào cho **10. chuỗi xử lý (pipeline / 파이프라인) schedule đổi memory-vs-bubble sự đánh đổi (trade-off / 트레이드오프)**, rồi **11. Optimizer trạng thái (state / 상태) lớn hơn parameter tệp (file / 파일) trực giác** mở rộng hệ quả.
 
 ## 10. chuỗi xử lý (pipeline / 파이프라인) schedule đổi memory-vs-bubble sự đánh đổi (trade-off / 트레이드오프)
 
@@ -162,8 +144,6 @@ extra compute ↑
 ```
 
 Phân tán (distributed / 분산) huấn luyện (training / 학습) thường là tối ưu hóa (optimization / 최적화) multidimensional: bộ nhớ (memory / 메모리) saved ở one technique có thể tạo compute/mạng (network / 네트워크) pressure elsewhere.
-
-> **Nối mạch:** **10. chuỗi xử lý (pipeline / 파이프라인) schedule đổi memory-vs-bubble sự đánh đổi (trade-off / 트레이드오프)** đặt đầu vào cho **11. Optimizer trạng thái (state / 상태) lớn hơn parameter tệp (file / 파일) trực giác**, rồi **12. Sharded optimizer/parameter trạng thái (state / 상태) đổi bộ nhớ (memory / 메모리) thành collectives** mở rộng hệ quả.
 
 ## 11. Optimizer trạng thái (state / 상태) lớn hơn parameter tệp (file / 파일) trực giác
 
@@ -182,8 +162,6 @@ allocator fragmentation
 
 Adam-like optimizers có multiple trạng thái (state / 상태) tensors. “mô hình (model / 모델) weights 20 GB nên 24 GB GPU đủ” là sai sức chứa (capacity / 용량) mô hình (model / 모델).
 
-> **Nối mạch:** **12. Sharded optimizer/parameter trạng thái (state / 상태) đổi bộ nhớ (memory / 메모리) thành collectives** nối từ **11. Optimizer trạng thái (state / 상태) lớn hơn parameter tệp (file / 파일) trực giác** sang **13. đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) có thể làm GPU đói**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Sharded optimizer/parameter trạng thái (state / 상태) đổi bộ nhớ (memory / 메모리) thành collectives
 
 ZeRO/FSDP-like families shard optimizer trạng thái (state / 상태), gradients và/hoặc parameters. Mỗi worker không cần giữ full copies mọi trạng thái (state / 상태), nhưng forward/backward có thể cần all-gather/reduce-scatter around layers/steps.
@@ -191,8 +169,6 @@ ZeRO/FSDP-like families shard optimizer trạng thái (state / 상태), gradient
 Bất biến (invariant / 불변식) là parameter shard assembled/available đúng phiên bản (version / 버전) tại điểm (point / 지점) computation cần nó; bộ nhớ (memory / 메모리) reclamation không được xảy ra trước collective/users hoàn tất.
 
 Again, this is quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) giao thức (protocol / 프로토콜) giống phân tán (distributed / 분산) buffer management.
-
-> **Nối mạch:** **12. Sharded optimizer/parameter trạng thái (state / 상태) đổi bộ nhớ (memory / 메모리) thành collectives** đặt đầu vào cho **13. đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) có thể làm GPU đói**, rồi **14. dữ liệu (data / 데이터) sharding phải giữ sampling ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả.
 
 ## 13. đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) có thể làm GPU đói
 
@@ -211,8 +187,6 @@ prefetch buffers
 
 Scaling GPU without scaling đầu vào (input / 입력) đường dẫn (path / 경로) chỉ nhân expensive idle sức chứa (capacity / 용량).
 
-> **Nối mạch:** **13. đầu vào (input / 입력) chuỗi xử lý (pipeline / 파이프라인) có thể làm GPU đói** đặt vấn đề; **14. dữ liệu (data / 데이터) sharding phải giữ sampling ngữ nghĩa (semantics / 의미론)** kiểm chứng bằng dấu vết và dữ liệu, rồi **15. thất bại (failure / 실패) detection trong collective dễ biến một nút (node / 노드) fault thành whole-job stall** mở rộng hệ quả.
-
 ## 14. dữ liệu (data / 데이터) sharding phải giữ sampling ngữ nghĩa (semantics / 의미론)
 
 Mỗi data-parallel worker thường nhận distinct dữ liệu (data / 데이터) shard per step/epoch. Duplicate/missing examples do sampler bug có thể thay huấn luyện (training / 학습) phân phối (distribution / 분포).
@@ -221,8 +195,6 @@ Determinism không luôn required, nhưng sampling đặc tả hợp đồng (co
 
 Tính đúng đắn (correctness / 정확성) ở đây là **huấn luyện (training / 학습) thuật toán (algorithm / 알고리즘)/dữ liệu (data / 데이터) phân phối (distribution / 분포)**, không chỉ tensors không crash.
 
-> **Nối mạch:** **14. dữ liệu (data / 데이터) sharding phải giữ sampling ngữ nghĩa (semantics / 의미론)** đặt vấn đề; **15. thất bại (failure / 실패) detection trong collective dễ biến một nút (node / 노드) fault thành whole-job stall** kiểm tra bằng chứng, rồi **16. Checkpoint là durability giao thức (protocol / 프로토콜) của huấn luyện (training / 학습) trạng thái (state / 상태)** mở rộng hệ quả.
-
 ## 15. thất bại (failure / 실패) detection trong collective dễ biến một nút (node / 노드) fault thành whole-job stall
 
 Nếu rank chết hoặc mạng (network / 네트워크) partition, peers có thể khối (block / 블록) chờ collective completion tới hết thời gian chờ (timeout / 타임아웃). “GPU utilization 0” trên surviving ranks có nguyên nhân gốc (root cause / 근본 원인) là one missing participant.
@@ -230,8 +202,6 @@ Nếu rank chết hoặc mạng (network / 네트워크) partition, peers có th
 Phân tán (distributed / 분산) thời gian chạy (runtime / 런타임) cần membership/thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론): thất bại (fail / 실패) fast job, elastic membership nếu thuật toán (algorithm / 알고리즘) supports, or restart from checkpoint.
 
 Elasticity không trivial vì changing world kích thước (size / 크기) can alter batch/sampler/optimizer các giả định (assumptions / 가정들).
-
-> **Nối mạch:** **16. Checkpoint là durability giao thức (protocol / 프로토콜) của huấn luyện (training / 학습) trạng thái (state / 상태)** nối từ **15. thất bại (failure / 실패) detection trong collective dễ biến một nút (node / 노드) fault thành whole-job stall** sang **17. phân tán (distributed / 분산) checkpoint cần consistent snapshot ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Checkpoint là durability giao thức (protocol / 프로토콜) của huấn luyện (training / 학습) trạng thái (state / 상태)
 
@@ -248,8 +218,6 @@ metadata describing sharding/world layout
 
 Nếu chỉ save weights, có thể resume suy luận (inference / 추론) nhưng không thật sự resume optimizer trajectory.
 
-> **Nối mạch:** **17. phân tán (distributed / 분산) checkpoint cần consistent snapshot ngữ nghĩa (semantics / 의미론)** nối từ **16. Checkpoint là durability giao thức (protocol / 프로토콜) của huấn luyện (training / 학습) trạng thái (state / 상태)** sang **18. Checkpoint frequency là RPO-vs-I/O sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. phân tán (distributed / 분산) checkpoint cần consistent snapshot ngữ nghĩa (semantics / 의미론)
 
 Khi trạng thái (state / 상태) sharded across workers, checkpoint không được mix shard từ step `N` với shard từ step `N+1` nếu format assumes one logical step.
@@ -261,8 +229,6 @@ Bất biến (invariant / 불변식):
 > Published checkpoint manifest chỉ tham chiếu (reference / 참조) a complete logically compatible set of shards.
 
 Đây là same family với filesystem/cơ sở dữ liệu (database / 데이터베이스) crash consistency.
-
-> **Nối mạch:** **18. Checkpoint frequency là RPO-vs-I/O sự đánh đổi (trade-off / 트레이드오프)** nối từ **17. phân tán (distributed / 분산) checkpoint cần consistent snapshot ngữ nghĩa (semantics / 의미론)** sang **19. Restart thời gian (time / 시간) là RTO và có thể bottleneck ở checkpoint fan-in/out**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Checkpoint frequency là RPO-vs-I/O sự đánh đổi (trade-off / 트레이드오프)
 
@@ -282,15 +248,11 @@ failure → recompute many hours
 
 Huấn luyện (training / 학습) RPO là amount of compute/trạng thái (state / 상태) progression chấp nhận mất, không chỉ dữ liệu (data / 데이터) bytes.
 
-> **Nối mạch:** **19. Restart thời gian (time / 시간) là RTO và có thể bottleneck ở checkpoint fan-in/out** nối từ **18. Checkpoint frequency là RPO-vs-I/O sự đánh đổi (trade-off / 트레이드오프)** sang **20. Scaling efficiency cần tách compute, communication, idle và đầu vào (input / 입력)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Restart thời gian (time / 시간) là RTO và có thể bottleneck ở checkpoint fan-in/out
 
 Loading multi-TB checkpoint từ remote lưu trữ (storage / 저장소) cho hundreds workers có thể saturate mạng (network / 네트워크)/lưu trữ (storage / 저장소) and create thundering herd.
 
 Fast checkpoint ghi (write / 쓰기) but slow restore still gives poor độ tin cậy (reliability / 신뢰성). Measure both save and khôi phục (recovery / 복구) đường găng (critical path / 임계 경로).
-
-> **Nối mạch:** **20. Scaling efficiency cần tách compute, communication, idle và đầu vào (input / 입력)** nối từ **19. Restart thời gian (time / 시간) là RTO và có thể bottleneck ở checkpoint fan-in/out** sang **21. mạng (network / 네트워크) pressure có phase thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Scaling efficiency cần tách compute, communication, idle và đầu vào (input / 입력)
 
@@ -309,15 +271,11 @@ checkpoint/background work
 
 Amdahl's Law gives intuition that non-scaling/coordination fraction limits speedup. At large quy mô (scale / 규모) even small serial/collective overhead dominates.
 
-> **Nối mạch:** **21. mạng (network / 네트워크) pressure có phase thay đổi (change / 변경)** nối từ **20. Scaling efficiency cần tách compute, communication, idle và đầu vào (input / 입력)** sang **22. Mixed tải công việc (workload / 워크로드)/cluster contention creates noisy neighbor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. mạng (network / 네트워크) pressure có phase thay đổi (change / 변경)
 
 At small cluster, intra-node links dominate. Cross-node quy mô (scale / 규모) makes NIC/fabric topology important. At larger quy mô (scale / 규모), oversubscription, congestion, collective synchronization and thất bại (failure / 실패) xác suất (probability / 확률) all increase.
 
 A job can have same average bandwidth but worse step p99 due to transient congestion on one collective participant. Tail matters because barrier waits for slowest required đường dẫn (path / 경로).
-
-> **Nối mạch:** **22. Mixed tải công việc (workload / 워크로드)/cluster contention creates noisy neighbor** nối từ **21. mạng (network / 네트워크) pressure có phase thay đổi (change / 변경)** sang **23. Numerical hành vi (behavior / 동작) may thay đổi (change / 변경) with reduction thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Mixed tải công việc (workload / 워크로드)/cluster contention creates noisy neighbor
 
@@ -327,8 +285,6 @@ Tài nguyên (resource / 자원) scheduler that allocates GPUs but ignores fabri
 
 Cluster sức chứa (capacity / 용량) đơn vị (unit / 단위) therefore is not simply “number of GPUs”. It includes topology-local groups, NIC bandwidth, host bộ nhớ (memory / 메모리)/CPU and lưu trữ (storage / 저장소) đường dẫn (path / 경로).
 
-> **Nối mạch:** **23. Numerical hành vi (behavior / 동작) may thay đổi (change / 변경) with reduction thứ tự (order / 순서)** nối từ **22. Mixed tải công việc (workload / 워크로드)/cluster contention creates noisy neighbor** sang **24. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Numerical hành vi (behavior / 동작) may thay đổi (change / 변경) with reduction thứ tự (order / 순서)
 
 Floating-point addition is not perfectly associative. Different collective cây (tree / 트리)/thứ tự (order / 순서)/world kích thước (size / 크기) can produce small numerical differences. Usually huấn luyện (training / 학습) tolerates this, but reproducibility expectations must account for it.
@@ -336,8 +292,6 @@ Floating-point addition is not perfectly associative. Different collective cây 
 “Same seed” does not automatically mean bit-identical phân tán (distributed / 분산) thực thi (execution / 실행) across topology/parallelism changes.
 
 This connects computer arithmetic to phân tán (distributed / 분산) thuật toán (algorithm / 알고리즘) hành vi (behavior / 동작).
-
-> **Nối mạch:** **23. Numerical hành vi (behavior / 동작) may thay đổi (change / 변경) with reduction thứ tự (order / 순서)** đặt vấn đề; **24. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **25. thất bại (failure / 실패) testing must include partial thất bại (failure / 실패) and slow thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## 24. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -370,8 +324,6 @@ Reliability:
 
 Aggregate GPU utilization can hide rank 7 stalling every step while others wait.
 
-> **Nối mạch:** **24. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **25. thất bại (failure / 실패) testing must include partial thất bại (failure / 실패) and slow thất bại (failure / 실패)** kiểm tra bằng chứng, rồi **26. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
-
 ## 25. thất bại (failure / 실패) testing must include partial thất bại (failure / 실패) and slow thất bại (failure / 실패)
 
 Not only kill a worker. kiểm thử (test / 테스트):
@@ -388,19 +340,13 @@ corrupt/missing shard manifest
 
 After khôi phục (recovery / 복구) verify logical huấn luyện (training / 학습) step/trạng thái (state / 상태), optimizer continuity according to đặc tả hợp đồng (contract / 계약) and no silent data-sampler duplication/skip beyond expected ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** **26. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** nối từ **25. thất bại (failure / 실패) testing must include partial thất bại (failure / 실패) and slow thất bại (failure / 실패)** sang **27. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
 If GPU idle, gốc (root / 루트) may be collective/đầu vào (input / 입력) not compute kernel. If scaling plateaus, inspect compute-to-communication ratio and topology. If OOM after parallelism thay đổi (change / 변경), count optimizer/activation/communication workspace. If job hangs, inspect rank-level collective/membership trạng thái (state / 상태). If restart diverges, checkpoint/sampler/random trạng thái (state / 상태) may be incomplete.
 
-> **Nối mạch:** **27. Mô hình tư duy** tổng hợp từ **26. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 27. Mô hình tư duy
 
 > phân tán (distributed / 분산) huấn luyện (training / 학습) partitions **compute, bộ nhớ (memory / 메모리) and quyền sở hữu trạng thái (state ownership / 상태 소유권)**, then pays communication/synchronization to make those partitions act like one huấn luyện (training / 학습) thuật toán (algorithm / 알고리즘). dữ liệu (data / 데이터) parallelism reconciles gradients; tensor/chuỗi xử lý (pipeline / 파이프라인) parallelism moves activations/parameters across devices; sharding trades bộ nhớ (memory / 메모리) for collectives; checkpointing creates durable huấn luyện (training / 학습) trạng thái (state / 상태). **hiệu năng (performance / 성능) is limited by the slowest synchronized đường dẫn (path / 경로); tính đúng đắn (correctness / 정확성) depends on step/phiên bản (version / 버전)/trạng thái (state / 상태) invariants surviving communication and thất bại (failure / 실패).**
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **27. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

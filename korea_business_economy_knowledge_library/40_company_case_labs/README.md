@@ -29,8 +29,6 @@ Xác định đúng pháp nhân
 
 Các tệp (file / 파일) sử dụng ba loại dữ liệu. **Sự thật cấu trúc (structural fact)** là đặc điểm tương đối bền, chẳng hạn ngành bộ nhớ bán dẫn có cường độ chi phí cố định (fixed-cost intensity) cao. **Số liệu tại thời điểm (snapshot fact)** là dữ liệu có ngày cụ thể như doanh thu của một năm tài chính. **Giả định mô phỏng (stylized assumption)** là con số được đặt ra để phục vụ bài tập và phải luôn được nhận diện rõ là giả định.
 
-> **Chuyển mạch:** **Cách sử dụng các bài thực hành** đặt quy trình evidence và boundary; **Bản đồ case** biến quy trình đó thành các route, rồi hỏi vì sao cần nhiều business model.
-
 ## Bản đồ các bài thực hành
 
 Bản đồ này cho biết mỗi case luyện một cơ chế khác nhau: chu kỳ bán dẫn, nền tảng, tài chính, logistics hoặc PF. Hãy chọn case theo kỹ năng còn yếu và đọc nó như một bài lab có giả thuyết, dữ liệu và post-mortem.
@@ -48,8 +46,6 @@ Bản đồ này cho biết mỗi case luyện một cơ chế khác nhau: chu k
 | [Hanwha Aerospace](./08_hanwha_aerospace_defense_backlog_case.md) | Hợp đồng quốc phòng dài hạn | chuyển đơn hàng tồn đọng thành doanh thu, mua sắm quốc phòng, vốn lưu động |
 | [Coupang](./09_coupang_commerce_logistics_case.md) | Thương mại + mạng lưới hoàn tất đơn hàng | mật độ mạng lưới, thành viên, tồn kho, lợi nhuận đóng góp |
 | [Xây dựng và PF](./10_korean_construction_pf_case.md) | Phát triển dự án + tài trợ dự án | khoản vay cầu nối → 본PF, bán trước, bảo lãnh, tái cấp vốn |
-
-> **Chuyển mạch:** **Business model distinctions** xác định biến cần so sánh; **Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu** bắt đầu bằng revenue, supply chain và macro exposure.
 
 ## Vì sao cần nhiều mô hình doanh nghiệp khác nhau?
 
@@ -80,8 +76,6 @@ Xây dựng/PF
 
 Điều cần học không phải thuộc lòng công thức. Hãy nhận ra **hàm sản xuất (production function)** của doanh nghiệp rồi chọn đúng cách đọc kế toán và định giá.
 
-> **Chuyển mạch:** **Lộ trình 1** cho thấy economics của asset, plant và trade; **Lộ trình 2 — Kinh tế số và dịch vụ** chuyển cùng khung sang network effects, recurring revenue và service delivery.
-
 ## Lộ trình 1 — Sản xuất và nền kinh tế xuất khẩu
 
 Route này bắt đầu từ chu kỳ công nghiệp và đi qua capex, backlog, nguyên liệu, tỷ giá và vốn lưu động. Nó phù hợp khi muốn hiểu cách một shock toàn cầu đi vào doanh nghiệp Hàn Quốc.
@@ -96,8 +90,6 @@ Samsung Electronics
 
 Lộ trình này cho thấy sản xuất Hàn Quốc không phải một khu vực đồng nhất. Bộ nhớ có chu kỳ hàng hóa–công nghệ; ô tô chịu tác động của cơ cấu sản phẩm và tài chính nội bộ; pin phụ thuộc quá trình tăng công suất; quốc phòng phụ thuộc mua sắm công và đơn hàng tồn đọng.
 
-> **Chuyển mạch:** **Lộ trình 2** làm rõ intangible asset và customer economics; **Lộ trình 3 — Hệ thống tài chính và đòn bẩy** thêm funding, leverage và solvency constraints.
-
 ## Lộ trình 2 — Kinh tế số và dịch vụ
 
 Route này tập trung vào network effect, cloud/AI, density và monetization. Hãy chú ý sự khác nhau giữa tăng người dùng, tăng doanh thu và tạo cash flow.
@@ -110,8 +102,6 @@ NAVER
 
 NAVER giúp hiểu cách một nền tảng số chuyển quy mô người dùng thành doanh thu, đồng thời vẫn phải đầu tư CAPEX cho AI và đám mây. Coupang cho thấy một công ty số có thể đồng thời là một mạng lưới logistics vật lý rất lớn. LG CNS cho thấy doanh nghiệp CNTT cho khách hàng doanh nghiệp lại phụ thuộc mạnh vào tỷ lệ sử dụng nhân lực, hợp đồng dự án và dịch vụ quản lý có tính lặp lại.
 
-> **Chuyển mạch:** **Lộ trình 3** nối business model với balance-sheet risk; **Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc** chuyển khung phân tích vào quyết định và context thật.
-
 ## Lộ trình 3 — Hệ thống tài chính và đòn bẩy
 
 Route này dùng credit, collateral, PF và tái cấp vốn để luyện cách đọc rủi ro bảng cân đối. Mục tiêu là nhận ra liquidity stress trước khi nó thành solvency problem.
@@ -123,8 +113,6 @@ Shinhan Financial Group
 ```
 
 Bài về ngân hàng cho thấy tín dụng được tạo ra và định giá như thế nào. Bài PF cho thấy tín dụng đi vào dự án và có thể quay trở lại hệ thống tài chính thông qua tái cấp vốn hoặc bảo lãnh. Bài SME cho thấy vốn lưu động và vốn vay ngân hàng tác động trực tiếp đến một doanh nghiệp sản xuất như thế nào.
-
-> **Chuyển mạch:** **Lộ trình 4** biến financial và operating evidence thành workplace decision; **Quan hệ với các chương khác** chỉ owner để đào sâu economics, law hoặc accounting.
 
 ## Lộ trình 4 — Hiểu doanh nghiệp nơi mình làm việc
 
@@ -142,13 +130,9 @@ LG CNS
 
 Đừng chỉ hỏi doanh nghiệp “lớn hay nhỏ”. Hãy hỏi pháp nhân đó nằm ở đâu trong chuỗi giá trị (value chain), ai là khách hàng, ai quyết định ngân sách, doanh thu mang tính lặp lại hay theo dự án, doanh nghiệp có quyền định giá (pricing power) hay không và năng lực nghề nghiệp được tích lũy ở tầng nào.
 
-> **Chuyển mạch:** **Quan hệ với các chương khác** trả mỗi claim về canonical owner; **Khung chung** chỉ cho phép mở case mới khi evidence và boundary đã đủ.
-
 ## Quan hệ với các chương khác
 
 Trước khi làm bài thực hành nên đọc [cách phân tích một công ty Hàn Quốc](../20_how_to_analyze_a_korean_company.md) và [workbook phân tích doanh nghiệp](../39_practical_company_analysis_workbook_and_case_patterns.md). Khi cần đọc kế toán, quay lại [DART/KIND và báo cáo tài chính](../09_disclosure_accounting_dart_kind.md) cùng [chất lượng lợi nhuận và dấu hiệu cảnh báo](../38_forensic_accounting_red_flags_and_earnings_quality.md). Khi cần hiểu nguồn vốn, nợ và rủi ro giảm giá trị, dùng [ngân hàng và tài trợ doanh nghiệp](../11_banks_finance_and_corporate_funding.md) cùng [xếp hạng tín dụng, trái phiếu và tái cơ cấu](../36_credit_ratings_bonds_default_and_restructuring.md).
-
-> **Chuyển mạch:** **Khung chung** biến case thành template có input, mechanism, decision và evidence; **Mental model** rút invariant dùng lại giữa các ngành.
 
 ## Khung chung để tự tạo bài thực hành mới
 
@@ -170,8 +154,6 @@ Khi gặp một doanh nghiệp chưa có trong thư mục, không nên sao chép
 ```
 
 Nếu trả lời được các câu này, ta đã có bộ khung của một mô hình phân tích doanh nghiệp.
-
-> **Chuyển mạch:** **Mental model** khép case-lab README bằng owner, evidence và decision boundary; phần chuyên môn quay về canonical business/economics chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 

@@ -12,8 +12,6 @@ Khái niệm nguyên tử ban đầu xuất hiện như một câu hỏi triết
 
 Tuy nhiên, nguyên tử vẫn là đơn vị cực kỳ hữu ích trong Hóa học vì bản sắc hóa học của nguyên tố được bảo toàn ở cấp hạt nhân trong phần lớn phản ứng hóa học.
 
-> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Proton quyết định bản sắc nguyên tố** nối từ **Từ ý tưởng “nguyên tử” đến mô hình hiện đại** sang **Electron quyết định phần lớn hành vi hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Proton quyết định bản sắc nguyên tố
 
 **Số hiệu nguyên tử (atomic number / 원자번호)**, ký hiệu `Z`, bằng số proton trong hạt nhân.
@@ -21,8 +19,6 @@ Tuy nhiên, nguyên tử vẫn là đơn vị cực kỳ hữu ích trong Hóa h
 Hydrogen có `Z = 1`, carbon có `Z = 6`, oxygen có `Z = 8`. Nếu hạt nhân có 8 proton, nó là oxygen. Nếu số proton đổi thành 7, đó không còn là oxygen mà là nitrogen.
 
 Vì vậy một nguyên tố được xác định bởi **số proton**, không phải số electron hay số neutron.
-
-> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Electron quyết định phần lớn hành vi hóa học** nối từ **Proton quyết định bản sắc nguyên tố** sang **Neutron và đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electron quyết định phần lớn hành vi hóa học
 
@@ -42,8 +38,6 @@ Ví dụ, một nguyên tử sodium trung hòa có 11 proton và 11 electron. Kh
 
 - **hạt nhân** quyết định bản sắc nguyên tố và chứa gần như toàn bộ khối lượng;
 - **cách electron sắp xếp** chi phối phần lớn hóa học của nguyên tử.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Neutron và đồng vị** nối từ **Electron quyết định phần lớn hành vi hóa học** sang **Đồng vị không phải ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Neutron và đồng vị
 
@@ -75,8 +69,6 @@ Ví dụ carbon-14:
 
 có 6 proton và `14-6=8` neutron.
 
-> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị không phải ion** nối từ **Neutron và đồng vị** sang **Khối lượng nguyên tử không đơn giản bằng số khối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đồng vị không phải ion
 
 Đây là một hiểu lầm cơ bản.
@@ -86,8 +78,6 @@ có 6 proton và `14-6=8` neutron.
 `^{12}C` và `^{14}C` là hai đồng vị của carbon. `Na` và `Na+` là nguyên tử trung hòa và ion của cùng một nguyên tố.
 
 Hai sự khác biệt này nằm ở hai phần khác nhau của nguyên tử: hạt nhân và đám mây electron.
-
-> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Khối lượng nguyên tử không đơn giản bằng số khối** nối từ **Đồng vị không phải ion** sang **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng nguyên tử không đơn giản bằng số khối
 
@@ -104,8 +94,6 @@ Do **năng lượng liên kết hạt nhân (nuclear binding energy)** và **đ�
 Proton và neutron có khối lượng hơi khác `1 u`, electron cũng có khối lượng, và khi các nucleon liên kết thành hạt nhân, tổng khối lượng thay đổi theo hệ thức tương đương khối lượng–năng lượng.
 
 Phần hóa học hạt nhân sẽ phát triển sâu hơn ý tưởng này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** nối từ **Khối lượng nguyên tử không đơn giản bằng số khối** sang **Thang kích thước của nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?
 
@@ -138,15 +126,11 @@ Không nhất thiết tồn tại một nguyên tử X có khối lượng đún
 
 Đây là liên hệ trực tiếp giữa Hóa học và **trung bình có trọng số (weighted mean)** trong thống kê.
 
-> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Thang kích thước của nguyên tử** nối từ **Vì sao bảng tuần hoàn có khối lượng nguyên tử dạng số thập phân?** sang **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thang kích thước của nguyên tử
 
 Hạt nhân có kích thước cỡ `10^-15 m`, còn toàn bộ nguyên tử thường cỡ `10^-10 m`. Nghĩa là kích thước tuyến tính của nguyên tử lớn hơn hạt nhân khoảng `10^5` lần.
 
 Nếu phóng đại hạt nhân thành một hạt nhỏ vài millimeter, vùng electron có thể trải rộng tới hàng chục hoặc hàng trăm mét tùy phép so sánh. Điều này nhấn mạnh rằng nguyên tử phần lớn không chứa hạt nhân, nhưng không nên diễn giải “khoảng trống” theo nghĩa cổ điển tuyệt đối; electron được mô tả bằng trạng thái lượng tử và mật độ xác suất.
-
-> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** nối từ **Thang kích thước của nguyên tử** sang **Sự hình thành ion và hạch toán điện tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?
 
@@ -157,8 +141,6 @@ Vì vậy **mô hình hành tinh (planetary model)** chỉ là phép so sánh l�
 Electron không được mô tả bằng quỹ đạo xác định như hành tinh. Thay vào đó, **trạng thái lượng tử (quantum state)** và **hàm sóng (wavefunction)** mô tả cấu trúc xác suất của electron.
 
 Ta sẽ đi tới mô hình này thông qua bức xạ và lượng tử hóa ở chương tiếp theo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Sự hình thành ion và hạch toán điện tích** nối từ **Tại sao electron không đơn giản quay quanh hạt nhân như hành tinh?** sang **Tính chất hóa học của các đồng vị giống nhau tới mức nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự hình thành ion và hạch toán điện tích
 
@@ -182,8 +164,6 @@ Chloride `Cl^-` có 17 proton và 18 electron:
 
 Công thức rất đơn giản nhưng giúp tránh nhầm lẫn khi đọc ký hiệu ion.
 
-> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** nối từ **Sự hình thành ion và hạch toán điện tích** sang **Đồng vị phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính chất hóa học của các đồng vị giống nhau tới mức nào?
 
 Các đồng vị của cùng nguyên tố có cùng số proton và, nếu trung hòa, cùng số electron. Vì hóa học chủ yếu phụ thuộc cấu trúc electron, các đồng vị thường có hành vi hóa học rất giống nhau.
@@ -192,8 +172,6 @@ Nhưng không hoàn toàn giống. Khác biệt khối lượng có thể ảnh 
 
 Do đó phát biểu “các đồng vị có hóa học giống hệt nhau” chỉ là một xấp xỉ hữu ích.
 
-> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, **Đồng vị phóng xạ** nối từ **Tính chất hóa học của các đồng vị giống nhau tới mức nào?** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đồng vị phóng xạ
 
 Một số cấu hình hạt nhân không bền. Chúng có thể biến đổi tự phát qua **phân rã phóng xạ (radioactive decay)**. Carbon-14 là đồng vị phóng xạ, trong khi carbon-12 và carbon-13 bền.
@@ -201,8 +179,6 @@ Một số cấu hình hạt nhân không bền. Chúng có thể biến đổi 
 Phóng xạ là **biến đổi hạt nhân (nuclear transformation)**, không phải phản ứng hóa học thông thường. Khi số proton trong hạt nhân thay đổi, bản sắc nguyên tố có thể thay đổi.
 
 Đây là lý do định luật bảo toàn bản sắc nguyên tố đúng cho hóa học thông thường nhưng không thể áp dụng nguyên xi cho phản ứng hạt nhân.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nguyên tử, nguyên tố và đồng vị**, **Mô hình tư duy** tổng hợp từ **Đồng vị phóng xạ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -213,8 +189,6 @@ Hãy hình dung nguyên tử như một hệ có hai tầng chức năng:
 **Cấu trúc electron = giao diện hóa học.** Cách electron sắp xếp quyết định liên kết, ion hóa và khả năng phản ứng.
 
 Mô hình tư duy này giúp phân biệt các câu hỏi thuộc hóa học hạt nhân với hóa học electron.
-
-> **Nối mạch:** Trong **Nguyên tử, nguyên tố và đồng vị**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -233,8 +207,6 @@ Không. Số proton và neutron luôn là số nguyên. Giá trị thập phân 
 ### “Các đồng vị hoàn toàn giống nhau về mọi tính chất hóa học”
 
 Không tuyệt đối. Cấu trúc electron rất giống nhau, nhưng khác biệt khối lượng có thể tạo hiệu ứng đồng vị.
-
-> **Nối mạch:** Ở chặng này của **Nguyên tử, nguyên tố và đồng vị**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

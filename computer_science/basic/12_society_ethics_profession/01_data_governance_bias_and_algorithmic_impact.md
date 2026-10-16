@@ -10,15 +10,11 @@ Provenance trả lời dữ liệu (data / 데이터) đến từ đâu, transfo
 
 Lineage tools biến chuỗi xử lý (pipeline / 파이프라인) dependencies thành đồ thị (graph / 그래프) để impact phân tích (analysis / 분석) khi lược đồ (schema / 스키마)/nguồn (source / 소스) thay đổi.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Dữ liệu (data / 데이터) provenance** nêu điều cần giải thích; **Đo lường (measurement / 측정) độ lệch (bias / 편향)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sampling độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Đo lường (measurement / 측정) độ lệch (bias / 편향)
 
 Ta thường không observe concept trực tiếp mà đo proxy. “Productivity” có thể proxy bằng tickets closed; “creditworthiness” bằng historical repayment; “engagement” bằng clicks.
 
 Proxy mismatch tạo độ lệch (bias / 편향) ngay trước thuật toán (algorithm / 알고리즘).
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Đo lường (measurement / 측정) độ lệch (bias / 편향)** nêu điều cần giải thích; **Sampling độ lệch (bias / 편향)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Label độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sampling độ lệch (bias / 편향)
 
@@ -26,15 +22,11 @@ Dataset chỉ phản ánh population được quan sát. Nếu dữ liệu huấ
 
 Random split không sửa biểu diễn (representation / 표현) gap nếu underlying dataset đã biased.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Sampling độ lệch (bias / 편향)** cho ta quy tắc; **Label độ lệch (bias / 편향)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phản hồi (feedback / 피드백) loops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Label độ lệch (bias / 편향)
 
 Labels do humans/institutions tạo có inconsistency và historical chính sách (policy / 정책). Arrest records không bằng crime ground truth; customer hỗ trợ (support / 지원) escalation không bằng mục tiêu (objective / 목표) severity.
 
 ML có thể reproduce institutional độ lệch (bias / 편향) encoded trong labels.
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Label độ lệch (bias / 편향)** cho ta quy tắc; **Phản hồi (feedback / 피드백) loops** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Fairness metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phản hồi (feedback / 피드백) loops
 
@@ -42,15 +34,11 @@ Prediction ảnh hưởng môi trường (environment / 환경), tạo dữ li�
 
 Closed-loop các hệ thống (systems / 시스템들) cần evaluate nhân quả (causal / 인과적)/behavioral effects, không chỉ offline accuracy.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Fairness metrics** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백) loops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스) controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Fairness metrics
 
 Group fairness metrics formalize different goals: parity of positive rates, equalized lỗi (error / 오류) rates, calibration... Chúng có thể xung đột (conflict / 충돌) khi cơ sở (base / 기반) rates khác.
 
 Không có chỉ số (metric / 지표) “fairness universal”. Selection là normative quyết định (decision / 결정) cần lĩnh vực (domain / 도메인)/stakeholder phân tích (analysis / 분석).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Quản trị (governance / 거버넌스) controls** tiếp nhận điểm tựa từ **Fairness metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Right to deletion và derived dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quản trị (governance / 거버넌스) controls
 
@@ -58,23 +46,17 @@ Useful controls gồm dữ liệu (data / 데이터) classification, truy cập 
 
 Quản trị (governance / 거버넌스) không nên chỉ là document; chính sách (policy / 정책) cần map thành technical enforcement/monitoring.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Quản trị (governance / 거버넌스) controls** nêu điều cần giải thích; **Right to deletion và derived dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Algorithmic impact assessment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Right to deletion và derived dữ liệu (data / 데이터)
 
 Xóa nguồn (source / 소스) bản ghi (record / 레코드) không luôn đơn giản nếu dữ liệu (data / 데이터) đã bản sao (copy / 복사) vào bộ nhớ đệm (cache / 캐시), backup, analytics và mô hình (model / 모델) huấn luyện (training / 학습) artifacts. hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) cần know dữ liệu (data / 데이터) propagation.
 
 Legal obligations vary jurisdiction, nhưng kỹ thuật (engineering / 엔지니어링) principle là deletion/retention must be designed, not improvised.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Right to deletion và derived dữ liệu (data / 데이터)** nêu điều cần giải thích; **Algorithmic impact assessment** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Algorithmic impact assessment
 
 Trước high-impact automation, assessment có thể hỏi affected populations, thất bại (failure / 실패) modes, contestability, human oversight, monitoring và redress.
 
 Goal là discover risks before irreversible triển khai (deployment / 배포), tương tự threat modeling cho bảo mật (security / 보안).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Algorithmic impact assessment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -84,13 +66,9 @@ Goal là discover risks before irreversible triển khai (deployment / 배포), 
 
 **“Fairness chỉ số (metric / 지표) giải ethics.”** chỉ số (metric / 지표) làm sự đánh đổi (trade-off / 트레이드오프) tường minh (explicit / 명시적) nhưng không quyết normative priority thay con người.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > dữ liệu (data / 데이터) hệ thống (system / 시스템) là đo lường (measurement / 측정) hệ thống (system / 시스템). Mỗi trường dữ liệu (field / 필드) là claim về world; quản trị (governance / 거버넌스) giữ provenance, purpose và chất lượng (quality / 품질) của claims đó xuyên vòng đời (lifecycle / 생명주기).
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

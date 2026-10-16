@@ -36,8 +36,6 @@ Phần `02_귀화용_심화` không có PDF 심화 riêng trong bộ file đư�
 
 Điều đó có nghĩa là phần 심화 nên được học như một lớp giải thích khái niệm và quan hệ pháp lý, không phải như bản chép lại một giáo trình PDF chưa được cung cấp.
 
-> **Chuyển mạch:** **Bắt đầu ở đâu?** xác định trình tự; **Nguyên tắc học** giải thích cách biến mỗi keyword thành kiến thức có thể dùng được.
-
 ## Bắt đầu ở đâu?
 
 Trình tự dưới đây biến toàn bộ folder thành một buổi học có điểm bắt đầu, điểm luyện tập và điểm kiểm tra. Nếu mục tiêu là 귀화, hãy hoàn thành phần 기본 trước rồi mới dùng phần 심화 để mở rộng khái niệm công dân, quyền và nghĩa vụ.
@@ -54,8 +52,6 @@ Trình tự dưới đây biến toàn bộ folder thành một buổi học có
 
 Sau khi đi hết trình tự, quay lại `00_exam_map_and_strategy.md` để tự đánh giá phần nào còn yếu. Việc quay vòng này giúp kế hoạch học thích ứng với kết quả làm bài thay vì chỉ chạy một lần từ đầu đến cuối.
 
-> **Chuyển mạch:** **Bắt đầu ở đâu?** định vị prerequisite theo mục tiêu cư trú/quốc tịch; **Nguyên tắc học** giải thích cách đọc cơ chế và từ vựng trước khi vào **Mạch giảng của từng chapter**.
-
 ## Nguyên tắc học
 
 Nguyên tắc dưới đây là cách biến một fact thành kiến thức có thể dùng được. Mỗi mũi tên trả lời một câu hỏi khác nhau, nên đừng bỏ qua bước “đối lập dễ nhầm” hoặc “ví dụ”.
@@ -71,8 +67,6 @@ Ví dụ:
 Cách này hiệu quả hơn việc chỉ học “국회 = Quốc hội”, vì đề thường kiểm tra **chức năng**, không chỉ kiểm tra tên.
 
 Khi đã nối được chuỗi trên, bạn có thể tự giải thích bằng tiếng Việt, viết và nói mà không phải học lại từ đầu.
-
-> **Chuyển mạch:** **Mạch giảng của từng chapter** biến nguyên tắc thành giải thích tiếng Việt theo topic; khi cần chi tiết pháp lý hoặc văn hóa, route quay về README owner tương ứng.
 
 ## Mạch giảng của từng chapter
 

@@ -24,8 +24,6 @@ Các luật này không chỉ dùng trong bài lô-gic (logic / 논리). Chúng 
 
 Xem nền toán chi tiết tại [Logic & Proof](../../mathematics/00_foundations/01_logic_and_proof.md) và [Boolean Algebra](../../mathematics/07_discrete_cs/03_boolean_algebra_and_digital_logic.md).
 
-> **Nối mạch:** Boolean logic biểu diễn điều kiện; state lưu dấu vết quá khứ, state machine mô tả chuyển tiếp, còn invariant là điều phải giữ đúng qua mọi chuyển tiếp.
-
 ## Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại
 
 Một hệ thống (system / 시스템) là stateless nếu đầu ra (output / 출력) hiện tại phụ thuộc chỉ vào đầu vào (input / 입력) hiện tại; stateful nếu lịch sử (history / 이력) được nén thành trạng thái (state / 상태) hiện tại. Một counter giữ trạng thái (state / 상태) là số đếm. TCP liên kết (connection / 연결) giữ chuỗi (sequence / 시퀀스) numbers, windows và congestion trạng thái (state / 상태). cơ sở dữ liệu (database / 데이터베이스) giữ persistent trạng thái (state / 상태). UI form giữ văn bản (text / 텍스트) và kiểm tra hợp lệ (validation / 검증) trạng thái (state / 상태).
@@ -33,8 +31,6 @@ Một hệ thống (system / 시스템) là stateless nếu đầu ra (output / 
 Trạng thái (state / 상태) không miễn phí. Khi nhiều thực thi (execution / 실행) contexts cùng thay đổi trạng thái (state / 상태), tính đồng thời (concurrency / 동시성) problems xuất hiện. Khi trạng thái (state / 상태) nằm trên nhiều machines, replication/consistency problems xuất hiện. Khi trạng thái (state / 상태) cần tồn tại sau crash, durability/khôi phục (recovery / 복구) xuất hiện.
 
 Đây là một liên kết (connection / 연결) quan trọng: **nhiều độ phức tạp (complexity / 복잡도) trong các hệ thống (systems / 시스템들) đến từ việc quản lý trạng thái (state / 상태) dưới tính đồng thời (concurrency / 동시성), thất bại (failure / 실패) và phân phối (distribution / 분포)**.
-
-> **Nối mạch:** **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** nối từ **Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại** sang **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp
 
@@ -54,8 +50,6 @@ Mô hình (model / 모델) này buộc ta hỏi những chuyển tiếp (transit
 
 Giao thức (protocol / 프로토콜), parser, workflow, trình biên dịch (compiler / 컴파일러) lexer, thiết bị (device / 장치) controller và UI đều thường được mô hình (model / 모델) hóa bằng máy trạng thái (state machine / 상태 머신).
 
-> **Nối mạch:** **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** nối từ **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** sang **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions
 
 Bất biến (invariant / 불변식) là điều được yêu cầu luôn đúng ở các điểm xác định. Ví dụ tìm kiếm nhị phân (binary search / 이진 탐색) có bất biến (invariant / 불변식) rằng nếu mục tiêu (target / 대상) tồn tại thì nó nằm trong tìm kiếm (search / 검색) interval hiện tại. Bank hệ thống (system / 시스템) có bất biến (invariant / 불변식) tổng debit/credit của một journal entry cân bằng. Acyclic cây (tree / 트리) có bất biến (invariant / 불변식) không có cycle. Mutex-protected trọng yếu (critical / 중요) section có bất biến (invariant / 불변식) tại một thời điểm chỉ holder sở hữu khóa (lock / 잠금) truy cập protected trạng thái (state / 상태).
@@ -63,8 +57,6 @@ Bất biến (invariant / 불변식) là điều được yêu cầu luôn đún
 Cách chứng minh bằng bất biến (invariant / 불변식) thường gồm ba ý: bất biến (invariant / 불변식) đúng ban đầu; mỗi chuyển tiếp (transition / 전이) bảo toàn bất biến (invariant / 불변식); khi kết thúc, bất biến (invariant / 불변식) cùng termination điều kiện (condition / 조건) suy ra postcondition.
 
 Đây là cầu nối (bridge / 브리지) giữa mathematical induction và software tính đúng đắn (correctness / 정확성).
-
-> **Nối mạch:** **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** nối từ **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** sang **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts
 
@@ -74,15 +66,11 @@ Ngăn xếp (stack / 스택) lớp trừu tượng (abstraction / 추상화) h�
 
 Đặc tả API (API contract / API 계약) có thể bao gồm đầu vào (input / 입력) lĩnh vực (domain / 도메인), đầu ra (output / 출력), errors, thứ tự (ordering / 순서), thread-safety, độ trễ (latency / 지연 시간) expectations và idempotency. Một giao diện (interface / 인터페이스) chỉ liệt kê phương thức (method / 메서드) signatures là chưa đủ để hiểu ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
-> **Nối mạch:** **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** nối từ **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** sang **Precondition và postcondition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Biểu diễn (representation / 표현) bất biến (invariant / 불변식)
 
 Cấu trúc dữ liệu (data structure / 자료구조) thường có nội bộ (internal / 내부) rules không được lộ ra ngoài nhưng phải luôn đúng. Với tìm kiếm nhị phân (binary search / 이진 탐색) cây (tree / 트리), các keys bên trái nút (node / 노드) nhỏ hơn theo thứ tự (ordering / 순서) quy tắc (rule / 규칙); bên phải lớn hơn. Với bảng băm (hash table / 해시 테이블), mỗi occupied entry phải nằm ở bucket reachable từ băm (hash / 해시)/probing quy tắc (rule / 규칙). Với filesystem, free-space siêu dữ liệu (metadata / 메타데이터) phải khớp blocks đang được dùng.
 
 Biểu diễn (representation / 표현) bất biến (invariant / 불변식) cho phép các methods lập luận (reasoning / 추론) cục bộ. Nếu mỗi công khai (public / 공개) thao tác (operation / 연산) nhận cấu trúc (structure / 구조) hợp lệ và trả lại cấu trúc (structure / 구조) hợp lệ, toàn mô-đun (module / 모듈) có thể duy trì thuộc tính (property / 속성) qua thời gian.
-
-> **Nối mạch:** **Precondition và postcondition** nối từ **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Precondition và postcondition
 
@@ -90,13 +78,9 @@ Precondition là điều caller phải đảm bảo trước thao tác (operatio
 
 Thiết kế (design / 설계) by đặc tả hợp đồng (contract / 계약) biến các giả định (assumptions / 가정들) ẩn thành contracts tường minh (explicit / 명시적). kiểu (type / 타입) các hệ thống (systems / 시스템들), assertions, cơ sở dữ liệu (database / 데이터베이스) các ràng buộc (constraints / 제약조건들) và static phân tích (analysis / 분석) đều là các cách khác nhau để encode một phần contracts.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Precondition và postcondition**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi một hệ thống (system / 시스템) phức tạp, hãy vẽ nó như **trạng thái (state / 상태) + Allowed Transitions + Invariants + ranh giới (boundary / 경계)**. Bug thường là chuyển tiếp (transition / 전이) không được kiểm soát, bất biến (invariant / 불변식) không được encode, hoặc ranh giới (boundary / 경계) khiến caller dựa vào giả định (assumption / 가정) mà hiện thực (implementation / 구현) không hứa.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -105,8 +89,6 @@ Thiết kế (design / 설계) by đặc tả hợp đồng (contract / 계약) 
 **“lớp trừu tượng (abstraction / 추상화) càng cao càng tốt.”** lớp trừu tượng (abstraction / 추상화) có giá trị khi đặc tả hợp đồng (contract / 계약) ổn định và che đúng độ phức tạp (complexity / 복잡도). lớp trừu tượng (abstraction / 추상화) sai có thể che mất thất bại (failure / 실패) modes quan trọng hoặc thêm indirection không cần thiết.
 
 **“bất biến (invariant / 불변식) là điều kiện (condition / 조건) chỉ kiểm tra ở cuối.”** bất biến (invariant / 불변식) hữu ích chính vì nó được bảo toàn xuyên quá trình, giúp lập luận (reasoning / 추론) từng bước.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -22,8 +22,6 @@ Số\ lượng\ tăng\ trưởng \neq Chất\ lượng\ tăng\ trưởng
 
 Nếu GDP tăng nhờ đầu tư rất lớn nhưng lợi nhuận biên trên vốn ngày càng giảm, mô hình cuối cùng sẽ chạm giới hạn tài chính.
 
-> **Chuyển mạch:** Trong **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Tái cơ cấu: vốn và công suất phải được phân bổ lại** tiếp nhận điểm tựa từ **Ổn định sau HCI: tăng trưởng không thể chỉ dựa vào lượng đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự do hóa tài chính: giảm tín dụng định hướng nhưng không thay đổi trong một đêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tái cơ cấu: vốn và công suất phải được phân bổ lại
 
 Các ngành đầu tư quá mức có thể cần hợp nhất, đóng cửa, sáp nhập hoặc tìm nguồn cầu mới. Đây là **tái cơ cấu công nghiệp (industrial restructuring / 산업구조조정)**.
@@ -31,8 +29,6 @@ Các ngành đầu tư quá mức có thể cần hợp nhất, đóng cửa, s�
 Tái cơ cấu có chi phí xã hội. Nhà máy đóng cửa làm người lao động mất việc, ngân hàng phải xử lý nợ xấu và địa phương mất nguồn thu. Vì vậy điều chỉnh thường khó về mặt chính trị.
 
 Nhưng duy trì mọi dự án yếu cũng có chi phí: vốn và lao động bị giữ trong các hoạt động có tỷ suất sinh lợi thấp. Đây là phiên bản sớm của tranh luận giữa **phá hủy sáng tạo (creative destruction)** và bảo vệ quá trình chuyển đổi vẫn tồn tại trong Hàn Quốc hiện đại.
-
-> **Chuyển mạch:** Ở chặng này của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Tự do hóa tài chính: giảm tín dụng định hướng nhưng không thay đổi trong một đêm** tiếp nhận điểm tựa từ **Tái cơ cấu: vốn và công suất phải được phân bổ lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tự do hóa tài chính: giảm tín dụng định hướng nhưng không thay đổi trong một đêm
 
@@ -44,15 +40,11 @@ Các cơ chế tín dụng định hướng và quan hệ ngân hàng vẫn tồ
 
 > **mô hình tư duy (mental model / 사고 모델):** tự do hóa không phải công tắc `nhà nước → thị trường`; nó là quá trình thay đổi dần giá cả, thể chế và các giới hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?** tiếp nhận điểm tựa từ **Tự do hóa tài chính: giảm tín dụng định hướng nhưng không thay đổi trong một đêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ tăng công suất sang tăng năng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?
 
 Khi nền kinh tế còn nhỏ và chỉ có vài dự án chiến lược, chính phủ có thể trực tiếp phối hợp nhiều quyết định. Nhưng khi hàng nghìn doanh nghiệp, sản phẩm và công nghệ xuất hiện, nhu cầu thông tin tăng quá nhanh.
 
 Không một cơ quan trung tâm nào có thể biết chính xác độ co giãn nhu cầu, sở thích khách hàng và rủi ro kỹ thuật của mọi dự án. Giá, lợi nhuận, lãi suất và phá sản vì thế trở thành **cơ chế thông tin (information mechanisms)**. Tín hiệu thị trường không hoàn hảo, nhưng nó phân tán việc xử lý thông tin tới nhiều người ra quyết định.
-
-> **Chuyển mạch:** Trong **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Từ tăng công suất sang tăng năng suất** tiếp nhận điểm tựa từ **Vì sao tín hiệu thị trường ngày càng quan trọng khi nền kinh tế phức tạp hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện tử và bán dẫn: từ lắp ráp sang công nghệ phức tạp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ tăng công suất sang tăng năng suất
 
@@ -70,8 +62,6 @@ Công nghệ tốt hơn
 ```
 
 Đây là bước chuyển từ **tăng trưởng theo chiều rộng** sang **tăng trưởng theo chiều sâu**.
-
-> **Chuyển mạch:** Ở chặng này của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Điện tử và bán dẫn: từ lắp ráp sang công nghệ phức tạp hơn** tiếp nhận điểm tựa từ **Từ tăng công suất sang tăng năng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ô tô: chất lượng và thương hiệu bắt đầu quan trọng hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Điện tử và bán dẫn: từ lắp ráp sang công nghệ phức tạp hơn
 
@@ -91,15 +81,11 @@ CAPEX + R&D
 
 Đây là vòng lặp sẽ trở thành nền tảng cho sức mạnh bán dẫn Hàn Quốc về sau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Ô tô: chất lượng và thương hiệu bắt đầu quan trọng hơn** tiếp nhận điểm tựa từ **Điện tử và bán dẫn: từ lắp ráp sang công nghệ phức tạp hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiền lương tăng và quan hệ lao động thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ô tô: chất lượng và thương hiệu bắt đầu quan trọng hơn
 
 Khi Hàn Quốc bước sâu hơn vào thị trường xuất khẩu, cạnh tranh không còn chỉ là sản xuất rẻ. Ô tô phải đáp ứng tiêu chuẩn an toàn, độ bền, dịch vụ hậu mãi và kỳ vọng thương hiệu ở nhiều quốc gia.
 
 Doanh nghiệp vì thế phải đầu tư vào thiết kế, kỹ thuật, quản lý chất lượng và mạng lưới phân phối. Đây là bước chuyển từ “có thể sản xuất” sang “có thể bán sản phẩm phức tạp dưới thương hiệu của chính mình”.
-
-> **Chuyển mạch:** Trong **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Tiền lương tăng và quan hệ lao động thay đổi** tiếp nhận điểm tựa từ **Ô tô: chất lượng và thương hiệu bắt đầu quan trọng hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân chủ hóa thay đổi môi trường thể chế của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tiền lương tăng và quan hệ lao động thay đổi
 
@@ -109,8 +95,6 @@ Công nghiệp hóa làm năng suất và thu nhập tăng, đồng thời xã h
 
 Điều này không chỉ là chi phí. Thu nhập hộ gia đình cao hơn cũng mở rộng thị trường tiêu dùng nội địa, tạo điều kiện cho bán lẻ, dịch vụ và hàng tiêu dùng phát triển.
 
-> **Chuyển mạch:** Ở chặng này của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Dân chủ hóa thay đổi môi trường thể chế của doanh nghiệp** tiếp nhận điểm tựa từ **Tiền lương tăng và quan hệ lao động thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba yếu tố thuận lợi cuối thập niên 1980** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dân chủ hóa thay đổi môi trường thể chế của doanh nghiệp
 
 Dân chủ hóa không chỉ là sự kiện chính trị. Nó thay đổi cách xã hội thương lượng về tiền lương, điều kiện làm việc, môi trường, phân phối thu nhập và trách nhiệm doanh nghiệp.
@@ -119,15 +103,11 @@ Khi nhiều nhóm xã hội có tiếng nói hơn, chi phí và lợi ích của
 
 Đây là một phần của quá trình Hàn Quốc chuyển từ nền kinh tế “huy động nguồn lực để bắt kịp” sang nền kinh tế phải cân bằng tăng trưởng với nhiều mục tiêu xã hội khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Ba yếu tố thuận lợi cuối thập niên 1980** tiếp nhận điểm tựa từ **Dân chủ hóa thay đổi môi trường thể chế của doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài khoản vãng lai và sự thay đổi vị thế bên ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ba yếu tố thuận lợi cuối thập niên 1980
 
 Cuối thập niên 1980, Hàn Quốc hưởng lợi từ một số điều kiện bên ngoài thuận lợi thường được gọi là “ba thấp”: giá dầu thấp, lãi suất quốc tế thấp và đồng USD yếu so với một số đồng tiền chủ chốt. Các yếu tố này giúp giảm chi phí nhập năng lượng và tài chính, đồng thời hỗ trợ khả năng cạnh tranh xuất khẩu trong một số giai đoạn.
 
 Tuy nhiên không nên nhầm điều kiện thuận lợi với năng lực cấu trúc. Một cú hích bên ngoài chỉ tạo kết quả lớn khi nền kinh tế đã có nhà máy, kỹ năng, sản phẩm và kênh xuất khẩu để tận dụng nó.
-
-> **Chuyển mạch:** Trong **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Tài khoản vãng lai và sự thay đổi vị thế bên ngoài** tiếp nhận điểm tựa từ **Ba yếu tố thuận lợi cuối thập niên 1980** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chaebol: từ công cụ thực thi công nghiệp hóa thành vấn đề quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài khoản vãng lai và sự thay đổi vị thế bên ngoài
 
@@ -137,8 +117,6 @@ Sự thay đổi này rất quan trọng: nền kinh tế từ chỗ phụ thu�
 
 Nhưng khi ràng buộc ngoại tệ giảm, doanh nghiệp lại có khả năng vay và đầu tư quốc tế nhiều hơn—tạo ra một loại rủi ro mới sẽ trở nên rõ trong thập niên 1990.
 
-> **Chuyển mạch:** Ở chặng này của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Chaebol: từ công cụ thực thi công nghiệp hóa thành vấn đề quản trị** tiếp nhận điểm tựa từ **Tài khoản vãng lai và sự thay đổi vị thế bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường chứng khoán và vai trò của vốn cổ phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chaebol: từ công cụ thực thi công nghiệp hóa thành vấn đề quản trị
 
 Đến thập niên 1980, các tập đoàn lớn đã có nhiều công ty liên kết, hoạt động trong nhiều ngành và nắm nguồn lực đáng kể. Lợi thế của họ là khả năng huy động vốn, nhân lực và công nghệ ở quy mô lớn.
@@ -146,8 +124,6 @@ Nhưng khi ràng buộc ngoại tệ giảm, doanh nghiệp lại có khả năn
 Nhưng khi quy mô tăng, câu hỏi cũng thay đổi. Không chỉ hỏi “tập đoàn có thể thực hiện dự án không?” mà phải hỏi “ai kiểm soát tập đoàn, vốn được phân bổ giữa các công ty thế nào, cổ đông thiểu số được bảo vệ ra sao và cạnh tranh có bị méo mó không?”
 
 Đây là lúc **quản trị doanh nghiệp (corporate governance / 기업지배구조)** dần trở thành một vấn đề kinh tế lớn hơn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Thị trường chứng khoán và vai trò của vốn cổ phần** tiếp nhận điểm tựa từ **Chaebol: từ công cụ thực thi công nghiệp hóa thành vấn đề quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự do hóa tạo cơ hội nhưng cũng làm rủi ro khó nhìn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thị trường chứng khoán và vai trò của vốn cổ phần
 
@@ -157,15 +133,11 @@ Vốn cổ phần khác nợ ở chỗ không có nghĩa vụ trả lãi cố đ
 
 Đây là bước quan trọng trên con đường từ mô hình tài chính dựa chủ yếu vào ngân hàng sang hệ thống kết hợp ngân hàng và thị trường vốn.
 
-> **Chuyển mạch:** Trong **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, **Tự do hóa tạo cơ hội nhưng cũng làm rủi ro khó nhìn hơn** tiếp nhận điểm tựa từ **Thị trường chứng khoán và vai trò của vốn cổ phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tự do hóa tạo cơ hội nhưng cũng làm rủi ro khó nhìn hơn
 
 Khi kiểm soát tài chính giảm và doanh nghiệp tiếp cận nhiều nguồn vốn hơn, đầu tư có thể tăng nhanh. Nhưng nếu quản trị rủi ro và giám sát chưa phát triển cùng tốc độ, tự do hóa có thể cho phép doanh nghiệp tích lũy đòn bẩy và rủi ro ngoại tệ lớn hơn.
 
 Đây là bài học quan trọng: **tự do hóa tài chính (financial liberalization / 금융자율화)** không tự động tạo kỷ luật thị trường. Kỷ luật chỉ hoạt động khi người cho vay chịu tổn thất thật, thông tin đủ tốt, giám sát đủ mạnh và cơ chế phá sản có thể xử lý doanh nghiệp yếu.
-
-> **Chuyển mạch:** Ở chặng này của **Thập niên 1980: ổn định, tự do hóa, dân chủ hóa và cạnh tranh dựa trên năng suất (Stabilization & Liberalization / 안정화·자율화)**, sau nội dung của **Tự do hóa tạo cơ hội nhưng cũng làm rủi ro khó nhìn hơn**, **Liên kết (connection / 연결) — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) — Vì sao thập niên 1990 vừa là toàn cầu hóa vừa tích lũy rủi ro?
 

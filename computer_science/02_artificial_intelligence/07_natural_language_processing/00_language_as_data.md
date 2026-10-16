@@ -35,11 +35,11 @@ Sau khi xác định các tầng cấu trúc, ta xem corpus được chia thành
 
 ## Đơn vị từ (token / 토큰), kiểu (type / 타입), Vocabulary
 
-**đơn vị từ (token / 토큰)** là một occurrence trong văn bản (text / 텍스트) sau segmentation.
+**token (토큰)** là một occurrence trong văn bản (text / 텍스트) sau segmentation.
 
-**kiểu (type / 타입)** là unique đơn vị từ (token / 토큰) category.
+**kiểu (type / 타입)** là unique token (토큰) category.
 
-Vocabulary `V` là set đơn vị từ (token / 토큰) types mô hình (model / 모델) recognizes.
+Vocabulary `V` là set token (토큰) types mô hình (model / 모델) recognizes.
 
 Nếu corpus:
 
@@ -149,7 +149,7 @@ Khi BoW bỏ thứ tự, n-gram bổ sung một cửa sổ ngữ cảnh cục b�
 
 ## Bag-of-Words
 
-Early biểu diễn (representation / 표현) counts đơn vị từ (token / 토큰) occurrences:
+Early biểu diễn (representation / 표현) counts token (토큰) occurrences:
 
 \[
 x_j=count(token_j)
@@ -172,7 +172,7 @@ N-gram khôi phục một phần thứ tự với chi phí sparsity; TF-IDF chuy
 
 n-gram captures cục bộ (local / 로컬) thứ tự (order / 순서):
 
-- unigram: one đơn vị từ (token / 토큰);
+- unigram: one token (토큰);
 - bigram: two;
 - trigram: three.
 
@@ -222,7 +222,7 @@ Các cấu trúc chuỗi, cây và đồ thị nêu những quan hệ cần gi�
 Đơn vị từ (token / 토큰) IDs are arbitrary integers, not numerical magnitude. Embedding lookup maps:
 
 \[
-đơn vị từ (token / 토큰)\ id\rightarrow e\in R^d
+token (토큰)\ id\rightarrow e\in R^d
 \]
 
 Now hình học (geometry / 기하학) can encode learned similarities. This chuyển tiếp (transition / 전이) from discrete symbol to continuous véc-tơ (vector / 벡터) is foundational hiện đại (modern / 현대적) NLP.

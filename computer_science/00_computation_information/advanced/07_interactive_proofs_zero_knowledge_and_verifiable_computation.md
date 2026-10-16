@@ -40,8 +40,6 @@ claim x
 
 Tương tác (interaction / 상호작용) cho verifier tạo bất định (uncertainty / 불확실성) mà prover không biết trước khi lần ghi nhận (commit / 커밋) một phần trạng thái (state / 상태), làm cheating khó hơn.
 
-> **Nối mạch:** **2. Completeness và soundness** nối từ **1. Prover mạnh, verifier rẻ** sang **3. Tại sao randomness giúp verifier**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Completeness và soundness
 
 Một proof giao thức (protocol / 프로토콜) cần ít nhất hai đặc tả hợp đồng (contract / 계약).
@@ -62,8 +60,6 @@ Soundness có thể là statistical hoặc computational tùy giao thức (proto
 
 Một proof “thường pass” nhưng không có soundness argument chỉ là kiểm thử (test / 테스트), không phải proof hệ thống (system / 시스템) theo nghĩa mạnh.
 
-> **Nối mạch:** **3. Tại sao randomness giúp verifier** nối từ **2. Completeness và soundness** sang **4. Interactive proof mở rộng xác minh (verification / 확인) power**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Tại sao randomness giúp verifier
 
 Nếu verifier luôn gửi cùng challenge biết trước, prover có thể chuẩn bị phản hồi (response / 응답) giả chỉ cho challenge đó.
@@ -73,8 +69,6 @@ Random challenge buộc prover phải có trạng thái (state / 상태) đủ n
 Trực giác giống kiểm tra một đối tượng (object / 객체) lớn bằng spot-checking có cấu trúc. Nếu prover không biết verifier sẽ hỏi vị trí/combination nào, việc giả mạo toàn bộ consistency khó hơn.
 
 Nhưng sampling ngẫu nhiên chỉ tạo soundness khi mathematical cấu trúc (structure / 구조) bảo đảm cheating làm nhiều challenge thất bại. “Randomly check vài dòng” không tự động là cryptographic proof.
-
-> **Nối mạch:** **4. Interactive proof mở rộng xác minh (verification / 확인) power** nối từ **3. Tại sao randomness giúp verifier** sang **5. Proof of kiến thức (knowledge / 지식) khác proof of statement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Interactive proof mở rộng xác minh (verification / 확인) power
 
@@ -90,8 +84,6 @@ mà còn phụ thuộc protocol interaction + randomness
 
 Đọc prerequisite: [Complexity classes beyond P/NP](./06_complexity_classes_conp_pspace_exp_and_randomized_classes.md).
 
-> **Nối mạch:** **5. Proof of kiến thức (knowledge / 지식) khác proof of statement** nối từ **4. Interactive proof mở rộng xác minh (verification / 확인) power** sang **6. Commitment: khóa lựa chọn trước khi thấy challenge**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Proof of kiến thức (knowledge / 지식) khác proof of statement
 
 Một giao thức (protocol / 프로토콜) có thể chứng minh “statement đúng” hoặc mạnh hơn là prover **biết witness** tương ứng theo formal extractor notion.
@@ -99,8 +91,6 @@ Một giao thức (protocol / 프로토콜) có thể chứng minh “statement 
 Ví dụ authentication muốn chứng minh máy khách (client / 클라이언트) biết secret key chứ không chỉ statement “có ai đó tồn tại biết key”.
 
 Proof-of-knowledge lập luận (reasoning / 추론) cần cẩn thận: từ “kiến thức (knowledge / 지식)” trong cryptography có formal meaning qua khả năng extractor lấy witness từ prover đáp ứng giao thức (protocol / 프로토콜), không phải đọc tâm trí actor.
-
-> **Nối mạch:** **6. Commitment: khóa lựa chọn trước khi thấy challenge** nối từ **5. Proof of kiến thức (knowledge / 지식) khác proof of statement** sang **7. Sigma giao thức (protocol / 프로토콜) intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Commitment: khóa lựa chọn trước khi thấy challenge
 
@@ -131,8 +121,6 @@ trước khi biết challenge tiếp theo
 
 Nó là thành phần nguyên thủy (primitive / 기본 요소) quan trọng trong zero-knowledge, coin flipping, MPC và nhiều giao thức (protocol / 프로토콜) khác.
 
-> **Nối mạch:** **7. Sigma giao thức (protocol / 프로토콜) intuition** nối từ **6. Commitment: khóa lựa chọn trước khi thấy challenge** sang **8. Zero-knowledge: verifier học gì ngoài truth của statement?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Sigma giao thức (protocol / 프로토콜) intuition
 
 Nhiều identification/proof-of-knowledge giao thức (protocol / 프로토콜) có ba bước dạng:
@@ -148,8 +136,6 @@ thường gọi là **Σ-protocol** vì transcript có ba nhánh message.
 Các thuộc tính (property / 속성) như completeness, special soundness và honest-verifier zero-knowledge có thể được chứng minh cho construction cụ thể.
 
 Điểm lập luận (reasoning / 추론) quan trọng: cùng commitment mà trả lời đúng hai challenge khác nhau đôi khi cho phép extractor recover witness. Vì vậy prover không biết witness khó chuẩn bị trạng thái (state / 상태) chịu được challenge ngẫu nhiên.
-
-> **Nối mạch:** **8. Zero-knowledge: verifier học gì ngoài truth của statement?** nối từ **7. Sigma giao thức (protocol / 프로토콜) intuition** sang **9. Ví dụ trực giác: chứng minh biết password mà không gửi password**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Zero-knowledge: verifier học gì ngoài truth của statement?
 
@@ -169,17 +155,13 @@ Dấu `≈` có thể là perfect, statistical hoặc computational indistinguis
 
 Zero-knowledge không có nghĩa “không có dữ liệu (data / 데이터) nào được gửi”. Có transcript, commitment, proof bytes; thuộc tính (property / 속성) là transcript không tiết lộ kiến thức (knowledge / 지식) ngoài statement theo mô hình (model / 모델).
 
-> **Nối mạch:** **8. Zero-knowledge: verifier học gì ngoài truth của statement?** nêu quy tắc; **9. Ví dụ trực giác: chứng minh biết password mà không gửi password** thử quy tắc trong tình huống, rồi **10. Fiat–Shamir: biến challenge interactive thành deterministic băm (hash / 해시) challenge** mở rộng hệ quả.
-
 ## 9. Ví dụ trực giác: chứng minh biết password mà không gửi password
 
 Authentication cổ điển gửi password qua secure channel rồi máy chủ (server / 서버) so băm (hash / 해시). ZK-style identification hướng tới proof rằng máy khách (client / 클라이언트) biết secret tương ứng công khai (public / 공개) quan hệ (relation / 관계) mà không truyền secret itself.
 
-Nhưng zero-knowledge không tự động giải quyết phishing, compromised endpoint hoặc stolen session đơn vị từ (token / 토큰). Nếu malware đọc witness trước proof hoặc hijack authenticated session sau proof, privacy của transcript không cứu được hệ thống (system / 시스템).
+Nhưng zero-knowledge không tự động giải quyết phishing, compromised endpoint hoặc stolen session token (토큰). Nếu malware đọc witness trước proof hoặc hijack authenticated session sau proof, privacy của transcript không cứu được hệ thống (system / 시스템).
 
 Ranh giới bảo mật (security boundary / 보안 경계) vẫn phải đi end-to-end.
-
-> **Nối mạch:** **9. Ví dụ trực giác: chứng minh biết password mà không gửi password** nêu quy tắc; **10. Fiat–Shamir: biến challenge interactive thành deterministic băm (hash / 해시) challenge** thử quy tắc trong tình huống, rồi **11. Non-interactive proof cần setup/giả định (assumption / 가정) gì?** mở rộng hệ quả.
 
 ## 10. Fiat–Shamir: biến challenge interactive thành deterministic băm (hash / 해시) challenge
 
@@ -193,8 +175,6 @@ Thay vì verifier gửi random challenge, prover tính challenge từ băm (hash
 
 Bảo mật (security / 보안) lập luận (reasoning / 추론) thường dựa trên random-oracle mô hình (model / 모델) hoặc các giả định (assumptions / 가정들)/construction cụ thể. Không được hiểu đơn giản “băm (hash / 해시) là random nên tương tác (interaction / 상호작용) biến mất miễn phí”. lĩnh vực (domain / 도메인) separation, transcript binding và ngữ cảnh (context / 맥락) phải đúng để tránh replay/cross-protocol issue.
 
-> **Nối mạch:** **11. Non-interactive proof cần setup/giả định (assumption / 가정) gì?** nối từ **10. Fiat–Shamir: biến challenge interactive thành deterministic băm (hash / 해시) challenge** sang **12. Succinct proof: verifier rẻ nhưng prover thường đắt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Non-interactive proof cần setup/giả định (assumption / 가정) gì?
 
 Khi không có live verifier challenge, hệ thống (system / 시스템) cần nguồn công khai (public / 공개) parameters hoặc cryptographic giả định (assumption / 가정) tạo unpredictability/binding tương đương.
@@ -204,8 +184,6 @@ Một số proof hệ thống (system / 시스템) dùng **trusted setup** để
 Các scheme khác dùng transparent setup hoặc công khai (public / 공개) randomness nhưng trả chi phí (cost / 비용) khác về proof kích thước (size / 크기), xác minh (verification / 확인) thời gian (time / 시간) hoặc prover công việc (work / 작업).
 
 Không có câu “trusted setup luôn xấu” hoặc “transparent luôn tốt”. Phải so threat mô hình (model / 모델) và operational vòng đời (lifecycle / 생명주기).
-
-> **Nối mạch:** **12. Succinct proof: verifier rẻ nhưng prover thường đắt** nối từ **11. Non-interactive proof cần setup/giả định (assumption / 가정) gì?** sang **13. Arithmetic circuit và ràng buộc (constraint / 제약조건) biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Succinct proof: verifier rẻ nhưng prover thường đắt
 
@@ -232,8 +210,6 @@ verifier cost
 setup/key lifecycle
 ```
 
-> **Nối mạch:** **13. Arithmetic circuit và ràng buộc (constraint / 제약조건) biểu diễn (representation / 표현)** nối từ **12. Succinct proof: verifier rẻ nhưng prover thường đắt** sang **14. SNARK là family thuộc tính (property / 속성), không phải một thuật toán (algorithm / 알고리즘) duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Arithmetic circuit và ràng buộc (constraint / 제약조건) biểu diễn (representation / 표현)
 
 Proof hệ thống (system / 시스템) không hiểu mã nguồn (source code / 소스 코드) như nhà phát triển (developer / 개발자). Computation thường được hạ xuống biểu diễn (representation / 표현) toán học: arithmetic circuit, rank-1 ràng buộc (constraint / 제약조건) hệ thống (system / 시스템), polynomial quan hệ (relation / 관계) hoặc thực thi (execution / 실행) dấu vết (trace / 추적) tùy family.
@@ -252,8 +228,6 @@ Một thao tác (operation / 연산) rẻ trên CPU chưa chắc rẻ trong circ
 
 Đây là lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계) quan trọng khi thiết kế ZK ứng dụng (application / 애플리케이션).
 
-> **Nối mạch:** **14. SNARK là family thuộc tính (property / 속성), không phải một thuật toán (algorithm / 알고리즘) duy nhất** nối từ **13. Arithmetic circuit và ràng buộc (constraint / 제약조건) biểu diễn (representation / 표현)** sang **15. STARK intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. SNARK là family thuộc tính (property / 속성), không phải một thuật toán (algorithm / 알고리즘) duy nhất
 
 **SNARK** thường mở rộng thành *Succinct Non-interactive Argument of kiến thức (knowledge / 지식)*. Các construction khác nhau có giả định (assumption / 가정), setup, proof kích thước (size / 크기) và prover/verifier chi phí (cost / 비용) khác nhau.
@@ -261,8 +235,6 @@ Một thao tác (operation / 연산) rẻ trên CPU chưa chắc rẻ trong circ
 Từ **argument** thường ngụ ý soundness chống prover computationally bounded thay vì information-theoretic prover vô hạn.
 
 Không nên nói “SNARK dùng elliptic curve” như universal truth; nhiều construction dùng thành phần nguyên thủy (primitive / 기본 요소) khác nhau. Hãy đọc theo thuộc tính (property / 속성) đặc tả hợp đồng (contract / 계약), không theo brand name.
-
-> **Nối mạch:** **15. STARK intuition** nối từ **14. SNARK là family thuộc tính (property / 속성), không phải một thuật toán (algorithm / 알고리즘) duy nhất** sang **16. Soundness lỗi (error / 오류) và amplification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. STARK intuition
 
@@ -283,8 +255,6 @@ recursion needs
 implementation maturity
 ```
 
-> **Nối mạch:** **16. Soundness lỗi (error / 오류) và amplification** nối từ **15. STARK intuition** sang **17. công khai (public / 공개) verifiability vs designated verifier**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Soundness lỗi (error / 오류) và amplification
 
 Nhiều probabilistic proof có non-zero soundness lỗi (error / 오류). Repetition hoặc larger challenge trường dữ liệu (field / 필드) có thể giảm lỗi (error / 오류), nhưng chi phí (cost / 비용) tăng.
@@ -293,8 +263,6 @@ Bảo mật (security / 보안) parameter phải được chọn theo threat mô
 
 Nếu một proof có thất bại (failure / 실패) xác suất (probability / 확률) cực nhỏ mỗi instance nhưng hệ thống (system / 시스템) verify hàng tỷ instance, aggregate rủi ro (risk / 위험) vẫn cần lập luận (reasoning / 추론).
 
-> **Nối mạch:** **17. công khai (public / 공개) verifiability vs designated verifier** nối từ **16. Soundness lỗi (error / 오류) và amplification** sang **18. Recursive proofs và aggregation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. công khai (public / 공개) verifiability vs designated verifier
 
 Một proof có thể được bất kỳ ai verify bằng công khai (public / 공개) dữ liệu (data / 데이터) hoặc chỉ verifier có secret mới verify.
@@ -302,8 +270,6 @@ Một proof có thể được bất kỳ ai verify bằng công khai (public / 
 Công khai (public / 공개) verifiability hữu ích cho kiểm tra (audit / 감사), blockchain hoặc sản phẩm tạo ra (artifact / 산출물) provenance, nhưng transcript dễ được lưu/chia sẻ hơn. Designated-verifier giao thức (protocol / 프로토콜) có privacy/trust thuộc tính (property / 속성) khác.
 
 Yêu cầu (requirement / 요구사항) “ai cần verify?” phải được xác định trước khi chọn proof thành phần nguyên thủy (primitive / 기본 요소).
-
-> **Nối mạch:** **18. Recursive proofs và aggregation** nối từ **17. công khai (public / 공개) verifiability vs designated verifier** sang **19. Verifiable computation không thay thế availability và authorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Recursive proofs và aggregation
 
@@ -318,8 +284,6 @@ proof_1 + proof_2 + ...
 Use trường hợp (case / 사례) gồm rollup, long computation folding hoặc proof chuỗi (chain / 사슬). Nhưng recursion đòi proof-friendly xác minh (verification / 확인) circuit và tạo độ phức tạp (complexity / 복잡도) mới về trạng thái (state / 상태)/công khai (public / 공개) đầu vào (input / 입력).
 
 Aggregation không tự động bảo đảm dữ liệu (data / 데이터) availability. Có thể chứng minh chuyển tiếp trạng thái (state transition / 상태 전이) hợp lệ nhưng người dùng (user / 사용자) vẫn không có dữ liệu (data / 데이터) cần để reconstruct trạng thái (state / 상태).
-
-> **Nối mạch:** **18. Recursive proofs và aggregation** nêu quy tắc; **19. Verifiable computation không thay thế availability và authorization** thử quy tắc trong tình huống, rồi **20. Zero-knowledge và privacy siêu dữ liệu (metadata / 메타데이터)** mở rộng hệ quả.
 
 ## 19. Verifiable computation không thay thế availability và authorization
 
@@ -340,8 +304,6 @@ is not proven
 
 Đây là quy tắc (rule / 규칙) quan trọng nhất khi rà soát (review / 검토) ZK/verifiable thiết kế (design / 설계).
 
-> **Nối mạch:** **19. Verifiable computation không thay thế availability và authorization** nêu quy tắc; **20. Zero-knowledge và privacy siêu dữ liệu (metadata / 메타데이터)** thử quy tắc trong tình huống, rồi **21. Trusted setup vòng đời (lifecycle / 생명주기) và ceremony** mở rộng hệ quả.
-
 ## 20. Zero-knowledge và privacy siêu dữ liệu (metadata / 메타데이터)
 
 Ngay cả khi proof body zero-knowledge, siêu dữ liệu (metadata / 메타데이터) vẫn có thể leak:
@@ -355,8 +317,6 @@ Ngay cả khi proof body zero-knowledge, siêu dữ liệu (metadata / 메타데
 - proof kích thước (size / 크기) nếu variable.
 
 Privacy phải lập luận (reasoning / 추론) end-to-end, không dừng ở cryptographic thành phần nguyên thủy (primitive / 기본 요소).
-
-> **Nối mạch:** **20. Zero-knowledge và privacy siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **21. Trusted setup vòng đời (lifecycle / 생명주기) và ceremony** kiểm tra bằng chứng, rồi **22. Side channel ở prover/verifier hiện thực (implementation / 구현)** mở rộng hệ quả.
 
 ## 21. Trusted setup vòng đời (lifecycle / 생명주기) và ceremony
 
@@ -373,8 +333,6 @@ rotation/migration diễn ra thế nào?
 
 Multi-party ceremony có thể giảm trust bằng giả định (assumption / 가정) “ít nhất một participant xóa secret contribution đúng cách”, nhưng hiện thực (implementation / 구현)/ceremony bằng chứng (evidence / 증거) vẫn quan trọng.
 
-> **Nối mạch:** **21. Trusted setup vòng đời (lifecycle / 생명주기) và ceremony** đặt đầu vào cho **22. Side channel ở prover/verifier hiện thực (implementation / 구현)**, rồi **23. Example: outsourced truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리)** mở rộng hệ quả.
-
 ## 22. Side channel ở prover/verifier hiện thực (implementation / 구현)
 
 Mathematical zero-knowledge không bảo đảm hiện thực (implementation / 구현) không leak witness qua timing, bộ nhớ (memory / 메모리) truy cập (access / 접근), logs hoặc crash dump.
@@ -385,8 +343,6 @@ Cross-link:
 
 - [Security boundaries, attack chains và exploitability](../../07_security_reliability/advanced/00_security_boundaries_attack_chains_and_exploitability.md)
 - [Secret, KMS, HSM, rotation và envelope encryption](../../07_security_reliability/advanced/06_secrets_kms_hsm_rotation_and_envelope_encryption.md)
-
-> **Nối mạch:** **22. Side channel ở prover/verifier hiện thực (implementation / 구현)** nêu quy tắc; **23. Example: outsourced truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리)** thử quy tắc trong tình huống, rồi **24. Example: private membership proof** mở rộng hệ quả.
 
 ## 23. Example: outsourced truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리)
 
@@ -406,8 +362,6 @@ Nếu proof chỉ chứng minh “kết quả (result / 결과) là sum của wi
 
 Bất biến (invariant / 불변식) phải encode **dữ liệu (data / 데이터) provenance**, không chỉ arithmetic tính đúng đắn (correctness / 정확성).
 
-> **Nối mạch:** **23. Example: outsourced truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리)** nêu quy tắc; **24. Example: private membership proof** thử quy tắc trong tình huống, rồi **25. Proof generation dưới pressure** mở rộng hệ quả.
-
 ## 24. Example: private membership proof
 
 Người dùng (user / 사용자) muốn chứng minh mình thuộc một allowlist mà không reveal định danh (identity / 식별자) cụ thể.
@@ -426,8 +380,6 @@ Nhưng nếu gốc (root / 루트) cũ vẫn được accept sau revocation, ng�
 
 Cryptographic tính đúng đắn (correctness / 정확성) không thay thế vòng đời (lifecycle / 생명주기) tính đúng đắn (correctness / 정확성).
 
-> **Nối mạch:** **24. Example: private membership proof** nêu quy tắc; **25. Proof generation dưới pressure** thử quy tắc trong tình huống, rồi **26. bằng chứng (evidence / 증거) và khả năng quan sát (observability / 관측 가능성)** mở rộng hệ quả.
-
 ## 25. Proof generation dưới pressure
 
 Môi trường vận hành (production / 운영 환경) prover có thể là heavy compute dịch vụ (service / 서비스). Khi traffic tăng:
@@ -444,8 +396,6 @@ proof jobs
 Proof hệ thống (system / 시스템) vì vậy cũng cần sức chứa (capacity / 용량) planning, batching, admission điều khiển (control / 제어) và thất bại (failure / 실패) khôi phục (recovery / 복구) như software hệ thống (system / 시스템) khác.
 
 Cross-link: [Queueing, tail latency và backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
-
-> **Nối mạch:** **25. Proof generation dưới pressure** đặt vấn đề; **26. bằng chứng (evidence / 증거) và khả năng quan sát (observability / 관측 가능성)** kiểm tra bằng chứng, rồi **27. Những nhầm lẫn thường gặp** mở rộng hệ quả.
 
 ## 26. bằng chứng (evidence / 증거) và khả năng quan sát (observability / 관측 가능성)
 
@@ -466,8 +416,6 @@ setup/ceremony provenance
 
 Không log private witness chỉ để gỡ lỗi (debug / 디버그). Nếu cần reproduce, dùng synthetic fixture hoặc encrypted controlled capture với chính sách (policy / 정책) phù hợp.
 
-> **Nối mạch:** **26. bằng chứng (evidence / 증거) và khả năng quan sát (observability / 관측 가능성)** đặt tiêu chí; **27. Những nhầm lẫn thường gặp** dùng nó để kiểm tra ranh giới, rồi **28. liên kết (connection / 연결) map** mở rộng hệ quả.
-
 ## 27. Những nhầm lẫn thường gặp
 
 **“Zero-knowledge nghĩa không gửi dữ liệu.”** Sai; thuộc tính (property / 속성) là không leak kiến thức (knowledge / 지식) ngoài statement theo definition.
@@ -483,8 +431,6 @@ Không log private witness chỉ để gỡ lỗi (debug / 디버그). Nếu c�
 **“Blockchain cần ZK thì ZK chỉ dùng cho blockchain.”** Sai; verifiable computation, privacy-preserving định danh (identity / 식별자) và outsourced computation đều là use trường hợp (case / 사례) rộng hơn.
 
 **“Cryptographic proof thay thế monitoring.”** Không. hiện thực (implementation / 구현), key vòng đời (lifecycle / 생명주기), queueing và phiên bản (version / 버전) mismatch vẫn cần bằng chứng (evidence / 증거).
-
-> **Nối mạch:** **27. Những nhầm lẫn thường gặp** đặt tiêu chí; **28. liên kết (connection / 연결) map** dùng nó để kiểm tra ranh giới, rồi **29. Checklist lập luận (reasoning / 추론)** mở rộng hệ quả.
 
 ## 28. liên kết (connection / 연결) map
 
@@ -514,8 +460,6 @@ Software systems
 → prover capacity, queueing, rollout and observability
 ```
 
-> **Nối mạch:** **29. Checklist lập luận (reasoning / 추론)** nối từ **28. liên kết (connection / 연결) map** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Checklist lập luận (reasoning / 추론)
 
 ```text
@@ -532,8 +476,6 @@ Freshness, authorization, provenance và data availability có nằm ngoài proo
 Metadata/implementation có leak witness không?
 Evidence nào cho phép audit version và verification failure?
 ```
-
-> **Nối mạch:** **Kết luận** tổng hợp từ **29. Checklist lập luận (reasoning / 추론)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết luận
 

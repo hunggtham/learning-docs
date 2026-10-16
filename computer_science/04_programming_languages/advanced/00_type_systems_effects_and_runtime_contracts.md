@@ -10,23 +10,17 @@ Notation dạng `Γ ⊢ e : T` có thể đọc: dưới môi trường (environ
 
 Cách nhìn này giúp tách cú pháp (syntax / 문법) khỏi ngữ nghĩa (semantics / 의미론): kiểu (type / 타입) checker không “đoán kiểu” tùy ý; nó thực hiện proof theo rules của ngôn ngữ (language / 언어).
 
-> **Nối mạch:** Type judgment là statement có điều kiện; soundness nối static proof với runtime progress/preservation, còn subtyping/variance quy định khi một value hoặc function có thể được thay thế an toàn.
-
 ## Soundness và progress/preservation intuition
 
 Một hệ kiểu (type system / 타입 시스템) thường muốn thuộc tính (property / 속성) gần với: well-typed program không rơi vào một lớp (class / 클래스) invalid thời gian chạy (runtime / 런타임) states. Formalization cổ điển dùng **progress** và **preservation**. Progress: well-typed expression hoặc đã là giá trị (value / 값) hoặc có bước evaluation tiếp. Preservation: một bước evaluation không phá kiểu (type / 타입) validity.
 
 Điều này không có nghĩa program đúng lô-gic nghiệp vụ (business logic / 비즈니스 로직). kiểu (type / 타입) an toàn (safety / 안전) chỉ bảo vệ các invariants mà hệ kiểu (type system / 타입 시스템) encode.
 
-> **Nối mạch:** **Subtyping và variance** nối từ **Soundness và progress/preservation intuition** sang **ADT và invalid states**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Subtyping và variance
 
 Nếu `Dog <: Animal`, điều đó không tự động suy ra `List<Dog> <: List<Animal>`. Nếu mutable danh sách (list / 목록) covariance được cho phép, caller có thể insert `Cat` vào danh sách (list / 목록) thực chất chỉ chứa Dog. Vì vậy variance phụ thuộc position đọc/ghi và ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
 Covariance phù hợp producer/read-only; contravariance thường xuất hiện ở bên tiêu thụ (consumer / 소비자)/hàm (function / 함수) parameter; invariance là lựa chọn an toàn cho mutable containers phổ biến.
-
-> **Nối mạch:** **ADT và invalid states** nối từ **Subtyping và variance** sang **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ADT và invalid states
 
@@ -38,15 +32,11 @@ State = Loading | Success(Data) | Failure(Error)
 
 Mẫu (pattern / 패턴) matching exhaustiveness biến missing-case thành compile-time tín hiệu (signal / 신호). Đây là ví dụ “make invalid states unrepresentable”.
 
-> **Nối mạch:** **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** nối từ **ADT và invalid states** sang **Gradual typing và trust ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)
 
 Hai functions cùng `User -> User` có thể rất khác nếu một hàm (function / 함수) đọc DB, ghi log, throw exception hoặc mutate toàn cục (global / 전역) trạng thái (state / 상태). tác động (effect / 효과) hệ thống (system / 시스템) cố đưa một phần side-effect thông tin (information / 정보) vào kiểu (type / 타입)/checking tầng (layer / 계층).
 
 Có nhiều hình thức: checked exceptions, `async` effects, năng lực (capability / 역량) types, tác động (effect / 효과) rows, monadic encodings hoặc quyền sở hữu (ownership / 소유권)/borrow restrictions. Mục tiêu chung là làm hidden tương tác (interaction / 상호작용) trở nên tường minh (explicit / 명시적) để composition dễ lập luận (reasoning / 추론) hơn.
-
-> **Nối mạch:** **Tác động (effect / 효과) là phần ngữ nghĩa (semantics / 의미론) ngoài return kiểu (type / 타입)** đặt tiêu chí; **Gradual typing và trust ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** mở rộng hệ quả.
 
 ## Gradual typing và trust ranh giới (boundary / 경계)
 
@@ -54,21 +44,15 @@ TypeScript, Python typing và nhiều ecosystem cho phép typed và untyped mã 
 
 Một `as User` cast không biến untrusted bytes thành người dùng (user / 사용자) đúng nghĩa; nó chỉ thay belief của trình biên dịch (compiler / 컴파일러). Đây là ranh giới (boundary / 경계) giữa **static claim** và **thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거)**.
 
-> **Nối mạch:** **Gradual typing và trust ranh giới (boundary / 경계)** đặt tiêu chí; **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại
 
 Không phải thuộc tính (property / 속성) nào cũng phù hợp static types. phạm vi (range / 범위) phụ thuộc cấu hình (config / 설정), permission phụ thuộc session, uniqueness phụ thuộc cơ sở dữ liệu (database / 데이터베이스) trạng thái (state / 상태), độ trễ (latency / 지연 시간) phụ thuộc hệ thống (system / 시스템) tải (load / 로드). Assertions, schemas, DB các ràng buộc (constraints / 제약조건들), giao thức (protocol / 프로토콜) kiểm tra hợp lệ (validation / 검증) và tests bổ sung cho hệ kiểu (type system / 타입 시스템).
 
 Thiết kế cấp cao (senior / 시니어) không hỏi “hệ kiểu (type system / 타입 시스템) hay thời gian chạy (runtime / 런타임) kiểm tra hợp lệ (validation / 검증) tốt hơn”; nó đặt bất biến (invariant / 불변식) ở tầng (layer / 계층) có đủ thông tin (information / 정보) để enforce.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thời gian chạy (runtime / 런타임) contracts vẫn cần tồn tại**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hệ kiểu (type system / 타입 시스템) là một proof/ràng buộc (constraint / 제약조건) tầng (layer / 계층) trước thời gian chạy (runtime / 런타임); tác động (effect / 효과) hệ thống (system / 시스템) mở rộng proof đó sang tương tác (interaction / 상호작용); thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약) bảo vệ những facts chỉ biết khi chương trình đang chạy.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

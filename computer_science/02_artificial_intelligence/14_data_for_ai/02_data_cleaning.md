@@ -16,8 +16,6 @@ lat = 91       → invalid geographic latitude
 
 Do đó dữ liệu (data / 데이터) cleaning cần lĩnh vực (domain / 도메인) đặc tả hợp đồng (contract / 계약), không chỉ generic functions.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Missing Values** tiếp nhận điểm tựa từ **Cleaning bắt đầu từ lược đồ (schema / 스키마) và ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Imputation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Missing Values
 
 Missing có nhiều nguyên nhân:
@@ -40,8 +38,6 @@ value
 + missing reason when known
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Imputation** tiếp nhận điểm tựa từ **Missing Values** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Outliers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Imputation
 
 Dùng chung (common / 공통) approaches:
@@ -54,8 +50,6 @@ Dùng chung (common / 공통) approaches:
 
 Imputation must fit on dữ liệu huấn luyện (training data / 학습 데이터) only to avoid leakage. Mean calculated using kiểm thử (test / 테스트) dữ liệu (data / 데이터) leaks phân phối (distribution / 분포) thông tin (information / 정보).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Outliers** tiếp nhận điểm tựa từ **Imputation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Duplicates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Outliers
 
 Outlier có thể là:
@@ -67,8 +61,6 @@ Outlier có thể là:
 Blindly clipping/removing outliers can destroy exactly the cases mô hình (model / 모델) needs detect.
 
 Use lĩnh vực (domain / 도메인) bounds + phân phối (distribution / 분포) diagnostics + nguồn (source / 소스) inspection.
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Duplicates** tiếp nhận điểm tựa từ **Outliers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thực thể (entity / 엔터티) Resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Duplicates
 
@@ -85,15 +77,11 @@ same patient study exported twice
 
 Need define duplicate ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Thực thể (entity / 엔터티) Resolution** tiếp nhận điểm tựa từ **Duplicates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểu (type / 타입) and đơn vị (unit / 단위) Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Thực thể (entity / 엔터티) Resolution
 
 Records may refer same thực thể (entity / 엔터티) with different IDs/names. thực thể (entity / 엔터티) resolution can use deterministic keys, fuzzy matching or probabilistic linkage.
 
 False merges are dangerous because they create artificial combined lịch sử (history / 이력).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Kiểu (type / 타입) and đơn vị (unit / 단위) Normalization** tiếp nhận điểm tựa từ **Thực thể (entity / 엔터티) Resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Categorical Normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểu (type / 타입) and đơn vị (unit / 단위) Normalization
 
@@ -110,13 +98,9 @@ A numeric trường dữ liệu (field / 필드) without đơn vị (unit / 단�
 
 Normalize đơn vị (unit / 단위) while preserving original/raw provenance when useful.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Categorical Normalization** tiếp nhận điểm tựa từ **Kiểu (type / 타입) and đơn vị (unit / 단위) Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn bản (text / 텍스트) Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Categorical Normalization
 
 `Seoul`, `SEOUL`, `서울`, `Seoul-si` may be same or different depending tác vụ (task / 작업). Canonicalization requires ontology/ngữ cảnh (context / 맥락), not lowercase alone.
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Văn bản (text / 텍스트) Cleaning** tiếp nhận điểm tựa từ **Categorical Normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Unicode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Văn bản (text / 텍스트) Cleaning
 
@@ -133,21 +117,15 @@ Potential operations:
 - ngôn ngữ (language / 언어) detection;
 - duplicate paragraph removal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Unicode** tiếp nhận điểm tựa từ **Văn bản (text / 텍스트) Cleaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HTML/Web Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Unicode
 
 Visually similar characters may have different mã (code / 코드) points; normalization NFC/NFKC choices can thay đổi (change / 변경) ngữ nghĩa (semantics / 의미론). NFKC tính tương thích (compatibility / 호환성) normalization may alter special symbols, so task-dependent.
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **HTML/Web Cleaning** tiếp nhận điểm tựa từ **Unicode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ảnh (image / 이미지) Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## HTML/Web Cleaning
 
 Extract main content, remove điều hướng (navigation / 내비게이션)/ads/scripts. But boilerplate classifier can accidentally remove mã (code / 코드)/bảng (table / 테이블)/citations.
 
 Preserve document cấu trúc (structure / 구조) if RAG or bố cục (layout / 레이아웃) understanding needs it.
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Ảnh (image / 이미지) Cleaning** tiếp nhận điểm tựa từ **HTML/Web Cleaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Audio Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ảnh (image / 이미지) Cleaning
 
@@ -163,21 +141,15 @@ Check:
 
 Auto-rotation based EXIF can thay đổi (change / 변경) annotation coordinates if not transformed too.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Audio Cleaning** tiếp nhận điểm tựa từ **Ảnh (image / 이미지) Cleaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Time-Series Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Audio Cleaning
 
 Check clipping, silence ratio, duration, mẫu (sample / 표본) tỷ lệ (rate / 비율), channel count, transcript alignment, noise. Resampling should be standardized before tính năng (feature / 기능) extraction.
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Time-Series Cleaning** tiếp nhận điểm tựa từ **Audio Cleaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Referential Integrity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Time-Series Cleaning
 
 Do not sort/forward-fill carelessly across thực thể (entity / 엔터티) boundaries. Sensor gaps may be meaningful.
 
 Use event-time thứ tự (ordering / 순서) and distinguish missing đo lường (measurement / 측정) from true zero.
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Referential Integrity** tiếp nhận điểm tựa từ **Time-Series Cleaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Train/kiểm thử (test / 테스트) Isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Referential Integrity
 
@@ -190,8 +162,6 @@ actual one-to-many
 ```
 
 This is dùng chung (common / 공통) hidden dữ liệu (data / 데이터) bug in tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Train/kiểm thử (test / 테스트) Isolation** tiếp nhận điểm tựa từ **Referential Integrity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Automated dữ liệu (data / 데이터) Tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Train/kiểm thử (test / 테스트) Isolation
 
@@ -206,8 +176,6 @@ feature selector
 ```
 
 Then apply frozen transform to kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트).
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Train/kiểm thử (test / 테스트) Isolation** nêu điều cần giải thích; **Automated dữ liệu (data / 데이터) Tests** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Repair vs Drop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Automated dữ liệu (data / 데이터) Tests
 
@@ -226,21 +194,15 @@ schema version
 
 Tools/frameworks can automate, but concept is dữ liệu (data / 데이터) contracts + tests.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Automated dữ liệu (data / 데이터) Tests** nêu điều cần giải thích; **Repair vs Drop** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quarantine Dataset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Repair vs Drop
 
 If lỗi (error / 오류) can be confidently corrected, repair with kiểm tra (audit / 감사) trail. Otherwise drop/quarantine may be safer.
 
 Never silently fabricate unknown giá trị (value / 값) just to satisfy lược đồ (schema / 스키마).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Quarantine Dataset** tiếp nhận điểm tựa từ **Repair vs Drop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cleaning Log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quarantine Dataset
 
 Bad/suspicious records can be moved to quarantine for rà soát (review / 검토) rather than permanently deleted. This supports debugging nguồn (source / 소스) issues.
-
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Cleaning Log** tiếp nhận điểm tựa từ **Quarantine Dataset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cleaning Log
 
@@ -257,13 +219,9 @@ final rows
 
 Large changes between versions should be explainable.
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Reproducibility** tiếp nhận điểm tựa từ **Cleaning Log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Over-Cleaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Reproducibility
 
 Cleaning must be deterministic/versioned where possible. Manual edits to CSV without recorded script destroy lineage.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, **Over-Cleaning** tiếp nhận điểm tựa từ **Reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Over-Cleaning
 
@@ -271,13 +229,9 @@ Over-cleaning can make dữ liệu huấn luyện (training data / 학습 데이
 
 Sometimes keeping realistic noise is important for robustness.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) Cleaning**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Over-Cleaning** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Cleaning không nhằm làm dữ liệu (data / 데이터) “đẹp”; nó nhằm làm biểu diễn (representation / 표현) faithful hơn với phenomenon và đặc tả hợp đồng (contract / 계약) mà mô hình (model / 모델) sẽ gặp.**
-
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) Cleaning**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -292,8 +246,6 @@ Missingness has different ngữ nghĩa (semantics / 의미론).
 ### “Cleaning can happen before splitting”
 
 Only stateless deterministic cleaning; learned statistics can leak kiểm thử (test / 테스트) thông tin (information / 정보).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) Cleaning**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -8,8 +8,6 @@ Một phần lớn văn hoá Hàn Quốc hiện đại chỉ hiểu được khi
 
 Nếu một vài trường học, nhà tuyển dụng hoặc địa điểm trả phần thưởng cao hơn đáng kể, cạnh tranh sẽ tập trung ở **điểm nghẽn (bottleneck)**. Hành vi sau đó dễ bị gọi là “văn hoá cạnh tranh”, nhưng cách giải thích từ nguyên lý đầu tiên nằm ở **cấu trúc phần thưởng (payoff landscape)**.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **재벌: tập đoàn kinh doanh chứ không chỉ “công ty rất lớn”** nối từ **Kinh tế là một phần của văn hoá đời sống** sang **Tại sao chaebol có thể xuất hiện trong công nghiệp hoá nhanh?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 재벌: tập đoàn kinh doanh chứ không chỉ “công ty rất lớn”
 
 **Chaebol (재벌)** thường chỉ các tập đoàn kinh doanh lớn có nhiều công ty liên kết và lịch sử kiểm soát gắn với gia đình sáng lập. Không phải mọi doanh nghiệp lớn ở Hàn đều là chaebol; chaebol cũng không phải một hình thức pháp lý duy nhất như `주식회사`.
@@ -17,8 +15,6 @@ Nếu một vài trường học, nhà tuyển dụng hoặc địa điểm tr�
 Điểm quan trọng là **cấu trúc tập đoàn (group structure)**. Một gia đình có thể không sở hữu đa số tuyệt đối ở từng công ty liên kết nhưng vẫn duy trì ảnh hưởng qua chuỗi sở hữu, hội đồng quản trị, lịch sử sở hữu chéo và cơ chế quản trị.
 
 Vì vậy khi đọc tiêu đề về “Samsung”, “Hyundai”, “LG”, cần phân biệt thương hiệu chung, tập đoàn kinh doanh và pháp nhân công ty cụ thể.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Tại sao chaebol có thể xuất hiện trong công nghiệp hoá nhanh?** nối từ **재벌: tập đoàn kinh doanh chứ không chỉ “công ty rất lớn”** sang **대기업 và 중소기업: cùng thị trường lao động nhưng phần thưởng khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao chaebol có thể xuất hiện trong công nghiệp hoá nhanh?
 
@@ -38,8 +34,6 @@ Nhưng mặt trái là quyền lực thị trường, rủi ro quản trị và 
 
 Mô hình tư duy không phải “chaebol tốt/xấu”, mà là **hiệu quả quy mô ↔ rủi ro tập trung**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **대기업 và 중소기업: cùng thị trường lao động nhưng phần thưởng khác nhau** nối từ **Tại sao chaebol có thể xuất hiện trong công nghiệp hoá nhanh?** sang **정규직·계약직 và thị trường lao động hai tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 대기업 và 중소기업: cùng thị trường lao động nhưng phần thưởng khác nhau
 
 `대기업` thường được gắn với lương, phúc lợi, đào tạo, thương hiệu và lộ trình nghề nghiệp tốt hơn; `중소기업` rất đa dạng, từ doanh nghiệp công nghệ mạnh đến doanh nghiệp biên lợi nhuận thấp.
@@ -56,15 +50,11 @@ nhiều người nhắm cùng nhà tuyển dụng
 → cạnh tranh không giảm
 ```
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **정규직·계약직 và thị trường lao động hai tầng** nối từ **대기업 và 중소기업: cùng thị trường lao động nhưng phần thưởng khác nhau** sang **하청 và thứ bậc nhà cung cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 정규직·계약직 và thị trường lao động hai tầng
 
 Tư cách việc làm tạo khác biệt về độ ổn định, phúc lợi, lộ trình nghề nghiệp và sức mạnh thương lượng. `정규직` không đồng nghĩa việc làm hoàn hảo; `계약직`, `파견`, làm thầu phụ cũng rất đa dạng. Nhưng khi tư cách tạo chênh lệch lớn, chuyển từ vị trí tạm thời sang vị trí ổn định trở thành mục tiêu đời sống quan trọng.
 
 Văn hoá coi trọng “ổn định” vì vậy có cơ sở thiết chế. Nó không chỉ là sở thích bảo thủ; rủi ro thất nghiệp và nợ nhà ở làm sự ổn định có giá trị sử dụng cao.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **하청 và thứ bậc nhà cung cấp** nối từ **정규직·계약직 và thị trường lao động hai tầng** sang **자영업: tự kinh doanh và văn hoá doanh nghiệp nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 하청 và thứ bậc nhà cung cấp
 
@@ -74,8 +64,6 @@ Ngôn ngữ `갑–을` và `갑질` dễ hiểu hơn khi nhìn **lựa chọn b
 
 Bất cân xứng quyền lực không chỉ nằm ở quan hệ giữa người với người; nó có thể nằm trong cấu trúc thị trường.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **자영업: tự kinh doanh và văn hoá doanh nghiệp nhỏ** nối từ **하청 và thứ bậc nhà cung cấp** sang **스펙: con người bị nén thành các đặc điểm quan sát được**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 자영업: tự kinh doanh và văn hoá doanh nghiệp nhỏ
 
 Nhà hàng, quán cà phê, cửa hàng nhượng quyền, salon và cửa hàng nhỏ là phần dễ thấy của đô thị Hàn Quốc. `자영업` có thể là khởi nghiệp, sinh kế gia đình hoặc lựa chọn nghề nghiệp sau khi rời doanh nghiệp.
@@ -83,8 +71,6 @@ Nhà hàng, quán cà phê, cửa hàng nhượng quyền, salon và cửa hàng
 Doanh nghiệp nhỏ chịu tác động mạnh của tiền thuê, chi phí lao động, phí nền tảng, biến động nhu cầu và cạnh tranh. Vì vậy cảnh quan phố thay nhanh: cùng một mặt bằng có thể đổi người thuê và mô hình kinh doanh nhiều lần.
 
 Bài học văn hoá là “nhiều quán cà phê” không chỉ là hiện tượng sở thích; tiền thuê thương mại, mô hình nhượng quyền và rào cản gia nhập cũng quan trọng.
-
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **스펙: con người bị nén thành các đặc điểm quan sát được** nối từ **자영업: tự kinh doanh và văn hoá doanh nghiệp nhỏ** sang **학벌·직장·주거: địa vị không nằm trong một vật duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 스펙: con người bị nén thành các đặc điểm quan sát được
 
@@ -94,15 +80,11 @@ Bài học văn hoá là “nhiều quán cà phê” không chỉ là hiện t�
 
 Đây gần với **hiệu ứng Goodhart**: thước đo ban đầu dùng để ước lượng năng lực dần trở thành mục tiêu tự thân.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **학벌·직장·주거: địa vị không nằm trong một vật duy nhất** nối từ **스펙: con người bị nén thành các đặc điểm quan sát được** sang **아파트: nơi ở + tài sản + trường học + danh tính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 학벌·직장·주거: địa vị không nằm trong một vật duy nhất
 
 Địa vị có thể được đọc từ trường, nơi làm việc, chức danh, khu ở, thương hiệu căn hộ, xe, thời trang hoặc mạng quan hệ. Nhưng tín hiệu thay đổi theo nhóm.
 
 Một lập trình viên có thể quan tâm GitHub/dự án hơn túi xa xỉ; một phụ huynh có thể quan tâm khu trường học hơn thương hiệu xe. Vì vậy khi nói “văn hoá địa vị”, luôn phải hỏi: **địa vị trong lĩnh vực nào?**
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **아파트: nơi ở + tài sản + trường học + danh tính** nối từ **학벌·직장·주거: địa vị không nằm trong một vật duy nhất** sang **아파트 브랜드 và sự chuẩn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 아파트: nơi ở + tài sản + trường học + danh tính
 
@@ -120,15 +102,11 @@ giá trị sử dụng nhà ở
 
 Khi nhà vừa là nơi ở vừa là tài sản chính của hộ gia đình, cuộc trò chuyện về giá nhà có cường độ cảm xúc lớn hơn một hàng hoá tiêu dùng thông thường.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **아파트 브랜드 và sự chuẩn hoá** nối từ **아파트: nơi ở + tài sản + trường học + danh tính** sang **재건축·재개발: nhà ở còn chứa quyền chọn về giá trị đất tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 아파트 브랜드 và sự chuẩn hoá
 
 Thương hiệu xây dựng lớn tạo kỳ vọng về chất lượng, quản lý và giá bán lại. Thương hiệu giúp giảm **bất cân xứng thông tin (information asymmetry)** khi người mua không thể xác minh mọi thuộc tính ẩn của toà nhà.
 
 Nhưng phần giá cộng thêm của thương hiệu có thể vượt chất lượng vật lý vì bản thân danh tiếng cũng có giá trị. Cơ chế giống thương hiệu hàng tiêu dùng nhưng quy mô tài chính lớn hơn rất nhiều.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **재건축·재개발: nhà ở còn chứa quyền chọn về giá trị đất tương lai** nối từ **아파트 브랜드 và sự chuẩn hoá** sang **전세: hợp đồng thuê có tài chính nằm bên trong**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 재건축·재개발: nhà ở còn chứa quyền chọn về giá trị đất tương lai
 
@@ -137,8 +115,6 @@ Nhưng phần giá cộng thêm của thương hiệu có thể vượt chất l
 Trực giác kinh tế: chủ sở hữu không chỉ nắm căn nhà hiện tại mà còn nắm kỳ vọng về quyền phát triển tương lai. Giá trị kỳ vọng đó có thể được phản ánh vào giá hiện tại.
 
 Do đó quyết định quy hoạch đô thị có thể tạo hiệu ứng tài sản rất lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **전세: hợp đồng thuê có tài chính nằm bên trong** nối từ **재건축·재개발: nhà ở còn chứa quyền chọn về giá trị đất tương lai** sang **전세사기 và năng lực hiểu rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 전세: hợp đồng thuê có tài chính nằm bên trong
 
@@ -156,8 +132,6 @@ Khi lãi suất, giá nhà và môi trường tín dụng thay đổi, mức h�
 
 Jeonse vì vậy là **nhà ở + tài chính**, không chỉ là phong tục.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **전세사기 và năng lực hiểu rủi ro** nối từ **전세: hợp đồng thuê có tài chính nằm bên trong** sang **월세 và thuê kết hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 전세사기 và năng lực hiểu rủi ro
 
 Khoản đặt cọc lớn tạo **rủi ro đuôi (tail risk)** nếu quyền sở hữu, nợ ưu tiên, bảo lãnh hoặc cấu trúc hợp đồng có vấn đề. Các vụ gian lận nổi bật làm nhận thức xã hội về `등기부`, bảo lãnh tiền đặt cọc và rủi ro chủ nhà tăng.
@@ -165,8 +139,6 @@ Khoản đặt cọc lớn tạo **rủi ro đuôi (tail risk)** nếu quyền s
 Bài học văn hoá quan trọng là một thiết chế quen thuộc có thể được cảm nhận an toàn vì quá quen, nhưng sự quen thuộc không loại bỏ rủi ro tài chính/pháp lý.
 
 Với giao dịch thực tế phải dùng hướng dẫn pháp luật/chính thức hiện hành, không dựa vào chương phân tích văn hoá này.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **월세 và thuê kết hợp** nối từ **전세사기 và năng lực hiểu rủi ro** sang **내 집 마련: sở hữu nhà như cột mốc trưởng thành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 월세 và thuê kết hợp
 
@@ -183,8 +155,6 @@ Lựa chọn phụ thuộc:
 
 Do đó “jeonse tốt hơn wolse” không thể có câu trả lời phổ quát.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **내 집 마련: sở hữu nhà như cột mốc trưởng thành** nối từ **월세 và thuê kết hợp** sang **영끌: ngôn ngữ của áp lực dùng đòn bẩy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 내 집 마련: sở hữu nhà như cột mốc trưởng thành
 
 `내 집 마련` mang nghĩa an toàn, tự chủ và tích luỹ tài sản. Khi thế hệ trước mua nhà trong chế độ giá nhà/thu nhập khác, kỳ vọng “đến tuổi này nên có nhà” có thể tiếp tục tồn tại dù khả năng chi trả đã đổi.
@@ -192,8 +162,6 @@ Do đó “jeonse tốt hơn wolse” không thể có câu trả lời phổ qu
 Đây là **chuẩn mực đi sau thực tế (lagging norm)**: dòng thời gian xã hội cập nhật chậm hơn ràng buộc kinh tế.
 
 Khi chuẩn mực và thực tế lệch nhau, cá nhân có thể cảm thấy thất bại dù ràng buộc mang tính cấu trúc.
-
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **영끌: ngôn ngữ của áp lực dùng đòn bẩy** nối từ **내 집 마련: sở hữu nhà như cột mốc trưởng thành** sang **청약: tài nguyên khan hiếm tạo hành vi chiến lược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 영끌: ngôn ngữ của áp lực dùng đòn bẩy
 
@@ -203,8 +171,6 @@ Khi chuẩn mực và thực tế lệch nhau, cá nhân có thể cảm thấy 
 
 Nếu vốn chủ sở hữu `E`, tài sản `A`, nợ `D` với `A=E+D`, biến động nhỏ theo phần trăm của tài sản có thể tạo biến động lớn hơn theo phần trăm trên vốn chủ khi `D` cao.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **청약: tài nguyên khan hiếm tạo hành vi chiến lược** nối từ **영끌: ngôn ngữ của áp lực dùng đòn bẩy** sang **학군 và việc lợi thế xã hội được phản ánh vào giá nhà**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 청약: tài nguyên khan hiếm tạo hành vi chiến lược
 
 Hệ thống đăng ký nhà ở `청약` dùng quy tắc về điều kiện, điểm/nhóm và nguồn cung; chi tiết chính sách thay đổi nên phải kiểm tra nguồn chính thức hiện hành.
@@ -212,8 +178,6 @@ Hệ thống đăng ký nhà ở `청약` dùng quy tắc về điều kiện, �
 Ý nghĩa văn hoá nằm ở thời gian chuẩn bị dài: hộ gia đình mở tài khoản, theo dõi điều kiện, nguồn cung và cân nhắc tình trạng hôn nhân/con cái/vị trí.
 
 Khi tài nguyên khan hiếm và quy tắc phân bổ rõ, người tham gia sẽ tối ưu quanh quy tắc. Đây là hành vi bình thường theo lý thuyết trò chơi, không mặc định là “lách luật”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **학군 và việc lợi thế xã hội được phản ánh vào giá nhà** nối từ **청약: tài nguyên khan hiếm tạo hành vi chiến lược** sang **수도권 집중 và áp lực nhà ở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 학군 và việc lợi thế xã hội được phản ánh vào giá nhà
 
@@ -232,15 +196,11 @@ danh tiếng trường / 학원
 
 Bất bình đẳng giáo dục và bất bình đẳng nhà ở vì thế có thể củng cố lẫn nhau.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **수도권 집중 và áp lực nhà ở** nối từ **학군 và việc lợi thế xã hội được phản ánh vào giá nhà** sang **자산 và 소득: thu nhập không phải toàn bộ vị trí tầng lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 수도권 집중 và áp lực nhà ở
 
 Việc làm và đại học tập trung kéo nhu cầu về vùng thủ đô. Nguồn cung không thể điều chỉnh ngay, nên chi phí đi lại và nhà ở tăng.
 
 Một người lao động có thể chuyển lên Seoul vì cơ hội nghề nghiệp rồi chịu gánh nặng nhà ở do chính sự tập trung tạo ra. Đây là **nghịch lý tập tụ (agglomeration paradox)**.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **자산 và 소득: thu nhập không phải toàn bộ vị trí tầng lớp** nối từ **수도권 집중 và áp lực nhà ở** sang **소득·현금흐름·자산·유동성: bốn thứ thường bị trộn thành “có tiền”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 자산 và 소득: thu nhập không phải toàn bộ vị trí tầng lớp
 
@@ -257,8 +217,6 @@ cùng thu nhập hằng năm
 → quỹ đạo tài sản ngày càng cách xa
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **소득·현금흐름·자산·유동성: bốn thứ thường bị trộn thành “có tiền”** nối từ **자산 và 소득: thu nhập không phải toàn bộ vị trí tầng lớp** sang **고정비: chi phí cố định quyết định mức độ tự do của hộ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 소득·현금흐름·자산·유동성: bốn thứ thường bị trộn thành “có tiền”
 
 **Thu nhập (소득)** là dòng nguồn lực kiếm được trong một giai đoạn. **Dòng tiền (현금흐름)** là tiền thực vào–ra sau khi tính thời điểm thanh toán. **Tài sản (자산)** là nguồn lực tích luỹ có giá trị. **Thanh khoản (유동성)** là mức dễ chuyển tài sản thành tiền để chi ngay mà không chịu chi phí lớn.
@@ -273,8 +231,6 @@ Net\ Worth = Assets - Liabilities
 
 Nhưng **giá trị ròng** chưa trả lời hộ có sống được sáu tháng nếu thu nhập dừng hay không. Vì vậy phải đọc cùng dòng tiền và thanh khoản.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **고정비: chi phí cố định quyết định mức độ tự do của hộ** nối từ **소득·현금흐름·자산·유동성: bốn thứ thường bị trộn thành “có tiền”** sang **부채상환능력: rủi ro nợ nằm ở dòng tiền, không chỉ số nợ tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 고정비: chi phí cố định quyết định mức độ tự do của hộ
 
 Tiền thuê hoặc trả nợ nhà, phí quản lý, học phí, bảo hiểm, trả góp và chi phí đi lại có thể tạo **chi phí cố định (fixed costs)**. Khi tỷ trọng chi phí cố định cao, hộ ít khả năng giảm chi tiêu nhanh sau cú sốc.
@@ -286,8 +242,6 @@ thu nhập giảm 20%
 ```
 
 Điều này giải thích vì sao cùng mức lương nhưng hai hộ có cảm giác an toàn khác nhau. Văn hoá “ổn định việc làm” có thể mạnh hơn khi cấu trúc chi phí ít linh hoạt.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **부채상환능력: rủi ro nợ nằm ở dòng tiền, không chỉ số nợ tuyệt đối** nối từ **고정비: chi phí cố định quyết định mức độ tự do của hộ** sang **실직 충격: mất việc là cú sốc đi qua cả hộ gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부채상환능력: rủi ro nợ nằm ở dòng tiền, không chỉ số nợ tuyệt đối
 
@@ -304,8 +258,6 @@ thu nhập khả dụng
 
 Không cần thuộc một tỷ lệ pháp lý cụ thể để hiểu cơ chế. Khi phần đệm nhỏ, cú sốc việc làm hoặc lãi suất dễ lan thành vấn đề nhà ở và tiêu dùng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **실직 충격: mất việc là cú sốc đi qua cả hộ gia đình** nối từ **부채상환능력: rủi ro nợ nằm ở dòng tiền, không chỉ số nợ tuyệt đối** sang **맞벌이: hai nguồn thu nhập không đồng nghĩa rủi ro đã giảm một nửa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 실직 충격: mất việc là cú sốc đi qua cả hộ gia đình
 
 Thất nghiệp không chỉ giảm thu nhập cá nhân. Nó có thể làm hộ điều chỉnh học thêm của con, nhà ở, hẹn hò/kết hôn, đầu tư và chi tiêu chăm sóc sức khoẻ.
@@ -320,8 +272,6 @@ mất việc
 
 Độ bền phụ thuộc **bộ đệm (buffer)**: tiền mặt, bảo hiểm, thu nhập của người còn lại trong hộ, khả năng vay và mạng gia đình.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **실직 충격: mất việc là cú sốc đi qua cả hộ gia đình** đặt vấn đề; **맞벌이: hai nguồn thu nhập không đồng nghĩa rủi ro đã giảm một nửa** đối chiếu bằng chứng, rồi **가족 지원: gia đình như một hệ thống bảo hiểm tư nhân** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 맞벌이: hai nguồn thu nhập không đồng nghĩa rủi ro đã giảm một nửa
 
 Hộ hai người cùng đi làm (`맞벌이`) có lợi thế vì có hai nguồn thu nhập, nhưng mức đa dạng rủi ro phụ thuộc hai người làm ở đâu. Nếu cùng ngành, cùng công ty hoặc cùng chịu một cú sốc kinh tế, thu nhập có thể giảm đồng thời.
@@ -335,8 +285,6 @@ hai nguồn thu nhập cùng phụ thuộc một ngành → giảm rủi ro ít 
 
 Ngoài ra hai người cùng làm toàn thời gian có thể tăng thu nhập tiền mặt nhưng giảm thời gian chăm sóc, làm chi phí dịch vụ/ông bà tăng. Vì vậy quyết định lao động của hộ là bài toán **tiền + thời gian**, không chỉ lương.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **맞벌이: hai nguồn thu nhập không đồng nghĩa rủi ro đã giảm một nửa** đặt vấn đề; **가족 지원: gia đình như một hệ thống bảo hiểm tư nhân** đối chiếu bằng chứng, rồi **자영업과 가계: ranh giới giữa doanh nghiệp và hộ gia đình có thể mờ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 가족 지원: gia đình như một hệ thống bảo hiểm tư nhân
 
 Cha mẹ hỗ trợ tiền đặt cọc, chăm cháu, cho ở cùng hoặc giúp khi thất nghiệp. Đây là một dạng **chia sẻ rủi ro trong gia đình (family risk sharing)**.
@@ -344,8 +292,6 @@ Cha mẹ hỗ trợ tiền đặt cọc, chăm cháu, cho ở cùng hoặc giúp
 Mạng này giúp cá nhân vượt cú sốc mà thị trường hoặc nhà nước không hấp thụ hoàn toàn. Nhưng vì khả năng hỗ trợ khác nhau giữa các gia đình, cùng một cú sốc có thể tạo kết quả rất khác.
 
 Đây là lý do nguồn lực gia đình vừa là **bộ đệm** vừa là cơ chế có thể tái tạo bất bình đẳng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **자영업과 가계: ranh giới giữa doanh nghiệp và hộ gia đình có thể mờ** nối từ **가족 지원: gia đình như một hệ thống bảo hiểm tư nhân** sang **자산가격 상승 và sự phân kỳ thế hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 자영업과 가계: ranh giới giữa doanh nghiệp và hộ gia đình có thể mờ
 
@@ -362,8 +308,6 @@ doanh thu cửa hàng giảm
 
 Phân tích `자영업` mà không nhìn bảng cân đối hộ sẽ bỏ mất phần lớn rủi ro thực.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **자산가격 상승 và sự phân kỳ thế hệ** nối từ **자영업과 가계: ranh giới giữa doanh nghiệp và hộ gia đình có thể mờ** sang **증여·상속 và chuyển giao giữa thế hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 자산가격 상승 và sự phân kỳ thế hệ
 
 Khi tài sản tăng nhanh hơn thu nhập trong một giai đoạn dài, người đã sở hữu tài sản trước đó và người đang cố mua lần đầu đi trên hai quỹ đạo khác nhau.
@@ -374,15 +318,11 @@ Người sở hữu hưởng **lợi nhuận vốn (capital gain)**; người ch
 
 Cần tránh biến phân tích thế hệ thành đổ lỗi đạo đức; thời điểm tham gia thị trường là một phần của điều kiện ban đầu.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **증여·상속 và chuyển giao giữa thế hệ** nối từ **자산가격 상승 và sự phân kỳ thế hệ** sang **결혼 비용 và liên kết với nhà ở**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 증여·상속 và chuyển giao giữa thế hệ
 
 Khi chi phí gia nhập thị trường nhà ở cao, hỗ trợ của cha mẹ cho tiền đặt cọc/trả trước có thể ảnh hưởng thời điểm kết hôn và mua nhà. `부모 찬스` là diễn ngôn về nguồn lực gia đình không đồng đều.
 
 Không phải mọi gia đình đều nhận hỗ trợ, và chuyển giao chịu luật/thuế. Điểm văn hoá là tài sản gia đình có thể trở thành biến ẩn trong những cột mốc trưởng thành.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, sau nội dung của **증여·상속 và chuyển giao giữa thế hệ**, **결혼 비용 và liên kết với nhà ở** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **부모찬스와 독립: độc lập kinh tế không phải biến nhị phân** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 결혼 비용 và liên kết với nhà ở
 
@@ -391,8 +331,6 @@ Chi phí cưới, tiền đặt cọc jeonse/mua nhà và thiết lập hộ gia
 Đây là liên hệ giữa chương gia đình, dân số và kinh tế:
 
 `결혼` không thể phân tích tách khỏi `주거`.
-
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **부모찬스와 독립: độc lập kinh tế không phải biến nhị phân** nối từ **결혼 비용 và liên kết với nhà ở** sang **사회이동: dịch chuyển xã hội phải tách cảm nhận và dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부모찬스와 독립: độc lập kinh tế không phải biến nhị phân
 
@@ -409,8 +347,6 @@ Có thể tách:
 
 Các lớp này không nhất thiết đạt cùng lúc. Điều này giải thích tại sao hai người cùng tuổi và cùng lương có cảm giác “đã tự lập” khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **부모찬스와 독립: độc lập kinh tế không phải biến nhị phân** đặt vấn đề; **사회이동: dịch chuyển xã hội phải tách cảm nhận và dữ liệu** đối chiếu bằng chứng, rồi **소비: tín hiệu địa vị, tín hiệu chất lượng và cảm giác thuộc về** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 사회이동: dịch chuyển xã hội phải tách cảm nhận và dữ liệu
 
 Cảm giác “không thể đi lên” có thể ảnh hưởng hành vi ngay cả trước khi ta đo chính xác mức dịch chuyển. Người tin phần thưởng phụ thuộc quá nhiều vào xuất thân có thể giảm đầu tư vào một số đường truyền thống hoặc chuyển sang chiến lược rủi ro hơn.
@@ -424,8 +360,6 @@ mức dịch chuyển thực tế
 ```
 
 Cả ba đều quan trọng: dữ liệu cho biết phân phối, cảm nhận tác động quyết định, còn câu chuyện công chúng ảnh hưởng cách cá nhân diễn giải thành công/thất bại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **사회이동: dịch chuyển xã hội phải tách cảm nhận và dữ liệu** đặt vấn đề; **소비: tín hiệu địa vị, tín hiệu chất lượng và cảm giác thuộc về** đối chiếu bằng chứng, rồi **명품 và “xa xỉ nhỏ”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 소비: tín hiệu địa vị, tín hiệu chất lượng và cảm giác thuộc về
 
@@ -444,15 +378,11 @@ giá trị sử dụng
 
 Đừng suy động cơ của một người chỉ từ sản phẩm họ dùng.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **명품 và “xa xỉ nhỏ”** nối từ **소비: tín hiệu địa vị, tín hiệu chất lượng và cảm giác thuộc về** sang **카드·할부 và tiêu dùng được tài chính hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 명품 và “xa xỉ nhỏ”
 
 `명품` trong tiếng Hàn thường chỉ thương hiệu xa xỉ. Có diễn ngôn rằng người trẻ mua đồ xa xỉ dù mua nhà khó, nhưng cần tránh câu chuyện đạo đức đơn giản. Người tiêu dùng có thể ưu tiên trải nghiệm dễ đạt hơn khi mục tiêu tài sản lớn cảm giác quá xa; tuy vậy mô hình này thay đổi mạnh theo thu nhập.
 
 “Xa xỉ nhỏ” là một phản ứng có thể có, không phải quy luật phổ quát.
-
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **카드·할부 và tiêu dùng được tài chính hoá** nối từ **명품 và “xa xỉ nhỏ”** sang **주식·코인 và khát vọng dịch chuyển tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 카드·할부 và tiêu dùng được tài chính hoá
 
@@ -460,15 +390,11 @@ Thẻ tín dụng, trả góp và thanh toán đơn giản làm thời điểm t
 
 Trả góp có thể hữu ích cho thanh khoản nhưng cũng làm tổng giá ít nổi bật hơn. Năng lực tài chính cần nhìn tổng nghĩa vụ, không chỉ số tiền mỗi tháng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **주식·코인 và khát vọng dịch chuyển tài sản** nối từ **카드·할부 và tiêu dùng được tài chính hoá** sang **갑질: bất cân xứng quyền lực có thể được sản xuất bởi cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 주식·코인 và khát vọng dịch chuyển tài sản
 
 Việc tham gia cổ phiếu/tiền mã hoá trong diễn ngôn công chúng thường gắn với khát vọng tăng tài sản nhanh khi tăng lương bị cảm nhận chậm hơn tăng giá tài sản. Nhưng văn hoá đầu tư khác đầu cơ; phân phối rủi ro và thời hạn đầu tư rất quan trọng.
 
 Chương này chỉ giải thích bối cảnh văn hoá, không đưa khuyến nghị đầu tư. Bộ [`../investing/README.md`](../investing/README.md) xử lý kiến thức đầu tư riêng.
-
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **갑질: bất cân xứng quyền lực có thể được sản xuất bởi cấu trúc** nối từ **주식·코인 và khát vọng dịch chuyển tài sản** sang **개천에서 용 난다: câu chuyện về dịch chuyển xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 갑질: bất cân xứng quyền lực có thể được sản xuất bởi cấu trúc
 
@@ -478,8 +404,6 @@ Thiết chế giảm rủi ro bằng hợp đồng rõ, kênh khiếu nại, b�
 
 Quyền lực nên được phân tích bằng **lựa chọn thay thế bên ngoài (outside option)**: nếu bên yếu có lựa chọn khác đủ tốt, khả năng bị ép giảm.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **개천에서 용 난다: câu chuyện về dịch chuyển xã hội** nối từ **갑질: bất cân xứng quyền lực có thể được sản xuất bởi cấu trúc** sang **Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 개천에서 용 난다: câu chuyện về dịch chuyển xã hội
 
 Thành ngữ `개천에서 용 난다` biểu thị đi lên từ hoàn cảnh khiêm tốn. Trong Hàn Quốc thời công nghiệp hoá, giáo dục từng được nhiều người trải nghiệm như chiếc thang dịch chuyển mạnh.
@@ -487,8 +411,6 @@ Thành ngữ `개천에서 용 난다` biểu thị đi lên từ hoàn cảnh k
 Khi tài sản/thừa kế tăng trọng lượng, câu chuyện này có thể yếu đi và `수저계급론` xuất hiện.
 
 Cảm nhận về khả năng đi lên quan trọng vì nó ảnh hưởng nỗ lực, niềm tin và quyết định sinh con. Nếu con người tin chiếc thang đã đóng, họ có thể đổi chiến lược ngay cả khi trên thực tế vẫn còn một mức dịch chuyển nhất định.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên** nối từ **개천에서 용 난다: câu chuyện về dịch chuyển xã hội** sang **Liên hệ kiến thức: kinh tế là lớp ràng buộc của văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên
 
@@ -506,8 +428,6 @@ nguồn lực gia đình tốt hơn
 
 Không bước nào quyết định chắc chắn, nhưng tương quan có thể tích luỹ. Đây là **lợi thế tích luỹ (누적 우위 / cumulative advantage)**.
 
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Liên hệ kiến thức: kinh tế là lớp ràng buộc của văn hoá** nối từ **Lợi thế tích luỹ: lợi thế nhỏ có thể nhân lên** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ kiến thức: kinh tế là lớp ràng buộc của văn hoá
 
 Một tập quán chỉ bền nếu hộ gia đình có đủ nguồn lực thực hiện. Đám cưới lớn, học thêm, trao quà, vị trí căn hộ và giải trí đều có chi phí.
@@ -520,13 +440,9 @@ Khi môi trường kinh tế đổi, văn hoá có ba phản ứng lớn:
 
 Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày lễ nhỏ hơn, kết hôn muộn và hộ một người.
 
-> **Nối mạch:** Ở chặng này của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: kinh tế là lớp ràng buộc của văn hoá** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Nhiều hiện tượng được gọi là “văn hoá cạnh tranh” thực chất là **hành vi thích nghi trước phần thưởng không đồng đều và điểm nghẽn khan hiếm**. Trường học, nhà tuyển dụng và vị trí nhà ở có phần thưởng khác nhau; hộ gia đình phản ứng bằng chi tiêu giáo dục, tích luỹ bằng cấp, tiết kiệm, dùng đòn bẩy và xây mạng quan hệ. Muốn hiểu sâu hơn, hãy đọc hộ gia đình như một hệ thống có **bảng cân đối + dòng tiền + thời gian + mạng bảo hiểm gia đình**. Văn hoá nằm trong cách xã hội diễn giải các chiến lược này, còn ràng buộc kinh tế nằm phía dưới chúng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn tham khảo định hướng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiểu lầm phổ biến
 
@@ -549,8 +465,6 @@ Khung này hữu ích để hiểu đám cưới đơn giản, nghi lễ ngày l
 “Có tài sản lớn nghĩa là có nhiều tiền mặt” nhầm giá trị ròng với thanh khoản.
 
 “Hỗ trợ của cha mẹ chỉ là chuyện riêng của gia đình” bỏ qua việc khác biệt khả năng hỗ trợ có thể tích luỹ thành khác biệt xã hội lớn.
-
-> **Nối mạch:** Trong **Kinh tế đời sống, chaebol, nhà ở và địa vị xã hội**, **Hiểu lầm phổ biến** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

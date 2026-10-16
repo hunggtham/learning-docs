@@ -111,8 +111,6 @@ graph TD
 
 Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật ngữ người đọc sẽ thường xuyên gặp trong tài liệu Linux. Phần giải thích trong từng chương ưu tiên tiếng Việt và chỉ giữ thuật ngữ gốc trong ngoặc khi nó giúp nhận diện khái niệm.
 
-> **Nối mạch:** **Bản đồ đọc và quan hệ phụ thuộc** xác định prerequisite của Linux; **Cấu trúc thư viện** sắp xếp chúng, rồi **Gợi ý đường đọc theo nhu cầu** chọn route theo task.
-
 ## Cấu trúc thư viện
 
 ### Nền tảng hệ điều hành
@@ -217,8 +215,6 @@ Các tài liệu cuối cùng dùng để nối Linux với backend, database, n
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.
 
-> **Nối mạch:** **Gợi ý đường đọc** ánh xạ task như process, networking hoặc storage vào owner; **Cách dùng chapter nền tảng và deep dive** giữ mental model trước khi mở chi tiết.
-
 ## Gợi ý đường đọc theo nhu cầu
 
 Nếu mục tiêu là **dùng PuTTY/SSH để vận hành máy chủ (server / 서버)**, hãy đọc theo thứ tự: Linux/Unix mô hình (model / 모델) → filesystem → tệp (file / 파일) descriptor → shell → permissions → credentials/capabilities → tiến trình (process / 프로세스) → systemd → journal/log chuỗi xử lý (pipeline / 파이프라인) → networking → routing/DNS → SSH → môi trường vận hành (production / 운영 환경) troubleshooting → command tham chiếu (reference / 참조).
@@ -232,8 +228,6 @@ Nếu mục tiêu là **hiểu Linux từ bản chất hệ điều hành**, hã
 Nếu mục tiêu là **hiểu một HTTP yêu cầu (request / 요청) môi trường vận hành (production / 운영 환경) từ đầu đến cuối**, hãy đi theo: DNS resolution → IP routing/NAT → TCP handshake → TCP congestion/luồng (flow / 흐름) điều khiển (control / 제어) → TLS/PKI → HTTP → reverse proxy/bộ cân bằng tải (load balancer / 로드 밸런서) → Java tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) → bộ nhớ (memory / 메모리)/scheduler/I/O → cơ sở dữ liệu (database / 데이터베이스)/downstream phụ thuộc (dependency / 의존성) → logging/tracing → SLI/SLO. Đây là đường đọc giúp biến các lỗi `UnknownHostException`, `Connection refused`, TLS handshake thất bại (failure / 실패), `502`, `504`, OOM và ứng dụng (application / 애플리케이션) hết thời gian chờ (timeout / 타임아웃) thành những dạng thất bại (failure mode / 실패 모드) thuộc từng lớp cụ thể.
 
 Nếu mục tiêu là **hiểu độ tin cậy (reliability / 신뢰성) từ chỉ số (metric / 지표) Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → sức chứa (capacity / 용량) planning → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/DR → SLI/SLO/lỗi (error / 오류) ngân sách (budget / 예산) → sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giải thích tại sao một máy chủ (server / 서버) “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là sự cố (incident / 인시던트).
-
-> **Nối mạch:** **Cách dùng chapter và deep dive** phân biệt concept với implementation detail; **Quy ước ngôn ngữ và liên kết** giữ terminology và canonical links ổn định.
 
 ## Cách dùng chapter nền tảng và deep dive
 
@@ -277,8 +271,6 @@ production_troubleshooting / capacity_planning
 ```
 
 Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) → độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표)**.
-
-> **Nối mạch:** **Quy ước ngôn ngữ và liên kết** khép README bằng owner và boundary; syscall, kernel và network detail quay về canonical chapters.
 
 ## Quy ước ngôn ngữ và liên kết
 

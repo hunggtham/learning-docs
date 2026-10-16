@@ -30,8 +30,6 @@ L=mất mát (loss / 손실)(\hat y,y)
 
 Forward propagation chỉ evaluate các operations theo phụ thuộc (dependency / 의존성) thứ tự (order / 순서).
 
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Computational đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Forward pass của một MLP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor Shapes là hệ kiểu (type system / 타입 시스템) của Deep học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Computational đồ thị (graph / 그래프)
 
 Ta có thể biểu diễn computation như DAG:
@@ -53,8 +51,6 @@ flowchart LR
 Mỗi nút (node / 노드) là thao tác (operation / 연산); edges mang tensors.
 
 Backward pass sau này traverse đồ thị (graph / 그래프) ngược để accumulate derivatives.
-
-> **Chuyển mạch:** Ở chặng này của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Tensor Shapes là hệ kiểu (type system / 타입 시스템) của Deep học tập (learning / 학습)** tiếp nhận điểm tựa từ **Computational đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Broadcasting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tensor Shapes là hệ kiểu (type system / 타입 시스템) của Deep học tập (learning / 학습)
 
@@ -101,8 +97,6 @@ X\in\mathbb R^{B\times T\times D}
 
 Shape lập luận (reasoning / 추론) trở thành essential hệ thống (system / 시스템) skill.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Broadcasting** tiếp nhận điểm tựa từ **Tensor Shapes là hệ kiểu (type system / 타입 시스템) của Deep học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch processing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Broadcasting
 
 Độ lệch (bias / 편향) `b∈R^{d_out}` được broadcast qua batch dimension:
@@ -112,8 +106,6 @@ Z_{ij}=(XW^T)_{ij}+b_j
 \]
 
 Broadcasting convenient nhưng có thể tạo silent bug nếu shape accidental align sai. tường minh (explicit / 명시적) mô hình tư duy (mental model / 사고 모델) rất quan trọng.
-
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Broadcasting** xác định đầu vào; **Batch processing** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Logits và probabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch processing
 
@@ -129,8 +121,6 @@ Batch kích thước (size / 크기) ảnh hưởng:
 
 Forward propagation vì vậy không chỉ mathematical ánh xạ (mapping / 매핑) mà còn các hệ thống (systems / 시스템들) computation.
 
-> **Chuyển mạch:** Ở chặng này của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Batch processing** xác định đầu vào; **Logits và probabilities** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Huấn luyện (training / 학습) chế độ (mode / 모드) vs Evaluation chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Logits và probabilities
 
 Classification head thường đầu ra (output / 출력) logits `z`, chưa qua softmax/sigmoid.
@@ -140,8 +130,6 @@ Khung phần mềm (framework / 프레임워크) mất mát (loss / 손실) thư
 Ví dụ multiclass cross-entropy thực hiện log-softmax + negative log likelihood trong stable fused formulation.
 
 Suy luận (inference / 추론) mới có thể convert logits thành probabilities khi cần.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Huấn luyện (training / 학습) chế độ (mode / 모드) vs Evaluation chế độ (mode / 모드)** tiếp nhận điểm tựa từ **Logits và probabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate Activations và bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Huấn luyện (training / 학습) chế độ (mode / 모드) vs Evaluation chế độ (mode / 모드)
 
@@ -154,8 +142,6 @@ Một số layers hành vi (behavior / 동작) khác giữa train/eval.
 Nếu quên `model.eval()` hoặc equivalent, suy luận (inference / 추론) kết quả (result / 결과) có thể sai/stochastic.
 
 LayerNorm thường không phụ thuộc batch statistics theo cùng cách.
-
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Intermediate Activations và bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Huấn luyện (training / 학습) chế độ (mode / 모드) vs Evaluation chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Static vs động (dynamic / 동적) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Intermediate Activations và bộ nhớ (memory / 메모리)
 
@@ -174,8 +160,6 @@ Activation bộ nhớ (memory / 메모리) có thể dominate với long chuỗi
 
 **độ dốc (gradient / 기울기) checkpointing / activation recomputation** tiết kiệm bộ nhớ (memory / 메모리) bằng cách không lưu mọi activation; backward recompute một phần forward. Trade compute for bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Ở chặng này của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Static vs động (dynamic / 동적) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Intermediate Activations và bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward pass trong residual mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Static vs động (dynamic / 동적) đồ thị (graph / 그래프)
 
 Frameworks lịch sử khác nhau:
@@ -186,8 +170,6 @@ Frameworks lịch sử khác nhau:
 Hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) thường combine eager nhà phát triển (developer / 개발자) experience với đồ thị (graph / 그래프) compilation/tracing để optimize kernels.
 
 Conceptually computational đồ thị (graph / 그래프) vẫn là mô hình tư duy (mental model / 사고 모델) chung.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Forward pass trong residual mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Static vs động (dynamic / 동적) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Determinism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Forward pass trong residual mạng (network / 네트워크)
 
@@ -201,8 +183,6 @@ y=x+F(x)
 
 Transformer ngăn xếp (stack / 스택) phụ thuộc heavily vào residual connections.
 
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Determinism** tiếp nhận điểm tựa từ **Forward pass trong residual mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixed Precision Forward** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Determinism
 
 Forward pass có thể stochastic nếu dropout/sampling/noise layers active. GPU kernels cũng có thể nondeterministic tùy thao tác (operation / 연산)/backend.
@@ -215,15 +195,11 @@ Reproducibility cần distinguish:
 
 Random seed không luôn đảm bảo bitwise-identical kết quả (result / 결과) across hardware/thư viện (library / 라이브러리) versions.
 
-> **Chuyển mạch:** Ở chặng này của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Mixed Precision Forward** tiếp nhận điểm tựa từ **Determinism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward Hook / Activation Inspection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mixed Precision Forward
 
 FP16/BF16 giảm bộ nhớ (memory / 메모리)/bandwidth và tăng accelerator thông lượng (throughput / 처리량). Nhưng một số operations cần higher precision accumulation hoặc stable kernel.
 
 Automatic Mixed Precision chọn dtypes per thao tác (operation / 연산). Numerical computation concepts từ previous folder quay lại trực tiếp.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Forward Hook / Activation Inspection** tiếp nhận điểm tựa từ **Mixed Precision Forward** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy luận (inference / 추론) đồ thị (graph / 그래프) tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Forward Hook / Activation Inspection
 
@@ -236,8 +212,6 @@ Debugging có thể inspect:
 - tensor shapes.
 
 Nếu activations explode/vanish qua layers, nguyên nhân gốc (root cause / 근본 원인) có thể là initialization, normalization, học tập (learning / 학습) tỷ lệ (rate / 비율) hoặc bad đầu vào (input / 입력) quy mô (scale / 규모).
-
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Suy luận (inference / 추론) đồ thị (graph / 그래프) tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Forward Hook / Activation Inspection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Suy luận (inference / 추론) đồ thị (graph / 그래프) tối ưu hóa (optimization / 최적화)
 
@@ -253,13 +227,9 @@ Triển khai (deployment / 배포) có thể optimize forward đồ thị (graph
 
 Mathematical hàm (function / 함수) gần tương đương nhưng hệ thống (system / 시스템) thực thi (execution / 실행) khác rất nhiều về độ trễ (latency / 지연 시간)/chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Suy luận (inference / 추론) đồ thị (graph / 그래프) tối ưu hóa (optimization / 최적화)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Forward pass là thực thi (execution / 실행) của một parameterized computation đồ thị (graph / 그래프). Tensor shapes mô tả “kiểu” của dữ liệu (data / 데이터); activations là intermediate trạng thái (state / 상태); đầu ra (output / 출력)/mất mát (loss / 손실) là endpoint mà backward sẽ dùng để gửi credit/blame ngược đồ thị (graph / 그래프).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forward Propagation và Computational đồ thị (graph / 그래프)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -278,8 +248,6 @@ Dropout, BatchNorm, sampling, bộ nhớ đệm (cache / 캐시) và quantizatio
 ### “bộ nhớ (memory / 메모리) chủ yếu là parameters”
 
 Huấn luyện (training / 학습) còn gradients, optimizer states và activations; activations có thể rất lớn.
-
-> **Chuyển mạch:** Trong **Forward Propagation và Computational đồ thị (graph / 그래프)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

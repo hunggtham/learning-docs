@@ -36,8 +36,6 @@ Chia cho `\sin^2\theta` khi `\sin\theta\ne0`:
 
 Vì vậy các identities này không phải formulas độc lập; chúng cùng xuất phát từ hình học (geometry / 기하학) của đơn vị (unit / 단위) circle.
 
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **1. đơn vị (unit / 단위) circle là nguồn của identities cơ bản** đặt vấn đề; **2. Angle addition là composition của rotations** đối chiếu bằng chứng, rồi **3. Double-angle, half-angle và identities khác** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Angle addition là composition của rotations
 
 Rotation ma trận (matrix / 행렬):
@@ -74,8 +72,6 @@ So các entries ta được:
 
 Đây là proof idea quan trọng: addition formula encode group law của rotations.
 
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **3. Double-angle, half-angle và identities khác** nối từ **2. Angle addition là composition của rotations** sang **4. Product-to-sum: vì sao multiplication tạo frequencies mới?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Double-angle, half-angle và identities khác
 
 Đặt `\beta=\alpha`:
@@ -110,8 +106,6 @@ và
 
 Từ đây suy ra half-angle identities. Lesson quan trọng là không cần nhớ mọi định danh (identity / 식별자) như một item riêng; chỉ cần biết một vài generators và derive khi cần.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **4. Product-to-sum: vì sao multiplication tạo frequencies mới?** nối từ **3. Double-angle, half-angle và identities khác** sang **5. định danh (identity / 식별자) khác equation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Product-to-sum: vì sao multiplication tạo frequencies mới?
 
 Từ angle addition/subtraction:
@@ -134,8 +128,6 @@ Một sản phẩm (product / 제품) của hai oscillations tạo components �
 
 Đây không chỉ là algebra. Nó là nền của mixing, modulation, heterodyning trong communications và tín hiệu (signal / 신호) processing.
 
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **5. định danh (identity / 식별자) khác equation** nối từ **4. Product-to-sum: vì sao multiplication tạo frequencies mới?** sang **6. Giải phương trình lượng giác cần tính periodicity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. định danh (identity / 식별자) khác equation
 
 Định danh (identity / 식별자):
@@ -155,8 +147,6 @@ Equation:
 chỉ đúng tại một tập values cụ thể.
 
 Phân biệt này quan trọng vì chiến lược (strategy / 전략) khác nhau: với định danh (identity / 식별자) ta transform hai expressions để chứng minh equivalence; với equation ta tìm solution set.
-
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **6. Giải phương trình lượng giác cần tính periodicity** nối từ **5. định danh (identity / 식별자) khác equation** sang **7. Symmetry giúp tìm solution set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Giải phương trình lượng giác cần tính periodicity
 
@@ -189,8 +179,6 @@ x=\frac{5\pi}{6}+2k\pi,
 
 Inverse trig hàm (function / 함수) như `arcsin` chỉ trả principal branch. Nó không tự trả mọi nghiệm của periodic equation.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **7. Symmetry giúp tìm solution set** nối từ **6. Giải phương trình lượng giác cần tính periodicity** sang **8. Sinusoid tổng quát**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Symmetry giúp tìm solution set
 
 Trên đơn vị (unit / 단위) circle:
@@ -208,8 +196,6 @@ Trên đơn vị (unit / 단위) circle:
 ```
 
 Các symmetry này giải thích vì sao một giá trị (value / 값) thường xuất hiện tại nhiều angles. Việc hiểu đồ thị (graph / 그래프)/đơn vị (unit / 단위) circle tốt hơn memorizing trường hợp (case / 사례) tables.
-
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **8. Sinusoid tổng quát** nối từ **7. Symmetry giúp tìm solution set** sang **9. Phase không phải thời gian (time / 시간) delay, nhưng có quan hệ (relation / 관계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Sinusoid tổng quát
 
@@ -242,8 +228,6 @@ Ordinary frequency `f`:
 
 Units matter: nếu `t` là seconds thì `\omega` có đơn vị (unit / 단위) rad/s và `f` có Hz.
 
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **9. Phase không phải thời gian (time / 시간) delay, nhưng có quan hệ (relation / 관계)** nối từ **8. Sinusoid tổng quát** sang **10. Simple harmonic motion từ differential equation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Phase không phải thời gian (time / 시간) delay, nhưng có quan hệ (relation / 관계)
 
 Với
@@ -261,8 +245,6 @@ A\sin\bigl(\omega(t+\phi/\omega)\bigr).
 Do đó phase shift `\phi` tương ứng thời gian (time / 시간) shift `\phi/\omega` cho fixed frequency.
 
 Cùng một phase angle ở hai frequencies khác nhau không tạo cùng thời gian (time / 시간) delay. Đây là detail quan trọng trong tín hiệu (signal / 신호)/hệ thống (system / 시스템) phân tích (analysis / 분석).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **10. Simple harmonic motion từ differential equation** nối từ **9. Phase không phải thời gian (time / 시간) delay, nhưng có quan hệ (relation / 관계)** sang **11. State-space interpretation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Simple harmonic motion từ differential equation
 
@@ -293,8 +275,6 @@ x(t)=R\cos(\omega t-\delta).
 
 Hai representations cùng mô tả một oscillator; lựa chọn biểu diễn (representation / 표현) phụ thuộc tác vụ (task / 작업).
 
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **11. State-space interpretation** nối từ **10. Simple harmonic motion từ differential equation** sang **12. Damped và forced oscillation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. State-space interpretation
 
 Đặt trạng thái (state / 상태):
@@ -307,8 +287,6 @@ Với harmonic oscillator, trạng thái (state / 상태) trajectory là ellipse
 
 Đây là cầu nối (bridge / 브리지) giữa trigonometry, differential equations, matrices và điều khiển (control / 제어).
 
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **12. Damped và forced oscillation** nối từ **11. State-space interpretation** sang **13. Complex exponential thống nhất sine và cosine**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Damped và forced oscillation
 
 Ideal SHM chỉ là mô hình (model / 모델) cơ bản. Real các hệ thống (systems / 시스템들) thường có damping và forcing:
@@ -320,8 +298,6 @@ x''+2\zeta\omega_nx'+\omega_n^2x=F(t).
 Khi forcing frequency gần natural frequency, resonance có thể làm amplitude lớn.
 
 Trigonometric đầu vào (input / 입력)/đầu ra (output / 출력) phân tích (analysis / 분석) vì vậy là một phần cốt lõi của điều khiển (control / 제어) các hệ thống (systems / 시스템들) và electrical kỹ thuật (engineering / 엔지니어링).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **13. Complex exponential thống nhất sine và cosine** nối từ **12. Damped và forced oscillation** sang **14. Orthogonality của harmonics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Complex exponential thống nhất sine và cosine
 
@@ -349,8 +325,6 @@ Complex exponential biến differentiation thành multiplication:
 
 Đây là lý do phasor/Fourier/Laplace methods cực kỳ hiệu quả: oscillation trở thành algebra trên complex amplitudes.
 
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **14. Orthogonality của harmonics** nối từ **13. Complex exponential thống nhất sine và cosine** sang **15. Harmonics và Fourier viewpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Orthogonality của harmonics
 
 Trên interval phù hợp, sine/cosine ở different integer frequencies trực giao:
@@ -365,8 +339,6 @@ Tương tự cho sine và mixed terms.
 Điều này cho phép tách tín hiệu (signal / 신호) thành frequency components giống như véc-tơ (vector / 벡터) được tách theo orthogonal basis.
 
 Fourier phân tích (analysis / 분석) thực chất là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간).
-
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **15. Harmonics và Fourier viewpoint** nối từ **14. Orthogonality của harmonics** sang **16. Aliasing và sampling liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Harmonics và Fourier viewpoint
 
@@ -384,8 +356,6 @@ a_0+
 
 Complex tín hiệu (signal / 신호) không “chứa sine waves vật lý nhỏ” theo literal sense; Fourier biểu diễn (representation / 표현) là một basis decomposition giúp phân tích (analysis / 분석).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, sau nội dung của **15. Harmonics và Fourier viewpoint**, **16. Aliasing và sampling liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Worked example: beat frequency** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16. Aliasing và sampling liên kết (connection / 연결)
 
 Continuous sinusoid khi sampled không luôn có unique discrete-frequency biểu diễn (representation / 표현). Frequencies khác nhau có thể tạo cùng sampled values nếu sampling tỷ lệ (rate / 비율) không đủ.
@@ -393,8 +363,6 @@ Continuous sinusoid khi sampled không luôn có unique discrete-frequency biể
 Nyquist criterion trong ideal band-limited setting yêu cầu sampling frequency lớn hơn hai lần highest frequency để avoid ambiguity.
 
 Đây là nơi trig, thông tin (information / 정보), numerical sampling và tín hiệu (signal / 신호) processing gặp nhau.
-
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **16. Aliasing và sampling liên kết (connection / 연결)** nêu quy tắc; **Worked example: beat frequency** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## Worked example: beat frequency
 
@@ -412,8 +380,6 @@ sum-to-product cho:
 ```
 
 Ta thấy fast carrier được modulate bởi slow envelope. Beat phenomenon không cần thêm physics phức tạp để hiểu first-order; nó nằm ngay trong trig định danh (identity / 식별자).
-
-> **Nối mạch:** Ở chặng này của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **Worked example: beat frequency** nêu quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -433,13 +399,9 @@ unit circle
 
 Trong AI, positional encodings và spectral methods cũng dùng sinusoidal/frequency representations. Trong Physics, wave equations và quantum states thường decomposition theo modes. Trong Finance, periodic/seasonal components có thể được modeled bằng Fourier features, nhưng phải cẩn thận không nhầm periodic fit với nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Sine và cosine là coordinates của rotation. Identities là algebra của rotations; harmonics là repeated rotations ở different frequencies; Fourier phân tích (analysis / 분석) là decomposition theo orthogonal rotating modes.
-
-> **Nối mạch:** Trong **Đồng nhất thức lượng giác, phương trình lượng giác và dao động điều hòa**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

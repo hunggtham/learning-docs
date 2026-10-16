@@ -34,8 +34,6 @@ computer_science/
 
 Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớp nền tảng. Bên trong vẫn không tổ chức cứng theo Beginner → Intermediate → Advanced; các chương được chia theo quan hệ phụ thuộc kiến thức và ranh giới khái niệm.
 
-> **Chuyển mạch:** **Vị trí trong thư viện Khoa học máy tính** đặt DSA cạnh math, systems và programming; **Cấu trúc đầy đủ** sắp xếp các lớp thuật toán trước khi lập **Quan hệ phụ thuộc kiến thức**.
-
 ## Cấu trúc đầy đủ
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -114,8 +112,6 @@ advanced/
 
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
 
-> **Chuyển mạch:** **Cấu trúc đầy đủ** cho biết mỗi chapter giải quyết class bài toán nào; **Quan hệ phụ thuộc** chỉ prerequisite để chọn **Cách đọc** phù hợp với nền tảng đã có.
-
 ## Quan hệ phụ thuộc kiến thức
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -162,8 +158,6 @@ flowchart TD
 
 Quan hệ phụ thuộc không phải mức độ khó. Nó chỉ cho biết một mô hình tư duy trước được tái sử dụng trong mô hình sau.
 
-> **Chuyển mạch:** **Cách đọc nếu đã học nền tảng** bỏ qua phần đã vững nhưng giữ invariant và proof boundary; **Case study xuyên nhiều cấu trúc** đưa chúng vào một bài toán end-to-end.
-
 ## Cách đọc nếu đã học phần nền tảng
 
 Không cần đọc toàn bộ phần nâng cao theo thứ tự cứng. Nên bắt đầu bằng `00_foundations` để đồng bộ thuật ngữ và mô hình chi phí, sau đó đi vào nhánh liên quan đến vấn đề đang học.
@@ -208,8 +202,6 @@ Heap → binary heap → indexed/meldable/radix/relaxed priority queues
 
 Các từ trong sơ đồ được giữ bằng tiếng Anh khi chúng là tên cấu trúc, tên thuật toán hoặc từ khóa tra cứu; phần giải thích xung quanh ưu tiên tiếng Việt.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cách đọc nếu đã học phần nền tảng** cho ta quy tắc; **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) study xuyên nhiều cấu trúc
 
 Sau khi đã đọc các chapter theo chủ đề, nhóm `90_connections` cung cấp các bài tổng hợp để luyện cách ghép nhiều cấu trúc thành một thiết kế hoàn chỉnh.
@@ -235,8 +227,6 @@ Các trường hợp (case / 사례) study không giới thiệu “một thuậ
 
 Một cách đọc hiệu quả là đọc trường hợp (case / 사례) study một lần để hiểu kiến trúc, quay lại các chapter được liên kết để đào sâu từng thành phần nguyên thủy (primitive / 기본 요소), sau đó đọc lại trường hợp (case / 사례) study và tự thay đổi tải công việc (workload / 워크로드). Ví dụ, cơ sở dữ liệu (database / 데이터베이스) chuyển từ read-heavy sang write-heavy sẽ làm lựa chọn giữa B+cây (tree / 트리) và LSM thay đổi; autocomplete chuyển từ dictionary tĩnh sang cập nhật liên tục sẽ làm lựa chọn giữa FST và Trie thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** cho ta quy tắc; **Mô hình tư duy xuyên suốt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tại sao có các chương ngoài “DSA phỏng vấn”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy xuyên suốt
 
 > Không có cấu trúc dữ liệu “tốt nhất”. Chỉ có cách biểu diễn phù hợp với khối lượng công việc (workload), bất biến và mô hình chi phí cụ thể.
@@ -257,8 +247,6 @@ Cần kết quả chính xác hay xấp xỉ đã đủ?
 
 Đó là cách DSA trở thành công cụ thiết kế thay vì danh sách công thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Tại sao có các chương ngoài “DSA phỏng vấn”?** gom các mảnh từ **Mô hình tư duy xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **C, Java và JavaScript không phải ba bộ DSA riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tại sao có các chương ngoài “DSA phỏng vấn”?
 
 Một thư viện dùng lâu dài không nên dừng ở mảng → cây → đồ thị → quy hoạch động. Hệ thống thực tế tạo ra nhiều mô hình chi phí khác nhau.
@@ -269,8 +257,6 @@ Các chapter sau-core mở rộng tiếp: vùng nhớ động (heap / 힙) nâng
 
 Những phần này cho thấy cùng các nguyên lý nền tảng được mở rộng như thế nào khi khối lượng công việc thay đổi.
 
-> **Chuyển mạch:** **Tại sao có các chương ngoài DSA phỏng vấn?** đặt boundary theo reasoning; **C, Java và JavaScript** chỉ là implementation lens, rồi **Kiểm tra phạm vi** xác nhận owner.
-
 ## C, Java và JavaScript không phải ba bộ DSA riêng
 
 Các chương trong `80_language_implementations/` cho thấy cùng một thuật toán gặp mô hình chi phí môi trường thực thi khác nhau.
@@ -278,8 +264,6 @@ Các chương trong `80_language_implementations/` cho thấy cùng một thuậ
 C buộc ta suy luận về quyền sở hữu, vòng đời con trỏ và cấp phát. Java thêm hợp đồng collection, boxing và bộ gom rác. JavaScript thêm độ chính xác của `Number`, biểu diễn động của đối tượng (object / 객체)/array, `TypedArray`, giới hạn đệ quy và hành vi JIT.
 
 Mô hình thuật toán không đổi; các ràng buộc triển khai thay đổi.
-
-> **Chuyển mạch:** **Kiểm tra phạm vi** khép README bằng algorithmic boundary, proof expectation và language owner; phần implementation chi tiết quay về chapter tương ứng.
 
 ## Kiểm tra phạm vi thư viện
 

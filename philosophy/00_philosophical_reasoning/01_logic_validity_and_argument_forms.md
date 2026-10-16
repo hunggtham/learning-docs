@@ -18,8 +18,6 @@ Vậy P.                 affirming the consequent — invalid
 
 Dạng thứ hai có thể cho conclusion đúng trong một trường hợp cụ thể, nhưng không được premise bảo đảm: Q có thể có nguyên nhân khác. Đây là lỗi thường gặp khi đọc correlation như causation.
 
-> **Chuyển mạch:** Validity chỉ nói cấu trúc suy luận có bảo toàn kết luận hay không, không bảo đảm tiền đề đúng. Vì deduction, induction và abduction dựa trên những tiêu chuẩn khác nhau, phần kế tiếp sẽ so sánh phạm vi và điểm yếu của từng kiểu.
-
 ## Deduction, induction và abduction
 
 - **Deduction** bảo toàn tính đúng theo cấu trúc: từ quy tắc (rule / 규칙) và trường hợp (case / 사례) suy ra consequence.
@@ -27,8 +25,6 @@ Dạng thứ hai có thể cho conclusion đúng trong một trường hợp c�
 - **Abduction** chọn explanation tốt nhất cho bằng chứng (evidence / 증거) hiện có; “tốt nhất” cần nói rõ tiêu chuẩn như fit, simplicity, phạm vi (scope / 범위) và khả năng kiểm tra.
 
 Không dạng nào tự giải quyết mọi vấn đề. Deduction có thể vận hành trên premise sai; induction nhạy với mẫu (sample / 표본) và cơ sở (base / 기반) tỷ lệ (rate / 비율); abduction có thể chọn explanation đẹp nhưng chưa đủ discriminating bằng chứng (evidence / 증거).
-
-> **Chuyển mạch:** Deduction kiểm tra hệ quả theo cấu trúc, induction đánh giá mức khái quát từ mẫu hữu hạn, còn abduction so sánh các lời giải thích cạnh tranh. Trước khi phản biện, ta cần steelman lập luận đối phương và xác định đúng nghĩa vụ chứng minh thay vì công kích một phiên bản yếu hơn.
 
 ## Steelman và burden of proof
 

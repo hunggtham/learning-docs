@@ -26,8 +26,6 @@ graph TD
   P --> Q[Post-Cold-War world]
 ```
 
-> **Nối mạch:** Phụ thuộc đồ thị xác định prerequisite; **Câu hỏi xuyên suốt** biến prerequisite thành câu hỏi cơ chế và bằng chứng. **Lộ trình đọc** đưa chúng vào thứ tự học theo owner.
-
 ## Câu hỏi xuyên suốt
 
 | Trục | Câu hỏi cơ chế |
@@ -40,8 +38,6 @@ graph TD
 | Demography | Dân số, di cư, đô thị, dịch bệnh và cơ cấu tuổi biến đổi quyền lực ra sao? |
 | Ideas | Tôn giáo, khoa học, dân tộc, chủ quyền, giai cấp và nhân quyền làm hợp thức hoá hành động nào? |
 
-> **Nối mạch:** Lộ trình đọc xếp chapter theo tiền đề–hệ quả; **Chapter map** gắn từng điểm dừng với topic thật và owner cụ thể để không lạc domain.
-
 ## Lộ trình đọc
 
 - **Nền tảng vật chất:** 01 → 02 → 03.
@@ -52,8 +48,6 @@ graph TD
 - **trường hợp (case / 사례) study Đông Á:** đọc song song [`korean_history/00_index_and_dependency.md`](../korean_history/00_index_and_dependency.md).
 
 Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, không khẳng định mọi xã hội trải qua cùng thứ tự hay cùng kết quả.
-
-> **Nối mạch:** Chapter map cho biết cơ chế của từng chapter; **Tài liệu điều hướng** đưa người đọc tới nguồn, case và audit tương ứng mà vẫn giữ đường dẫn owner.
 
 ## Chapter map
 
@@ -82,8 +76,6 @@ Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, k
 | 21 | chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) | [Transition matrix](21_transition_matrix.md) |
 | 22 | nguồn (source / 소스) workbench | [Source workbench](22_source_workbench.md) |
 | 23 | Annotated bibliography | [Annotated bibliography](23_annotated_bibliography.md) |
-
-> **Nối mạch:** Khi map đã rõ, Tài liệu điều hướng là điểm tra cứu cho tuyến đọc, nguồn đối chiếu và bước quay lại audit; mọi nhánh vẫn quay về owner trong README.
 
 ## Tài liệu điều hướng
 

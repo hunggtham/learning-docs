@@ -23,8 +23,6 @@ Trong Hóa học, một số đơn vị cơ bản và đơn vị dẫn xuất xu
 
 Trong phòng thí nghiệm, gram, milliliter, centimeter và độ Celsius thường thuận tiện hơn. Việc dùng đơn vị không phải đơn vị cơ bản không có vấn đề nếu phép đổi rõ ràng và nhất quán.
 
-> **Nối mạch:** SI/derived units đặt scale; prefixes giúp đọc magnitude, còn dimensional analysis tiếp theo kiểm tra equation có nhất quán trước khi tính số.
-
 ## Tiền tố là cách quản lý thang độ lớn
 
 Hóa học trải rộng từ thang nguyên tử tới thang vĩ mô. **Tiền tố đơn vị (prefix)** giúp biểu diễn các thang này mà không phải viết quá nhiều số 0.
@@ -45,8 +43,6 @@ Ví dụ:
 
 Điều quan trọng không phải học thuộc mọi tiền tố mà là nhìn chúng như lũy thừa của 10. Khi đó đổi đơn vị trở thành một bài đại số với lũy thừa.
 
-> **Nối mạch:** Ở chặng này của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Phân tích thứ nguyên như một hệ thống kiểm tra lô-gic (logic / 논리)** nối từ **Tiền tố là cách quản lý thang độ lớn** sang **Độ đúng và độ chụm không đồng nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân tích thứ nguyên như một hệ thống kiểm tra lô-gic (logic / 논리)
 
 **Phân tích thứ nguyên (dimensional analysis / 차원 분석)** dùng đơn vị như các thừa số đại số.
@@ -65,8 +61,6 @@ m=1.25\frac{\mathrm{g}}{\mathrm{mL}}\times40.0\;\mathrm{mL}=50.0\;\mathrm{g}
 
 Phân tích thứ nguyên vì vậy giống một dạng **kiểm tra kiểu dữ liệu (type checking)** trong lập trình. Trình biên dịch có thể ngăn thao tác giữa các kiểu dữ liệu không tương thích; trong Vật lý và Hóa học, đơn vị giúp phát hiện một số lỗi đại số tương tự.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Độ đúng và độ chụm không đồng nghĩa** nối từ **Phân tích thứ nguyên như một hệ thống kiểm tra lô-gic (logic / 논리)** sang **Sai số ngẫu nhiên và sai số hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ đúng và độ chụm không đồng nghĩa
 
 Hai khái niệm này thường bị dùng lẫn.
@@ -79,8 +73,6 @@ Một cân bị lệch hiệu chuẩn có thể cho `10.52, 10.52, 10.53 g` khi 
 
 Ngược lại, một thiết bị có nhiều nhiễu có thể cho `9.8, 10.2, 10.0 g`. Trung bình gần giá trị đúng nhưng từng phép đo có độ chụm kém.
 
-> **Nối mạch:** Trong **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Sai số ngẫu nhiên và sai số hệ thống** nối từ **Độ đúng và độ chụm không đồng nghĩa** sang **Độ không đảm bảo: phép đo không phải một điểm tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sai số ngẫu nhiên và sai số hệ thống
 
 **Sai số ngẫu nhiên (random error / 우연 오차)** thay đổi không hoàn toàn dự đoán được giữa các phép đo. Nhiễu điện tử, dao động nhỏ của môi trường hoặc giới hạn đọc thang đo có thể tạo sai số ngẫu nhiên. Lặp lại phép đo và lấy trung bình thường giúp giảm ảnh hưởng của loại sai số này.
@@ -88,8 +80,6 @@ Ngược lại, một thiết bị có nhiều nhiễu có thể cho `9.8, 10.2,
 **Sai số hệ thống (systematic error / 계통 오차)** đẩy kết quả theo một hướng tương đối nhất quán. Hiệu chuẩn sai, lệch điểm không hoặc thiên lệch của quy trình là các ví dụ. Lặp lại nhiều lần không tự sửa sai số hệ thống; cần tìm nguyên nhân và hiệu chỉnh phương pháp.
 
 Đây là lý do “đo nhiều lần” không đồng nghĩa với “đúng hơn” trong mọi tình huống.
-
-> **Nối mạch:** Ở chặng này của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Độ không đảm bảo: phép đo không phải một điểm tuyệt đối** nối từ **Sai số ngẫu nhiên và sai số hệ thống** sang **Chữ số có nghĩa tồn tại để làm gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ không đảm bảo: phép đo không phải một điểm tuyệt đối
 
@@ -110,8 +100,6 @@ V = 23.42 \pm 0.02\;\mathrm{mL}
 \]
 
 Điều này không có nghĩa giá trị thật chắc chắn nằm trong khoảng trên với xác suất 100%. Ý nghĩa chính xác phụ thuộc cách độ không đảm bảo được xây dựng. Trong **đo lường học (metrology)**, độ không đảm bảo được xử lý bằng khuôn khổ thống kê và hiệu chuẩn rõ ràng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Chữ số có nghĩa tồn tại để làm gì?** nối từ **Độ không đảm bảo: phép đo không phải một điểm tuyệt đối** sang **Quy tắc khi tính toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chữ số có nghĩa tồn tại để làm gì?
 
@@ -145,8 +133,6 @@ có 2 chữ số có nghĩa, còn:
 
 có 4.
 
-> **Nối mạch:** Trong **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Quy tắc khi tính toán** nối từ **Chữ số có nghĩa tồn tại để làm gì?** sang **Không làm tròn quá sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc khi tính toán
 
 Với phép nhân hoặc chia, kết quả thường được báo cáo với số chữ số có nghĩa bằng đầu vào có ít chữ số có nghĩa nhất.
@@ -173,8 +159,6 @@ Với phép cộng hoặc trừ, giới hạn phụ thuộc vị trí thập ph�
 
 Đây là quy ước đơn giản hóa. Trong khoa học thực nghiệm nghiêm túc, **lan truyền độ không đảm bảo (uncertainty propagation)** trực tiếp tốt hơn việc chỉ dựa vào quy tắc chữ số có nghĩa.
 
-> **Nối mạch:** Ở chặng này của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Không làm tròn quá sớm** nối từ **Quy tắc khi tính toán** sang **Celsius và Kelvin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Không làm tròn quá sớm
 
 Một lỗi phổ biến là làm tròn kết quả trung gian ở từng bước. Điều này có thể tích lũy sai số làm tròn.
@@ -189,8 +173,6 @@ Nếu làm tròn mạnh ở mỗi bước, giá trị cuối có thể lệch. C
 
 Máy tính có thể giữ nhiều chữ số, nhưng nhiều chữ số trong bộ nhớ không đồng nghĩa phép đo thực tế có độ chính xác tương ứng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Celsius và Kelvin** nối từ **Không làm tròn quá sớm** sang **Ký hiệu khoa học và thang logarithm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Celsius và Kelvin
 
 Phép đổi giữa Celsius và Kelvin:
@@ -204,8 +186,6 @@ Kelvin là **thang nhiệt độ nhiệt động tuyệt đối (absolute thermo
 Một chênh lệch `1 K` bằng một chênh lệch `1 °C`, nhưng hai thang có điểm 0 khác nhau.
 
 Nhiều phương trình vật lý–hóa học như phương trình khí lý tưởng hay phương trình Arrhenius yêu cầu nhiệt độ tuyệt đối tính bằng kelvin. Dùng Celsius trực tiếp có thể làm phương trình mất ý nghĩa vật lý.
-
-> **Nối mạch:** Trong **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Ký hiệu khoa học và thang logarithm** nối từ **Celsius và Kelvin** sang **Lan truyền độ không đảm bảo: ý tưởng nền tảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký hiệu khoa học và thang logarithm
 
@@ -227,8 +207,6 @@ hạt.
 
 Ngoài lũy thừa của 10, Hóa học còn dùng các **thang logarithm (logarithmic scales)** như pH. Logarithm xuất hiện vì nồng độ có thể trải qua nhiều bậc độ lớn. Ta sẽ giải thích bản chất của logarithm khi học acid–cơ sở (base / 기반) thay vì chỉ học công thức `pH = -log[H+]`.
 
-> **Nối mạch:** Ở chặng này của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Lan truyền độ không đảm bảo: ý tưởng nền tảng** nối từ **Ký hiệu khoa học và thang logarithm** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lan truyền độ không đảm bảo: ý tưởng nền tảng
 
 Nếu kết quả được tính từ nhiều đại lượng đo, độ không đảm bảo của kết quả phụ thuộc độ không đảm bảo của các đầu vào.
@@ -245,8 +223,6 @@ Nếu cả khối lượng và thể tích đều có độ không đảm bảo,
 
 Trong hóa học phân tích và kỹ thuật thiết bị, đây là nền tảng để thiết kế thí nghiệm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Mô hình tư duy** tổng hợp từ **Lan truyền độ không đảm bảo: ý tưởng nền tảng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 Hãy coi mỗi số đo như một **đối tượng dữ liệu có siêu dữ liệu (data object with metadata)** chứ không chỉ là một số thực.
@@ -262,8 +238,6 @@ Nó mang theo:
 
 Viết `12.34` mà bỏ đơn vị và độ không đảm bảo giống như truyền một giá trị qua hệ thống nhưng làm mất thông tin về cấu trúc và kiểu dữ liệu.
 
-> **Nối mạch:** Trong **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Các hiểu lầm thường gặp
 
 ### “Nhiều chữ số thập phân nghĩa là đúng hơn”
@@ -277,8 +251,6 @@ Không. Chúng chỉ là quy ước thô để báo cáo độ chính xác. Hai 
 ### “Lặp thí nghiệm đủ nhiều sẽ loại bỏ mọi sai số”
 
 Lặp lại giúp xử lý biến thiên ngẫu nhiên, nhưng sai số hệ thống có thể vẫn tồn tại nguyên vẹn.
-
-> **Nối mạch:** Ở chặng này của **Đơn vị, độ không đảm bảo và chữ số có nghĩa**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

@@ -14,8 +14,6 @@ Khi thị trường vốn sâu hơn, WTO/FTA mở rộng và các tập đoàn t
 
 Nhà nước không cần trực tiếp “ra lệnh doanh nghiệp sản xuất gì” để ảnh hưởng đầu tư. Chỉ cần thay đổi **lợi suất tương đối và mức rủi ro** giữa các lựa chọn.
 
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Chính sách tác động doanh nghiệp bằng cách thay đổi NPV** tiếp nhận điểm tựa từ **Nhà nước phát triển đã thay đổi chứ không biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ quan tài chính–kinh tế: tài khóa, thuế và điều phối vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chính sách tác động doanh nghiệp bằng cách thay đổi NPV
 
 Một dự án có thể mô tả bằng **giá trị hiện tại ròng (Net Present Value / NPV)**:
@@ -28,8 +26,6 @@ Chính sách có thể tác động mọi thành phần trong công thức. Ưu 
 
 Vì vậy tiêu đề chính sách chỉ có ý nghĩa kinh tế khi chuyển được thành thay đổi cụ thể của dòng tiền, chi phí hoặc rủi ro doanh nghiệp.
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Cơ quan tài chính–kinh tế: tài khóa, thuế và điều phối vĩ mô** tiếp nhận điểm tựa từ **Chính sách tác động doanh nghiệp bằng cách thay đổi NPV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quốc hội: đề xuất chính sách chưa phải luật cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cơ quan tài chính–kinh tế: tài khóa, thuế và điều phối vĩ mô
 
 Cơ quan trung ương phụ trách tài khóa, thuế, ngân khố, tài chính quốc tế và điều phối vĩ mô là một nút quan trọng của hệ thống chính sách. Khi cơ quan này công bố chiến lược tăng trưởng hoặc kế hoạch kinh tế, đó không chỉ là dự báo mà còn thể hiện **những nút thắt nào nhà nước muốn ưu tiên xử lý**.
@@ -37,8 +33,6 @@ Cơ quan trung ương phụ trách tài khóa, thuế, ngân khố, tài chính 
 Chính sách tài khóa đi qua chi tiêu, thuế và chuyển giao. Một ngân sách hạ tầng có thể đi trực tiếp vào đơn hàng xây dựng, sau đó lan qua việc làm và nhà cung cấp. Ưu đãi thuế bán dẫn có thể làm giảm mức lợi suất tối thiểu mà dự án cần đạt.
 
 Điểm quan trọng là phân biệt **thông báo**, **phê duyệt ngân sách**, **hướng dẫn thực thi** và **chi tiền thực tế**. Bốn bước này không đồng nghĩa với nhau.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Quốc hội: đề xuất chính sách chưa phải luật cuối cùng** tiếp nhận điểm tựa từ **Cơ quan tài chính–kinh tế: tài khóa, thuế và điều phối vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngân hàng Trung ương Hàn Quốc: chính sách tiền tệ là một hệ truyền dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quốc hội: đề xuất chính sách chưa phải luật cuối cùng
 
@@ -56,8 +50,6 @@ Khi đọc tin chính sách, nên xác định nó đang ở giai đoạn nào:
 ```
 
 Thị trường có thể phản ứng ngay ở bước đầu, nhưng dòng tiền doanh nghiệp chỉ thực sự thay đổi khi chính sách có hiệu lực và được triển khai.
-
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Ngân hàng Trung ương Hàn Quốc: chính sách tiền tệ là một hệ truyền dẫn** tiếp nhận điểm tựa từ **Quốc hội: đề xuất chính sách chưa phải luật cuối cùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngân hàng Trung ương Hàn Quốc: chính sách tiền tệ là một hệ truyền dẫn
 
@@ -81,23 +73,17 @@ Song song, kỳ vọng lãi suất tác động tỷ giá và giá tài sản. N
 
 Đây là lý do **độ trễ chính sách tiền tệ (monetary lag / 통화정책 시차)** rất quan trọng. Một lần tăng lãi suất hôm nay có thể chỉ tác động mạnh vài quý sau khi khoản vay tái định giá hoặc doanh nghiệp phải tái cấp vốn.
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau** tiếp nhận điểm tựa từ **Ngân hàng Trung ương Hàn Quốc: chính sách tiền tệ là một hệ truyền dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DART/KIND là hạ tầng giảm bất cân xứng thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau
 
 **Financial Services Commission (FSC / 금융위원회)** thiết kế và điều phối nhiều chính sách tài chính. **Financial Supervisory dịch vụ (service / 서비스)** thực hiện giám sát, thanh tra và vận hành DART. **Korea Exchange (KRX / 한국거래소)** vận hành hạ tầng niêm yết–giao dịch và kênh công bố KIND.
 
 Một cải cách thị trường vốn có thể cần chính sách từ FSC, giám sát từ FSS và quy tắc vận hành tại KRX. Vì vậy phải phân biệt **cơ quan làm quy tắc, cơ quan giám sát và cơ quan vận hành thị trường**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **DART/KIND là hạ tầng giảm bất cân xứng thông tin** tiếp nhận điểm tựa từ **FSC, FSS và KRX: làm chính sách, giám sát và vận hành thị trường là ba lớp khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KFTC: cạnh tranh và điều tiết tập đoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## DART/KIND là hạ tầng giảm bất cân xứng thông tin
 
 Công bố thông tin không chỉ là “website đọc báo cáo”. Nó là một phần của hạ tầng thị trường vốn. Nhà đầu tư không ngồi trong phòng họp hội đồng quản trị; nếu báo cáo tài chính, sở hữu, giao dịch với bên liên quan và sự kiện trọng yếu được chuẩn hóa, **bất cân xứng thông tin (information asymmetry)** giảm và chi phí vốn có thể thấp hơn.
 
 Xem [`09_disclosure_accounting_dart_kind.md`](./09_disclosure_accounting_dart_kind.md).
-
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **KFTC: cạnh tranh và điều tiết tập đoàn** tiếp nhận điểm tựa từ **DART/KIND là hạ tầng giảm bất cân xứng thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách SME là một hệ thống riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KFTC: cạnh tranh và điều tiết tập đoàn
 
@@ -107,8 +93,6 @@ Cần phân biệt **mức tập trung thị trường** với **mức tập tru
 
 Phân tích cạnh tranh vì vậy phải xác định đúng **thị trường liên quan (relevant market / 관련시장)**.
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Chính sách SME là một hệ thống riêng** tiếp nhận điểm tựa từ **KFTC: cạnh tranh và điều tiết tập đoàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MSIT: R&D, AI và hạ tầng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chính sách SME là một hệ thống riêng
 
 **Ministry of SMEs and Startups (MSS / 중소벤처기업부)** phụ trách nhiều chương trình về SME, startup, venture, hộ kinh doanh nhỏ, đổi mới công nghệ, nhân lực và xuất khẩu.
@@ -117,15 +101,11 @@ Lý do cần một lớp chính sách riêng là SME thường gặp các nút t
 
 Tuy nhiên hỗ trợ luôn có đánh đổi. Nếu chính sách chỉ giúp doanh nghiệp tồn tại mà không nâng năng lực, vốn và lao động có thể bị giữ trong doanh nghiệp năng suất thấp. Chính sách tốt phải giúp doanh nghiệp **tốt nghiệp (graduation)** và **mở rộng quy mô (scale-up)**, không biến trạng thái SME thành điểm đến vĩnh viễn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **MSIT: R&D, AI và hạ tầng số** tiếp nhận điểm tựa từ **Chính sách SME là một hệ thống riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách công nghiệp là một danh mục nhiều cơ quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## MSIT: R&D, AI và hạ tầng số
 
 **Ministry of Science and ICT (MSIT / 과학기술정보통신부)** phụ trách khoa học, R&D quốc gia, ICT, AI và chính sách số. Với doanh nghiệp, điều này có thể tác động tới tài trợ nghiên cứu, năng lực tính toán AI, cloud, chip AI, nhân lực và chương trình số hóa vùng.
 
 Nhưng cần phân biệt **chiến lược quốc gia** với **kinh tế của từng doanh nghiệp**. Nhà nước muốn tăng ứng dụng AI không có nghĩa mọi công ty AI đều có mô hình lợi nhuận tốt.
-
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Chính sách công nghiệp là một danh mục nhiều cơ quan** tiếp nhận điểm tựa từ **MSIT: R&D, AI và hạ tầng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngân hàng chính sách: phân bổ rủi ro chứ không phải tiền miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chính sách công nghiệp là một danh mục nhiều cơ quan
 
@@ -147,15 +127,11 @@ Chính quyền địa phương
 
 Sau đó mới nối từng chính sách xuống doanh nghiệp cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Ngân hàng chính sách: phân bổ rủi ro chứ không phải tiền miễn phí** tiếp nhận điểm tựa từ **Chính sách công nghiệp là một danh mục nhiều cơ quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mua sắm công: nhà nước vừa điều tiết vừa có thể là khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ngân hàng chính sách: phân bổ rủi ro chứ không phải tiền miễn phí
 
 Các tổ chức tài chính chính sách có thể hỗ trợ dự án dài hạn, ngành chiến lược hoặc trường hợp thị trường tư nhân không cung cấp đủ vốn. Tài chính chính sách có thể giảm chi phí vốn và kéo thêm vốn tư nhân vào dự án.
 
 Nhưng mục tiêu công không làm rủi ro tín dụng biến mất. Nếu dự án không tạo được dòng tiền tương lai, tổn thất cuối cùng vẫn phải nằm ở người vay, chủ nợ hoặc bảng cân đối công. Vì vậy nên hiểu tài chính chính sách là **cơ chế phân bổ rủi ro (risk allocation)**, không phải “vốn miễn phí”.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Mua sắm công: nhà nước vừa điều tiết vừa có thể là khách hàng** tiếp nhận điểm tựa từ **Ngân hàng chính sách: phân bổ rủi ro chứ không phải tiền miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính quyền địa phương: chính sách chỉ có giá trị khi triển khai được tại chỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mua sắm công: nhà nước vừa điều tiết vừa có thể là khách hàng
 
@@ -163,23 +139,17 @@ Trong quốc phòng, IT công, hạ tầng, y tế và năng lượng, cơ quan 
 
 Nhưng tiêu chí đấu thầu, yêu cầu hồ sơ quá khứ và chứng nhận cũng có thể trở thành rào cản gia nhập. Thiết kế mua sắm vì vậy có thể thúc đẩy đổi mới hoặc khóa thị trường vào nhà cung cấp cũ.
 
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Chính quyền địa phương: chính sách chỉ có giá trị khi triển khai được tại chỗ** tiếp nhận điểm tựa từ **Mua sắm công: nhà nước vừa điều tiết vừa có thể là khách hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định có thể nâng năng suất mà không cần phát minh công nghệ mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chính quyền địa phương: chính sách chỉ có giá trị khi triển khai được tại chỗ
 
 Chiến lược quốc gia có thể được công bố ở trung ương, nhưng nhà máy hoặc trung tâm dữ liệu vẫn cần đất, giấy phép, nước, điện, đường, nhà ở và sự chấp thuận tại địa phương.
 
 Chính quyền địa phương vì vậy là **nút thực thi (implementation node)** rất quan trọng. Một cụm công nghiệp chỉ thành công khi ưu đãi trung ương và hạ tầng địa phương khớp với nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Quy định có thể nâng năng suất mà không cần phát minh công nghệ mới** tiếp nhận điểm tựa từ **Chính quyền địa phương: chính sách chỉ có giá trị khi triển khai được tại chỗ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu kỳ chính sách: từ vấn đề đến hành vi doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quy định có thể nâng năng suất mà không cần phát minh công nghệ mới
 
 Một thay đổi quy định có thể làm chi phí áp dụng công nghệ giảm mạnh. Công nghệ SaaS có thể đã tồn tại từ trước nhưng doanh nghiệp tài chính chỉ triển khai rộng khi quy định về mạng nội bộ, bảo mật và cloud cho phép.
 
 Điểm quan trọng là: năng suất không chỉ đến từ phát minh. Nó còn đến từ **quyền được triển khai phát minh trong thể chế hiện hành**.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Chu kỳ chính sách: từ vấn đề đến hành vi doanh nghiệp** tiếp nhận điểm tựa từ **Quy định có thể nâng năng suất mà không cần phát minh công nghệ mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crowding-in và crowding-out** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chu kỳ chính sách: từ vấn đề đến hành vi doanh nghiệp
 
@@ -200,8 +170,6 @@ Nếu chỉ đọc thông báo ban đầu, ta bỏ qua phần quan trọng nhấ
 
 Khi thấy một gói hỗ trợ, cần hỏi quy mô hỗ trợ so với CAPEX của ngành, đó là grant hay loan, doanh nghiệp phải đối ứng bao nhiêu, điều kiện đủ rộng hay hẹp, ngân sách trải trong bao nhiêu năm và dự án có xảy ra dù không có hỗ trợ hay không.
 
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Crowding-in và crowding-out** tiếp nhận điểm tựa từ **Chu kỳ chính sách: từ vấn đề đến hành vi doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh đổi chính sách là bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Crowding-in và crowding-out
 
 Nếu hỗ trợ công khiến vốn tư nhân cùng vào một dự án có ngoại tác tích cực, chính sách tạo **hiệu ứng kéo vốn tư nhân vào (crowding-in)**.
@@ -209,8 +177,6 @@ Nếu hỗ trợ công khiến vốn tư nhân cùng vào một dự án có ngo
 Nếu trợ cấp chỉ thay thế vốn tư nhân vốn đã sẵn sàng đầu tư, hiệu quả bổ sung có thể thấp; đây là **hiệu ứng thay thế (crowding-out / replacement)**.
 
 Vì vậy đánh giá chính sách phải hỏi câu phản thực: **nếu không có chính sách, doanh nghiệp sẽ làm gì?**
-
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Đánh đổi chính sách là bình thường** tiếp nhận điểm tựa từ **Crowding-in và crowding-out** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đọc một thông báo chính sách như nhà phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đánh đổi chính sách là bình thường
 
@@ -226,15 +192,11 @@ Ai chịu chi phí?
 Tác động vòng hai là gì?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Cách đọc một thông báo chính sách như nhà phân tích** tiếp nhận điểm tựa từ **Đánh đổi chính sách là bình thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cách đọc một thông báo chính sách như nhà phân tích
 
 Hãy xác định cơ quan ban hành, tình trạng pháp lý, đối tượng đủ điều kiện, quy mô hỗ trợ, thời gian thực thi và biến số doanh nghiệp nào bị thay đổi. Sau đó nối chính sách vào P&L, bảng cân đối, CAPEX hoặc chi phí vốn của công ty cụ thể.
 
 Một tiêu đề “hỗ trợ 1 nghìn tỷ KRW” gần như vô nghĩa nếu không biết quy mô CAPEX của ngành là 5 nghìn tỷ hay 500 nghìn tỷ KRW.
-
-> **Chuyển mạch:** Trong **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách đọc một thông báo chính sách như nhà phân tích** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
@@ -254,13 +216,9 @@ Kết quả kinh tế
 Dữ liệu mới → chính sách mới
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Những nhầm lẫn thường gặp
 
 Thông báo chính sách không đồng nghĩa tiền đã được chi. Trợ cấp không đảm bảo dự án tốt. Chính sách công nghiệp hiện đại không nhất thiết giống tín dụng chỉ đạo thời 1970s. Một cơ quan trung ương không thể một mình triển khai dự án nếu điện, đất và giấy phép địa phương thiếu. Chính sách tốt phải được đánh giá theo hành vi và kết quả thực tế, không chỉ theo quy mô ngân sách công bố.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thể chế kinh tế và cách chính sách được hình thành tại Hàn Quốc (Economic Institutions & Policy Making / 경제 제도와 정책결정)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
 

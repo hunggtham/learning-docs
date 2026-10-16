@@ -20,8 +20,6 @@ Vì sao cùng dựa vào sông nhưng hình thái nhà nước, đô thị và b
 
 **Bài học:** “hydraulic trạng thái (state / 상태)” có thể giải thích một số investment vào nước, nhưng không đủ để suy ra cùng một bureaucracy. Cần đọc water cùng land tenure, trade, craft specialization, disease và legitimacy.
 
-> **Nối mạch:** Case 1 cho khung so sánh basin, nước và nhà nước; **Case 2** đưa khung đó vào mạng Silk Roads và Indian Ocean. **Case 3** tiếp tục kiểm tra khi thương mại gắn với plantation và slavery.
-
 ## Trường hợp (case / 사례) 2 — Silk Roads và Indian Ocean
 
 Silk Roads phụ thuộc caravan, oasis, steppe corridor, tribute và translation; Indian Ocean phụ thuộc monsoon, cổng (port / 포트), ship technology, merchant diaspora và credit. Cả hai đều truyền hàng, người, văn bản (text / 텍스트) và bệnh, nhưng topology khác:
@@ -31,8 +29,6 @@ oasis/steppe → relay node → imperial protection → caravan risk
 port/monsoon → seasonal window → merchant partnership → maritime risk
 ```
 Trong cả hai mạng, broker địa phương và trust institution quan trọng hơn một “trung tâm toàn cầu” duy nhất. Một đế chế có thể bảo vệ corridor nhưng cũng tăng toll và militarize nút (node / 노드). Khi chiến tranh hoặc plague làm đứt một tuyến (route / 경로), luồng (flow / 흐름) thường chuyển sang tuyến (route / 경로) khác thay vì biến mất.
-
-> **Nối mạch:** Case 2 cho thấy mạng biển và đất liền phân phối hàng, người và ý tưởng; Case 3 chỉ ra cưỡng chế trong mạng Atlantic. **Case 4** kiểm tra cách ecology và vàng định hình West Africa.
 
 ## Trường hợp (case / 사례) 3 — Atlantic, plantation và slavery
 
@@ -45,8 +41,6 @@ land seizure → coerced labor → commodity export
 ```
 
 Người bị bắt, Indigenous communities, women, sailors và workers là actors chứ không chỉ là “labor đầu vào (input / 입력)”. Abolition thay đổi law nhưng không tự xóa debt, racial hierarchy, land concentration hay coercive labor mới.
-
-> **Nối mạch:** Case 3 làm rõ cưỡng chế và value capture trong mạng Atlantic; Case 4 đặt quyền lực ấy cạnh ecology, vàng và đô thị West Africa. **Case 5** chuyển sang monsoon, rice và port-polity.
 
 ## Trường hợp (case / 사례) 4 — West Africa: vàng, Sahel, rừng và đô thị
 
@@ -62,8 +56,6 @@ ecological gradient (Sahara–Sahel–savanna–forest)
 
 Islamization có thể đi qua scholar/merchant mà không xoá ngay practice bản địa. Đô thị như Timbuktu hoặc các cổng (port / 포트) không chỉ là “trung tâm thương mại”; chúng là nơi luật, học thuật, credit và định danh (identity / 식별자) được thương lượng.
 
-> **Nối mạch:** Case 4 cho thấy ecology và tài nguyên định hình đô thị–thương mại; Case 5 thêm nhịp monsoon và port-polity. **Case 6** kiểm tra vai trò bureaucracy, print, frontier và biển ở East Asia.
-
 ## Trường hợp (case / 사례) 5 — South và Southeast Asia: monsoon, rice và port-polity
 
 Monsoon tạo seasonal predictability nhưng cũng tạo cửa sổ rủi ro. Wet-rice các hệ thống (systems / 시스템들) cần water điều khiển (control / 제어) và labor coordination; upland, forest, island và coastal societies có portfolio khác. Port-polity ở Đông Nam Á thường kiểm soát **luồng (flow / 흐름) và chokepoint** hơn là một lãnh thổ liền mạch.
@@ -78,15 +70,11 @@ monsoon window → rice/forest/maritime production
 
 Không áp dụng mô hình “làng lúa → bureaucracy” cho toàn khu vực. Cần phân biệt delta density, archipelago mobility, upland autonomy, caste/status và cổng (port / 포트) cosmopolitanism.
 
-> **Nối mạch:** Case 5 nối mùa gió, lúa và cảng; Case 6 cho thấy hành chính và in ấn tổ chức frontier và biển. **Case 7** thử khung ấy trong Mesoamerica và Andes với tribute và ecology.
-
 ## Trường hợp (case / 사례) 6 — East Asia: bureaucracy, print, frontier và biển
 
 China, Korea, Japan và các cộng đồng vùng biển/biên giới chia sẻ chữ viết, kỹ thuật, thương mại và religious circulation nhưng có trạng thái (state / 상태) formation khác nhau. Bureaucratic examination, land tax, military frontier, maritime ban/opening, silver luồng (flow / 흐름) và household registration tạo đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 
 Korea hữu ích như trường hợp (case / 사례) về một bán đảo nằm giữa continental empire, maritime Japan và cục bộ (local / 로컬) agrarian trạng thái (state / 상태); Nhật Bản cho thấy island geography không ngăn selective borrowing; Trung Hoa cho thấy quy mô nội địa lớn có thể vừa giảm vừa tăng phụ thuộc vào biển. Xem [Korean History](../korean_history/README.md) để đi sâu chronology và institutions.
-
-> **Nối mạch:** Case 6 cho quy tắc về bureaucracy, print và frontier; Case 7 kiểm tra khi đô thị, tribute và ecology có cấu hình khác. **Case 8** chuyển sang industrialization ngoài Britain.
 
 ## Trường hợp (case / 사례) 7 — Mesoamerica và Andes: đô thị, tribute và ecology
 
@@ -100,8 +88,6 @@ ecological complementarity → labor/tribute → storage/road
 
 Conquest châu Âu dựa trên Indigenous alliances, disease, steel, horses, siege và political fracture cùng lúc. “Spanish victory” không phải bằng chứng rằng một công nghệ đơn lẻ quyết định toàn bộ.
 
-> **Nối mạch:** Case 7 nhấn mạnh ecology và tribute như cơ chế tổ chức đô thị; Case 8 kiểm tra industrialization khi không có cùng đường đi của Britain. **Cách dùng case study** sau đó biến các khác biệt thành phép kiểm tra.
-
 ## Trường hợp (case / 사례) 8 — Industrialization ngoài Britain
 
 Britain cung cấp một đường dẫn (path / 경로) cụ thể, không phải template. Germany dựa vào chemistry, bank–industry và rail; Japan kết hợp trạng thái (state / 상태) procurement, education và selective technology transfer; Russia và Ottoman territories chịu ràng buộc (constraint / 제약조건) về finance, land, war và foreign capital; thuộc địa thường bị đẩy vào raw-material specialization.
@@ -112,8 +98,6 @@ So sánh theo bốn câu hỏi:
 2. Nhà nước có thể bảo hộ, đầu tư và đào tạo đến đâu?
 3. Labor mobility và coercion phân phối chi phí thế nào?
 4. thị trường (market / 시장) truy cập (access / 접근) thuộc về domestic bên tiêu thụ (consumer / 소비자) hay imperial mạng (network / 네트워크)?
-
-> **Nối mạch:** Sau Case 8, cách dùng case study giữ tiêu chí, đổi bối cảnh và ghi rõ nơi mô hình không còn áp dụng; so sánh vì vậy kiểm tra cơ chế chứ không xếp hạng nền văn minh.
 
 ## Cách dùng trường hợp (case / 사례) study
 

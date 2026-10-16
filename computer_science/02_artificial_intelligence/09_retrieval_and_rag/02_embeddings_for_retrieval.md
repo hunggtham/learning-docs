@@ -45,14 +45,14 @@ Huấn luyện (training / 학습) nên đưa query-document positive pair kiể
 
 ## Pooling
 
-Transformer tạo đơn vị từ (token / 토큰) representations. Để có one véc-tơ (vector / 벡터) cho whole văn bản (text / 텍스트), encoder cần pooling:
+Transformer tạo token (토큰) representations. Để có one véc-tơ (vector / 벡터) cho whole văn bản (text / 텍스트), encoder cần pooling:
 
-- CLS đơn vị từ (token / 토큰);
+- CLS token (토큰);
 - mean pooling;
 - weighted pooling;
 - learned pooling.
 
-Pooling chiến lược (strategy / 전략) ảnh hưởng retrieval chất lượng (quality / 품질). Mean pooling simple nhưng có thể dilute key đơn vị từ (token / 토큰) trong long chunk.
+Pooling chiến lược (strategy / 전략) ảnh hưởng retrieval chất lượng (quality / 품질). Mean pooling simple nhưng có thể dilute key token (토큰) trong long chunk.
 
 Pooling giữ lại một vector cho chunk, còn normalization làm score giữa các vector ổn định hơn khi mô hình được huấn luyện theo giả định tương ứng.
 

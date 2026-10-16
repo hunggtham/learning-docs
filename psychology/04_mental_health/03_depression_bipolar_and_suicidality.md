@@ -41,8 +41,6 @@ Tệp (file / 파일) này được giữ làm **tính tương thích (compatibi
 
 Chapter này chỉ dùng prevention-oriented content và không chứa phương thức (method / 메서드) details.
 
-> **Nối mạch:** Trong **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map**, **Tại sao phải tách?** nối từ **Chuẩn gốc (canonical / 정본) chapters** sang **Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tại sao phải tách?
 
 Ba lĩnh vực (domain / 도메인) trên liên quan nhau nhưng không đồng nhất:
@@ -63,8 +61,6 @@ Gộp chúng vào một chapter dễ tạo ba lỗi:
 1. xem suicidality như symptom riêng của depression;
 2. bỏ sót bipolar course khi chỉ nhìn snapshot depressed mood;
 3. biến rủi ro (risk / 위험) assessment thành một checklist của diagnosis.
-
-> **Nối mạch:** Ở chặng này của **Depression, bipolar và suicidality — tính tương thích (compatibility / 호환성) map**, **Kết nối** nối từ **Tại sao phải tách?** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối
 

@@ -8,8 +8,6 @@ Pha (phase / 상) là một trạng thái vĩ mô có cấu trúc và tính ch�
 
 Một chuyển pha xảy ra khi trạng thái cân bằng tối ưu của hệ thay đổi khi nhiệt độ, áp suất, trường ngoài hoặc một tham số điều khiển khác đi qua một miền nhất định.
 
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Vai trò của thế nhiệt động lực học** nối từ **Pha là gì?** sang **Nhiệt ẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vai trò của thế nhiệt động lực học
 
 Ở nhiệt độ và áp suất cố định, hệ cân bằng ưu tiên trạng thái làm giảm năng lượng tự do Gibbs
@@ -25,8 +23,6 @@ Hai pha có thể cùng tồn tại khi thế hóa học của chúng bằng nha
 ```
 
 Vì `\mu` chính là năng lượng tự do Gibbs trên mỗi hạt trong một hệ một thành phần, đường đồng tồn tại pha trên giản đồ `P-T` là nơi hai pha có cùng “chi phí nhiệt động lực học”.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Nhiệt ẩn** nối từ **Vai trò của thế nhiệt động lực học** sang **Phương trình Clausius–Clapeyron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt ẩn
 
@@ -45,8 +41,6 @@ L=T\Delta S.
 ```
 
 Do đó nhiệt ẩn liên hệ trực tiếp với bước nhảy entropy giữa hai pha.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Phương trình Clausius–Clapeyron** nối từ **Nhiệt ẩn** sang **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Clausius–Clapeyron
 
@@ -71,15 +65,11 @@ Tích phân khi `L` gần hằng số cho
 
 Quan hệ này giải thích vì sao áp suất hơi bão hòa tăng rất nhanh theo nhiệt độ.
 
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?** nối từ **Phương trình Clausius–Clapeyron** sang **Điểm ba và điểm tới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao nồi áp suất làm thức ăn chín nhanh hơn?
 
 Nước sôi khi áp suất hơi bão hòa bằng áp suất môi trường. Tăng áp suất bên ngoài làm nhiệt độ sôi tăng. Nước trong nồi áp suất có thể đạt nhiệt độ cao hơn `100°C`, tăng tốc nhiều quá trình truyền nhiệt và phản ứng hóa học trong thực phẩm.
 
 Ở vùng núi cao, áp suất khí quyển thấp hơn nên nước sôi ở nhiệt độ thấp hơn và thời gian nấu có thể dài hơn.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Điểm ba và điểm tới hạn** nối từ **Vì sao nồi áp suất làm thức ăn chín nhanh hơn?** sang **Chuyển pha bậc nhất và chuyển pha liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điểm ba và điểm tới hạn
 
@@ -89,8 +79,6 @@ Nước sôi khi áp suất hơi bão hòa bằng áp suất môi trường. Tă
 
 Khái niệm điểm tới hạn quan trọng vì nó cho thấy chuyển pha không phải lúc nào cũng là một “bước nhảy sắc nét” kiểu nóng chảy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Chuyển pha bậc nhất và chuyển pha liên tục** nối từ **Điểm ba và điểm tới hạn** sang **Tham số trật tự**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển pha bậc nhất và chuyển pha liên tục
 
 Trong chuyển pha bậc nhất, một đạo hàm bậc nhất của thế nhiệt động như entropy hoặc thể tích có bước nhảy. Nhiệt ẩn khác không.
@@ -98,8 +86,6 @@ Trong chuyển pha bậc nhất, một đạo hàm bậc nhất của thế nhi�
 Trong chuyển pha liên tục, tham số trật tự thay đổi liên tục nhưng độ nhạy của hệ có thể tăng mạnh hoặc phân kỳ trong giới hạn nhiệt động.
 
 Ví dụ điển hình là chuyển pha sắt từ tại nhiệt độ Curie.
-
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Tham số trật tự** nối từ **Chuyển pha bậc nhất và chuyển pha liên tục** sang **Độ dài tương quan và hành vi tới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tham số trật tự
 
@@ -119,8 +105,6 @@ Khi `T>T_c`, hệ số của `M^2` dương và cực tiểu nằm tại `M=0`. K
 
 Mô hình này minh họa cách phá vỡ đối xứng tự phát (spontaneous symmetry breaking) có thể tạo pha mới.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Độ dài tương quan và hành vi tới hạn** nối từ **Tham số trật tự** sang **Mầm pha và năng lượng bề mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ dài tương quan và hành vi tới hạn
 
 Gần điểm tới hạn, thăng giáng ở những vùng rất xa nhau có thể trở nên tương quan. Độ dài tương quan `\xi` tăng mạnh và có thể tuân dạng
@@ -132,8 +116,6 @@ Gần điểm tới hạn, thăng giáng ở những vùng rất xa nhau có th�
 Nhiều đại lượng tuân các luật lũy thừa với số mũ tới hạn (critical exponents).
 
 Điều đặc biệt là các hệ vi mô rất khác nhau có thể chia sẻ cùng số mũ tới hạn. Đây là hiện tượng phổ quát (universality), một trong những ý tưởng sâu của vật lý thống kê.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Mầm pha và năng lượng bề mặt** nối từ **Độ dài tương quan và hành vi tới hạn** sang **Dẫn nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mầm pha và năng lượng bề mặt
 
@@ -154,8 +136,6 @@ r_c=\frac{2\gamma}{\Delta g}.
 Mầm nhỏ hơn `r_c` thường co lại; lớn hơn `r_c` có thể tiếp tục phát triển.
 
 Điều này giải thích hiện tượng quá lạnh, quá nhiệt và vì sao bụi hay khuyết tật bề mặt có thể hỗ trợ tạo mầm.
-
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Dẫn nhiệt** nối từ **Mầm pha và năng lượng bề mặt** sang **Điện trở nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dẫn nhiệt
 
@@ -189,8 +169,6 @@ t_{diff}\sim\frac{L^2}{\alpha}.
 
 Vì phụ thuộc `L^2`, làm lạnh một vật dày gấp đôi có thể mất thời gian lớn hơn nhiều chứ không chỉ gấp đôi.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Điện trở nhiệt** nối từ **Dẫn nhiệt** sang **Đối lưu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện trở nhiệt
 
 Với tấm phẳng dày `L`, diện tích `A`, dẫn nhiệt ổn định một chiều:
@@ -213,8 +191,6 @@ Dòng nhiệt khi đó gần
 
 Cấu trúc toán học giống mạch điện trở vì cả hai là bài toán dòng tuyến tính do chênh thế điều khiển.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Đối lưu** nối từ **Điện trở nhiệt** sang **Các số vô thứ nguyên trong truyền nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đối lưu
 
 Đối lưu kết hợp chuyển động chất lưu với truyền năng lượng. Trong kỹ thuật thường dùng
@@ -226,8 +202,6 @@ Cấu trúc toán học giống mạch điện trở vì cả hai là bài toán
 `h` không phải hằng số vật liệu cơ bản. Nó phụ thuộc vận tốc dòng, hình học, tính chất chất lưu và trạng thái lớp biên.
 
 Đối lưu cưỡng bức dùng quạt hoặc bơm. Đối lưu tự nhiên xuất hiện do chênh lệch mật độ trong trường hấp dẫn.
-
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Các số vô thứ nguyên trong truyền nhiệt** nối từ **Đối lưu** sang **Bức xạ nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các số vô thứ nguyên trong truyền nhiệt
 
@@ -251,8 +225,6 @@ Số Rayleigh kết hợp độ nổi và khuếch tán để đánh giá khả 
 
 Các số này cho phép phân loại chế độ truyền nhiệt mà không phụ thuộc hệ đơn vị.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Bức xạ nhiệt** nối từ **Các số vô thứ nguyên trong truyền nhiệt** sang **Định luật Kirchhoff về bức xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bức xạ nhiệt
 
 Một vật đen lý tưởng phát thông lượng năng lượng
@@ -269,15 +241,11 @@ P=\varepsilon\sigma A(T^4-T_{env}^4).
 
 Bức xạ không cần môi trường vật chất, vì vậy trong chân không nó trở thành cơ chế trao đổi nhiệt quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Định luật Kirchhoff về bức xạ** nối từ **Bức xạ nhiệt** sang **Phổ vật đen và sự ra đời của lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Định luật Kirchhoff về bức xạ
 
 Ở cân bằng nhiệt, khả năng hấp thụ và phát xạ tại cùng bước sóng và góc liên hệ với nhau. Một vật hấp thụ tốt ở một dải phổ cũng có xu hướng phát tốt ở dải đó khi ở cân bằng.
 
 Điều này nối nhiệt động lực học với điện từ học và tính chất quang học của vật liệu.
-
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Phổ vật đen và sự ra đời của lượng tử** nối từ **Định luật Kirchhoff về bức xạ** sang **Bộ trao đổi nhiệt và hiệu suất thực tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ vật đen và sự ra đời của lượng tử
 
@@ -290,8 +258,6 @@ E=nh\nu.
 ```
 
 Từ đó thu được phổ phù hợp thực nghiệm. Đây là một trong những bước mở đầu của cơ học lượng tử.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Bộ trao đổi nhiệt và hiệu suất thực tế** nối từ **Phổ vật đen và sự ra đời của lượng tử** sang **Thermal runaway**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ trao đổi nhiệt và hiệu suất thực tế
 
@@ -308,8 +274,6 @@ junction chip
 
 Mỗi bước có điện trở nhiệt riêng. Tối ưu một thành phần không đảm bảo toàn chuỗi tốt nếu nút thắt nằm ở giao diện khác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Thermal runaway** nối từ **Bộ trao đổi nhiệt và hiệu suất thực tế** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thermal runaway
 
 Nếu một thiết bị tiêu tán nhiều công suất hơn khi nhiệt độ tăng, ta có phản hồi dương:
@@ -323,15 +287,11 @@ nhiệt độ tăng
 
 Nếu khả năng tản nhiệt không đủ, hệ có thể chạy vào trạng thái mất ổn định nhiệt. Khái niệm này xuất hiện trong transistor, pin và nhiều hệ phản ứng hóa học.
 
-> **Nối mạch:** Trong **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thermal runaway** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển pha là sự thay đổi cấu trúc cân bằng của toàn hệ, còn truyền nhiệt là cách năng lượng di chuyển giữa các vùng. Nhiệt độ không phải thước đo duy nhất của năng lượng: trong chuyển pha, năng lượng có thể thay đổi cấu hình vi mô mà không làm nhiệt độ đổi đáng kể.
 
 Gần điểm tới hạn, chi tiết vi mô có thể trở nên ít quan trọng hơn cấu trúc thang lớn và tính đối xứng, dẫn tới phổ quát.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -350,8 +310,6 @@ Màu nhìn thấy không đủ để kết luận toàn bộ tính chất bức 
 ### “Mọi chuyển pha đều có nhiệt ẩn”
 
 Không. Chuyển pha liên tục có thể không có nhiệt ẩn nhưng có thăng giáng và độ nhạy rất mạnh gần điểm tới hạn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và truyền nhiệt: năng lượng ẩn, đối lưu, bức xạ và hành vi tới hạn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

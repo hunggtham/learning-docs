@@ -32,8 +32,6 @@ Cấu trúc thứ hai đóng góp ít hơn nhưng làm nổi bật sự phân c�
 
 Cặp electron tự do trên oxygen lại làm oxygen có tính cơ sở (base / 기반) và ái nhân đối với proton hoặc acid Lewis.
 
-> **Nối mạch:** Polarized C=O makes carbon electrophilic; nucleophile attack changes geometry from trigonal planar toward tetrahedral, and aldehydes usually react faster than ketones because of steric/electronic effects.
-
 ## Thay đổi hình học khi nucleophile tấn công
 
 Carbonyl carbon ban đầu gần tam giác phẳng, tương ứng môi trường sp2. Khi nucleophile tấn công, nó chuyển dần về hình học tứ diện.
@@ -41,8 +39,6 @@ Carbonyl carbon ban đầu gần tam giác phẳng, tương ứng môi trường
 Thay đổi hình học này có ý nghĩa lập thể. Nếu carbonyl carbon là **tiền đối quang (prochiral)**, nucleophile có thể tấn công từ mặt Re hoặc Si và tạo một tâm lập thể mới.
 
 Enzyme và chất xúc tác đối quang khai thác tính chọn lọc theo mặt này để tạo sản phẩm giàu một enantiomer.
-
-> **Nối mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** nối từ **Thay đổi hình học khi nucleophile tấn công** sang **Khử bằng hydride**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn
 
@@ -70,8 +66,6 @@ proton hóa / xử lý sau phản ứng
 
 Trong môi trường giàu nucleophile hoặc cơ sở (base / 기반), nucleophile thường tấn công trước. Trong xúc tác acid, oxygen carbonyl được proton hóa trước, làm hạ năng lượng LUMO ái điện và khiến carbon phản ứng mạnh hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Khử bằng hydride** nối từ **Aldehyde và ketone — vì sao aldehyde thường phản ứng mạnh hơn** sang **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khử bằng hydride
 
 Thuốc thử hydride đưa mật độ electron tương đương \(H^-\) vào carbonyl carbon.
@@ -81,8 +75,6 @@ NaBH4 tương đối nhẹ và thường khử aldehyde/ketone. LiAlH4 mạnh h�
 Khử aldehyde cho alcohol bậc một; khử ketone cho alcohol bậc hai.
 
 Về cơ chế, đây là cộng ái nhân của hydride rồi proton hóa.
-
-> **Nối mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, sau nội dung của **Khử bằng hydride**, **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tạo cyanohydrin** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C
 
@@ -103,8 +95,6 @@ Biến đổi này mạnh vì tạo một liên kết C–C mới. Loại alcoho
 - ketone → alcohol bậc ba.
 
 Tuy nhiên các thuốc thử này cũng là cơ sở (base / 기반) mạnh, nên nước, alcohol, acid và các nhóm có proton dễ tách sẽ phá hủy chúng. Tính tương thích nhóm chức vì vậy là một phần của thiết kế cơ chế.
-
-> **Nối mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Tạo cyanohydrin** nối từ **Cộng cơ kim — carbonyl như trung tâm xây dựng liên kết C–C** sang **Liên hệ sinh học: hemiacetal vòng trong đường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo cyanohydrin
 
@@ -136,8 +126,6 @@ Acetal là nhóm bảo vệ carbonyl hữu ích vì tương đối bền trong n
 
 Đây là một chiến lược tổng hợp điển hình: tạm thời biến một nhóm phản ứng mạnh thành nhóm tương thích hơn với bước tiếp theo, sau đó khôi phục lại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Liên hệ sinh học: hemiacetal vòng trong đường** nối từ **Tạo cyanohydrin** sang **Amination khử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ sinh học: hemiacetal vòng trong đường
 
 Glucose tồn tại chủ yếu ở các dạng hemiacetal vòng vì một nhóm OH nội phân tử tấn công carbonyl aldehyde của chính nó. Quá trình này tạo carbon anomer và các anomer α/β.
@@ -153,8 +141,6 @@ Amine bậc hai không thể tạo imine trung hòa theo cùng con đường vì
 Các phản ứng này được xúc tác acid nhưng cần độ acid phù hợp. Quá nhiều acid sẽ proton hóa hoàn toàn amine và làm mất tính ái nhân.
 
 Đây là ví dụ rõ của một điều kiện xúc tác tối ưu: acid giúp hoạt hóa carbonyl và tách nước, nhưng acid dư lại ức chế nucleophile.
-
-> **Nối mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Amination khử** nối từ **Liên hệ sinh học: hemiacetal vòng trong đường** sang **Cân bằng enol–keto**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amination khử
 
@@ -193,8 +179,6 @@ R-CH^- -C(=O)R' \leftrightarrow R-CH=C(O^-)R'
 Enolate không phải “chỉ là anion oxygen” hay “chỉ là carbanion”. Cả hai cấu trúc cộng hưởng đều có ý nghĩa.
 
 Vì đầu carbon vẫn mang tính ái nhân đáng kể, enolate là tác nhân quan trọng để tạo liên kết C–C.
-
-> **Nối mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Cân bằng enol–keto** nối từ **Amination khử** sang **Aldol chéo và bài toán chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng enol–keto
 
@@ -236,8 +220,6 @@ Hóa học aldol là một trong các họ tạo liên kết C–C quan trọng 
 
 Aldol nội phân tử có thể tạo vòng năm hoặc sáu cạnh hiệu quả vì sự nối sẵn trong cùng phân tử làm tăng xác suất gặp nhau và các kích thước vòng này có hình học thuận lợi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Aldol chéo và bài toán chọn lọc** nối từ **Cân bằng enol–keto** sang **Cộng Michael**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Aldol chéo và bài toán chọn lọc
 
 Nếu trộn hai carbonyl khác nhau đều có thể tạo enolate, nhiều tổ hợp nucleophile/electrophile có thể xuất hiện. Thiết kế tổng hợp vì vậy thường dùng một chất không tạo enolate hoặc tạo trước một enolate xác định.
@@ -257,8 +239,6 @@ Vì vậy nucleophile có thể tấn công carbonyl carbon — **cộng 1,2** �
 Nucleophile cứng và cơ sở (base / 기반) mạnh thường ưu tiên tấn công trực tiếp 1,2. Nucleophile mềm như organocuprate thường ưu tiên cộng 1,4.
 
 Điều này nối tư duy kiểu HSAB với chọn lọc vị trí trong hóa hữu cơ.
-
-> **Nối mạch:** Trong **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Cộng Michael** nối từ **Aldol chéo và bài toán chọn lọc** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng Michael
 
@@ -295,8 +275,6 @@ Không. Chúng khác vị trí proton và cách kết nối liên kết; chúng 
 ### “Tạo acetal chỉ là một bước alcohol cộng vào carbonyl”
 
 Không. Đây là cân bằng nhiều bước xúc tác acid gồm cộng, chuyển proton và tách nước.
-
-> **Nối mạch:** Ở chặng này của **Hóa học carbonyl — liên kết C=O phân cực như một nền tảng phản ứng**, **Mô hình tư duy** tổng hợp từ **Cộng Michael** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

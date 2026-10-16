@@ -18,15 +18,11 @@ Nếu hai luồng thực thi (thread / 스레드) xen kẽ các bước, một l
 
 Vấn đề không nằm ở “CPU chạy sai” mà ở việc thao tác (operation / 연산) lô-gic (logic / 논리) không atomic đối với thực thi (execution / 실행) xen kẽ.
 
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Atomic thao tác (operation / 연산)** nối từ **Race điều kiện (condition / 조건) xuất hiện như thế nào?** sang **Mutex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Atomic thao tác (operation / 연산)
 
 CPU cung cấp instruction atomic cho một số thao tác như compare-and-swap. thời gian chạy (runtime / 런타임) và thư viện dùng chúng để xây khóa (lock / 잠금) hoặc cấu trúc lock-free.
 
 Atomicity chỉ đảm bảo thao tác (operation / 연산) cụ thể không bị xen kẽ theo cách phá vỡ ngữ nghĩa (semantics / 의미론). Nó không tự động giải quyết mọi bất biến (invariant / 불변식) phức tạp giữa nhiều biến.
-
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Mutex** nối từ **Atomic thao tác (operation / 연산)** sang **Khi contention xảy ra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mutex
 
@@ -42,8 +38,6 @@ Nếu khóa (lock / 잠금) đang rảnh, thao tác có thể hoàn tất hoàn 
 
 Đây là điểm quan trọng: **khóa (lock / 잠금) không đồng nghĩa luôn vào kernel**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Khi contention xảy ra** nối từ **Mutex** sang **Futex là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi contention xảy ra
 
 Nếu luồng thực thi (thread / 스레드) B cố lấy mutex mà luồng thực thi (thread / 스레드) A đang giữ, B có hai lựa chọn tổng quát:
@@ -54,8 +48,6 @@ Nếu luồng thực thi (thread / 스레드) B cố lấy mutex mà luồng th�
 Spin phù hợp nếu chờ cực ngắn vì tránh scheduling overhead, nhưng lãng phí CPU nếu khóa (lock / 잠금) giữ lâu.
 
 Sleeping tiết kiệm CPU nhưng cần kernel hỗ trợ khối (block / 블록)/wakeup.
-
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Futex là gì?** nối từ **Khi contention xảy ra** sang **strace và futex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Futex là gì?
 
@@ -79,8 +71,6 @@ unlock
 
 Đây là lý do gọi là **fast userspace mutex**: fast đường dẫn (path / 경로) ở người dùng (user / 사용자) không gian (space / 공간), kernel chủ yếu xử lý slow đường dẫn (path / 경로).
 
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **strace và futex** nối từ **Futex là gì?** sang **Điều kiện (condition / 조건) variable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `strace` và futex
 
 Ứng dụng Java hoặc bản địa (native / 네이티브) nhiều luồng thực thi (thread / 스레드) thường xuất hiện:
@@ -94,8 +84,6 @@ futex(..., FUTEX_WAIT_PRIVATE, ...)
 Nếu CPU thấp và nhiều luồng thực thi (thread / 스레드) ngủ trong futex, hệ thống có thể đơn giản đang chờ công việc.
 
 Nếu độ trễ (latency / 지연 시간) cao và yêu cầu (request / 요청) threads đều chờ cùng khóa (lock / 잠금), đó lại có thể là contention bottleneck.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Điều kiện (condition / 조건) variable** nối từ **strace và futex** sang **Semaphore**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện (condition / 조건) variable
 
@@ -113,8 +101,6 @@ unlock
 
 Tại sao phải dùng `while` thay vì `if`? Vì wakeup không đảm bảo điều kiện vẫn đúng khi luồng thực thi (thread / 스레드) thực sự giành lại mutex; có thể có spurious wakeup hoặc luồng thực thi (thread / 스레드) khác đã thay đổi trạng thái (state / 상태).
 
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Semaphore** nối từ **Điều kiện (condition / 조건) variable** sang **Read-write khóa (lock / 잠금)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Semaphore
 
 Semaphore quản lý một bộ đếm permit thay vì quyền sở hữu (ownership / 소유권) một-một như mutex.
@@ -122,8 +108,6 @@ Semaphore quản lý một bộ đếm permit thay vì quyền sở hữu (owner
 Ví dụ giới hạn tối đa 20 tác vụ cùng dùng tài nguyên (resource / 자원).
 
 Semaphore phù hợp với sức chứa (capacity / 용량) điều khiển (control / 제어); mutex phù hợp với mutual exclusion. Dùng chúng như cùng một khái niệm sẽ làm lập luận (reasoning / 추론) sai.
-
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Read-write khóa (lock / 잠금)** nối từ **Semaphore** sang **Spinlock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Read-write khóa (lock / 잠금)
 
@@ -133,8 +117,6 @@ Nó có thể hữu ích khi read nhiều và ghi (write / 쓰기) ít, nhưng o
 
 Không chọn khóa (lock / 잠금) chỉ vì tên nghe “tối ưu hơn”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Spinlock** nối từ **Read-write khóa (lock / 잠금)** sang **Priority inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Spinlock
 
 Spinlock làm luồng thực thi (thread / 스레드) quay vòng kiểm tra khóa (lock / 잠금) thay vì ngủ.
@@ -143,8 +125,6 @@ Trong kernel, spinlock cần thiết ở ngữ cảnh (context / 맥락) không 
 
 Nếu khóa (lock / 잠금) holder bị scheduler deschedule trong khi waiter spin, hiệu quả có thể rất tệ.
 
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Priority inversion** nối từ **Spinlock** sang **Deadlock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Priority inversion
 
 Luồng thực thi (thread / 스레드) ưu tiên cao chờ khóa (lock / 잠금) do luồng thực thi (thread / 스레드) ưu tiên thấp giữ, trong khi luồng thực thi (thread / 스레드) ưu tiên trung bình liên tục chiếm CPU. Đây là **priority inversion**.
@@ -152,8 +132,6 @@ Luồng thực thi (thread / 스레드) ưu tiên cao chờ khóa (lock / 잠금
 Một số mutex/giao thức (protocol / 프로토콜) hỗ trợ priority inheritance để giảm vấn đề này.
 
 Chủ đề đặc biệt quan trọng với real-time các hệ thống (systems / 시스템들).
-
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Deadlock** nối từ **Priority inversion** sang **Livelock và starvation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deadlock
 
@@ -168,8 +146,6 @@ Bốn điều kiện Coffman thường được dùng để lập luận (reason
 
 Cách phòng tránh phổ biến là định nghĩa khóa (lock / 잠금) thứ tự (ordering / 순서) nhất quán.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Livelock và starvation** nối từ **Deadlock** sang **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Livelock và starvation
 
 Deadlock nghĩa không ai tiến triển vì chờ nhau.
@@ -180,8 +156,6 @@ Starvation nghĩa một luồng thực thi (thread / 스레드) hiếm khi hoặ
 
 Ba dạng thất bại (failure mode / 실패 모드) này khác nhau và cần quan sát khác nhau.
 
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)** nối từ **Livelock và starvation** sang **Tranh chấp khóa (lock contention / 잠금 경합) và scheduler**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)
 
 Ngay cả khi không có khóa (lock / 잠금) truyền thống, CPU/trình biên dịch (compiler / 컴파일러) có thể reorder bộ nhớ (memory / 메모리) thao tác (operation / 연산) theo quy tắc bộ nhớ (memory / 메모리) mô hình (model / 모델). Atomic thao tác (operation / 연산) và bộ nhớ (memory / 메모리) barrier đảm bảo thứ tự (ordering / 순서) cần thiết.
@@ -189,8 +163,6 @@ Ngay cả khi không có khóa (lock / 잠금) truyền thống, CPU/trình biê
 Đây là lý do concurrent programming không thể chỉ lập luận (reasoning / 추론) theo thứ tự mã nguồn (source code / 소스 코드) đơn giản.
 
 Java bộ nhớ (memory / 메모리) mô hình (model / 모델) che giấu nhiều chi tiết phần cứng nhưng vẫn yêu cầu `volatile`, synchronization hoặc concurrent primitives để thiết lập happens-before quan hệ (relation / 관계).
-
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Tranh chấp khóa (lock contention / 잠금 경합) và scheduler** nối từ **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)** sang **Thundering herd**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tranh chấp khóa (lock contention / 잠금 경합) và scheduler
 
@@ -208,15 +180,11 @@ thread chạy
 
 Nếu khóa (lock / 잠금) rất nóng, hệ thống có thể tốn thời gian vào wakeup/ngữ cảnh (context / 맥락) switch hơn nghiệp vụ (business / 비즈니스) công việc (work / 작업).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Thundering herd** nối từ **Tranh chấp khóa (lock contention / 잠금 경합) và scheduler** sang **Java monitor và Linux**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thundering herd
 
 Nếu một sự kiện (event / 이벤트) đánh thức rất nhiều waiter nhưng chỉ một hoặc ít luồng thực thi (thread / 스레드) có thể tiến triển, các luồng thực thi (thread / 스레드) còn lại thức dậy rồi lại ngủ, gây overhead.
 
 Kernel và thời gian chạy (runtime / 런타임) có kỹ thuật giảm herd, nhưng mẫu (pattern / 패턴) này vẫn xuất hiện trong máy chủ (server / 서버) thiết kế (design / 설계) và queueing.
-
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Java monitor và Linux** nối từ **Thundering herd** sang **Luồng thực thi (thread / 스레드) dump và futex bằng chứng (evidence / 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Java monitor và Linux
 
@@ -225,8 +193,6 @@ Java `synchronized`, `ReentrantLock`, `LockSupport.park()` và nhiều concurren
 Không nên giả định một Java monitor tương ứng trực tiếp một futex đơn giản, vì JVM có nhiều tối ưu hóa (optimization / 최적화) như biased/thin/heavyweight locking tùy phiên bản/thời gian chạy (runtime / 런타임).
 
 Nhưng ở tầng Linux, contention cuối cùng thường dẫn tới luồng thực thi (thread / 스레드) sleep/wakeup primitives.
-
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Java monitor và Linux** đặt vấn đề; **Luồng thực thi (thread / 스레드) dump và futex bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **Khóa (lock / 잠금) convoy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Luồng thực thi (thread / 스레드) dump và futex bằng chứng (evidence / 증거)
 
@@ -254,15 +220,11 @@ perf: CPU nóng ở đâu?
 strace: có futex wait/wake pattern gì?
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Luồng thực thi (thread / 스레드) dump và futex bằng chứng (evidence / 증거)** đặt vấn đề; **Khóa (lock / 잠금) convoy** đối chiếu bằng chứng, rồi **Blocking hàng đợi (queue / 큐) và luồng thực thi (thread / 스레드) pool** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Khóa (lock / 잠금) convoy
 
 Nếu nhiều luồng thực thi (thread / 스레드) xếp hàng sau một khóa (lock / 잠금) và mỗi lần chỉ một luồng thực thi (thread / 스레드) tiến triển, hệ thống có thể hình thành khóa (lock / 잠금) convoy. Khi khóa (lock / 잠금) holder bị chậm bởi I/O hoặc preemption, hàng đợi phía sau tăng mạnh.
 
 Đây là ví dụ tail độ trễ (latency / 지연 시간) có thể tăng dù CPU trung bình chưa 100%.
-
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Blocking hàng đợi (queue / 큐) và luồng thực thi (thread / 스레드) pool** nối từ **Khóa (lock / 잠금) convoy** sang **Lock-free không đồng nghĩa wait-free**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Blocking hàng đợi (queue / 큐) và luồng thực thi (thread / 스레드) pool
 
@@ -279,8 +241,6 @@ queue empty
 
 Nhưng nếu hàng đợi (queue / 큐) tăng liên tục, vấn đề nằm ở dịch vụ (service / 서비스) tỷ lệ (rate / 비율)/sức chứa (capacity / 용량) chứ không phải futex bản thân.
 
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Lock-free không đồng nghĩa wait-free** nối từ **Blocking hàng đợi (queue / 큐) và luồng thực thi (thread / 스레드) pool** sang **False sharing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lock-free không đồng nghĩa wait-free
 
 Lock-free thuật toán (algorithm / 알고리즘) bảo đảm hệ thống tổng thể có tiến triển theo định nghĩa nhất định, nhưng một luồng thực thi (thread / 스레드) cụ thể vẫn có thể starvation.
@@ -289,8 +249,6 @@ Wait-free mạnh hơn: mỗi thao tác (operation / 연산) hoàn thành trong s
 
 Đây là thuật ngữ tính đồng thời (concurrency / 동시성) chính xác, không nên dùng “lock-free = không bao giờ chờ”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **False sharing** nối từ **Lock-free không đồng nghĩa wait-free** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## False sharing
 
 Hai luồng thực thi (thread / 스레드) sửa hai biến lô-gic (logic / 논리) khác nhau nhưng nằm trên cùng CPU bộ nhớ đệm (cache / 캐시) line có thể gây bộ nhớ đệm (cache / 캐시) coherence traffic lớn.
@@ -298,8 +256,6 @@ Hai luồng thực thi (thread / 스레드) sửa hai biến lô-gic (logic / �
 Đây không phải tranh chấp khóa (lock contention / 잠금 경합) truyền thống nhưng có triệu chứng CPU/hiệu năng (performance / 성능) tương tự.
 
 `perf` và hardware counters có thể hỗ trợ điều tra tải công việc (workload / 워크로드) nâng cao.
-
-> **Nối mạch:** Trong **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Mô hình tư duy** tổng hợp từ **False sharing** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -319,8 +275,6 @@ wait queue / futex / scheduler
 
 Vì vậy muốn hiểu tranh chấp khóa (lock contention / 잠금 경합) phải nhìn cả **lô-gic (logic / 논리) đồng bộ của ứng dụng** và **trạng thái scheduling của Linux**.
 
-> **Nối mạch:** Ở chặng này của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“Mutex luôn là syscall.”** Fast đường dẫn (path / 경로) thường có thể xử lý hoàn toàn trong người dùng (user / 사용자) không gian (space / 공간).
@@ -332,8 +286,6 @@ Vì vậy muốn hiểu tranh chấp khóa (lock contention / 잠금 경합) ph�
 **“Nhiều luồng thực thi (thread / 스레드) hơn luôn tăng thông lượng (throughput / 처리량).”** Nếu dùng chung (shared / 공유) khóa (lock / 잠금) hoặc downstream là bottleneck, luồng thực thi (thread / 스레드) thêm chỉ tăng hàng đợi (queue / 큐)/ngữ cảnh (context / 맥락) switch.
 
 **“Lock-free nghĩa mọi luồng thực thi (thread / 스레드) luôn tiến triển ngay.”** Lock-free và wait-free có định nghĩa chặt chẽ khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng bộ hóa tiến trình/luồng, mutex, điều kiện (condition / 조건) variable và futex**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -22,23 +22,17 @@ Instruction Count phụ thuộc thuật toán (algorithm / 알고리즘), trình
 
 Một tối ưu hóa (optimization / 최적화) có thể giảm instruction count nhưng tăng bộ nhớ đệm (cache / 캐시) misses; kết quả cuối chỉ biết qua total thực thi (execution / 실행) thời gian (time / 시간) trên tải công việc (workload / 워크로드) đại diện.
 
-> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** tiếp nhận điểm tựa từ **CPU thời gian (time / 시간) và ba thành phần cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)
 
 Độ trễ (latency / 지연 시간) là thời gian hoàn thành một thao tác (operation / 연산); thông lượng (throughput / 처리량) là số operations trong một đơn vị thời gian. Pipelining có thể tăng thông lượng (throughput / 처리량) mà không giảm độ trễ (latency / 지연 시간) của từng instruction tương ứng.
 
 Máy chủ (server / 서버) kiến trúc (architecture / 아키텍처) thường tối ưu thông lượng (throughput / 처리량)/tính đồng thời (concurrency / 동시성), trong khi interactive UI nhạy với tail độ trễ (latency / 지연 시간). Không có một chỉ số (metric / 지표) hiệu năng (performance / 성능) duy nhất phù hợp mọi hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량)** xác định đầu vào; **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Amdahl và giới hạn speedup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls
 
 Instructions per cycle (IPC) là inverse-style chỉ số (metric / 지표) của CPI trong một số ngữ cảnh (context / 맥락). Superscalar CPU có thể retire nhiều instructions mỗi cycle nếu dependencies và resources cho phép.
 
 Trượt bộ nhớ đệm (cache miss / 캐시 미스), branch misprediction và dữ liệu (data / 데이터) phụ thuộc (dependency / 의존성) tạo stalls. Out-of-order thực thi (execution / 실행) cố lấp bubbles bằng independent instructions, nhưng không thể vượt true dependencies hoặc độ trễ (latency / 지연 시간) chuỗi (chain / 사슬) vô hạn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **IPC, CPI và chuỗi xử lý (pipeline / 파이프라인) stalls** đã nêu tiêu chí phân biệt, còn **Amdahl và giới hạn speedup** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Amdahl và giới hạn speedup
 
@@ -51,8 +45,6 @@ Speedup = \frac{1}{(1-p)+p/s}
 Nếu chỉ 20% thời gian chạy (runtime / 런타임) được tối ưu vô hạn, speedup tối đa vẫn chỉ `1/0.8 = 1.25×`.
 
 Ý nghĩa kỹ thuật (engineering / 엔지니어링): profile trước khi tối ưu. Tối ưu phần hiếm không cứu total độ trễ (latency / 지연 시간).
-
-> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Amdahl và giới hạn speedup** đã nêu tiêu chí phân biệt, còn **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Benchmarking đúng nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)
 
@@ -68,8 +60,6 @@ Thermal thiết kế (design / 설계) Power không phải chính xác (exact / 
 
 Hiệu năng (performance / 성능) per watt trở thành chỉ số (metric / 지표) quan trọng trong datacenter và battery-powered các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Benchmarking đúng nghĩa** tiếp nhận điểm tựa từ **Power, năng lượng (energy / 에너지) và thermal các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Roofline intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Benchmarking đúng nghĩa
 
 Benchmark phải đại diện tải công việc (workload / 워크로드) thật. Microbenchmark đo một cơ chế (mechanism / 메커니즘) nhỏ nhưng dễ bị trình biên dịch (compiler / 컴파일러) tối ưu hóa (optimization / 최적화), warm caches, branch prediction hoặc đo lường (measurement / 측정) overhead làm sai.
@@ -78,15 +68,11 @@ Các nguyên tắc quan trọng gồm warm-up khi thời gian chạy (runtime / 
 
 Tail percentiles như p95/p99 quan trọng cho máy chủ (server / 서버) độ trễ (latency / 지연 시간) vì average có thể che long tail.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Roofline intuition** tiếp nhận điểm tựa từ **Benchmarking đúng nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Roofline intuition
 
 Một computation có thể compute-bound hoặc memory-bandwidth-bound. Arithmetic intensity đo lượng computation trên mỗi byte bộ nhớ (memory / 메모리) traffic. Nếu intensity thấp, tăng FLOPS peak không giúp nhiều; bộ nhớ (memory / 메모리) bandwidth là ceiling.
 
 Mô hình tư duy (mental model / 사고 모델) này giải thích tại sao ma trận (matrix / 행렬) kernels, vectorization và dữ liệu (data / 데이터) bố cục (layout / 레이아웃) quan trọng trong numerical workloads.
-
-> **Chuyển mạch:** Trong **Hiệu năng (performance / 성능), power và đo lường hardware**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Roofline intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -96,13 +82,9 @@ Mô hình tư duy (mental model / 사고 모델) này giải thích tại sao ma
 
 **“Parallelize càng nhiều càng tốt.”** Synchronization, communication và serial fraction giới hạn speedup.
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hiệu năng (performance / 성능) là thuộc tính (property / 속성) của một đường dẫn (path / 경로) qua nhiều bottlenecks. Đừng hỏi “thành phần (component / 컴포넌트) nào nhanh”, hãy hỏi “tải công việc (workload / 워크로드) nào, chỉ số (metric / 지표) nào, bottleneck ở đâu, và tối ưu hóa (optimization / 최적화) chuyển bottleneck sang đâu”.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu năng (performance / 성능), power và đo lường hardware**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

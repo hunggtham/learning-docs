@@ -26,8 +26,6 @@ Ba nguyên tố có cùng mô-típ `ns¹` ở lớp hóa trị, vì vậy đều
 
 Tính tuần hoàn vì thế không phải một quy tắc được đặt lên bảng tuần hoàn từ bên ngoài; nó **nổi lên từ sự lặp lại của cấu trúc electron hóa trị**.
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Chu kỳ, nhóm và các khối s, p, d, f** nối từ **Vì sao tính chất hóa học lặp lại theo chu kỳ?** sang **Bốn hiệu ứng nền tạo ra phần lớn xu hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chu kỳ, nhóm và các khối s, p, d, f
 
 Một **chu kỳ (period / 주기)** là hàng ngang. Khi đi từ trái sang phải, số hiệu nguyên tử tăng và electron được thêm vào các trạng thái thuộc cùng lớp chính hoặc các phân lớp có năng lượng liên quan gần nhau.
@@ -44,8 +42,6 @@ f-block → (n−2)f
 ```
 
 Do đó hình học của bảng tuần hoàn là một bản đồ trực quan của cấu hình electron.
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Bốn hiệu ứng nền tạo ra phần lớn xu hướng** nối từ **Chu kỳ, nhóm và các khối s, p, d, f** sang **Điện tích hạt nhân hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bốn hiệu ứng nền tạo ra phần lớn xu hướng
 
@@ -68,8 +64,6 @@ Electron ở lớp có \(n\) lớn hơn thường có phân bố xác suất m�
 Electron `s` có mật độ gần hạt nhân lớn hơn electron `p` cùng lớp, còn `d` và `f` thường xuyên thấu kém hơn. Điều này làm mức che chắn và năng lượng obitan không thể được mô tả bằng một mũi tên đơn giản.
 
 Xu hướng quan sát được là kết quả cạnh tranh giữa cả bốn hiệu ứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Điện tích hạt nhân hiệu dụng** nối từ **Bốn hiệu ứng nền tạo ra phần lớn xu hướng** sang **Quy tắc Slater như một bước định lượng gần đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện tích hạt nhân hiệu dụng
 
@@ -95,8 +89,6 @@ Zeff tăng
 → độ âm điện thường tăng
 ```
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Quy tắc Slater như một bước định lượng gần đúng** nối từ **Điện tích hạt nhân hiệu dụng** sang **Bán kính nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc Slater như một bước định lượng gần đúng
 
 Nếu cần ước lượng \(Z_{eff}\) rõ hơn, **quy tắc Slater (Slater's rules)** gán các hệ số che chắn gần đúng cho electron ở các lớp khác nhau.
@@ -108,8 +100,6 @@ Mục đích của quy tắc không phải tạo một giá trị tuyệt đối
 - electron `d` và `f` có hành vi che chắn khác các electron nhóm chính.
 
 Điều này đặc biệt hữu ích khi giải thích lanthanide contraction và xu hướng kim loại chuyển tiếp.
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Bán kính nguyên tử** nối từ **Quy tắc Slater như một bước định lượng gần đúng** sang **Bán kính ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bán kính nguyên tử
 
@@ -131,8 +121,6 @@ trong một nhóm:   tăng từ trên → dưới
 Trong một chu kỳ, \(Z_{eff}\) tăng làm đám mây electron co lại.
 
 Xuống một nhóm, electron hóa trị chuyển sang lớp có \(n\) lớn hơn nên phân bố xác suất mở rộng xa hơn, thường thắng hiệu ứng tăng điện tích hạt nhân.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Bán kính ion** nối từ **Bán kính nguyên tử** sang **Dãy đẳng electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bán kính ion
 
@@ -156,8 +144,6 @@ Anion thường lớn hơn nguyên tử trung hòa vì electron thêm vào làm 
 Cl^- > Cl
 \]
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Dãy đẳng electron** nối từ **Bán kính ion** sang **Năng lượng ion hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dãy đẳng electron
 
 Trong **dãy đẳng electron (isoelectronic series)**, các tiểu phần có cùng số electron.
@@ -178,8 +164,6 @@ O^{2-}>F^->Ne>Na^+>Mg^{2+}
 
 Đây là một trong những ví dụ tốt nhất để thấy \(Z_{eff}\) hoạt động trực tiếp.
 
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Năng lượng ion hóa** nối từ **Dãy đẳng electron** sang **Vì sao Be/B và N/O là ngoại lệ quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng ion hóa
 
 **Năng lượng ion hóa (ionization energy / 이온화 에너지)** là năng lượng cần để tách electron khỏi tiểu phần ở pha khí:
@@ -196,8 +180,6 @@ giảm từ trên → dưới
 ```
 
 Electron bị giữ càng chặt thì càng khó tách.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Vì sao Be/B và N/O là ngoại lệ quan trọng?** nối từ **Năng lượng ion hóa** sang **Năng lượng ion hóa liên tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao Be/B và N/O là ngoại lệ quan trọng?
 
@@ -235,8 +217,6 @@ phải ghép đôi một electron trong orbital p, làm lực đẩy electron–
 
 Những ngoại lệ này cho thấy **cấu hình phân lớp quan trọng ngang với \(Z_{eff}\)**.
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Năng lượng ion hóa liên tiếp** nối từ **Vì sao Be/B và N/O là ngoại lệ quan trọng?** sang **Ái lực electron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng ion hóa liên tiếp
 
 Sau khi tách electron đầu tiên, có thể tiếp tục tách electron thứ hai, thứ ba...
@@ -255,8 +235,6 @@ Hai lần ion hóa đầu lấy hai electron `3s`. Lần thứ ba phải phá l�
 
 Bước nhảy này giúp suy luận số electron hóa trị và giải thích vì sao Mg thường tạo `Mg²⁺` chứ không phải `Mg³⁺`.
 
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Ái lực electron** nối từ **Năng lượng ion hóa liên tiếp** sang **Vì sao chlorine có ái lực electron thuận lợi hơn fluorine trong một số quy ước?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ái lực electron
 
 **Ái lực electron (electron affinity / 전자 친화도)** liên quan tới biến đổi năng lượng khi nguyên tử khí nhận electron:
@@ -273,8 +251,6 @@ Halogen có xu hướng nhận electron thuận lợi vì cấu hình `np⁵` ch
 
 Khí hiếm thường không thuận lợi vì electron mới phải đi vào lớp có năng lượng cao hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Vì sao chlorine có ái lực electron thuận lợi hơn fluorine trong một số quy ước?** nối từ **Ái lực electron** sang **Độ âm điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao chlorine có ái lực electron thuận lợi hơn fluorine trong một số quy ước?
 
 Fluorine rất nhỏ. Electron mới phải đi vào orbital `2p` có mật độ electron đã cao, nên lực đẩy electron–electron đáng kể.
@@ -282,8 +258,6 @@ Fluorine rất nhỏ. Electron mới phải đi vào orbital `2p` có mật đ�
 Chlorine có orbital `3p` rộng hơn, giúp electron thêm vào ít chịu lực đẩy cục bộ hơn.
 
 Đây là ví dụ quan trọng cho thấy “nhỏ hơn và âm điện hơn” không có nghĩa mọi đại lượng liên quan electron đều phải cực đại theo cùng một cách.
-
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Độ âm điện** nối từ **Vì sao chlorine có ái lực electron thuận lợi hơn fluorine trong một số quy ước?** sang **Độ âm điện phụ thuộc môi trường hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ âm điện
 
@@ -312,8 +286,6 @@ chênh lệch độ âm điện
 
 Tính ion và cộng hóa trị là một phổ liên tục, không phải hai hộp tách biệt tuyệt đối.
 
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Độ âm điện phụ thuộc môi trường hóa học** nối từ **Độ âm điện** sang **Tính kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ âm điện phụ thuộc môi trường hóa học
 
 Các bảng độ âm điện thường cho một giá trị đại diện, nhưng khả năng hút electron thực tế của nguyên tử phụ thuộc trạng thái oxy hóa, lai hóa và môi trường liên kết.
@@ -321,8 +293,6 @@ Các bảng độ âm điện thường cho một giá trị đại diện, như
 Ví dụ carbon `sp` giữ electron gần hạt nhân hơn carbon `sp³`, góp phần làm C–H của alkyne đầu mạch acid hơn C–H của alkane.
 
 Do đó không nên dùng một con số độ âm điện như lời giải đầy đủ cho mọi vấn đề liên kết.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Tính kim loại** nối từ **Độ âm điện phụ thuộc môi trường hóa học** sang **Tính acid–cơ sở (base / 기반) của oxide thay đổi theo bảng tuần hoàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính kim loại
 
@@ -338,8 +308,6 @@ Kim loại có xu hướng:
 Phi kim thường giữ hoặc nhận electron mạnh hơn và có xu hướng tạo liên kết cộng hóa trị phân cực hoặc anion.
 
 Tính kim loại là biểu hiện tổng hợp của năng lượng ion hóa, độ âm điện, cấu trúc vùng và kiểu liên kết.
-
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Tính acid–cơ sở (base / 기반) của oxide thay đổi theo bảng tuần hoàn** nối từ **Tính kim loại** sang **Trạng thái oxy hóa và xu hướng theo nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính acid–cơ sở (base / 기반) của oxide thay đổi theo bảng tuần hoàn
 
@@ -380,8 +348,6 @@ Trend này phản ánh việc liên kết M–O chuyển dần từ ion hơn san
 
 Đây là cầu nối trực tiếp sang [Hóa học nhóm chính](../10_inorganic_chemistry/01_main_group_chemistry.md).
 
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Trạng thái oxy hóa và xu hướng theo nhóm** nối từ **Tính acid–cơ sở (base / 기반) của oxide thay đổi theo bảng tuần hoàn** sang **Hiệu ứng cặp trơ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái oxy hóa và xu hướng theo nhóm
 
 Ở nhóm chính, trạng thái oxy hóa thường liên hệ với số electron hóa trị.
@@ -402,8 +368,6 @@ Sn     → +2 và +4 đều quan trọng
 Pb     → +2 thường ổn định hơn tương đối so với +4
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Hiệu ứng cặp trơ** nối từ **Trạng thái oxy hóa và xu hướng theo nhóm** sang **Dị thường của chu kỳ 2**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng cặp trơ
 
 **Hiệu ứng cặp trơ (inert-pair effect)** mô tả xu hướng cặp electron `ns²` ở các nguyên tố nặng khối p ít tham gia liên kết hơn dự đoán đơn giản.
@@ -418,8 +382,6 @@ Nguyên nhân không phải chỉ một hiệu ứng duy nhất. Nó liên quan 
 Kết quả là các trạng thái oxy hóa thấp hơn thường được ổn định tương đối khi đi xuống một số nhóm p-block.
 
 Hiệu ứng này rất quan trọng trong hóa học Sn, Pb, Bi và Tl.
-
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Dị thường của chu kỳ 2** nối từ **Hiệu ứng cặp trơ** sang **Quan hệ đường chéo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dị thường của chu kỳ 2
 
@@ -440,8 +402,6 @@ Ví dụ:
 
 Đây là lý do không nên coi nguyên tố cùng nhóm là “bản sao lớn hơn” của nguyên tố đầu nhóm.
 
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Quan hệ đường chéo** nối từ **Dị thường của chu kỳ 2** sang **Kim loại chuyển tiếp: vì sao xu hướng ít đơn giản hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quan hệ đường chéo
 
 Một số cặp nguyên tố nằm chéo nhau trong bảng có tính chất giống nhau bất ngờ. Hiện tượng này gọi là **quan hệ đường chéo (diagonal relationship)**.
@@ -460,8 +420,6 @@ Li⁺ nhỏ hơn các cation kiềm khác nên có mật độ điện tích cao
 
 Đây là một quy tắc định tính, không phải sự tương đương hoàn toàn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Kim loại chuyển tiếp: vì sao xu hướng ít đơn giản hơn?** nối từ **Quan hệ đường chéo** sang **Bán kính kim loại chuyển tiếp thay đổi chậm trong một chu kỳ d**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kim loại chuyển tiếp: vì sao xu hướng ít đơn giản hơn?
 
 Ở khối d, electron mới chủ yếu đi vào `(n−1)d` trong khi orbital `ns` vẫn gần về năng lượng.
@@ -476,8 +434,6 @@ Hệ quả:
 
 Không nên áp dụng các mũi tên nhóm chính một cách máy móc cho khối d.
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Bán kính kim loại chuyển tiếp thay đổi chậm trong một chu kỳ d** nối từ **Kim loại chuyển tiếp: vì sao xu hướng ít đơn giản hơn?** sang **Co lanthanide**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bán kính kim loại chuyển tiếp thay đổi chậm trong một chu kỳ d
 
 Khi đi qua dãy chuyển tiếp, \(Z\) tăng nhưng electron mới đi vào orbital d bên trong lớp s ngoài.
@@ -485,8 +441,6 @@ Khi đi qua dãy chuyển tiếp, \(Z\) tăng nhưng electron mới đi vào orb
 Electron d che chắn không hoàn hảo nên \(Z_{eff}\) tăng, làm bán kính giảm ở phần đầu dãy. Tuy nhiên electron–electron repulsion và cấu hình d làm trend phẳng dần.
 
 Điều này góp phần giải thích vì sao nhiều kim loại chuyển tiếp cùng dãy có kích thước tương đối gần nhau, thuận lợi cho việc tạo hợp kim thay thế.
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Co lanthanide** nối từ **Bán kính kim loại chuyển tiếp thay đổi chậm trong một chu kỳ d** sang **Hiệu ứng tương đối tính ở nguyên tố nặng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Co lanthanide
 
@@ -499,8 +453,6 @@ Hiện tượng này gọi là **co lanthanide (lanthanide contraction)**.
 Một hệ quả quan trọng là cặp nguyên tố như Zr và Hf có bán kính rất giống nhau dù nằm ở hai chu kỳ khác nhau. Vì vậy hóa học của chúng giống nhau đáng kể và việc tách chúng khó.
 
 Co lanthanide cũng ảnh hưởng kích thước, mật độ và hóa học của nhiều nguyên tố sau dãy f.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Hiệu ứng tương đối tính ở nguyên tố nặng** nối từ **Co lanthanide** sang **Khả năng phản ứng không có một mũi tên chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng tương đối tính ở nguyên tố nặng
 
@@ -515,8 +467,6 @@ Nó góp phần giải thích nhiều tính chất nổi tiếng như:
 - độ bền tương đối của trạng thái oxy hóa thấp ở một số nguyên tố nặng.
 
 Đây là ví dụ rõ cho việc periodic trends cuối cùng bắt nguồn từ cơ học lượng tử và vật lý tương đối tính, không chỉ từ quy tắc hóa học kinh nghiệm.
-
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Khả năng phản ứng không có một mũi tên chung** nối từ **Hiệu ứng tương đối tính ở nguyên tố nặng** sang **Periodic trends và liên kết hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng phản ứng không có một mũi tên chung
 
@@ -535,8 +485,6 @@ dung môi nào?
 sản phẩm nào?
 nhiệt động và động học ra sao?
 ```
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, sau nội dung của **Khả năng phản ứng không có một mũi tên chung**, **Periodic trends và liên kết hóa học** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Periodic trends và acid–cơ sở (base / 기반)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Periodic trends và liên kết hóa học
 
@@ -562,8 +510,6 @@ polarizing power tăng
 
 Đây là nền cho quy tắc Fajans, HSAB và coordination chemistry.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Periodic trends và acid–cơ sở (base / 기반)** nối từ **Periodic trends và liên kết hóa học** sang **Periodic trends và redox**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Periodic trends và acid–cơ sở (base / 기반)
 
 Độ acid của hydride trong cùng một chu kỳ thường tăng khi nguyên tử trung tâm âm điện hơn.
@@ -580,8 +526,6 @@ về độ acid.
 
 Trend này cho thấy acid strength phải được suy từ **độ bền liên kết + độ ổn định cơ sở (base / 기반) liên hợp + solvation**, không chỉ từ độ âm điện.
 
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Periodic trends và redox** nối từ **Periodic trends và acid–cơ sở (base / 기반)** sang **Ví dụ suy luận: Na, Mg và Al**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Periodic trends và redox
 
 Trạng thái oxy hóa cao thường được ổn định tốt hơn bởi ligand rất âm điện như O và F.
@@ -591,8 +535,6 @@ Ví dụ Mn có thể đạt +7 trong permanganate, còn trạng thái cao của
 Trong môi trường khác, trạng thái oxy hóa thấp hơn có thể bền hơn.
 
 Do đó bảng tuần hoàn cho xu hướng, nhưng **môi trường hóa học quyết định speciation thực**.
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Periodic trends và redox** nêu quy tắc; **Ví dụ suy luận: Na, Mg và Al** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: C và Si** mở rộng hệ quả.
 
 ## Ví dụ suy luận: Na, Mg và Al
 
@@ -622,8 +564,6 @@ Al2O3 → lưỡng tính
 
 Chỉ trong ba nguyên tố đã thấy cấu hình electron, năng lượng ion hóa và acid–cơ sở (base / 기반) của oxide nối với nhau thành một câu chuyện thống nhất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Ví dụ suy luận: Na, Mg và Al** nêu quy tắc; **Ví dụ suy luận: C và Si** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: C và Si
 
 Carbon và silicon cùng nhóm 14 nhưng không hoàn toàn giống nhau.
@@ -633,8 +573,6 @@ Carbon nhỏ hơn, tạo liên kết π mạnh và dễ xây cấu trúc với C
 Silicon lớn hơn, liên kết π kém hiệu quả hơn nhưng Si–O rất bền, nên silica và silicate trở thành những cấu trúc mạng cực kỳ quan trọng.
 
 Đây là ví dụ cho việc “cùng nhóm” cho một khung dự đoán, nhưng kích thước orbital và năng lượng liên kết quyết định chi tiết.
-
-> **Nối mạch:** Trong **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Ví dụ suy luận: C và Si** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -661,8 +599,6 @@ Không. Reactivity phụ thuộc phản ứng cụ thể, sản phẩm, pha, dun
 ### “Mọi trend nhóm chính áp dụng được cho chuyển tiếp (transition / 전이) metals”
 
 Không. Orbital d gần nhau về năng lượng và nhiều trạng thái oxy hóa làm hóa học chuyển tiếp (transition / 전이) metals phức tạp hơn.
-
-> **Nối mạch:** Ở chặng này của **Bảng tuần hoàn và các xu hướng tuần hoàn**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

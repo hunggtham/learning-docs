@@ -22,15 +22,11 @@ tạo
 
 Nếu thiết kế chỉ giải quyết bước “lưu password ở đâu” mà không có rotation/revocation, hệ thống chưa có vòng đời (lifecycle / 생명주기) hoàn chỉnh.
 
-> **Nối mạch:** cơ chế trong **1. Secret vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **2. Không nên nhúng secret vào mã nguồn (source code / 소스 코드)** đưa dữ liệu và nguồn vào đúng điểm đó; **3. KMS là gì?** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## 2. Không nên nhúng secret vào mã nguồn (source code / 소스 코드)
 
 Secret nằm trong Git có thể tồn tại trong lịch sử lần ghi nhận (commit / 커밋) ngay cả khi tệp (file / 파일) hiện tại đã xóa. bản dựng (build / 빌드) log, CI sản phẩm tạo ra (artifact / 산출물), shell lịch sử (history / 이력) hoặc ảnh bộ chứa (container image / 컨테이너 이미지) tầng (layer / 계층) cũng có thể giữ bản sao.
 
 Do đó cần tách **mã nguồn** khỏi **vật liệu bí mật (secret material)**. ứng dụng (application / 애플리케이션) nhận secret thông qua secret manager, tải công việc (workload / 워크로드) định danh (identity / 식별자) hoặc triển khai (deployment / 배포) cơ chế (mechanism / 메커니즘) có kiểm soát.
-
-> **Nối mạch:** **2. Không nên nhúng secret vào mã nguồn (source code / 소스 코드)** đặt vấn đề; **3. KMS là gì?** kiểm tra bằng chứng, rồi **4. HSM là gì?** mở rộng hệ quả.
 
 ## 3. KMS là gì?
 
@@ -40,8 +36,6 @@ Ví dụ ứng dụng (application / 애플리케이션) có thể gửi dữ li
 
 Điểm quan trọng: KMS không loại bỏ trust. ứng dụng (application / 애플리케이션) vẫn cần quyền gọi KMS, và quyền đó trở thành một năng lực (capability / 역량) cần bảo vệ.
 
-> **Nối mạch:** **4. HSM là gì?** nối từ **3. KMS là gì?** sang **5. Envelope encryption**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. HSM là gì?
 
 **Mô-đun bảo mật phần cứng (Hardware security module, HSM)** là thiết bị/phần cứng chuyên dụng giữ key và thực hiện crypto thao tác (operation / 연산) trong ranh giới (boundary / 경계) được bảo vệ.
@@ -49,8 +43,6 @@ Ví dụ ứng dụng (application / 애플리케이션) có thể gửi dữ li
 Private key có thể không bao giờ rời HSM dưới dạng plaintext. Điều này đặc biệt quan trọng với gốc (root / 루트) CA key, signing key hoặc tài sản mật mã có impact rất lớn nếu bị lộ.
 
 HSM tăng assurance nhưng cũng tăng độ phức tạp (complexity / 복잡도), độ trễ (latency / 지연 시간), chi phí (cost / 비용) và operational phụ thuộc (dependency / 의존성).
-
-> **Nối mạch:** **5. Envelope encryption** nối từ **4. HSM là gì?** sang **6. Vì sao envelope encryption hữu ích?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Envelope encryption
 
@@ -68,15 +60,11 @@ dữ liệu thật
 
 Khi đọc, ứng dụng (application / 애플리케이션) giải mã DEK thông qua KMS rồi dùng DEK để giải mã dữ liệu (data / 데이터).
 
-> **Nối mạch:** **6. Vì sao envelope encryption hữu ích?** nối từ **5. Envelope encryption** sang **7. Rotation không đồng nghĩa đổi chuỗi secret rồi restart**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Vì sao envelope encryption hữu ích?
 
 Nó giảm số lần gọi KMS cho dữ liệu lớn, cho phép mỗi đối tượng (object / 객체)/tệp (file / 파일) có DEK riêng và giúp rotation master key không cần mã hóa lại toàn bộ dữ liệu ngay lập tức.
 
 Nếu chỉ thay KEK, có thể re-wrap encrypted DEK thay vì decrypt/re-encrypt toàn bộ payload.
-
-> **Nối mạch:** **6. Vì sao envelope encryption hữu ích?** đặt đầu vào cho **7. Rotation không đồng nghĩa đổi chuỗi secret rồi restart**, rồi **8. Key versioning** mở rộng hệ quả.
 
 ## 7. Rotation không đồng nghĩa đổi chuỗi secret rồi restart
 
@@ -92,8 +80,6 @@ secret cũ khi nào revoke hoàn toàn?
 
 Một chiến lược an toàn thường có giai đoạn overlap: hệ thống có thể đọc bằng key cũ và mới nhưng chỉ ghi bằng key mới. Sau khi mọi dữ liệu/bên tiêu thụ (consumer / 소비자) đã migrate, key cũ mới bị retire.
 
-> **Nối mạch:** **7. Rotation không đồng nghĩa đổi chuỗi secret rồi restart** đặt đầu vào cho **8. Key versioning**, rồi **9. Revocation khác rotation** mở rộng hệ quả.
-
 ## 8. Key versioning
 
 Ciphertext nên có siêu dữ liệu (metadata / 메타데이터) chỉ ra key phiên bản (version / 버전) hoặc key identifier cần thiết để decrypt.
@@ -107,15 +93,11 @@ nonce = ...
 
 Nếu ứng dụng (application / 애플리케이션) chỉ giữ “hiện tại (current / 현재) key” mà không biết dữ liệu cũ dùng phiên bản nào, rotation sẽ làm dữ liệu lịch sử không đọc được.
 
-> **Nối mạch:** **9. Revocation khác rotation** nối từ **8. Key versioning** sang **10. Secret zero bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Revocation khác rotation
 
 **Rotation** là thay key theo kế hoạch. **Revocation** là vô hiệu hóa key vì nghi ngờ compromise hoặc thay đổi quyền.
 
 Revocation khẩn cấp có thể gây outage nếu phụ thuộc (dependency / 의존성) chưa hỗ trợ key mới. bảo mật (security / 보안) thiết kế (design / 설계) cần playbook cân bằng giữa containment và availability.
-
-> **Nối mạch:** **10. Secret zero bài toán (problem / 문제)** nối từ **9. Revocation khác rotation** sang **11. Short-lived credential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Secret zero bài toán (problem / 문제)
 
@@ -123,15 +105,11 @@ Nếu ứng dụng (application / 애플리케이션) cần credential để g�
 
 Giải pháp hiện đại thường dùng tải công việc (workload / 워크로드) định danh (identity / 식별자) dựa trên môi trường (environment / 환경)/nền tảng (platform / 플랫폼), ví dụ định danh (identity / 식별자) gắn với VM, pod hoặc tiến trình (process / 프로세스). ứng dụng (application / 애플리케이션) chứng minh mình là tải công việc (workload / 워크로드) hợp lệ thay vì giữ một API key dài hạn khác.
 
-> **Nối mạch:** **11. Short-lived credential** nối từ **10. Secret zero bài toán (problem / 문제)** sang **12. Least privilege cho key use**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Short-lived credential
 
-Credential sống ngắn giảm cửa sổ lạm dụng nếu bị lộ. Thay vì password tĩnh tồn tại nhiều tháng, tải công việc (workload / 워크로드) có thể đổi định danh (identity / 식별자) assertion lấy đơn vị từ (token / 토큰) chỉ sống vài phút.
+Credential sống ngắn giảm cửa sổ lạm dụng nếu bị lộ. Thay vì password tĩnh tồn tại nhiều tháng, tải công việc (workload / 워크로드) có thể đổi định danh (identity / 식별자) assertion lấy token (토큰) chỉ sống vài phút.
 
 Điều này chuyển yêu cầu từ “bảo vệ một secret vĩnh viễn” sang “bảo vệ định danh (identity / 식별자) + issuance đường dẫn (path / 경로) + rotation tự động”.
-
-> **Nối mạch:** **12. Least privilege cho key use** nối từ **11. Short-lived credential** sang **13. Auditability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Least privilege cho key use
 
@@ -145,15 +123,11 @@ service C -> không có quyền raw decrypt
 
 Nếu một dịch vụ (service / 서비스) bị compromise, blast radius bị giới hạn bởi chính sách (policy / 정책).
 
-> **Nối mạch:** **13. Auditability** nối từ **12. Least privilege cho key use** sang **14. Secret trong bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Auditability
 
 Key thao tác (operation / 연산) quan trọng nên tạo kiểm tra (audit / 감사) sự kiện (event / 이벤트): ai/định danh (identity / 식별자) nào decrypt, sign, rotate hoặc disable key.
 
 Nhật ký kiểm tra (audit log / 감사 로그) phải được bảo vệ khỏi việc attacker sửa xóa dấu vết. Detection chuỗi xử lý (pipeline / 파이프라인) có thể cảnh báo khi một tải công việc (workload / 워크로드) gọi decrypt với volume hoặc mẫu (pattern / 패턴) bất thường.
-
-> **Nối mạch:** **14. Secret trong bộ nhớ (memory / 메모리)** nối từ **13. Auditability** sang **15. bộ nhớ đệm (cache / 캐시) secret**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Secret trong bộ nhớ (memory / 메모리)
 
@@ -161,15 +135,11 @@ Ngay cả khi secret không nằm trên disk, ứng dụng (application / 애플
 
 Giảm thời gian tồn tại (lifetime / 수명) của plaintext secret và tránh log toàn yêu cầu (request / 요청)/cấu hình (config / 설정) là biện pháp quan trọng. Với một số ngôn ngữ managed, việc đảm bảo zeroization tuyệt đối khó vì đối tượng (object / 객체) có thể bị bản sao (copy / 복사) hoặc di chuyển bởi thời gian chạy (runtime / 런타임).
 
-> **Nối mạch:** **15. bộ nhớ đệm (cache / 캐시) secret** nối từ **14. Secret trong bộ nhớ (memory / 메모리)** sang **16. Multi-region key phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. bộ nhớ đệm (cache / 캐시) secret
 
-Gọi KMS cho mọi yêu cầu (request / 요청) có thể tạo độ trễ (latency / 지연 시간) và phụ thuộc (dependency / 의존성) pressure. ứng dụng (application / 애플리케이션) thường bộ nhớ đệm (cache / 캐시) decrypted dữ liệu (data / 데이터) key hoặc đơn vị từ (token / 토큰) trong thời gian ngắn.
+Gọi KMS cho mọi yêu cầu (request / 요청) có thể tạo độ trễ (latency / 지연 시간) và phụ thuộc (dependency / 의존성) pressure. ứng dụng (application / 애플리케이션) thường bộ nhớ đệm (cache / 캐시) decrypted dữ liệu (data / 데이터) key hoặc token (토큰) trong thời gian ngắn.
 
 Caching cải thiện hiệu năng (performance / 성능) nhưng kéo dài thời gian secret tồn tại trong tiến trình (process / 프로세스). Đây là sự đánh đổi (trade-off / 트레이드오프) giữa availability/hiệu năng (performance / 성능) và exposure cửa sổ (window / 윈도우).
-
-> **Nối mạch:** **16. Multi-region key phụ thuộc (dependency / 의존성)** nối từ **15. bộ nhớ đệm (cache / 캐시) secret** sang **17. Backup và key destruction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Multi-region key phụ thuộc (dependency / 의존성)
 
@@ -177,23 +147,17 @@ Nếu dữ liệu (data / 데이터) ở region A chỉ decrypt được bằng 
 
 Thiết kế geo-distributed cần cân nhắc key replication, region-local key hierarchy và disaster khôi phục (recovery / 복구). “Key an toàn” nhưng không thể truy cập khi sự cố (incident / 인시던트) cũng có thể làm hệ thống không phục vụ được.
 
-> **Nối mạch:** **17. Backup và key destruction** nối từ **16. Multi-region key phụ thuộc (dependency / 의존성)** sang **18. cơ sở dữ liệu (database / 데이터베이스) encryption và ứng dụng (application / 애플리케이션) encryption**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Backup và key destruction
 
 Backup ciphertext vô dụng nếu key cần decrypt đã bị mất ngoài ý muốn. Ngược lại, nếu mục tiêu là crypto-shredding — làm dữ liệu vĩnh viễn không đọc được — hủy key có thể là cơ chế mạnh.
 
 Do đó backup chính sách (policy / 정책) phải bao gồm key material hoặc khôi phục (recovery / 복구) hierarchy phù hợp, với kiểm soát truy cập (access control / 접근 제어) nghiêm ngặt hơn dữ liệu thông thường.
 
-> **Nối mạch:** **17. Backup và key destruction** đặt vấn đề; **18. cơ sở dữ liệu (database / 데이터베이스) encryption và ứng dụng (application / 애플리케이션) encryption** kiểm tra bằng chứng, rồi **19. dạng thất bại (failure mode / 실패 모드) khi KMS unavailable** mở rộng hệ quả.
-
 ## 18. cơ sở dữ liệu (database / 데이터베이스) encryption và ứng dụng (application / 애플리케이션) encryption
 
 Encryption at rest của disk/cơ sở dữ liệu (database / 데이터베이스) bảo vệ một số threat như mất lưu trữ (storage / 저장소) media, nhưng cơ sở dữ liệu (database / 데이터베이스) tiến trình (process / 프로세스) vẫn có thể đọc plaintext. Application-level encryption có thể thu hẹp trust ranh giới (boundary / 경계) nhưng làm truy vấn (query / 쿼리)/indexing phức tạp hơn.
 
 Không nên hỏi “đã mã hóa chưa?” mà phải hỏi “mã hóa bảo vệ chống attacker nào và plaintext xuất hiện ở ranh giới (boundary / 경계) nào?”.
-
-> **Nối mạch:** **18. cơ sở dữ liệu (database / 데이터베이스) encryption và ứng dụng (application / 애플리케이션) encryption** nêu quy tắc; **19. dạng thất bại (failure mode / 실패 모드) khi KMS unavailable** thử quy tắc trong tình huống, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## 19. dạng thất bại (failure mode / 실패 모드) khi KMS unavailable
 
@@ -210,8 +174,6 @@ Lựa chọn phụ thuộc threat mô hình (model / 모델). Fail-open có th�
 
 Bảo mật (security / 보안) và độ tin cậy (reliability / 신뢰성) không thể tách rời ở đây.
 
-> **Nối mạch:** **19. dạng thất bại (failure mode / 실패 모드) khi KMS unavailable** nêu quy tắc; **Dùng chung (common / 공통) Misconceptions** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 **“Đưa secret vào môi trường (environment / 환경) variable là đã an toàn.”** Nó tốt hơn hard-code trong nhiều trường hợp nhưng vẫn có thể bị lộ qua tiến trình (process / 프로세스) inspection, crash dump hoặc logging.
@@ -221,8 +183,6 @@ Bảo mật (security / 보안) và độ tin cậy (reliability / 신뢰성) kh
 **“Rotation chỉ cần đổi secret.”** Rotation là phân tán (distributed / 분산) di chuyển (migration / 마이그레이션) cần versioning, overlap và quay lui (rollback / 롤백).
 
 **“Encryption at rest nghĩa là cơ sở dữ liệu (database / 데이터베이스) admin không đọc được dữ liệu (data / 데이터).”** Không nhất thiết; ranh giới (boundary / 경계) bảo vệ phụ thuộc tầng thực hiện encryption.
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

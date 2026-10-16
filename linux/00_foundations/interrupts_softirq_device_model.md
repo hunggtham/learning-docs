@@ -34,8 +34,6 @@ kernel xử lý sự kiện
 
 Đây là một ví dụ về thiết kế **hướng sự kiện (event-driven)** ở mức phần cứng.
 
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **Interrupt khác lời gọi hệ thống (system call / 시스템 호출)** nối từ **Từ polling tới interrupt** sang **Interrupt handler phải ngắn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Interrupt khác lời gọi hệ thống (system call / 시스템 호출)
 
 Lời gọi hệ thống (system call / 시스템 호출) bắt đầu từ tiến trình người dùng và đi vào kernel vì tiến trình chủ động yêu cầu một dịch vụ. Interrupt thường đến từ phần cứng hoặc cơ chế hệ thống bất đồng bộ.
@@ -49,8 +47,6 @@ device -> CPU/kernel
 ```
 
 Hai cơ chế đều làm CPU thực thi mã (code / 코드) kernel, nhưng nguyên nhân và ngữ cảnh khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Interrupt handler phải ngắn** nối từ **Interrupt khác lời gọi hệ thống (system call / 시스템 호출)** sang **Softirq là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interrupt handler phải ngắn
 
@@ -69,8 +65,6 @@ softirq / tasklet / workqueue hoặc cơ chế khác
 ```
 
 Thiết kế này thường được mô tả bằng ý tưởng **top half** và **bottom half**. Thuật ngữ cụ thể trong kernel đã thay đổi theo subsystem, nhưng mô hình tư duy (mental model / 사고 모델) vẫn hữu ích: phần interrupt trực tiếp cần rất ngắn, còn phần tốn thời gian được đẩy sang ngữ cảnh có thể xử lý linh hoạt hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Softirq là gì?** nối từ **Interrupt handler phải ngắn** sang **Vì sao ksoftirqd xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Softirq là gì?
 
@@ -95,8 +89,6 @@ BLOCK
 
 `NET_RX` liên quan xử lý packet nhận vào; `NET_TX` liên quan đường truyền gửi; `BLOCK` có thể liên quan khối (block / 블록) I/O completion.
 
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **Vì sao ksoftirqd xuất hiện?** nối từ **Softirq là gì?** sang **/proc/interrupts**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao `ksoftirqd` xuất hiện?
 
 Nếu softirq phát sinh quá nhiều, kernel không thể dành vô hạn thời gian xử lý chúng ngay trong đường interrupt. Công việc có thể được đẩy sang các luồng thực thi (thread / 스레드) kernel dạng `ksoftirqd/<CPU>`.
@@ -106,8 +98,6 @@ ps -eLo pid,psr,comm | grep ksoftirqd
 ```
 
 Nếu `ksoftirqd` dùng nhiều CPU trong lúc lưu lượng mạng cao, không nên vội kết luận ứng dụng Java đang tiêu hết CPU. Một phần CPU đang được dùng để xử lý công việc kernel do traffic tạo ra.
-
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **/proc/interrupts** nối từ **Vì sao ksoftirqd xuất hiện?** sang **IRQ affinity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `/proc/interrupts`
 
@@ -128,8 +118,6 @@ Nếu gần như mọi interrupt của NIC dồn vào một CPU trong hệ thố
 
 Đây là lý do **phân phối interrupt (IRQ affinity)** quan trọng trên máy chủ thông lượng (throughput / 처리량) cao.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **IRQ affinity** nối từ **/proc/interrupts** sang **RSS, RPS và RFS trong networking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## IRQ affinity
 
 Kernel có thể giới hạn interrupt cụ thể chạy trên tập CPU nào. Thông tin này thường xuất hiện dưới:
@@ -140,8 +128,6 @@ Kernel có thể giới hạn interrupt cụ thể chạy trên tập CPU nào. 
 ```
 
 Không nên thay đổi affinity theo mẹo chung trên Internet. Hệ thống hiện đại có thể dùng `irqbalance`, RSS/RPS hoặc cấu hình driver/NIC để phân phối tải. Điều cần hiểu trước tiên là bottleneck nằm ở đâu.
-
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **RSS, RPS và RFS trong networking** nối từ **IRQ affinity** sang **NAPI và vấn đề interrupt storm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## RSS, RPS và RFS trong networking
 
@@ -167,8 +153,6 @@ application thread
 
 Nếu chỉ quan sát luồng thực thi (thread / 스레드) ứng dụng, ta bỏ qua nhiều tầng phía trước.
 
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **NAPI và vấn đề interrupt storm** nối từ **RSS, RPS và RFS trong networking** sang **Interrupt coalescing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## NAPI và vấn đề interrupt storm
 
 Nếu NIC phát một interrupt cho từng packet ở tốc độ hàng triệu packet mỗi giây, CPU có thể bị ngập trong interrupt. Linux networking dùng **NAPI (New API)** để kết hợp interrupt với polling có kiểm soát.
@@ -181,8 +165,6 @@ Nếu NIC phát một interrupt cho từng packet ở tốc độ hàng triệu 
 4. khi hàng đợi (queue / 큐) đã xử lý ổn, interrupt được bật lại.
 
 Đây là một ví dụ cho thấy polling và interrupt không phải hai lựa chọn loại trừ nhau. Kernel kết hợp chúng để giảm overhead trong tải cao.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Interrupt coalescing** nối từ **NAPI và vấn đề interrupt storm** sang **Trình điều khiển thiết bị (device driver / 장치 드라이버) là lớp nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interrupt coalescing
 
@@ -198,8 +180,6 @@ Một số NIC có thể gom nhiều sự kiện trước khi phát interrupt. �
 ```
 
 Không có giá trị tối ưu cho mọi tải công việc (workload / 워크로드). Hệ thống giao dịch nhạy độ trễ (latency / 지연 시간) có yêu cầu khác máy chủ (server / 서버) xử lý batch thông lượng (throughput / 처리량) lớn.
-
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **Trình điều khiển thiết bị (device driver / 장치 드라이버) là lớp nào?** nối từ **Interrupt coalescing** sang **/sys và mô hình thiết bị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trình điều khiển thiết bị (device driver / 장치 드라이버) là lớp nào?
 
@@ -220,8 +200,6 @@ hardware
 ```
 
 Driver chuyển đổi lớp trừu tượng (abstraction / 추상화) chung của kernel thành thao tác phù hợp thiết bị.
-
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **/sys và mô hình thiết bị** nối từ **Trình điều khiển thiết bị (device driver / 장치 드라이버) là lớp nào?** sang **Thiết bị (device / 장치) nút (node / 노드) trong /dev**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `/sys` và mô hình thiết bị
 
@@ -248,8 +226,6 @@ Khối (block / 블록) thiết bị (device / 장치):
 ls -l /sys/class/block
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Thiết bị (device / 장치) nút (node / 노드) trong /dev** nối từ **/sys và mô hình thiết bị** sang **udev và thiết bị động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thiết bị (device / 장치) nút (node / 노드) trong `/dev`
 
 Nhiều thiết bị được tiếp cận từ người dùng (user / 사용자) không gian (space / 공간) thông qua **nút thiết bị (device node)** dưới `/dev`.
@@ -271,8 +247,6 @@ ls -l /dev/null /dev/sda 2>/dev/null
 
 Ký tự đầu `c` thường là character thiết bị (device / 장치), `b` là khối (block / 블록) thiết bị (device / 장치).
 
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **udev và thiết bị động** nối từ **Thiết bị (device / 장치) nút (node / 노드) trong /dev** sang **DMA: thiết bị có cần CPU bản sao (copy / 복사) từng byte không?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## udev và thiết bị động
 
 Phần cứng có thể xuất hiện hoặc biến mất khi hệ thống đang chạy. **udev** xử lý các sự kiện thiết bị (device / 장치) trong người dùng (user / 사용자) không gian (space / 공간) và có thể tạo tên, symlink hoặc áp dụng quy tắc (rule / 규칙).
@@ -282,8 +256,6 @@ udevadm info --query=all --name=/dev/nvme0n1
 ```
 
 Điều này giải thích vì sao tên thiết bị không chỉ là thứ kernel “ghi cứng”. Có một chuỗi kernel sự kiện (event / 이벤트) → udev quy tắc (rule / 규칙) → user-space thiết bị (device / 장치) naming.
-
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **DMA: thiết bị có cần CPU bản sao (copy / 복사) từng byte không?** nối từ **udev và thiết bị động** sang **Interrupt và độ trễ môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## DMA: thiết bị có cần CPU bản sao (copy / 복사) từng byte không?
 
@@ -304,8 +276,6 @@ network stack
 ```
 
 CPU vẫn tham gia điều phối và xử lý giao thức (protocol / 프로토콜), nhưng DMA giảm công việc bản sao (copy / 복사) ở mức phần cứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Interrupt và độ trễ môi trường vận hành (production / 운영 환경)** nối từ **DMA: thiết bị có cần CPU bản sao (copy / 복사) từng byte không?** sang **Softirq và top**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interrupt và độ trễ môi trường vận hành (production / 운영 환경)
 
@@ -328,8 +298,6 @@ sar -n DEV 1
 
 Cần đọc cùng nhau thay vì dựa vào một chỉ số (metric / 지표).
 
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **Softirq và top** nối từ **Interrupt và độ trễ môi trường vận hành (production / 운영 환경)** sang **Khi packet drop nhưng ứng dụng không thấy gì**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Softirq và `top`
 
 Trong `top`, CPU thời gian (time / 시간) có thể được chia thành các loại như `us`, `sy`, `si`, `hi`, `wa` tùy phiên bản.
@@ -338,8 +306,6 @@ Trong `top`, CPU thời gian (time / 시간) có thể được chia thành các
 - `si` thường liên quan softirq thời gian (time / 시간).
 
 Nếu `si` tăng mạnh cùng mạng (network / 네트워크) traffic, đây là tín hiệu quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Khi packet drop nhưng ứng dụng không thấy gì** nối từ **Softirq và top** sang **Workqueue**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi packet drop nhưng ứng dụng không thấy gì
 
@@ -365,8 +331,6 @@ ethtool -S eth0 2>/dev/null | head -80
 
 Các counter cụ thể phụ thuộc driver.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Workqueue** nối từ **Khi packet drop nhưng ứng dụng không thấy gì** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Workqueue
 
 Không phải deferred công việc (work / 작업) nào cũng dùng softirq. Kernel có **workqueue** để thực hiện công việc trong ngữ cảnh (context / 맥락) của kernel worker luồng thực thi (thread / 스레드), nơi có thể ngủ trong nhiều trường hợp phù hợp hơn so với interrupt ngữ cảnh (context / 맥락).
@@ -378,8 +342,6 @@ kworker/...
 ```
 
 Nếu `kworker` dùng CPU cao, cần tìm subsystem gây công việc (work / 작업) thay vì kết luận chính luồng thực thi (thread / 스레드) này là “ứng dụng lỗi”. Nó là worker chung cho nhiều loại công việc kernel.
-
-> **Nối mạch:** Trong **Interrupt, softirq và mô hình thiết bị trong Linux**, **Mô hình tư duy** tổng hợp từ **Workqueue** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -401,8 +363,6 @@ application thread
 
 Do đó CPU thời gian (time / 시간) và độ trễ (latency / 지연 시간) có thể phát sinh ở nhiều tầng trước khi ứng dụng thực sự chạy.
 
-> **Nối mạch:** Ở chặng này của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“CPU cao luôn phải tìm tiến trình (process / 프로세스) cao nhất.”** Một phần tải có thể nằm ở interrupt/softirq/kernel worker.
@@ -414,8 +374,6 @@ Do đó CPU thời gian (time / 시간) và độ trễ (latency / 지연 시간
 **“`/dev/sda` chính là ổ cứng vật lý.”** Nó là thiết bị (device / 장치) nút (node / 노드) đại diện cho thiết bị/khối (block / 블록) giao diện (interface / 인터페이스) mà kernel expose; phía dưới có thể là NVMe, virtual disk, RAID hoặc lưu trữ (storage / 저장소) khác.
 
 **“Driver chỉ cần quan tâm khi cài phần cứng.”** Driver quyết định cách kernel giao tiếp với thiết bị và ảnh hưởng trực tiếp tới hiệu năng (performance / 성능), lỗi (error / 오류) counter và khả năng quan sát (observability / 관측 가능성).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Interrupt, softirq và mô hình thiết bị trong Linux**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

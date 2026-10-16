@@ -41,8 +41,6 @@ E[X]=\frac{1+2+3+4+5+6}{6}=3.5.
 
 `3.5` không phải possible roll. Expectation là long-run average/center của phân phối (distribution / 분포), không phải prediction rằng observation tiếp theo sẽ bằng mean.
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **2. Expected giá trị (value / 값) phụ thuộc payoff, không chỉ xác suất (probability / 확률)** nối từ **1. Expectation là weighted center, không phải kết quả (outcome / 결과) được hứa hẹn** sang **3. Linearity of expectation: thuộc tính (property / 속성) mạnh vì không cần independence**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Expected giá trị (value / 값) phụ thuộc payoff, không chỉ xác suất (probability / 확률)
 
 Trong quyết định (decision / 결정) bài toán (problem / 문제), ta thường quan tâm random payoff `Y=g(X)` hơn raw kết quả (outcome / 결과) `X`.
@@ -62,8 +60,6 @@ g(E[X]).
 Ví dụ nếu utility hoặc mất mát (loss / 손실) nonlinear, “plug mean vào hàm (function / 함수)” có thể cho answer sai.
 
 Điều này quan trọng trong finance, rủi ro (risk / 위험) management và machine học tập (learning / 학습) mất mát (loss / 손실) functions.
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **3. Linearity of expectation: thuộc tính (property / 속성) mạnh vì không cần independence** nối từ **2. Expected giá trị (value / 값) phụ thuộc payoff, không chỉ xác suất (probability / 확률)** sang **4. Indicator variables biến counting bài toán (problem / 문제) thành expectation bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Linearity of expectation: thuộc tính (property / 속성) mạnh vì không cần independence
 
@@ -86,8 +82,6 @@ E[X+Y]
 split sum thành hai phần, rồi marginalize joint phân phối (distribution / 분포). Kết quả trở thành `E[X]+E[Y]`.
 
 Independence không xuất hiện trong argument.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **4. Indicator variables biến counting bài toán (problem / 문제) thành expectation bài toán (problem / 문제)** nối từ **3. Linearity of expectation: thuộc tính (property / 속성) mạnh vì không cần independence** sang **5. Worked Example: expected number of collisions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Indicator variables biến counting bài toán (problem / 문제) thành expectation bài toán (problem / 문제)
 
@@ -123,8 +117,6 @@ Không cần các indicators independent.
 
 Đây là một kỹ thuật trung tâm trong randomized algorithms và combinatorics.
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **4. Indicator variables biến counting bài toán (problem / 문제) thành expectation bài toán (problem / 문제)** nêu quy tắc; **5. Worked Example: expected number of collisions** thử quy tắc trong tình huống, rồi **6. Variance đo squared deviation khỏi center** mở rộng hệ quả.
-
 ## 5. Worked Example: expected number of collisions
 
 Giả sử `n` items được băm (hash / 해시) uniform vào `m` buckets. Với mỗi pair `(i,j)`, tạo indicator `I_{ij}=1` nếu chúng cùng bucket.
@@ -149,8 +141,6 @@ E[C]
 ```
 
 Ta không cần chứng minh các pair-collision events independent.
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **5. Worked Example: expected number of collisions** nêu quy tắc; **6. Variance đo squared deviation khỏi center** thử quy tắc trong tình huống, rồi **7. tiêu chuẩn (standard / 표준) deviation quay về đơn vị (unit / 단위) ban đầu** mở rộng hệ quả.
 
 ## 6. Variance đo squared deviation khỏi center
 
@@ -184,8 +174,6 @@ E[(X-\mu)^2]
 =E[X^2]-\mu^2.
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **7. tiêu chuẩn (standard / 표준) deviation quay về đơn vị (unit / 단위) ban đầu** nối từ **6. Variance đo squared deviation khỏi center** sang **8. Scaling và shifting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. tiêu chuẩn (standard / 표준) deviation quay về đơn vị (unit / 단위) ban đầu
 
 Variance có squared đơn vị (unit / 단위). Nếu `X` đo KRW, variance có `KRW^2`.
@@ -200,8 +188,6 @@ trở lại KRW.
 
 Đây là lý do tiêu chuẩn (standard / 표준) deviation dễ interpret hơn variance ở báo cáo thực tế, dù variance thuận tiện hơn về algebra.
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **8. Scaling và shifting** nối từ **7. tiêu chuẩn (standard / 표준) deviation quay về đơn vị (unit / 단위) ban đầu** sang **9. Variance của tổng: covariance là nơi dependence xuất hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Scaling và shifting
 
 Với constants `a,b`:
@@ -211,8 +197,6 @@ Var(aX+b)=a^2Var(X).
 ```
 
 Shift `b` không đổi spread. Scaling by `a` quy mô (scale / 규모) deviations by `a`, nên squared deviations quy mô (scale / 규모) `a^2`.
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **9. Variance của tổng: covariance là nơi dependence xuất hiện** nối từ **8. Scaling và shifting** sang **10. Covariance và correlation chỉ tóm tắt tuyến tính (linear / 선형) co-movement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Variance của tổng: covariance là nơi dependence xuất hiện
 
@@ -239,8 +223,6 @@ Expectation of sum → không cần independence
 Variance of sum → dependence matter
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **10. Covariance và correlation chỉ tóm tắt tuyến tính (linear / 선형) co-movement** nối từ **9. Variance của tổng: covariance là nơi dependence xuất hiện** sang **11. Law of total expectation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Covariance và correlation chỉ tóm tắt tuyến tính (linear / 선형) co-movement
 
 Covariance:
@@ -263,8 +245,6 @@ Correlation chuẩn hóa đơn vị (unit / 단위) nhưng vẫn chủ yếu đo
 
 Một nonlinear phụ thuộc (dependency / 의존성) có thể có zero covariance.
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **11. Law of total expectation** nối từ **10. Covariance và correlation chỉ tóm tắt tuyến tính (linear / 선형) co-movement** sang **12. Law of total variance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Law of total expectation
 
 Nếu `Y` chứa thông tin (information / 정보)/ngữ cảnh (context / 맥락):
@@ -276,8 +256,6 @@ E[X]=E[E[X\mid Y]].
 Intuition: tính average trong từng group/ngữ cảnh (context / 맥락) trước, rồi average các group theo weights đúng, sẽ trở lại overall average.
 
 Đây là formal phiên bản (version / 버전) của weighted average và rất hữu ích trong hierarchical lập luận (reasoning / 추론).
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **12. Law of total variance** nối từ **11. Law of total expectation** sang **13. mẫu (sample / 표본) mean là random variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Law of total variance
 
@@ -298,8 +276,6 @@ Total variation
 ```
 
 Nó xuất hiện trong ANOVA intuition, hierarchical các mô hình (models / 모델들) và variance decomposition.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **13. mẫu (sample / 표본) mean là random variable** nối từ **12. Law of total variance** sang **14. Tại sao averaging giảm noise?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. mẫu (sample / 표본) mean là random variable
 
@@ -344,8 +320,6 @@ Do đó tiêu chuẩn (standard / 표준) deviation của mẫu (sample / 표본
 
 Đây là nguồn (source / 소스) của square-root law trong sampling bất định (uncertainty / 불확실성).
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **14. Tại sao averaging giảm noise?** nối từ **13. mẫu (sample / 표본) mean là random variable** sang **15. Law of Large Numbers: stabilization của average**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Tại sao averaging giảm noise?
 
 Nếu independent noise terms có positive/negative deviations không systematic, sum tín hiệu (signal / 신호) tăng proportional `n`, trong khi random fluctuation quy mô (scale / 규모) roughly `\sqrt n`.
@@ -357,8 +331,6 @@ Vì vậy relative noise giảm roughly như
 ```
 
 Đây là reason sâu hơn đằng sau averaging trong đo lường (measurement / 측정), experiments và mini-batch estimates.
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **15. Law of Large Numbers: stabilization của average** nối từ **14. Tại sao averaging giảm noise?** sang **16. LLN không nói short-run sẽ tự cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Law of Large Numbers: stabilization của average
 
@@ -378,8 +350,6 @@ Strong LLN mạnh hơn: convergence almost surely dưới conditions phù hợp.
 
 > repeated observations có thể noisy, nhưng aggregate average ổn định nếu tiến trình (process / 프로세스) có cấu trúc (structure / 구조) thích hợp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **16. LLN không nói short-run sẽ tự cân bằng** nối từ **15. Law of Large Numbers: stabilization của average** sang **17. CLT hỏi một câu khác LLN**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. LLN không nói short-run sẽ tự cân bằng
 
 Sau 10 tails liên tiếp của fair coin, next toss vẫn xác suất (probability / 확률) heads `0.5`.
@@ -387,8 +357,6 @@ Sau 10 tails liên tiếp của fair coin, next toss vẫn xác suất (probabil
 LLN nói long-run average converge; nó không tạo một “force” bắt chuỗi (sequence / 시퀀스) ngắn phải compensate ngay.
 
 Đây là lý do gambler's fallacy sai.
-
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **17. CLT hỏi một câu khác LLN** nối từ **16. LLN không nói short-run sẽ tự cân bằng** sang **18. Tại sao normal phân phối (distribution / 분포) xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. CLT hỏi một câu khác LLN
 
@@ -414,8 +382,6 @@ Equivalent:
 \Rightarrow N(0,1).
 ```
 
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **18. Tại sao normal phân phối (distribution / 분포) xuất hiện?** nối từ **17. CLT hỏi một câu khác LLN** sang **19. CLT không nói raw dữ liệu (data / 데이터) normal**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Tại sao normal phân phối (distribution / 분포) xuất hiện?
 
 Một intuition là aggregate của nhiều small contributions độc lập/weakly dependent làm chi tiết phân phối (distribution / 분포) ban đầu bị “average out”, còn mean và variance dominate standardized shape.
@@ -424,8 +390,6 @@ Fourier/characteristic-function proofs formalize idea rằng convolution lặp n
 
 Nhưng không được biến intuition thành claim universal: heavy tails hoặc strong dependence có thể phá classical CLT các giả định (assumptions / 가정들).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **18. Tại sao normal phân phối (distribution / 분포) xuất hiện?** đặt vấn đề; **19. CLT không nói raw dữ liệu (data / 데이터) normal** đối chiếu bằng chứng, rồi **20. tiêu chuẩn (standard / 표준) lỗi (error / 오류) là bất định (uncertainty / 불확실성) của estimator** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 19. CLT không nói raw dữ liệu (data / 데이터) normal
 
 Nếu income highly skewed, raw observations không trở thành normal chỉ vì cỡ mẫu (sample size / 표본 크기) lớn.
@@ -433,8 +397,6 @@ Nếu income highly skewed, raw observations không trở thành normal chỉ v�
 CLT chủ yếu nói phân phối (distribution / 분포) của **normalized sum/mẫu (sample / 표본) mean** gần normal.
 
 Đây là một misconception rất phổ biến.
-
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **19. CLT không nói raw dữ liệu (data / 데이터) normal** đặt vấn đề; **20. tiêu chuẩn (standard / 표준) lỗi (error / 오류) là bất định (uncertainty / 불확실성) của estimator** đối chiếu bằng chứng, rồi **21. Worked Example: cần bao nhiêu dữ liệu (data / 데이터) để halve tiêu chuẩn (standard / 표준) lỗi (error / 오류)?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. tiêu chuẩn (standard / 표준) lỗi (error / 오류) là bất định (uncertainty / 불확실성) của estimator
 
@@ -452,8 +414,6 @@ Tiêu chuẩn (standard / 표준) lỗi (error / 오류) khác tiêu chuẩn (st
 SD → spread của observations
 SE → spread của estimator qua repeated samples
 ```
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **20. tiêu chuẩn (standard / 표준) lỗi (error / 오류) là bất định (uncertainty / 불확실성) của estimator** nêu quy tắc; **21. Worked Example: cần bao nhiêu dữ liệu (data / 데이터) để halve tiêu chuẩn (standard / 표준) lỗi (error / 오류)?** thử quy tắc trong tình huống, rồi **22. Dependence làm effective cỡ mẫu (sample size / 표본 크기) nhỏ hơn nominal cỡ mẫu (sample size / 표본 크기)** mở rộng hệ quả.
 
 ## 21. Worked Example: cần bao nhiêu dữ liệu (data / 데이터) để halve tiêu chuẩn (standard / 표준) lỗi (error / 오류)?
 
@@ -484,8 +444,6 @@ n_{new}=4n_{old}.
 
 Dữ liệu (data / 데이터) tăng 2× không halve bất định (uncertainty / 불확실성); cần khoảng 4× independent thông tin (information / 정보).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **21. Worked Example: cần bao nhiêu dữ liệu (data / 데이터) để halve tiêu chuẩn (standard / 표준) lỗi (error / 오류)?** nêu quy tắc; **22. Dependence làm effective cỡ mẫu (sample size / 표본 크기) nhỏ hơn nominal cỡ mẫu (sample size / 표본 크기)** thử quy tắc trong tình huống, rồi **23. Heavy tails và moment các giả định (assumptions / 가정들)** mở rộng hệ quả.
-
 ## 22. Dependence làm effective cỡ mẫu (sample size / 표본 크기) nhỏ hơn nominal cỡ mẫu (sample size / 표본 크기)
 
 Nếu observations positively correlated, covariance terms làm variance của average giảm chậm hơn `1/n`.
@@ -494,8 +452,6 @@ Thời gian (time / 시간) series là ví dụ điển hình: 1,000 measurement
 
 Vì vậy statistical power phụ thuộc **independent thông tin (information / 정보)**, không chỉ row count.
 
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **23. Heavy tails và moment các giả định (assumptions / 가정들)** nối từ **22. Dependence làm effective cỡ mẫu (sample size / 표본 크기) nhỏ hơn nominal cỡ mẫu (sample size / 표본 크기)** sang **24. Chebyshev inequality: guarantee không cần normality**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Heavy tails và moment các giả định (assumptions / 가정들)
 
 Một số distributions có expectation tồn tại nhưng variance vô hạn; một số thậm chí expectation không tồn tại theo usual sense.
@@ -503,8 +459,6 @@ Một số distributions có expectation tồn tại nhưng variance vô hạn; 
 Trong heavy-tail regime, mẫu (sample / 표본) mean có thể unstable hơn intuition Gaussian.
 
 Finance returns, tệp (file / 파일) sizes, mạng (network / 네트워크) traffic hoặc wealth distributions có thể có heavy-tail hành vi (behavior / 동작), nên blindly dùng mean/variance/CLT approximation cần caution.
-
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **24. Chebyshev inequality: guarantee không cần normality** nối từ **23. Heavy tails và moment các giả định (assumptions / 가정들)** sang **25. liên kết (connection / 연결) với AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Chebyshev inequality: guarantee không cần normality
 
@@ -526,8 +480,6 @@ P(|\bar X_n-\mu|\ge\varepsilon)
 
 đưa intuition trực tiếp tới weak LLN.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, sau nội dung của **24. Chebyshev inequality: guarantee không cần normality**, **25. liên kết (connection / 연결) với AI** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **26. liên kết (connection / 연결) với Finance** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 25. liên kết (connection / 연결) với AI
 
 Huấn luyện (training / 학습) mất mát (loss / 손실) mini-batch là estimator của population/empirical mục tiêu (objective / 목표) độ dốc (gradient / 기울기).
@@ -535,8 +487,6 @@ Huấn luyện (training / 학습) mất mát (loss / 손실) mini-batch là est
 Larger batch thường giảm độ dốc (gradient / 기울기) noise, nhưng returns giảm theo square-root-like hành vi (behavior / 동작) và computation/bộ nhớ (memory / 메모리) chi phí (cost / 비용) tăng.
 
 Độ dốc (gradient / 기울기) estimate variance, correlation giữa samples và non-stationary dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) đều ảnh hưởng tối ưu hóa (optimization / 최적화) dynamics.
-
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **26. liên kết (connection / 연결) với Finance** nối từ **25. liên kết (connection / 연결) với AI** sang **27. liên kết (connection / 연결) với Physics và đo lường (measurement / 측정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. liên kết (connection / 연결) với Finance
 
@@ -554,8 +504,6 @@ Diversification benefit xuất hiện khi returns không perfectly positively co
 
 LLN intuition cũng phải dùng cẩn thận trong finance vì returns có dependence, regime changes và heavy tails.
 
-> **Nối mạch:** Ở chặng này của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **26. liên kết (connection / 연결) với Finance** đặt vấn đề; **27. liên kết (connection / 연결) với Physics và đo lường (measurement / 측정)** đối chiếu bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 27. liên kết (connection / 연결) với Physics và đo lường (measurement / 측정)
 
 Repeated đo lường (measurement / 측정) có thể giảm random noise bằng averaging nếu errors approximately independent và unbiased.
@@ -564,13 +512,9 @@ Nhưng systematic độ lệch (bias / 편향) không biến mất khi tăng `n`
 
 Đây là distinction giữa variance reduction và mô hình (model / 모델)/calibration lỗi (error / 오류).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, các dấu vết trong **27. liên kết (connection / 연결) với Physics và đo lường (measurement / 측정)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Expectation là probabilistic center; variance là squared bất định (uncertainty / 불확실성) quanh center. Averaging nhiều independent-ish observations làm variance của mean co lại. LLN nói average ổn định về center; CLT mô tả shape của scaled fluctuation quanh center. Bốn concept liên quan nhưng trả lời bốn câu hỏi khác nhau.
-
-> **Nối mạch:** Trong **Kỳ vọng, phương sai và các luật giới hạn: từ average đến bất định (uncertainty / 불확실성) of averages**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

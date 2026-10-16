@@ -22,8 +22,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 10_ai_system_design.md
 ```
 
-> **Chuyển mạch:** **Thứ tự đọc** đi từ model/data đến API, evaluation và production; **Bản đồ phụ thuộc** giải thích prerequisite trước khi xây **mental model cốt lõi**.
-
 ## Bản đồ phụ thuộc
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
@@ -44,8 +42,6 @@ flowchart TD
     MC --> LTC
     LTC --> SD[Thiết kế hệ thống AI]
 ```
-
-> **Chuyển mạch:** Ở chặng này của **AI kỹ thuật (engineering / 엔지니어링)**, **Mô hình tư duy cốt lõi** gom các mảnh từ **Bản đồ phụ thuộc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt cần giữ rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy cốt lõi
 
@@ -71,8 +67,6 @@ Một mô hình (model / 모델) tốt chưa phải một môi trường vận h
 
 AI kỹ thuật (engineering / 엔지니어링) khác với MLOps ở trọng tâm. tầng (layer / 계층) này tập trung nhiều hơn vào **thời gian chạy (runtime / 런타임), serving và hệ thống (system / 시스템) thiết kế (design / 설계)**. tầng (layer / 계층) `16_mlops_and_llmops/` đi sâu vào vòng đời (lifecycle / 생명주기): experiment, versioning, CI/CD/CT, registry, monitoring, quản trị (governance / 거버넌스) và quy trình vận hành xuyên suốt nhiều mô hình (model / 모델) phiên bản (version / 버전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **AI kỹ thuật (engineering / 엔지니어링)**, **Những phân biệt cần giữ rõ** gom các mảnh từ **Mô hình tư duy cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cách đọc tầng (layer / 계층) này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Những phân biệt cần giữ rõ
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -91,8 +85,6 @@ Prompt instruction      ≠ security boundary
 
 Các distinction này quan trọng vì nhiều tối ưu nhìn tốt ở một tầng (layer / 계층) có thể làm hệ thống tổng thể tệ hơn. Ví dụ mô hình (model / 모델) nhỏ hơn có thể tải (load / 로드) nhanh nhưng tokenizer, mạng (network / 네트워크) hoặc hàng đợi (queue / 큐) vẫn là bottleneck; GPU utilization cao có thể đến từ batch lớn nhưng làm yêu cầu (request / 요청) đơn lẻ chờ lâu hơn.
 
-> **Chuyển mạch:** **Những phân biệt cần giữ rõ** tách model, product và platform concerns; **Cách đọc tầng này** dùng chúng để chọn evidence và boundary cho từng layer.
-
 ## Cách đọc tầng (layer / 계층) này
 
 Các chapter đầu xây ranh giới giữa huấn luyện (training / 학습) và suy luận (inference / 추론). Phần giữa đi vào serving, batch/online, caching, batching và các kỹ thuật giảm chi phí tính toán như quantization, pruning, distillation và compression. Phần cuối nối tất cả thành bài toán độ trễ (latency / 지연 시간)–thông lượng (throughput / 처리량)–chi phí (cost / 비용) và kiến trúc AI end-to-end.
@@ -100,8 +92,6 @@ Các chapter đầu xây ranh giới giữa huấn luyện (training / 학습) v
 Một nguyên tắc xuyên suốt là:
 
 > **Tối ưu mô hình (model / 모델) không đồng nghĩa tối ưu hệ thống. môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질) xuất hiện khi mô hình (model / 모델), thời gian chạy (runtime / 런타임), dữ liệu, orchestration và hạ tầng được thiết kế như một hệ thống thống nhất.**
-
-> **Chuyển mạch:** **Liên kết kiến thức** trả mỗi layer về canonical owner—ML, systems, security hoặc product—để mở rộng mà không duplicate.
 
 ## Liên kết kiến thức
 

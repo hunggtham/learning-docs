@@ -10,23 +10,17 @@ Một thuật toán (algorithm / 알고리즘) là một procedure cụ thể. M
 
 Độ phức tạp (complexity / 복잡도) lớp (class / 클래스) phân loại problems, không phân loại một đoạn mã (code / 코드) cụ thể. Khi nói SAT thuộc NP, ta đang nói về quyết định (decision / 결정) bài toán (problem / 문제) Boolean satisfiability, không phải hiệu năng (performance / 성능) của một hiện thực (implementation / 구현) SAT solver cụ thể.
 
-> **Nối mạch:** **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** nối từ **Bài toán (problem / 문제) khác thuật toán (algorithm / 알고리즘)** sang **P: giải được trong polynomial thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)
 
 Nhiều tối ưu hóa (optimization / 최적화) problems có thể chuyển sang quyết định (decision / 결정) form. Thay vì “tìm tuyến (route / 경로) ngắn nhất”, hỏi “có tuyến (route / 경로) dài không quá K hay không?”. quyết định (decision / 결정) form giúp định nghĩa classes và reductions sạch hơn.
 
 Điều này không có nghĩa practical software chỉ dùng yes/no. Nó là lớp trừu tượng (abstraction / 추상화) lý thuyết để so sánh difficulty.
 
-> **Nối mạch:** **P: giải được trong polynomial thời gian (time / 시간)** nối từ **Quyết định (decision / 결정) problems như dạng chuẩn để lập luận (reasoning / 추론)** sang **NP: solution có thể verify nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## P: giải được trong polynomial thời gian (time / 시간)
 
 P chứa quyết định (decision / 결정) problems có deterministic thuật toán (algorithm / 알고리즘) chạy polynomial thời gian (time / 시간) theo đầu vào (input / 입력) kích thước (size / 크기), ví dụ `O(n)`, `O(n²)`, `O(n^5)`.
 
 Polynomial không đồng nghĩa “nhanh trong thực tế”. `n^100` là polynomial nhưng vô dụng cho đầu vào (input / 입력) vừa phải. P chủ yếu biểu thị một ranh giới (boundary / 경계) lý thuyết giữa growth polynomial và nhiều dạng combinatorial explosion.
-
-> **Nối mạch:** **NP: solution có thể verify nhanh** nối từ **P: giải được trong polynomial thời gian (time / 시간)** sang **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NP: solution có thể verify nhanh
 
@@ -38,8 +32,6 @@ Ví dụ với Hamiltonian cycle, certificate là một thứ tự vertices. Ver
 
 Mọi bài toán (problem / 문제) trong P cũng thuộc NP vì nếu tự giải nhanh được thì tất nhiên có thể verify nhanh.
 
-> **Nối mạch:** **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** nối từ **NP: solution có thể verify nhanh** sang **NP-hard và NP-complete**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B
 
 Polynomial-time reduction từ A sang B nghĩa là có transformation polynomial thời gian (time / 시간) biến instance của A thành instance của B sao cho answer được bảo toàn.
@@ -47,8 +39,6 @@ Polynomial-time reduction từ A sang B nghĩa là có transformation polynomial
 Nếu A reduce sang B, ta có thể dùng solver cho B để giải A sau bước transform. Vì vậy B ít nhất “khó như” A theo reduction đó.
 
 Reduction là một trong những ideas xuyên suốt CS: trình biên dịch (compiler / 컴파일러) lowering, serialization, truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) rewriting và giao thức (protocol / 프로토콜) translation đều có bóng dáng “đổi biểu diễn (representation / 표현) nhưng bảo toàn meaning”, dù formal reduction trong độ phức tạp (complexity / 복잡도) có definition chặt hơn.
-
-> **Nối mạch:** **NP-hard và NP-complete** nối từ **Reduction: dùng bài toán (problem / 문제) A để biểu diễn bài toán (problem / 문제) B** sang **P versus NP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NP-hard và NP-complete
 
@@ -60,8 +50,6 @@ Một bài toán (problem / 문제) là NP-complete nếu vừa thuộc NP vừa
 
 Hướng reduction thường bị nhầm. Nếu reduce X → Y, điều đó chỉ cho thấy Y ít nhất khó như X, không chứng minh X khó.
 
-> **Nối mạch:** **P versus NP** nối từ **NP-hard và NP-complete** sang **Lower bounds và comparison sorting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## P versus NP
 
 Câu hỏi P = NP hay không vẫn chưa được giải quyết. Nếu P = NP, mọi bài toán (problem / 문제) có certificate verify polynomial cũng có thể solve polynomial về mặt asymptotic. Nếu P ≠ NP, tồn tại problems verify nhanh nhưng solve không có polynomial thuật toán (algorithm / 알고리즘).
@@ -69,8 +57,6 @@ Câu hỏi P = NP hay không vẫn chưa được giải quyết. Nếu P = NP, 
 Không nên suy diễn rằng “NP-complete nghĩa là không thể giải”. Instances nhỏ, cấu trúc (structure / 구조) đặc biệt, parameterization, approximation, heuristics và exponential algorithms tối ưu hóa vẫn có thể cực kỳ hữu ích.
 
 SAT solvers hiện đại giải nhiều industrial instances rất lớn vì real-world cấu trúc (structure / 구조) khác worst-case adversarial instances.
-
-> **Nối mạch:** **Lower bounds và comparison sorting** nối từ **P versus NP** sang **Parameterized độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lower bounds và comparison sorting
 
@@ -80,15 +66,11 @@ Comparison-based sorting có lower bound `Ω(n log n)` comparisons vì có `n!` 
 
 Counting sort có thể `O(n+k)` vì nó không bị giới hạn trong comparison mô hình (model / 모델); nó khai thác cấu trúc (structure / 구조) của keys. Vì vậy lower bound luôn phụ thuộc computational mô hình (model / 모델) và các giả định (assumptions / 가정들).
 
-> **Nối mạch:** **Parameterized độ phức tạp (complexity / 복잡도)** nối từ **Lower bounds và comparison sorting** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Parameterized độ phức tạp (complexity / 복잡도)
 
 Có bài toán (problem / 문제) exponential theo `n` nhưng practical nếu một parameter `k` nhỏ. Fixed-parameter tractable (FPT) algorithms có form như `f(k) * poly(n)`.
 
 Cách nhìn này quan trọng trong practice: difficulty không chỉ phụ thuộc raw đầu vào (input / 입력) kích thước (size / 크기) mà còn cấu trúc instance.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Parameterized độ phức tạp (complexity / 복잡도)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -98,13 +80,9 @@ Cách nhìn này quan trọng trong practice: difficulty không chỉ phụ thu�
 
 **“Một thuật toán (algorithm / 알고리즘) O(n²) luôn tốt hơn O(2^n).”** Với đầu vào (input / 입력) nhỏ và constants khác nhau, không nhất thiết. độ phức tạp (complexity / 복잡도) mô tả scaling, không thay benchmark.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) không chỉ hỏi “thuật toán (algorithm / 알고리즘) này tốn bao lâu”, mà xây bản đồ giữa problems: bài toán (problem / 문제) nào biến được thành bài toán (problem / 문제) nào, ranh giới (boundary / 경계) tài nguyên nằm ở đâu, và limitation nào đến từ bản chất chứ không phải hiện thực (implementation / 구현) yếu.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

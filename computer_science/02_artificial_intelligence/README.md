@@ -37,8 +37,6 @@ flowchart TD
     SAFE --> GOV[20 Ethics / Governance / Society]
 ```
 
-> **Chuyển mạch:** Trong **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** gom các mảnh từ **Reading đồ thị (graph / 그래프)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiện tại (current / 현재) cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델) xuyên suốt
 
 Sau bản đồ dependency, phần này nén toàn bộ layer thành một chuỗi suy luận. Mục tiêu là nối dữ liệu, objective, model, evaluation và deployment thành một vòng lặp thay vì học từng thuật toán riêng lẻ.
@@ -62,8 +60,6 @@ Feedback
 ```
 
 Hiện đại (modern / 현대적) AI ứng dụng (application / 애플리케이션) thường thêm bên ngoài (external / 외부) retrieval, tools, bộ nhớ (memory / 메모리), xác minh (verification / 확인) và khả năng quan sát (observability / 관측 가능성) quanh mô hình (model / 모델). Vì vậy thư viện (library / 라이브러리) phân biệt rõ **mô hình (model / 모델)** và **hệ thống (system / 시스템)**.
-
-> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Hiện tại (current / 현재) cấu trúc (structure / 구조)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những distinction quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hiện tại (current / 현재) cấu trúc (structure / 구조)
 
@@ -94,8 +90,6 @@ Cấu trúc hiện tại đi từ foundations và mathematics tới model, retri
 ├── 20_ethics_governance_and_society/
 └── 90_connections/
 ```
-
-> **Chuyển mạch:** **Hiện tại cấu trúc** cho biết các domain AI đang đứng ở đâu; **Những distinction quan trọng** tách khái niệm dễ lẫn trước khi **Terminology convention** khóa cách gọi dùng chung.
 
 ## Những distinction quan trọng
 
@@ -130,8 +124,6 @@ Fine-tuning         ≠ Knowledge Database
 Long Context        ≠ Persistent Memory
 Model says “done”   ≠ Verified completion
 ```
-
-> **Chuyển mạch:** **Terminology convention** đóng vai trò vocabulary contract; từ đây người học quay về README của từng domain để đọc đúng owner và phạm vi.
 
 ## Terminology convention
 

@@ -2,7 +2,6 @@
 
 > **Mạch đọc:** [README](./README.md) là owner của tuyến debugging nâng cao. File đi từ symptom tới invariant, boundary, evidence rồi mới xuống lower layer; các ví dụ về request, durability, concurrency và security chỉ minh họa cùng một quy tắc: sửa ở tầng sở hữu invariant.
 
-
 Môi trường vận hành (production / 운영 환경) bug thường xuất hiện ở tầng (layer / 계층) A nhưng nguyên nhân nằm ở tầng (layer / 계층) B hoặc tương tác (interaction / 상호작용) giữa nhiều layers. Advanced debugging vì vậy cần tránh hai cực: nhảy ngay xuống assembly/kernel, hoặc chỉ nhìn ứng dụng (application / 애플리케이션) log và giả định lớp trừu tượng (abstraction / 추상화) luôn giữ.
 
 Mô hình tư duy (mental model / 사고 모델) của chapter này là **contract-driven descent**: bắt đầu tại lớp trừu tượng (abstraction / 추상화) cao nhất còn giải thích được symptom, viết bất biến (invariant / 불변식) đang bị vi phạm, thu bằng chứng (evidence / 증거) ở ranh giới (boundary / 경계), rồi chỉ đi xuống tầng dưới khi cơ chế (mechanism / 메커니즘) ở tầng hiện tại không đủ giải thích hành vi (behavior / 동작).
@@ -67,8 +66,6 @@ mechanism thấp hơn nào giải thích behavior?
 
 Dấu vết (trace / 추적) cho nhân quả (causal / 인과적) cấu trúc (structure / 구조); metrics cho population/saturation; profiler/counters cho cơ chế (mechanism / 메커니즘); logs cho sự kiện (event / 이벤트)/ngữ cảnh (context / 맥락). Không công cụ (tool / 도구) nào một mình là “truth”.
 
-> **Nối mạch:** Loại bằng chứng giúp khoanh vùng owner: metric cho thấy bão hòa, trace cho thấy thời điểm nhân quả, log cho thấy sự kiện. Tình huống đầu tiên tách request chậm khỏi query nhanh bằng cách xác định thời gian chờ trước khi thực thi.
-
 ## 5. Ví dụ: yêu cầu (request / 요청) chậm nhưng truy vấn (query / 쿼리) nhanh
 
 DB dashboard báo truy vấn (query / 쿼리) 20 ms, API mất 2 s. Có thể 1.8 s nằm ở connection-pool wait trước khi truy vấn (query / 쿼리) bắt đầu. truy vấn (query / 쿼리) tracing chỉ đo dịch vụ (service / 서비스) thời gian (time / 시간) sau acquire nên bỏ qua hàng đợi (queue / 큐) delay.
@@ -86,8 +83,6 @@ Fix chỉ mục (index / 인덱스) không giải. bằng chứng (evidence / �
 Mã nguồn (source code / 소스 코드) nhìn ordered, kiểm thử (test / 테스트) trên một ISA pass nhưng môi trường vận hành (production / 운영 환경) thất bại (fail / 실패). Nếu program thiếu happens-before, kiểm thử (test / 테스트) chỉ đang dựa vào accidental timing hoặc stronger thứ tự (ordering / 순서) của một nền tảng (platform / 플랫폼).
 
 Đi xuống ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) → trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) → ISA thứ tự (ordering / 순서) → bộ nhớ đệm (cache / 캐시)/coherence để giải thích hành vi (behavior / 동작), nhưng fix phải quay lại tầng sở hữu bất biến (invariant / 불변식) đồng bộ. Xem [đường correctness xuyên tầng](./02_correctness_path_language_os_cpu_memory_ordering.md).
-
-> **Nối mạch:** Hai ví dụ về durability và concurrency cho thấy việc đi xuống tầng thấp chỉ có ích khi đã viết invariant. Từ đó, **8. bảo mật đường dẫn** mở rộng cùng quy tắc sang authority và trust boundary.
 
 ## 8. bảo mật (security / 보안) đường dẫn (path / 경로): định danh (identity / 식별자) → authorization → secret → TLS → dịch vụ (service / 서비스) ranh giới (boundary / 경계)
 
@@ -110,7 +105,7 @@ Bất biến (invariant / 불변식) quan trọng là **định danh (identity /
 
 ## 9. Secret là năng lực (capability / 역량); nơi lưu secret không phải toàn bộ trust mô hình (model / 모델)
 
-Một secret, đơn vị từ (token / 토큰) hoặc private key trao cho holder một năng lực (capability / 역량). Nếu attacker lấy được credential có quyền decrypt mọi customer key, blast radius do authorization phạm vi (scope / 범위) quyết định, không phải do encryption thuật toán (algorithm / 알고리즘) mạnh hay yếu.
+Một secret, token (토큰) hoặc private key trao cho holder một năng lực (capability / 역량). Nếu attacker lấy được credential có quyền decrypt mọi customer key, blast radius do authorization phạm vi (scope / 범위) quyết định, không phải do encryption thuật toán (algorithm / 알고리즘) mạnh hay yếu.
 
 Vì vậy khi gỡ lỗi (debug / 디버그) credential compromise, đừng chỉ hỏi secret bị leak ở đâu. Hỏi thêm:
 
@@ -154,7 +149,7 @@ Thứ tự matters. Revoke secret nhưng để attacker mint secret mới qua co
 
 ## 12. Rotation và revocation là phân tán (distributed / 분산) chuyển tiếp trạng thái (state transition / 상태 전이)
 
-Credential mới và cũ có thể cùng tồn tại trong overlap cửa sổ (window / 윈도우). bộ nhớ đệm (cache / 캐시), long-lived liên kết (connection / 연결), đơn vị từ (token / 토큰) TTL và replica/cấu hình (config / 설정) propagation làm chính sách (policy / 정책) không đổi atomically toàn hệ thống.
+Credential mới và cũ có thể cùng tồn tại trong overlap cửa sổ (window / 윈도우). bộ nhớ đệm (cache / 캐시), long-lived liên kết (connection / 연결), token (토큰) TTL và replica/cấu hình (config / 설정) propagation làm chính sách (policy / 정책) không đổi atomically toàn hệ thống.
 
 Bất biến (invariant / 불변식) cần rõ: khi nào credential cũ không còn được chấp nhận? dịch vụ (service / 서비스) nào đã nhận trust bundle mới? quay lui (rollback / 롤백) có làm credential đã revoke sống lại không?
 
@@ -180,11 +175,11 @@ TLS/certificate validation error
 credential issuance/rotation/revocation event
 ```
 
-Không log raw secret/đơn vị từ (token / 토큰). Mục tiêu là log định danh (identity / 식별자) và quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터) đủ để reconstruct authority đường dẫn (path / 경로) mà không tạo thêm leakage.
+Không log raw secret/token (토큰). Mục tiêu là log định danh (identity / 식별자) và quyết định (decision / 결정) siêu dữ liệu (metadata / 메타데이터) đủ để reconstruct authority đường dẫn (path / 경로) mà không tạo thêm leakage.
 
 ## 15. thời gian (time / 시간) là phụ thuộc (dependency / 의존성) bảo mật (security / 보안) hay bị quên
 
-Certificate validity, đơn vị từ (token / 토큰) expiry, nonce/replay cửa sổ (window / 윈도우) và log correlation đều phụ thuộc thời gian (time / 시간). Clock skew có thể làm một credential hợp lệ bị reject hoặc credential đã hết hạn vẫn được một thành phần (component / 컴포넌트) hiểu sai nếu kiểm tra hợp lệ (validation / 검증) không nhất quán.
+Certificate validity, token (토큰) expiry, nonce/replay cửa sổ (window / 윈도우) và log correlation đều phụ thuộc thời gian (time / 시간). Clock skew có thể làm một credential hợp lệ bị reject hoặc credential đã hết hạn vẫn được một thành phần (component / 컴포넌트) hiểu sai nếu kiểm tra hợp lệ (validation / 검증) không nhất quán.
 
 Khi nhiều services đồng loạt báo auth thất bại (failure / 실패) sau rollout/NTP sự cố (incident / 인시던트), lower lớp trừu tượng (abstraction / 추상화) thực sự quyết định hành vi (behavior / 동작) có thể là clock discipline chứ không phải OAuth/TLS mã (code / 코드).
 

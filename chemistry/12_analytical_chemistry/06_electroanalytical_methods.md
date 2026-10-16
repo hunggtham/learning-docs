@@ -38,8 +38,6 @@ Nếu phản ứng có hóa lượng electron xác định, điện lượng có
 
 Ba phép đo này trả lời ba câu hỏi khác nhau; không nên dùng một đại lượng như thể nó chứa toàn bộ thông tin của hai đại lượng còn lại.
 
-> **Nối mạch:** Electroanalytical methods chọn cửa sổ potential/current/charge theo measurand; electrode potential luôn là tương đối, và potentiometric measurement đọc nó ở dòng gần bằng zero.
-
 ## Một điện cực không có “điện thế tuyệt đối” đo trực tiếp
 
 Thiết bị luôn đo chênh lệch điện thế giữa các điện cực.
@@ -67,8 +65,6 @@ Vì vậy điện cực tham chiếu là một phần của mô hình đo, khôn
 
 Xem nền nhiệt động: [Điện thế pin và phương trình Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md).
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Đo thế — lấy thông tin khi dòng gần bằng 0** nối từ **Một điện cực không có “điện thế tuyệt đối” đo trực tiếp** sang **Điện cực pH — ví dụ điển hình của phép đo hoạt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đo thế — lấy thông tin khi dòng gần bằng 0
 
 **Đo thế (potentiometry)** đo điện áp trong điều kiện dòng ròng rất nhỏ.
@@ -86,8 +82,6 @@ E=E^\circ-\frac{RT}{nF}\ln Q
 \]
 
 Điều quan trọng cho phân tích là \(Q\) được xây từ **hoạt độ (activity)**. Nồng độ chỉ thay thế trực tiếp cho hoạt độ khi xấp xỉ lý tưởng đủ tốt hoặc khi phương pháp hiệu chuẩn đã kiểm soát ảnh hưởng nền.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Đo thế — lấy thông tin khi dòng gần bằng 0** nêu quy tắc; **Điện cực pH — ví dụ điển hình của phép đo hoạt độ** thử quy tắc trong tình huống, rồi **Điện cực chọn lọc ion** mở rộng hệ quả.
 
 ## Điện cực pH — ví dụ điển hình của phép đo hoạt độ
 
@@ -110,8 +104,6 @@ Nhưng điện cực thực còn chịu ảnh hưởng của:
 
 Do đó máy pH cần được hiệu chuẩn bằng dung dịch đệm phù hợp. Nếu mẫu dự kiến quanh pH 7–9, dùng chuẩn bao quanh vùng đo thường có ý nghĩa hơn việc chỉ hiệu chuẩn ở một đầu thang.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Điện cực pH — ví dụ điển hình của phép đo hoạt độ** nêu quy tắc; **Điện cực chọn lọc ion** thử quy tắc trong tình huống, rồi **Hệ số chọn lọc và ion gây nhiễu** mở rộng hệ quả.
-
 ## Điện cực chọn lọc ion
 
 **Điện cực chọn lọc ion (ion-selective electrode, ISE)** dùng màng có độ ưu tiên tương đối với một ion.
@@ -125,8 +117,6 @@ E=K+\frac{RT}{zF}\ln a_i
 với \(z\) là điện tích ion.
 
 Từ khóa cần nhấn mạnh là **chọn lọc tương đối**. Màng không “nhìn thấy duy nhất” ion mục tiêu; ion khác có thể gây nhiễu nếu tương tác với màng đủ mạnh.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Hệ số chọn lọc và ion gây nhiễu** nối từ **Điện cực chọn lọc ion** sang **Lực ion và dung dịch điều chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số chọn lọc và ion gây nhiễu
 
@@ -142,8 +132,6 @@ nồng độ của chúng lớn bao nhiêu?
 
 Một ISE hoạt động tốt trong chuẩn đơn giản có thể cho độ lệch (bias / 편향) lớn trong nước biển, huyết thanh hoặc dịch công nghiệp có lực ion cao.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Lực ion và dung dịch điều chỉnh** nối từ **Hệ số chọn lọc và ion gây nhiễu** sang **Thế nối lỏng là một nguồn sai số thật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lực ion và dung dịch điều chỉnh
 
 Hệ số hoạt độ thay đổi khi lực ion thay đổi. Vì vậy hai dung dịch có cùng nồng độ ion mục tiêu nhưng ma trận ion khác nhau có thể cho điện thế khác.
@@ -152,8 +140,6 @@ Một chiến lược là thêm **dung dịch điều chỉnh lực ion (ionic s
 
 Mục đích không phải “thêm hóa chất cho đủ quy trình”, mà là làm môi trường hoạt độ của chuẩn và mẫu tương đồng hơn để calibration có thể chuyển được từ chuẩn sang mẫu.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Lực ion và dung dịch điều chỉnh** đặt vấn đề; **Thế nối lỏng là một nguồn sai số thật** đối chiếu bằng chứng, rồi **Voltammetry — điều khiển điện thế và quan sát dòng** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Thế nối lỏng là một nguồn sai số thật
 
 Tại ranh giới giữa hai dung dịch điện ly khác thành phần, các ion khuếch tán với độ linh động khác nhau và có thể tạo **thế nối lỏng (liquid-junction potential)**.
@@ -161,8 +147,6 @@ Tại ranh giới giữa hai dung dịch điện ly khác thành phần, các io
 Điện cực tham chiếu thường dùng điện ly nồng độ cao và cặp ion có độ linh động tương đối gần nhau để giảm hiệu ứng này.
 
 Nhưng thế nối không biến mất tuyệt đối. Với phép đo độ chính xác cao, đây là một thành phần của ngân sách độ không đảm bảo.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Thế nối lỏng là một nguồn sai số thật** đặt vấn đề; **Voltammetry — điều khiển điện thế và quan sát dòng** đối chiếu bằng chứng, rồi **Dòng Faraday và dòng điện dung** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Voltammetry — điều khiển điện thế và quan sát dòng
 
@@ -177,8 +161,6 @@ Hệ ba điện cực thường có:
 **Potentiostat** điều khiển điện thế điện cực làm việc so với tham chiếu và dẫn phần lớn dòng qua điện cực đối.
 
 Cấu trúc này giúp điện cực tham chiếu duy trì trạng thái ổn định hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Dòng Faraday và dòng điện dung** nối từ **Voltammetry — điều khiển điện thế và quan sát dòng** sang **Vận chuyển chất tới bề mặt điện cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dòng Faraday và dòng điện dung
 
@@ -201,8 +183,6 @@ Khi điện thế thay đổi, lớp điện kép được nạp hoặc xả. D�
 Trong phân tích vết, dòng điện dung có thể trở thành nền lớn so với tín hiệu Faraday.
 
 Do đó thiết kế dạng xung, chọn thời điểm đọc tín hiệu và trừ nền có thể quan trọng không kém độ nhạy của detector điện tử.
-
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Vận chuyển chất tới bề mặt điện cực** nối từ **Dòng Faraday và dòng điện dung** sang **Voltammetry vòng — công cụ cơ chế trước khi là công cụ định lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận chuyển chất tới bề mặt điện cực
 
@@ -228,8 +208,6 @@ i=nFAJ
 
 cho thấy tín hiệu điện có thể là ảnh trực tiếp của vận chuyển vật chất.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Vận chuyển chất tới bề mặt điện cực** đặt đầu vào cho **Voltammetry vòng — công cụ cơ chế trước khi là công cụ định lượng**, rồi **Randles–Ševčík như một mô hình chẩn đoán** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Voltammetry vòng — công cụ cơ chế trước khi là công cụ định lượng
 
 **Voltammetry vòng (cyclic voltammetry, CV)** quét điện thế theo một chiều rồi đảo ngược.
@@ -243,8 +221,6 @@ Một cặp oxy hóa/khử có thể tạo peak thuận và peak nghịch. Hình
 - phản ứng hóa học ghép sau hoặc trước bước electron.
 
 CV thường rất mạnh để kiểm tra cơ chế và chọn vùng điện thế trước khi xây phương pháp định lượng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, cơ chế trong **Voltammetry vòng — công cụ cơ chế trước khi là công cụ định lượng** cần được kiểm chứng bằng dấu vết cụ thể; **Randles–Ševčík như một mô hình chẩn đoán** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Khi động học chuyển electron trở nên quan trọng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Randles–Ševčík như một mô hình chẩn đoán
 
@@ -268,8 +244,6 @@ Nếu dòng tỷ lệ gần \(\nu\), hấp phụ bề mặt có thể đóng gó
 
 Đây là **dấu hiệu chẩn đoán**, không phải quy tắc tuyệt đối áp dụng cho mọi cơ chế và hình học điện cực.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Khi động học chuyển electron trở nên quan trọng** nối từ **Randles–Ševčík như một mô hình chẩn đoán** sang **Phản ứng hóa học ghép với chuyển electron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi động học chuyển electron trở nên quan trọng
 
 Nếu chuyển electron chậm, bề mặt không duy trì được trạng thái gần Nernst khi điện thế thay đổi nhanh.
@@ -281,8 +255,6 @@ Lý thuyết Butler–Volmer, Tafel, mật độ dòng trao đổi và quá th�
 > tín hiệu thay đổi vì nồng độ thay đổi, hay vì động học bề mặt thay đổi?
 
 Phân biệt hai nguyên nhân này rất quan trọng khi xây calibration.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Phản ứng hóa học ghép với chuyển electron** nối từ **Khi động học chuyển electron trở nên quan trọng** sang **Amperometry — giữ điện thế và đo dòng theo thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng hóa học ghép với chuyển electron
 
@@ -299,8 +271,6 @@ Nếu sản phẩm khử nhanh chóng phản ứng thành chất khác, peak h�
 
 Do đó peak mất đi có thể là bằng chứng cơ chế, không nhất thiết là lỗi thiết bị.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Amperometry — giữ điện thế và đo dòng theo thời gian** nối từ **Phản ứng hóa học ghép với chuyển electron** sang **Chronoamperometry — tín hiệu thời gian của khuếch tán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Amperometry — giữ điện thế và đo dòng theo thời gian
 
 Trong **amperometry**, điện thế được giữ tại vùng mà chất phân tích phản ứng, rồi dòng được theo dõi.
@@ -316,8 +286,6 @@ Nếu vận chuyển khối được kiểm soát và phản ứng đủ chọn 
 
 Nhược điểm lớn là các chất gây nhiễu có thể phản ứng tại cùng điện thế, vì vậy selectivity thường phải đến từ màng, enzyme, catalyst hoặc bước tách trước đó.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Chronoamperometry — tín hiệu thời gian của khuếch tán** nối từ **Amperometry — giữ điện thế và đo dòng theo thời gian** sang **Điện cực đĩa quay trong phương pháp đo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chronoamperometry — tín hiệu thời gian của khuếch tán
 
 Sau bước nhảy điện thế, dòng khuếch tán trên điện cực phẳng lý tưởng thường giảm theo quan hệ Cottrell:
@@ -330,8 +298,6 @@ Theo thời gian, lớp khuếch tán dày hơn và độ dốc (gradient / 기�
 
 Đây là một ví dụ tốt cho việc tín hiệu điện hóa không chỉ phụ thuộc nồng độ mà còn phụ thuộc **thời gian kể từ khi điều kiện biên thay đổi**.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Điện cực đĩa quay trong phương pháp đo** nối từ **Chronoamperometry — tín hiệu thời gian của khuếch tán** sang **Coulometry — đếm electron bằng điện lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện cực đĩa quay trong phương pháp đo
 
 **Điện cực đĩa quay (rotating disk electrode, RDE)** tạo đối lưu có kiểm soát và làm vận chuyển khối dễ tái lập hơn.
@@ -339,8 +305,6 @@ Theo thời gian, lớp khuếch tán dày hơn và độ dốc (gradient / 기�
 Thay đổi tốc độ quay cho phép phân biệt phần dòng do vận chuyển với phần do động học phản ứng.
 
 Chi tiết phương trình Levich và Koutecký–Levich được giữ ở chapter lý thuyết điện hóa để tránh lặp. Trong phân tích, giá trị của RDE nằm ở việc tạo **điều kiện vận chuyển có thể kiểm soát và tái lập**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Coulometry — đếm electron bằng điện lượng** nối từ **Điện cực đĩa quay trong phương pháp đo** sang **Chuẩn độ coulometric**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coulometry — đếm electron bằng điện lượng
 
@@ -360,8 +324,6 @@ n_{analyte}=\frac{Q}{zF}
 
 Nhược điểm là phản ứng phụ, dòng nền hoặc chuyển hóa không hoàn toàn làm điện lượng không còn tương ứng riêng với chất phân tích.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Chuẩn độ coulometric** nối từ **Coulometry — đếm electron bằng điện lượng** sang **Đo độ dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuẩn độ coulometric
 
 Thay vì chuẩn bị titrant có nồng độ biết trước, có thể tạo titrant **ngay trong cell (in situ)** bằng điện phân.
@@ -376,8 +338,6 @@ Từ thời gian tới điểm cuối, suy ra số mol chất phản ứng đã 
 
 Cách này hữu ích khi titrant khó bảo quản hoặc lượng cần dùng rất nhỏ.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Đo độ dẫn** nối từ **Chuẩn độ coulometric** sang **Chuẩn độ dẫn điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đo độ dẫn
 
 **Độ dẫn điện (conductivity)** của dung dịch phụ thuộc nồng độ, điện tích và độ linh động của tất cả ion.
@@ -390,8 +350,6 @@ Một biểu thức khái niệm:
 
 Nhiệt độ ảnh hưởng mạnh vì độ nhớt và độ linh động ion thay đổi. Vì vậy đo độ dẫn chính xác thường phải kiểm soát hoặc hiệu chỉnh nhiệt độ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Chuẩn độ dẫn điện** nối từ **Đo độ dẫn** sang **Voltammetry xung và stripping — tăng tỷ lệ tín hiệu/nền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuẩn độ dẫn điện
 
 Trong chuẩn độ acid mạnh bằng cơ sở (base / 기반) mạnh, \(H^+\) có độ linh động rất cao dần bị thay bằng các ion kém linh động hơn, nên độ dẫn giảm.
@@ -399,8 +357,6 @@ Trong chuẩn độ acid mạnh bằng cơ sở (base / 기반) mạnh, \(H^+\) 
 Sau điểm tương đương, \(OH^-\) dư làm độ dẫn tăng trở lại.
 
 Đường cong độ dẫn vì vậy có thể cho điểm tương đương ngay cả khi mẫu đục hoặc có màu, nơi chỉ thị quang học kém thuận tiện.
-
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Voltammetry xung và stripping — tăng tỷ lệ tín hiệu/nền** nối từ **Chuẩn độ dẫn điện** sang **EIS trong điện phân tích — dùng như tín hiệu, không lặp lại toàn bộ lý thuyết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Voltammetry xung và stripping — tăng tỷ lệ tín hiệu/nền
 
@@ -418,8 +374,6 @@ Sự đánh đổi (trade-off / 트레이드오프) là phương pháp trở nê
 - tốc độ khuấy;
 - điều kiện stripping.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **EIS trong điện phân tích — dùng như tín hiệu, không lặp lại toàn bộ lý thuyết** nối từ **Voltammetry xung và stripping — tăng tỷ lệ tín hiệu/nền** sang **Bề mặt điện cực và fouling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## EIS trong điện phân tích — dùng như tín hiệu, không lặp lại toàn bộ lý thuyết
 
 **Phổ trở kháng điện hóa (EIS)** có thể được dùng để theo dõi thay đổi giao diện do chất phân tích liên kết, enzyme phản ứng hoặc lớp màng biến đổi.
@@ -436,8 +390,6 @@ ma trận mẫu có làm giao diện thay đổi độc lập với analyte khô
 ```
 
 Một mạch tương đương khớp đẹp không tự chứng minh cảm biến có tính đặc hiệu hóa học.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Bề mặt điện cực và fouling** nối từ **EIS trong điện phân tích — dùng như tín hiệu, không lặp lại toàn bộ lý thuyết** sang **Hiệu chuẩn và hiệu ứng nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bề mặt điện cực và fouling
 
@@ -461,8 +413,6 @@ Do đó quy trình phân tích có thể cần:
 - mẫu kiểm soát định kỳ.
 
 Một điện cực rất nhạy khi mới chế tạo nhưng trôi mạnh sau năm mẫu chưa phải là cảm biến định lượng tốt.
-
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Hiệu chuẩn và hiệu ứng nền** nối từ **Bề mặt điện cực và fouling** sang **Cảm biến điện hóa — nhận diện phải đi trước chuyển đổi tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu chuẩn và hiệu ứng nền
 
@@ -488,8 +438,6 @@ Các chiến lược gồm:
 - pha loãng mẫu nếu độ nhạy cho phép.
 
 Xem thêm: [Thẩm định phương pháp và chemometrics](./07_method_validation_and_chemometrics.md).
-
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Cảm biến điện hóa — nhận diện phải đi trước chuyển đổi tín hiệu** nối từ **Hiệu chuẩn và hiệu ứng nền** sang **Ví dụ: cảm biến glucose**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảm biến điện hóa — nhận diện phải đi trước chuyển đổi tín hiệu
 
@@ -518,8 +466,6 @@ Hiệu năng phải được đánh giá theo nhiều chiều:
 
 Một prototype cho tín hiệu lớn với chuẩn tinh khiết chưa đủ chứng minh nó là cảm biến tốt trong mẫu thực.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Cảm biến điện hóa — nhận diện phải đi trước chuyển đổi tín hiệu** nêu quy tắc; **Ví dụ: cảm biến glucose** thử quy tắc trong tình huống, rồi **Độ không đảm bảo trong điện phân tích** mở rộng hệ quả.
-
 ## Ví dụ: cảm biến glucose
 
 Enzyme glucose oxidase tạo ra một chuỗi biến đổi có thể ghép với phép đo điện hóa.
@@ -540,8 +486,6 @@ Vì vậy tín hiệu không chỉ phụ thuộc glucose; nó phụ thuộc cả
 
 Đây là lý do thẩm định sensor phải bao gồm điều kiện môi trường, độ ổn định và ma trận mẫu.
 
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Ví dụ: cảm biến glucose** nêu quy tắc; **Độ không đảm bảo trong điện phân tích** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: peak CV giảm sau nhiều lần quét nghĩa là gì?** mở rộng hệ quả.
-
 ## Độ không đảm bảo trong điện phân tích
 
 Nguồn độ không đảm bảo có thể đến từ:
@@ -561,8 +505,6 @@ Trong ISE, slope Nernst và thế nối có thể quan trọng. Trong stripping 
 
 Do đó ngân sách độ không đảm bảo phải mô tả **toàn quy trình**, không chỉ thông số của potentiostat.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Độ không đảm bảo trong điện phân tích** nêu quy tắc; **Ví dụ suy luận: peak CV giảm sau nhiều lần quét nghĩa là gì?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: peak CV giảm sau nhiều lần quét nghĩa là gì?
 
 Không nên kết luận ngay rằng nồng độ chất phân tích giảm.
@@ -579,8 +521,6 @@ Các khả năng gồm:
 Cần thiết kế thí nghiệm đối chứng để phân biệt nguyên nhân.
 
 Đây là tư duy trung tâm của hóa phân tích: **một tín hiệu có thể có nhiều cơ chế sinh ra**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Ví dụ suy luận: peak CV giảm sau nhiều lần quét nghĩa là gì?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -607,8 +547,6 @@ Không. Nhiều mô hình có thể khớp tương tự; cần bằng chứng h�
 ### “Cảm biến càng nhạy càng tốt”
 
 Không. Độ chọn lọc, drift, fouling, reproducibility và độ bền trong mẫu thật có thể quan trọng hơn slope cực lớn trong mẫu chuẩn.
-
-> **Nối mạch:** Trong **Phương pháp điện phân tích — biến điện thế, dòng và điện lượng thành thông tin định lượng**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

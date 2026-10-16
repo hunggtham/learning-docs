@@ -92,8 +92,6 @@ Các `_index.md` cố ý ngắn vì chỉ làm điều hướng (navigation / �
 
 **Tổng quy mô ước lượng:** khoảng **204,000+ từ** cho Advanced DSA. Đây là coverage estimate, không phải word count tuyệt đối.
 
-> **Chuyển mạch:** Trong **Advanced DSA tệp (file / 파일) Manifest**, **Trạng thái các pass nội dung** tiếp nhận điểm tựa từ **Độ phủ hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá độ sâu hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trạng thái các pass nội dung
 
 ### Pass 1–4 — kiến trúc, độ phủ và cốt lõi (core / 핵심) algorithms
@@ -154,8 +152,6 @@ Mở rộng Backtracking thành CSP/solver lập luận (reasoning / 추론): fo
 
 Mục tiêu là chuyển tư duy từ “viết DFS đệ quy” sang **quản lý thông tin để chứng minh càng nhiều branch là không cần mở càng sớm càng tốt**.
 
-> **Chuyển mạch:** Ở chặng này của **Advanced DSA tệp (file / 파일) Manifest**, **Đánh giá độ sâu hiện tại** tiếp nhận điểm tựa từ **Trạng thái các pass nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Đánh giá độ sâu hiện tại
 
 Sau advanced-depth pass, thư viện đã đạt ba tầng tương đối đầy đủ:
@@ -183,8 +179,6 @@ cross-links theo invariant thay vì chỉ theo topic
 case study cache/allocator/compiler/search engine
 notation và terminology consistency toàn library
 ```
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Advanced DSA tệp (file / 파일) Manifest**, **Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau** tiếp nhận điểm tựa từ **Đánh giá độ sâu hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Tiêu chí “đủ sâu” cho các lần rà soát (review / 검토) sau
 

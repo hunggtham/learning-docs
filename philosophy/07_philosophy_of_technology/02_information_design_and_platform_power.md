@@ -8,8 +8,6 @@ Thông tin (information / 정보) các hệ thống (systems / 시스템들) kh�
 
 Default, notification, friction, tìm kiếm (search / 검색) ranking và API truy cập (access / 접근) phân bổ attention và opportunity. Đây là “soft power”: người dùng vẫn có lựa chọn trên giấy nhưng chi phí (cost / 비용) của một lựa chọn có thể được thiết kế cao hơn nhiều lựa chọn khác.
 
-> **Chuyển mạch:** Trong **Thông tin (information / 정보), thiết kế (design / 설계) và nền tảng (platform / 플랫폼) Power**, **Kiến thức (knowledge / 지식) và opacity** tiếp nhận điểm tựa từ **Thiết kế (design / 설계) như quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## Kiến thức (knowledge / 지식) và opacity
 
 Opacity có nhiều dạng: secret, độ phức tạp (complexity / 복잡도), quy mô (scale / 규모), động (dynamic / 동적) adaptation và không có đường appeal. Explainability hữu ích khi giúp người dùng (user / 사용자) contest hoặc operator gỡ lỗi (debug / 디버그); một explanation đẹp nhưng không faithful chỉ tạo legitimacy giả. quản trị (governance / 거버넌스) cần logging, provenance, truy cập (access / 접근) to bằng chứng (evidence / 증거), independent kiểm tra (audit / 감사) và cơ chế sửa.

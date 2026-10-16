@@ -22,8 +22,6 @@ Trong đó `C` là tiêu dùng tư nhân, `I` là đầu tư, `G` là chi tiêu 
 
 Với Hàn Quốc, đầu tư và nhu cầu bên ngoài đặc biệt quan trọng vì bán dẫn, thiết bị sản xuất, ô tô, đóng tàu và xây dựng có quy mô lớn.
 
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Giá trị gia tăng giúp tránh tính trùng** tiếp nhận điểm tựa từ **GDP đo dòng giá trị gia tăng, không phải “tài sản của quốc gia”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GDP danh nghĩa, GDP thực và tại sao phải tách giá khỏi lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Giá trị gia tăng giúp tránh tính trùng
 
 Nếu công ty thép bán thép giá 100 cho hãng xe và hãng xe bán chiếc xe giá 300, GDP không cộng 100 + 300 thành 400 nếu phần thép đã nằm trong chiếc xe.
@@ -38,8 +36,6 @@ Doanh thu
 
 Điều này quan trọng khi đọc xuất khẩu. Xuất khẩu gộp có thể rất lớn nhưng giá trị giữ lại trong nước phụ thuộc tỷ trọng đầu vào nhập khẩu. Xem [thương mại và chuỗi giá trị](./02_trade_export_and_global_value_chains.md).
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **GDP danh nghĩa, GDP thực và tại sao phải tách giá khỏi lượng** tiếp nhận điểm tựa từ **Giá trị gia tăng giúp tránh tính trùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GDP và GDI: sản xuất nhiều chưa chắc sức mua tăng tương ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## GDP danh nghĩa, GDP thực và tại sao phải tách giá khỏi lượng
 
 Nếu doanh thu toàn nền kinh tế tăng chỉ vì giá tăng, ta không thể kết luận sản lượng thật tăng tương ứng.
@@ -49,8 +45,6 @@ Nếu doanh thu toàn nền kinh tế tăng chỉ vì giá tăng, ta không th�
 Ví dụ, nếu giá chip tăng mạnh nhưng số lượng chip không tăng, giá trị xuất khẩu danh nghĩa có thể tăng rất nhanh trong khi sản lượng thực tăng ít hơn.
 
 Tách giá và lượng là nguyên tắc quan trọng khi phân tích cả nền kinh tế lẫn doanh nghiệp.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **GDP và GDI: sản xuất nhiều chưa chắc sức mua tăng tương ứng** tiếp nhận điểm tựa từ **GDP danh nghĩa, GDP thực và tại sao phải tách giá khỏi lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tăng trưởng tiềm năng và khoảng cách sản lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## GDP và GDI: sản xuất nhiều chưa chắc sức mua tăng tương ứng
 
@@ -62,8 +56,6 @@ Nếu giá hàng Hàn Quốc xuất khẩu tăng nhanh hơn giá hàng phải nh
 
 Với nền kinh tế nhập nhiều năng lượng và xuất nhiều hàng chế tạo như Hàn Quốc, GDP và GDI có thể cho hai góc nhìn khác nhau về mức “dễ chịu” của chu kỳ.
 
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Tăng trưởng tiềm năng và khoảng cách sản lượng** tiếp nhận điểm tựa từ **GDP và GDI: sản xuất nhiều chưa chắc sức mua tăng tương ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tăng trưởng dài hạn đến từ lao động, vốn và năng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tăng trưởng tiềm năng và khoảng cách sản lượng
 
 GDP thực tế có thể dao động quanh một mức sản lượng bền vững hơn gọi là **sản lượng tiềm năng (potential output / 잠재산출)**.
@@ -73,8 +65,6 @@ Nếu cầu vượt năng lực bền vững, nền kinh tế có thể nóng l�
 Khoảng cách giữa GDP thực tế và tiềm năng được gọi là **khoảng cách sản lượng (output gap / GDP갭)**.
 
 Khái niệm này giúp hiểu tại sao cùng mức tăng GDP 2% có thể mang ý nghĩa khác nhau tùy nền kinh tế đang ở đỉnh hay đáy chu kỳ.
-
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Tăng trưởng dài hạn đến từ lao động, vốn và năng suất** tiếp nhận điểm tựa từ **Tăng trưởng tiềm năng và khoảng cách sản lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lạm phát: không chỉ là “mọi thứ đắt hơn”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tăng trưởng dài hạn đến từ lao động, vốn và năng suất
 
@@ -88,8 +78,6 @@ Hàn Quốc thời kỳ bắt kịp có lợi từ lực lượng lao động t�
 
 Đây là lý do AI, số hóa, chất lượng quản lý và tái phân bổ nguồn lực có ý nghĩa lớn hơn trong nền kinh tế trưởng thành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Lạm phát: không chỉ là “mọi thứ đắt hơn”** tiếp nhận điểm tựa từ **Tăng trưởng dài hạn đến từ lao động, vốn và năng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lãi suất của BOK truyền vào nền kinh tế như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Lạm phát: không chỉ là “mọi thứ đắt hơn”
 
 **Lạm phát (inflation / 물가상승)** là mức tăng chung của giá cả, không phải một vài mặt hàng riêng lẻ tăng giá.
@@ -99,8 +87,6 @@ Lạm phát có thể đến từ cầu mạnh, chi phí đầu vào tăng, tỷ
 Với doanh nghiệp, tác động phụ thuộc quyền định giá. Nếu chi phí tăng 10% nhưng công ty chỉ tăng giá 3%, biên lợi nhuận giảm. Nếu công ty có thể chuyển phần lớn chi phí sang khách hàng, tác động nhỏ hơn.
 
 Do đó lạm phát phải được nối với **quyền định giá (pricing power / 가격결정력)** chứ không chỉ nhìn CPI.
-
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Lãi suất của BOK truyền vào nền kinh tế như thế nào?** tiếp nhận điểm tựa từ **Lạm phát: không chỉ là “mọi thứ đắt hơn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ giá KRW/USD: không có quy tắc “won yếu luôn tốt”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lãi suất của BOK truyền vào nền kinh tế như thế nào?
 
@@ -115,8 +101,6 @@ Lãi suất chính sách
 ```
 
 Doanh nghiệp nợ nhiều và hộ gia đình vay lãi suất thả nổi phản ứng nhanh hơn với thay đổi lãi suất. Ngân hàng có thể được hưởng NIM cao hơn trong một số giai đoạn nhưng cũng đối mặt chi phí vốn và rủi ro tín dụng cao hơn.
-
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Tỷ giá KRW/USD: không có quy tắc “won yếu luôn tốt”** tiếp nhận điểm tựa từ **Lãi suất của BOK truyền vào nền kinh tế như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cán cân vãng lai và lý do Hàn Quốc quan tâm ngoại tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tỷ giá KRW/USD: không có quy tắc “won yếu luôn tốt”
 
@@ -136,8 +120,6 @@ Một hãng xuất khẩu có sản xuất nội địa cao có thể hưởng l
 
 Do đó cần đọc **mức phơi nhiễm tỷ giá (FX exposure / 환노출)** của từng công ty, không dùng một kết luận cho cả thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Cán cân vãng lai và lý do Hàn Quốc quan tâm ngoại tệ** tiếp nhận điểm tựa từ **Tỷ giá KRW/USD: không có quy tắc “won yếu luôn tốt”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nợ hộ gia đình và nhà ở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cán cân vãng lai và lý do Hàn Quốc quan tâm ngoại tệ
 
 **Cán cân vãng lai (current account / 경상수지)** bao gồm thương mại hàng hóa, dịch vụ, thu nhập và chuyển giao.
@@ -145,8 +127,6 @@ Do đó cần đọc **mức phơi nhiễm tỷ giá (FX exposure / 환노출)**
 Thặng dư vãng lai thường giúp nền kinh tế tích lũy tài sản đối ngoại và giảm phụ thuộc vốn nước ngoài. Thâm hụt không tự động là xấu, nhưng nếu đi cùng nợ ngoại tệ ngắn hạn lớn, rủi ro tái cấp vốn có thể tăng.
 
 Ký ức về khủng hoảng 1997 làm thanh khoản ngoại tệ và dự trữ ngoại hối trở thành chủ đề đặc biệt quan trọng trong quản lý vĩ mô Hàn Quốc.
-
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Nợ hộ gia đình và nhà ở** tiếp nhận điểm tựa từ **Cán cân vãng lai và lý do Hàn Quốc quan tâm ngoại tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu kỳ bán dẫn có thể kéo cả dữ liệu vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nợ hộ gia đình và nhà ở
 
@@ -161,8 +141,6 @@ Lãi suất ↑
 
 Nhà ở còn ảnh hưởng xây dựng, vật liệu, ngân hàng, bảo hiểm, bán lẻ và tâm lý hộ gia đình. Vì vậy chu kỳ nhà ở là một kênh truyền dẫn lớn của kinh tế Hàn Quốc.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Nợ hộ gia đình và nhà ở** nêu điều cần giải thích; **Chu kỳ bán dẫn có thể kéo cả dữ liệu vĩ mô** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hàng tồn kho và chu kỳ công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chu kỳ bán dẫn có thể kéo cả dữ liệu vĩ mô
 
 Bán dẫn có tỷ trọng lớn trong xuất khẩu và đầu tư thiết bị. Khi giá bộ nhớ tăng, doanh thu xuất khẩu, lợi nhuận doanh nghiệp, CAPEX và thu thuế có thể cùng cải thiện.
@@ -170,8 +148,6 @@ Bán dẫn có tỷ trọng lớn trong xuất khẩu và đầu tư thiết b�
 Ngược lại, khi chu kỳ giảm, cùng một cơ chế đi theo hướng ngược lại.
 
 Điều này tạo một điểm quan trọng: GDP Hàn Quốc có thể được hỗ trợ bởi một ngành xuất khẩu rất mạnh ngay cả khi tiêu dùng nội địa còn yếu.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Chu kỳ bán dẫn có thể kéo cả dữ liệu vĩ mô** nêu điều cần giải thích; **Hàng tồn kho và chu kỳ công nghiệp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Chính sách tài khóa và bộ ổn định tự động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàng tồn kho và chu kỳ công nghiệp
 
@@ -190,8 +166,6 @@ Nhu cầu thực thấp hơn kỳ vọng
 
 Đây là lý do một thay đổi nhỏ ở nhu cầu cuối có thể tạo biến động lớn hơn ở nhà cung cấp phía trên, còn gọi là **hiệu ứng roi da (bullwhip effect)**.
 
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Chính sách tài khóa và bộ ổn định tự động** tiếp nhận điểm tựa từ **Hàng tồn kho và chu kỳ công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ báo dẫn dắt và chỉ báo trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chính sách tài khóa và bộ ổn định tự động
 
 Chính phủ tác động nền kinh tế qua chi tiêu, thuế và chuyển giao. Một phần phản ứng xảy ra tự động: khi kinh tế yếu, thu thuế giảm và một số khoản hỗ trợ tăng; khi kinh tế mạnh, quá trình ngược lại xảy ra.
@@ -199,8 +173,6 @@ Chính phủ tác động nền kinh tế qua chi tiêu, thuế và chuyển gia
 Đây là **bộ ổn định tự động (automatic stabilizers)**.
 
 Ngoài ra chính phủ có thể dùng ngân sách chủ động cho hạ tầng, hỗ trợ ngành, phúc lợi hoặc kích cầu. Tác động phụ thuộc thời điểm, cấu trúc chi tiêu và mức độ nền kinh tế còn công suất dư.
-
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Chỉ báo dẫn dắt và chỉ báo trễ** tiếp nhận điểm tựa từ **Chính sách tài khóa và bộ ổn định tự động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không có một “chu kỳ Hàn Quốc” duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chỉ báo dẫn dắt và chỉ báo trễ
 
@@ -211,8 +183,6 @@ Không phải mọi dữ liệu kinh tế cùng phản ứng một lúc.
 Vì vậy khi đọc chu kỳ cần phân biệt **chỉ báo dẫn dắt (leading indicator)**, chỉ báo đồng thời và **chỉ báo trễ (lagging indicator)**.
 
 Nếu chờ mọi số liệu đều xấu mới kết luận kinh tế giảm, có thể đã đi rất sâu vào chu kỳ.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Không có một “chu kỳ Hàn Quốc” duy nhất** tiếp nhận điểm tựa từ **Chỉ báo dẫn dắt và chỉ báo trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ biến vĩ mô đến doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Không có một “chu kỳ Hàn Quốc” duy nhất
 
@@ -227,8 +197,6 @@ Chu kỳ nhà ở / tín dụng
 Chu kỳ đầu tư doanh nghiệp
 Chu kỳ công nghệ riêng từng ngành
 ```
-
-> **Chuyển mạch:** Trong **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Từ biến vĩ mô đến doanh nghiệp** tiếp nhận điểm tựa từ **Không có một “chu kỳ Hàn Quốc” duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ biến vĩ mô đến doanh nghiệp
 
@@ -257,8 +225,6 @@ Nhu cầu AI ↑
 ```
 
 Đây là cách biến “tin kinh tế” thành chuỗi nguyên nhân–kết quả. Xem [cơ chế truyền dẫn từ kinh tế đến doanh nghiệp](./21_economy_to_company_transmission.md).
-
-> **Chuyển mạch:** Ở chặng này của **Kinh tế vĩ mô và chu kỳ kinh doanh Hàn Quốc (Macroeconomy & Business Cycle / 거시경제와 경기순환)**, **Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy** gom các mảnh từ **Từ biến vĩ mô đến doanh nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델) — Mô hình tư duy
 

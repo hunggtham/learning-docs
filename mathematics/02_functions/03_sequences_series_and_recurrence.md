@@ -46,8 +46,6 @@ Các terms:
 
 Cách nhìn hàm (function / 함수) giúp chuỗi (sequence / 시퀀스) nối tự nhiên với limits, asymptotics và algorithms.
 
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **1. chuỗi (sequence / 시퀀스) là hàm (function / 함수) trên discrete chỉ mục (index / 인덱스)** đặt đầu vào cho **2. tường minh (explicit / 명시적) formula và recurrence encode thông tin (information / 정보) khác nhau**, rồi **3. Arithmetic chuỗi (sequence / 시퀀스) = constant additive thay đổi (change / 변경)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. tường minh (explicit / 명시적) formula và recurrence encode thông tin (information / 정보) khác nhau
 
 Tường minh (explicit / 명시적) form:
@@ -79,8 +77,6 @@ vs
 state iteration
 ```
 
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **2. tường minh (explicit / 명시적) formula và recurrence encode thông tin (information / 정보) khác nhau** đặt đầu vào cho **3. Arithmetic chuỗi (sequence / 시퀀스) = constant additive thay đổi (change / 변경)**, rồi **4. Arithmetic series và vì sao sum quy mô (scale / 규모) như n²** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 3. Arithmetic chuỗi (sequence / 시퀀스) = constant additive thay đổi (change / 변경)
 
 Nếu difference constant `d`:
@@ -105,8 +101,6 @@ constant derivative → linear continuous function
 ```
 
 Finite difference đóng vai trò gần giống derivative trong discrete setting.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **3. Arithmetic chuỗi (sequence / 시퀀스) = constant additive thay đổi (change / 변경)** đặt đầu vào cho **4. Arithmetic series và vì sao sum quy mô (scale / 규모) như n²**, rồi **5. Geometric chuỗi (sequence / 시퀀스) = constant multiplicative thay đổi (change / 변경)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Arithmetic series và vì sao sum quy mô (scale / 규모) như n²
 
@@ -137,8 +131,6 @@ Nếu term grow như `O(n)`, cumulative sum thường grow như `O(n^2)`.
 
 Đây là intuition quan trọng trong phân tích độ phức tạp (complexity analysis / 복잡도 분석): accumulation tăng thứ tự (order / 순서) growth lên một bậc trong nhiều trường hợp polynomial.
 
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **4. Arithmetic series và vì sao sum quy mô (scale / 규모) như n²** đặt đầu vào cho **5. Geometric chuỗi (sequence / 시퀀스) = constant multiplicative thay đổi (change / 변경)**, rồi **6. Derive finite geometric sum thay vì học thuộc** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 5. Geometric chuỗi (sequence / 시퀀스) = constant multiplicative thay đổi (change / 변경)
 
 Nếu ratio constant `r`:
@@ -160,8 +152,6 @@ Nếu `|r|<1`, magnitude decay.
 Nếu `r>1`, growth exponential.
 
 Nếu `r<0`, signs alternate.
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **5. Geometric chuỗi (sequence / 시퀀스) = constant multiplicative thay đổi (change / 변경)** đặt đầu vào cho **6. Derive finite geometric sum thay vì học thuộc**, rồi **7. Infinite geometric series là limit của partial sums** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Derive finite geometric sum thay vì học thuộc
 
@@ -194,8 +184,6 @@ Formula xuất hiện vì shift-by-one làm almost all terms cancel.
 
 Đây là một proof mẫu (pattern / 패턴) rất phổ biến: transform expression để cấu trúc (structure / 구조) cancellation lộ ra.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **6. Derive finite geometric sum thay vì học thuộc** đặt tiêu chí; **7. Infinite geometric series là limit của partial sums** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Recurrence là equation của chuyển tiếp trạng thái (state transition / 상태 전이)** mở rộng hệ quả.
-
 ## 7. Infinite geometric series là limit của partial sums
 
 Ta không “cộng xong vô hạn terms”. Ta định nghĩa
@@ -222,8 +210,6 @@ nên
 
 Điều kiện (condition / 조건) `|r|<1` là essential giả định (assumption / 가정), không phải decoration.
 
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **7. Infinite geometric series là limit của partial sums** đặt tiêu chí; **8. Recurrence là equation của chuyển tiếp trạng thái (state transition / 상태 전이)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **9. tuyến tính (linear / 선형) first-order recurrence** mở rộng hệ quả.
-
 ## 8. Recurrence là equation của chuyển tiếp trạng thái (state transition / 상태 전이)
 
 General first-order recurrence:
@@ -249,8 +235,6 @@ F(a_*)=a_*.
 Stability hỏi nếu bắt đầu gần `a_*`, iterations có quay về đó không.
 
 Đây là cầu nối (bridge / 브리지) sang numerical methods, tối ưu hóa (optimization / 최적화) và điều khiển (control / 제어).
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **9. tuyến tính (linear / 선형) first-order recurrence** nối từ **8. Recurrence là equation của chuyển tiếp trạng thái (state transition / 상태 전이)** sang **10. Finance example: balance recurrence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. tuyến tính (linear / 선형) first-order recurrence
 
@@ -297,8 +281,6 @@ Nếu `|r|>1`, deviations grow.
 
 Đây là một example quan trọng: đổi variables có thể biến recurrence có constant forcing thành geometric recurrence đơn giản.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **9. tuyến tính (linear / 선형) first-order recurrence** nêu quy tắc; **10. Finance example: balance recurrence** thử quy tắc trong tình huống, rồi **11. Fibonacci: recurrence thứ tự (order / 순서) 2** mở rộng hệ quả.
-
 ## 10. Finance example: balance recurrence
 
 Nếu account balance tăng tỷ lệ (rate / 비율) `r` mỗi period và thêm contribution `c` cuối period:
@@ -319,8 +301,6 @@ B_n=(1+r)^nB_0
 Geometric sum cho closed form.
 
 Compound interest và annuity formulas thực chất là recurrence + geometric series.
-
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **10. Finance example: balance recurrence** nêu quy tắc; **11. Fibonacci: recurrence thứ tự (order / 순서) 2** thử quy tắc trong tình huống, rồi **12. Characteristic equation intuition** mở rộng hệ quả.
 
 ## 11. Fibonacci: recurrence thứ tự (order / 순서) 2
 
@@ -360,8 +340,6 @@ Eigenvalues của `A` giải thích long-run growth tỷ lệ (rate / 비율).
 
 Đây là liên kết (connection / 연결) sâu giữa recurrence và tuyến tính (linear / 선형) algebra.
 
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **12. Characteristic equation intuition** nối từ **11. Fibonacci: recurrence thứ tự (order / 순서) 2** sang **13. Recurrence trong thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Characteristic equation intuition
 
 Với homogeneous recurrence:
@@ -392,8 +370,6 @@ Roots của characteristic polynomial quyết định modes của solution.
 
 Đây hoàn toàn analogous với solving tuyến tính (linear / 선형) differential equations bằng `e^{\lambda t}`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **13. Recurrence trong thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석)** nối từ **12. Characteristic equation intuition** sang **14. Memoization thay computation đồ thị (graph / 그래프), không thay recurrence definition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Recurrence trong thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석)
 
 Tìm kiếm nhị phân (binary search / 이진 탐색):
@@ -422,8 +398,6 @@ T(n)=O(n\log n).
 
 Thời gian chạy (runtime / 런타임) recurrence không phải mã (code / 코드) recursion itself; nó là mathematical mô hình (model / 모델) của công việc (work / 작업) phụ thuộc (dependency / 의존성).
 
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **14. Memoization thay computation đồ thị (graph / 그래프), không thay recurrence definition** nối từ **13. Recurrence trong thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석)** sang **15. Convergence của chuỗi (sequence / 시퀀스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Memoization thay computation đồ thị (graph / 그래프), không thay recurrence definition
 
 Naive Fibonacci recursion recompute same states nhiều lần.
@@ -439,8 +413,6 @@ không sai. bài toán (problem / 문제) nằm ở evaluation chiến lược (
 Memoization lưu solved states, biến computation từ exponential lời gọi (call / 호출) cây (tree / 트리) thành roughly tuyến tính (linear / 선형) number of distinct states.
 
 Động (dynamic / 동적) programming = recurrence + systematic trạng thái (state / 상태) reuse/thứ tự (order / 순서).
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **14. Memoization thay computation đồ thị (graph / 그래프), không thay recurrence definition** đặt đầu vào cho **15. Convergence của chuỗi (sequence / 시퀀스)**, rồi **16. Bounded không imply convergent** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Convergence của chuỗi (sequence / 시퀀스)
 
@@ -465,8 +437,6 @@ a_n=\frac1n\to0.
 
 Chuỗi (sequence / 시퀀스) convergence là foundation cho series, iterative numerical methods và stochastic limit laws.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **15. Convergence của chuỗi (sequence / 시퀀스)** đặt đầu vào cho **16. Bounded không imply convergent**, rồi **17. Series là accumulation, không phải chuỗi (sequence / 시퀀스)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16. Bounded không imply convergent
 
 Chuỗi (sequence / 시퀀스)
@@ -480,8 +450,6 @@ bounded trong `[-1,1]` nhưng không converge vì oscillates giữa ±1.
 Monotone bounded theorem nói nếu chuỗi (sequence / 시퀀스) monotone và bounded phù hợp thì converge.
 
 Các giả định (assumptions / 가정들) matter: boundedness alone chưa đủ.
-
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **16. Bounded không imply convergent** đặt đầu vào cho **17. Series là accumulation, không phải chuỗi (sequence / 시퀀스)**, rồi **18. Vì sao an → 0 chưa đủ?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Series là accumulation, không phải chuỗi (sequence / 시퀀스)
 
@@ -500,8 +468,6 @@ S_N=\sum_{n=1}^{N}a_n.
 Series converge iff chuỗi (sequence / 시퀀스) `S_N` converge.
 
 Vì vậy series convergence là chuỗi (sequence / 시퀀스) convergence của accumulated trạng thái (state / 상태).
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **17. Series là accumulation, không phải chuỗi (sequence / 시퀀스)** đặt đầu vào cho **18. Vì sao an → 0 chưa đủ?**, rồi **19. Comparison kiểm thử (test / 테스트) là asymptotic lập luận (reasoning / 추론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Vì sao a_n → 0 chưa đủ?
 
@@ -535,8 +501,6 @@ mỗi khối (block / 블록) sau có sum ít nhất khoảng `1/2`, nên total 
 
 Terms giảm nhưng không đủ nhanh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **19. Comparison kiểm thử (test / 테스트) là asymptotic lập luận (reasoning / 추론)** nối từ **18. Vì sao an → 0 chưa đủ?** sang **20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Comparison kiểm thử (test / 테스트) là asymptotic lập luận (reasoning / 추론)
 
 Nếu
@@ -556,8 +520,6 @@ converges, thì `\sum a_n` converges.
 Nếu `a_n\ge b_n\ge0` và `\sum b_n` diverges, thì `\sum a_n` diverges.
 
 Ta không cần chính xác (exact / 정확한) sum; chỉ cần compare accumulation tỷ lệ (rate / 비율).
-
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink** nối từ **19. Comparison kiểm thử (test / 테스트) là asymptotic lập luận (reasoning / 추론)** sang **21. Generating-function intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink
 
@@ -579,8 +541,6 @@ Nếu `L=1`, kiểm thử (test / 테스트) inconclusive.
 
 Kiểm thử (test / 테스트) không phải magic quy tắc (rule / 규칙); nó compare series với geometric hành vi (behavior / 동작).
 
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **21. Generating-function intuition** nối từ **20. Ratio kiểm thử (test / 테스트) nhìn multiplicative shrink** sang **22. Difference equations và điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Generating-function intuition
 
 Một chuỗi (sequence / 시퀀스) có thể encode thành power series:
@@ -594,8 +554,6 @@ Recurrence relations có thể biến thành algebraic equations cho `G(x)`.
 Generating functions là cầu nối (bridge / 브리지) từ discrete sequences sang algebra/complex phân tích (analysis / 분석)/combinatorics.
 
 Không cần đi sâu ở chapter này; important idea là biểu diễn (representation / 표현) thay đổi (change / 변경) có thể turn recurrence into algebra.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **22. Difference equations và điều khiển (control / 제어)** nối từ **21. Generating-function intuition** sang **23. Worked example: iterative approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Difference equations và điều khiển (control / 제어)
 
@@ -614,8 +572,6 @@ x_{k+1}=Ax_k+Bu_k.
 Ma trận (matrix / 행렬) powers `A^k` quyết định trạng thái (state / 상태) evolution.
 
 Eigenvalues inside đơn vị (unit / 단위) circle thường liên quan stability của discrete hệ tuyến tính (linear system / 선형 시스템), analogous real-part-negative eigenvalues trong continuous các hệ thống (systems / 시스템들).
-
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **22. Difference equations và điều khiển (control / 제어)** nêu quy tắc; **23. Worked example: iterative approximation** thử quy tắc trong tình huống, rồi **24. dùng chung (common / 공통) modeling patterns** mở rộng hệ quả.
 
 ## 23. Worked example: iterative approximation
 
@@ -647,8 +603,6 @@ Nếu near gốc (root / 루트):
 ta nói quadratic convergence.
 
 Numerical algorithms vì vậy là dynamical các hệ thống (systems / 시스템들) trên approximation trạng thái (state / 상태).
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **23. Worked example: iterative approximation** nêu quy tắc; **24. dùng chung (common / 공통) modeling patterns** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## 24. dùng chung (common / 공통) modeling patterns
 
@@ -686,8 +640,6 @@ S_{n+1}=S_n+a_{n+1}
 
 Nhận ra mẫu (pattern / 패턴) quan trọng hơn nhớ từng formula riêng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, sau nội dung của **24. dùng chung (common / 공통) modeling patterns**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Chuỗi (sequence / 시퀀스)/recurrence nối:
@@ -705,13 +657,9 @@ functions on integers
 → discrete control
 ```
 
-> **Nối mạch:** Trong **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chuỗi (sequence / 시퀀스) là trạng thái (state / 상태) theo discrete thời gian (time / 시간). Recurrence là chuyển tiếp (transition / 전이) law. Series là accumulated trạng thái (state / 상태). Khi quy tắc (rule / 규칙) additive ta thấy tuyến tính (linear / 선형) hành vi (behavior / 동작); khi multiplicative ta thấy exponential hành vi (behavior / 동작); khi quy tắc (rule / 규칙) phản hồi (feedback / 피드백) nonlinear, stability và fixed points trở thành câu hỏi trung tâm.
-
-> **Nối mạch:** Ở chặng này của **Dãy, chuỗi và recurrence: toán học của trạng thái theo bước rời rạc**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

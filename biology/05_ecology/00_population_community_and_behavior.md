@@ -12,8 +12,6 @@ Một quần thể được mô tả không chỉ bởi số cá thể \(N\), m�
 
 Hai quần thể cùng \(N\) có thể có tương lai rất khác nếu một bên chủ yếu là juvenile còn bên kia chủ yếu là cá thể già. Vì vậy demography luôn cần hỏi **ai đang sống trong quần thể**, không chỉ “có bao nhiêu cá thể”.
 
-> **Nối mạch:** Population không chỉ là size mà còn age structure, density và distribution; exponential growth là baseline, rồi doubling time cho biết tốc độ trước khi density dependence giới hạn.
-
 ## 2. Tăng trưởng theo hàm mũ: baseline khi giới hạn chưa chi phối mạnh
 
 Nếu tốc độ tăng trưởng bình quân trên mỗi cá thể gần như không đổi:
@@ -30,8 +28,6 @@ N(t)=N_0e^{rt}
 
 Population càng lớn càng tạo nhiều offspring, nên mô hình có phản hồi (feedback / 피드백) dương. Nó có thể phù hợp trong giai đoạn đầu của culture vi sinh hoặc quần thể xâm nhập habitat mới, nhưng không thể kéo dài vô hạn vì tài nguyên (resource / 자원) và không gian (space / 공간) hữu hạn.
 
-> **Nối mạch:** **2. Tăng trưởng theo hàm mũ: baseline khi giới hạn chưa chi phối mạnh** đặt tiêu chí; **3. Thời gian nhân đôi** dùng nó để kiểm tra ranh giới, rồi **4. Logistic growth và sức chứa môi trường** mở rộng cơ chế.
-
 ## 3. Thời gian nhân đôi
 
 Với tăng trưởng mũ:
@@ -41,8 +37,6 @@ t_d=\frac{\ln 2}{r}
 \]
 
 Công thức cho thấy quan hệ (relation / 관계) giữa tỷ lệ (rate / 비율) và thời gian nhân đôi là nghịch đảo theo logarithm, không phải intuition tuyến tính đơn giản.
-
-> **Nối mạch:** Doubling time describes early exponential growth; logistic growth adds carrying capacity, then density-dependent and density-independent feedback explain deviations.
 
 ## 4. Logistic growth và sức chứa môi trường
 
@@ -54,15 +48,11 @@ Khi density tăng, tài nguyên (resource / 자원) trên mỗi cá thể giảm
 
 \(K\) là **sức chứa môi trường (carrying capacity)** trong điều kiện đang xét, không phải số cố định vĩnh viễn của loài. Climate, habitat, predator và tài nguyên (resource / 자원) có thể làm \(K\) thay đổi theo thời gian.
 
-> **Nối mạch:** **5. phản hồi (feedback / 피드백) phụ thuộc mật độ và nhiễu không phụ thuộc mật độ** nối từ **4. Logistic growth và sức chứa môi trường** sang **6. Life-history sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. phản hồi (feedback / 피드백) phụ thuộc mật độ và nhiễu không phụ thuộc mật độ
 
 Competition, disease transmission và tài nguyên (resource / 자원) shortage thường mạnh hơn khi density cao nên tạo **phụ thuộc mật độ (density dependence)**. Storm, fire hoặc freeze có thể gây tác động lớn mà không phụ thuộc trực tiếp vào density ban đầu.
 
 Trong hệ thực, hai loại tác động thường tương tác. Một drought có thể giảm tài nguyên (resource / 자원), rồi density dependence quyết định cá thể nào sống sót tốt hơn sau đó.
-
-> **Nối mạch:** **6. Life-history sự đánh đổi (trade-off / 트레이드오프)** nối từ **5. phản hồi (feedback / 피드백) phụ thuộc mật độ và nhiễu không phụ thuộc mật độ** sang **7. Survivorship curve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Life-history sự đánh đổi (trade-off / 트레이드오프)
 
@@ -70,15 +60,11 @@ Sinh vật có tài nguyên (resource / 자원) hữu hạn cho growth, maintena
 
 Loài sinh nhiều offspring nhỏ với parental care thấp và loài sinh ít offspring nhưng đầu tư cao là hai chiến lược khác nhau dưới mẫu (pattern / 패턴) mortality và môi trường (environment / 환경) khác nhau. Không có một chiến lược (strategy / 전략) tối ưu chung cho mọi hệ.
 
-> **Nối mạch:** **7. Survivorship curve** nối từ **6. Life-history sự đánh đổi (trade-off / 트레이드오프)** sang **8. Metapopulation: persistence có thể nằm ở mạng patch thay vì một quần thể duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Survivorship curve
 
 Survivorship curve là mô hình tóm tắt cách mortality phân bố theo tuổi. kiểu (type / 타입) I có mortality thấp ở đầu đời và tăng mạnh khi già; kiểu (type / 타입) II gần tương đối đều; kiểu (type / 타입) III có mortality rất cao ở giai đoạn sớm nhưng cá thể sống sót có thể sống lâu.
 
 Các kiểu (type / 타입) là mẫu (pattern / 패턴) lý tưởng hóa, hữu ích khi nối demography với life-history chiến lược (strategy / 전략) chứ không phải nhãn cứng cho mọi species.
-
-> **Nối mạch:** **8. Metapopulation: persistence có thể nằm ở mạng patch thay vì một quần thể duy nhất** nối từ **7. Survivorship curve** sang **9. Hành vi nối physiology với fitness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Metapopulation: persistence có thể nằm ở mạng patch thay vì một quần thể duy nhất
 
@@ -86,15 +72,11 @@ Trong habitat phân mảnh, loài có thể tồn tại dưới dạng nhiều c
 
 Persistence toàn hệ phụ thuộc balance giữa extinction, colonization và connectivity. Đây là cơ sở sinh học cho việc đánh giá corridor và fragmentation trong conservation.
 
-> **Nối mạch:** **9. Hành vi nối physiology với fitness** nối từ **8. Metapopulation: persistence có thể nằm ở mạng patch thay vì một quần thể duy nhất** sang **10. Bẩm sinh và học được là hai đầu của một continuum**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Hành vi nối physiology với fitness
 
 **Hành vi (behavior / 행동)** là đầu ra (output / 출력) của nervous hệ thống (system / 시스템), endocrine trạng thái (state / 상태), development, học tập (learning / 학습) và môi trường (environment / 환경). hành vi (behavior / 동작) có thể có thành phần di truyền nhưng thường rất plastic.
 
 Selection chỉ tác động lên hành vi (behavior / 동작) qua hậu quả sinh sản của nó. Một phản ứng giúp cá thể kiếm thức ăn tốt hơn, tránh predator hoặc tìm mate có thể tăng fitness; cùng hành vi (behavior / 동작) trong môi trường (environment / 환경) khác có thể trở thành chi phí (cost / 비용).
-
-> **Nối mạch:** **10. Bẩm sinh và học được là hai đầu của một continuum** nối từ **9. Hành vi nối physiology với fitness** sang **11. Kiếm ăn là bài toán năng lượng dưới rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Bẩm sinh và học được là hai đầu của một continuum
 
@@ -102,23 +84,17 @@ Birdsong, điều hướng (navigation / 내비게이션) hay fear phản hồi 
 
 Plasticity này có chi phí (cost / 비용): nervous hệ thống (system / 시스템), thời gian học và nguy cơ học sai đều tiêu tài nguyên (resource / 자원). Selection vì vậy có thể favor mức linh hoạt khác nhau tùy môi trường (environment / 환경) ổn định hay biến động.
 
-> **Nối mạch:** **11. Kiếm ăn là bài toán năng lượng dưới rủi ro** nối từ **10. Bẩm sinh và học được là hai đầu của một continuum** sang **12. Lãnh thổ chỉ có lợi khi lợi ích vượt chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Kiếm ăn là bài toán năng lượng dưới rủi ro
 
 **Mô hình kiếm ăn tối ưu (optimal foraging)** hỏi chiến lược (strategy / 전략) nào cân bằng năng lượng (energy / 에너지)/nutrient gain với thời gian tìm kiếm, xử lý thức ăn và nguy cơ bị săn mồi.
 
 Nó không giả định animal “tính toán calculus” có ý thức. mô hình (model / 모델) dự đoán mẫu (pattern / 패턴) selection có thể favor dưới ràng buộc (constraint / 제약조건). Nếu xã hội (social / 사회적) học tập (learning / 학습), nutrient chất lượng (quality / 품질) hay rủi ro (risk / 위험) thay đổi, prediction của mô hình (model / 모델) đơn giản cũng thay.
 
-> **Nối mạch:** **12. Lãnh thổ chỉ có lợi khi lợi ích vượt chi phí** nối từ **11. Kiếm ăn là bài toán năng lượng dưới rủi ro** sang **13. Hành vi hợp tác cần cơ chế duy trì trước cheating**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Lãnh thổ chỉ có lợi khi lợi ích vượt chi phí
 
 Giữ territory có thể bảo vệ food hoặc mate nhưng tốn năng lượng (energy / 에너지), thời gian và nguy cơ injury. Territoriality vì vậy xuất hiện khi tài nguyên (resource / 자원) đủ quan trọng và đủ “bảo vệ được”.
 
 Đây là cùng lô-gic (logic / 논리) sự đánh đổi (trade-off / 트레이드오프) đã gặp ở physiology: điều khiển (control / 제어) mang lợi ích nhưng luôn có chi phí (cost / 비용).
-
-> **Nối mạch:** Territory chỉ có lợi khi lợi ích vượt cost; cooperation cần cơ chế chống cheating. **Niche** kiểm tra điều kiện và resource space chứ không chỉ nơi sống.
 
 ## 13. Hành vi hợp tác cần cơ chế duy trì trước cheating
 
@@ -132,15 +108,11 @@ trong đó \(r\) là mức relatedness, \(B\) là lợi ích cho recipient và \
 
 Với cá thể không họ hàng, cooperation có thể được duy trì khi tương tác (interaction / 상호작용) lặp lại, cheating bị phát hiện, partner được lựa chọn hoặc lợi ích tức thời đủ lớn. Game lý thuyết (theory / 이론) giúp mô hình hóa những điều kiện này, nhưng kết quả (outcome / 결과) thật còn phụ thuộc physiology, bộ nhớ (memory / 메모리) và population cấu trúc (structure / 구조).
 
-> **Nối mạch:** Cooperation phải được kiểm chứng qua cơ chế duy trì; niche đưa điều kiện và resource vào cùng phân tích. **Cạnh tranh và phân chia tài nguyên** tiếp tục bằng cách theo dõi giới hạn.
-
 ## 14. Ổ sinh thái là không gian điều kiện và tài nguyên (resource / 자원), không chỉ là nơi sống
 
 **Ổ sinh thái (ecological niche / 생태적 지위)** gồm loại tài nguyên (resource / 자원) dùng, nhiệt độ/độ ẩm chịu được, thời gian hoạt động và quan hệ với species khác.
 
 **Ổ cơ bản (fundamental niche)** là vùng có thể tồn tại nếu bỏ bớt biotic tương tác (interaction / 상호작용); **ổ thực tế (realized niche)** là phần còn lại sau competition, predation, mutualism và dispersal limitation.
-
-> **Nối mạch:** **14. Ổ sinh thái là không gian điều kiện và tài nguyên (resource / 자원), không chỉ là nơi sống** đặt vấn đề; **15. Cạnh tranh và phân chia tài nguyên** kiểm tra bằng chứng, rồi **16. Predator–prey là hai phương trình phản hồi (feedback / 피드백) ghép với nhau** mở rộng hệ quả.
 
 ## 15. Cạnh tranh và phân chia tài nguyên
 
@@ -149,8 +121,6 @@ Hai species dùng cùng tài nguyên (resource / 자원) giới hạn sẽ ảnh
 Nếu niche gần như trùng hoàn toàn trong môi trường (environment / 환경) ổn định, coexistence lâu dài khó hơn. Nhưng heterogeneity theo không gian (space / 공간)/thời gian (time / 시간), sự đánh đổi (trade-off / 트레이드오프) và **phân chia tài nguyên (resource partitioning)** có thể tạo coexistence.
 
 Điều quan trọng là mẫu (pattern / 패턴) quan sát không tự nói direction nhân quả: species có thể chia niche vì evolution sau competition, hoặc vốn khác niche từ trước.
-
-> **Nối mạch:** **16. Predator–prey là hai phương trình phản hồi (feedback / 피드백) ghép với nhau** nối từ **15. Cạnh tranh và phân chia tài nguyên** sang **17. Functional phản hồi (response / 응답) tạo giới hạn cho tốc độ predator ăn prey**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Predator–prey là hai phương trình phản hồi (feedback / 피드백) ghép với nhau
 
@@ -168,15 +138,11 @@ Prey làm predator tăng; predator lại làm prey giảm. Delay giữa hai ph�
 
 Mục tiêu của equation không phải thuộc công thức mà thấy rằng hai population là một **hệ động (dynamic system / 동적 시스템) coupled by tương tác (interaction / 상호작용)**.
 
-> **Nối mạch:** **16. Predator–prey là hai phương trình phản hồi (feedback / 피드백) ghép với nhau** đặt tiêu chí; **17. Functional phản hồi (response / 응답) tạo giới hạn cho tốc độ predator ăn prey** dùng nó để kiểm tra ranh giới, rồi **18. Mutualism, commensalism và parasitism là kết quả (outcome / 결과), không phải bản chất bất biến** mở rộng cơ chế.
-
 ## 17. Functional phản hồi (response / 응답) tạo giới hạn cho tốc độ predator ăn prey
 
 Predator không thể ăn vô hạn khi prey density tăng vì phải tìm, bắt, xử lý và tiêu hóa. Holling kiểu (type / 타입) II bão hòa khi handling thời gian (time / 시간) trở thành bottleneck; kiểu (type / 타입) III có dạng sigmoid khi prey hiếm khó tìm hoặc predator chuyển sang prey khác.
 
 Hình dạng phản hồi (response / 응답) ảnh hưởng stability của cả hệ. Một chi tiết ở hành vi (behavior / 동작)/physiology của predator vì vậy có thể thay population dynamics.
-
-> **Nối mạch:** **17. Functional phản hồi (response / 응답) tạo giới hạn cho tốc độ predator ăn prey** đặt tiêu chí; **18. Mutualism, commensalism và parasitism là kết quả (outcome / 결과), không phải bản chất bất biến** dùng nó để kiểm tra ranh giới, rồi **19. Loài chủ chốt và thác dinh dưỡng cho thấy tác động (effect / 효과) không tỷ lệ với abundance** mở rộng cơ chế.
 
 ## 18. Mutualism, commensalism và parasitism là kết quả (outcome / 결과), không phải bản chất bất biến
 
@@ -184,15 +150,11 @@ Dấu +/−/0 là cách tóm tắt tác động (effect / 효과) lên fitness. 
 
 Do đó phải hỏi cơ chế (mechanism / 메커니즘) trao đổi tài nguyên (resource / 자원) và ngữ cảnh (context / 맥락) chứ không chỉ gắn nhãn relationship.
 
-> **Nối mạch:** **19. Loài chủ chốt và thác dinh dưỡng cho thấy tác động (effect / 효과) không tỷ lệ với abundance** nối từ **18. Mutualism, commensalism và parasitism là kết quả (outcome / 결과), không phải bản chất bất biến** sang **20. Lưới thức ăn là mạng dòng năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Loài chủ chốt và thác dinh dưỡng cho thấy tác động (effect / 효과) không tỷ lệ với abundance
 
 Một **loài chủ chốt (keystone species)** có thể ít biomass nhưng tác động lớn lên community. Predator giảm herbivore; herbivore giảm vegetation; thay predator vì vậy có thể tạo **thác dinh dưỡng (trophic cascade)** qua nhiều edge gián tiếp.
 
 Ecology cần tư duy mạng (network / 네트워크) giống cell signaling: direct tác động (effect / 효과) và indirect tác động (effect / 효과) có thể cộng, triệt tiêu hoặc đảo dấu nhau.
-
-> **Nối mạch:** **20. Lưới thức ăn là mạng dòng năng lượng** nối từ **19. Loài chủ chốt và thác dinh dưỡng cho thấy tác động (effect / 효과) không tỷ lệ với abundance** sang **21. Sinh thái bệnh dùng cùng ngôn ngữ population dynamics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Lưới thức ăn là mạng dòng năng lượng
 
@@ -200,15 +162,11 @@ Hệ sinh thái thực tế không phải food chuỗi (chain / 사슬) tuyến 
 
 Ta có thể biểu diễn species/functional group bằng nút (node / 노드) và quan hệ ăn bằng edge. Topology, strength của tương tác (interaction / 상호작용) và timing phản hồi (response / 응답) quyết định disturbance lan rộng hay bị hấp thụ.
 
-> **Nối mạch:** **21. Sinh thái bệnh dùng cùng ngôn ngữ population dynamics** nối từ **20. Lưới thức ăn là mạng dòng năng lượng** sang **22. Loài xâm lấn: introduction không đồng nghĩa invasion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Sinh thái bệnh dùng cùng ngôn ngữ population dynamics
 
 Transmission phụ thuộc density/contact của host, immunity, véc-tơ (vector / 벡터) và môi trường (environment / 환경). Mô hình SIR chia population thành susceptible–infectious–recovered để theo dõi dòng cá thể giữa các trạng thái.
 
 Một pathogen vì vậy vừa là vấn đề molecular/immune vừa là population tiến trình (process / 프로세스). Biology liên tục đổi quy mô (scale / 규모) nhưng giữ cùng lô-gic (logic / 논리) luồng (flow / 흐름) + chuyển tiếp (transition / 전이) + phản hồi (feedback / 피드백).
-
-> **Nối mạch:** **22. Loài xâm lấn: introduction không đồng nghĩa invasion** nối từ **21. Sinh thái bệnh dùng cùng ngôn ngữ population dynamics** sang **23. Diễn thế quần xã là trajectory có lịch sử (history / 이력) dependence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Loài xâm lấn: introduction không đồng nghĩa invasion
 
@@ -216,15 +174,11 @@ Một introduced species chỉ trở thành invasive khi propagule đủ, môi t
 
 Management hiệu quả phải nhắm cơ chế (mechanism / 메커니즘): reproduction, dispersal, tài nguyên (resource / 자원) subsidy hoặc disturbance, thay vì chỉ loại từng cá thể mà không đổi tiến trình (process / 프로세스).
 
-> **Nối mạch:** **23. Diễn thế quần xã là trajectory có lịch sử (history / 이력) dependence** nối từ **22. Loài xâm lấn: introduction không đồng nghĩa invasion** sang **24. Độ trễ và hiệu ứng Allee tạo threshold quần thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Diễn thế quần xã là trajectory có lịch sử (history / 이력) dependence
 
 Sau disturbance, composition của community đổi qua thời gian. Primary succession bắt đầu nơi gần như chưa có soil/biological legacy; secondary succession giữ lại nhiều cấu trúc và seed/microbe cũ.
 
 Succession không nhất thiết đi một đường cố định tới một “climax” duy nhất. Priority tác động (effect / 효과), stochastic colonization, disturbance mới và phản hồi (feedback / 피드백) soil–plant có thể tạo trajectory khác nhau.
-
-> **Nối mạch:** **24. Độ trễ và hiệu ứng Allee tạo threshold quần thể** nối từ **23. Diễn thế quần xã là trajectory có lịch sử (history / 이력) dependence** sang **25. Quần thể có cấu trúc: cùng N nhưng tương lai khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Độ trễ và hiệu ứng Allee tạo threshold quần thể
 
@@ -234,23 +188,17 @@ Logistic mô hình (model / 모델) giả định density phản hồi (feedback
 
 Đây là lý do conservation không thể chỉ hỏi “còn bao nhiêu cá thể” mà phải hỏi cấu trúc tuổi, connectivity và vị trí so với threshold phục hồi.
 
-> **Nối mạch:** **25. Quần thể có cấu trúc: cùng N nhưng tương lai khác nhau** nối từ **24. Độ trễ và hiệu ứng Allee tạo threshold quần thể** sang **26. Stability là thuộc tính (property / 속성) của mạng (network / 네트워크), không phải chỉ của số species**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Quần thể có cấu trúc: cùng N nhưng tương lai khác nhau
 
 Một population 1.000 cá thể gần hết tuổi sinh sản và một population 1.000 juvenile không có trajectory giống nhau. **Ma trận chiếu quần thể (population projection matrix)** dùng survival, chuyển tiếp (transition / 전이) giữa stage và fecundity để dự đoán trạng thái (state / 상태) tương lai.
 
 Nếu stress chủ yếu làm giảm juvenile survival, tác động (effect / 효과) lên số adult có thể chỉ xuất hiện vài năm sau. Delay giữa cơ chế (mechanism / 메커니즘) và abundance quan sát được là vấn đề lớn trong conservation monitoring.
 
-> **Nối mạch:** **26. Stability là thuộc tính (property / 속성) của mạng (network / 네트워크), không phải chỉ của số species** nối từ **25. Quần thể có cấu trúc: cùng N nhưng tương lai khác nhau** sang **27. Eco-evolutionary phản hồi (feedback / 피드백): ecology đổi selection, evolution lại đổi ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Stability là thuộc tính (property / 속성) của mạng (network / 네트워크), không phải chỉ của số species
 
 Weak tương tác (interaction / 상호작용), refuge, spatial heterogeneity và phản hồi (response / 응답) không đồng bộ có thể làm disturbance khó lan đồng loạt. Ngược lại, tương tác (interaction / 상호작용) mạnh cùng hướng có thể khuếch đại collapse.
 
 Biodiversity có thể tăng functional redundancy trong một số hệ, nhưng “nhiều species = luôn ổn định hơn” là phát biểu quá đơn giản. Cần biết role và liên kết (connection / 연결) của chúng.
-
-> **Nối mạch:** **27. Eco-evolutionary phản hồi (feedback / 피드백): ecology đổi selection, evolution lại đổi ecology** nối từ **26. Stability là thuộc tính (property / 속성) của mạng (network / 네트워크), không phải chỉ của số species** sang **28. Hai trường hợp (case / 사례) study để tránh nhân quả (causal / 인과적) story quá đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Eco-evolutionary phản hồi (feedback / 피드백): ecology đổi selection, evolution lại đổi ecology
 
@@ -268,15 +216,11 @@ môi trường
 
 Đây là cầu nối trực tiếp từ population genetics sang ecosystem dynamics.
 
-> **Nối mạch:** **27. Eco-evolutionary phản hồi (feedback / 피드백): ecology đổi selection, evolution lại đổi ecology** nêu quy tắc; **28. Hai trường hợp (case / 사례) study để tránh nhân quả (causal / 인과적) story quá đơn giản** thử quy tắc trong tình huống, rồi **29. Các hiểu lầm cần tránh** mở rộng hệ quả.
-
 ## 28. Hai trường hợp (case / 사례) study để tránh nhân quả (causal / 인과적) story quá đơn giản
 
 **Wolf và trophic cascade:** reintroduction predator có thể ảnh hưởng herbivore abundance/hành vi (behavior / 동작) rồi vegetation, nhưng kết quả (outcome / 결과) còn phụ thuộc climate, human hunting và predator khác. Không nên biến mạng (network / 네트워크) causality thành slogan một chiều.
 
 **Bee pollination:** plant cung cấp nectar/pollen, pollinator hỗ trợ reproduction. Mất một pollinator có thể được species khác bù hoặc không tùy topology mạng (network / 네트워크). Vì vậy cần đo tương tác (interaction / 상호작용) mạng (network / 네트워크) chứ không chỉ đếm một species.
-
-> **Nối mạch:** **28. Hai trường hợp (case / 사례) study để tránh nhân quả (causal / 인과적) story quá đơn giản** nêu quy tắc; **29. Các hiểu lầm cần tránh** thử quy tắc trong tình huống, rồi **30. cầu nối (bridge / 브리지): từ tương tác (interaction / 상호작용) cục bộ (local / 로컬) tới ecosystem-scale matter và năng lượng** mở rộng hệ quả.
 
 ## 29. Các hiểu lầm cần tránh
 
@@ -291,8 +235,6 @@ môi trường
 “Community tự nhiên luôn cân bằng nếu không có người” sai; disturbance và succession là phần bình thường của ecology.
 
 > **Mô hình tư duy:** hành vi (behavior / 동작) biến trạng thái (state / 상태) của individual thành hành động (action / 동작); hành động (action / 동작) đổi fitness và tương tác (interaction / 상호작용); tương tác (interaction / 상호작용) tạo population/community dynamics; mạng (network / 네트워크) dynamics quyết định dòng vật chất và năng lượng sẽ được xử lý thế nào ở ecosystem quy mô (scale / 규모).
-
-> **Nối mạch:** Cầu nối từ local interaction tới ecosystem-scale matter và energy khép mạch sau các hiểu lầm của mục 29.
 
 ## 30. cầu nối (bridge / 브리지): từ tương tác (interaction / 상호작용) cục bộ (local / 로컬) tới ecosystem-scale matter và năng lượng
 

@@ -15,7 +15,7 @@ Shinhan Bank opened an office in Seoul.
 [Shinhan Bank]ORG ... [Seoul]LOC
 ```
 
-Classical đơn vị từ (token / 토큰) tagging dùng BIO labels:
+Classical token (토큰) tagging dùng BIO labels:
 
 ```text
 Shinhan B-ORG
@@ -25,7 +25,7 @@ opened  O
 Seoul   B-LOC
 ```
 
-Subword tokenization complicates alignment; evaluation nên entity-span mức (level / 수준) thay đơn vị từ (token / 토큰) accuracy.
+Subword tokenization complicates alignment; evaluation nên entity-span mức (level / 수준) thay token (토큰) accuracy.
 
 > NER không chỉ tìm span; nó cần một bộ type phản ánh mục đích sử dụng. Vì vậy, sau khi nhận diện mention, ta phải quyết định schema theo domain trước khi chọn cách gán nhãn.
 
@@ -43,9 +43,9 @@ Lược đồ (schema / 스키마) thiết kế (design / 설계) defines what �
 
 ## Chuỗi (sequence / 시퀀스) Labeling
 
-Transformer encoder gives `h_i`; classifier predicts label each đơn vị từ (token / 토큰).
+Transformer encoder gives `h_i`; classifier predicts label each token (토큰).
 
-Independent đơn vị từ (token / 토큰) softmax may produce invalid sequences (`I-PER` without `B-PER`). CRF tầng (layer / 계층) các mô hình (models / 모델들) chuyển tiếp (transition / 전이) các ràng buộc (constraints / 제약조건들) jointly.
+Independent token (토큰) softmax may produce invalid sequences (`I-PER` without `B-PER`). CRF tầng (layer / 계층) các mô hình (models / 모델들) chuyển tiếp (transition / 전이) các ràng buộc (constraints / 제약조건들) jointly.
 
 Hiện đại (modern / 현대적) large encoders often perform well without CRF, but structured decoding can still help small/lĩnh vực (domain / 도메인) tasks.
 
@@ -278,7 +278,7 @@ Thực thể (entity / 엔터티) lược đồ (schema / 스키마) can include
 
 It may fabricate; extraction should be grounded to nguồn (source / 소스).
 
-### “đơn vị từ (token / 토큰) accuracy is enough for NER”
+### “token (토큰) accuracy is enough for NER”
 
 `O` dominates; entity-span F1 more meaningful.
 

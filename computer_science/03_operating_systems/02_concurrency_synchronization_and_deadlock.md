@@ -10,23 +10,17 @@ Race điều kiện (condition / 조건) là tính đúng đắn (correctness / 
 
 Ví dụ `counter++` không nhất thiết atomic. Nó có thể là tải (load / 로드) → add → store. Hai threads cùng tải (load / 로드) 10, cùng compute 11, cùng store 11; một increment bị mất.
 
-> **Nối mạch:** **Race điều kiện (condition / 조건) và dữ liệu (data / 데이터) race** đặt vấn đề; **Trọng yếu (critical / 중요) section và mutual exclusion** kiểm tra bằng chứng, rồi **Atomic operations** mở rộng hệ quả.
-
 ## Trọng yếu (critical / 중요) section và mutual exclusion
 
 Trọng yếu (critical / 중요) section truy cập dùng chung (shared / 공유) bất biến (invariant / 불변식) cần serialize. Mutex/khóa (lock / 잠금) bảo đảm một holder tại một thời điểm. khóa (lock / 잠금) không “bảo vệ variable” tự động; tính đúng đắn (correctness / 정확성) đến từ discipline rằng mọi accesses liên quan bất biến (invariant / 불변식) dùng cùng synchronization giao thức (protocol / 프로토콜).
 
 Coarse-grained khóa (lock / 잠금) đơn giản nhưng contention cao. Fine-grained locks tăng parallelism nhưng phức tạp và tăng deadlock rủi ro (risk / 위험).
 
-> **Nối mạch:** Critical section/mutual exclusion bảo vệ invariant; atomic operations rút ngắn boundary, còn memory ordering/happens-before xác định visibility giữa threads.
-
 ## Atomic operations
 
 CPU cung cấp atomic read-modify-write như compare-and-swap (CAS). Atomicity bảo đảm thao tác (operation / 연산) không quan sát intermediate trạng thái (state / 상태). Lock-free algorithms dùng atomics để coordinate mà không mutex blocking, nhưng lập luận (reasoning / 추론) bộ nhớ (memory / 메모리) thứ tự (ordering / 순서), ABA bài toán (problem / 문제) và reclamation rất khó.
 
 Atomic không đồng nghĩa toàn giao dịch (transaction / 트랜잭션) lô-gic (logic / 논리) atomic. Hai atomic variables riêng không tự bảo đảm bất biến (invariant / 불변식) liên-variable.
-
-> **Nối mạch:** **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before** nối từ **Atomic operations** sang **Điều kiện (condition / 조건) variables, semaphores và monitors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before
 
@@ -36,8 +30,6 @@ Ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model
 
 Đây là tầng trên bộ nhớ đệm (cache / 캐시) coherence: coherence không tự tạo program thứ tự (ordering / 순서) ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** **Điều kiện (condition / 조건) variables, semaphores và monitors** nối từ **Bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và happens-before** sang **Deadlock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điều kiện (condition / 조건) variables, semaphores và monitors
 
 Điều kiện (condition / 조건) variable cho luồng thực thi (thread / 스레드) ngủ tới khi predicate trên trạng thái dùng chung (shared state / 공유 상태) có thể thay đổi; luôn re-check predicate trong vòng lặp (loop / 루프) vì wakeup/spurious wakeup/interleavings.
@@ -45,8 +37,6 @@ Ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model
 Semaphore giữ count permits, dùng giới hạn tính đồng thời (concurrency / 동시성) hoặc signaling. nhị phân (binary / 이진) semaphore giống mutex ở surface nhưng quyền sở hữu (ownership / 소유권) ngữ nghĩa (semantics / 의미론) có thể khác.
 
 Monitor kết hợp mutual exclusion với điều kiện (condition / 조건) synchronization trong một lớp trừu tượng (abstraction / 추상화); Java `synchronized`/wait-notify là family idea.
-
-> **Nối mạch:** **Deadlock** nối từ **Điều kiện (condition / 조건) variables, semaphores và monitors** sang **Livelock và starvation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deadlock
 
@@ -56,15 +46,11 @@ Ví dụ luồng thực thi (thread / 스레드) A giữ khóa (lock / 잠금) X
 
 Deadlock không chỉ locks. phân tán (distributed / 분산) services có thể chờ RPC cycles; luồng thực thi (thread / 스레드) pools có tác vụ (task / 작업) chờ future queued vào chính saturated pool.
 
-> **Nối mạch:** **Livelock và starvation** nối từ **Deadlock** sang **Immutability và message passing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Livelock và starvation
 
 Livelock: tasks vẫn hoạt động/thay trạng thái (state / 상태) nhưng liên tục nhường/thử lại (retry / 재시도) khiến không progress. Starvation: một tác vụ (task / 작업) không được tài nguyên (resource / 자원) đủ lâu vì scheduling/khóa (lock / 잠금) unfairness.
 
 Correct concurrent hệ thống (system / 시스템) cần an toàn (safety / 안전) (“không xảy ra điều xấu”) và liveness (“điều tốt cuối cùng xảy ra”).
-
-> **Nối mạch:** **Immutability và message passing** nối từ **Livelock và starvation** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Immutability và message passing
 
@@ -72,13 +58,9 @@ Cách tốt để giảm shared-state synchronization là giảm mutable sharing
 
 Không có free lunch: phân tán (distributed / 분산)/message các hệ thống (systems / 시스템들) cần xử lý duplicate, thử lại (retry / 재시도) và partial thất bại (failure / 실패).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Immutability và message passing**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Concurrent tính đúng đắn (correctness / 정확성) là lập luận (reasoning / 추론) về **trạng thái dùng chung (shared state / 공유 상태) + atomic boundaries + thứ tự (ordering / 순서) + progress**. Hỏi ai có thể truy cập (access / 접근) trạng thái (state / 상태) này, thao tác (operation / 연산) nào phải indivisible, visibility được bảo đảm bằng gì, và có cycle chờ nào không.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -87,8 +69,6 @@ Không có free lunch: phân tán (distributed / 분산)/message các hệ thố
 **“Không dùng khóa (lock / 잠금) thì không deadlock.”** tài nguyên (resource / 자원) waits, futures, channels và phân tán (distributed / 분산) calls vẫn có wait cycles.
 
 **“Thread-safe collection làm toàn workflow thread-safe.”** chuỗi (sequence / 시퀀스) check-then-act trên nhiều calls vẫn có race nếu không có higher-level atomicity.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

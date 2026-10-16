@@ -14,8 +14,6 @@ Cuối thế kỷ XIX, Eduard Bernstein đặt ra một challenge lớn: nếu c
 
 Điểm học quan trọng là tách **end-state ideal** khỏi **chuyển tiếp (transition / 전이) chiến lược (strategy / 전략)**. Hai movement có thể cùng phê phán inequality nhưng khác hoàn toàn về institutional tuyến (route / 경로).
 
-> **Chuyển mạch:** Trong **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **2. Leninism — organization trở thành biến trung tâm** tiếp nhận điểm tựa từ **1. Revisionism và xã hội (social / 사회적) democracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Gramsci — vì sao domination vẫn ổn định khi coercion không đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. Leninism — organization trở thành biến trung tâm
 
 [Lenin](04_lenin_party_state_revolution_and_imperialism.md) chuyển trọng tâm từ việc capitalism tự tạo ra revolutionary subject sang câu hỏi organization: lớp (class / 클래스) consciousness hình thành bằng cơ chế nào, một movement phối hợp ra sao dưới repression, và party có vai trò gì?
@@ -24,8 +22,6 @@ Cuối thế kỷ XIX, Eduard Bernstein đặt ra một challenge lớn: nếu c
 
 Từ đây, Marxism–Leninism về sau thường giữ organization như một cốt lõi (core / 핵심) thành phần (component / 컴포넌트) mạnh hơn nhiều so với Marx’s own writings.
 
-> **Chuyển mạch:** Ở chặng này của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **3. Gramsci — vì sao domination vẫn ổn định khi coercion không đủ?** tiếp nhận điểm tựa từ **2. Leninism — organization trở thành biến trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Western Marxism và Frankfurt School — culture, psychology và domination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Gramsci — vì sao domination vẫn ổn định khi coercion không đủ?
 
 Antonio Gramsci là một bước chuyển quan trọng vì ông hỏi tại sao capitalist thứ tự (order / 순서) có thể bền vững ngay cả khi không dựa hoàn toàn vào police hoặc direct coercion. Concept nổi tiếng nhất là **hegemony** (bá quyền văn hóa/chính trị, 헤게모니): ruling thứ tự (order / 순서) được duy trì không chỉ bằng force mà còn bằng institutions, dùng chung (common / 공통) sense, education, media, religion và civil society tạo ra consent.
@@ -33,8 +29,6 @@ Antonio Gramsci là một bước chuyển quan trọng vì ông hỏi tại sao
 Điều này làm mô hình (model / 모델) phức tạp hơn cơ sở (base / 기반)/superstructure phiên bản đơn giản. Culture và institutions không còn chỉ là “reflection” thụ động của economy. Chúng có relative autonomy và có thể trở thành chiến trường chính trị.
 
 Gramsci cũng giúp giải thích một thất bại (failure / 실패) của class-reductionist prediction: người lao động không tự động hành động theo một mục tiêu (objective / 목표) lớp (class / 클래스) interest duy nhất, vì định danh (identity / 식별자) và dùng chung (common / 공통) sense được tạo qua institutions và xã hội (social / 사회적) relations khác nhau.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **4. Western Marxism và Frankfurt School — culture, psychology và domination** tiếp nhận điểm tựa từ **3. Gramsci — vì sao domination vẫn ổn định khi coercion không đủ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Maoism — revolution trong xã hội chủ yếu nông nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Western Marxism và Frankfurt School — culture, psychology và domination
 
@@ -46,8 +40,6 @@ Một câu hỏi trung tâm trở thành: vì sao hiện đại (modern / 현대
 
 Nội bộ (internal / 내부) link tự nhiên từ đây là [Philosophy of Technology](../../07_philosophy_of_technology/00_technology_design_and_human_agency.md), vì một số câu hỏi Frankfurt School về technology, rationalization và điều khiển (control / 제어) tiếp tục sống trong technology studies hiện đại.
 
-> **Chuyển mạch:** Trong **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **5. Maoism — revolution trong xã hội chủ yếu nông nghiệp** tiếp nhận điểm tựa từ **4. Western Marxism và Frankfurt School — culture, psychology và domination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Anti-colonial Marxism và national liberation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. Maoism — revolution trong xã hội chủ yếu nông nghiệp
 
 Một tension lớn của classical Marxism là expectation rằng advanced capitalism sẽ tạo conditions cho socialist revolution, trong khi nhiều revolution thế kỷ XX lại xảy ra ở societies có large peasant population và lower industrialization. Mao Zedong phát triển chiến lược (strategy / 전략) nhấn mạnh peasantry, protracted revolutionary struggle và adaptation to Chinese conditions.
@@ -56,15 +48,11 @@ Một tension lớn của classical Marxism là expectation rằng advanced capi
 
 Không nên suy luận ngược rằng mọi chính sách (policy / 정책) của Mao-era China là consequence trực tiếp của Marx. Genealogy phải được truy qua Marx → Lenin → cục bộ (local / 로컬) adaptation → specific leadership/institution/chính sách (policy / 정책).
 
-> **Chuyển mạch:** Ở chặng này của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **6. Anti-colonial Marxism và national liberation** tiếp nhận điểm tựa từ **5. Maoism — revolution trong xã hội chủ yếu nông nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Structural Marxism — cấu trúc (structure / 구조) thay vì subject** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Anti-colonial Marxism và national liberation
 
 Marxism cũng được tái diễn giải trong colonial world. Ở đây lớp (class / 클래스) xung đột (conflict / 충돌) giao với **national liberation** (giải phóng dân tộc, 민족해방), imperial quy tắc (rule / 규칙) và trạng thái (state / 상태) formation. Lenin’s account of imperialism cung cấp một vocabulary để nối capitalism với international hierarchy; các movements ở Asia, Africa và Latin America sau đó phát triển những synthesis rất khác nhau giữa socialism, nationalism và anti-colonial struggle.
 
 Đây là một điểm đặc biệt quan trọng để hiểu [Vietnam context](07_vietnam_context.md). Nếu chỉ dùng lược đồ (schema / 스키마) “bourgeoisie vs proletariat” của industrial Europe, người học sẽ bỏ qua colonial domination, peasant society, war, national sovereignty và geopolitical môi trường (environment / 환경) — những biến rất lớn trong twentieth-century Vietnam.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **7. Structural Marxism — cấu trúc (structure / 구조) thay vì subject** tiếp nhận điểm tựa từ **6. Anti-colonial Marxism và national liberation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Analytical Marxism — giữ câu hỏi, thay phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Structural Marxism — cấu trúc (structure / 구조) thay vì subject
 
@@ -74,8 +62,6 @@ Cách tiếp cận này tăng sức mạnh phân tích ở mức institution nh�
 
 Nội bộ (internal / 내부) link phù hợp là [Sociology](../../../sociology/README.md), nơi cấu trúc (structure / 구조)/agency, institution và socialization được xử lý bằng frameworks rộng hơn Marxism.
 
-> **Chuyển mạch:** Trong **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **8. Analytical Marxism — giữ câu hỏi, thay phương thức (method / 메서드)** tiếp nhận điểm tựa từ **7. Structural Marxism — cấu trúc (structure / 구조) thay vì subject** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Feminist Marxism và xã hội (social / 사회적) reproduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Analytical Marxism — giữ câu hỏi, thay phương thức (method / 메서드)
 
 Từ cuối thập niên 1970, **Analytical Marxism** (마르크스주의 분석철학 계열) xuất hiện trong philosophy và xã hội (social / 사회적) science nói tiếng Anh. G. A. Cohen, Jon Elster, John Roemer và những scholar liên quan cố diễn đạt Marxist claims bằng analytical philosophy, rational choice, game lý thuyết (theory / 이론) hoặc hiện đại (modern / 현대적) economics.
@@ -84,15 +70,11 @@ Từ cuối thập niên 1970, **Analytical Marxism** (마르크스주의 분석
 
 Đây là mô hình (model / 모델) tốt cho Học tập (learning / 학습) Docs nói chung: preserve the bài toán (problem / 문제), kiểm thử (test / 테스트) the cơ chế (mechanism / 메커니즘), replace the lý thuyết (theory / 이론) nếu lý thuyết (theory / 이론) không còn đủ tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **9. Feminist Marxism và xã hội (social / 사회적) reproduction** tiếp nhận điểm tựa từ **8. Analytical Marxism — giữ câu hỏi, thay phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Không có “Marxism hiện đại” duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. Feminist Marxism và xã hội (social / 사회적) reproduction
 
 Một giới hạn của political economy tập trung vào factory wage labor là phần lớn công việc (work / 작업) cần để reproduce labor force diễn ra ngoài formal workplace: childcare, domestic công việc (work / 작업), care, household provisioning. Feminist Marxist và **xã hội (social / 사회적) reproduction** approaches hỏi economy dựa vào những forms of labor nào mà thị trường (market / 시장) accounting hoặc classical factory-centered phân tích (analysis / 분석) dễ bỏ qua.
 
 Điều này mở rộng concept môi trường vận hành (production / 운영 환경) mà không nhất thiết giữ mọi thành phần (component / 컴포넌트) của classical Marxism. Nó cũng tạo cầu nối (bridge / 브리지) với gender studies, sociology và labor economics.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **10. Không có “Marxism hiện đại” duy nhất** tiếp nhận điểm tựa từ **9. Feminist Marxism và xã hội (social / 사회적) reproduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Không có “Marxism hiện đại” duy nhất
 
@@ -112,13 +94,9 @@ Marx / Engels
 
 Cây (tree / 트리) này không nói các branches có giá trị ngang nhau hay cùng methodology. Nó chỉ ngăn một lỗi taxonomy: lấy một branch rồi gọi nó là toàn bộ Marxism.
 
-> **Chuyển mạch:** Trong **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **Bàn giao** tiếp nhận điểm tựa từ **10. Không có “Marxism hiện đại” duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn định hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bàn giao
 
 Ta vừa chuyển từ genealogy “Marx → Lenin” sang một map đa nhánh. Bước tiếp theo là [Comparative political economy](10_comparative_political_economy.md), nơi Marxist/socialist frameworks được đặt cạnh liberal, social-democratic và market-oriented frameworks theo **cùng một bộ câu hỏi**: thuộc tính (property / 속성), coordination, power, freedom, equality, thông tin (information / 정보) và institutional thất bại (failure / 실패).
-
-> **Chuyển mạch:** Ở chặng này của **Later Marxist traditions — tradition sau Marx không đi theo một đường duy nhất**, **Bàn giao** nêu điều cần giải thích; **Nguồn định hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Nguồn định hướng
 

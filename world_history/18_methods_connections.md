@@ -12,8 +12,6 @@
 6. **bằng chứng (evidence / 증거):** claim dựa trên vật liệu khảo cổ, văn bản, định lượng, ký ức hay so sánh; độ lệch (bias / 편향) nằm đâu?
 7. **Counterfactual:** nếu một ràng buộc (constraint / 제약조건) thay đổi, cơ chế nào có thể khác; điều gì vẫn tiếp tục?
 
-> **Nối mạch:** Bảy câu hỏi cho mọi chapter biến mô hình tư duy thành cách kiểm tra claim, cơ chế, quy mô và bằng chứng. **Các mối nối trong repo** cho biết khung đó áp dụng ở topic nào và quay về owner nào.
-
 ## Mô hình tư duy (mental models / 사고 모델들) hữu ích
 
 - **Năng lượng hữu dụng:** food/fuel → labor → môi trường vận hành (production / 운영 환경) → institution → warfare.
@@ -22,8 +20,6 @@
 - **mạng (network / 네트워크) centrality:** cảng, đèo, eo biển, thành phố, broker và nền tảng (platform / 플랫폼) có quyền lực vì dòng đi qua chúng.
 - **Shock–adaptation–lock-in:** dịch bệnh, chiến tranh, climate và technology tạo shock; chính sách ứng phó có thể thành đường dẫn (path / 경로) phụ thuộc (dependency / 의존성).
 - **tích hợp (integration / 통합)–inequality pair:** mọi mạng mở rộng đều có điều kiện gia nhập, tầng trung gian và chi phí bị đẩy ra ngoài.
-
-> **Nối mạch:** Mô hình tư duy cung cấp cách nhìn, còn các mối nối trong repo chỉ nơi áp dụng và giới hạn; đường quay về owner ngăn mental model biến thành kết luận chung chung.
 
 ## Các mối nối trong repo
 

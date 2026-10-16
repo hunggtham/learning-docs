@@ -27,8 +27,6 @@ Các innovation lớn giải từng phần:
 
 ---
 
-> **Nối mạch:** Sống trên cạn đòi hỏi chống mất nước và nâng đỡ; root–shoot phân công hấp thu/vận chuyển, còn meristem giữ khả năng xây cơ thể suốt đời.
-
 ## 2. Sơ đồ cơ thể (body plan): rễ–shoot là phân công chức năng (division of labor)
 
 Cơ thể thực vật (plant body) thường chia thành **hệ rễ (root system)** và **hệ chồi (shoot system)**. gốc (root / 루트) anchor plant, absorb water/khoáng chất, interact với soil microbe và đôi khi lưu trữ (storage / 저장소). Shoot gồm stem, leaf và reproductive structures.
@@ -38,8 +36,6 @@ Phân công chức năng làm hệ thống (system / 시스템) hiệu quả hơ
 Một cây không phải một collection organ độc lập; nó là mạng (network / 네트워크) tài nguyên (resource / 자원) exchange.
 
 ---
-
-> **Nối mạch:** **2. Sơ đồ cơ thể (body plan): rễ–shoot là phân công chức năng (division of labor)** nêu quy tắc; **3. Meristem: plant xây cơ thể suốt đời** thử quy tắc trong tình huống, rồi **4. Mô (tissue) hệ thống (system / 시스템): ranh giới (boundary / 경계), metabolism và vận chuyển (transport / 전송)** mở rộng hệ quả.
 
 ## 3. Meristem: plant xây cơ thể suốt đời
 
@@ -52,8 +48,6 @@ Khác nhiều animal có sơ đồ cơ thể tương đối cố định sau ph�
 Modularity cũng là nguy cơ (risk)-management chiến lược (strategy / 전략): mất một branch không nhất thiết mất whole organism.
 
 ---
-
-> **Nối mạch:** **3. Meristem: plant xây cơ thể suốt đời** đặt tiêu chí; **4. Mô (tissue) hệ thống (system / 시스템): ranh giới (boundary / 경계), metabolism và vận chuyển (transport / 전송)** dùng nó để kiểm tra ranh giới, rồi **5. Thế nước thống nhất osmosis từ cell tới whole plant** mở rộng cơ chế.
 
 ## 4. Mô (tissue) hệ thống (system / 시스템): ranh giới (boundary / 경계), metabolism và vận chuyển (transport / 전송)
 
@@ -68,8 +62,6 @@ Ba mô hệ thống (system / 시스템) lớn có thể hiểu theo chức năn
 Thay vì học category rời, hãy luôn hỏi: tissue này đang giải ràng buộc (constraint / 제약조건) nào của một organism lớn nhưng không có central pump?
 
 ---
-
-> **Nối mạch:** **4. Mô (tissue) hệ thống (system / 시스템): ranh giới (boundary / 경계), metabolism và vận chuyển (transport / 전송)** đặt tiêu chí; **5. Thế nước thống nhất osmosis từ cell tới whole plant** dùng nó để kiểm tra ranh giới, rồi **6. Turgor: pressure là một structural tài nguyên (resource / 자원)** mở rộng cơ chế.
 
 ## 5. Thế nước thống nhất osmosis từ cell tới whole plant
 
@@ -90,8 +82,6 @@ Trong đó:
 
 ---
 
-> **Nối mạch:** **5. Thế nước thống nhất osmosis từ cell tới whole plant** đặt vấn đề; **6. Turgor: pressure là một structural tài nguyên (resource / 자원)** kiểm tra bằng chứng, rồi **7. Mạch gỗ (xylem): vận chuyển water không cần heart** mở rộng hệ quả.
-
 ## 6. Turgor: pressure là một structural tài nguyên (resource / 자원)
 
 Plant thành tế bào (cell wall) cho phép cell tích water và tạo **turgor pressure (áp suất trương / 팽압)** mà không burst như animal cell.
@@ -101,8 +91,6 @@ Turgor giúp tissue mềm nhưng vẫn đứng vững. Khi thế nước giảm 
 Điều này cho thấy cấu trúc (structure / 구조) của plant phụ thuộc không chỉ material như cellulose mà còn phụ thuộc trạng thái hydraulic.
 
 ---
-
-> **Nối mạch:** **6. Turgor: pressure là một structural tài nguyên (resource / 자원)** đặt vấn đề; **7. Mạch gỗ (xylem): vận chuyển water không cần heart** kiểm tra bằng chứng, rồi **8. Sức cản thủy lực (hydraulic resistance) và kiến trúc (architecture / 아키텍처) của vessel** mở rộng hệ quả.
 
 ## 7. Mạch gỗ (xylem): vận chuyển water không cần heart
 
@@ -123,8 +111,6 @@ Liên kết hydro (hydrogen bond) giữa water molecule tạo cohesion; adhesion
 Năng lượng trực tiếp không đến từ một xylem pump. Solar năng lượng (energy / 에너지) gián tiếp drive evaporation ở lá, rồi pressure độ dốc (gradient / 기울기) kéo dòng chảy.
 
 ---
-
-> **Nối mạch:** Xylem moves water through pressure gradients, not a pump; hydraulic resistance sets flow, while cavitation reveals the drought failure boundary.
 
 ## 8. Sức cản thủy lực (hydraulic resistance) và kiến trúc (architecture / 아키텍처) của vessel
 
@@ -148,8 +134,6 @@ Evolution không chọn “tube lớn nhất”; nó chọn kiến trúc (archit
 
 ---
 
-> **Nối mạch:** **9. Cavitation và suy thủy lực (hydraulic failure) trong hạn hán (drought)** nối từ **8. Sức cản thủy lực (hydraulic resistance) và kiến trúc (architecture / 아키텍처) của vessel** sang **10. gốc (root / 루트) absorption và Đai Caspary (Casparian strip)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Cavitation và suy thủy lực (hydraulic failure) trong hạn hán (drought)
 
 Khi soil khô hoặc evaporative demand quá lớn, xylem tension tăng. Nếu tension vượt khả năng ổn định của water column, embolism có thể hình thành.
@@ -159,8 +143,6 @@ Nếu đủ nhiều conduit mất hàm (function / 함수), hydraulic conductivi
 Đây là một cơ chế (mechanism / 메커니즘) quan trọng để hiểu drought mortality ở cây (tree / 트리): không chỉ là “hết nước”, mà có thể là **hydraulic mạng (network / 네트워크) mất khả năng truyền water**.
 
 ---
-
-> **Nối mạch:** **10. gốc (root / 루트) absorption và Đai Caspary (Casparian strip)** nối từ **9. Cavitation và suy thủy lực (hydraulic failure) trong hạn hán (drought)** sang **11. Dinh dưỡng khoáng (mineral nutrition): plant không “ăn đất”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. gốc (root / 루트) absorption và Đai Caspary (Casparian strip)
 
@@ -172,8 +154,6 @@ Gốc (root / 루트) hair tăng diện tích bề mặt (surface area) tiếp x
 
 ---
 
-> **Nối mạch:** **11. Dinh dưỡng khoáng (mineral nutrition): plant không “ăn đất”** nối từ **10. gốc (root / 루트) absorption và Đai Caspary (Casparian strip)** sang **12. Nitrogen: plant physiology phụ thuộc microbial ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Dinh dưỡng khoáng (mineral nutrition): plant không “ăn đất”
 
 Carbon tạo phần lớn dry biomass plant đến từ atmospheric CO₂, không phải soil. Soil chủ yếu cung cấp water và khoáng chất chất dinh dưỡng (nutrient).
@@ -183,8 +163,6 @@ Các element quan trọng gồm N, P, K, Mg, Fe, S và micronutrient khác. Như
 Nutrient deficiency không chỉ là “đất không có nguyên tố”; nguyên tố có thể có nhưng ở chemical form plant khó uptake.
 
 ---
-
-> **Nối mạch:** **12. Nitrogen: plant physiology phụ thuộc microbial ecology** nối từ **11. Dinh dưỡng khoáng (mineral nutrition): plant không “ăn đất”** sang **13. Mycorrhiza: gốc (root / 루트) là một consortium, không phải actor đơn độc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Nitrogen: plant physiology phụ thuộc microbial ecology
 
@@ -196,8 +174,6 @@ Do đó một leaf protein cuối cùng phụ thuộc cả atmospheric chemistry
 
 ---
 
-> **Nối mạch:** **13. Mycorrhiza: gốc (root / 루트) là một consortium, không phải actor đơn độc** nối từ **12. Nitrogen: plant physiology phụ thuộc microbial ecology** sang **14. Khí khổng: sự đánh đổi (trade-off / 트레이드오프) CO₂–nước được điều khiển bằng ion vận chuyển (transport / 전송)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Mycorrhiza: gốc (root / 루트) là một consortium, không phải actor đơn độc
 
 **Mycorrhiza (nấm rễ / 균근)** mở rộng effective exploration volume của gốc (root / 루트). Fungus hỗ trợ nước/phosphorus acquisition; plant cung cấp carbon.
@@ -207,8 +183,6 @@ Do đó một leaf protein cuối cùng phụ thuộc cả atmospheric chemistry
 Một hệ rễ ngoài tự nhiên vì vậy là plant–microbe ecosystem chứ không phải một organ cô lập.
 
 ---
-
-> **Nối mạch:** **14. Khí khổng: sự đánh đổi (trade-off / 트레이드오프) CO₂–nước được điều khiển bằng ion vận chuyển (transport / 전송)** nối từ **13. Mycorrhiza: gốc (root / 루트) là một consortium, không phải actor đơn độc** sang **15. Độ thiếu hụt áp suất hơi nước (vapor pressure deficit) — không khí “khô” tác động bằng độ dốc (gradient / 기울기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Khí khổng: sự đánh đổi (trade-off / 트레이드오프) CO₂–nước được điều khiển bằng ion vận chuyển (transport / 전송)
 
@@ -225,8 +199,6 @@ Mở khí khổng:
 Vì vậy stomatal trạng thái (state / 상태) là quyết định (decision / 결정) của whole plant về thu nhận carbon (carbon gain) vs hydraulic an toàn (safety / 안전).
 
 ---
-
-> **Nối mạch:** **15. Độ thiếu hụt áp suất hơi nước (vapor pressure deficit) — không khí “khô” tác động bằng độ dốc (gradient / 기울기)** nối từ **14. Khí khổng: sự đánh đổi (trade-off / 트레이드오프) CO₂–nước được điều khiển bằng ion vận chuyển (transport / 전송)** sang **16. ABA và đáp ứng hạn (drought response)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Độ thiếu hụt áp suất hơi nước (vapor pressure deficit) — không khí “khô” tác động bằng độ dốc (gradient / 기울기)
 
@@ -248,8 +220,6 @@ Plant water status là balance giữa hai phía, không phải chỉ nhìn rain/
 
 ---
 
-> **Nối mạch:** **16. ABA và đáp ứng hạn (drought response)** nối từ **15. Độ thiếu hụt áp suất hơi nước (vapor pressure deficit) — không khí “khô” tác động bằng độ dốc (gradient / 기울기)** sang **17. Quang hợp không chỉ là “tạo glucose”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. ABA và đáp ứng hạn (drought response)
 
 **Abscisic acid, ABA (앱시스산)** tăng trong nhiều drought ngữ cảnh (context / 맥락) và góp phần làm stomata close, đổi biểu hiện gen (gene expression), rễ/shoot growth mẫu hình (pattern).
@@ -259,8 +229,6 @@ Closing stomata giữ water nhưng làm CO₂ uptake giảm → quang hợp gi�
 Đáp ứng hạn vì vậy không phải “plant chuyển sang chế độ tiết kiệm mà không mất gì”; nó trả chi phí (cost / 비용) bằng thu nhận carbon và sinh trưởng (growth).
 
 ---
-
-> **Nối mạch:** **17. Quang hợp không chỉ là “tạo glucose”** nối từ **16. ABA và đáp ứng hạn (drought response)** sang **18. Hô hấp sáng (photorespiration) và giới hạn của Rubisco**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Quang hợp không chỉ là “tạo glucose”
 
@@ -275,8 +243,6 @@ Một leaf có nhiều light nhưng stomata đóng mạnh vẫn có thể carbon
 
 ---
 
-> **Nối mạch:** **17. Quang hợp không chỉ là “tạo glucose”** đặt tiêu chí; **18. Hô hấp sáng (photorespiration) và giới hạn của Rubisco** dùng nó để kiểm tra ranh giới, rồi **19. C3, C4 và CAM — ba chiến lược (strategy / 전략) cho carbon–water sự đánh đổi (trade-off / 트레이드오프)** mở rộng cơ chế.
-
 ## 18. Hô hấp sáng (photorespiration) và giới hạn của Rubisco
 
 Rubisco có thể react với O₂ ngoài CO₂. Khi CO₂ thấp và temperature cao, **hô hấp sáng (광호흡)** tăng, làm carbon efficiency giảm.
@@ -286,8 +252,6 @@ Rubisco có thể react với O₂ ngoài CO₂. Khi CO₂ thấp và temperatur
 Evolution làm việc với inherited machinery, không thiết kế từ blank slate.
 
 ---
-
-> **Nối mạch:** **18. Hô hấp sáng (photorespiration) và giới hạn của Rubisco** đặt tiêu chí; **19. C3, C4 và CAM — ba chiến lược (strategy / 전략) cho carbon–water sự đánh đổi (trade-off / 트레이드오프)** dùng nó để kiểm tra ranh giới, rồi **20. Mạch rây: carbon đi từ nguồn (source / 소스) tới sink** mở rộng cơ chế.
 
 ## 19. C3, C4 và CAM — ba chiến lược (strategy / 전략) cho carbon–water sự đánh đổi (trade-off / 트레이드오프)
 
@@ -300,8 +264,6 @@ Evolution làm việc với inherited machinery, không thiết kế từ blank 
 Không chiến lược (strategy / 전략) nào universally superior. C4/CAM có advantage trong khí hậu (climate)/tài nguyên (resource / 자원) ngữ cảnh (context / 맥락) nhất định nhưng phải trả energetic/anatomical chi phí (cost / 비용).
 
 ---
-
-> **Nối mạch:** **19. C3, C4 và CAM — ba chiến lược (strategy / 전략) cho carbon–water sự đánh đổi (trade-off / 트레이드오프)** đặt vấn đề; **20. Mạch rây: carbon đi từ nguồn (source / 소스) tới sink** kiểm tra bằng chứng, rồi **21. nguồn (source / 소스)–sink relationship thay đổi theo trạng thái phát triển (developmental state)** mở rộng hệ quả.
 
 ## 20. Mạch rây: carbon đi từ nguồn (source / 소스) tới sink
 
@@ -324,8 +286,6 @@ Xylem và phloem là hai mạng (network / 네트워크) khác cơ chế (mechan
 
 ---
 
-> **Nối mạch:** **20. Mạch rây: carbon đi từ nguồn (source / 소스) tới sink** đặt vấn đề; **21. nguồn (source / 소스)–sink relationship thay đổi theo trạng thái phát triển (developmental state)** kiểm tra bằng chứng, rồi **22. Carbon allocation là bài toán tối ưu hóa (optimization / 최적화) sinh học** mở rộng hệ quả.
-
 ## 21. nguồn (source / 소스)–sink relationship thay đổi theo trạng thái phát triển (developmental state)
 
 Một young leaf ban đầu là sink vì chưa photosynthesize đủ. Khi mature, nó trở thành nguồn (source / 소스).
@@ -335,8 +295,6 @@ Fruit developing mạnh có thể là sink lớn; gốc (root / 루트) lưu tr�
 Do đó “organ có một hàm (function / 함수) cố định” là mô hình tư duy sai. hàm (function / 함수) tài nguyên (resource / 자원) có thể đổi theo thời gian (time / 시간).
 
 ---
-
-> **Nối mạch:** **21. nguồn (source / 소스)–sink relationship thay đổi theo trạng thái phát triển (developmental state)** đặt vấn đề; **22. Carbon allocation là bài toán tối ưu hóa (optimization / 최적화) sinh học** kiểm tra bằng chứng, rồi **23. Hormone không hoạt động theo mô hình “một hormone = một chức năng”** mở rộng hệ quả.
 
 ## 22. Carbon allocation là bài toán tối ưu hóa (optimization / 최적화) sinh học
 
@@ -355,8 +313,6 @@ Life-history chiến lược (strategy / 전략) chính là sự đánh đổi (
 
 ---
 
-> **Nối mạch:** **23. Hormone không hoạt động theo mô hình “một hormone = một chức năng”** nối từ **22. Carbon allocation là bài toán tối ưu hóa (optimization / 최적화) sinh học** sang **24. Auxin, polarity và directional growth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Hormone không hoạt động theo mô hình “một hormone = một chức năng”
 
 Plant hormone gồm auxin, cytokinin, gibberellin, ABA, ethylene, jasmonate, salicylic acid, brassinosteroid và nhiều tín hiệu (signal / 신호) khác.
@@ -374,8 +330,6 @@ Hormone là mạng lưới (network) tín hiệu (signal / 신호), không phả
 
 ---
 
-> **Nối mạch:** **24. Auxin, polarity và directional growth** nối từ **23. Hormone không hoạt động theo mô hình “một hormone = một chức năng”** sang **25. Cytokinin–auxin balance và sự hình thành cơ quan (organogenesis)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Auxin, polarity và directional growth
 
 **Auxin (옥신)** có polar vận chuyển (transport / 전송) trong mô. Redistribution auxin có thể tạo differential growth giữa hai side organ.
@@ -385,8 +339,6 @@ Trong hướng sáng (phototropism), directional light được sensed → signa
 Plant không có “ý định quay về ánh sáng”; directional growth là nổi trội (emergent) đầu ra (output / 출력) của sensing + vận chuyển + differential expansion.
 
 ---
-
-> **Nối mạch:** **25. Cytokinin–auxin balance và sự hình thành cơ quan (organogenesis)** nối từ **24. Auxin, polarity và directional growth** sang **26. Gibberellin, seed germination và sinh trưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Cytokinin–auxin balance và sự hình thành cơ quan (organogenesis)
 
@@ -398,8 +350,6 @@ Trong tissue culture và phát triển, ratio/tương tác (interaction / 상호
 
 ---
 
-> **Nối mạch:** **26. Gibberellin, seed germination và sinh trưởng** nối từ **25. Cytokinin–auxin balance và sự hình thành cơ quan (organogenesis)** sang **27. Ethylene: gas cũng có thể là hoóc-môn (hormone)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Gibberellin, seed germination và sinh trưởng
 
 **Gibberellin (지베렐린)** tham gia stem elongation và seed germination ở nhiều plant.
@@ -409,8 +359,6 @@ Khi seed germinate, tín hiệu (signal / 신호) hormonal giúp mobilize stored
 Dormancy–germination là quyết định (decision / 결정) about timing: germinate quá sớm trong môi trường (environment / 환경) xấu có thể gây thất bại (failure / 실패); quá muộn bỏ lỡ tài nguyên (resource / 자원) cửa sổ (window / 윈도우).
 
 ---
-
-> **Nối mạch:** **27. Ethylene: gas cũng có thể là hoóc-môn (hormone)** nối từ **26. Gibberellin, seed germination và sinh trưởng** sang **28. Circadian clock và photoreceptor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Ethylene: gas cũng có thể là hoóc-môn (hormone)
 
@@ -422,8 +370,6 @@ Fruit ripening còn có positive-feedback-like thuộc tính (property / 속성)
 
 ---
 
-> **Nối mạch:** **28. Circadian clock và photoreceptor** nối từ **27. Ethylene: gas cũng có thể là hoóc-môn (hormone)** sang **29. Quang chu kỳ (photoperiod) và flowering**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Circadian clock và photoreceptor
 
 Plant có phytochrome, cryptochrome và photoreceptor khác để sense light chất lượng (quality / 품질)/direction/thời gian (time / 시간).
@@ -433,8 +379,6 @@ Plant có phytochrome, cryptochrome và photoreceptor khác để sense light ch
 Đây là điều khiển dự đoán trước (feedforward control): hệ thống (system / 시스템) không chỉ phản ứng với present điều kiện (condition / 조건) mà sử dụng periodic lịch sử (history / 이력) để predict future môi trường (environment / 환경).
 
 ---
-
-> **Nối mạch:** Circadian clock và photoreceptor cung cấp tín hiệu; photoperiod điều chỉnh flowering. **Vernalization và epigenetic memory** kiểm tra thời gian đáp ứng.
 
 ## 29. Quang chu kỳ (photoperiod) và flowering
 
@@ -446,8 +390,6 @@ Plant đo quang chu kỳ thông qua tương tác (interaction / 상호작용) gi
 
 ---
 
-> **Nối mạch:** Photoperiod tạo tín hiệu flowering; vernalization lưu memory qua epigenetic state. **Flower development genes** kiểm tra cách network tạo organ identity.
-
 ## 30. Xuân hóa (vernalization) và epigenetic bộ nhớ (memory / 메모리)
 
 Một số plant cần exposure lạnh kéo dài trước khi flowering. **Xuân hóa (춘화)** tạo bộ nhớ (memory / 메모리) molecular/epigenetic rằng winter đã xảy ra.
@@ -455,8 +397,6 @@ Một số plant cần exposure lạnh kéo dài trước khi flowering. **Xuân
 Điều này cho thấy epigenetic regulation không chỉ là concept molecular; nó có ecological purpose: tránh flowering trước khi mùa lạnh kết thúc.
 
 ---
-
-> **Nối mạch:** Vernalization tạo epigenetic memory; flower-development gene network tạo organ identity. **Pollination khác fertilization** kiểm tra hai bước không bị đánh đồng.
 
 ## 31. Hoa (flower) phát triển (development): gen mạng (network / 네트워크) tạo organ định danh (identity / 식별자)
 
@@ -468,8 +408,6 @@ Morphology vì vậy là đầu ra (output / 출력) của mạng lưới điề
 
 ---
 
-> **Nối mạch:** Flower gene network tạo organ identity; pollination đưa pollen tới vị trí nhận. **Double fertilization và endosperm** kiểm tra hệ quả sinh sản ở thực vật có hoa.
-
 ## 32. Pollination khác fertilization
 
 **Pollination (thụ phấn / 수분)** là transfer pollen tới receptive cấu trúc (structure / 구조).
@@ -480,8 +418,6 @@ Pollen là evolutionary solution cho male gamete vận chuyển (transport / 전
 
 ---
 
-> **Nối mạch:** **33. Double fertilization và endosperm** nối từ **32. Pollination khác fertilization** sang **34. Hạt: gói (package / 패키지) cho survival qua thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. Double fertilization và endosperm
 
 Ở angiosperm, một sperm fertilize egg → zygote; sperm khác fusion với central cell → endosperm thường triploid.
@@ -491,8 +427,6 @@ Endosperm hỗ trợ embryo development.
 Đây là cách plant link fertilization trực tiếp với nutrient allocation cho next generation.
 
 ---
-
-> **Nối mạch:** **34. Hạt: gói (package / 패키지) cho survival qua thời gian (time / 시간)** nối từ **33. Double fertilization và endosperm** sang **35. Fruit và seed dispersal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Hạt: gói (package / 패키지) cho survival qua thời gian (time / 시간)
 
@@ -509,8 +443,6 @@ Dormancy là chiến lược (strategy / 전략) quản lý bất định (uncer
 
 ---
 
-> **Nối mạch:** **35. Fruit và seed dispersal** nối từ **34. Hạt: gói (package / 패키지) cho survival qua thời gian (time / 시간)** sang **36. Defense: plant không chạy nhưng có multilayer immunity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 35. Fruit và seed dispersal
 
 Fruit bảo vệ và hỗ trợ dispersal. tương tác (interaction / 상호작용) với animal disperser có thể tạo đồng tiến hóa (coevolution) về color, odor, timing và nutrient reward.
@@ -518,8 +450,6 @@ Fruit bảo vệ và hỗ trợ dispersal. tương tác (interaction / 상호작
 Plant reproduction vì vậy không kết thúc ở hoa; ecology của dispersal quyết định gene đi đâu trong landscape.
 
 ---
-
-> **Nối mạch:** **36. Defense: plant không chạy nhưng có multilayer immunity** nối từ **35. Fruit và seed dispersal** sang **37. Sinh trưởng–defense sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Defense: plant không chạy nhưng có multilayer immunity
 
@@ -538,8 +468,6 @@ Nhưng pathway cross-talk làm phản hồi (response / 응답) bối cảnh-dep
 
 ---
 
-> **Nối mạch:** **37. Sinh trưởng–defense sự đánh đổi (trade-off / 트레이드오프)** nối từ **36. Defense: plant không chạy nhưng có multilayer immunity** sang **38. Electrical tín hiệu (signal / 신호) và calcium wave trong plant**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 37. Sinh trưởng–defense sự đánh đổi (trade-off / 트레이드오프)
 
 Defense protein, secondary metabolite và repair đều cần carbon/nitrogen/năng lượng (energy / 에너지).
@@ -549,8 +477,6 @@ Plant đầu tư quá mạnh vào defense có thể giảm growth/reproduction. 
 Vì vậy đáp ứng miễn dịch (immune response) ở plant cũng là resource-allocation bài toán (problem / 문제).
 
 ---
-
-> **Nối mạch:** **38. Electrical tín hiệu (signal / 신호) và calcium wave trong plant** nối từ **37. Sinh trưởng–defense sự đánh đổi (trade-off / 트레이드오프)** sang **39. Mechanical sensing và thigmomorphogenesis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Electrical tín hiệu (signal / 신호) và calcium wave trong plant
 
@@ -562,8 +488,6 @@ Wounding ở một leaf có thể tạo systemic tín hiệu (signal / 신호) l
 
 ---
 
-> **Nối mạch:** **39. Mechanical sensing và thigmomorphogenesis** nối từ **38. Electrical tín hiệu (signal / 신호) và calcium wave trong plant** sang **40. Tình huống phân tích (case study): vì sao cây (tree / 트리) cao có height limit?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 39. Mechanical sensing và thigmomorphogenesis
 
 Wind, touch và hỗ trợ (support / 지원) làm plant đổi growth mẫu hình. Vine có thể coil quanh hỗ trợ (support / 지원); repeated mechanical stress có thể làm stem kiến trúc (architecture / 아키텍처) đổi.
@@ -574,8 +498,6 @@ Mechanosensitive channel, cytoskeleton và hoóc-môn (hormone) mạng (network 
 
 ---
 
-> **Nối mạch:** **39. Mechanical sensing và thigmomorphogenesis** nêu quy tắc; **40. Tình huống phân tích (case study): vì sao cây (tree / 트리) cao có height limit?** thử quy tắc trong tình huống, rồi **41. Tình huống phân tích: héo trưa rồi hồi chiều** mở rộng hệ quả.
-
 ## 40. Tình huống phân tích (case study): vì sao cây (tree / 트리) cao có height limit?
 
 Khi cây (tree / 트리) cao hơn, đường dẫn (path / 경로) length tăng và gravitational potential phải vượt qua. Xylem tension tăng, sức cản thủy lực tích lũy và cavitation rủi ro (risk / 위험) tăng.
@@ -585,8 +507,6 @@ Lá ở canopy cao có thể nhận nhiều light nhưng hydraulic supply trở 
 Cây (tree / 트리) height vì vậy không chỉ do “gene quyết định tối đa bao nhiêu mét”. Nó là kết quả (outcome / 결과) của mechanics + hydraulics + carbon economics + tiến hóa (evolution).
 
 ---
-
-> **Nối mạch:** **40. Tình huống phân tích (case study): vì sao cây (tree / 트리) cao có height limit?** nêu quy tắc; **41. Tình huống phân tích: héo trưa rồi hồi chiều** thử quy tắc trong tình huống, rồi **42. Tình huống phân tích: girdling chứng minh nguồn (source / 소스)–sink coupling** mở rộng hệ quả.
 
 ## 41. Tình huống phân tích: héo trưa rồi hồi chiều
 
@@ -607,8 +527,6 @@ Do đó héo trưa không tự động nghĩa soil hoàn toàn khô; nó có th�
 
 ---
 
-> **Nối mạch:** **41. Tình huống phân tích: héo trưa rồi hồi chiều** nêu quy tắc; **42. Tình huống phân tích: girdling chứng minh nguồn (source / 소스)–sink coupling** thử quy tắc trong tình huống, rồi **43. Tình huống phân tích: fertilizer nhiều không phải luôn tốt** mở rộng hệ quả.
-
 ## 42. Tình huống phân tích: girdling chứng minh nguồn (source / 소스)–sink coupling
 
 Bóc vòng bark chứa phloem quanh trunk nhưng giữ xylem tương đối intact làm water vẫn có thể lên crown một thời gian.
@@ -618,8 +536,6 @@ Nhưng sugar từ leaf không xuống gốc (root / 루트) → gốc (root / �
 Trường hợp (case / 사례) này chứng minh xylem và phloem khác hàm (function / 함수) nhưng whole plant sống nhờ coupling của cả hai.
 
 ---
-
-> **Nối mạch:** **42. Tình huống phân tích: girdling chứng minh nguồn (source / 소스)–sink coupling** nêu quy tắc; **43. Tình huống phân tích: fertilizer nhiều không phải luôn tốt** thử quy tắc trong tình huống, rồi **44. Biến đổi khí hậu (climate change) tác động plant qua nhiều pathway cùng lúc** mở rộng hệ quả.
 
 ## 43. Tình huống phân tích: fertilizer nhiều không phải luôn tốt
 
@@ -635,8 +551,6 @@ Quan hệ liều–đáp ứng (dose–response) trong Biology hiếm khi “cà
 
 ---
 
-> **Nối mạch:** **43. Tình huống phân tích: fertilizer nhiều không phải luôn tốt** nêu quy tắc; **44. Biến đổi khí hậu (climate change) tác động plant qua nhiều pathway cùng lúc** thử quy tắc trong tình huống, rồi **45. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 44. Biến đổi khí hậu (climate change) tác động plant qua nhiều pathway cùng lúc
 
 Nhiệt độ, atmospheric CO₂, hạn hán tần số (frequency), VPD, fire regime và pest phân phối (distribution / 분포) cùng thay đổi.
@@ -646,8 +560,6 @@ CO₂ cao có thể tăng cố định carbon (carbon fixation) trong một số
 Do đó câu “CO₂ tăng thì plant sẽ tốt hơn” quá đơn giản. Whole-plant phản hồi (response / 응답) là multi-factor tương tác (interaction / 상호작용).
 
 ---
-
-> **Nối mạch:** Climate change tác động plant qua nhiều pathway; misconceptions chỉ ra các suy luận đơn nguyên. **Mô hình tư duy tổng hợp** kiểm tra hệ quả theo cơ chế.
 
 ## 45. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -666,8 +578,6 @@ Do đó câu “CO₂ tăng thì plant sẽ tốt hơn” quá đơn giản. Who
 **“Bón phân càng nhiều cây càng lớn.”** Sai do bão hòa (saturation), toxicity, osmotic stress và ecological mất mát (loss / 손실).
 
 ---
-
-> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 45; cầu nối sang animal physiology mở rộng cách đọc regulation và energy balance.
 
 ## 46. Mô hình tư duy tổng hợp
 
@@ -692,8 +602,6 @@ Overlay lên mạng (network / 네트워크) này là hoóc-môn, electrical/cal
 Một perturbation ở một nút (node / 노드) — hạn hán, shading, gốc (root / 루트) damage, mầm bệnh, fruit tải (load / 로드) — lan qua toàn hệ thống (system / 시스템).
 
 ---
-
-> **Nối mạch:** **47. cầu nối (bridge / 브리지) sang Sinh lý động vật (animal physiology)** tổng hợp kết quả từ **46. Mô hình tư duy tổng hợp** để khép mạch giải thích.
 
 ## 47. cầu nối (bridge / 브리지) sang Sinh lý động vật (animal physiology)
 

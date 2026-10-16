@@ -2,7 +2,7 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Language models**. Route đi từ sequence probability/chain rule → n-gram limits → neural next-token modeling → perplexity/context → generation and calibration, để xác suất chuỗi nối với hành vi sinh văn bản.
 
-Ngôn ngữ (language / 언어) mô hình (model / 모델) gán xác suất (probability / 확률) cho chuỗi (sequence / 시퀀스) hoặc dự đoán đơn vị từ (token / 토큰) dựa trên ngữ cảnh (context / 맥락). Đây là cốt lõi (core / 핵심) lớp trừu tượng (abstraction / 추상화) đứng sau autocomplete, speech decoding, machine translation và Large ngôn ngữ (language / 언어) các mô hình (models / 모델들).
+Ngôn ngữ (language / 언어) mô hình (model / 모델) gán xác suất (probability / 확률) cho chuỗi (sequence / 시퀀스) hoặc dự đoán token (토큰) dựa trên ngữ cảnh (context / 맥락). Đây là cốt lõi (core / 핵심) lớp trừu tượng (abstraction / 추상화) đứng sau autocomplete, speech decoding, machine translation và Large ngôn ngữ (language / 언어) các mô hình (models / 모델들).
 
 Điểm quan trọng: ngôn ngữ (language / 언어) mô hình (model / 모델) không trực tiếp optimize “truth” hay “lập luận (reasoning / 추론)”. mục tiêu (objective / 목표) cơ bản là mô hình (model / 모델) phân phối (distribution / 분포) của observed ngôn ngữ (language / 언어). năng lực (capability / 역량) khác xuất hiện vì để predict ngôn ngữ (language / 언어) tốt ở quy mô (scale / 규모) lớn, mô hình (model / 모델) phải learn nhiều cấu trúc (structure / 구조) về cú pháp (syntax / 문법), ngữ nghĩa (semantics / 의미론), kiến thức (knowledge / 지식) và patterns of lập luận (reasoning / 추론) — nhưng mục tiêu (objective / 목표) và năng lực (capability / 역량) không đồng nhất.
 
@@ -123,7 +123,7 @@ Masked LM nhìn hai phía để học biểu diễn; causal LM áp đặt mask n
 
 ## Nhân quả (causal / 인과적) ngôn ngữ (language / 언어) Modeling
 
-GPT-style mục tiêu (objective / 목표) predicts each đơn vị từ (token / 토큰) using only previous tokens. nhân quả (causal / 인과적) mask preserves:
+GPT-style mục tiêu (objective / 목표) predicts each token (토큰) using only previous tokens. nhân quả (causal / 인과적) mask preserves:
 
 \[
 P(x_t\mid x_{<t})
@@ -166,7 +166,7 @@ Keep k highest-probability tokens, renormalize.
 
 ### Top-p / Nucleus
 
-Choose smallest đơn vị từ (token / 토큰) set whose cumulative xác suất (probability / 확률) ≥ `p`, then mẫu (sample / 표본). Candidate set adapts phân phối (distribution / 분포) bất định (uncertainty / 불확실성).
+Choose smallest token (토큰) set whose cumulative xác suất (probability / 확률) ≥ `p`, then mẫu (sample / 표본). Candidate set adapts phân phối (distribution / 분포) bất định (uncertainty / 불확실성).
 
 Sampling cấu hình (configuration / 구성) affects style/diversity, not mô hình (model / 모델) kiến thức (knowledge / 지식) itself.
 
@@ -262,7 +262,7 @@ Mental model này nhấn mạnh model tối ưu phân phối token, không trự
 
 ## Dùng chung (common / 공통) Misconceptions
 
-### “Perplexity 10 means mô hình (model / 모델) has 10 choices each đơn vị từ (token / 토큰) exactly”
+### “Perplexity 10 means mô hình (model / 모델) has 10 choices each token (토큰) exactly”
 
 Only effective geometric-average bất định (uncertainty / 불확실성) intuition, not literal fixed choices.
 

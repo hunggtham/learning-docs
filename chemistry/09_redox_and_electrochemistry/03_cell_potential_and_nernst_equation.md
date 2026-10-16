@@ -24,8 +24,6 @@ trong đó:
 
 Nếu \(E>0\), phản ứng theo chiều đã viết có \(\Delta G<0\) và thuận lợi về mặt nhiệt động trong điều kiện đang xét.
 
-> **Nối mạch:** Điện thế chuẩn mô tả xu hướng trong điều kiện quy ước; phương trình Nernst tiếp theo đưa nồng độ và áp suất thực vào thế pin, nối ΔG với điện áp đo được.
-
 ## Điện thế chuẩn
 
 Ở trạng thái chuẩn:
@@ -43,8 +41,6 @@ E^\circ_{cell}=E^\circ_{cathode}-E^\circ_{anode}
 \]
 
 Điều quan trọng là không nhân thế điện cực với hệ số hóa lượng. Điện thế là đại lượng cường độ; năng lượng tự do mới tăng theo lượng chất phản ứng.
-
-> **Nối mạch:** Ở chặng này của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Suy ra phương trình Nernst** nối từ **Điện thế chuẩn** sang **Thương số phản ứng phải dùng hoạt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy ra phương trình Nernst
 
@@ -86,8 +82,6 @@ E=E^\circ-\frac{0.05916}{n}\log_{10}Q
 
 Vì vậy phương trình Nernst không phải một công thức thực nghiệm tách biệt của điện hóa học. Nó chính là biểu thức Gibbs được viết lại theo đơn vị điện thế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Thương số phản ứng phải dùng hoạt độ** nối từ **Suy ra phương trình Nernst** sang **Phương trình Nernst cho biết chiều biến đổi như thế nào**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thương số phản ứng phải dùng hoạt độ
 
 Với phản ứng:
@@ -105,8 +99,6 @@ Q=\frac{a_C^ca_D^d}{a_A^aa_B^b}
 Chất rắn tinh khiết và chất lỏng tinh khiết có hoạt độ trạng thái chuẩn bằng 1 nên thường không xuất hiện trong biểu thức rút gọn.
 
 Trong dung dịch loãng, người ta thường thay hoạt độ bằng nồng độ chuẩn hóa để tính gần đúng. Tuy nhiên với chất điện ly đậm đặc, lực ion lớn hoặc ion đa hóa trị, sai lệch khỏi điều kiện lý tưởng có thể đáng kể.
-
-> **Nối mạch:** Trong **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Phương trình Nernst cho biết chiều biến đổi như thế nào** nối từ **Thương số phản ứng phải dùng hoạt độ** sang **Pin nồng độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Nernst cho biết chiều biến đổi như thế nào
 
@@ -138,8 +130,6 @@ suy ra:
 
 Đây là cầu nối trực tiếp giữa điện hóa học và cân bằng hóa học.
 
-> **Nối mạch:** Ở chặng này của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Pin nồng độ** nối từ **Phương trình Nernst cho biết chiều biến đổi như thế nào** sang **Ảnh hưởng của pH và chuyển electron ghép proton**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pin nồng độ
 
 Hai bán pin có cùng loại phản ứng điện cực nhưng hoạt độ khác nhau vẫn có thể tạo ra điện áp. Động lực không đến từ việc hai chất khác nhau, mà đến từ xu hướng cân bằng thế hóa học giữa hai phía.
@@ -152,8 +142,6 @@ Cu | Cu2+(hoạt độ thấp) || Cu2+(hoạt độ cao) | Cu
 
 Electron sẽ dịch chuyển theo chiều làm giảm chênh lệch nồng độ. Đây là ví dụ cho thấy **độ dốc (gradient / 기울기) thành phần (composition gradient)** cũng có thể tạo điện thế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Ảnh hưởng của pH và chuyển electron ghép proton** nối từ **Pin nồng độ** sang **Điện cực tham chiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ảnh hưởng của pH và chuyển electron ghép proton
 
 Nếu \(H^+\) tham gia bán phản ứng, điện thế sẽ phụ thuộc pH thông qua phương trình Nernst.
@@ -162,15 +150,11 @@ Nếu một phản ứng có \(m\) proton và \(n\) electron, phần đóng góp
 
 **Chuyển electron ghép proton (proton-coupled electron transfer, PCET)** là cơ chế trung tâm trong quang hợp, hô hấp, tạo hydrogen và nhiều chu trình xúc tác.
 
-> **Nối mạch:** Trong **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, sau nội dung của **Ảnh hưởng của pH và chuyển electron ghép proton**, **Điện cực tham chiếu** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Quá thế — vì sao điện áp thực tế khác điện áp nhiệt động** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Điện cực tham chiếu
 
 Trong thực nghiệm, cần một điện cực có thế ổn định và đã biết để đo điện cực làm việc. Các điện cực tham chiếu thường gặp gồm Ag/AgCl và điện cực calomel bão hòa.
 
 Giá trị đo luôn phụ thuộc thang tham chiếu. Vì vậy khi báo cáo dữ liệu điện hóa, cần nêu rõ điện cực tham chiếu được sử dụng.
-
-> **Nối mạch:** Ở chặng này của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Quá thế — vì sao điện áp thực tế khác điện áp nhiệt động** nối từ **Điện cực tham chiếu** sang **Liên hệ với phương trình Butler–Volmer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quá thế — vì sao điện áp thực tế khác điện áp nhiệt động
 
@@ -186,8 +170,6 @@ Vì vậy điện áp vận hành khi pin phóng điện có thể thấp hơn �
 
 > Nhiệt động lực học cho biết **điện áp thuận nghịch tối thiểu hoặc tối đa có thể đạt**; động học và vận chuyển cho biết **điện áp vận hành thực tế**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Liên hệ với phương trình Butler–Volmer** nối từ **Quá thế — vì sao điện áp thực tế khác điện áp nhiệt động** sang **Vận chuyển khối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ với phương trình Butler–Volmer
 
 Động học điện cực thường được mô tả bằng phương trình Butler–Volmer:
@@ -199,8 +181,6 @@ j=j_0\left[\exp\left(\frac{\alpha nF\eta}{RT}\right)-\exp\left(-\frac{(1-\alpha)
 trong đó \(j\) là mật độ dòng điện, \(j_0\) là mật độ dòng trao đổi và \(\eta\) là quá thế.
 
 Phương trình Nernst mô tả điện thế cân bằng. Butler–Volmer mô tả dòng điện khi hệ bị đẩy ra khỏi cân bằng. Hai phương trình không cạnh tranh với nhau; chúng trả lời hai câu hỏi khác nhau.
-
-> **Nối mạch:** Trong **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Vận chuyển khối** nối từ **Liên hệ với phương trình Butler–Volmer** sang **Điện áp hở mạch và điện áp khi có tải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận chuyển khối
 
@@ -214,8 +194,6 @@ Ba cơ chế vận chuyển chính gồm:
 
 Chất điện ly nền (supporting electrolyte) thường được dùng để giảm đóng góp của sự di chuyển ion của chất phân tích và làm bài toán vận chuyển dễ phân tích hơn.
 
-> **Nối mạch:** Ở chặng này của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Điện áp hở mạch và điện áp khi có tải** nối từ **Vận chuyển khối** sang **Ảnh hưởng của nhiệt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện áp hở mạch và điện áp khi có tải
 
 **Điện áp hở mạch (open-circuit voltage, OCV)** gần giá trị cân bằng nhiệt động nếu pin được để nghỉ đủ lâu.
@@ -228,8 +206,6 @@ V_{terminal}\approx E_{eq}-\eta_{anode}-\eta_{cathode}-IR
 
 Quy ước dấu có thể khác nhau giữa tài liệu, nhưng ý chính là tổn thất vận hành xuất hiện từ động học và vận chuyển.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Ảnh hưởng của nhiệt độ** nối từ **Điện áp hở mạch và điện áp khi có tải** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ảnh hưởng của nhiệt độ
 
 Từ:
@@ -241,8 +217,6 @@ Từ:
 có thể thấy sự phụ thuộc của điện thế cân bằng vào nhiệt độ chứa thông tin về entropy của phản ứng. Trong nhiệt động điện hóa, \(dE/dT\) có thể liên hệ với entropy phản ứng.
 
 Điều này quan trọng với pin vì nhiệt sinh ra không chỉ đến từ tổn thất điện trở mà còn có thành phần nhiệt thuận nghịch liên quan entropy.
-
-> **Nối mạch:** Trong **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Những hiểu lầm thường gặp** nối từ **Ảnh hưởng của nhiệt độ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -261,8 +235,6 @@ Về mặt nghiêm ngặt, phương trình dùng hoạt độ.
 ### “Điện áp pin giảm chỉ vì chất phản ứng cạn dần”
 
 Không. Phân cực, điện trở trong, vận chuyển khối, chuyển pha và nhiệt độ đều có thể đóng góp.
-
-> **Nối mạch:** Ở chặng này của **Điện thế pin và phương trình Nernst — từ năng lượng tự do Gibbs đến điện áp thực tế**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -6,13 +6,9 @@
 
 Các truyền thống Nyāya, Buddhist, Jain, Sāṃkhya, Yoga và Vedānta khác nhau về self, perception, suy luận (inference / 추론), suffering, liberation và reality. Buddhist anattā thách thức self bất biến; Nyāya phát triển lý thuyết nhận thức và suy luận (inference / 추론); Jain anekāntavāda nhấn mạnh tính nhiều mặt của mô tả. Không nên gom chúng thành một “Eastern philosophy” duy nhất.
 
-> **Chuyển mạch:** Trong **Indian, Chinese và toàn cục (global / 전역) Philosophies**, **Chinese traditions** tiếp nhận điểm tựa từ **Indian traditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chinese traditions
 
 Confucianism tập trung cultivation, ritual, quan hệ (relation / 관계) và quản trị (governance / 거버넌스); Daoism nhấn mạnh spontaneity, non-coercive hành động (action / 동작) và harmony; Mohism tranh luận impartial care và công khai (public / 공개) benefit; Legalist thought phân tích institution, quy tắc (rule / 규칙) và incentive. Các dòng này không chỉ là self-help mà còn là political and epistemic theories.
-
-> **Chuyển mạch:** Ở chặng này của **Indian, Chinese và toàn cục (global / 전역) Philosophies**, **Toàn cục (global / 전역) comparison** tiếp nhận điểm tựa từ **Chinese traditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Toàn cục (global / 전역) comparison
 

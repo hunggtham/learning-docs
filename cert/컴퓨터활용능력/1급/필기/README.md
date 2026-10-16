@@ -14,8 +14,8 @@ Bài thi lý thuyết 1급 được tổ chức theo hình thức trắc nghiệ
 | **Số lượng câu hỏi** | 60 câu trắc nghiệm (mỗi môn 20 câu, 4 lựa chọn) |
 | **Thời gian làm bài** | 60 phút (đồng hồ đếm ngược liên tục cho cả 3 môn, thí sinh tự do chuyển đổi giữa các câu hỏi) |
 | **Thang điểm** | 100 điểm / môn (mỗi câu đúng tương ứng 5 điểm) |
-| **Tiêu chuẩn điểm đỗ** | • Từng môn đạt từ **40 điểm** trở lên (tránh điểm liệt — 과락)<br>• Điểm trung bình cả 3 môn đạt từ **60 điểm** trở lên (tổng điểm $\ge 180$) |
-| **Điều kiện số câu đúng** | • Mỗi môn đúng tối thiểu **8 / 20 câu**<br>• Toàn bài đúng tối thiểu **36 / 60 câu** |
+| **Tiêu chuẩn điểm đỗ** | • Từng môn đạt từ **40 điểm** trở lên (tránh điểm liệt — 과락); • Điểm trung bình cả 3 môn đạt từ **60 điểm** trở lên (tổng điểm $\ge 180$) |
+| **Điều kiện số câu đúng** | • Mỗi môn đúng tối thiểu **8 / 20 câu**; • Toàn bài đúng tối thiểu **36 / 60 câu** |
 
 ### Cơ chế điểm liệt (과락)
 

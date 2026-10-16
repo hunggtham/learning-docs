@@ -21,8 +21,6 @@ Năng lượng tự do của trạng thái đầu và cuối không đổi. Th�
 
 Chất xúc tác làm tăng cả tốc độ thuận và tốc độ nghịch theo nguyên lý thuận nghịch vi mô, nên hệ đạt cân bằng nhanh hơn nhưng thành phần cân bằng không bị chất xúc tác dịch chuyển.
 
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Chu trình xúc tác — chất xúc tác là một mạng phản ứng nhỏ** nối từ **Chất xúc tác thực sự làm gì?** sang **Tốc độ quay vòng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chu trình xúc tác — chất xúc tác là một mạng phản ứng nhỏ
 
 Một **chu trình xúc tác (catalytic cycle)** thường gồm nhiều bước cơ bản:
@@ -38,8 +36,6 @@ C–B → C + B
 Tuy nhiên trạng thái chiếm ưu thế của chất xúc tác trong thực nghiệm có thể không phải dạng `C` được vẽ ở đầu sơ đồ. Dạng xuất hiện nhiều nhất gọi là **trạng thái nghỉ (resting state)**.
 
 Điều này quan trọng vì nồng độ của trạng thái nghỉ có thể lớn nhưng bước chứa nó chưa chắc là bước chậm nhất theo nghĩa cơ chế.
-
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Tốc độ quay vòng** nối từ **Chu trình xúc tác — chất xúc tác là một mạng phản ứng nhỏ** sang **Bước quyết định tốc độ không phải lúc nào cũng là một bước duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tốc độ quay vòng
 
@@ -63,8 +59,6 @@ cho biết tốc độ tạo sản phẩm trên mỗi lượng catalyst.
 
 TON phản ánh tuổi thọ tổng, còn TOF phản ánh hoạt tính theo thời gian. Một catalyst có TOF cao nhưng nhanh chết vẫn có TON thấp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Bước quyết định tốc độ không phải lúc nào cũng là một bước duy nhất** nối từ **Tốc độ quay vòng** sang **Chu trình năng lượng tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bước quyết định tốc độ không phải lúc nào cũng là một bước duy nhất
 
 Trong sách cơ bản thường nhắc **bước quyết định tốc độ (rate-determining step)** như bước chậm nhất. Khái niệm này hữu ích nhưng đôi khi quá đơn giản.
@@ -76,8 +70,6 @@ Một khái niệm sâu hơn là **mức độ kiểm soát tốc độ (degree 
 Điều này hữu ích khi thiết kế catalyst vì nó trả lời câu hỏi thực tế hơn:
 
 > nên ổn định trạng thái nào để tốc độ toàn chu trình tăng nhiều nhất?
-
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Chu trình năng lượng tự do** nối từ **Bước quyết định tốc độ không phải lúc nào cũng là một bước duy nhất** sang **Trạng thái trung gian quá bền có thể làm catalyst chậm đi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chu trình năng lượng tự do
 
@@ -97,8 +89,6 @@ Vì hàm mũ phụ thuộc \(\Delta G^\ddagger\), giảm vài kJ/mol ở hàng r
 
 Đây là lý do tối ưu hóa catalyst thường tập trung vào **năng lượng trạng thái chuyển tiếp**, không chỉ năng lượng liên kết của chất trung gian.
 
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Trạng thái trung gian quá bền có thể làm catalyst chậm đi** nối từ **Chu trình năng lượng tự do** sang **Xúc tác đồng thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái trung gian quá bền có thể làm catalyst chậm đi
 
 Ổn định chất trung gian không phải lúc nào cũng tốt.
@@ -108,8 +98,6 @@ Nếu catalyst gắn quá mạnh với một chất trung gian, hố năng lư�
 Đây là trực giác phía sau nguyên lý Sabatier:
 
 > catalyst tốt thường phải liên kết “vừa đủ” — không quá yếu để không hoạt hóa được, cũng không quá mạnh để sản phẩm hoặc trung gian bị giữ lại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Xúc tác đồng thể** nối từ **Trạng thái trung gian quá bền có thể làm catalyst chậm đi** sang **Xúc tác acid–cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác đồng thể
 
@@ -128,8 +116,6 @@ Các bước điển hình trong organometallic catalysis gồm:
 
 Không phải mọi chu trình đều có tất cả các bước này, nhưng chúng là “từ vựng cơ chế” quan trọng.
 
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Xúc tác acid–cơ sở (base / 기반)** nối từ **Xúc tác đồng thể** sang **Xúc tác dị thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xúc tác acid–cơ sở (base / 기반)
 
 Xúc tác acid có thể proton hóa một nhóm chức và làm nó trở thành electrophile mạnh hơn hoặc nhóm rời tốt hơn.
@@ -141,8 +127,6 @@ Với **xúc tác acid–cơ sở (base / 기반) tổng quát (general acid/bas
 Với **xúc tác acid–cơ sở (base / 기반) riêng (specific acid/base catalysis)**, tốc độ chủ yếu phụ thuộc nồng độ `H3O+` hoặc `OH−` sau khi cân bằng proton hóa nhanh đã được thiết lập.
 
 Phân biệt này rất quan trọng trong cơ chế enzyme và động học dung dịch.
-
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Xúc tác dị thể** nối từ **Xúc tác acid–cơ sở (base / 기반)** sang **Hấp phụ Langmuir**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác dị thể
 
@@ -163,8 +147,6 @@ vận chuyển khối từ pha lớn
 Bất kỳ bước nào cũng có thể trở thành giới hạn tốc độ trong điều kiện phù hợp.
 
 Do đó tốc độ đo được không phải lúc nào cũng là tốc độ phản ứng hóa học nội tại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Hấp phụ Langmuir** nối từ **Xúc tác dị thể** sang **Cơ chế Langmuir–Hinshelwood và Eley–Rideal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hấp phụ Langmuir
 
@@ -192,8 +174,6 @@ Trong đó \(\theta\) là phần site bị chiếm.
 
 Bề mặt bị bão hòa. Khi đó tăng áp suất chất phản ứng có thể không còn tăng tốc độ nhiều nữa.
 
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Hấp phụ Langmuir** đặt đầu vào cho **Cơ chế Langmuir–Hinshelwood và Eley–Rideal**, rồi **Nguyên lý Sabatier và đồ thị núi lửa** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Cơ chế Langmuir–Hinshelwood và Eley–Rideal
 
 Trong cơ chế **Langmuir–Hinshelwood**, cả hai chất phản ứng đều hấp phụ rồi phản ứng trên bề mặt.
@@ -201,8 +181,6 @@ Trong cơ chế **Langmuir–Hinshelwood**, cả hai chất phản ứng đều 
 Trong cơ chế **Eley–Rideal**, một chất ở pha khí/lỏng phản ứng trực tiếp với species đã hấp phụ.
 
 Hai mô hình tạo phương trình tốc độ khác nhau. Vì vậy dependence của tốc độ lên áp suất/nồng độ có thể giúp phân biệt cơ chế bề mặt.
-
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Cơ chế Langmuir–Hinshelwood và Eley–Rideal** đặt đầu vào cho **Nguyên lý Sabatier và đồ thị núi lửa**, rồi **Scaling relations — giới hạn của việc tối ưu một trung gian** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nguyên lý Sabatier và đồ thị núi lửa
 
@@ -213,8 +191,6 @@ Chất phản ứng phải bám đủ mạnh để được hoạt hóa nhưng k
 Phía trái của “núi” có thể là vùng liên kết quá yếu; phía phải là vùng liên kết quá mạnh. Vùng giữa cho cân bằng tối ưu giữa hoạt hóa và giải hấp.
 
 Đây là ví dụ cho thiết kế catalyst dựa trên **descriptor vật lý** thay vì thử ngẫu nhiên.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Nguyên lý Sabatier và đồ thị núi lửa** đặt tiêu chí; **Scaling relations — giới hạn của việc tối ưu một trung gian** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Truyền khối và phản ứng nội tại** mở rộng hệ quả.
 
 ## Scaling relations — giới hạn của việc tối ưu một trung gian
 
@@ -230,8 +206,6 @@ Một hướng thiết kế hiện đại là phá các quan hệ này bằng:
 - catalyst phân tử;
 - điện trường hoặc môi trường đặc biệt.
 
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Scaling relations — giới hạn của việc tối ưu một trung gian** đặt tiêu chí; **Truyền khối và phản ứng nội tại** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Hệ số hiệu dụng** mở rộng hệ quả.
-
 ## Truyền khối và phản ứng nội tại
 
 Nếu chất phản ứng tới bề mặt chậm hơn phản ứng hóa học, tốc độ đo được bị giới hạn bởi truyền khối.
@@ -244,8 +218,6 @@ Khi phản ứng rất nhanh so với khuếch tán, phần bên trong hạt kh�
 
 Điều này giải thích vì sao catalyst có hoạt tính hóa học cao hơn chưa chắc tạo reactor nhanh hơn nếu vận chuyển (transport / 전송) trở thành nút thắt.
 
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Hệ số hiệu dụng** nối từ **Truyền khối và phản ứng nội tại** sang **Xúc tác enzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hệ số hiệu dụng
 
 **Hệ số hiệu dụng (effectiveness factor)**:
@@ -257,8 +229,6 @@ Khi phản ứng rất nhanh so với khuếch tán, phần bên trong hạt kh�
 Nếu \(\eta<1\), khuếch tán nội hạt đang làm giảm mức sử dụng catalyst.
 
 Đây là cầu nối giữa hóa động học và kỹ thuật phản ứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Xúc tác enzyme** nối từ **Hệ số hiệu dụng** sang **Hiệu quả xúc tác enzyme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác enzyme
 
@@ -273,8 +243,6 @@ v=\frac{V_{max}[S]}{K_M+[S]}
 \]
 
 Ở `[S]` thấp, tốc độ gần tỉ lệ với `[S]`. Ở `[S]` cao, enzyme tiến tới bão hòa và tốc độ gần `V_max`.
-
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Hiệu quả xúc tác enzyme** nối từ **Xúc tác enzyme** sang **Độ chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu quả xúc tác enzyme
 
@@ -293,8 +261,6 @@ Tỉ số:
 được dùng như thước đo hiệu quả xúc tác trong vùng dilute substrate.
 
 Một số enzyme tiến gần giới hạn khuếch tán, nghĩa là gần như mỗi lần substrate gặp enzyme đúng cách đều dẫn đến phản ứng.
-
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Độ chọn lọc** nối từ **Hiệu quả xúc tác enzyme** sang **Ngộ độc xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chọn lọc
 
@@ -316,8 +282,6 @@ Chênh lệch năng lượng nhỏ có thể tạo chọn lọc lớn.
 
 **Xúc tác bất đối xứng (asymmetric catalysis)** tận dụng điều này để ưu tiên một enantiomer bằng môi trường trạng thái chuyển tiếp đối quang.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Ngộ độc xúc tác** nối từ **Độ chọn lọc** sang **Suy giảm hoạt tính xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngộ độc xúc tác
 
 Một impurity hấp phụ mạnh vào site hoạt động có thể làm giảm mạnh tốc độ dù nồng độ rất thấp.
@@ -325,8 +289,6 @@ Một impurity hấp phụ mạnh vào site hoạt động có thể làm giảm
 Ví dụ sulfur có thể đầu độc nhiều catalyst kim loại vì liên kết mạnh với bề mặt.
 
 Ngộ độc khác với **ức chế thuận nghịch** nếu species có thể rời đi dễ dàng. Trong catalyst công nghiệp, phân biệt các cơ chế mất hoạt tính giúp chọn chiến lược tái sinh.
-
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Suy giảm hoạt tính xúc tác** nối từ **Ngộ độc xúc tác** sang **Một số ví dụ công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy giảm hoạt tính xúc tác
 
@@ -342,8 +304,6 @@ Các cơ chế chính gồm:
 
 Hoạt tính ban đầu cao không đủ; tuổi thọ và khả năng tái sinh quyết định hiệu quả thực tế.
 
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Suy giảm hoạt tính xúc tác** nêu quy tắc; **Một số ví dụ công nghiệp** thử quy tắc trong tình huống, rồi **Xúc tác điện hóa** mở rộng hệ quả.
-
 ## Một số ví dụ công nghiệp
 
 Quá trình Haber–Bosch dùng catalyst nền sắt để tăng tốc hoạt hóa `N₂` và hydro hóa các species bề mặt.
@@ -353,8 +313,6 @@ Bộ chuyển đổi xúc tác trên ô tô dùng hệ Pt/Pd/Rh để thúc đ�
 Chất xúc tác polymer hóa có thể kiểm soát sự phát triển chuỗi, khối lượng phân tử và cấu hình lập thể của polymer.
 
 Hydrogenation catalyst dùng kim loại như Ni, Pd hoặc Pt để hoạt hóa `H₂` và liên kết không no.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Một số ví dụ công nghiệp** nêu quy tắc; **Xúc tác điện hóa** thử quy tắc trong tình huống, rồi **Xúc tác quang** mở rộng hệ quả.
 
 ## Xúc tác điện hóa
 
@@ -368,8 +326,6 @@ Trong điện xúc tác, tốc độ phản ứng phụ thuộc đồng thời:
 - vận chuyển khối.
 
 Ví dụ phản ứng khử oxygen trong pin nhiên liệu không thể được hiểu chỉ bằng năng lượng liên kết O–metal; thế điện hóa và proton transfer cũng tham gia.
-
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Xúc tác quang** nối từ **Xúc tác điện hóa** sang **Thiết kế chất xúc tác bằng tính toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác quang
 
@@ -385,8 +341,6 @@ Một catalyst quang tốt cần đồng thời:
 
 Đây là giao điểm giữa quang hóa, vật liệu và xúc tác bề mặt.
 
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Thiết kế chất xúc tác bằng tính toán** nối từ **Xúc tác quang** sang **Từ cơ chế tới thiết kế catalyst**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thiết kế chất xúc tác bằng tính toán
 
 **Lý thuyết phiếm hàm mật độ (density functional theory, DFT)** có thể ước lượng:
@@ -399,8 +353,6 @@ Một catalyst quang tốt cần đồng thời:
 Học máy có thể xây mô hình thay thế để sàng lọc nhanh hàng nghìn thành phần hoặc bề mặt trước khi làm tính toán chính xác hơn.
 
 Tuy nhiên dự đoán catalyst cần tránh một lỗi quan trọng: tối ưu một descriptor đơn lẻ trong khi catalyst thật còn chịu ảnh hưởng của ổn định pha, vận chuyển (transport / 전송), solvent, điện trường và suy giảm hoạt tính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Thiết kế chất xúc tác bằng tính toán** đặt đầu vào cho **Từ cơ chế tới thiết kế catalyst**, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Từ cơ chế tới thiết kế catalyst
 
@@ -416,8 +368,6 @@ xác định mạng phản ứng
 ```
 
 Đây là sự khác biệt giữa “thử catalyst” và **thiết kế catalyst dựa trên cơ chế**.
-
-> **Nối mạch:** Trong **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Từ cơ chế tới thiết kế catalyst** đặt đầu vào cho **Các hiểu lầm thường gặp**, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -444,8 +394,6 @@ Không. Liên kết quá mạnh có thể làm intermediate hoặc sản phẩm 
 ### “Hoạt tính cao là đủ để catalyst tốt”
 
 Không. Độ chọn lọc, tuổi thọ, khả năng tái sinh, chi phí và vận chuyển (transport / 전송) đều quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Xúc tác — thay đổi con đường phản ứng mà không đổi cân bằng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

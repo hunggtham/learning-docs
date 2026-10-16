@@ -10,15 +10,11 @@ Dữ liệu (data / 데이터) minimization hỏi: để cung cấp năng lực 
 
 Minimization nên diễn ra từ đầu vào (input / 입력) ranh giới (boundary / 경계). Nếu trường dữ liệu (field / 필드) không cần thiết, tốt hơn không thu thập thay vì thu thập rồi hứa không dùng.
 
-> **Nối mạch:** **Dữ liệu (data / 데이터) minimization** đã nêu tiêu chí phân biệt, còn **Purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Retention là vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Purpose limitation
 
 Cùng một dữ liệu có thể phù hợp cho mục đích A nhưng không mặc nhiên phù hợp cho B. kỹ thuật (engineering / 엔지니어링) cần gắn luồng dữ liệu (data flow / 데이터 흐름) với declared purpose và authorization ngữ cảnh (context / 맥락) thay vì coi mọi nội bộ (internal / 내부) dữ liệu (data / 데이터) là tài nguyên dùng tự do.
 
 Điều này ảnh hưởng sự kiện (event / 이벤트) bus, analytics lake và tính năng (feature / 기능) kỹ thuật (engineering / 엔지니어링): bản sao (copy / 복사) dữ liệu (data / 데이터) sang hệ thống khác tạo thêm processing purpose và retention ranh giới (boundary / 경계) cần quản lý.
-
-> **Nối mạch:** **Purpose limitation** đã nêu tiêu chí phân biệt, còn **Retention là vòng đời (lifecycle / 생명주기)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **TTL và scheduled deletion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Retention là vòng đời (lifecycle / 생명주기)
 
@@ -26,35 +22,25 @@ Cùng một dữ liệu có thể phù hợp cho mục đích A nhưng không m�
 
 Một row bị delete khỏi primary không có nghĩa mọi derived bản sao (copy / 복사) biến mất ngay.
 
-> **Nối mạch:** **Retention là vòng đời (lifecycle / 생명주기)** đặt đầu vào cho **TTL và scheduled deletion**, rồi **Logs là nguồn rò rỉ phổ biến** mở rộng hệ quả.
-
 ## TTL và scheduled deletion
 
 TTL ở lưu trữ (storage / 저장소) tầng (layer / 계층) hữu ích nhưng phải hiểu guarantee: deletion có diễn ra đúng thời điểm hay eventual? Backup immutable có chính sách (policy / 정책) expiry riêng không? tìm kiếm (search / 검색) chỉ mục (index / 인덱스) có nhận delete sự kiện (event / 이벤트) không?
 
 Retention SLO có thể định nghĩa khoảng thời gian tối đa từ eligibility tới deletion hoàn tất ở các active các hệ thống (systems / 시스템들).
 
-> **Nối mạch:** **TTL và scheduled deletion** đặt vấn đề; **Logs là nguồn rò rỉ phổ biến** kiểm tra bằng chứng, rồi **Derived dữ liệu (data / 데이터)** mở rộng hệ quả.
-
 ## Logs là nguồn rò rỉ phổ biến
 
-Ứng dụng (application / 애플리케이션) có thể cẩn thận với cơ sở dữ liệu (database / 데이터베이스) nhưng vô tình log đơn vị từ (token / 토큰), email, yêu cầu (request / 요청) body hoặc identifier nhạy cảm. Log thường được replicate sang nhiều khả năng quan sát (observability / 관측 가능성) các hệ thống (systems / 시스템들) và có retention dài.
+Ứng dụng (application / 애플리케이션) có thể cẩn thận với cơ sở dữ liệu (database / 데이터베이스) nhưng vô tình log token (토큰), email, yêu cầu (request / 요청) body hoặc identifier nhạy cảm. Log thường được replicate sang nhiều khả năng quan sát (observability / 관측 가능성) các hệ thống (systems / 시스템들) và có retention dài.
 
 Structured logging nên có allowlist/redaction chính sách (policy / 정책); “log tất cả rồi filter sau” tạo blast radius lớn.
-
-> **Nối mạch:** **Logs là nguồn rò rỉ phổ biến** đặt vấn đề; **Derived dữ liệu (data / 데이터)** kiểm tra bằng chứng, rồi **Kiểm soát truy cập (access control / 접근 제어) theo purpose** mở rộng hệ quả.
 
 ## Derived dữ liệu (data / 데이터)
 
 Nếu raw dữ liệu (data / 데이터) bị xóa, aggregate/mô hình (model / 모델) tính năng (feature / 기능) có cần xóa không phụ thuộc khả năng liên kết lại cá nhân và chính sách (policy / 정책)/legal ngữ cảnh (context / 맥락). kỹ thuật (engineering / 엔지니어링) cần lineage để biết sản phẩm tạo ra (artifact / 산출물) nào được tạo từ nguồn nào thay vì tranh luận sau sự cố mà không có bằng chứng (evidence / 증거).
 
-> **Nối mạch:** **Derived dữ liệu (data / 데이터)** đặt vấn đề; **Kiểm soát truy cập (access control / 접근 제어) theo purpose** kiểm tra bằng chứng, rồi **Deletion workflow phải idempotent** mở rộng hệ quả.
-
 ## Kiểm soát truy cập (access control / 접근 제어) theo purpose
 
 RBAC chỉ nói role nào truy cập tài nguyên (resource / 자원); hệ thống phức tạp có thể cần attribute/ngữ cảnh (context / 맥락) để giới hạn theo tenant, workflow hoặc approved purpose. Nhưng chính sách (policy / 정책) càng tinh vi càng cần auditability và kiểm thử (test / 테스트), nếu không cấu hình (configuration / 구성) độ phức tạp (complexity / 복잡도) tự tạo bảo mật (security / 보안) gap.
-
-> **Nối mạch:** **Kiểm soát truy cập (access control / 접근 제어) theo purpose** đặt đầu vào cho **Deletion workflow phải idempotent**, rồi **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau** mở rộng hệ quả.
 
 ## Deletion workflow phải idempotent
 
@@ -62,13 +48,9 @@ Người dùng (user / 사용자) deletion thường đi qua nhiều services. t
 
 Kiểm tra (audit / 감사) bản ghi (record / 레코드) có thể cần chứng minh deletion tiến trình (process / 프로세스) đã chạy mà không giữ lại chính payload đáng lẽ phải xóa.
 
-> **Nối mạch:** **Deletion workflow phải idempotent** đặt đầu vào cho **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau
 
 Một deletion hàng đợi (queue / 큐) backlog là privacy sự cố (incident / 인시던트) tiềm năng. Retention job thất bại cần alert/SLO giống môi trường vận hành (production / 운영 환경) chuỗi xử lý (pipeline / 파이프라인) khác. Privacy điều khiển (control / 제어) chỉ tồn tại trên giấy nếu không có monitoring và đơn vị sở hữu (owner / 오너).
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Privacy và độ tin cậy (reliability / 신뢰성) liên hệ nhau**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

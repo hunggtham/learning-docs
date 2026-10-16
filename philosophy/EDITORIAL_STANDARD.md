@@ -17,8 +17,6 @@ question / problem
 
 Chapter ngắn vẫn phải có đủ các vai trò này, có thể gộp section nhưng không được bỏ premise và objection.
 
-> **Chuyển mạch:** **1. Cấu trúc tối thiểu của chapter** bảo đảm câu hỏi và phạm vi rõ; **2. Phân loại claim** tách mô tả, nhân quả và chuẩn tắc trước khi **3. bằng chứng và bất định** kiểm tra độ chắc chắn.
-
 ## 2. Phân loại claim
 
 | Loại | Tiêu chí kiểm chứng | Nguồn warrant |
@@ -31,19 +29,13 @@ Chapter ngắn vẫn phải có đủ các vai trò này, có thể gộp sectio
 
 Không dùng bằng chứng (evidence / 증거) empirical để tự động kết luận normative; không dùng trực giác normative để giả làm đo lường (measurement / 측정).
 
-> **Chuyển mạch:** Ở chặng này của **Philosophy — Editorial tiêu chuẩn (standard / 표준)**, **2. Phân loại claim** nêu điều cần giải thích; **3. bằng chứng (evidence / 증거) và bất định (uncertainty / 불확실성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Văn phong và thuật ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. bằng chứng (evidence / 증거) và bất định (uncertainty / 불확실성)
 
 Mỗi chapter cần ghi rõ claim nào là established, hiện tại (current / 현재) lý thuyết (theory / 이론), hypothesis, contested interpretation hoặc historical view. Khi dùng xác suất, nêu prior/cơ sở (base / 기반) tỷ lệ (rate / 비율), kết quả (outcome / 결과), bất định (uncertainty / 불확실성) và quyết định (decision / 결정) threshold; không dùng con số để tạo vẻ chính xác giả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Philosophy — Editorial tiêu chuẩn (standard / 표준)**, **3. bằng chứng (evidence / 증거) và bất định (uncertainty / 불확실성)** nêu điều cần giải thích; **4. Văn phong và thuật ngữ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Văn phong và thuật ngữ
 
 Giải thích chính bằng tiếng Việt, giữ English từ khóa (keyword / 키워드) ở lần xuất hiện đầu tiên. Nêu tên triết gia khi tên đó giúp định vị argument; không biến chapter thành chronology hoặc authority danh sách (list / 목록). Tách mô tả quan điểm khỏi endorsement của repository.
-
-> **Chuyển mạch:** Sau khi thống nhất văn phong và thuật ngữ, **5. quality gate trước merge** kiểm tra claim, nguồn, link và owner bằng bằng chứng cụ thể trước khi hợp nhất.
 
 ## 5. cổng chất lượng (quality gate / 품질 게이트) trước khi merge
 

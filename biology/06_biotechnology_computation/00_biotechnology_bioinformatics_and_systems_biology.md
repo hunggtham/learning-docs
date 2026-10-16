@@ -14,8 +14,6 @@ Hiện đại (modern / 현대적) biotechnology khác ở mức precision: ta c
 
 Nhưng mỗi công cụ (tool / 도구) vẫn dựa cơ chế (mechanism / 메커니즘) tự nhiên: PCR dùng DNA polymerase; restriction enzyme đến từ bacterial defense; CRISPR đến từ microbial immunity.
 
-> **Nối mạch:** Biotechnology begins with measurement/manipulation tools, not only CRISPR; PCR amplifies target DNA, and primer design determines specificity and failure modes.
-
 ## 2. PCR: làm một đoạn DNA trở thành hàng triệu bản sao (copy / 복사)
 
 **Polymerase chuỗi (chain / 사슬) reaction, PCR (중합효소연쇄반응)** cần template DNA, two primers, thermostable DNA polymerase, nucleotide và buffer.
@@ -34,8 +32,6 @@ N_n=N_0 2^n
 
 sau \(n\) cycle. Real efficiency thấp hơn 100% và reaction cuối sẽ plateau.
 
-> **Nối mạch:** **3. Primer tạo độ đặc hiệu (specificity)** nối từ **2. PCR: làm một đoạn DNA trở thành hàng triệu bản sao (copy / 복사)** sang **4. qPCR và quantitative thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Primer tạo độ đặc hiệu (specificity)
 
 PCR không “bản sao (copy / 복사) toàn genome”. Primer xác định ranh giới (boundary / 경계) region được khuếch đại.
@@ -46,8 +42,6 @@ Một mismatch gần 3′ end có thể ảnh hưởng extension mạnh hơn m�
 
 Specificity là nhận dạng phân tử (molecular recognition) vấn đề (problem).
 
-> **Nối mạch:** **4. qPCR và quantitative thinking** nối từ **3. Primer tạo độ đặc hiệu (specificity)** sang **5. RT-PCR: RNA phải được chuyển thành DNA trước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. qPCR và quantitative thinking
 
 **qPCR** đo huỳnh quang (fluorescence) theo cycle để estimate initial template amount.
@@ -56,8 +50,6 @@ Cycle threshold thấp hơn thường gợi ý starting amount cao hơn vì mẫ
 
 Quantification cần tiêu chuẩn (standard / 표준)/normalization và efficiency giả định (assumption / 가정); Ct giá trị (value / 값) không nên so trực tiếp vô điều kiện giữa assay khác nhau.
 
-> **Nối mạch:** **5. RT-PCR: RNA phải được chuyển thành DNA trước** nối từ **4. qPCR và quantitative thinking** sang **6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. RT-PCR: RNA phải được chuyển thành DNA trước
 
 RNA không được tiêu chuẩn (standard / 표준) DNA polymerase PCR bản sao (copy / 복사) trực tiếp. **Reverse transcriptase** tạo complementary DNA (cDNA), sau đó PCR amplify cDNA.
@@ -65,8 +57,6 @@ RNA không được tiêu chuẩn (standard / 표준) DNA polymerase PCR bản s
 Technique này dùng đo transcript hoặc detect RNA virus trong nhiều assay.
 
 Tên “RT-PCR” đôi khi bị dùng lẫn với real-time PCR; ngữ cảnh (context / 맥락) phải rõ.
-
-> **Nối mạch:** **6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và ma trận (matrix / 행렬)** nối từ **5. RT-PCR: RNA phải được chuyển thành DNA trước** sang **7. Restriction enzyme và recombinant DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và ma trận (matrix / 행렬)
 
@@ -78,8 +68,6 @@ Band position được so với DNA ladder để estimate kích thước (size /
 
 Electrophoresis biến kích thước (size / 크기) molecular thành spatial mẫu (pattern / 패턴) nhìn thấy.
 
-> **Nối mạch:** **7. Restriction enzyme và recombinant DNA** nối từ **6. Gel electrophoresis: phân tử (molecule) được tách nhờ charge và ma trận (matrix / 행렬)** sang **8. Transformation và chọn lọc (selection)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Restriction enzyme và recombinant DNA
 
 Restriction enzyme nhận chuỗi (sequence / 시퀀스) đặc hiệu và cắt DNA. DNA ligase nối fragment.
@@ -88,8 +76,6 @@ Plasmid véc-tơ (vector / 벡터) có origin replication, selectable marker và
 
 Recombinant DNA là “assembly” dựa recognition chuỗi (sequence / 시퀀스) và cellular bộ máy sao chép (replication machinery).
 
-> **Nối mạch:** **8. Transformation và chọn lọc (selection)** nối từ **7. Restriction enzyme và recombinant DNA** sang **9. DNA sequencing: từ molecule thành string dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Transformation và chọn lọc (selection)
 
 Không phải bacterial cell nào cũng nhận plasmid. Selectable marker như kháng kháng sinh (antibiotic resistance) trong lab giúp giữ cell mang plasmid trên medium có antibiotic tương ứng.
@@ -97,8 +83,6 @@ Không phải bacterial cell nào cũng nhận plasmid. Selectable marker như k
 Đây là artificial selection ở microbial culture.
 
 Marker lab cần biosafety và thiết kế (design / 설계) phù hợp; concept không đồng nghĩa clinical resistance management.
-
-> **Nối mạch:** **8. Transformation và chọn lọc (selection)** đặt vấn đề; **9. DNA sequencing: từ molecule thành string dữ liệu (data / 데이터)** kiểm tra bằng chứng, rồi **10. Sequencing chuỗi xử lý (pipeline / 파이프라인) cơ bản** mở rộng hệ quả.
 
 ## 9. DNA sequencing: từ molecule thành string dữ liệu (data / 데이터)
 
@@ -109,8 +93,6 @@ Next-generation sequencing song song hóa hàng triệu fragment, tạo massive 
 Long-read nền tảng (platform / 플랫폼) đọc fragment dài hơn, hữu ích cho repeat, structural variant và assembly.
 
 Không nền tảng (platform / 플랫폼) nào “tốt nhất”; choice phụ thuộc read length, độ chính xác (accuracy), thông lượng (throughput / 처리량), chi phí (cost / 비용) và câu hỏi (question).
-
-> **Nối mạch:** **9. DNA sequencing: từ molecule thành string dữ liệu (data / 데이터)** đặt vấn đề; **10. Sequencing chuỗi xử lý (pipeline / 파이프라인) cơ bản** kiểm tra bằng chứng, rồi **11. FASTA và FASTQ** mở rộng hệ quả.
 
 ## 10. Sequencing chuỗi xử lý (pipeline / 파이프라인) cơ bản
 
@@ -131,8 +113,6 @@ biological sample
 
 Mỗi arrow có giả định (assumption / 가정) và nguồn (source / 소스) lỗi (error / 오류). “dữ liệu (data / 데이터) từ máy” chưa phải kết luận sinh học (biological conclusion).
 
-> **Nối mạch:** Sequencing pipeline tạo dữ liệu; FASTA/FASTQ giữ biểu diễn và quality. **Alignment** kiểm tra correspondence giữa sequence.
-
 ## 11. FASTA và FASTQ
 
 FASTA lưu chuỗi (sequence / 시퀀스) với header. FASTQ lưu chuỗi (sequence / 시퀀스) kèm điểm chất lượng (quality score) cho từng cơ sở (base / 기반).
@@ -140,8 +120,6 @@ FASTA lưu chuỗi (sequence / 시퀀스) với header. FASTQ lưu chuỗi (sequ
 Biểu diễn (representation / 표현) này quan trọng vì bioinformatics làm việc trên tệp (file / 파일)/cấu trúc dữ liệu (data structure / 자료구조), không trực tiếp trên tube DNA.
 
 Biology chuyển thành computer-readable symbols.
-
-> **Nối mạch:** FASTA/FASTQ cung cấp sequence và quality; alignment tìm correspondence. **BLAST** kiểm tra similarity nhưng không tự chứng minh function.
 
 ## 12. Căn chỉnh (alignment): tìm correspondence giữa chuỗi (sequence / 시퀀스)
 
@@ -153,8 +131,6 @@ Thời gian (time / 시간) độ phức tạp (complexity / 복잡도) của ch
 
 Đây là nơi khoa học máy tính (computer science / 컴퓨터 과학) giải biological quy mô (scale / 규모) bài toán (problem / 문제).
 
-> **Nối mạch:** Alignment và BLAST cung cấp correspondence/similarity; **Genome assembly** kiểm tra bài toán reconstruction và giới hạn suy luận.
-
 ## 13. BLAST: similarity tìm kiếm (search / 검색) không phải proof of hàm (function / 함수)
 
 BLAST tìm cục bộ (local / 로컬) chuỗi (sequence / 시퀀스) similarity nhanh bằng heuristic.
@@ -162,8 +138,6 @@ BLAST tìm cục bộ (local / 로컬) chuỗi (sequence / 시퀀스) similarity
 High similarity có thể gợi ý homology/chức năng (function), nhưng hàm (function / 함수) annotation cần ngữ cảnh (context / 맥락), lĩnh vực (domain / 도메인), phylogeny và thí nghiệm (experiment).
 
 “BLAST hit = cùng hàm (function / 함수)” là shortcut nguy hiểm.
-
-> **Nối mạch:** **14. Genome assembly như bài toán reconstruction** nối từ **13. BLAST: similarity tìm kiếm (search / 검색) không phải proof of hàm (function / 함수)** sang **15. Gọi biến thể (variant calling)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Genome assembly như bài toán reconstruction
 
@@ -177,8 +151,6 @@ Long read giúp cầu nối (bridge / 브리지) repeat nhưng cũng có lỗi (
 
 Lý thuyết đồ thị (graph theory) trực tiếp trở thành genomics công cụ (tool / 도구).
 
-> **Nối mạch:** **15. Gọi biến thể (variant calling)** nối từ **14. Genome assembly như bài toán reconstruction** sang **16. RNA-seq**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Gọi biến thể (variant calling)
 
 Alignment read với tham chiếu (reference / 참조) cho phép detect SNV, indel và structural variant.
@@ -186,8 +158,6 @@ Alignment read với tham chiếu (reference / 참조) cho phép detect SNV, ind
 Nhưng sequencing lỗi (error / 오류), ánh xạ (mapping / 매핑) ambiguity, coverage thấp và mẫu (sample / 표본) mixture có thể tạo false lời gọi (call / 호출).
 
 Variant caller dùng statistical/probabilistic mô hình (model / 모델) để phân biệt tín hiệu (signal / 신호) khỏi noise.
-
-> **Nối mạch:** **16. RNA-seq** nối từ **15. Gọi biến thể (variant calling)** sang **17. Single-tế bào (cell) sequencing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. RNA-seq
 
@@ -197,8 +167,6 @@ Biểu hiện khác biệt (differential expression) phân tích (analysis / 분
 
 P-value nhỏ không tự có biological importance; tác động (effect / 효과) kích thước (size / 크기) và ngữ cảnh (context / 맥락) cần đi cùng.
 
-> **Nối mạch:** **17. Single-tế bào (cell) sequencing** nối từ **16. RNA-seq** sang **18. Dimension reduction**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Single-tế bào (cell) sequencing
 
 Single-cell RNA-seq gắn barcode theo tế bào, cho phép profile thousands cell.
@@ -206,8 +174,6 @@ Single-cell RNA-seq gắn barcode theo tế bào, cho phép profile thousands ce
 Chuỗi xử lý (pipeline / 파이프라인) thường gồm filtering, normalization, giảm chiều dữ liệu (dimensionality reduction), clustering, marker phân tích (analysis / 분석) và trajectory suy luận (inference / 추론).
 
 Mỗi bước transform dữ liệu (data / 데이터); cluster là computational construct cần biological kiểm tra hợp lệ (validation / 검증).
-
-> **Nối mạch:** **18. Dimension reduction** nối từ **17. Single-tế bào (cell) sequencing** sang **19. CRISPR-Cas genome editing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Dimension reduction
 
@@ -217,8 +183,6 @@ Khoảng cách trên UMAP/t-SNE không nên đọc quá literal như vật lý (
 
 Visualization là mô hình (model / 모델), không phải raw reality.
 
-> **Nối mạch:** **19. CRISPR-Cas genome editing** nối từ **18. Dimension reduction** sang **20. cơ sở (base / 기반) editing và prime editing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. CRISPR-Cas genome editing
 
 Guide RNA đưa Cas nuclease tới mục tiêu (target / 대상) chuỗi (sequence / 시퀀스) có complementarity và PAM phù hợp. Cas tạo cut; cell repair qua NHEJ hoặc HDR có thể tạo edit.
@@ -226,8 +190,6 @@ Guide RNA đưa Cas nuclease tới mục tiêu (target / 대상) chuỗi (sequen
 NHEJ thường gây indel, hữu ích knockout. HDR có thể đưa template-defined thay đổi (change / 변경) nhưng efficiency/ngữ cảnh (context / 맥락) khác.
 
 CRISPR không “viết DNA tùy ý không giới hạn”; delivery, off-target, repair biology và loại tế bào (cell type) là ràng buộc (constraint / 제약조건).
-
-> **Nối mạch:** **20. cơ sở (base / 기반) editing và prime editing** nối từ **19. CRISPR-Cas genome editing** sang **21. Functional genomics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. cơ sở (base / 기반) editing và prime editing
 
@@ -237,8 +199,6 @@ Prime editing dùng reverse-transcriptase-based cơ chế (mechanism / 메커니
 
 Mỗi công cụ (tool / 도구) có edit cửa sổ (window / 윈도우), byproduct và delivery ràng buộc (constraint / 제약조건) riêng.
 
-> **Nối mạch:** **21. Functional genomics** nối từ **20. cơ sở (base / 기반) editing và prime editing** sang **22. Sinh học tổng hợp (synthetic biology)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Functional genomics
 
 CRISPR screen, RNAi hoặc overexpression screen perturb thousands gene rồi đo kiểu hình (phenotype).
@@ -246,8 +206,6 @@ CRISPR screen, RNAi hoặc overexpression screen perturb thousands gene rồi đ
 Observation genomics tìm association; functional genomics cố tạo nhân quả (causal / 인과적) bằng chứng (evidence / 증거) bằng perturbation.
 
 Kết hợp screening + giải trình tự (sequencing) biến cell population thành high-throughput experiment.
-
-> **Nối mạch:** Synthetic biology tổng hợp kết quả từ functional genomics; **genetic circuit** tiếp theo biến insight thành thiết kế.
 
 ## 22. Sinh học tổng hợp (synthetic biology)
 
@@ -257,8 +215,6 @@ Promoter, ribosome-binding site, regulator và sensor có thể xem như mô-đu
 
 Kỹ thuật (engineering / 엔지니어링) life cần hiểu noise, evolution và host physiology.
 
-> **Nối mạch:** Genetic circuit đưa synthetic biology vào control logic; **metabolic engineering** kiểm tra khi thiết kế tác động vào flux.
-
 ## 23. Mạch di truyền
 
 Một toggle switch có thể dùng two repressors ức chế nhau để tạo tính lưỡng ổn (bistability). Oscillator dùng delayed phản hồi âm (negative feedback).
@@ -267,8 +223,6 @@ Circuit hành vi (behavior / 동작) xuất hiện từ mạng lưới (network)
 
 Đây là sinh học hệ thống theo hướng thiết kế (design / 설계).
 
-> **Nối mạch:** **24. Kỹ thuật chuyển hóa (metabolic engineering)** nối từ **23. Mạch di truyền** sang **25. Sinh học hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Kỹ thuật chuyển hóa (metabolic engineering)
 
 Ta có thể redirect flux để microbe tạo drug, enzym (enzyme), biofuel hoặc chemical.
@@ -276,8 +230,6 @@ Ta có thể redirect flux để microbe tạo drug, enzym (enzyme), biofuel ho�
 Nhưng tăng một enzyme chưa chắc tăng sản phẩm (product / 제품) nếu pathway bottleneck chuyển sang step khác hoặc cofactor thiếu.
 
 Flux balance và systems-level mô hình (model / 모델) giúp identify bottleneck.
-
-> **Nối mạch:** **25. Sinh học hệ thống** nối từ **24. Kỹ thuật chuyển hóa (metabolic engineering)** sang **26. Mạng lưới sinh học (biology)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Sinh học hệ thống
 
@@ -293,8 +245,6 @@ Mỗi \(x_i\) là concentration/hoạt động (activity); hàm (function / 함�
 
 Parameter fitting và phân tích độ nhạy (sensitivity analysis) giúp tìm điều khiển (control / 제어) điểm (point / 지점).
 
-> **Nối mạch:** **26. Mạng lưới sinh học (biology)** nối từ **25. Sinh học hệ thống** sang **27. Học máy (machine learning) trong Sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Mạng lưới sinh học (biology)
 
 Đồ thị (graph / 그래프) biểu diễn (representation / 표현):
@@ -306,8 +256,6 @@ Degree, centrality, motif và quần xã (community) cấu trúc (structure / �
 
 Nhưng mạng (network / 네트워크) cơ sở dữ liệu (database / 데이터베이스) có sai lệch (bias); high-degree nút (node / 노드) đôi khi vì được nghiên cứu nhiều.
 
-> **Nối mạch:** **27. Học máy (machine learning) trong Sinh học** nối từ **26. Mạng lưới sinh học (biology)** sang **28. Supervised và unsupervised học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Học máy (machine learning) trong Sinh học
 
 ML có thể classify loại tế bào, predict cấu trúc protein (protein structure)/đặc tính (property), interpret microscopy, prioritize variant hoặc mô hình (model / 모델) trình tự.
@@ -315,8 +263,6 @@ ML có thể classify loại tế bào, predict cấu trúc protein (protein str
 Nhưng mô hình (model / 모델) hiệu năng (performance / 성능) phụ thuộc huấn luyện (training / 학습) phân phối (distribution / 분포). Dataset leakage, lớp (class / 클래스) imbalance và quần thể (population) độ lệch (bias / 편향) có thể làm chỉ số (metric / 지표) đẹp nhưng generalization kém.
 
 Biological ML cần bên ngoài (external / 외부) kiểm tra hợp lệ (validation / 검증) và nhân quả (causal / 인과적) caution.
-
-> **Nối mạch:** **28. Supervised và unsupervised học tập (learning / 학습)** nối từ **27. Học máy (machine learning) trong Sinh học** sang **29. Cấu trúc protein prediction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Supervised và unsupervised học tập (learning / 학습)
 
@@ -326,8 +272,6 @@ Clustering biểu hiện gen (gene expression) là unsupervised-ish discovery; d
 
 Không nên gọi mọi statistics trên biological dữ liệu (data / 데이터) là “AI”. công cụ (tool / 도구) phải phù hợp question.
 
-> **Nối mạch:** **29. Cấu trúc protein prediction** nối từ **28. Supervised và unsupervised học tập (learning / 학습)** sang **30. cơ sở dữ liệu (database / 데이터베이스) và reproducibility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Cấu trúc protein prediction
 
 Protein chuỗi (sequence / 시퀀스) chứa ràng buộc (constraint / 제약조건) shape nhưng folding chịu physics/bối cảnh. hiện đại (modern / 현대적) deep-learning mô hình (model / 모델) có thể predict cấu trúc (structure / 구조) rất tốt ở nhiều trường hợp (case / 사례).
@@ -335,8 +279,6 @@ Protein chuỗi (sequence / 시퀀스) chứa ràng buộc (constraint / 제약�
 Tuy nhiên cấu trúc (structure / 구조) prediction không tự cho chức năng, động lực học, tương tác (interaction / 상호작용) hay tác động (effect / 효과) mutation đầy đủ.
 
 Experimental structural biology vẫn quan trọng.
-
-> **Nối mạch:** **29. Cấu trúc protein prediction** đặt vấn đề; **30. cơ sở dữ liệu (database / 데이터베이스) và reproducibility** kiểm tra bằng chứng, rồi **31. Causality: omics correlation không đủ** mở rộng hệ quả.
 
 ## 30. cơ sở dữ liệu (database / 데이터베이스) và reproducibility
 
@@ -346,8 +288,6 @@ Reproducible phân tích (analysis / 분석) cần phiên bản (version / 버�
 
 Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) trở thành một phần scientific rigor.
 
-> **Nối mạch:** **30. cơ sở dữ liệu (database / 데이터베이스) và reproducibility** đặt vấn đề; **31. Causality: omics correlation không đủ** kiểm tra bằng chứng, rồi **32. Ethics và quản trị (governance / 거버넌스)** mở rộng hệ quả.
-
 ## 31. Causality: omics correlation không đủ
 
 Nếu gene X expression cao ở bệnh (disease), có thể X gây disease, disease làm X tăng hoặc third factor làm cả hai.
@@ -356,15 +296,11 @@ Perturbation experiment, temporal dữ liệu (data / 데이터), genetic instru
 
 High-dimensional dữ liệu (data / 데이터) làm false correlation dễ xuất hiện; kiểm định nhiều lần (multiple testing) và replication bắt buộc.
 
-> **Nối mạch:** **32. Ethics và quản trị (governance / 거버넌스)** nối từ **31. Causality: omics correlation không đủ** sang **33. Tình huống phân tích (case study): từ patient mẫu (sample / 표본) tới variant diễn giải (interpretation)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Ethics và quản trị (governance / 거버넌스)
 
 Genome dữ liệu (data / 데이터) có privacy implication; gene editing germline có intergenerational consequence; synthetic organism có biosafety concern.
 
 Technical ability không tự trả lời “nên làm hay không”. Ethics, điều hòa, informed consent và equity phải đi cùng technology.
-
-> **Nối mạch:** **32. Ethics và quản trị (governance / 거버넌스)** nêu quy tắc; **33. Tình huống phân tích (case study): từ patient mẫu (sample / 표본) tới variant diễn giải (interpretation)** thử quy tắc trong tình huống, rồi **34. Tình huống phân tích: engineered insulin** mở rộng hệ quả.
 
 ## 33. Tình huống phân tích (case study): từ patient mẫu (sample / 표본) tới variant diễn giải (interpretation)
 
@@ -374,15 +310,11 @@ Mỗi bước giảm bất định (uncertainty / 불확실성) nhưng không x�
 
 Một report tốt phải phân biệt observation, suy luận (inference / 추론) và độ tin cậy (confidence).
 
-> **Nối mạch:** **33. Tình huống phân tích (case study): từ patient mẫu (sample / 표본) tới variant diễn giải (interpretation)** nêu quy tắc; **34. Tình huống phân tích: engineered insulin** thử quy tắc trong tình huống, rồi **35. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 34. Tình huống phân tích: engineered insulin
 
 Human insulin gene/cDNA được đưa vào microbial expression hệ thống (system / 시스템); cell culture sản xuất recombinant protein; purification/kiểm soát chất lượng (quality control) tạo therapeutic sản phẩm (product / 제품).
 
 Technology này kết nối biểu hiện gen, plasmid, lên men, sự gấp cuộn protein (protein folding) và industrial tiến trình (process / 프로세스).
-
-> **Nối mạch:** **34. Tình huống phân tích: engineered insulin** nêu quy tắc; **35. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Biotechnology hiện đại là vòng thiết kế (design / 설계)–bản dựng (build / 빌드)–kiểm thử (test / 테스트)–Learn, không phải danh sách công cụ (tool / 도구)** mở rộng hệ quả.
 
 ## 35. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -398,8 +330,6 @@ Technology này kết nối biểu hiện gen, plasmid, lên men, sự gấp cu�
 
 <!-- depth-audit-2026:dbtl-causal-engineering -->
 
-> **Nối mạch:** **Biotechnology hiện đại là vòng thiết kế (design / 설계)–bản dựng (build / 빌드)–kiểm thử (test / 테스트)–Learn, không phải danh sách công cụ (tool / 도구)** nối từ **35. Các hiểu lầm phổ biến (common misconceptions)** sang **36. cầu nối (bridge / 브리지) sang connections: Sinh học đang dùng lại cùng một số idea toán học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Biotechnology hiện đại là vòng thiết kế (design / 설계)–bản dựng (build / 빌드)–kiểm thử (test / 테스트)–Learn, không phải danh sách công cụ (tool / 도구)
 
 Sinh học kỹ thuật (engineering biology) thường chạy theo vòng **thiết kế → xây dựng → kiểm thử → học (Design–Build–Test–Learn, DBTL)**. thiết kế (design / 설계) chọn cơ chế (mechanism / 메커니즘) và mục tiêu (target / 대상); bản dựng (build / 빌드) tạo construct/cell line; kiểm thử (test / 테스트) đo phenotype; Learn cập nhật mô hình (model / 모델) rồi quay lại thiết kế (design / 설계). Nếu đo lường (measurement / 측정) không phản ánh đúng cơ chế (mechanism / 메커니즘), vòng lặp có thể tối ưu nhầm mục tiêu (objective / 목표) dù kỹ thuật thực hiện hoàn hảo.
@@ -407,8 +337,6 @@ Sinh học kỹ thuật (engineering biology) thường chạy theo vòng **thi�
 CRISPR minh họa rõ cấu trúc (structure / 구조) → cơ chế (mechanism / 메커니즘) → thất bại (failure / 실패). Guide RNA xác định recognition; Cas tạo hoặc xúc tác biến đổi tại mục tiêu (target / 대상); DNA repair quyết định kết quả (outcome / 결과) cuối. thất bại (failure / 실패) có thể đến từ off-target, on-target rearrangement, delivery không đều hoặc mosaicism. Vì vậy “edit thành công” phải được định nghĩa bằng genotype, expression, phenotype và unintended tác động (effect / 효과) chứ không chỉ thấy một band PCR đúng kích thước.
 
 Perturbation mạnh hơn observation cho nhân quả (causal / 인과적) suy luận (inference / 추론) nhưng vẫn cần điều khiển (control / 제어). Knockout có thể gây compensation; overexpression có thể tạo mức protein phi sinh lý; cell line khác organism. Biotechnology tốt luôn hỏi intervention đang thay nút (node / 노드) nào, mạng (network / 네트워크) có phản hồi (feedback / 피드백) gì và mô hình (model / 모델) organism bỏ qua tầng (layer / 계층) nào.
-
-> **Nối mạch:** Cầu nối sang connections khép mạch từ biotechnology hiện đại như vòng design–build–test–learn và mở sang các idea toán học được dùng lại.
 
 ## 36. cầu nối (bridge / 브리지) sang connections: Sinh học đang dùng lại cùng một số idea toán học
 

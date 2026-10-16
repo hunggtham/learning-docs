@@ -10,8 +10,6 @@ Trước khi tính, phải xác định chính xác nồng độ đang nói tớ
 
 Một mục tiêu “0,1%” là mơ hồ nếu không nói rõ `w/w`, `w/v` hay `v/v`.
 
-> **Nối mạch:** Nồng độ mục tiêu quyết định số mol cần chuẩn bị; khi pha từ chất rắn phải hiệu chỉnh độ tinh khiết rồi chuyển định lượng vào bình định mức để giữ khả năng truy xuất.
-
 ## Pha dung dịch mol từ chất rắn
 
 Với nồng độ mol mục tiêu \(C\) và thể tích cuối \(V\):
@@ -40,8 +38,6 @@ m=1.461\,g
 
 Kết quả này giả định NaCl tinh khiết, khô và thể tích cuối được thiết lập đúng bằng dụng cụ định mức.
 
-> **Nối mạch:** Khối lượng theo hóa lượng giả định thuốc thử tinh khiết và khô; hiệu chỉnh độ tinh khiết biến lượng chất tinh khiết thành hướng dẫn cân, còn tính hút ẩm quyết định hướng dẫn đó có còn đúng ngoài không khí hay không.
-
 ## Hiệu chỉnh độ tinh khiết
 
 Nếu thuốc thử có độ tinh khiết 98,5% theo khối lượng:
@@ -54,8 +50,6 @@ Chứng chỉ phân tích có thể cho giá trị assay thật, hàm lượng n
 
 Với dung dịch chuẩn chính xác cao, giá trị danh nghĩa trên nhãn chai không phải lúc nào cũng đủ.
 
-> **Nối mạch:** Hiệu chỉnh độ tinh khiết dùng giá trị assay; chất rắn hút ẩm nhận thêm nước và CO2 làm khối lượng biểu kiến trôi, nên cần **chuẩn sơ cấp** khi phép cân trực tiếp không còn neo được lượng chất.
-
 ## Chất rắn hút ẩm
 
 Một số chất như NaOH hấp thụ nước và `CO2` từ không khí.
@@ -64,15 +58,11 @@ Khối lượng cân khi đó không còn đại diện đáng tin cậy cho lư
 
 Thay vì xem dung dịch pha trực tiếp là chuẩn chính xác, thường người ta pha gần đúng rồi **chuẩn hóa (standardize)** bằng một chuẩn sơ cấp phù hợp.
 
-> **Nối mạch:** Chuẩn sơ cấp cung cấp tham chiếu hóa lượng ổn định; khi lượng chất đã đáng tin, phải hòa tan hoàn toàn trước khi chỉnh thể tích cuối để phần chưa tan không làm sai nồng độ.
-
 ## Chuẩn sơ cấp
 
 Một **chuẩn sơ cấp (primary standard)** tốt thường có độ tinh khiết cao, thành phần bền, ít hút ẩm, khối lượng mol đủ lớn, dễ làm khô/xử lý và phản ứng có tỉ lượng rõ.
 
 Chuẩn sơ cấp biến phép đo khối lượng thành tham chiếu đáng tin cậy cho lượng chất.
-
-> **Nối mạch:** Chuẩn sơ cấp neo số mol; hòa tan trong một phần dung môi tách bước hòa tan khỏi bước chỉnh thể tích cuối, rồi **chuyển định lượng** bảo toàn cân bằng vật chất.
 
 ## Hòa tan trước khi đưa tới thể tích cuối
 
@@ -91,8 +81,6 @@ cân
 
 Không nên cho chất rắn vào bình định mức rồi chỉnh ngay tới vạch trước khi hòa tan hoàn toàn nếu quá trình hòa tan làm thể tích hoặc nhiệt độ thay đổi đáng kể.
 
-> **Nối mạch:** Hòa tan tạo pha chất tan; chuyển định lượng khép cân bằng vật chất bằng cách rửa phần cặn vào bình định mức trước khi xác lập thể tích cuối.
-
 ## Chuyển định lượng
 
 Chất còn bám trên giấy cân, phễu hoặc bình ban đầu làm nồng độ cuối bị thấp hơn dự kiến.
@@ -100,8 +88,6 @@ Chất còn bám trên giấy cân, phễu hoặc bình ban đầu làm nồng �
 Có thể rửa dụng cụ nguồn nhiều lần bằng lượng dung môi nhỏ rồi đưa toàn bộ phần rửa vào bình định mức.
 
 “Chuyển định lượng” nghĩa là mức chuyển đủ hoàn toàn so với độ không đảm bảo mục tiêu, không phải khẳng định toán học rằng 100,000000% vật liệu đã đi qua.
-
-> **Nối mạch:** Chuyển định lượng giữ số mol, nhưng tương tác chất tan–dung môi khiến thể tích không cộng đơn giản; vì vậy phải chỉnh tới vạch đã hiệu chuẩn thay vì lấy thể tích cuối trừ một thể tích đo riêng.
 
 ## Vì sao thể tích cuối không bằng “thể tích dung môi đã thêm”
 
@@ -116,8 +102,6 @@ thể tích dung môi = thể tích cuối − thể tích stock
 rồi đo riêng hai thể tích.
 
 Cách đúng là chuyển dung dịch stock rồi **pha loãng toàn dung dịch tới vạch thể tích cuối đã hiệu chuẩn**.
-
-> **Nối mạch:** Vì thể tích cuối được đặt tại vạch chuẩn, pha loãng stock bảo toàn (C_1V_1=C_2V_2) bằng một aliquot đo bằng pipette; hệ số pha loãng rất lớn sẽ cần các bước nối tiếp.
 
 ## Pha loãng từ dung dịch stock
 
@@ -135,8 +119,6 @@ V_1=\frac{0.0100\times100.0}{0.1000}=10.00\,mL
 
 Dùng pipette phù hợp để lấy 10,00 mL rồi pha loãng tới thể tích cuối 100,0 mL.
 
-> **Nối mạch:** Một lần pha loãng từ stock có thể đòi hỏi aliquot quá nhỏ để hút chính xác; các bước 1:10 nối tiếp giữ mỗi lần hút trong vùng đo được, nhưng độ không đảm bảo sẽ tích lũy và phải lan truyền.
-
 ## Pha loãng nối tiếp
 
 Với hệ số pha loãng rất lớn, chia thành nhiều bước nối tiếp thường chính xác hơn cố hút một thể tích cực nhỏ.
@@ -144,8 +126,6 @@ Với hệ số pha loãng rất lớn, chia thành nhiều bước nối tiếp
 Ví dụ hệ số 1:1000 có thể được tạo từ ba bước 1:10.
 
 Tuy nhiên độ không đảm bảo của từng bước sẽ tích lũy, vì vậy thiết kế phải cân bằng độ chính xác pipette và số thao tác.
-
-> **Nối mạch:** Serial dilution keeps aliquots measurable but compounds each volume error; uncertainty propagation turns that accumulation into a design criterion before handling concentrated commercial acid.
 
 ## Độ không đảm bảo của pha loãng
 
@@ -167,8 +147,6 @@ nếu các thành phần độc lập, độ không đảm bảo tương đối 
 
 Cách nhìn này giúp chọn dụng cụ thủy tinh dựa trên yêu cầu độ không đảm bảo thay vì thói quen.
 
-> **Nối mạch:** Propagated dilution uncertainty determines how much confidence remains; concentrated commercial acid adds assay and density inputs, so the calculation must precede the safety procedure.
-
 ## Acid thương mại đậm đặc
 
 Acid thương mại thường được ghi bằng phần khối lượng và khối lượng riêng thay vì molarity.
@@ -183,8 +161,6 @@ trong đó \(w\) viết dưới dạng phân số.
 
 Tính toán phải dựa trên assay và khối lượng riêng thực tế từ nhà cung cấp thay vì thuộc lòng một nồng độ danh nghĩa.
 
-> **Nối mạch:** Assay and density convert a commercial acid label into molarity; dilution then adds heat and splashing hazards, while cooling to calibration temperature protects the final volume.
-
 ## An toàn khi pha loãng acid
 
 Pha loãng acid đậm đặc có thể tỏa nhiệt mạnh.
@@ -192,8 +168,6 @@ Pha loãng acid đậm đặc có thể tỏa nhiệt mạnh.
 Nguyên tắc chung là thêm acid từ từ vào nước, có khuấy và kiểm soát nhiệt phù hợp theo quy trình an toàn của cơ sở.
 
 Sau khi pha, cần để dung dịch trở về gần nhiệt độ hiệu chuẩn trước khi chỉnh thể tích cuối. Nếu chỉnh vạch khi dung dịch còn nóng, thể tích đang giãn nở và nồng độ sau khi nguội sẽ bị lệch.
-
-> **Nối mạch:** Acid dilution couples stoichiometry to heat control; a strong base introduces a different composition drift through atmospheric CO2, which motivates choosing a mass-based concentration when volume is not the only variable.
 
 ## Cơ sở (base / 기반) mạnh và hấp thụ CO2
 
@@ -207,8 +181,6 @@ Dung dịch cơ sở (base / 기반) mạnh như NaOH hấp thụ `CO2` khí quy
 
 Với chuẩn độ chính xác, dung dịch cần được chuẩn bị, lưu trữ phù hợp và chuẩn hóa định kỳ.
 
-> **Nối mạch:** Atmospheric CO2 changes the effective amount of strong base; mass fraction reports composition without a volume expansion assumption, then molality provides a solvent-mass basis for temperature-sensitive work.
-
 ## Phần khối lượng
 
 Phần khối lượng:
@@ -221,8 +193,6 @@ w=\frac{m_{solute}}{m_{solution}}
 
 Đại lượng này hữu ích trong công thức phối chế và thuốc thử thương mại đậm đặc.
 
-> **Nối mạch:** Mass fraction describes total solution composition; molality normalizes solute moles to solvent mass, while ppm/ppb switch to trace-scale reporting where the unit convention must be explicit.
-
 ## Molality
 
 \[
@@ -232,8 +202,6 @@ b=\frac{n_{solute}}{m_{solvent}(kg)}
 Molality không thay đổi do giãn nở thể tích theo nhiệt độ nếu không có mất vật liệu.
 
 Nó xuất hiện tự nhiên trong nhiệt động lực học của các tính chất tập hợp.
-
-> **Nối mạch:** Molality avoids volume expansion, whereas ppm and ppb communicate very small ratios; at trace levels, density approximations and contamination can dominate the reported concentration.
 
 ## ppm và ppb
 
@@ -246,8 +214,6 @@ Với dung dịch nước loãng có khối lượng riêng gần 1 kg/L:
 
 Đây chỉ là xấp xỉ dựa trên khối lượng riêng và quy ước. Trong công việc nghiêm ngặt nên ghi rõ mg/kg, mg/L, mol/mol hoặc đơn vị thực sự được dùng.
 
-> **Nối mạch:** ppm/ppb make trace quantities legible, but at µg/L the blank, dust, tips, and adsorption may be comparable to the sample; container material becomes part of the measurement system.
-
 ## Chuẩn bị ở nồng độ vết
 
 Ở mức µg/L hoặc thấp hơn, nhiễm bẩn và hấp phụ lên bề mặt có thể trở thành nguồn sai số chi phối.
@@ -255,8 +221,6 @@ Với dung dịch nước loãng có khối lượng riêng gần 1 kg/L:
 Nguồn có thể đến từ nước, bụi, đầu tip pipette, chất rò từ bình chứa, cặn mẫu trước hoặc chính thuốc thử.
 
 Nồng độ trong mẫu trắng đôi khi cùng bậc với nồng độ của mẫu thật.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Vật liệu bình chứa** nối từ **Chuẩn bị ở nồng độ vết** sang **Acid hóa chuẩn kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu bình chứa
 
@@ -266,8 +230,6 @@ Một số kim loại có thể hấp phụ lên bề mặt thủy tinh; HF tấ
 
 Do đó vật liệu bình chứa là một phần của phương pháp phân tích.
 
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Acid hóa chuẩn kim loại** nối từ **Vật liệu bình chứa** sang **Kiểm soát lực ion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Acid hóa chuẩn kim loại
 
 Dung dịch chuẩn kim loại vết thường được acid hóa để giảm thủy phân, hấp phụ và kết tủa.
@@ -276,15 +238,11 @@ Loại và nồng độ acid cụ thể phụ thuộc chất phân tích và ph�
 
 Mục tiêu là giữ kim loại trong một dạng hóa học ổn định và tái lập được.
 
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Kiểm soát lực ion** nối từ **Acid hóa chuẩn kim loại** sang **Chuẩn bị dung dịch đệm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiểm soát lực ion
 
 Một số cân bằng và phép đo điện hóa yêu cầu lực ion gần không đổi.
 
 Chất điện ly nền có thể được thêm để giữ lực ion giữa chuẩn và mẫu tương tự nhau, từ đó làm hệ số hoạt độ dễ so sánh hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuẩn bị dung dịch đệm** nối từ **Kiểm soát lực ion** sang **Điều chỉnh pH làm thay đổi thành phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuẩn bị dung dịch đệm
 
@@ -298,15 +256,11 @@ Tuy nhiên khi pha đệm thực tế cần xét nhiệt độ, lực ion, `pKa`
 
 Một cách làm phổ biến là pha gần thành phần tính toán, điều chỉnh cẩn thận rồi mới đưa tới thể tích cuối.
 
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Điều chỉnh pH làm thay đổi thành phần** nối từ **Chuẩn bị dung dịch đệm** sang **Chuẩn hóa dung dịch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điều chỉnh pH làm thay đổi thành phần
 
 Thêm HCl hoặc NaOH để chỉnh pH làm thành phần ion và thể tích thay đổi.
 
 Nếu công thức yêu cầu chính xác, lượng chất điều chỉnh phải được tính vào hoặc thể tích cuối phải được thiết lập lại sau điều chỉnh.
-
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuẩn hóa dung dịch** nối từ **Điều chỉnh pH làm thay đổi thành phần** sang **Chuẩn hiệu chuẩn thiết bị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuẩn hóa dung dịch
 
@@ -316,8 +270,6 @@ Nếu tỉ lượng phản ứng đã biết, số mol chuẩn sơ cấp xác đ
 
 Nhờ đó dung dịch pha gần đúng trở thành chuẩn có khả năng truy xuất tốt hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Chuẩn hiệu chuẩn thiết bị** nối từ **Chuẩn hóa dung dịch** sang **Khớp nền mẫu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuẩn hiệu chuẩn thiết bị
 
 Hiệu chuẩn thiết bị thường cần nhiều mức nồng độ bao phủ vùng của mẫu.
@@ -325,8 +277,6 @@ Hiệu chuẩn thiết bị thường cần nhiều mức nồng độ bao phủ
 Chuẩn tốt nên bao quanh nồng độ mẫu, có nền tương tự khi cần, được pha độc lập nếu có thể và kèm mẫu trắng.
 
 Ngoại suy vượt ngoài dải hiệu chuẩn làm độ tin cậy giảm.
-
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Khớp nền mẫu** nối từ **Chuẩn hiệu chuẩn thiết bị** sang **Phương pháp thêm chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khớp nền mẫu
 
@@ -336,8 +286,6 @@ Các chiến lược gồm chuẩn cùng nền, nội chuẩn và thêm chuẩn.
 
 Vì vậy chuẩn bị dung dịch cũng là một phần của thiết kế phương pháp phân tích.
 
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Phương pháp thêm chuẩn** nối từ **Khớp nền mẫu** sang **Nội chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương pháp thêm chuẩn
 
 Một lượng chất phân tích đã biết được thêm trực tiếp vào các phần mẫu.
@@ -345,8 +293,6 @@ Một lượng chất phân tích đã biết được thêm trực tiếp vào 
 Tín hiệu theo nồng độ bổ sung được dùng để ngoại suy về lượng ban đầu.
 
 Cách này hữu ích khi ảnh hưởng nền khó mô phỏng bằng dung dịch chuẩn riêng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Nội chuẩn** nối từ **Phương pháp thêm chuẩn** sang **Trộn sau khi pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nội chuẩn
 
@@ -356,8 +302,6 @@ Tỉ số tín hiệu giữa chất phân tích và nội chuẩn được dùng
 
 Phương pháp có thể bù biến thiên bơm mẫu hoặc ion hóa nếu nội chuẩn hành xử đủ giống chất phân tích.
 
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Trộn sau khi pha loãng** nối từ **Nội chuẩn** sang **Thời gian hòa tan**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trộn sau khi pha loãng
 
 Sau khi chỉnh tới vạch, bình định mức phải được đảo/trộn đủ để dung dịch đồng nhất.
@@ -365,8 +309,6 @@ Sau khi chỉnh tới vạch, bình định mức phải được đảo/trộn 
 Một độ dốc (gradient / 기울기) nồng độ vẫn có thể tồn tại nếu dung dịch stock đậm đặc nằm ở đáy.
 
 “Đã tới vạch” không đồng nghĩa “đã đồng nhất”.
-
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Thời gian hòa tan** nối từ **Trộn sau khi pha loãng** sang **Giới hạn độ tan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian hòa tan
 
@@ -376,8 +318,6 @@ Chất có thể đã nằm trong bình nhưng chưa phân bố đồng đều �
 
 Không nên lấy aliquot định lượng trước khi dung dịch đồng nhất và đạt nhiệt độ cần thiết.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Thời gian hòa tan** đặt tiêu chí; **Giới hạn độ tan** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Quá bão hòa** mở rộng hệ quả.
-
 ## Giới hạn độ tan
 
 Nếu nồng độ mục tiêu vượt độ tan cân bằng, không thể có một dung dịch thật sự bền ở điều kiện đó.
@@ -385,8 +325,6 @@ Nếu nồng độ mục tiêu vượt độ tan cân bằng, không thể có m
 Kết tủa có thể xuất hiện ngay hoặc sau khi dung dịch nguội hay pH thay đổi.
 
 Cần kiểm tra dạng hóa học, nhiệt độ và pH chứ không chỉ tổng số mol.
-
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Giới hạn độ tan** đặt tiêu chí; **Quá bão hòa** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Nhiệt độ của phép đo thể tích** mở rộng hệ quả.
 
 ## Quá bão hòa
 
@@ -396,15 +334,11 @@ Một dung dịch trong suốt vẫn có thể tạm thời chứa lượng ch�
 
 Dung dịch chuẩn không nên dựa vào quá bão hòa siêu bền.
 
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Nhiệt độ của phép đo thể tích** nối từ **Quá bão hòa** sang **Ghi nhãn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệt độ của phép đo thể tích
 
 Molarity phụ thuộc thể tích nên phụ thuộc nhiệt độ.
 
 Trong công việc thường ngày, dụng cụ định mức ở nhiệt độ phòng thường đủ; khi cần độ chính xác cao hơn nên ghi nhiệt độ và xem xét hiệu chỉnh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Ghi nhãn** nối từ **Nhiệt độ của phép đo thể tích** sang **Độ bền và hạn sử dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghi nhãn
 
@@ -412,23 +346,17 @@ Theo yêu cầu của phòng thí nghiệm, nhãn tối thiểu nên có tên ch
 
 Một dung dịch pha đúng nhưng không có nhãn truy xuất được gần như không thể dùng đáng tin cậy trong vận hành.
 
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Độ bền và hạn sử dụng** nối từ **Ghi nhãn** sang **Tài liệu hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ bền và hạn sử dụng
 
 Nồng độ dung dịch có thể thay đổi do bay hơi, quang phân, oxy hóa, tăng trưởng vi sinh vật, kết tủa, hấp phụ hoặc hấp thụ `CO2`.
 
 Hạn sử dụng nên dựa trên dữ liệu ổn định hoặc xác minh, không chỉ chọn tùy ý theo lịch.
 
-> **Nối mạch:** Ở chặng này của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Tài liệu hóa** nối từ **Độ bền và hạn sử dụng** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tài liệu hóa
 
 Cần ghi lô thuốc thử, khối lượng thật đã cân, thông tin dụng cụ nếu quan trọng, phép tính, pH cuối và mọi sai lệch khỏi quy trình.
 
 Khả năng tái lập phụ thuộc siêu dữ liệu (metadata / 메타데이터) không kém kỹ thuật tay.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Những hiểu lầm thường gặp** nối từ **Tài liệu hóa** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -447,8 +375,6 @@ Không nếu cần molarity chính xác. Phải pha loãng tới thể tích cu�
 ### “ppm luôn bằng mg/L”
 
 Chỉ gần đúng dưới các giả định về khối lượng riêng và quy ước.
-
-> **Nối mạch:** Trong **Chuẩn bị dung dịch — từ nồng độ mục tiêu tới chuẩn hóa học có khả năng truy xuất**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

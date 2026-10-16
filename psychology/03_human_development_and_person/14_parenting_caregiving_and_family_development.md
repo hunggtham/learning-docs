@@ -16,8 +16,6 @@ Longitudinal research ngày càng kiểm tra các đường hai chiều thay vì
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** bidirectionality không có nghĩa “trẻ gây ra parenting xấu”. Nó nghĩa nhân quả (causal / 인과적) hệ thống (system / 시스템) có phản hồi (feedback / 피드백) và cần phân biệt vulnerability, phản hồi (response / 응답) và responsibility.
 
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **2. Attachment và caregiving** nối từ **1. Transactional mô hình (model / 모델): child và caregiver cùng thay đổi nhau** sang **3. Warmth, cấu trúc (structure / 구조) và autonomy hỗ trợ (support / 지원)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Attachment và caregiving
 
 Caregiving nhạy với cue và tương đối nhất quán giúp trẻ xây expectation rằng distress có thể được co-regulate trong relationship. Nhưng attachment không đòi caregiver hoàn hảo và không nên dùng như label đạo đức cho cha mẹ.
@@ -25,8 +23,6 @@ Caregiving nhạy với cue và tương đối nhất quán giúp trẻ xây exp
 **Repair sau rupture** cũng quan trọng. Child có thể học rằng xung đột (conflict / 충돌) hoặc misattunement không nhất thiết phá relationship nếu có repair đủ tốt.
 
 Xem [[01_attachment_and_relationships]].
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **3. Warmth, cấu trúc (structure / 구조) và autonomy hỗ trợ (support / 지원)** nối từ **2. Attachment và caregiving** sang **4. Parenting styles: useful summary, limited cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Warmth, cấu trúc (structure / 구조) và autonomy hỗ trợ (support / 지원)
 
@@ -38,8 +34,6 @@ Ba dimension hữu ích hơn một label style duy nhất:
 
 Chúng không loại trừ nhau. Một caregiver có thể vừa warm vừa giữ ranh giới (boundary / 경계) rõ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **3. Warmth, cấu trúc (structure / 구조) và autonomy hỗ trợ (support / 지원)** đặt tiêu chí; **4. Parenting styles: useful summary, limited cơ chế (mechanism / 메커니즘)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **5. Behavioral điều khiển (control / 제어) và psychological điều khiển (control / 제어)** mở rộng hệ quả.
-
 ## 4. Parenting styles: useful summary, limited cơ chế (mechanism / 메커니즘)
 
 Khung phần mềm (framework / 프레임워크) authoritative, authoritarian, permissive và uninvolved có giá trị lịch sử và descriptive utility.
@@ -48,8 +42,6 @@ Nhưng style category thường nén nhiều hành vi (behavior / 동작) khác 
 
 > **hiện tại (current / 현재) bằng chứng (evidence / 증거):** authoritative patterns thường liên quan nhiều positive outcomes, nhưng association không chứng minh một style đơn lẻ tạo cùng tác động (effect / 효과) ở mọi culture. Mechanism-level phân tích (analysis / 분석) — warmth, consistency, autonomy, coercion — thường informative hơn taxonomy.
 
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **4. Parenting styles: useful summary, limited cơ chế (mechanism / 메커니즘)** đặt tiêu chí; **5. Behavioral điều khiển (control / 제어) và psychological điều khiển (control / 제어)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **6. Temperament × parenting** mở rộng hệ quả.
-
 ## 5. Behavioral điều khiển (control / 제어) và psychological điều khiển (control / 제어)
 
 **Kiểm soát hành vi (behavioral control)** quản lý observable hành vi (behavior / 동작) bằng quy tắc (rule / 규칙), monitoring và consequence. **Kiểm soát tâm lý (psychological control)** cố thao túng trạng thái nội bộ (internal state / 내부 상태) qua guilt, shame, love withdrawal hoặc conditional approval.
@@ -57,8 +49,6 @@ Nhưng style category thường nén nhiều hành vi (behavior / 동작) khác 
 Hai construct khác nhau. ranh giới (boundary / 경계) rõ không đồng nghĩa psychological điều khiển (control / 제어).
 
 Psychological-control research thường liên quan internalizing/externalizing problems, nhưng tác động (effect / 효과) kích thước (size / 크기) và direction chịu ảnh hưởng child hành vi (behavior / 동작), culture và reporter độ lệch (bias / 편향).
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **6. Temperament × parenting** nối từ **5. Behavioral điều khiển (control / 제어) và psychological điều khiển (control / 제어)** sang **7. Goodness of fit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Temperament × parenting
 
@@ -75,8 +65,6 @@ Meta-analysis về **differential susceptibility** cho thấy một số tempera
 
 Cả hai đều quá deterministic.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **7. Goodness of fit** nối từ **6. Temperament × parenting** sang **8. Emotion coaching**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Goodness of fit
 
 **Độ phù hợp người–môi trường (goodness of fit)** hỏi demand của môi trường (environment / 환경) có hợp temperament và developmental sức chứa (capacity / 용량) không.
@@ -84,8 +72,6 @@ Cả hai đều quá deterministic.
 Trẻ behavioral inhibition cao có thể benefit từ gradual approach thay vì ép mạnh hoặc bảo vệ hoàn toàn. Trẻ sensation-seeking cao có thể cần activity đủ stimulation nhưng ranh giới (boundary / 경계) rõ.
 
 Mục tiêu không phải “sửa temperament”, mà xây môi trường (environment / 환경) giúp regulation và competence phát triển.
-
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **8. Emotion coaching** nối từ **7. Goodness of fit** sang **9. Discipline và học tập (learning / 학습) cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Emotion coaching
 
@@ -95,8 +81,6 @@ Emotion coaching thường gồm nhận diện emotion, naming, kiểm tra hợp
 
 > **ranh giới (boundary / 경계):** emotion coaching không phải script universal. Child age, neurodevelopment, ngôn ngữ (language / 언어) ability và cultural communication style ảnh hưởng cách triển khai.
 
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **8. Emotion coaching** đặt đầu vào cho **9. Discipline và học tập (learning / 학습) cơ chế (mechanism / 메커니즘)**, rồi **10. Reinforcement và intrinsic motivation** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 9. Discipline và học tập (learning / 학습) cơ chế (mechanism / 메커니즘)
 
 Discipline hiệu quả không chỉ dừng hành vi (behavior / 동작) hiện tại mà còn dạy contingency và alternative hành vi (behavior / 동작).
@@ -104,8 +88,6 @@ Discipline hiệu quả không chỉ dừng hành vi (behavior / 동작) hiện 
 Consequence dễ học hơn khi gần hành vi (behavior / 동작), predictable, proportionate và liên quan quy tắc (rule / 규칙). Humiliation có thể tạo compliance ngắn hạn nhưng thêm shame/threat mà không nhất thiết dạy replacement hành vi (behavior / 동작).
 
 Xem [[../02_learning_and_cognition/00_learning_and_conditioning]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **9. Discipline và học tập (learning / 학습) cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **10. Reinforcement và intrinsic motivation**, rồi **11. Modeling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Reinforcement và intrinsic motivation
 
@@ -115,8 +97,6 @@ Không nên đơn giản hóa thành “reward phá intrinsic motivation”. tá
 
 Phản hồi (feedback / 피드백) về competence, contribution và natural consequence thường khác với controlling reward.
 
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **11. Modeling** nối từ **10. Reinforcement và intrinsic motivation** sang **12. Developmental timing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Modeling
 
 Trẻ học từ observation. quy tắc (rule / 규칙) “không check phone lúc ăn” yếu nếu caregiver liên tục check message.
@@ -124,8 +104,6 @@ Trẻ học từ observation. quy tắc (rule / 규칙) “không check phone l�
 Modeling cũng áp dụng cho xung đột (conflict / 충돌) repair, emotion expression, apology, help-seeking và bất định (uncertainty / 불확실성) tolerance.
 
 Không cần caregiver mô hình (model / 모델) perfection; mô hình (model / 모델) cách recover sau mistake cũng có học tập (learning / 학습) giá trị (value / 값).
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **12. Developmental timing** nối từ **11. Modeling** sang **13. Peer, school và neighborhood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Developmental timing
 
@@ -135,15 +113,11 @@ Quá nhiều điều khiển (control / 제어) ở tuổi cần independence c�
 
 Developmental fit vì vậy quan trọng hơn một quy tắc (rule / 규칙) “strict vs permissive” cố định.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **13. Peer, school và neighborhood** nối từ **12. Developmental timing** sang **14. Academic pressure và conditional regard**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Peer, school và neighborhood
 
 Family không hoạt động trong vacuum. Peer norm, school climate, neighborhood an toàn (safety / 안전), media và socioeconomic opportunity đều tham gia development.
 
 Khi adolescent hành vi (behavior / 동작) thay đổi, attribution toàn bộ cho “parenting” có thể bỏ qua peer selection, discrimination, academic pressure hoặc opportunity cấu trúc (structure / 구조).
-
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **14. Academic pressure và conditional regard** nối từ **13. Peer, school và neighborhood** sang **15. Screen và digital môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Academic pressure và conditional regard
 
@@ -152,8 +126,6 @@ Expectation có thể hỗ trợ effort khi goal rõ, hỗ trợ (support / 지�
 Nếu affection/approval phụ thuộc achievement, child có thể học rằng thất bại (failure / 실패) đe dọa belonging. Điều này khác với high tiêu chuẩn (standard / 표준) đi cùng stable relationship hỗ trợ (support / 지원).
 
 Growth mindset cũng cần ranh giới (boundary / 경계): effort chỉ hữu ích khi chiến lược (strategy / 전략), phản hồi (feedback / 피드백) và tài nguyên (resource / 자원) phù hợp.
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **15. Screen và digital môi trường (environment / 환경)** nối từ **14. Academic pressure và conditional regard** sang **16. Caregiver stress và structural ràng buộc (constraint / 제약조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Screen và digital môi trường (environment / 환경)
 
@@ -165,8 +137,6 @@ Question tốt hơn gồm: nó thay sleep/vật lý (physical / 물리적) activ
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **16. Caregiver stress và structural ràng buộc (constraint / 제약조건)** nối từ **15. Screen và digital môi trường (environment / 환경)** sang **17. Intergenerational transmission không deterministic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Caregiver stress và structural ràng buộc (constraint / 제약조건)
 
 Financial strain, overtime, housing instability, illness và lack of childcare làm regulation tài nguyên (resource / 자원) của caregiver giảm.
@@ -174,8 +144,6 @@ Financial strain, overtime, housing instability, illness và lack of childcare l
 Nếu intervention chỉ dạy “parenting skill” nhưng caregiver không có sleep, thời gian (time / 시간) hoặc safe housing, nó bỏ qua bottleneck lớn.
 
 Hỗ trợ (support / 지원) caregiver có thể là intervention cho child.
-
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **17. Intergenerational transmission không deterministic** nối từ **16. Caregiver stress và structural ràng buộc (constraint / 제약조건)** sang **18. Parentification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Intergenerational transmission không deterministic
 
@@ -185,15 +153,11 @@ Nhưng transmission không phải fate. Partner relationship, therapy, education
 
 Historical explanation “mọi vấn đề adult đều do childhood parent” là quá mạnh.
 
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **18. Parentification** nối từ **17. Intergenerational transmission không deterministic** sang **19. Family xung đột (conflict / 충돌) và repair**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Parentification
 
 **Đảo vai chăm sóc (parentification)** xảy ra khi child phải gánh instrumental hoặc emotional responsibility vượt quá developmental sức chứa (capacity / 용량), đặc biệt khi child trở thành regulator chính cho caregiver.
 
 Helping family không tự động harmful. rủi ro (risk / 위험) tăng khi burden chronic, role reversal cao và developmental need của child bị bỏ qua.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **19. Family xung đột (conflict / 충돌) và repair** nối từ **18. Parentification** sang **20. Divorce và family chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Family xung đột (conflict / 충돌) và repair
 
@@ -203,15 +167,11 @@ Trẻ cũng có thể học repair khi thấy người lớn acknowledge harm, r
 
 High-intensity unresolved xung đột (conflict / 충돌) thường đáng lo hơn disagreement được repair.
 
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **20. Divorce và family chuyển tiếp (transition / 전이)** nối từ **19. Family xung đột (conflict / 충돌) và repair** sang **21. Culture và đo lường (measurement / 측정)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Divorce và family chuyển tiếp (transition / 전이)
 
 Divorce tác động (effect / 효과) phụ thuộc pre-separation xung đột (conflict / 충돌), financial thay đổi (change / 변경), housing, co-parenting, stability và new relationship.
 
 `Divorce gây hại trẻ` là nhân quả (causal / 인과적) claim quá đơn giản. Trong high-conflict home, separation có thể giảm một nguồn (source / 소스) of chronic stress dù chuyển tiếp (transition / 전이) vẫn có chi phí (cost / 비용).
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **20. Divorce và family chuyển tiếp (transition / 전이)** đặt vấn đề; **21. Culture và đo lường (measurement / 측정)** đối chiếu bằng chứng, rồi **22. Caregiving across lifespan** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Culture và đo lường (measurement / 측정)
 
@@ -223,8 +183,6 @@ Cross-cultural research cần đo lường (measurement / 측정) invariance: c�
 
 Xem [[04_social_and_cultural_psychology]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **21. Culture và đo lường (measurement / 측정)** đặt vấn đề; **22. Caregiving across lifespan** đối chiếu bằng chứng, rồi **23. rủi ro (risk / 위험), protective factor và resilience** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 22. Caregiving across lifespan
 
 Family development không dừng khi child trưởng thành. Adult child có thể caregive aging parent; partner có thể caregive người bệnh chronic.
@@ -233,8 +191,6 @@ Care burden gồm vật lý (physical / 물리적) tác vụ (task / 작업), em
 
 Xem [[11_aging_cognitive_health_and_late_life]].
 
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **23. rủi ro (risk / 위험), protective factor và resilience** nối từ **22. Caregiving across lifespan** sang **24. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. rủi ro (risk / 위험), protective factor và resilience
 
 Không nên đọc parenting variable như fate. Developmental kết quả (outcome / 결과) xuất hiện từ tích lũy và tương tác (interaction / 상호작용) giữa rủi ro (risk / 위험)/protective factors.
@@ -242,8 +198,6 @@ Không nên đọc parenting variable như fate. Developmental kết quả (outc
 Một child có harsh parenting lịch sử (history / 이력) không tự động phát triển disorder; một child có supportive family cũng không miễn nhiễm mental-health bài toán (problem / 문제).
 
 Khung này được phát triển tại [[../04_mental_health/12_developmental_psychopathology_risk_and_resilience]].
-
-> **Nối mạch:** Ở chặng này của **Nuôi dạy, chăm sóc và phát triển gia đình**, **24. Những hiểu lầm phổ biến** nối từ **23. rủi ro (risk / 위험), protective factor và resilience** sang **25. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Những hiểu lầm phổ biến
 
@@ -256,8 +210,6 @@ Khung này được phát triển tại [[../04_mental_health/12_developmental_p
 **“hành vi (behavior / 동작) child chỉ là kết quả parenting.”** Sai. Child influence caregiver và nhiều môi trường (environment / 환경) khác cùng tham gia.
 
 **“Mọi adult bài toán (problem / 문제) đều quay về cha mẹ.”** Quá deterministic và không phù hợp developmental science hiện đại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nuôi dạy, chăm sóc và phát triển gia đình**, **25. Mô hình tư duy** tổng hợp từ **24. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Mô hình tư duy
 
@@ -278,8 +230,6 @@ new behavior feeds back into caregiver
 ```
 
 Parenting là một transactional hệ thống (system / 시스템) phát triển theo thời gian, không phải một đầu vào (input / 입력) đơn hướng.
-
-> **Nối mạch:** Trong **Nuôi dạy, chăm sóc và phát triển gia đình**, **Kết nối kiến thức** tổng hợp từ **25. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

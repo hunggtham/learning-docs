@@ -10,8 +10,6 @@ Cơ học chất lưu dùng xấp xỉ môi trường liên tục (Continuum App
 
 Đây là một ví dụ của phép lấy trung bình thô (coarse-graining) và tính nổi lên (emergence). Ta bỏ qua chi tiết chuyển động của từng phân tử nhưng giữ những đại lượng tập thể đủ để dự đoán dòng chảy ở quy mô vĩ mô.
 
-> **Nối mạch:** Trong **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Mật độ** nối từ **Từ các hạt riêng lẻ đến mô hình liên tục** sang **Áp suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mật độ
 
 Mật độ (Density / 밀도) được định nghĩa cục bộ bởi:
@@ -27,8 +25,6 @@ Nếu vật chất phân bố đều trong thể tích đang xét:
 ```
 
 Đơn vị SI là `kg/m³`.
-
-> **Nối mạch:** Ở chặng này của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Áp suất** nối từ **Mật độ** sang **Nguyên lý Pascal và hệ thủy lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất
 
@@ -68,8 +64,6 @@ P=P_0+\rho gh
 
 Áp suất tăng theo độ sâu vì lớp chất lưu ở dưới phải cân bằng trọng lượng của phần chất lưu nằm phía trên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Nguyên lý Pascal và hệ thủy lực** nối từ **Áp suất** sang **Lực nổi Archimedes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên lý Pascal và hệ thủy lực
 
 Trong một chất lưu gần như không nén được và được giữ trong hệ kín, thay đổi áp suất có thể được truyền qua chất lưu. Nếu hai pít-tông có diện tích `A_1` và `A_2`:
@@ -90,8 +84,6 @@ Kích thủy lực (Hydraulic Jack / 유압 잭) có thể khuếch đại lực
 F_1d_1=F_2d_2
 ```
 
-> **Nối mạch:** Trong **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Lực nổi Archimedes** nối từ **Nguyên lý Pascal và hệ thủy lực** sang **Bảo toàn khối lượng và phương trình liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lực nổi Archimedes
 
 Một vật chìm trong chất lưu chiếm chỗ một thể tích chất lưu. Vì áp suất tăng theo độ sâu, lực áp suất tác dụng lên mặt dưới thường lớn hơn lực trên mặt trên, tạo một hợp lực hướng lên:
@@ -103,8 +95,6 @@ F_b=\rho_{fluid}gV_{displaced}
 Đây là lực đẩy Archimedes (Buoyant Force / 부력).
 
 Nếu mật độ trung bình của toàn vật nhỏ hơn mật độ chất lưu, vật có thể nổi ở trạng thái cân bằng. Một con tàu bằng thép nổi không phải vì thép nhẹ hơn nước, mà vì hình dạng rỗng của tàu làm mật độ trung bình của cả tàu, kể cả phần không khí bên trong, nhỏ hơn mật độ nước.
-
-> **Nối mạch:** Ở chặng này của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Bảo toàn khối lượng và phương trình liên tục** nối từ **Lực nổi Archimedes** sang **Phương trình Bernoulli**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo toàn khối lượng và phương trình liên tục
 
@@ -129,8 +119,6 @@ Dạng cục bộ và tổng quát hơn của bảo toàn khối lượng là:
 ```
 
 Đây là phương trình liên tục (Continuity Equation / 연속방정식). Nó biểu diễn một định luật bảo toàn dưới dạng phương trình vi phân cho trường mật độ và trường vận tốc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Phương trình Bernoulli** nối từ **Bảo toàn khối lượng và phương trình liên tục** sang **Độ nhớt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Bernoulli
 
@@ -158,8 +146,6 @@ P+\frac12\rho v^2=constant
 
 Trong mô hình này, nếu vận tốc tăng thì áp suất tĩnh giảm. Tuy nhiên câu “dòng chảy càng nhanh thì áp suất luôn càng thấp” là quá đơn giản. Trong hệ thực, còn phải xét hình học, công do bơm hoặc tua-bin, độ nhớt, tính nén được và việc các điểm có nằm trên cùng một đường dòng hay không.
 
-> **Nối mạch:** Trong **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Độ nhớt** nối từ **Phương trình Bernoulli** sang **Số Reynolds**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ nhớt
 
 Độ nhớt (Viscosity / 점성) đặc trưng cho khả năng chất lưu chống lại biến dạng trượt giữa các lớp. Với chất lưu Newton:
@@ -171,8 +157,6 @@ Trong mô hình này, nếu vận tốc tăng thì áp suất tĩnh giảm. Tuy 
 Trong đó `\mu` là độ nhớt động lực học (dynamic viscosity / 동점성계수와 구별되는 점성계수).
 
 Mật ong có độ nhớt lớn hơn nước. Độ nhớt làm cơ năng có tổ chức của dòng chảy chuyển dần thành nội năng thông qua ma sát nội tại giữa các lớp chất lưu.
-
-> **Nối mạch:** Ở chặng này của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Số Reynolds** nối từ **Độ nhớt** sang **Dòng chảy tầng trong ống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số Reynolds
 
@@ -188,8 +172,6 @@ Khi `Re` nhỏ, độ nhớt thường chi phối và dòng chảy có xu hướ
 
 Các số vô thứ nguyên là công cụ rất mạnh trong vật lý và kỹ thuật. Hai hệ có kích thước rất khác nhau vẫn có thể có động lực học tương tự nếu những tỉ số vô thứ nguyên chi phối chúng giống nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Dòng chảy tầng trong ống** nối từ **Số Reynolds** sang **Lực cản, lực nâng và lớp biên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dòng chảy tầng trong ống
 
 Định luật Hagen–Poiseuille cho dòng chảy tầng của chất lưu Newton không nén được trong một ống trụ dài:
@@ -202,8 +184,6 @@ Sự phụ thuộc vào `R^4` rất mạnh. Chỉ cần bán kính ống giảm 
 
 Định luật chỉ áp dụng trong miền dòng chảy tầng và dưới các giả định hình học, điều kiện biên cụ thể.
 
-> **Nối mạch:** Trong **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Lực cản, lực nâng và lớp biên** nối từ **Dòng chảy tầng trong ống** sang **Phương trình Navier–Stokes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lực cản, lực nâng và lớp biên
 
 Trong chất lưu thực, gần bề mặt vật rắn hình thành lớp biên (Boundary Layer / 경계층), nơi vận tốc thay đổi từ gần bằng vận tốc bề mặt do điều kiện không trượt (no-slip condition) tới vận tốc của dòng chảy bên ngoài.
@@ -211,8 +191,6 @@ Trong chất lưu thực, gần bề mặt vật rắn hình thành lớp biên 
 Sự tách lớp biên có thể làm thay đổi mạnh lực cản. Vì vậy lực cản không chỉ phụ thuộc diện tích đối diện dòng chảy mà còn phụ thuộc hình dạng, số Reynolds và trạng thái của lớp biên.
 
 Lực nâng của cánh máy bay cũng không thể được giải thích đầy đủ bằng câu chuyện “không khí phía trên phải đi nhanh hơn để gặp lại không khí phía dưới”. Một mô tả vật lý đúng phải xét phân bố áp suất, tuần hoàn, độ lệch động lượng của dòng khí và nghiệm của các phương trình Euler hoặc Navier–Stokes ở mức mô hình thích hợp.
-
-> **Nối mạch:** Ở chặng này của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Phương trình Navier–Stokes** nối từ **Lực cản, lực nâng và lớp biên** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Navier–Stokes
 
@@ -235,13 +213,9 @@ là một nguồn quan trọng của độ phức tạp trong động lực họ
 
 Động lực học chất lưu tính toán (Computational Fluid Dynamics, CFD / 전산유체역학) rời rạc hóa các phương trình trên lưới hoặc mesh để mô phỏng dòng khí, làm mát, quá trình cháy, khí động học, thời tiết và nhiều hệ kỹ thuật khác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Phương trình Navier–Stokes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Cơ học chất lưu có thể được xem như cơ học Newton sau khi ta thay mô tả “mỗi vật có một vị trí và vận tốc” bằng mô tả “mỗi điểm trong không gian có mật độ, áp suất và vận tốc”. Các định luật bảo toàn vẫn là cốt lõi; cách biểu diễn chuyển từ hạt riêng lẻ sang các trường liên tục.
-
-> **Nối mạch:** Trong **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -252,8 +226,6 @@ Không. Áp suất là lực trên một đơn vị diện tích. Muốn tính l
 ### “Bernoulli áp dụng cho mọi dòng chảy”
 
 Không. Phương trình Bernoulli đơn giản dựa trên các giả định cụ thể. Tổn thất nhớt, bơm, tua-bin, dòng không ổn định hoặc tính nén được có thể yêu cầu phương trình năng lượng tổng quát hơn.
-
-> **Nối mạch:** Ở chặng này của **Cơ học chất lưu: áp suất, lực nổi, phương trình liên tục, Bernoulli và Navier–Stokes**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

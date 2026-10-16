@@ -47,7 +47,7 @@ Cross-layer containment được nối tại [Debugging xuyên abstraction layer
 
 Bảo mật (security / 보안)/độ tin cậy (reliability / 신뢰성) bằng chứng (evidence / 증거) cần đủ để trả lời không chỉ “có lỗi không?” mà “principal nào, chính sách (policy / 정책) phiên bản (version / 버전) nào, credential nào, sản phẩm tạo ra (artifact / 산출물) digest nào, builder/workflow nào, ranh giới (boundary / 경계) nào, thử lại (retry / 재시도)/hàng đợi (queue / 큐) nào và miền lỗi (failure domain / 장애 도메인) nào liên quan?”.
 
-Ưu tiên định danh (identity / 식별자) siêu dữ liệu (metadata / 메타데이터), certificate/đơn vị từ (token / 토큰) issuer-audience-subject, chính sách (policy / 정책) quyết định (decision / 결정), KMS key id/thao tác (operation / 연산), sản phẩm tạo ra (artifact / 산출물) digest/provenance, triển khai (deployment / 배포) cohort, dịch vụ (service / 서비스) ranh giới (boundary / 경계), hết thời gian chờ (timeout / 타임아웃)/thử lại (retry / 재시도) attempt, SLO burn, hàng đợi (queue / 큐)/saturation, kiểm tra (audit / 감사) provenance và containment timeline. Không log raw secret/đơn vị từ (token / 토큰) chỉ để tăng khả năng quan sát (observability / 관측 가능성).
+Ưu tiên định danh (identity / 식별자) siêu dữ liệu (metadata / 메타데이터), certificate/token (토큰) issuer-audience-subject, chính sách (policy / 정책) quyết định (decision / 결정), KMS key id/thao tác (operation / 연산), sản phẩm tạo ra (artifact / 산출물) digest/provenance, triển khai (deployment / 배포) cohort, dịch vụ (service / 서비스) ranh giới (boundary / 경계), hết thời gian chờ (timeout / 타임아웃)/thử lại (retry / 재시도) attempt, SLO burn, hàng đợi (queue / 큐)/saturation, kiểm tra (audit / 감사) provenance và containment timeline. Không log raw secret/token (토큰) chỉ để tăng khả năng quan sát (observability / 관측 가능성).
 
 ## Quy tắc mở rộng
 

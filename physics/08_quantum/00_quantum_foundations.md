@@ -10,8 +10,6 @@ Vấn đề không chỉ là “thiếu một lực mới”. Những thí nghi�
 
 Cơ học lượng tử (Quantum Mechanics / 양자역학) cung cấp một khung toán học khác để mô tả trạng thái và dự đoán phân bố xác suất của kết quả đo. Nó không nói thế giới vi mô “ngẫu nhiên hơn” một cách mơ hồ; nó đặt xác suất vào cấu trúc của lý thuyết theo một cách chính xác.
 
-> **Nối mạch:** Các thí nghiệm cổ điển thất bại cho thấy không chỉ phương trình mà cả trạng thái và phép đo cần khung mới. **Lượng tử hóa** bắt đầu bằng các giá trị rời rạc trong điều kiện biên; **photon và lưỡng tính sóng–hạt** tiếp theo cho thấy cùng một hệ không thể bị ép vào trực giác sóng hoặc hạt cổ điển.
-
 ## Lượng tử hóa: vì sao một số đại lượng nhận giá trị rời rạc?
 
 Từ “lượng tử” ban đầu gắn với ý tưởng một số trao đổi năng lượng xảy ra theo các gói rời rạc. Trong mô hình Planck ban đầu cho bộ dao động điện từ,
@@ -25,8 +23,6 @@ với `n=0,1,2,...`.
 Về sau, ta hiểu hiện tượng rời rạc sâu hơn. Trong nhiều bài toán lượng tử, các giá trị cho phép xuất hiện do trạng thái phải thỏa đồng thời phương trình động lực học và điều kiện biên. Về mặt toán học, đây thường là một bài toán trị riêng (eigenvalue problem), tương tự việc một sợi dây cố định hai đầu chỉ cho phép một số chế độ (mode / 모드) sóng dừng nhất định.
 
 Điểm quan trọng là không phải mọi đại lượng lượng tử đều rời rạc. Hạt tự do có thể có phổ động lượng liên tục. Vì vậy “lượng tử” không đồng nghĩa với “mọi thứ đều chia thành các bậc rời rạc”.
-
-> **Nối mạch:** Lượng tử hóa cho biết vì sao một số mode bị rời rạc, nhưng không nói toàn bộ hệ “lúc là sóng lúc là hạt”; photon và electron cần một mô tả thống nhất. **Trạng thái lượng tử và hàm sóng** cung cấp đối tượng toán học để sinh ra phân bố xác suất của phép đo.
 
 ## Photon và tính lưỡng tính sóng–hạt
 
@@ -47,8 +43,6 @@ Vật chất cũng có tính chất sóng. Quan hệ de Broglie là
 Nhiễu xạ electron xác nhận rằng electron không thể được mô tả đầy đủ như một hạt cổ điển có quỹ đạo xác định trong mọi tình huống.
 
 Cụm từ “lưỡng tính sóng–hạt” hữu ích về lịch sử nhưng dễ gây hiểu nhầm. Một hệ lượng tử không phải lúc thì “biến thành sóng”, lúc thì “biến thành hạt”. Chính xác hơn, hệ được mô tả bằng một trạng thái lượng tử; mô hình sóng và mô hình hạt chỉ là hai trực giác cổ điển nắm bắt được những khía cạnh khác nhau của cùng hệ.
-
-> **Nối mạch:** Lưỡng tính sóng–hạt được thay bằng trạng thái (psi), trong đó (|psi|^2) mới là mật độ xác suất và chuẩn hóa giữ tổng xác suất bằng 1. Vì (psi) mang biên độ và pha, **số phức** tiếp theo giải thích cách các khả năng giao thoa trước khi đo.
 
 ## Trạng thái lượng tử và hàm sóng
 
@@ -78,8 +72,6 @@ P(a\le x\le b)=\int_a^b|\psi(x,t)|^2dx.
 
 Do đó hàm sóng không chỉ là một “đường cong dao động”; nó là đối tượng từ đó lý thuyết sinh ra xác suất cho phép đo vị trí.
 
-> **Nối mạch:** Hàm sóng phức giữ thông tin pha; các hạng giao thoa trong (|psi_1+psi_2|^2) cho thấy xác suất không thể cộng như các lựa chọn cổ điển độc lập. **Chồng chập lượng tử** tổng quát hóa chính sự cộng biên độ này thành trạng thái gồm nhiều khả năng cơ sở.
-
 ## Vì sao số phức xuất hiện?
 
 Số phức cho phép pha được mã hóa trực tiếp trong biên độ lượng tử. Khi hai khả năng kết hợp,
@@ -100,8 +92,6 @@ Hai hạng chéo cuối phụ thuộc pha tương đối và tạo ra giao thoa.
 
 Vì vậy phần phức của trạng thái không phải một thủ thuật tính toán tùy ý; nó mang thông tin vật lý về pha và sự chồng chập.
 
-> **Nối mạch:** Ở chặng này của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Chồng chập lượng tử** nối từ **Vì sao số phức xuất hiện?** sang **Phương trình Schrödinger**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chồng chập lượng tử
 
 Nếu `|a\rangle` và `|b\rangle` là hai trạng thái cơ sở, một trạng thái lượng tử có thể là
@@ -121,8 +111,6 @@ Chồng chập (superposition / 중첩) là tổ hợp tuyến tính trong khôn
 Điểm quan trọng là hệ số `\alpha,\beta` còn mang pha tương đối. Vì vậy một chồng chập kết hợp (coherent superposition) chứa nhiều thông tin hơn một hỗn hợp thống kê cổ điển chỉ cho biết xác suất xuất hiện của từng trạng thái.
 
 Không nên hình dung chồng chập như một vật thể cổ điển bị “chẻ đôi” thành hai phần vật chất. Nó là cấu trúc của trạng thái lượng tử trong không gian Hilbert.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Phương trình Schrödinger** nối từ **Chồng chập lượng tử** sang **Vì sao toán tử động năng chứa Laplacian?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Schrödinger
 
@@ -156,8 +144,6 @@ i\hbar\frac{\partial\psi}{\partial t}
 
 Phương trình này không phải Newton II được viết bằng ký hiệu khác. Newton mô tả quỹ đạo `x(t)` của chất điểm cổ điển; Schrödinger mô tả sự tiến hóa của biên độ trạng thái lượng tử.
 
-> **Nối mạch:** Trong **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Vì sao toán tử động năng chứa Laplacian?** nối từ **Phương trình Schrödinger** sang **Đại lượng quan sát và toán tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao toán tử động năng chứa Laplacian?
 
 Trong biểu diễn vị trí, toán tử động lượng là
@@ -182,8 +168,6 @@ ta thu được toán tử động năng
 Laplacian `\nabla^2\psi` đo độ cong không gian của hàm sóng. Một trạng thái biến thiên rất nhanh theo không gian thường chứa thành phần động lượng lớn hơn, vì biến thiên không gian mạnh tương ứng với phổ số sóng rộng hoặc số sóng lớn.
 
 Đây là một cầu nối quan trọng giữa Fourier, động lượng và động năng lượng tử.
-
-> **Nối mạch:** Ở chặng này của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Đại lượng quan sát và toán tử** nối từ **Vì sao toán tử động năng chứa Laplacian?** sang **Commutator và nguyên lý bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại lượng quan sát và toán tử
 
@@ -217,8 +201,6 @@ Giá trị kỳ vọng là
 
 Giá trị kỳ vọng không nhất thiết là kết quả của một phép đo riêng lẻ. Nó là trung bình dự đoán nếu ta chuẩn bị cùng một trạng thái nhiều lần và lặp phép đo dưới cùng điều kiện.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Commutator và nguyên lý bất định** nối từ **Đại lượng quan sát và toán tử** sang **Liên hệ Fourier của độ bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Commutator và nguyên lý bất định
 
 Với hai toán tử `\hat A` và `\hat B`, commutator được định nghĩa là
@@ -241,8 +223,6 @@ Từ cấu trúc này suy ra quan hệ bất định Heisenberg:
 
 `\Delta x` và `\Delta p` là độ lệch chuẩn của phân bố kết quả đo vị trí và động lượng trong cùng một trạng thái, không phải “sai số của dụng cụ” theo nghĩa thông thường.
 
-> **Nối mạch:** Trong **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Liên hệ Fourier của độ bất định** nối từ **Commutator và nguyên lý bất định** sang **Miền áp dụng và giới hạn của phương trình Schrödinger**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ Fourier của độ bất định
 
 Một gói sóng hẹp trong không gian cần nhiều thành phần số sóng `k` để tổng hợp. Vì
@@ -255,8 +235,6 @@ phân bố động lượng sẽ rộng hơn. Ngược lại, một trạng thá
 
 Điều này không phải toàn bộ nội dung của nguyên lý bất định, nhưng nó cung cấp trực giác toán học rất mạnh cho cặp vị trí–động lượng.
 
-> **Nối mạch:** Ở chặng này của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Liên hệ Fourier của độ bất định** đặt tiêu chí; **Miền áp dụng và giới hạn của phương trình Schrödinger** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Điều kiện biên có ý nghĩa vật lý** mở rộng hệ quả.
-
 ## Miền áp dụng và giới hạn của phương trình Schrödinger
 
 Phương trình Schrödinger dạng trên là lý thuyết **không tương đối tính**. Nó phù hợp khi vận tốc đặc trưng nhỏ so với tốc độ ánh sáng và khi quá trình không đòi hỏi tạo–hủy hạt.
@@ -264,8 +242,6 @@ Phương trình Schrödinger dạng trên là lý thuyết **không tương đ�
 Khi hiệu ứng tương đối tính trở nên quan trọng, cần các phương trình như Klein–Gordon hoặc Dirac; khi số hạt không còn cố định và tạo–hủy hạt trở thành một phần cơ bản của hiện tượng, mô tả tự nhiên hơn là lý thuyết trường lượng tử (quantum field theory).
 
 Ngoài ra, mô tả bằng một hàm sóng đơn phù hợp nhất cho trạng thái thuần. Hệ mở tương tác mạnh với môi trường thường cần ma trận mật độ (density matrix) và động lực học hệ mở.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Miền áp dụng và giới hạn của phương trình Schrödinger** đặt tiêu chí; **Điều kiện biên có ý nghĩa vật lý** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Điều kiện biên có ý nghĩa vật lý
 
@@ -278,8 +254,6 @@ Trong nhiều bài toán lượng tử, điều kiện biên quyết định ph�
 chỉ cho phép các chế độ (mode / 모드) có số sóng rời rạc. Vì thế năng lượng cũng rời rạc.
 
 Điều này minh họa một nguyên tắc chung: **lượng tử hóa nhiều khi xuất hiện từ sự kết hợp giữa phương trình động lực học và điều kiện biên**, chứ không phải vì ta “ép” các con số thành số nguyên một cách tùy ý.
-
-> **Nối mạch:** Trong **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Điều kiện biên có ý nghĩa vật lý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -294,8 +268,6 @@ chuẩn bị trạng thái
 → phân bố xác suất kết quả đo
 → so sánh thống kê với thí nghiệm
 ```
-
-> **Nối mạch:** Ở chặng này của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -314,8 +286,6 @@ Sai. Một số phổ là rời rạc, một số liên tục và một số có
 ### “Giá trị kỳ vọng là giá trị chắc chắn sẽ đo được”
 
 Không. Giá trị kỳ vọng là trung bình thống kê qua nhiều phép chuẩn bị và đo lặp lại. Một phép đo đơn có thể cho một trị riêng khác xa giá trị kỳ vọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng lượng tử: trạng thái, hàm sóng, toán tử và độ bất định**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -31,7 +31,7 @@ user   → request
 assistant → desired answer
 ```
 
-Mô hình (model / 모델) học rằng một số đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스) đóng vai trò instruction và đầu ra (output / 출력) nên theo các ràng buộc (constraints / 제약조건들) đó.
+Mô hình (model / 모델) học rằng một số token (토큰) chuỗi (sequence / 시퀀스) đóng vai trò instruction và đầu ra (output / 출력) nên theo các ràng buộc (constraints / 제약조건들) đó.
 
 Từ cách mô hình nhận diện instruction, ta chuyển sang câu hỏi về dữ liệu: những ví dụ nào giúp nó học được hành vi đó một cách nhất quán?
 

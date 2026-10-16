@@ -14,8 +14,6 @@ Church–Turing thesis không phải theorem vật lý chứng minh mọi máy c
 
 Programming languages general-purpose hiện đại về lý thuyết thường Turing-complete nếu có đủ bộ nhớ (memory / 메모리) và điều khiển (control / 제어) constructs. Điều đó không có nghĩa chúng giống nhau về hiệu năng (performance / 성능), an toàn (safety / 안전) hay ergonomics; chỉ nói về lớp (class / 클래스) functions có thể biểu đạt.
 
-> **Nối mạch:** Mô hình computation xác định thao tác và input; decidable nghĩa là luôn có thủ tục kết thúc, còn undecidable đặt giới hạn lý thuyết mà hệ thống thực phải xử lý bằng timeout, approximation hoặc restriction.
-
 ## Decidable và undecidable
 
 Một quyết định (decision / 결정) bài toán (problem / 문제) hỏi yes/no. Nếu tồn tại thuật toán (algorithm / 알고리즘) luôn terminate và trả lời đúng cho mọi đầu vào (input / 입력), bài toán (problem / 문제) là decidable (결정 가능). Nếu không có thuật toán (algorithm / 알고리즘) như vậy, bài toán (problem / 문제) undecidable (결정 불가능).
@@ -37,21 +35,15 @@ Giờ hỏi `D(D)` làm gì. Nếu `H(D,D)` nói halt, `D` cố tình vòng lặ
 
 Điểm quan trọng không phải memorize trick mà là self-reference tạo một đầu vào (input / 입력) phá mọi decider giả định.
 
-> **Nối mạch:** **Tại sao undecidability liên quan công việc thực?** nối từ **Decidable và undecidable** sang **Recognizable khác decidable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tại sao undecidability liên quan công việc thực?
 
 Static analyzer, trình biên dịch (compiler / 컴파일러) và IDE có thể tìm nhiều bugs, nhưng không thể có một công cụ (tool / 도구) tổng quát hoàn hảo quyết định mọi ngữ nghĩa (semantic / 의미적) thuộc tính (property / 속성) của mọi program. Rice's theorem tổng quát hóa rằng mọi non-trivial ngữ nghĩa (semantic / 의미적) thuộc tính (property / 속성) của partial functions computed by programs là undecidable trong mô hình (model / 모델) đủ mạnh.
 
 Điều này giải thích tại sao xác minh (verification / 확인) thực tế phải dùng restrictions, approximations, annotations hoặc domain-specific các mô hình (models / 모델들). kiểu (type / 타입) checker có thể bảo đảm lớp (class / 클래스) lỗi nhất định vì ngôn ngữ (language / 언어)/hệ kiểu (type system / 타입 시스템) giới hạn câu hỏi. mô hình (model / 모델) checker có thể exhaust trạng thái (state / 상태) không gian (space / 공간) hữu hạn. Linter chấp nhận false positives/negatives để hữu ích thực dụng.
 
-> **Nối mạch:** **Recognizable khác decidable** nối từ **Tại sao undecidability liên quan công việc thực?** sang **Formal languages và automata như phổ các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Recognizable khác decidable
 
 Có problems mà nếu answer là “yes”, một machine có thể eventually accept, nhưng nếu answer “no” có thể chạy mãi. Đây là recognizable/semi-decidable (반결정 가능). Distinction này quan trọng trong lý thuyết (theory / 이론) vì “có thể xác nhận lời giải khi tìm thấy” không đồng nghĩa “luôn quyết định được có lời giải hay không”.
-
-> **Nối mạch:** **Formal languages và automata như phổ các mô hình (models / 모델들)** nối từ **Recognizable khác decidable** sang **Computable không có nghĩa practical**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formal languages và automata như phổ các mô hình (models / 모델들)
 
@@ -61,8 +53,6 @@ Hierarchy này cho thấy thêm bộ nhớ (memory / 메모리)/cấu trúc (str
 
 Xem thêm phần trình biên dịch (compiler / 컴파일러) tại [Compiler, Interpreter, VM và JIT](../04_programming_languages/03_compilers_interpreters_vm_and_jit.md).
 
-> **Nối mạch:** **Computable không có nghĩa practical** nối từ **Formal languages và automata như phổ các mô hình (models / 모델들)** sang **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Computable không có nghĩa practical
 
 Một bài toán (problem / 문제) có thuật toán (algorithm / 알고리즘) vẫn có thể cần tài nguyên (resource / 자원) khổng lồ. Đây là vùng của computational độ phức tạp (complexity / 복잡도). `O(2^n)` thuật toán (algorithm / 알고리즘) có thể terminate về lý thuyết nhưng không khả thi khi `n` lớn. độ phức tạp (complexity / 복잡도) classes như P, NP, PSPACE phân loại problems theo resources.
@@ -71,19 +61,13 @@ P gồm quyết định (decision / 결정) problems solvable in polynomial th�
 
 Chapter [Complexity & asymptotic analysis](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md) tập trung lập luận (reasoning / 추론) resources thực dụng hơn.
 
-> **Nối mạch:** **Computable không có nghĩa practical** đặt tiêu chí; **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Randomness và approximation không phá giới hạn lô-gic (logic / 논리)
 
 Randomized algorithms có thể cải thiện expected hiệu năng (performance / 성능) hoặc cho xác suất đúng rất cao. Approximation algorithms có thể tìm lời giải gần optimal cho tối ưu hóa (optimization / 최적화) problems khó. Heuristics có thể giải tốt workloads thực tế. Nhưng các kỹ thuật này thay specification hoặc guarantees; chúng không biến undecidable general bài toán (problem / 문제) thành decidable một cách thần kỳ.
 
-> **Nối mạch:** **Randomness và approximation không phá giới hạn lô-gic (logic / 논리)** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Có ba câu hỏi khác nhau: **Có tồn tại thuật toán (algorithm / 알고리즘) không? thuật toán (algorithm / 알고리즘) đó cần bao nhiêu tài nguyên (resource / 자원)? hiện thực (implementation / 구현) cụ thể chạy tốt trên tải công việc (workload / 워크로드)/hardware này không?** Computability, độ phức tạp (complexity / 복잡도) và các hệ thống (systems / 시스템들) hiệu năng (performance / 성능) trả lời ba tầng khác nhau.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,8 +76,6 @@ Randomized algorithms có thể cải thiện expected hiệu năng (performance
 **“NP nghĩa là không polynomial.”** NP là nondeterministic polynomial thời gian (time / 시간) / polynomial-time verifiable theo characterization phổ biến. Có problems thuộc cả P và NP.
 
 **“Undecidable nghĩa là không bao giờ giải được instance nào.”** Ta vẫn giải được nhiều instances hoặc restricted subclasses. Điều không thể là một thuật toán (algorithm / 알고리즘) tổng quát luôn đúng và terminate cho mọi instance theo bài toán (problem / 문제) specification.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -6,13 +6,9 @@
 
 Dataset được tạo bởi category, sensor, sampling và institutional purpose. Missingness, label chính sách (policy / 정책) và historical practice đi vào mô hình (model / 모델) trước khi thuật toán (algorithm / 알고리즘) chạy. Privacy vì thế không chỉ là giấu một trường dữ liệu (field / 필드); nó gồm suy luận (inference / 추론), linkage, persistence, truy cập (access / 접근) và power to refuse.
 
-> **Chuyển mạch:** Data cần provenance và interpretation; automation phân phối trách nhiệm qua decision pipeline, còn infrastructure/path dependence giải thích vì sao lựa chọn cũ tiếp tục định hình lựa chọn mới.
-
 ## Automation và responsibility gap
 
 Khi quyết định được phân tán qua sản phẩm (product / 제품) nhóm (team / 팀), vendor, mô hình (model / 모델), operator và institution, lỗi dễ trở thành “không ai chịu trách nhiệm”. Responsibility ánh xạ (mapping / 매핑) cần chỉ rõ who designed, who deployed, who benefited, who could foresee, who can intervene và who repairs harm. nhật ký kiểm tra (audit log / 감사 로그) không thay thế quản trị (governance / 거버넌스) nếu không có quyền điều tra và sửa.
-
-> **Chuyển mạch:** Automation tạo responsibility gap khi decision chain bị che; infrastructure/path dependence tiếp theo chỉ ra nơi dữ liệu, defaults và maintenance lock-in kết quả.
 
 ## Hạ tầng (infrastructure / 인프라) và đường dẫn (path / 경로) dependence
 

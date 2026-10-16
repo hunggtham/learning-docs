@@ -21,8 +21,6 @@ Ví dụ phù hợp:
 
 Khi viết ở mức này, không được biến tác động (effect / 효과) trung bình thành luật áp dụng cho mọi cá nhân.
 
-> **Nối mạch:** Trong **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **1. Bằng chứng khoa học tương đối vững — Established bằng chứng (evidence / 증거)** đặt vấn đề; **2. Lý thuyết hiện đại — hiện tại (current / 현재) lý thuyết (theory / 이론)** đối chiếu bằng chứng, rồi **3. Giả thuyết — Hypothesis** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Lý thuyết hiện đại — hiện tại (current / 현재) lý thuyết (theory / 이론)
 
 **Lý thuyết hiện đại (current theory)** là mô hình (model / 모델) đang được active research dùng để tổ chức dữ liệu, sinh prediction và kết nối findings, nhưng vẫn có thể bị sửa hoặc thay thế.
@@ -37,8 +35,6 @@ Ví dụ:
 - hiện tại (current / 현재) theories of consciousness như GNWT, IIT, recurrent-processing hoặc higher-order approaches.
 
 Một hiện tại (current / 현재) lý thuyết (theory / 이론) không đồng nghĩa scientific consensus tuyệt đối. Chapter cần nêu prediction chính, bằng chứng (evidence / 증거) hỗ trợ (support / 지원) và competing mô hình (model / 모델) nếu relevant.
-
-> **Nối mạch:** Ở chặng này của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Giả thuyết — Hypothesis** nối từ **2. Lý thuyết hiện đại — hiện tại (current / 현재) lý thuyết (theory / 이론)** sang **4. Vấn đề còn tranh luận — Debated interpretation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Giả thuyết — Hypothesis
 
@@ -55,8 +51,6 @@ Ví dụ:
 
 Khi dùng hypothesis, chapter nên nói rõ bằng chứng (evidence / 증거) còn thiếu gì: replication, temporal thứ tự (ordering / 순서), nhân quả (causal / 인과적) manipulation, đo lường (measurement / 측정) kiểm tra hợp lệ (validation / 검증) hay bên ngoài (external / 외부) generalization.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Vấn đề còn tranh luận — Debated interpretation** nối từ **3. Giả thuyết — Hypothesis** sang **5. Lý thuyết lịch sử — Historical lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Vấn đề còn tranh luận — Debated interpretation
 
 **Vấn đề còn tranh luận (debated interpretation)** dùng khi phenomenon hoặc dữ liệu có thật nhưng cách giải thích, cơ chế (mechanism / 메커니즘), tác động (effect / 효과) magnitude hoặc generalizability chưa thống nhất.
@@ -70,8 +64,6 @@ Ví dụ:
 - role cụ thể của appraisal vs constructed-emotion accounts trong affective science.
 
 Ở mức này thư viện (library / 라이브러리) phải trình bày competing explanations hoặc nguồn bất định (uncertainty / 불확실성). Không chọn một account làm default nếu bằng chứng (evidence / 증거) chưa cho phép.
-
-> **Nối mạch:** Trong **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Lý thuyết lịch sử — Historical lý thuyết (theory / 이론)** nối từ **4. Vấn đề còn tranh luận — Debated interpretation** sang **6. bằng chứng (evidence / 증거) cho intervention không đồng nghĩa truth của toàn bộ lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Lý thuyết lịch sử — Historical lý thuyết (theory / 이론)
 
@@ -89,8 +81,6 @@ Freud, Adler và Jung thuộc nhóm này khi nói về hệ thống tổng thể
 
 Ví dụ, **xử lý ngoài ý thức (nonconscious processing)** là bằng chứng (evidence / 증거) hiện đại tương đối vững, nhưng không tự xác nhận động (dynamic / 동적) unconscious của Freud. Recurring cultural motifs không tự chứng minh collective unconscious của Jung. hiện đại (modern / 현대적) motivation research không tự chứng minh Adler's teleological hệ thống (system / 시스템).
 
-> **Nối mạch:** Ở chặng này của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Lý thuyết lịch sử — Historical lý thuyết (theory / 이론)** đặt vấn đề; **6. bằng chứng (evidence / 증거) cho intervention không đồng nghĩa truth của toàn bộ lý thuyết (theory / 이론)** đối chiếu bằng chứng, rồi **7. bằng chứng (evidence / 증거) status của một claim có thể thay đổi theo mức (level / 수준)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. bằng chứng (evidence / 증거) cho intervention không đồng nghĩa truth của toàn bộ lý thuyết (theory / 이론)
 
 Một psychotherapy có thể hiệu quả mà không chứng minh mọi premise của trường phái tạo ra nó.
@@ -102,8 +92,6 @@ Every historical/theoretical claim is true
 ```
 
 Hiện đại (modern / 현대적) psychodynamic therapy, CBT, ACT, DBT, systemic therapy hoặc medication đều phải được đánh giá bằng kết quả (outcome / 결과) research, cơ chế (mechanism / 메커니즘) research, adverse effects và comparative bằng chứng (evidence / 증거) riêng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. bằng chứng (evidence / 증거) cho intervention không đồng nghĩa truth của toàn bộ lý thuyết (theory / 이론)** đặt vấn đề; **7. bằng chứng (evidence / 증거) status của một claim có thể thay đổi theo mức (level / 수준)** đối chiếu bằng chứng, rồi **8. Format khuyến nghị trong chapter** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. bằng chứng (evidence / 증거) status của một claim có thể thay đổi theo mức (level / 수준)
 
@@ -121,8 +109,6 @@ Cùng một topic có thể chứa nhiều status:
 
 Không gắn một status duy nhất cho cả chapter nếu chapter chứa nhiều claim ở mức (level / 수준) khác nhau.
 
-> **Nối mạch:** Trong **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. bằng chứng (evidence / 증거) status của một claim có thể thay đổi theo mức (level / 수준)** đặt vấn đề; **8. Format khuyến nghị trong chapter** đối chiếu bằng chứng, rồi **9. Không dùng citation như “con dấu khoa học”** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 8. Format khuyến nghị trong chapter
 
 Khi rủi ro (risk / 위험) of confusion cao, dùng khối (block / 블록) ngắn:
@@ -130,8 +116,6 @@ Khi rủi ro (risk / 위험) of confusion cao, dùng khối (block / 블록) ng�
 > **Trạng thái bằng chứng:** Bằng chứng tương đối vững / Lý thuyết hiện đại / Giả thuyết / Còn tranh luận / Lý thuyết lịch sử.
 
 Sau đó giải thích **vì sao** claim ở mức đó.
-
-> **Nối mạch:** Ở chặng này của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Không dùng citation như “con dấu khoa học”** nối từ **8. Format khuyến nghị trong chapter** sang **10. Không dùng neuroscience để nâng cấp status tùy tiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Không dùng citation như “con dấu khoa học”
 
@@ -150,15 +134,11 @@ Một claim không trở thành evidence-based chỉ vì có paper. Cần xem:
 
 Một systematic rà soát (review / 검토) hoặc meta-analysis vẫn có thể cho kết luận yếu nếu nguồn (source / 소스) studies đo construct kém hoặc confounded.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. Không dùng neuroscience để nâng cấp status tùy tiện** nối từ **9. Không dùng citation như “con dấu khoa học”** sang **11. Không biến phần ứng dụng thành self-help**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Không dùng neuroscience để nâng cấp status tùy tiện
 
 Brain correlate không tự động chứng minh psychological cơ chế (mechanism / 메커니즘). fMRI activation, EEG thành phần (component / 컴포넌트) hoặc connectivity association vẫn có thể là correlational bằng chứng (evidence / 증거).
 
 Ngược lại, psychological explanation không trở nên “kém khoa học” chỉ vì chưa map hoàn toàn sang một brain region. mức (level / 수준) of phân tích (analysis / 분석) phải phù hợp với question.
-
-> **Nối mạch:** Trong **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. Không biến phần ứng dụng thành self-help** nối từ **10. Không dùng neuroscience để nâng cấp status tùy tiện** sang **12. Historical psychology: template bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Không biến phần ứng dụng thành self-help
 
@@ -171,8 +151,6 @@ Applied chapter phải chỉ rõ:
 5. khi nào recommendation chỉ là low-risk heuristic chứ không phải established intervention.
 
 Một tip dễ nhớ không được trình bày như psychological law chỉ vì nó phổ biến.
-
-> **Nối mạch:** Ở chặng này của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **12. Historical psychology: template bắt buộc** nối từ **11. Không biến phần ứng dụng thành self-help** sang **13. mô hình tư duy (mental model / 사고 모델) chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Historical psychology: template bắt buộc
 
@@ -188,8 +166,6 @@ Bối cảnh lịch sử
 → Giới hạn / tranh luận
 → Cách đọc hiện đại
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **13. mô hình tư duy (mental model / 사고 모델) chung** tổng hợp từ **12. Historical psychology: template bắt buộc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. mô hình tư duy (mental model / 사고 모델) chung
 
@@ -214,8 +190,6 @@ Confidence update
 ```
 
 Historical lý thuyết (theory / 이론) có thể cung cấp câu hỏi, metaphor hoặc vocabulary, nhưng chỉ được nâng status khi claim được operationalize, kiểm thử (test / 테스트) và đứng vững trước alternative explanation.
-
-> **Nối mạch:** Trong **Quy ước mức bằng chứng trong Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Kết nối kiến thức** tổng hợp từ **13. mô hình tư duy (mental model / 사고 모델) chung** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

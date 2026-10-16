@@ -12,8 +12,6 @@ Carbon là ví dụ kinh điển: kim cương và graphite đều chỉ gồm ca
 
 Vì vậy câu hỏi đúng không chỉ là “vật liệu gồm nguyên tố gì?” mà còn là “các nguyên tử đang liên kết và sắp xếp như thế nào?”.
 
-> **Nối mạch:** Composition sets possible bonds; bonds organize into microstructure, and defects can then become controlled features that determine conductivity, strength or catalytic activity.
-
 ## Liên kết → vi cấu trúc
 
 Tinh thể hóa, tách pha, đóng gói polymer và hình thành hạt tinh thể tạo nên **vi cấu trúc (microstructure)** lớn hơn nhiều so với kích thước phân tử.
@@ -21,8 +19,6 @@ Tinh thể hóa, tách pha, đóng gói polymer và hình thành hạt tinh th�
 Nhiệt động lực học cho biết pha nào ổn định, nhưng động học và điều kiện gia công quyết định kích thước hạt, mức độ siêu bền, mật độ khuyết tật và cấu trúc bề mặt phân cách.
 
 Hai mẫu có cùng thành phần và cùng pha danh nghĩa vẫn có thể có tính chất khác nhau nếu lịch sử gia công khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Khuyết tật có thể tạo chức năng** nối từ **Liên kết → vi cấu trúc** sang **Bề mặt phân cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật có thể tạo chức năng
 
@@ -32,8 +28,6 @@ Lệch mạng (**dislocation**) cho phép kim loại biến dạng dẻo. Chất
 
 Vì vậy kỹ thuật vật liệu thường là nghệ thuật **thiết kế mật độ và loại khuyết tật**, không phải cố tạo tinh thể hoàn hảo tuyệt đối.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Bề mặt phân cách** nối từ **Khuyết tật có thể tạo chức năng** sang **Tính chất cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bề mặt phân cách
 
 Biên hạt, bề mặt điện cực–chất điện ly và bề mặt giữa các pha trong composite có thể chi phối vận chuyển, ăn mòn và cơ chế hỏng.
@@ -42,15 +36,11 @@ Trong pin, phản ứng phụ thường bắt đầu ở bề mặt phân cách.
 
 Do đó hóa học bề mặt và bề mặt phân cách là phần trung tâm của khoa học vật liệu.
 
-> **Nối mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Tính chất cơ học** nối từ **Bề mặt phân cách** sang **Vật liệu năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính chất cơ học
 
 Độ bền liên kết ảnh hưởng môđun đàn hồi, nhưng độ bền kéo, độ dai và khả năng chống nứt còn phụ thuộc hình học vết nứt, chuyển động lệch mạng, kích thước hạt và các cơ chế tiêu tán năng lượng.
 
 Một vật liệu có liên kết rất mạnh vẫn có thể giòn. Vì vậy “liên kết mạnh” không đồng nghĩa “vật liệu dai”.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** nối từ **Tính chất cơ học** sang **Quy trình chế tạo là một phần của vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu năng lượng
 
@@ -60,15 +50,11 @@ Pin nhiên liệu cần chất dẫn ion, điện cực xúc tác và bề mặt
 
 Các yêu cầu này đều bắt đầu từ hóa học của liên kết và cấu trúc điện tử nhưng chỉ trở thành hiệu năng thiết bị khi được tổ chức ở nhiều thang cấu trúc.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** đặt đầu vào cho **Quy trình chế tạo là một phần của vật liệu**, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Quy trình chế tạo là một phần của vật liệu
 
 Nung, tôi, ủ, cán, ép, kéo sợi, trùng hợp, kết tinh hoặc lắng đọng màng đều có thể thay đổi vi cấu trúc mà không nhất thiết thay đổi thành phần hóa học tổng.
 
 Vì vậy trong khoa học vật liệu, “vật liệu là gì?” không thể tách khỏi “vật liệu đã được tạo ra như thế nào?”.
-
-> **Nối mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Mô hình tư duy** tổng hợp từ **Quy trình chế tạo là một phần của vật liệu** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

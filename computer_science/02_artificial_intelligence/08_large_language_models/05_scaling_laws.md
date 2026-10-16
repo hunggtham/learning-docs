@@ -24,7 +24,7 @@ Ba trục chỉ cho biết những đại lượng đang được phân bổ; b�
 
 Tăng parameters mở rộng hàm (function / 함수) lớp (class / 클래스) và biểu diễn (representation / 표현) sức chứa (capacity / 용량), nhưng năng lực (capability / 역량) còn phụ thuộc kiến trúc (architecture / 아키텍처), dữ liệu (data / 데이터) chất lượng (quality / 품질), optimizer, ngữ cảnh (context / 맥락) length và huấn luyện (training / 학습) recipe. Hai các mô hình (models / 모델들) cùng parameter count có thể khác đáng kể.
 
-**Active parameters** cũng khác total parameters trong architectures như Mixture-of-Experts (MoE), nơi mỗi đơn vị từ (token / 토큰) chỉ đi qua một subset experts. Vì vậy “mô hình (model / 모델) 100B” không luôn có suy luận (inference / 추론) chi phí (cost / 비용) tương đương mô hình (model / 모델) dense 100B.
+**Active parameters** cũng khác total parameters trong architectures như Mixture-of-Experts (MoE), nơi mỗi token (토큰) chỉ đi qua một subset experts. Vì vậy “mô hình (model / 모델) 100B” không luôn có suy luận (inference / 추론) chi phí (cost / 비용) tương đương mô hình (model / 모델) dense 100B.
 
 Compute-optimal chỉ có ý nghĩa khi biết mỗi token đã được dùng bao nhiêu lần và dữ liệu có còn thông tin mới hay không. Vì vậy cần chuyển từ kích thước mô hình sang token budget và số epoch thực tế.
 
@@ -42,7 +42,7 @@ Token và epoch mô tả lượng phơi nhiễm, nhưng không nói trực tiế
 
 Trong web-scale pretraining, corpus có thể được traversed một hoặc vài lần tùy recipe. Repeating dữ liệu (data / 데이터) quá nhiều tăng memorization và diminishing returns. Nhưng curated high-quality dữ liệu (data / 데이터) đôi khi được intentionally upsampled.
 
-Do đó raw đơn vị từ (token / 토큰) count không bằng unique thông tin (information / 정보) content.
+Do đó raw token (토큰) count không bằng unique thông tin (information / 정보) content.
 
 Token và epoch mô tả lượng phơi nhiễm, nhưng không nói trực tiếp năng lực sẽ biểu hiện ra sao. Ta cần phân biệt đường giảm loss với đường tăng capability trước khi diễn giải một kết quả benchmark.
 

@@ -26,7 +26,7 @@ system/developer policy
 → conversation history
 ```
 
-Tuy nhiên Transformer chỉ nhận đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스). Authority hierarchy phải được mô hình (model / 모델) học qua huấn luyện (training / 학습) và reinforced bởi ứng dụng (application / 애플리케이션) boundaries.
+Tuy nhiên Transformer chỉ nhận token (토큰) chuỗi (sequence / 시퀀스). Authority hierarchy phải được mô hình (model / 모델) học qua huấn luyện (training / 학습) và reinforced bởi ứng dụng (application / 애플리케이션) boundaries.
 
 Vì vậy untrusted dữ liệu (data / 데이터) nên được clearly delimited và không được cấp quyền công cụ (tool / 도구) chỉ vì văn bản (text / 텍스트) trong document yêu cầu.
 
@@ -147,7 +147,7 @@ Compression tiết kiệm token nhưng tạo thêm một bước lossy; mọi d�
 
 ## Ngữ cảnh (context / 맥락) compression
 
-Retrieved material có thể được summarized/extracted trước khi đưa mô hình (model / 모델) chính. Điều này giảm đơn vị từ (token / 토큰) chi phí (cost / 비용) nhưng introduces another lossy mô hình (model / 모델) step.
+Retrieved material có thể được summarized/extracted trước khi đưa mô hình (model / 모델) chính. Điều này giảm token (토큰) chi phí (cost / 비용) nhưng introduces another lossy mô hình (model / 모델) step.
 
 Compression phù hợp khi nguồn (source / 소스) rất dài và truy vấn (query / 쿼리) chỉ cần subset thông tin (information / 정보).
 

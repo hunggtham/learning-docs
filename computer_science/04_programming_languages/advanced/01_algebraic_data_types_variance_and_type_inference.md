@@ -16,8 +16,6 @@ Một giá trị (value / 값) `User` chứa đồng thời một giá trị (va
 
 Struct, tuple, bản ghi (record / 레코드) và lớp (class / 클래스) data-holder thường mang intuition này.
 
-> **Nối mạch:** **Sản phẩm (product / 제품) kiểu (type / 타입): nhiều phần cùng tồn tại** nêu quy tắc; **Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **Invalid trạng thái (state / 상태) explosion** mở rộng hệ quả.
-
 ## Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)
 
 Sum kiểu (type / 타입) biểu diễn giá trị (value / 값) thuộc **một trong các alternatives**:
@@ -31,8 +29,6 @@ PaymentResult = Success(Receipt)
 Thay vì đối tượng (object / 객체) có nhiều nullable fields và flag khó đồng bộ, sum kiểu (type / 타입) encode trực tiếp máy trạng thái (state machine / 상태 머신) hợp lệ.
 
 Trong Rust có `enum`, Kotlin có sealed hierarchy, TypeScript có discriminated union, functional languages có ADT bản địa (native / 네이티브). Java sealed types + records giúp gần hơn mô hình này.
-
-> **Nối mạch:** **Sum kiểu (type / 타입): một trong nhiều trường hợp (case / 사례)** nêu quy tắc; **Invalid trạng thái (state / 상태) explosion** thử quy tắc trong tình huống, rồi **Mẫu (pattern / 패턴) matching và exhaustiveness** mở rộng hệ quả.
 
 ## Invalid trạng thái (state / 상태) explosion
 
@@ -48,8 +44,6 @@ Ta có thể tạo trạng thái vô nghĩa như `status=SUCCESS` nhưng `receip
 
 ADT chuyển nhiều quy tắc (rule / 규칙) thời gian chạy (runtime / 런타임) thành quy tắc (rule / 규칙) construction/kiểu (type / 타입) checking. Đây là ví dụ principle: **make invalid states unrepresentable** khi chi phí phù hợp.
 
-> **Nối mạch:** **Mẫu (pattern / 패턴) matching và exhaustiveness** nối từ **Invalid trạng thái (state / 상태) explosion** sang **Parametric polymorphism**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mẫu (pattern / 패턴) matching và exhaustiveness
 
 Nếu sum kiểu (type / 타입) có tập cases đóng, trình biên dịch (compiler / 컴파일러) có thể kiểm tra mẫu (pattern / 패턴) matching đã xử lý đủ trường hợp (case / 사례) chưa.
@@ -58,15 +52,11 @@ Khi thêm trường hợp (case / 사례) mới, compile lỗi (error / 오류) 
 
 Điều này mạnh hơn chuỗi `if(status == "...")` phân tán vì relationship giữa variants và consumers được hệ kiểu (type system / 타입 시스템) theo dõi.
 
-> **Nối mạch:** **Parametric polymorphism** nối từ **Mẫu (pattern / 패턴) matching và exhaustiveness** sang **Variance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Parametric polymorphism
 
 Generic kiểu (type / 타입) như `List<T>` cho phép viết thuật toán (algorithm / 알고리즘) độc lập kiểu (type / 타입) cụ thể. Nhưng câu hỏi khó xuất hiện khi có subtype quan hệ (relation / 관계).
 
 Nếu `Dog <: Animal`, liệu `List<Dog> <: List<Animal>`? Không tự động. Nếu cho phép và `List<Animal>` có phương thức (method / 메서드) add, ta có thể add `Cat` vào danh sách (list / 목록) thực chất là `List<Dog>`, phá kiểu (type / 타입) an toàn (safety / 안전).
-
-> **Nối mạch:** **Variance** nối từ **Parametric polymorphism** sang **Java/Kotlin examples**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Variance
 
@@ -86,8 +76,6 @@ both directions  -> invariance thường cần thiết
 
 Đây là intuition, không thay formal rules của từng ngôn ngữ (language / 언어).
 
-> **Nối mạch:** **Variance** nêu quy tắc; **Java/Kotlin examples** thử quy tắc trong tình huống, rồi **Kiểu (type / 타입) suy luận (inference / 추론) là ràng buộc (constraint / 제약조건) solving** mở rộng hệ quả.
-
 ## Java/Kotlin examples
 
 Java dùng wildcard-site variance như `? extends T` và `? super T`.
@@ -95,8 +83,6 @@ Java dùng wildcard-site variance như `? extends T` và `? super T`.
 PECS mnemonic — Producer Extends, bên tiêu thụ (consumer / 소비자) Super — hữu ích nhưng nên hiểu qua direction dữ liệu chứ không học thuộc khẩu hiệu.
 
 Kotlin hỗ trợ declaration-site variance `out`/`in`, giúp đặc tả hợp đồng (contract / 계약) variance nằm ở kiểu (type / 타입) declaration khi phù hợp.
-
-> **Nối mạch:** **Java/Kotlin examples** nêu quy tắc; **Kiểu (type / 타입) suy luận (inference / 추론) là ràng buộc (constraint / 제약조건) solving** thử quy tắc trong tình huống, rồi **Cục bộ (local / 로컬) suy luận (inference / 추론) vs toàn cục (global / 전역) suy luận (inference / 추론)** mở rộng hệ quả.
 
 ## Kiểu (type / 타입) suy luận (inference / 추론) là ràng buộc (constraint / 제약조건) solving
 
@@ -112,15 +98,11 @@ Nếu không có thao tác (operation / 연산) nào yêu cầu kiểu (type / �
 
 Kiểu (type / 타입) suy luận (inference / 추론) phức tạp hơn khi có subtyping, overload, higher-rank polymorphism hoặc effects. ngôn ngữ (language / 언어) thường giới hạn suy luận (inference / 추론) để compile thời gian (time / 시간)/diagnostics còn kiểm soát được.
 
-> **Nối mạch:** **Cục bộ (local / 로컬) suy luận (inference / 추론) vs toàn cục (global / 전역) suy luận (inference / 추론)** nối từ **Kiểu (type / 타입) suy luận (inference / 추론) là ràng buộc (constraint / 제약조건) solving** sang **Higher-kinded lớp trừu tượng (abstraction / 추상화) intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cục bộ (local / 로컬) suy luận (inference / 추론) vs toàn cục (global / 전역) suy luận (inference / 추론)
 
 Một số ngôn ngữ (language / 언어) suy kiểu (type / 타입) mạnh trong hàm (function / 함수) body nhưng yêu cầu API công khai (public API / 공개 API) annotation. Đây là thiết kế (design / 설계) sự đánh đổi (trade-off / 트레이드오프) tốt cho maintainability: hiện thực (implementation / 구현) có ergonomics, ranh giới (boundary / 경계) vẫn tường minh (explicit / 명시적).
 
 Nếu suy luận (inference / 추론) lan quá xa, lỗi (error / 오류) message có thể xuất hiện cách xa nguyên nhân và refactor thay kiểu (type / 타입) ngoài ý muốn.
-
-> **Nối mạch:** **Higher-kinded lớp trừu tượng (abstraction / 추상화) intuition** nối từ **Cục bộ (local / 로컬) suy luận (inference / 추론) vs toàn cục (global / 전역) suy luận (inference / 추론)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Higher-kinded lớp trừu tượng (abstraction / 추상화) intuition
 
@@ -128,13 +110,9 @@ Kiểu (type / 타입) parameter thường đại diện một concrete kiểu (
 
 Nó hữu ích để biểu đạt patterns như ánh xạ (mapping / 매핑)/traversal chung, nhưng tăng độ phức tạp (complexity / 복잡도) hệ kiểu (type system / 타입 시스템) đáng kể. Java không có higher-kinded types trực tiếp; ecosystems mô phỏng bằng giao diện (interface / 인터페이스) patterns với ergonomic chi phí (cost / 비용).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Higher-kinded lớp trừu tượng (abstraction / 추상화) intuition**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > sản phẩm (product / 제품) kiểu (type / 타입) mô tả “A và B”; sum kiểu (type / 타입) mô tả “A hoặc B”; generics mô tả cấu trúc (structure / 구조) độc lập element kiểu (type / 타입); variance kiểm soát direction substitutability; suy luận (inference / 추론) giải các ràng buộc (constraints / 제약조건들) để giảm annotation mà vẫn giữ static guarantees.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -143,8 +121,6 @@ Nó hữu ích để biểu đạt patterns như ánh xạ (mapping / 매핑)/tr
 **“kiểu (type / 타입) suy luận (inference / 추론) nghĩa trình biên dịch (compiler / 컴파일러) biết nghiệp vụ (business / 비즈니스) meaning.”** Nó chỉ giải các ràng buộc (constraints / 제약조건들) trong kiểu (type / 타입) rules.
 
 **“ADT chỉ dành cho functional programming.”** Sealed classes, enums có payload và discriminated unions mang cùng mô hình tư duy (mental model / 사고 모델) trong OOP/TypeScript ecosystems.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

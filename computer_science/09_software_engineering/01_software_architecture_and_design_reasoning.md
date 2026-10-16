@@ -10,15 +10,11 @@ Một quyết định (decision / 결정) “dùng PostgreSQL” có impact khá
 
 Do đó kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) bản ghi (record / 레코드) (ADR) nên ghi ngữ cảnh (context / 맥락), options, quyết định (decision / 결정) và consequences. Mục tiêu không phải bureaucracy mà giữ lập luận (reasoning / 추론) cho future maintainers.
 
-> **Nối mạch:** **Chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)** nối từ **Kiến trúc (architecture / 아키텍처) như set of consequential decisions** sang **Coupling và cohesion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)
 
 Availability, độ trễ (latency / 지연 시간), bảo mật (security / 보안), modifiability, scalability và chi phí (cost / 비용) thường xung đột (conflict / 충돌).
 
 Ví dụ synchronous replication tăng durability/consistency nhưng tăng ghi (write / 쓰기) độ trễ (latency / 지연 시간) và giảm availability khi replicas unavailable. kiến trúc (architecture / 아키텍처) chỉ có ý nghĩa khi gắn với chất lượng (quality / 품질) priorities.
-
-> **Nối mạch:** **Coupling và cohesion** nối từ **Chất lượng (quality / 품질) attributes tạo kiến trúc (architecture / 아키텍처)** sang **Thông tin (information / 정보) hiding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coupling và cohesion
 
@@ -26,15 +22,11 @@ Cohesion cao gom hành vi (behavior / 동작)/dữ liệu (data / 데이터) tha
 
 Coupling có nhiều dạng: compile-time, thời gian chạy (runtime / 런타임), dữ liệu (data / 데이터) lược đồ (schema / 스키마), temporal, organizational. Hai services không import mã (code / 코드) nhau nhưng cùng phụ thuộc bản phát hành (release / 릴리스) cửa sổ (window / 윈도우) vẫn bị coupled.
 
-> **Nối mạch:** **Thông tin (information / 정보) hiding** nối từ **Coupling và cohesion** sang **Layering**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thông tin (information / 정보) hiding
 
 Mô-đun (module / 모듈) nên hide volatile thiết kế (design / 설계) quyết định (decision / 결정) sau stable giao diện (interface / 인터페이스). Một lưu trữ (storage / 저장소) mô-đun (module / 모듈) expose `saveOrder()` thay vì cho callers phụ thuộc bảng (table / 테이블) bố cục (layout / 레이아웃) nếu bố cục (layout / 레이아웃) có khả năng thay đổi.
 
 Thông tin (information / 정보) hiding giảm blast radius của thay đổi (change / 변경).
-
-> **Nối mạch:** **Layering** nối từ **Thông tin (information / 정보) hiding** sang **Hexagonal/ports-and-adapters intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Layering
 
@@ -42,15 +34,11 @@ Tầng (layer / 계층) kiến trúc (architecture / 아키텍처) tạo directi
 
 Tầng (layer / 계층) là công cụ (tool / 도구) cho phụ thuộc (dependency / 의존성) điều khiển (control / 제어), không phải quy tắc (rule / 규칙) rằng mọi yêu cầu (request / 요청) phải đi qua N classes.
 
-> **Nối mạch:** **Hexagonal/ports-and-adapters intuition** nối từ **Layering** sang **Kiến trúc (architecture / 아키텍처) patterns và ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hexagonal/ports-and-adapters intuition
 
 Lĩnh vực (domain / 도메인) lô-gic (logic / 논리) phụ thuộc abstractions/ports; bên ngoài (external / 외부) DB/UI/message broker là adapters. Goal là nghiệp vụ (business / 비즈니스) rules không bị hard-wire vào khung phần mềm (framework / 프레임워크) hạ tầng (infrastructure / 인프라).
 
 Nhưng nếu lĩnh vực (domain / 도메인) đơn giản, thêm lớp trừu tượng (abstraction / 추상화) interfaces everywhere có thể overengineering. ranh giới (boundary / 경계) nên bảo vệ volatility thật.
-
-> **Nối mạch:** **Kiến trúc (architecture / 아키텍처) patterns và ngữ cảnh (context / 맥락)** nối từ **Hexagonal/ports-and-adapters intuition** sang **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiến trúc (architecture / 아키텍처) patterns và ngữ cảnh (context / 맥락)
 
@@ -58,15 +46,11 @@ Monolith, microservices, event-driven, CQRS, layered, pipes-and-filters không p
 
 CQRS tách read/ghi (write / 쓰기) các mô hình (models / 모델들) khi needs khác mạnh, nhưng thêm synchronization/evolution độ phức tạp (complexity / 복잡도). sự kiện (event / 이벤트) sourcing cho kiểm tra (audit / 감사)/replay nhưng làm lược đồ (schema / 스키마) evolution và debugging khó hơn.
 
-> **Nối mạch:** **Kiến trúc (architecture / 아키텍처) patterns và ngữ cảnh (context / 맥락)** đặt vấn đề; **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)** kiểm tra bằng chứng, rồi **Phụ thuộc (dependency / 의존성) inversion** mở rộng hệ quả.
-
 ## Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)
 
 Kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계) mạnh thường cần quyền sở hữu (ownership / 소유권) của trạng thái (state / 상태). dùng chung (shared / 공유) writable cơ sở dữ liệu (database / 데이터베이스) làm services/modules phụ thuộc hidden invariants.
 
 Quyền sở hữu (ownership / 소유권) không đồng nghĩa không chia sẻ dữ liệu (data / 데이터); nó nghĩa một thành phần (component / 컴포넌트) có authority cập nhật (update / 업데이트) và others truy cập qua đặc tả hợp đồng (contract / 계약)/bản sao (copy / 복사) phù hợp.
-
-> **Nối mạch:** **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)** đặt vấn đề; **Phụ thuộc (dependency / 의존성) inversion** kiểm tra bằng chứng, rồi **Kiến trúc (architecture / 아키텍처) fitness functions** mở rộng hệ quả.
 
 ## Phụ thuộc (dependency / 의존성) inversion
 
@@ -74,15 +58,11 @@ High-level chính sách (policy / 정책) không nên phụ thuộc concrete low
 
 Nhưng giao diện (interface / 인터페이스) chỉ có một hiện thực (implementation / 구현) và không có volatility không tự động hữu ích.
 
-> **Nối mạch:** **Kiến trúc (architecture / 아키텍처) fitness functions** nối từ **Phụ thuộc (dependency / 의존성) inversion** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiến trúc (architecture / 아키텍처) fitness functions
 
 Một kiến trúc (architecture / 아키텍처) intent có thể degrade theo thời gian. Automated checks như phụ thuộc (dependency / 의존성) rules, API tính tương thích (compatibility / 호환성) tests, độ trễ (latency / 지연 시간) SLO, bảo mật (security / 보안) chính sách (policy / 정책) scans có thể đóng vai fitness functions để phát hiện drift.
 
 Kiến trúc (architecture / 아키텍처) vì vậy không chỉ là initial thiết kế (design / 설계); nó cần continuous xác minh (verification / 확인).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Kiến trúc (architecture / 아키텍처) fitness functions** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,13 +72,9 @@ Kiến trúc (architecture / 아키텍처) vì vậy không chỉ là initial th
 
 **“Clean kiến trúc (architecture / 아키텍처) càng nhiều layers càng clean.”** Indirection không có purpose làm hệ thống (system / 시스템) khó hiểu hơn.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > kiến trúc (architecture / 아키텍처) là cách phân bố responsibilities và các ràng buộc (constraints / 제약조건들) sao cho những thay đổi/failures quan trọng bị giới hạn trong boundaries hợp lý.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

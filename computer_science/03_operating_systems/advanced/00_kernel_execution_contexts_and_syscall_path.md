@@ -24,8 +24,6 @@ Vì vậy “kernel đang chạy” không có nghĩa luôn tồn tại một ke
 
 Bất biến (invariant / 불변식) quan trọng là privilege chuyển tiếp (transition / 전이) không được làm mất architectural trạng thái (state / 상태) cần để trở lại userspace, và kernel không được tin dữ liệu userspace chỉ vì syscall entry đã hợp lệ.
 
-> **Nối mạch:** **1. chế độ người dùng (user mode / 사용자 모드) và kernel chế độ (mode / 모드) không phải hai tiến trình (process / 프로세스) khác nhau** đặt tiêu chí; **2. Syscall entry là trust ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **3. Một syscall thường đi qua nhiều subsystem** mở rộng hệ quả.
-
 ## 2. Syscall entry là trust ranh giới (boundary / 경계)
 
 Userspace wrapper chuẩn bị syscall number và arguments theo ABI rồi dùng instruction như `syscall` hoặc `svc` tùy kiến trúc (architecture / 아키텍처). CPU chuyển privilege, save trạng thái (state / 상태) cần thiết và nhảy vào entry điểm (point / 지점) do kernel cấu hình.
@@ -33,8 +31,6 @@ Userspace wrapper chuẩn bị syscall number và arguments theo ABI rồi dùng
 Arguments như pointer, length, tệp (file / 파일) descriptor và flags là untrusted đầu vào (input / 입력). Kernel phải kiểm tra permission, overflow, thời gian tồn tại (lifetime / 수명) và bản sao (copy / 복사) ngữ nghĩa (semantics / 의미론). Một pointer hợp lệ tại lúc check có thể trở nên không còn hợp lệ hoặc dữ liệu (data / 데이터) có thể thay đổi nếu giao thức (protocol / 프로토콜) cho phép concurrent mutation.
 
 Đây là nguồn của các lỗi kiểu TOCTOU: **check một giả định (assumption / 가정) rồi sử dụng tài nguyên (resource / 자원) sau khi giả định (assumption / 가정) không còn chắc đúng**.
-
-> **Nối mạch:** **2. Syscall entry là trust ranh giới (boundary / 경계)** đặt tiêu chí; **3. Một syscall thường đi qua nhiều subsystem** dùng nó để kiểm tra ranh giới, rồi **4. thực thi (execution / 실행) ngữ cảnh (context / 맥락) quyết định thao tác (operation / 연산) nào được phép** mở rộng hệ quả.
 
 ## 3. Một syscall thường đi qua nhiều subsystem
 
@@ -55,8 +51,6 @@ userspace wrapper
 
 Cùng surface API `read` nhưng lower tầng (layer / 계층) khác nhau hoàn toàn theo loại tệp (file / 파일) descriptor. Vì vậy môi trường vận hành (production / 운영 환경) độ trễ (latency / 지연 시간) không thể suy ra chỉ từ tên syscall.
 
-> **Nối mạch:** **4. thực thi (execution / 실행) ngữ cảnh (context / 맥락) quyết định thao tác (operation / 연산) nào được phép** nối từ **3. Một syscall thường đi qua nhiều subsystem** sang **5. Blocking syscall nối trực tiếp với scheduler**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. thực thi (execution / 실행) ngữ cảnh (context / 맥락) quyết định thao tác (operation / 연산) nào được phép
 
 Kernel mã (code / 코드) có thể chạy trong nhiều ngữ cảnh (context / 맥락). **tiến trình (process / 프로세스) ngữ cảnh (context / 맥락)** gắn với hiện tại (current / 현재) tác vụ (task / 작업) và ở nhiều điểm có thể sleep. **Hard interrupt ngữ cảnh (context / 맥락)** cần phản ứng nhanh và không được tùy tiện khối (block / 블록). Deferred mechanisms như softirq, workqueue hoặc threaded interrupt chuyển công việc (work / 작업) sang ngữ cảnh (context / 맥락) phù hợp hơn.
@@ -64,8 +58,6 @@ Kernel mã (code / 코드) có thể chạy trong nhiều ngữ cảnh (context 
 Bất biến (invariant / 불변식) là mã (code / 코드) chỉ được dùng thao tác (operation / 연산) tương thích với ngữ cảnh (context / 맥락) hiện tại. Một đường dẫn (path / 경로) giữ spinlock hoặc chạy interrupt ngữ cảnh (context / 맥락) mà gọi thành phần nguyên thủy (primitive / 기본 요소) có thể sleep có thể tạo deadlock hoặc kernel thất bại (failure / 실패).
 
 Do đó khi đọc kernel đường dẫn (path / 경로), câu hỏi đầu tiên không chỉ là “hàm (function / 함수) này làm gì?” mà là **“nó đang chạy trong ngữ cảnh (context / 맥락) nào và có thể bị preempt/sleep ở đâu?”**
-
-> **Nối mạch:** **5. Blocking syscall nối trực tiếp với scheduler** nối từ **4. thực thi (execution / 실행) ngữ cảnh (context / 맥락) quyết định thao tác (operation / 연산) nào được phép** sang **6. Mutex và spinlock giải hai loại waiting khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Blocking syscall nối trực tiếp với scheduler
 
@@ -85,8 +77,6 @@ syscall execution
 
 Ứng dụng (application / 애플리케이션) dấu vết (trace / 추적) chỉ đo thời gian giữa lời gọi (call / 호출)/return có thể không biết phần nào chiếm độ trễ (latency / 지연 시간) nếu thiếu kernel bằng chứng (evidence / 증거).
 
-> **Nối mạch:** **6. Mutex và spinlock giải hai loại waiting khác nhau** nối từ **5. Blocking syscall nối trực tiếp với scheduler** sang **7. Preemption và interrupt trạng thái (state / 상태) là một phần của synchronization giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Mutex và spinlock giải hai loại waiting khác nhau
 
 Kernel mutex cho phép waiter sleep khi tài nguyên (resource / 자원) bận, phù hợp khi trọng yếu (critical / 중요) section có thể kéo dài và ngữ cảnh (context / 맥락) cho phép schedule. **Spinlock** giữ CPU active trong vòng chờ ngắn, hữu ích khi sleep không được phép hoặc khóa (lock / 잠금) hold thời gian (time / 시간) cực ngắn.
@@ -105,8 +95,6 @@ spinlock
 
 Spinlock không “nhanh hơn mutex” universal. Khi hold thời gian (time / 시간) hoặc contention tăng, spinning trở thành wasted CPU và có thể làm đơn vị sở hữu (owner / 오너) chạy chậm hơn vì coherence pressure.
 
-> **Nối mạch:** **7. Preemption và interrupt trạng thái (state / 상태) là một phần của synchronization giao thức (protocol / 프로토콜)** nối từ **6. Mutex và spinlock giải hai loại waiting khác nhau** sang **8. Atomic thao tác (operation / 연산) không thay object-lifetime giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Preemption và interrupt trạng thái (state / 상태) là một phần của synchronization giao thức (protocol / 프로토콜)
 
 Một kernel trọng yếu (critical / 중요) section đôi khi cần ngăn cục bộ (local / 로컬) CPU bị preempt hoặc ngăn một loại interrupt tái-enter cùng trạng thái (state / 상태). Nhưng disable preemption/interrupt không bảo vệ khỏi cốt lõi (core / 핵심) khác trên SMP machine.
@@ -120,8 +108,6 @@ global mutual exclusion
 ```
 
 Nếu trạng thái dùng chung (shared state / 공유 상태) có thể được cốt lõi (core / 핵심) khác truy cập, cần synchronization cross-CPU phù hợp. Đây là lỗi lập luận (reasoning / 추론) phổ biến khi chuyển intuition single-core sang multicore.
-
-> **Nối mạch:** **8. Atomic thao tác (operation / 연산) không thay object-lifetime giao thức (protocol / 프로토콜)** nối từ **7. Preemption và interrupt trạng thái (state / 상태) là một phần của synchronization giao thức (protocol / 프로토콜)** sang **9. RCU giải bài toán read-mostly như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Atomic thao tác (operation / 연산) không thay object-lifetime giao thức (protocol / 프로토콜)
 
@@ -142,8 +128,6 @@ reclamation
 ```
 
 RCU là một cơ chế tiêu biểu cho bài toán này.
-
-> **Nối mạch:** **9. RCU giải bài toán read-mostly như thế nào?** nối từ **8. Atomic thao tác (operation / 연산) không thay object-lifetime giao thức (protocol / 프로토콜)** sang **10. Grace period là thời gian tồn tại (lifetime / 수명) barrier, không phải wall-clock delay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. RCU giải bài toán read-mostly như thế nào?
 
@@ -166,8 +150,6 @@ writer:
 
 > **Không reclaim đối tượng (object / 객체) cũ cho tới khi chắc chắn không reader hợp lệ nào còn có thể dereference nó.**
 
-> **Nối mạch:** **10. Grace period là thời gian tồn tại (lifetime / 수명) barrier, không phải wall-clock delay** nối từ **9. RCU giải bài toán read-mostly như thế nào?** sang **11. RCU không thay mọi khóa (lock / 잠금)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Grace period là thời gian tồn tại (lifetime / 수명) barrier, không phải wall-clock delay
 
 Grace period không có nghĩa sleep một số milliseconds. Nó biểu diễn một điều kiện logical: các read-side trọng yếu (critical / 중요) sections có thể giữ tham chiếu (reference / 참조) cũ đã kết thúc theo RCU mô hình (model / 모델).
@@ -176,8 +158,6 @@ Nếu CPU/tác vụ (task / 작업) bị stall lâu trong read-side section, rec
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) quan trọng: reader đường dẫn (path / 경로) cực rẻ có thể đổi lấy writer/reclaimer độ phức tạp (complexity / 복잡도) và deferred bộ nhớ (memory / 메모리) chi phí (cost / 비용).
 
-> **Nối mạch:** **11. RCU không thay mọi khóa (lock / 잠금)** nối từ **10. Grace period là thời gian tồn tại (lifetime / 수명) barrier, không phải wall-clock delay** sang **12. bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) vẫn nằm bên dưới publication**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. RCU không thay mọi khóa (lock / 잠금)
 
 RCU phù hợp read-mostly truy cập (access / 접근) và thời gian tồn tại (lifetime / 수명)/reclamation patterns. Nếu nhiều writers cần giữ bất biến (invariant / 불변식) multi-field hoặc cập nhật cấu trúc (structure / 구조) theo chuỗi (sequence / 시퀀스) phức tạp, writer side vẫn có thể cần mutex/spinlock/other coordination.
@@ -185,8 +165,6 @@ RCU phù hợp read-mostly truy cập (access / 접근) và thời gian tồn t�
 RCU cũng không tự giải atomicity của nghiệp vụ (business / 비즈니스)/kernel trạng thái (state / 상태). Nó chủ yếu cho phép readers truy cập phiên bản (version / 버전) cũ an toàn trong lúc phiên bản (version / 버전) mới được publish.
 
 Mô hình tư duy (mental model / 사고 모델) đúng là **versioned publication + delayed reclamation**, không phải “magic lock-free kernel”.
-
-> **Nối mạch:** **12. bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) vẫn nằm bên dưới publication** nối từ **11. RCU không thay mọi khóa (lock / 잠금)** sang **13. Seqlock và optimistic read là một mô hình tư duy (mental model / 사고 모델) khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) vẫn nằm bên dưới publication
 
@@ -203,8 +181,6 @@ RCU publication
 
 RCU tính đúng đắn (correctness / 정확성) vì thế dựa trên bộ nhớ (memory / 메모리) mô hình (model / 모델), không đứng ngoài nó.
 
-> **Nối mạch:** **13. Seqlock và optimistic read là một mô hình tư duy (mental model / 사고 모델) khác** tổng hợp từ **12. bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) vẫn nằm bên dưới publication**; **14. tranh chấp khóa (lock contention / 잠금 경합) có thể trở thành cache-coherence bottleneck** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 13. Seqlock và optimistic read là một mô hình tư duy (mental model / 사고 모델) khác
 
 Một số read-mostly trạng thái (state / 상태) nhỏ dùng **chuỗi (sequence / 시퀀스) khóa (lock / 잠금) (seqlock)**: writer tăng chuỗi (sequence / 시퀀스) counter quanh cập nhật (update / 업데이트); reader đọc phiên bản (version / 버전), bản sao (copy / 복사) trạng thái (state / 상태) rồi kiểm tra counter có đổi/odd hay không. Nếu xung đột (conflict / 충돌), reader thử lại (retry / 재시도).
@@ -212,8 +188,6 @@ Một số read-mostly trạng thái (state / 상태) nhỏ dùng **chuỗi (seq
 Bất biến (invariant / 불변식) là reader chỉ chấp nhận snapshot nếu không có writer overlap.
 
 Sự đánh đổi (trade-off / 트레이드오프) khác RCU: readers có thể thử lại (retry / 재시도)/starve khi writer liên tục; nhưng không cần giữ old phiên bản (version / 버전) đối tượng (object / 객체) theo cùng cách. Đây là ví dụ quan trọng rằng “read-mostly” có nhiều giao thức (protocol / 프로토콜) tùy bất biến (invariant / 불변식) và cập nhật (update / 업데이트) shape.
-
-> **Nối mạch:** **14. tranh chấp khóa (lock contention / 잠금 경합) có thể trở thành cache-coherence bottleneck** tổng hợp từ **13. Seqlock và optimistic read là một mô hình tư duy (mental model / 사고 모델) khác**; **15. Interrupt/deferred-work batching thay đổi latency-throughput sự đánh đổi (trade-off / 트레이드오프)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 14. tranh chấp khóa (lock contention / 잠금 경합) có thể trở thành cache-coherence bottleneck
 
@@ -230,8 +204,6 @@ owner bị preempt làm waiters spin lâu
 
 Per-CPU dữ liệu (data / 데이터), sharding hoặc RCU thường nhằm giảm dùng chung (shared / 공유) mutable hotspot, không chỉ giảm instruction count.
 
-> **Nối mạch:** **15. Interrupt/deferred-work batching thay đổi latency-throughput sự đánh đổi (trade-off / 트레이드오프)** nối từ **14. tranh chấp khóa (lock contention / 잠금 경합) có thể trở thành cache-coherence bottleneck** sang **16. eBPF/tracing là bằng chứng (evidence / 증거) cơ chế (mechanism / 메커니즘), không phải fix**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Interrupt/deferred-work batching thay đổi latency-throughput sự đánh đổi (trade-off / 트레이드오프)
 
 Mạng (network / 네트워크) ngăn xếp (stack / 스택) thường không xử lý vô hạn công việc (work / 작업) ngay trong interrupt. Cơ chế polling/batching như NAPI-style thiết kế (design / 설계) giúp giảm interrupt storm và amortize per-packet overhead.
@@ -239,8 +211,6 @@ Mạng (network / 네트워크) ngăn xếp (stack / 스택) thường không x�
 Nhưng batching lớn có thể tăng độ trễ (latency / 지연 시간) của individual packet/tác vụ (task / 작업) hoặc làm một subsystem giữ CPU lâu hơn. hiệu năng (performance / 성능) pressure vì thế thay đổi scheduling giữa interrupt, deferred công việc (work / 작업) và tiến trình (process / 프로세스) ngữ cảnh (context / 맥락).
 
 Không có bất biến (invariant / 불변식) “interrupt xử lý càng sớm càng tốt”; cần cân thông lượng (throughput / 처리량), fairness và độ trễ (latency / 지연 시간).
-
-> **Nối mạch:** **15. Interrupt/deferred-work batching thay đổi latency-throughput sự đánh đổi (trade-off / 트레이드오프)** đặt vấn đề; **16. eBPF/tracing là bằng chứng (evidence / 증거) cơ chế (mechanism / 메커니즘), không phải fix** kiểm tra bằng chứng, rồi **17. Off-CPU phân tích (analysis / 분석) thường quan trọng hơn on-CPU profile** mở rộng hệ quả.
 
 ## 16. eBPF/tracing là bằng chứng (evidence / 증거) cơ chế (mechanism / 메커니즘), không phải fix
 
@@ -257,8 +227,6 @@ chọn hypothesis
 
 Không nên dấu vết (trace / 추적) mọi thứ môi trường vận hành (production / 운영 환경) vô hạn; instrumentation có overhead và cardinality/lưu trữ (storage / 저장소) chi phí (cost / 비용).
 
-> **Nối mạch:** **16. eBPF/tracing là bằng chứng (evidence / 증거) cơ chế (mechanism / 메커니즘), không phải fix** đặt vấn đề; **17. Off-CPU phân tích (analysis / 분석) thường quan trọng hơn on-CPU profile** kiểm tra bằng chứng, rồi **18. Tracing cần monotonic thời gian (time / 시간) và nhân quả (causal / 인과적) correlation** mở rộng hệ quả.
-
 ## 17. Off-CPU phân tích (analysis / 분석) thường quan trọng hơn on-CPU profile
 
 On-CPU profiler trả lời “CPU đang chạy mã (code / 코드) nào?”. Nhưng yêu cầu (request / 요청) chậm có thể dành phần lớn thời gian sleeping trên futex, I/O, timer hoặc run hàng đợi (queue / 큐).
@@ -274,8 +242,6 @@ wake rồi chờ run queue bao lâu?
 
 Đây là bằng chứng (evidence / 증거) mạnh để phân biệt khóa (lock / 잠금) wait, thiết bị (device / 장치) wait, mạng (network / 네트워크) wait và scheduler saturation.
 
-> **Nối mạch:** **18. Tracing cần monotonic thời gian (time / 시간) và nhân quả (causal / 인과적) correlation** nối từ **17. Off-CPU phân tích (analysis / 분석) thường quan trọng hơn on-CPU profile** sang **19. thất bại (failure / 실패) modes cần phân loại theo ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Tracing cần monotonic thời gian (time / 시간) và nhân quả (causal / 인과적) correlation
 
 Wall-clock có thể jump do synchronization/adjustment; độ trễ (latency / 지연 시간) đo lường (measurement / 측정) trong kernel/tiến trình (process / 프로세스) nên dựa monotonic clock phù hợp. Khi correlate với phân tán (distributed / 분산) dấu vết (trace / 추적), cần hiểu clock bất định (uncertainty / 불확실성) giữa machines.
@@ -283,8 +249,6 @@ Wall-clock có thể jump do synchronization/adjustment; độ trễ (latency / 
 Dấu vết (trace / 추적) ID ở ứng dụng (application / 애플리케이션) không tự xuất hiện trong kernel. Correlation thường dựa PID/TID, socket tuple, cgroup, timestamps hoặc tường minh (explicit / 명시적) ngữ cảnh (context / 맥락) propagation tùy tooling.
 
 Bằng chứng (evidence / 증거) chuỗi xử lý (pipeline / 파이프라인) phải biết bất định (uncertainty / 불확실성) của chính nó.
-
-> **Nối mạch:** **19. thất bại (failure / 실패) modes cần phân loại theo ngữ cảnh (context / 맥락)** nối từ **18. Tracing cần monotonic thời gian (time / 시간) và nhân quả (causal / 인과적) correlation** sang **20. bằng chứng vận hành (production evidence / 운영 증거) checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. thất bại (failure / 실패) modes cần phân loại theo ngữ cảnh (context / 맥락)
 
@@ -312,8 +276,6 @@ cgroup/IO throttling
 
 Tên syscall không đủ để chọn fix.
 
-> **Nối mạch:** **19. thất bại (failure / 실패) modes cần phân loại theo ngữ cảnh (context / 맥락)** đặt vấn đề; **20. bằng chứng vận hành (production evidence / 운영 증거) checklist** kiểm tra bằng chứng, rồi **21. Mô hình tư duy** mở rộng hệ quả.
-
 ## 20. bằng chứng vận hành (production evidence / 운영 증거) checklist
 
 Khi cần đi xuống kernel tầng (layer / 계층), ưu tiên bằng chứng (evidence / 증거) theo hypothesis:
@@ -334,13 +296,9 @@ cgroup throttling
 
 Sau đó quay lại ứng dụng (application / 애플리케이션) bất biến (invariant / 불변식). Kernel bằng chứng (evidence / 증거) giải thích cơ chế (mechanism / 메커니즘); fix có thể vẫn là giảm ứng dụng (application / 애플리케이션) tính đồng thời (concurrency / 동시성), đổi dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권), tune hàng đợi (queue / 큐) hoặc sửa I/O mẫu (pattern / 패턴).
 
-> **Nối mạch:** các dấu vết trong **20. bằng chứng vận hành (production evidence / 운영 증거) checklist** được đọc cùng nhau ở **21. Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời; **Kết nối** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## 21. Mô hình tư duy
 
 > Kernel là một concurrent máy trạng thái (state machine / 상태 머신) chạy trong nhiều thực thi (execution / 실행) contexts. Syscall là privilege chuyển tiếp (transition / 전이) vào máy trạng thái (state machine / 상태 머신) đó; synchronization phải phù hợp khả năng sleep/preempt của ngữ cảnh (context / 맥락); RCU giữ read-mostly đối tượng (object / 객체) thời gian tồn tại (lifetime / 수명) bằng phiên bản (version / 버전) publication + grace period + delayed reclamation; tracing cung cấp bằng chứng (evidence / 증거) về thời gian chạy và chờ. **Đừng hỏi chỉ “kernel hàm (function / 함수) nào chậm?”—hãy hỏi ngữ cảnh (context / 맥락) nào đang giữ tài nguyên (resource / 자원), bất biến (invariant / 불변식) nào đang được bảo vệ và wait/reclamation chi phí (cost / 비용) đang xuất hiện ở đâu.**
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **21. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

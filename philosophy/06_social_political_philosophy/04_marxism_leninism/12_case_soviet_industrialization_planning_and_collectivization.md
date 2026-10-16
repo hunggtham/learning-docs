@@ -14,8 +14,6 @@ NBER's historical study *Growth of Industrial Môi trường vận hành (produc
 
 Ngay ở đây ta có một bất biến (invariant / 불변식) quan trọng: **sức chứa (capacity / 용량) to increase selected outputs không đồng nghĩa với efficiency, welfare hoặc sustainability.** Heavy-industry đầu ra (output / 출력), household consumption, agricultural productivity, mortality và political coercion là các kết quả (outcome / 결과) khác nhau và phải đo riêng.
 
-> **Chuyển mạch:** **Từ NEP sang Great Turn** đặt bước ngoặt chính sách; **Planning architecture** hỏi nhà nước đang giải bài toán nào, rồi **Collectivization** kiểm tra cơ chế và coercion trong thực tế.
-
 ## Planning kiến trúc (architecture / 아키텍처) — trạng thái (state / 상태) đang giải bài toán gì?
 
 Một economy quy mô lớn phải quyết định ai sản xuất gì, dùng đầu vào (input / 입력) nào, ở đâu và cho ai. Trong market-heavy các hệ thống (systems / 시스템들), price, profit/mất mát (loss / 손실) và đặc tả hợp đồng (contract / 계약) đóng vai trò lớn trong coordination. Trong Soviet planning, một phần đáng kể các quyết định đó được chuyển sang administrative hierarchy và plan targets.
@@ -37,8 +35,6 @@ ai có decision right?
 
 Khung phần mềm (framework / 프레임워크) này cũng áp dụng cho corporation, military logistics và hiện đại (modern / 현대적) công khai (public / 공개) administration; Soviet trường hợp (case / 사례) chỉ là extreme quy mô (scale / 규모) của vấn đề.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Planning kiến trúc (architecture / 아키텍처) — trạng thái (state / 상태) đang giải bài toán gì?** xác định đầu vào; **Collectivization — chính sách (policy / 정책), cơ chế (mechanism / 메커니즘) và coercion** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Industrial growth — tăng cái gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Collectivization — chính sách (policy / 정책), cơ chế (mechanism / 메커니즘) và coercion
 
 Collectivization chuyển phần lớn agriculture từ household/individual farming sang collective forms under strong trạng thái (state / 상태) direction. Một trong các economic mechanisms mà historians và economists phân tích là **tài nguyên (resource / 자원) transfer from agriculture to industrialization**: trạng thái (state / 상태) procurement, relative prices và điều khiển (control / 제어) over rural đầu ra (output / 출력) giúp chuyển resources sang urban-industrial investment.
@@ -46,8 +42,6 @@ Collectivization chuyển phần lớn agriculture từ household/individual far
 Một NBER reconstruction của Soviet structural transformation 1928–1940 mô hình hóa Stalin-era policies bằng một two-sector growth khung phần mềm (framework / 프레임워크). Các tác giả tìm thấy rapid structural transformation nhưng cũng large distortions; welfare estimates của paper phụ thuộc vào mô hình (model / 모델) các giả định (assumptions / 가정들) và vì vậy không nên đọc như một universal number. Giá trị của nghiên cứu nằm ở việc buộc ta tách **industrial accumulation** khỏi **household welfare** và hỏi counterfactual: một đường dẫn (path / 경로) công nghiệp hóa khác có thể đạt đầu ra (output / 출력) nào với chi phí (cost / 비용) nào?
 
 Collectivization đồng thời gắn với coercion, dispossession, livestock losses, disruption of food môi trường vận hành (production / 운영 환경) và famine. Chính xác (exact / 정확한) mortality estimates là subject của historical research và khác nhau theo methodology, geography và definition. Vì vậy docs không dùng một con số duy nhất như rhetorical weapon; điểm cần giữ là scholarly literature coi human chi phí (cost / 비용) của forced collectivization và famine đầu thập niên 1930 là rất lớn, và nhân quả (causal / 인과적) phân tích (analysis / 분석) phải xem procurement chính sách (policy / 정책), coercion, harvest conditions, administrative decisions và regional variation cùng lúc.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Collectivization — chính sách (policy / 정책), cơ chế (mechanism / 메커니즘) và coercion** xác định đầu vào; **Industrial growth — tăng cái gì?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quantity versus chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Industrial growth — tăng cái gì?
 
@@ -65,23 +59,17 @@ Vì vậy khi gặp câu “Soviet planning industrialized the country rapidly�
 
 Bốn claim này không thể chứng minh lẫn nhau.
 
-> **Chuyển mạch:** **Industrial growth** đặt thước đo sản lượng; **Quantity versus quality** kiểm tra năng lực và chi phí, rồi **security context và path dependence** giải thích vì sao lựa chọn đó khó đảo ngược.
-
 ## Quantity versus chất lượng (quality / 품질)
 
 Quota hệ thống (system / 시스템) có một dạng thất bại (failure mode / 실패 모드) nổi tiếng trong organizational economics: khi chỉ số (metric / 지표) trở thành mục tiêu (target / 대상), actor optimize mục tiêu (target / 대상). Nếu plan đếm tons, producer có incentive maximize weight; nếu đếm units, incentive có thể chuyển sang nhiều đơn vị (unit / 단위) nhỏ; nếu chất lượng (quality / 품질) khó đo, chất lượng (quality / 품질) dễ bị sacrifice.
 
 Điều này không có nghĩa mọi Soviet sản phẩm (product / 제품) đều low chất lượng (quality / 품질) hoặc mọi mục tiêu (target / 대상) đều bị game. Nó chỉ cho thấy một general principle: **đo lường (measurement / 측정) kiến trúc (architecture / 아키텍처) trở thành incentive kiến trúc (architecture / 아키텍처)**. Chính principle này nối trường hợp (case / 사례) Soviet với hiện đại (modern / 현대적) KPI thiết kế (design / 설계), software metrics và public-sector hiệu năng (performance / 성능) management.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Quantity versus chất lượng (quality / 품질)** xác định đầu vào; **Bảo mật (security / 보안) ngữ cảnh (context / 맥락) và đường dẫn (path / 경로) dependence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trường hợp (case / 사례) này cho phép kết luận gì — và không cho phép gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bảo mật (security / 보안) ngữ cảnh (context / 맥락) và đường dẫn (path / 경로) dependence
 
 Soviet leaders không hoạch định trong vacuum. Russian Empire/Soviet Russia đã trải qua World War I, revolution, civil war và economic collapse; leadership sau đó nhìn international hệ thống (system / 시스템) qua lens của military vulnerability. Rapid heavy industrialization vì vậy có một strategic-security dimension bên cạnh ideology.
 
 Ngữ cảnh (context / 맥락) này cần được đưa vào nhân quả (causal / 인과적) mô hình (model / 모델) nhưng không tự động justify mọi chính sách (policy / 정책). “Bên ngoài (external / 외부) threat existed” và “specific coercive institution was necessary” là hai claim khác nhau. Một serious historical phân tích (analysis / 분석) phải giữ distinction này.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) study — Soviet industrialization, planning và collectivization**, **Bảo mật (security / 보안) ngữ cảnh (context / 맥락) và đường dẫn (path / 경로) dependence** cho ta quy tắc; **Trường hợp (case / 사례) này cho phép kết luận gì — và không cho phép gì?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sources và reading anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) này cho phép kết luận gì — và không cho phép gì?
 
@@ -101,8 +89,6 @@ strategic goal
 ```
 
 Từ đây hãy chuyển sang [China after 1978](13_case_china_reform_opening_and_dual_track_transition.md). China là comparative trường hợp (case / 사례) đặc biệt hữu ích vì political continuity coexist với một economic coordination hệ thống (system / 시스템) được cải tổ từng bước theo hướng thị trường (market / 시장) mechanisms, tạo natural experiment cho câu hỏi institution nào thay đổi và kết quả (outcome / 결과) nào thay đổi cùng nó.
-
-> **Chuyển mạch:** **Case này cho phép kết luận gì — và không cho phép gì?** buộc tách claim khỏi counterfactual; **Sources và reading anchors** ghi rõ bằng chứng nào đủ để giữ mỗi kết luận.
 
 ## Sources và reading anchors
 

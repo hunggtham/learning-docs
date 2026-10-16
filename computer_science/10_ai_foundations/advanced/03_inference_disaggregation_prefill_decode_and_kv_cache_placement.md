@@ -1,6 +1,6 @@
 # Suy luận (inference / 추론) disaggregation, prefill/decode và placement của KV bộ nhớ đệm (cache / 캐시)
 
-Một hệ thống suy luận (inference / 추론) cho Transformer có thể bắt đầu rất đơn giản: nhận prompt, chạy mô hình (model / 모델) trên một accelerator, sinh đơn vị từ (token / 토큰) rồi trả kết quả. Khi tải công việc (workload / 워크로드) lớn lên, cách nhìn này nhanh chóng mất tác dụng vì hai pha chính của autoregressive suy luận (inference / 추론) dùng tài nguyên theo cách rất khác nhau. **Prefill** xử lý nhiều đơn vị từ (token / 토큰) đầu vào cùng lúc và thường có mức song song cao; **decode** sinh từng đơn vị từ (token / 토큰) kế tiếp, lặp lại nhiều lần và thường bị chi phối mạnh bởi bộ nhớ (memory / 메모리) bandwidth, KV bộ nhớ đệm (cache / 캐시) và scheduling độ trễ (latency / 지연 시간).
+Một hệ thống suy luận (inference / 추론) cho Transformer có thể bắt đầu rất đơn giản: nhận prompt, chạy mô hình (model / 모델) trên một accelerator, sinh token (토큰) rồi trả kết quả. Khi tải công việc (workload / 워크로드) lớn lên, cách nhìn này nhanh chóng mất tác dụng vì hai pha chính của autoregressive suy luận (inference / 추론) dùng tài nguyên theo cách rất khác nhau. **Prefill** xử lý nhiều token (토큰) đầu vào cùng lúc và thường có mức song song cao; **decode** sinh từng token (토큰) kế tiếp, lặp lại nhiều lần và thường bị chi phối mạnh bởi bộ nhớ (memory / 메모리) bandwidth, KV bộ nhớ đệm (cache / 캐시) và scheduling độ trễ (latency / 지연 시간).
 
 Từ khác biệt đó xuất hiện một câu hỏi kiến trúc: có nên để cùng một worker thực hiện cả prefill lẫn decode, hay tách chúng thành các pool chuyên biệt rồi chuyển trạng thái giữa hai pha? Đây là bài toán **suy luận (inference / 추론) disaggregation**. Chapter này không gắn với một serving khung phần mềm (framework / 프레임워크) cụ thể. Mục tiêu là hiểu quyền sở hữu trạng thái (state ownership / 상태 소유권), tài nguyên (resource / 자원) asymmetry, queueing và thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) quyết định khi nào disaggregation giúp hệ thống và khi nào nó chỉ thêm mạng (network / 네트워크) hop.
 
@@ -24,7 +24,7 @@ Bất biến (invariant / 불변식) quan trọng nhất là **decode phải ti�
 
 Trong prefill, mô hình (model / 모델) xử lý toàn bộ prompt hoặc một chunk lớn của prompt. Phép nhân ma trận (matrix multiplication / 행렬 곱셈) có kích thước lớn hơn, accelerator thường có cơ hội sử dụng compute units hiệu quả hơn. Với prompt dài, prefill có thể tiêu thụ lượng compute đáng kể và tạo KV bộ nhớ đệm (cache / 캐시) cho từng tầng (layer / 계층).
 
-Decode khác. Sau khi có trạng thái (state / 상태) của prompt, hệ thống thường sinh một đơn vị từ (token / 토큰), cập nhật KV bộ nhớ đệm (cache / 캐시), rồi lặp lại. Mỗi iteration có ít đơn vị từ (token / 토큰) mới nhưng phải đọc lượng trạng thái (state / 상태) ngày càng lớn. Khi chuỗi (sequence / 시퀀스) dài, chi phí đọc KV bộ nhớ đệm (cache / 캐시) và giữ working set trong accelerator bộ nhớ (memory / 메모리) có thể trở thành giới hạn thực tế.
+Decode khác. Sau khi có trạng thái (state / 상태) của prompt, hệ thống thường sinh một token (토큰), cập nhật KV bộ nhớ đệm (cache / 캐시), rồi lặp lại. Mỗi iteration có ít token (토큰) mới nhưng phải đọc lượng trạng thái (state / 상태) ngày càng lớn. Khi chuỗi (sequence / 시퀀스) dài, chi phí đọc KV bộ nhớ đệm (cache / 캐시) và giữ working set trong accelerator bộ nhớ (memory / 메모리) có thể trở thành giới hạn thực tế.
 
 Do đó cùng một chỉ số (metric / 지표) `GPU utilization` có thể che hai bottleneck khác nhau. Prefill có thể compute-bound trong khi decode memory-bound. Một scheduler tối ưu batch lớn cho prefill có thể làm time-to-first-token tốt hơn về thông lượng (throughput / 처리량) nhưng gây hàng đợi (queue / 큐) delay cho yêu cầu (request / 요청) ngắn. Một scheduler tối ưu inter-token độ trễ (latency / 지연 시간) có thể để accelerator underutilized nếu batch decode quá nhỏ.
 
@@ -39,15 +39,15 @@ queue/admission delay
 → total completion time
 ```
 
-TTFT chịu ảnh hưởng mạnh của hàng đợi (queue / 큐) và prefill. Inter-token độ trễ (latency / 지연 시간) chịu ảnh hưởng mạnh của decode scheduling, bộ nhớ (memory / 메모리) bandwidth, batch composition và KV locality. Total completion thời gian (time / 시간) còn phụ thuộc số đầu ra (output / 출력) đơn vị từ (token / 토큰) và cancellation.
+TTFT chịu ảnh hưởng mạnh của hàng đợi (queue / 큐) và prefill. Inter-token độ trễ (latency / 지연 시간) chịu ảnh hưởng mạnh của decode scheduling, bộ nhớ (memory / 메모리) bandwidth, batch composition và KV locality. Total completion thời gian (time / 시간) còn phụ thuộc số đầu ra (output / 출력) token (토큰) và cancellation.
 
-Nếu chỉ tối ưu average completion độ trễ (latency / 지연 시간), hệ thống có thể làm yêu cầu (request / 요청) ngắn chờ sau prompt rất dài. Nếu chỉ tối ưu TTFT, scheduler có thể preempt decode quá nhiều và làm đơn vị từ (token / 토큰) stream giật cục. Vì vậy chính sách (policy / 정책) phải bắt đầu từ dịch vụ (service / 서비스) đặc tả hợp đồng (contract / 계약): tải công việc (workload / 워크로드) interactive, batch, streaming hay mixed.
+Nếu chỉ tối ưu average completion độ trễ (latency / 지연 시간), hệ thống có thể làm yêu cầu (request / 요청) ngắn chờ sau prompt rất dài. Nếu chỉ tối ưu TTFT, scheduler có thể preempt decode quá nhiều và làm token (토큰) stream giật cục. Vì vậy chính sách (policy / 정책) phải bắt đầu từ dịch vụ (service / 서비스) đặc tả hợp đồng (contract / 계약): tải công việc (workload / 워크로드) interactive, batch, streaming hay mixed.
 
 ## 3. KV bộ nhớ đệm (cache / 캐시) là trạng thái (state / 상태), không chỉ là tối ưu hóa (optimization / 최적화)
 
 KV bộ nhớ đệm (cache / 캐시) thường được giới thiệu như cách tránh tính lại attention cho toàn bộ prefix. Ở mức hệ thống, nó quan trọng hơn: KV bộ nhớ đệm (cache / 캐시) trở thành **per-request trạng thái (state / 상태) có định danh (identity / 식별자), thời gian tồn tại (lifetime / 수명) và placement**.
 
-Ta cần biết trạng thái (state / 상태) này thuộc mô hình (model / 모델) phiên bản (version / 버전) nào, chuỗi (sequence / 시퀀스) nào, tầng (layer / 계층) nào, đơn vị từ (token / 토큰) phạm vi (range / 범위) nào và nằm ở thiết bị (device / 장치)/host/nút (node / 노드) nào. Decode worker nhận yêu cầu (request / 요청) nhưng không nhận đúng KV trạng thái (state / 상태) thì không thể tiếp tục chỉ từ yêu cầu (request / 요청) id.
+Ta cần biết trạng thái (state / 상태) này thuộc mô hình (model / 모델) phiên bản (version / 버전) nào, chuỗi (sequence / 시퀀스) nào, tầng (layer / 계층) nào, token (토큰) phạm vi (range / 범위) nào và nằm ở thiết bị (device / 장치)/host/nút (node / 노드) nào. Decode worker nhận yêu cầu (request / 요청) nhưng không nhận đúng KV trạng thái (state / 상태) thì không thể tiếp tục chỉ từ yêu cầu (request / 요청) id.
 
 Trạng thái (state / 상태) đường dẫn (path / 경로) có thể hình dung như sau:
 
@@ -119,9 +119,9 @@ Headroom vì vậy không phải bộ nhớ (memory / 메모리) lãng phí. Nó
 
 Decode có lợi khi nhiều chuỗi (sequence / 시퀀스) được batch cùng iteration. Nhưng chuỗi (sequence / 시퀀스) không có cùng độ dài hoặc cùng thời điểm hoàn tất. **Continuous batching** cho phép yêu cầu (request / 요청) rời/vào batch theo thời gian thay vì chờ một batch cố định hoàn tất.
 
-Cơ chế này tăng utilization nhưng tạo scheduler trạng thái (state / 상태) phức tạp hơn. Scheduler phải quyết định yêu cầu (request / 요청) nào được chạy ở iteration tiếp theo, ngân sách (budget / 예산) đơn vị từ (token / 토큰) nào dành cho prefill, yêu cầu (request / 요청) nào bị preempt và KV khối (block / 블록) nào cần giữ.
+Cơ chế này tăng utilization nhưng tạo scheduler trạng thái (state / 상태) phức tạp hơn. Scheduler phải quyết định yêu cầu (request / 요청) nào được chạy ở iteration tiếp theo, ngân sách (budget / 예산) token (토큰) nào dành cho prefill, yêu cầu (request / 요청) nào bị preempt và KV khối (block / 블록) nào cần giữ.
 
-Nếu admission chỉ nhìn yêu cầu (request / 요청) count mà bỏ qua expected đơn vị từ (token / 토큰) ngân sách (budget / 예산), một yêu cầu (request / 요청) có ngữ cảnh (context / 맥락) rất dài có thể tiêu thụ bộ nhớ (memory / 메모리) tương đương nhiều yêu cầu (request / 요청) ngắn. Sức chứa (capacity / 용량) mô hình (model / 모델) nên lập luận (reasoning / 추론) bằng công việc (work / 작업) units phù hợp như đầu vào (input / 입력) tokens, active KV bytes, output-token tỷ lệ (rate / 비율) và thiết bị (device / 장치) bộ nhớ (memory / 메모리) headroom, không chỉ QPS.
+Nếu admission chỉ nhìn yêu cầu (request / 요청) count mà bỏ qua expected token (토큰) ngân sách (budget / 예산), một yêu cầu (request / 요청) có ngữ cảnh (context / 맥락) rất dài có thể tiêu thụ bộ nhớ (memory / 메모리) tương đương nhiều yêu cầu (request / 요청) ngắn. Sức chứa (capacity / 용량) mô hình (model / 모델) nên lập luận (reasoning / 추론) bằng công việc (work / 작업) units phù hợp như đầu vào (input / 입력) tokens, active KV bytes, output-token tỷ lệ (rate / 비율) và thiết bị (device / 장치) bộ nhớ (memory / 메모리) headroom, không chỉ QPS.
 
 ## 8. Prefix reuse và bộ nhớ đệm (cache / 캐시) ngữ nghĩa (semantics / 의미론)
 
@@ -135,7 +135,7 @@ Stale prefix bộ nhớ đệm (cache / 캐시) ở đây không giống stale H
 
 Yêu cầu (request / 요청) suy luận (inference / 추론) có thể thất bại trong prefill, trong handoff hoặc giữa decode. Thử lại (retry / 재시도) toàn yêu cầu (request / 요청) dễ hiểu nhưng tốn compute. Resume từ checkpoint/KV trạng thái (state / 상태) tiết kiệm hơn nhưng cần biết trạng thái (state / 상태) nào đã được lần ghi nhận (commit / 커밋) đủ để tiếp tục.
 
-Streaming còn tạo ambiguity: máy khách (client / 클라이언트) có thể đã nhận một số đơn vị từ (token / 토큰) trước khi liên kết (connection / 연결) đứt. Máy chủ (server / 서버) thử lại (retry / 재시도) không thể giả định máy khách (client / 클라이언트) chưa thấy đầu ra (output / 출력). Vì vậy “exactly once đơn vị từ (token / 토큰) delivery” không tự xuất hiện chỉ vì backend có yêu cầu (request / 요청) id.
+Streaming còn tạo ambiguity: máy khách (client / 클라이언트) có thể đã nhận một số token (토큰) trước khi liên kết (connection / 연결) đứt. Máy chủ (server / 서버) thử lại (retry / 재시도) không thể giả định máy khách (client / 클라이언트) chưa thấy đầu ra (output / 출력). Vì vậy “exactly once token (토큰) delivery” không tự xuất hiện chỉ vì backend có yêu cầu (request / 요청) id.
 
 Cancellation cũng là tài nguyên (resource / 자원) sự kiện (event / 이벤트). Khi máy khách (client / 클라이언트) bỏ yêu cầu (request / 요청), scheduler cần dừng future công việc (work / 작업) và reclaim KV trạng thái (state / 상태). Nếu cancellation tín hiệu (signal / 신호) chậm hoặc bị mất, orphaned trạng thái (state / 상태) có thể giữ accelerator bộ nhớ (memory / 메모리) và làm sức chứa (capacity / 용량) suy giảm từ từ.
 
@@ -143,7 +143,7 @@ Cancellation cũng là tài nguyên (resource / 자원) sự kiện (event / 이
 
 Suy luận (inference / 추론) serving thường có phase chuyển tiếp (transition / 전이) rõ. Khi arrival tỷ lệ (rate / 비율) thấp, hàng đợi (queue / 큐) gần như bằng không và độ trễ (latency / 지연 시간) chủ yếu là dịch vụ (service / 서비스) thời gian (time / 시간). Khi accelerator hoặc bộ nhớ (memory / 메모리) tiến gần saturation, hàng đợi (queue / 큐) tăng nhanh. Batch lớn hơn có thể cải thiện thông lượng (throughput / 처리량) nhưng tăng waiting thời gian (time / 시간). KV pressure có thể kích hoạt eviction/di chuyển (migration / 마이그레이션), làm mạng (network / 네트워크) tăng và kéo thông lượng (throughput / 처리량) xuống, tạo vòng phản hồi (feedback loop / 피드백 루프).
 
-Do đó autoscaling chỉ dựa trên utilization có thể phản ứng muộn. Bằng chứng (evidence / 증거) nên gồm hàng đợi (queue / 큐) age, admitted vs rejected công việc (work / 작업), active sequences, đơn vị từ (token / 토큰) thông lượng (throughput / 처리량), TTFT, inter-token độ trễ (latency / 지연 시간), KV bytes/fragmentation, transfer thời gian (time / 시간), prefill/decode utilization riêng và cancellation/thử lại (retry / 재시도) tỷ lệ (rate / 비율).
+Do đó autoscaling chỉ dựa trên utilization có thể phản ứng muộn. Bằng chứng (evidence / 증거) nên gồm hàng đợi (queue / 큐) age, admitted vs rejected công việc (work / 작업), active sequences, token (토큰) thông lượng (throughput / 처리량), TTFT, inter-token độ trễ (latency / 지연 시간), KV bytes/fragmentation, transfer thời gian (time / 시간), prefill/decode utilization riêng và cancellation/thử lại (retry / 재시도) tỷ lệ (rate / 비율).
 
 ## 11. Lower layers thực sự quyết định hành vi (behavior / 동작)
 
@@ -153,7 +153,7 @@ Vì vậy suy luận (inference / 추론) diagnosis cần nối sang [SIMD/GPU e
 
 ## 12. Bằng chứng vận hành (production evidence / 운영 증거) và debugging workflow
 
-Khi TTFT tăng nhưng inter-token độ trễ (latency / 지연 시간) ổn, hypothesis đầu tiên nên tập trung hàng đợi (queue / 큐)/prefill/handoff. Khi TTFT ổn nhưng đơn vị từ (token / 토큰) stream chậm, xem decode batch, bộ nhớ (memory / 메모리) bandwidth, KV locality và scheduler. Khi chỉ một cohort chậm, phân tách theo mô hình (model / 모델) phiên bản (version / 버전), hardware lớp (class / 클래스), region, worker pool và sequence-length phân phối (distribution / 분포).
+Khi TTFT tăng nhưng inter-token độ trễ (latency / 지연 시간) ổn, hypothesis đầu tiên nên tập trung hàng đợi (queue / 큐)/prefill/handoff. Khi TTFT ổn nhưng token (토큰) stream chậm, xem decode batch, bộ nhớ (memory / 메모리) bandwidth, KV locality và scheduler. Khi chỉ một cohort chậm, phân tách theo mô hình (model / 모델) phiên bản (version / 버전), hardware lớp (class / 클래스), region, worker pool và sequence-length phân phối (distribution / 분포).
 
 Dấu vết (trace / 추적) nên biểu diễn ít nhất các phase:
 

@@ -20,8 +20,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 08_compute_economics_capacity_and_energy.md
 ```
 
-> **Chuyển mạch:** **Thứ tự đọc** đi từ workload đến accelerator, memory và scheduling; **Bản đồ phụ thuộc** chỉ ra prerequisite nào thuộc hardware, systems hay ML owner.
-
 ## Bản đồ phụ thuộc
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
@@ -39,8 +37,6 @@ flowchart TD
     S --> E[Kinh tế học tài nguyên tính toán]
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tính toán và Hạ tầng AI**, **Mô hình tư duy** gom các mảnh từ **Bản đồ phụ thuộc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -55,8 +51,6 @@ Toán học của mô hình
 → điều phối cụm máy
 → độ trễ / throughput / chi phí
 ```
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính toán và Hạ tầng AI**, **Những phân biệt cần giữ** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những phân biệt cần giữ
 
@@ -74,8 +68,6 @@ Mô hình vừa VRAM                  ≠ đủ bộ nhớ cho serving concurren
 Unified memory                   ≠ mọi vùng bộ nhớ có cùng tốc độ
 Accelerator rẻ hơn               ≠ chi phí trên mỗi tác vụ thành công thấp hơn
 ```
-
-> **Chuyển mạch:** **Những phân biệt cần giữ** tách compute capacity, data movement và model parallelism; **Liên kết kiến thức** đưa mỗi cơ chế về owner canonical trước khi đi sâu.
 
 ## Liên kết kiến thức
 

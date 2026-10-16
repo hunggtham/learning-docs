@@ -2,7 +2,7 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ language models tới large language models**. Route đi từ next-token probability → scale dữ liệu/tham số/tính toán → pretraining → emergent capabilities → post-training, để “large” được hiểu qua cơ chế tạo năng lực chứ không chỉ qua kích thước.
 
-Large ngôn ngữ (language / 언어) mô hình (model / 모델) không phải một loại xác suất (probability / 확률) mô hình (model / 모델) hoàn toàn mới. cốt lõi (core / 핵심) vẫn là ngôn ngữ (language / 언어) modeling: estimate phân phối (distribution / 분포) của đơn vị từ (token / 토큰) dựa trên ngữ cảnh (context / 맥락). Điều thay đổi là **quy mô (scale / 규모) của mô hình (model / 모델), dữ liệu (data / 데이터), compute và post-training**, khiến mô hình (model / 모델) học reusable representations và capabilities rộng hơn nhiều tác vụ (task / 작업) cụ thể.
+Large ngôn ngữ (language / 언어) mô hình (model / 모델) không phải một loại xác suất (probability / 확률) mô hình (model / 모델) hoàn toàn mới. cốt lõi (core / 핵심) vẫn là ngôn ngữ (language / 언어) modeling: estimate phân phối (distribution / 분포) của token (토큰) dựa trên ngữ cảnh (context / 맥락). Điều thay đổi là **quy mô (scale / 규모) của mô hình (model / 모델), dữ liệu (data / 데이터), compute và post-training**, khiến mô hình (model / 모델) học reusable representations và capabilities rộng hơn nhiều tác vụ (task / 작업) cụ thể.
 
 Một decoder-only LLM thường vẫn tối ưu:
 
@@ -186,7 +186,7 @@ Encoder/encoder-decoder các mô hình (models / 모델들) remain more efficien
 
 Chat template quyết định cách role và ranh giới được mã hóa trong chuỗi. Để thấy toàn bộ đường đi từ ứng dụng đến kết quả, mục sau đặt giao thức ấy vào LLM stack.
 
-## Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스)
+## Chat mô hình (model / 모델) là giao thức (protocol / 프로토콜) trên token (토큰) chuỗi (sequence / 시퀀스)
 
 Conversation usually serialized with special tokens/template:
 
@@ -196,7 +196,7 @@ Conversation usually serialized with special tokens/template:
 <assistant> ...
 ```
 
-Mô hình (model / 모델) still sees one đơn vị từ (token / 토큰) chuỗi (sequence / 시퀀스). Roles matter because post-training teaches hành vi (behavior / 동작) conditional on those markers.
+Mô hình (model / 모델) still sees one token (토큰) chuỗi (sequence / 시퀀스). Roles matter because post-training teaches hành vi (behavior / 동작) conditional on those markers.
 
 Changing chat template can materially affect chất lượng (quality / 품질)/an toàn (safety / 안전).
 
@@ -234,9 +234,9 @@ Các ngộ nhận đã nêu ranh giới giữa tham số, ngữ cảnh, agent v�
 
 ## Dùng chung (common / 공통) Misconceptions
 
-### “LLM khác ngôn ngữ (language / 언어) mô hình (model / 모델) vì nó lập luận (reasoning / 추론) thay vì predict đơn vị từ (token / 토큰)”
+### “LLM khác ngôn ngữ (language / 언어) mô hình (model / 모델) vì nó lập luận (reasoning / 추론) thay vì predict token (토큰)”
 
-Suy luận (inference / 추론) vẫn implemented through đơn vị từ (token / 토큰) prediction; richer computation inside Transformer can hỗ trợ (support / 지원) reasoning-like hành vi (behavior / 동작).
+Suy luận (inference / 추론) vẫn implemented through token (토큰) prediction; richer computation inside Transformer can hỗ trợ (support / 지원) reasoning-like hành vi (behavior / 동작).
 
 ### “More parameters means more kiến thức (knowledge / 지식) linearly”
 

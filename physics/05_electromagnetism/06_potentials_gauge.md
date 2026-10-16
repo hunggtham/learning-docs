@@ -54,8 +54,6 @@ Hai công thức
 
 không phải định nghĩa tùy ý. Chúng được chọn sao cho hai phương trình Maxwell đồng nhất được thỏa tự động.
 
-> **Nối mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Vì sao các thế không duy nhất?** nối từ **Từ phương trình Maxwell tới các thế** sang **Tự do chuẩn không phải sự mơ hồ của Vật lý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao các thế không duy nhất?
 
 Giả sử ta thay
@@ -96,8 +94,6 @@ nên `\mathbf E` cũng không đổi.
 
 Đây là **biến đổi chuẩn (gauge transformation / 게이지 변환)**. Nhiều cặp `(\phi,\mathbf A)` khác nhau biểu diễn cùng một cấu hình trường vật lý.
 
-> **Nối mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Tự do chuẩn không phải sự mơ hồ của Vật lý** nối từ **Vì sao các thế không duy nhất?** sang **Chuẩn Coulomb và chuẩn Lorenz**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự do chuẩn không phải sự mơ hồ của Vật lý
 
 Nếu hai mô tả khác nhau nhưng mọi đại lượng quan sát được đều giống nhau, sự khác biệt giữa chúng không phải một khác biệt vật lý độc lập. Nó là **dư thừa của cách biểu diễn (representational redundancy)**.
@@ -105,8 +101,6 @@ Nếu hai mô tả khác nhau nhưng mọi đại lượng quan sát được đ
 Điều này tương tự việc mô tả cùng một điểm bằng các hệ tọa độ khác nhau, nhưng phép so sánh chỉ mang tính gợi ý. Đối xứng chuẩn có cấu trúc toán học chính xác hơn một phép đổi tọa độ đơn giản.
 
 Bài học tổng quát là: không phải mọi biến xuất hiện trong phương trình đều tương ứng một bậc tự do quan sát độc lập.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Chuẩn Coulomb và chuẩn Lorenz** nối từ **Tự do chuẩn không phải sự mơ hồ của Vật lý** sang **Thế trễ và tốc độ truyền hữu hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuẩn Coulomb và chuẩn Lorenz
 
@@ -145,8 +139,6 @@ với toán tử d'Alembert
 
 Cấu trúc này làm tính tương đối tính của điện từ học rõ hơn.
 
-> **Nối mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Thế trễ và tốc độ truyền hữu hạn** nối từ **Chuẩn Coulomb và chuẩn Lorenz** sang **Từ thế tới Lagrangian của hạt tích điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thế trễ và tốc độ truyền hữu hạn
 
 Nghiệm của phương trình sóng không phụ thuộc tức thời vào nguồn hiện tại ở mọi nơi. Trường tại vị trí `\mathbf r` và thời điểm `t` phụ thuộc vào nguồn tại **thời gian trễ (retarded time)**
@@ -158,8 +150,6 @@ t_r=t-\frac{|\mathbf r-\mathbf r'|}{c}.
 Về mặt vật lý, thay đổi của điện tích hoặc dòng điện cần thời gian để ảnh hưởng tới vùng khác. Đây là cách nhân quả và tốc độ ánh sáng được mã hóa vào thế điện từ.
 
 Nó cũng cho thấy hình ảnh “điện tích hiện tại quyết định tức thời trường ở mọi nơi” chỉ đúng trong xấp xỉ gần tĩnh.
-
-> **Nối mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Từ thế tới Lagrangian của hạt tích điện** nối từ **Thế trễ và tốc độ truyền hữu hạn** sang **Hiệu ứng Aharonov–Bohm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ thế tới Lagrangian của hạt tích điện
 
@@ -188,8 +178,6 @@ m\frac{d\mathbf v}{dt}
 ```
 
 khác động lượng cơ học `m\mathbf v`. Phân biệt này trở nên đặc biệt quan trọng trong cơ học lượng tử và lý thuyết trường.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Hiệu ứng Aharonov–Bohm** nối từ **Từ thế tới Lagrangian của hạt tích điện** sang **Cấu trúc topo xuất hiện ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng Aharonov–Bohm
 
@@ -222,15 +210,11 @@ Trong bố trí Aharonov–Bohm, hạt có thể đi qua vùng mà từ trườn
 
 Điều này không có nghĩa `\mathbf A` tại một điểm đơn lẻ trở thành đại lượng quan sát tuyệt đối. Đại lượng đo được vẫn là tổ hợp chuẩn-bất biến liên hệ với pha quanh một vòng kín hoặc từ thông tổng.
 
-> **Nối mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Cấu trúc topo xuất hiện ở đâu?** nối từ **Hiệu ứng Aharonov–Bohm** sang **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu trúc topo xuất hiện ở đâu?
 
 Hiệu ứng Aharonov–Bohm cho thấy hai vùng có cùng trường cục bộ `\mathbf B=0` vẫn có thể khác nhau về cấu trúc toàn cục nếu topology của miền không đơn liên (not simply connected).
 
 Đây là một bước quan trọng từ Vật lý trường cổ điển sang tư duy topo: thông tin vật lý không phải lúc nào cũng được xác định hoàn toàn bởi các đại lượng cục bộ tại một điểm.
-
-> **Nối mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt** nối từ **Cấu trúc topo xuất hiện ở đâu?** sang **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ `U(1)` tới đối xứng chuẩn trong Vật lý hạt
 
@@ -250,15 +234,11 @@ Trường điện từ xuất hiện như trường chuẩn cần thiết để 
 
 Đây là nguyên mẫu cho cách Mô hình Chuẩn dùng các nhóm chuẩn phức tạp hơn như `SU(2)` và `SU(3)`. Tuy nhiên ở mức này, mục tiêu chỉ là thấy lô-gic (logic / 논리): **yêu cầu đối xứng cục bộ dẫn tới cấu trúc tương tác**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?** nối từ **Từ U(1) tới đối xứng chuẩn trong Vật lý hạt** sang **Những ngộ nhận thường gặp (Common Misconceptions)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi nào nên dùng `E,B`, khi nào nên dùng `\phi,A`?
 
 Nếu bài toán là lực cổ điển trên hạt hoặc năng lượng dòng trường, `E` và `B` thường trực quan hơn. Nếu bài toán liên quan phương trình sóng, bức xạ, cơ học giải tích, lượng tử hoặc đối xứng chuẩn, `\phi` và `\mathbf A` thường là cách biểu diễn tự nhiên hơn.
 
 Không có một biểu diễn “thật” duy nhất phải dùng cho mọi bài toán. Chọn biến tốt là một phần của tư duy vật lý.
-
-> **Nối mạch:** Trong **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Những ngộ nhận thường gặp (Common Misconceptions)** nối từ **Khi nào nên dùng E,B, khi nào nên dùng \phi,A?** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -274,13 +254,9 @@ Không. Hiệu ứng đo pha toàn cục phụ thuộc vòng tích phân hoặc 
 
 Không. Gauge khác nhau mô tả cùng cấu hình vật lý nếu liên hệ bởi biến đổi chuẩn hợp lệ.
 
-> **Nối mạch:** Ở chặng này của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Trường `\mathbf E` và `\mathbf B` mô tả cường độ điện từ cục bộ. Các thế `\phi` và `\mathbf A` tổ chức cấu trúc trường ở mức sâu hơn, đặc biệt khi có thời gian, lượng tử và topology. Tự do chuẩn nhắc rằng một lý thuyết có thể chứa dư thừa biểu diễn nhưng vẫn có nội dung vật lý hoàn toàn xác định.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế điện từ, tự do chuẩn và hiệu ứng Aharonov–Bohm**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

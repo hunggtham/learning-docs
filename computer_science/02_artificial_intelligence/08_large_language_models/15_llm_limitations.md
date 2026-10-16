@@ -32,7 +32,7 @@ Hallucination không chỉ là thiếu dữ kiện; nó còn phản ánh việc 
 
 Mô hình (model / 모델) chỉ điều kiện (condition / 조건) trên tokens trong hiện tại (current / 현재) ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우). Long conversations cần truncation, summarization hoặc bộ nhớ (memory / 메모리) retrieval.
 
-Ngay cả khi đơn vị từ (token / 토큰) technically fits, **effective use** của thông tin (information / 정보) ở đầu/giữa ngữ cảnh (context / 맥락) có thể không đồng đều.
+Ngay cả khi token (토큰) technically fits, **effective use** của thông tin (information / 정보) ở đầu/giữa ngữ cảnh (context / 맥락) có thể không đồng đều.
 
 Khi context bị cắt hoặc thông tin bị đặt ở vị trí khó truy cập, các nhiệm vụ nhiều bước càng dễ thất bại; reasoning không thể được coi là bảo đảm.
 
@@ -46,7 +46,7 @@ Reasoning không bảo đảm tính đúng, đặc biệt với biến thể l�
 
 ## Chính xác (exact / 정확한) computation yếu hơn algorithmic tools
 
-Large-number arithmetic, exhaustive tìm kiếm (search / 검색), cơ sở dữ liệu (database / 데이터베이스) aggregation và formal proof thường phù hợp với specialized tools hơn đơn vị từ (token / 토큰) generation.
+Large-number arithmetic, exhaustive tìm kiếm (search / 검색), cơ sở dữ liệu (database / 데이터베이스) aggregation và formal proof thường phù hợp với specialized tools hơn token (토큰) generation.
 
 Hệ thống (system / 시스템) tốt dispatch thao tác (operation / 연산) tới right computational substrate.
 
@@ -144,7 +144,7 @@ Text-only model có thể mô tả thế giới qua văn bản nhưng không t�
 
 ## Tối ưu hóa (optimization / 최적화) mục tiêu (target / 대상) mismatch
 
-Pretraining optimizes đơn vị từ (token / 토큰) prediction; post-training optimizes preference/chính sách (policy / 정책) signals. người dùng (user / 사용자)'s true mục tiêu (objective / 목표) may differ.
+Pretraining optimizes token (토큰) prediction; post-training optimizes preference/chính sách (policy / 정책) signals. người dùng (user / 사용자)'s true mục tiêu (objective / 목표) may differ.
 
 This is Goodhart-like bài toán (problem / 문제): proxy chỉ số (metric / 지표) can be optimized while real goal suffers.
 

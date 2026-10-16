@@ -10,8 +10,6 @@ Hệ thống đang chạy thay đổi liên tục. Khi sự cố xảy ra, trạ
 
 Một bản ghi nhật ký hữu ích thường giúp trả lời: chuyện gì xảy ra, lúc nào, ở thành phần nào, yêu cầu hoặc tiến trình nào liên quan và kết quả ra sao. Dấu thời gian không có múi giờ hoặc `request ID` không được truyền xuyên các dịch vụ sẽ làm việc đối chiếu sự kiện khó hơn.
 
-> **Nối mạch:** Trong **Nhật ký, journal và khả năng quan sát hệ thống**, **Tệp nhật ký truyền thống** nối từ **Vì sao nhật ký tồn tại?** sang **Journal của systemd**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tệp nhật ký truyền thống
 
 Nhiều ứng dụng ghi nhật ký dưới `/var/log` hoặc thư mục riêng của ứng dụng:
@@ -28,8 +26,6 @@ less +F /var/log/myapp/app.log
 ```bash
 tail -n 500 -F app.log
 ```
-
-> **Nối mạch:** Ở chặng này của **Nhật ký, journal và khả năng quan sát hệ thống**, **Journal của systemd** nối từ **Tệp nhật ký truyền thống** sang **journalctl -xeu thực sự làm gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journal của systemd
 
@@ -59,8 +55,6 @@ journalctl -u app -n 200 --no-pager
 
 `-u` lọc theo đơn vị (unit / 단위), giúp tránh tìm kiếm toàn bộ journal khi ta đã biết phạm vi dịch vụ cần kiểm tra.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhật ký, journal và khả năng quan sát hệ thống**, **journalctl -xeu thực sự làm gì?** nối từ **Journal của systemd** sang **Xoay vòng nhật ký**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `journalctl -xeu` thực sự làm gì?
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -70,8 +64,6 @@ journalctl -xeu nginx
 ```
 
 `-u` chọn đơn vị (unit / 단위), `-e` đưa vị trí xem tới gần cuối journal, còn `-x` thêm phần giải thích cho một số mục có trong danh mục (catalog / 카탈로그). Câu lệnh này hữu ích khi dịch vụ không khởi động được, nhưng phần giải thích đi kèm không thay thế quá trình phân tích nguyên nhân gốc.
-
-> **Nối mạch:** Trong **Nhật ký, journal và khả năng quan sát hệ thống**, **Xoay vòng nhật ký** nối từ **journalctl -xeu thực sự làm gì?** sang **Nhật ký có cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xoay vòng nhật ký
 
@@ -94,8 +86,6 @@ zless app.log.2.gz
 
 Xoay vòng cần phối hợp với ứng dụng. Nếu tiến trình vẫn giữ tệp (file / 파일) descriptor tới `inode` cũ sau khi tệp bị đổi tên hoặc xóa và không mở lại nhật ký mới, dung lượng có thể không được giải phóng như mong đợi. `lsof +L1` giúp tìm các tệp đã mất tên nhưng vẫn còn được mở.
 
-> **Nối mạch:** Ở chặng này của **Nhật ký, journal và khả năng quan sát hệ thống**, **Nhật ký có cấu trúc** nối từ **Xoay vòng nhật ký** sang **Đối chiếu sự kiện và request ID**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhật ký có cấu trúc
 
 Văn bản thuần dễ đọc nhưng khó phân tích ổn định khi định dạng thay đổi. **Nhật ký có cấu trúc (structured logging)** như JSON cung cấp các trường rõ ràng:
@@ -112,8 +102,6 @@ jq 'select(.level == "ERROR") | {ts,request_id,message}' app.json.log
 
 Cách tổ chức này có liên hệ với cơ sở dữ liệu và kỹ thuật dữ liệu: mỗi sự kiện trở thành một bản ghi có lược đồ thay vì một dòng văn bản mà người đọc phải đoán vị trí từng trường.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhật ký, journal và khả năng quan sát hệ thống**, **Nhật ký có cấu trúc** đặt tiêu chí; **Đối chiếu sự kiện và request ID** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Thời gian là một chiều dữ liệu** mở rộng hệ quả.
-
 ## Đối chiếu sự kiện và `request ID`
 
 Trong hệ thống phân tán, một yêu cầu của người dùng có thể đi qua bộ cân bằng tải → API → dịch vụ → cơ sở dữ liệu. Hai sự kiện có dấu thời gian gần nhau chưa đủ chứng minh chúng thuộc cùng một yêu cầu. `Correlation ID` hoặc `trace ID` được truyền xuyên hệ thống giúp nối các bằng chứng lại với nhau.
@@ -123,8 +111,6 @@ grep -F 'request_id=abc123' app.log
 ```
 
 Khả năng quan sát tốt phải được thiết kế từ kiến trúc ứng dụng; không thể hoàn toàn bổ sung về sau chỉ bằng các câu lệnh Linux.
-
-> **Nối mạch:** Trong **Nhật ký, journal và khả năng quan sát hệ thống**, **Đối chiếu sự kiện và request ID** đặt tiêu chí; **Thời gian là một chiều dữ liệu** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Nhật ký, số liệu đo và dấu vết phân tán** mở rộng hệ quả.
 
 ## Thời gian là một chiều dữ liệu
 
@@ -138,8 +124,6 @@ timedatectl
 
 Đồng bộ thời gian bằng NTP cũng quan trọng với TLS, thời hạn đơn vị từ (token / 토큰) và việc đối chiếu sự kiện giữa nhiều máy chủ.
 
-> **Nối mạch:** Ở chặng này của **Nhật ký, journal và khả năng quan sát hệ thống**, **Thời gian là một chiều dữ liệu** đặt vấn đề; **Nhật ký, số liệu đo và dấu vết phân tán** đối chiếu bằng chứng, rồi **Nhật ký của kernel** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nhật ký, số liệu đo và dấu vết phân tán
 
 Ba khái niệm thường gặp là:
@@ -151,8 +135,6 @@ Ba khái niệm thường gặp là:
 Không loại nào thay thế hoàn toàn loại còn lại. CPU tăng đột biến có thể được chỉ số (metric / 지표) phát hiện nhanh; log giải thích sự kiện trong ứng dụng; dấu vết (trace / 추적) cho thấy độ trễ tập trung ở dịch vụ nào.
 
 Các công cụ dòng lệnh Linux như `vmstat`, `iostat`, `ss`, `pidstat` cung cấp quan sát cục bộ, còn môi trường vận hành (production / 운영 환경) thường gửi metrics và traces tới hệ thống tập trung để lưu giữ và phân tích lâu dài.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhật ký, journal và khả năng quan sát hệ thống**, **Nhật ký của kernel** nối từ **Nhật ký, số liệu đo và dấu vết phân tán** sang **Thu thập bằng chứng trước khi can thiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhật ký của kernel
 
@@ -170,8 +152,6 @@ journalctl -k | grep -i -E 'oom|out of memory|killed process'
 ```
 
 Nếu tiến trình Java "tự biến mất" mà nhật ký ứng dụng không cho thấy quá trình dừng có kiểm soát, nhật ký kernel là một lớp bắt buộc phải kiểm tra.
-
-> **Nối mạch:** Trong **Nhật ký, journal và khả năng quan sát hệ thống**, **Nhật ký của kernel** đặt vấn đề; **Thu thập bằng chứng trước khi can thiệp** đối chiếu bằng chứng, rồi **Tỷ lệ tín hiệu trên nhiễu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thu thập bằng chứng trước khi can thiệp
 
@@ -191,21 +171,15 @@ Với Java dùng CPU cao hoặc bị treo, có thể cần lấy luồng thực 
 
 Đây là khác biệt giữa **phục hồi dịch vụ (recovery)** và **phân tích nguyên nhân gốc (root-cause analysis)**. Hai mục tiêu có liên quan nhưng không giống nhau.
 
-> **Nối mạch:** Ở chặng này của **Nhật ký, journal và khả năng quan sát hệ thống**, **Thu thập bằng chứng trước khi can thiệp** đặt vấn đề; **Tỷ lệ tín hiệu trên nhiễu** đối chiếu bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Tỷ lệ tín hiệu trên nhiễu
 
 Nhiều log hơn không tự động tạo khả năng quan sát (observability / 관측 가능성) tốt hơn. gỡ lỗi (debug / 디버그) quá dày có thể làm tăng chi phí lưu trữ, làm tìm kiếm chậm và che khuất sự kiện quan trọng. Thiết kế nhật ký cần mức log có ý nghĩa, lấy mẫu hoặc giới hạn tốc độ khi phù hợp và chính sách lưu giữ rõ ràng.
 
 Không nên ghi bí mật, truy cập (access / 접근) đơn vị từ (token / 토큰), mật khẩu hoặc dữ liệu cá nhân không cần thiết vào log. Khả năng quan sát cũng là một phần của thiết kế bảo mật và quyền riêng tư.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhật ký, journal và khả năng quan sát hệ thống**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tỷ lệ tín hiệu trên nhiễu** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy coi một sự cố như sự kiện đã xảy ra trong hệ thống nhiều lớp. Mỗi nguồn quan sát giống một camera nhìn từ một góc khác. Nhật ký ứng dụng không phải camera toàn cảnh. Nhiệm vụ là **đối chiếu các bằng chứng độc lập theo thời gian và theo giả thuyết nhân quả**.
-
-> **Nối mạch:** Trong **Nhật ký, journal và khả năng quan sát hệ thống**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -218,8 +192,6 @@ Hãy coi một sự cố như sự kiện đã xảy ra trong hệ thống nhi�
 **"Hai log có cùng thời gian nghĩa là có quan hệ nhân quả."** Cần thêm danh tính và ngữ cảnh như yêu cầu (request / 요청) ID, dấu vết (trace / 추적) ID và kiến trúc luồng xử lý.
 
 **"Log càng chi tiết càng tốt."** Nhiễu, chi phí và rủi ro lộ dữ liệu nhạy cảm cũng tăng theo.
-
-> **Nối mạch:** Ở chặng này của **Nhật ký, journal và khả năng quan sát hệ thống**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

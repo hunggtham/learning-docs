@@ -4,7 +4,7 @@
 
 Word Embedding (단어 임베딩 / nhúng từ) maps discrete lexical units thành dense vectors. Trước embeddings, one-hot biểu diễn (representation / 표현) coi mọi words equally unrelated. Embeddings cho mô hình (model / 모델) học hình học (geometry / 기하학) nơi words xuất hiện trong similar contexts có vectors liên quan.
 
-Đây là bước lịch sử quan trọng từ symbolic sparse NLP sang phân tán (distributed / 분산) biểu diễn (representation / 표현), và là nền trực tiếp của đơn vị từ (token / 토큰) embeddings trong LLM.
+Đây là bước lịch sử quan trọng từ symbolic sparse NLP sang phân tán (distributed / 분산) biểu diễn (representation / 표현), và là nền trực tiếp của token (토큰) embeddings trong LLM.
 
 ## One-Hot Limitation
 

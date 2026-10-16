@@ -24,8 +24,6 @@ Công ty tín thác, công ty chứng khoán, ngân hàng tiết kiệm, công t
 
 Nếu không xác định đúng vai trò, rất dễ nhầm nợ của SPV với nợ của nhà thầu — hoặc ngược lại bỏ qua bảo lãnh khiến nghĩa vụ của SPV cuối cùng quay về nhà thầu.
 
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **2. dự án (project / 프로젝트) Finance khác khoản vay doanh nghiệp thông thường** tiếp nhận điểm tựa từ **1. Ai là ai trong một dự án phát triển bất động sản?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Khoản vay cầu nối: giai đoạn rủi ro trước khi dự án đủ điều kiện 본PF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. dự án (project / 프로젝트) Finance khác khoản vay doanh nghiệp thông thường
 
 Trong **tài chính doanh nghiệp (corporate finance)**, bên cho vay dựa nhiều vào dòng tiền và bảng cân đối của cả công ty.
@@ -44,8 +42,6 @@ Trong **tài chính dự án (Project Finance / PF / 프로젝트 파이낸싱)*
 
 Tuy nhiên “không truy đòi (non-recourse)” trong lý thuyết không có nghĩa mọi rủi ro PF ở Hàn Quốc đều tách hoàn toàn khỏi công ty mẹ. Bảo lãnh, nhận nợ thay, cam kết hoàn thành công trình hoặc hỗ trợ thanh khoản có thể nối rủi ro dự án trở lại nhà tài trợ hoặc nhà thầu.
 
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **3. Khoản vay cầu nối: giai đoạn rủi ro trước khi dự án đủ điều kiện 본PF** tiếp nhận điểm tựa từ **2. dự án (project / 프로젝트) Finance khác khoản vay doanh nghiệp thông thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Bán trước (분양) và mô hình dòng tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. Khoản vay cầu nối: giai đoạn rủi ro trước khi dự án đủ điều kiện 본PF
 
 **Khoản vay cầu nối (bridge loan / 브릿지론)** tài trợ giai đoạn sớm như mua đất và chuẩn bị dự án trước khi đủ điều kiện chuyển sang PF chính.
@@ -62,8 +58,6 @@ Lối ra phụ thuộc tái cấp vốn sang 본PF
 Nếu lãi suất tăng hoặc tính khả thi của dự án xấu đi, khoản vay cầu nối có thể không tái cấp vốn được.
 
 Đây là **rủi ro kỳ hạn và tái cấp vốn (maturity/refinancing risk)** điển hình.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **4. Bán trước (분양) và mô hình dòng tiền** tiếp nhận điểm tựa từ **3. Khoản vay cầu nối: giai đoạn rủi ro trước khi dự án đủ điều kiện 본PF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Backlog của nhà thầu không bảo đảm lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 4. Bán trước (분양) và mô hình dòng tiền
 
@@ -86,8 +80,6 @@ Dự phòng rủi ro
 
 Nếu giá bán bị giới hạn hoặc nhu cầu yếu trong khi chi phí xây dựng và lãi vay tăng, biên lợi nhuận của chủ đầu tư bị thu hẹp.
 
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **5. Backlog của nhà thầu không bảo đảm lợi nhuận** tiếp nhận điểm tựa từ **4. Bán trước (분양) và mô hình dòng tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ghi nhận theo tiến độ và tài sản hợp đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. Backlog của nhà thầu không bảo đảm lợi nhuận
 
 Backlog tạo khả năng dự báo doanh thu nhưng biên lợi nhuận phụ thuộc giả định chi phí ban đầu và lạm phát chi phí.
@@ -103,8 +95,6 @@ Lợi nhuận kỳ vọng = 100
 Nếu chi phí vật liệu và lao động tăng khiến tổng chi phí ước tính thành 1.020, dự án chuyển từ +100 sang -20.
 
 Hợp đồng dài hạn vì vậy có **rủi ro ước tính (estimate risk)**. Tùy chuẩn mực và tình hình thực tế, kế toán có thể phải ghi nhận dự phòng hoặc tổn thất dự kiến trước khi công trình hoàn thành vật lý.
-
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **6. Ghi nhận theo tiến độ và tài sản hợp đồng** tiếp nhận điểm tựa từ **5. Backlog của nhà thầu không bảo đảm lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Bảo lãnh: rủi ro có thể nằm ngoài con số nợ nổi bật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 6. Ghi nhận theo tiến độ và tài sản hợp đồng
 
@@ -123,8 +113,6 @@ Tiền đã thu
 Nếu doanh thu được ghi nhận trước khi lập hóa đơn hoặc thu tiền, **tài sản hợp đồng (contract asset / 계약자산)** có thể tăng.
 
 Tài sản hợp đồng tăng không tự động là dấu hiệu xấu; có thể phù hợp với tiến độ thanh toán. Nhưng nếu tăng nhanh hơn doanh thu trong nhiều kỳ, cần kiểm tra giả định tiến độ, tranh chấp thanh toán và khả năng thu tiền.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **7. Bảo lãnh: rủi ro có thể nằm ngoài con số nợ nổi bật** tiếp nhận điểm tựa từ **6. Ghi nhận theo tiến độ và tài sản hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cam kết hoàn thành công trình (책임준공)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Bảo lãnh: rủi ro có thể nằm ngoài con số nợ nổi bật
 
@@ -147,8 +135,6 @@ Khoản vay
 
 Không cộng tất cả một cách máy móc; phải phân loại điều kiện kích hoạt và xác suất.
 
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **8. Cam kết hoàn thành công trình (책임준공)** tiếp nhận điểm tựa từ **7. Bảo lãnh: rủi ro có thể nằm ngoài con số nợ nổi bật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vòng xoáy tái cấp vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 8. Cam kết hoàn thành công trình (책임준공)
 
 **Cam kết hoàn thành công trình (completion guarantee / 책임준공)** có thể buộc nhà thầu phải hoàn tất xây dựng dù chủ đầu tư gặp khó khăn, tùy điều khoản hợp đồng.
@@ -156,8 +142,6 @@ Không cộng tất cả một cách máy móc; phải phân loại điều ki�
 Nó có giá trị với bên cho vay vì giảm rủi ro dự án dở dang, nhưng chuyển một phần rủi ro sang nhà thầu.
 
 Cần đọc chính xác nghĩa vụ pháp lý. Không nên coi mọi `책임준공` như bảo lãnh nợ, nhưng cũng không được bỏ qua chỉ vì nó không xuất hiện như khoản vay trên bảng cân đối.
-
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **9. Vòng xoáy tái cấp vốn** tiếp nhận điểm tựa từ **8. Cam kết hoàn thành công trình (책임준공)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Căn chưa bán (미분양)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 9. Vòng xoáy tái cấp vốn
 
@@ -176,8 +160,6 @@ Lãi suất tăng / nhu cầu bất động sản giảm
 
 Nếu nhiều dự án cùng gặp vấn đề, rủi ro có thể truyền sang nhà thầu và các công ty chứng khoán/tổ chức tài chính liên quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **10. Căn chưa bán (미분양)** tiếp nhận điểm tựa từ **9. Vòng xoáy tái cấp vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Khác biệt theo khu vực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. Căn chưa bán (미분양)
 
 **Căn chưa bán (unsold units / 미분양)** là chỉ báo quan trọng nhưng cần bối cảnh.
@@ -185,8 +167,6 @@ Nếu nhiều dự án cùng gặp vấn đề, rủi ro có thể truyền sang
 Căn chưa bán trước khi hoàn thành vẫn có thể bán sau. Căn đã hoàn thành nhưng chưa bán thường nghiêm trọng hơn vì chi phí xây dựng đã phát sinh và chi phí tài chính vẫn tiếp tục.
 
 Rủi ro phụ thuộc địa điểm, mức giá, chất lượng dự án và đòn bẩy. Không chỉ đếm số căn; cần hỏi giá bán kỳ vọng còn đủ trả nợ và chi phí còn lại hay không.
-
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **11. Khác biệt theo khu vực** tiếp nhận điểm tựa từ **10. Căn chưa bán (미분양)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Ví dụ dự án mô phỏng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. Khác biệt theo khu vực
 
@@ -208,8 +188,6 @@ Chi phí đất
 Xây dựng/PF là một trong những lĩnh vực mà địa lý trở thành biến tài chính trực tiếp.
 
 Xem [24_regional_clusters_and_industrial_geography](../24_regional_clusters_and_industrial_geography.md).
-
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **11. Khác biệt theo khu vực** cho ta quy tắc; **12. Ví dụ dự án mô phỏng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Kiểm tra sức chịu đựng của nhà thầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Ví dụ dự án mô phỏng
 
@@ -234,8 +212,6 @@ Nếu chậm hoàn thành còn làm chi phí lãi vay tăng, phần vốn chủ 
 
 Bài học: **các cú sốc phần trăm nhỏ ở doanh thu và chi phí có thể phá hủy phần vốn chủ sở hữu mỏng vì đòn bẩy**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **12. Ví dụ dự án mô phỏng** cho ta quy tắc; **13. Kiểm tra sức chịu đựng của nhà thầu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **14. Mối liên hệ với công ty chứng khoán và tổ chức tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 13. Kiểm tra sức chịu đựng của nhà thầu
 
 Một kịch bản nhân quả hợp lý:
@@ -255,8 +231,6 @@ Nhu cầu nhà ở yếu
 
 Đây là vòng phản hồi giữa dự án và bảng cân đối của công ty mẹ/nhà thầu.
 
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **14. Mối liên hệ với công ty chứng khoán và tổ chức tài chính** tiếp nhận điểm tựa từ **13. Kiểm tra sức chịu đựng của nhà thầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Thứ tự đọc DART cho nhà thầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 14. Mối liên hệ với công ty chứng khoán và tổ chức tài chính
 
 Rủi ro PF không chỉ nằm ở nhà thầu. Công ty chứng khoán có thể thu xếp, bảo lãnh, phân phối hoặc nắm giữ các khoản liên quan đến PF.
@@ -272,8 +246,6 @@ Dự án bất động sản
 ```
 
 Đây là lý do chapter xây dựng phải đọc cùng tài chính.
-
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **15. Thứ tự đọc DART cho nhà thầu** tiếp nhận điểm tựa từ **14. Mối liên hệ với công ty chứng khoán và tổ chức tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Định giá: lợi nhuận chuẩn hóa + rủi ro tiềm tàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Thứ tự đọc DART cho nhà thầu
 
@@ -294,8 +266,6 @@ Nhà thầu cần được đọc từ dự án, tiến độ và hợp đồng 
 
 Báo cáo kết quả kinh doanh chỉ là điểm bắt đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **16. Định giá: lợi nhuận chuẩn hóa + rủi ro tiềm tàng** tiếp nhận điểm tựa từ **15. Thứ tự đọc DART cho nhà thầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 16. Định giá: lợi nhuận chuẩn hóa + rủi ro tiềm tàng
 
 P/E thấp của nhà thầu có thể phản ánh chu kỳ hoặc lo ngại PF chưa hiện rõ.
@@ -311,8 +281,6 @@ Lợi nhuận xây dựng chuẩn hóa
 ```
 
 Không cần giả vờ có độ chính xác tuyệt đối. Mục tiêu là không đặt rủi ro bảo lãnh bằng 0% hoặc 100% một cách máy móc.
-
-> **Chuyển mạch:** Trong **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **16. Định giá: lợi nhuận chuẩn hóa + rủi ro tiềm tàng** đã nêu tiêu chí phân biệt, còn **17. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. Bài tập nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Những nhầm lẫn thường gặp
 
@@ -332,8 +300,6 @@ Cũng sai. Bảo lãnh là nghĩa vụ có điều kiện; phải đọc điều
 
 Sai vì bất động sản mang tính địa phương rất cao.
 
-> **Chuyển mạch:** Ở chặng này của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **17. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **18. Bài tập nghiên cứu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 18. Bài tập nghiên cứu
 
 Bài tập này yêu cầu dựng một hồ sơ nhà thầu có timeline dự án, nghĩa vụ bảo lãnh và kịch bản tái cấp vốn. Mục tiêu là nối pháp lý và tiến độ với khả năng sống sót của bảng cân đối.
@@ -351,8 +317,6 @@ Bài tập này yêu cầu dựng một hồ sơ nhà thầu có timeline dự �
 | Chi phí lãi | | | | | |
 
 Bên cạnh bảng, hãy lập **bản đồ phơi nhiễm dự án (project exposure map)** riêng thay vì chỉ ghi tổng giá trị bảo lãnh.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xây dựng & dự án (project / 프로젝트) Finance Hàn Quốc — lợi nhuận nhà thầu, 시행사, bảo lãnh PF và rủi ro tái cấp vốn**, **Mô hình tư duy cuối** gom các mảnh từ **18. Bài tập nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy cuối
 

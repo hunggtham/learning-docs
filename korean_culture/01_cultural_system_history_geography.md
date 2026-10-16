@@ -28,8 +28,6 @@ hành vi quan sát được
 
 Không phải hiện tượng nào cũng đi qua đủ bảy lớp. Mục tiêu của mô hình là buộc ta tìm **cơ chế (mechanism / 메커니즘)** trước khi nói “đó là tính cách người Hàn”.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Văn hoá, thiết chế và hành vi: ba lớp không được trộn** nối từ **Văn hoá không bắt đầu từ “phong tục”** sang **Bán đảo như một không gian lịch sử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Văn hoá, thiết chế và hành vi: ba lớp không được trộn
 
 Một lỗi phổ biến là gọi mọi thứ lặp lại trong xã hội là “văn hoá”. Nhưng cần tách rõ:
@@ -51,8 +49,6 @@ bối cảnh làm thay đổi xác suất
 
 Đây là nền tảng chống định kiến cho toàn bộ thư viện.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Bán đảo như một không gian lịch sử** nối từ **Văn hoá, thiết chế và hành vi: ba lớp không được trộn** sang **Núi, đồng bằng và bất đối xứng đông–tây**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bán đảo như một không gian lịch sử
 
 Bán đảo Triều Tiên nằm giữa lục địa Đông Bắc Á và vùng biển hướng ra Nhật Bản. Vị trí đó khiến lịch sử Triều Tiên thường xuyên kết nối với Trung Hoa, Mãn Châu, Nhật Bản và các mạng lưới hàng hải.
@@ -60,8 +56,6 @@ Bán đảo Triều Tiên nằm giữa lục địa Đông Bắc Á và vùng bi
 “Ảnh hưởng Trung Hoa” vì vậy không đơn giản là sao chép. Chữ Hán, Phật giáo, Nho học, luật lệ và mô hình nhà nước được tiếp nhận rồi tái cấu trúc trong điều kiện địa phương. Tương tự, Hàn Quốc hiện đại tiếp nhận chủ nghĩa tư bản, Kitô giáo, thiết chế hiến pháp, định dạng nhạc đại chúng và nền tảng Internet nhưng không triển khai chúng y hệt nơi xuất phát.
 
 Một nền văn hoá mạnh không phải nền văn hoá “không vay mượn”. Phần lớn văn hoá là **hệ thống tái kết hợp (recombination system)**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Núi, đồng bằng và bất đối xứng đông–tây** nối từ **Bán đảo như một không gian lịch sử** sang **Khí hậu bốn mùa và nhịp văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Núi, đồng bằng và bất đối xứng đông–tây
 
@@ -77,8 +71,6 @@ Một nguyên lý quan trọng:
 ```
 
 Khi đường sắt, cao tốc và đường hầm phát triển, địa lý không biến mất; **hàm chi phí (cost function)** của địa lý thay đổi. Một vùng núi từng xa có thể gần hơn theo thời gian di chuyển, nhưng tuyết, độ dốc và chi phí xây dựng vẫn còn.
-
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Khí hậu bốn mùa và nhịp văn hoá** nối từ **Núi, đồng bằng và bất đối xứng đông–tây** sang **Nông nghiệp lúa nước và phối hợp: dùng giả thuyết, không dùng định kiến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khí hậu bốn mùa và nhịp văn hoá
 
@@ -96,8 +88,6 @@ Văn hoá không chỉ chạy theo đồng hồ xã hội mà còn theo **đồn
 
 Đọc sâu tại [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Nông nghiệp lúa nước và phối hợp: dùng giả thuyết, không dùng định kiến** nối từ **Khí hậu bốn mùa và nhịp văn hoá** sang **Làng, chợ và hộ gia đình: những đơn vị xã hội cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nông nghiệp lúa nước và phối hợp: dùng giả thuyết, không dùng định kiến
 
 Xã hội nông nghiệp lúa nước cần phối hợp lao động, lịch mùa vụ và quản lý nước. Không nên suy máy móc rằng “trồng lúa tạo ra tính tập thể”, nhưng môi trường nông nghiệp có thể làm tăng lợi ích của **phối hợp (coordination / 조정)**.
@@ -105,8 +95,6 @@ Xã hội nông nghiệp lúa nước cần phối hợp lao động, lịch mù
 Trong lý thuyết trò chơi, bài toán phối hợp xuất hiện khi kết quả tốt phụ thuộc nhiều người chọn hành động tương thích. Văn hoá có thể giảm chi phí phối hợp bằng lịch, vai trò, nghi lễ và kỳ vọng.
 
 Nhưng chủ nghĩa tập thể hay thứ bậc hiện đại không thể được giải thích chỉ bằng nông nghiệp lúa nước. Quá trình hình thành nhà nước, thiết chế Nho giáo, quân đội, trường học, công ty và đô thị hoá công nghiệp đều thêm các lớp mới.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Làng, chợ và hộ gia đình: những đơn vị xã hội cũ** nối từ **Nông nghiệp lúa nước và phối hợp: dùng giả thuyết, không dùng định kiến** sang **Từ các vương quốc đến nhà Triều Tiên: nhà nước và trật tự**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làng, chợ và hộ gia đình: những đơn vị xã hội cũ
 
@@ -124,8 +112,6 @@ Khi di cư vào thành phố làm mạng quan hệ ẩn danh hơn, thiết chế
 
 Danh tiếng trong làng và đánh giá trực tuyến khác công nghệ nhưng đều giải một **bài toán niềm tin (trust problem)**.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Từ các vương quốc đến nhà Triều Tiên: nhà nước và trật tự** nối từ **Làng, chợ và hộ gia đình: những đơn vị xã hội cũ** sang **양반 và địa vị học giả: tri thức gắn với quyền lực**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ các vương quốc đến nhà Triều Tiên: nhà nước và trật tự
 
 Lịch sử bán đảo gồm nhiều nhà nước và triều đại. **Cao Câu Ly (고구려 / Goguryeo)**, **Bách Tế (백제 / Baekje)** và **Tân La (신라 / Silla)** thường được gọi là thời **Tam Quốc (삼국시대 / Three Kingdoms period)**. Sau những biến đổi tiếp theo, **Cao Ly (고려 / Goryeo)** và **nhà Triều Tiên (조선 / Joseon)** trở thành những lớp lớn trong lịch sử nhà nước.
@@ -135,8 +121,6 @@ Phật giáo có vai trò lớn trong Goryeo, trong khi Joseon từ cuối thế
 Điểm cần hiểu không phải “triều đại A thích tôn giáo X”, mà là hệ quả thiết chế: hệ tư tưởng đi vào thi cử, giáo dục, quy tắc gia đình, nghi lễ, lý luận pháp lý và quá trình hình thành tầng lớp tinh hoa.
 
 Đọc niên đại đầy đủ tại [`../korean_history/README.md`](../korean_history/README.md) và các lớp lịch sử văn hoá tại [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md).
-
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **양반 và địa vị học giả: tri thức gắn với quyền lực** nối từ **Từ các vương quốc đến nhà Triều Tiên: nhà nước và trật tự** sang **Gia đình phụ hệ không phải “gia đình Hàn Quốc từ đầu lịch sử”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 양반 và địa vị học giả: tri thức gắn với quyền lực
 
@@ -151,8 +135,6 @@ khoa cử Joseon
 
 Hệ thống thi hiện đại có nguồn gốc thiết chế và chức năng khác. Điều có thể có tính liên tục là **cách xã hội coi trọng học tập và bằng cấp**, chứ không phải cùng một thiết chế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Gia đình phụ hệ không phải “gia đình Hàn Quốc từ đầu lịch sử”** nối từ **양반 và địa vị học giả: tri thức gắn với quyền lực** sang **Huấn Dân Chính Âm và Hangul: công nghệ thông tin của thế kỷ XV**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gia đình phụ hệ không phải “gia đình Hàn Quốc từ đầu lịch sử”
 
 Joseon dần củng cố chuẩn gia đình phụ hệ, nghi lễ tổ tiên và gia phả trong nhiều tầng lớp. Nhưng quá trình này diễn ra theo thời gian; các thời kỳ trước có cách sắp xếp khác về thừa kế và quan hệ bên mẹ.
@@ -166,8 +148,6 @@ Khi ai nói “người Hàn từ xưa luôn…”, cần hỏi ngay:
 - vùng nào?
 - nguồn nào?
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Huấn Dân Chính Âm và Hangul: công nghệ thông tin của thế kỷ XV** nối từ **Gia đình phụ hệ không phải “gia đình Hàn Quốc từ đầu lịch sử”** sang **Biết chữ không chỉ phụ thuộc bảng chữ cái**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Huấn Dân Chính Âm và Hangul: công nghệ thông tin của thế kỷ XV
 
 **Huấn Dân Chính Âm (훈민정음 / Hunminjeongeum)** được công bố dưới thời **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**. `한글` là tên hiện đại của hệ chữ.
@@ -177,8 +157,6 @@ Trước đó chữ Hán giữ vai trò lớn trong hành chính và học thu�
 Có thể nhìn Hangul như một công nghệ biểu diễn thông tin. Một hệ chữ ánh xạ âm thanh thành ký hiệu rồi lưu và truyền qua không gian–thời gian.
 
 Điều đáng chú ý là thiết kế phụ âm và nguyên âm có nguyên tắc hệ thống. Trong khoa học máy tính, có thể gọi đây là **biểu diễn có cấu trúc (representation with structure)**: mã hoá không hoàn toàn tuỳ ý ở mọi thành phần.
-
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Biết chữ không chỉ phụ thuộc bảng chữ cái** nối từ **Huấn Dân Chính Âm và Hangul: công nghệ thông tin của thế kỷ XV** sang **Thuộc địa, chia cắt và chiến tranh: cú sốc lịch sử thay nền xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biết chữ không chỉ phụ thuộc bảng chữ cái
 
@@ -197,8 +175,6 @@ Bài học rộng hơn là: công nghệ có thể giảm ma sát nhưng thiết
 
 Điện thoại thông minh cũng vậy. Có ứng dụng không đồng nghĩa mọi nhóm dùng ứng dụng giống nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Thuộc địa, chia cắt và chiến tranh: cú sốc lịch sử thay nền xã hội** nối từ **Biết chữ không chỉ phụ thuộc bảng chữ cái** sang **전쟁과 이산가족: mạng gia đình bị cắt bởi địa chính trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thuộc địa, chia cắt và chiến tranh: cú sốc lịch sử thay nền xã hội
 
 Thế kỷ XX tạo ra những đứt gãy sâu. Bán đảo bị Nhật Bản sáp nhập từ 1910 đến 1945. Sau khi Nhật đầu hàng trong Thế chiến II, bán đảo bị chia vùng chiếm đóng và sau đó hình thành hai nhà nước. **Chiến tranh Triều Tiên (한국전쟁 / Korean War, 1950–1953)** gây tổn thất nhân mạng, di dời dân cư, chia cắt gia đình và phá huỷ hạ tầng trên quy mô lớn. Hiệp định đình chiến năm 1953 chấm dứt chiến sự quy mô lớn nhưng không phải hiệp ước hoà bình cuối cùng.
@@ -207,15 +183,11 @@ Thế kỷ XX tạo ra những đứt gãy sâu. Bán đảo bị Nhật Bản s
 
 Với niên đại và tranh luận lịch sử chi tiết, dùng thư viện `korean_history/` thay vì chương văn hoá này.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **전쟁과 이산가족: mạng gia đình bị cắt bởi địa chính trị** nối từ **Thuộc địa, chia cắt và chiến tranh: cú sốc lịch sử thay nền xã hội** sang **Công nghiệp hoá nén và “nhiều phiên bản xã hội chạy cùng lúc”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 전쟁과 이산가족: mạng gia đình bị cắt bởi địa chính trị
 
 Chiến tranh và chia cắt không chỉ thay biên giới; chúng cắt mạng thân tộc. `이산가족` — các gia đình bị chia cắt — là ví dụ rõ việc lịch sử vĩ mô đi vào đời sống thân mật.
 
 Một biên giới có thể biến quan hệ bình thường như anh chị em hoặc cha mẹ–con thành quan hệ không thể gặp. Đây là lý do ký ức tập thể về chia cắt không thể hiểu chỉ bằng bản đồ.
-
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Công nghiệp hoá nén và “nhiều phiên bản xã hội chạy cùng lúc”** nối từ **전쟁과 이산가족: mạng gia đình bị cắt bởi địa chính trị** sang **새마을, nhà máy, căn hộ, trường học: hiện đại hoá không chỉ là GDP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công nghiệp hoá nén và “nhiều phiên bản xã hội chạy cùng lúc”
 
@@ -234,8 +206,6 @@ sưởi sàn + điều khiển nhà thông minh
 
 Đây không phải nghịch lý. Các hệ thống con cập nhật với tốc độ khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **새마을, nhà máy, căn hộ, trường học: hiện đại hoá không chỉ là GDP** nối từ **Công nghiệp hoá nén và “nhiều phiên bản xã hội chạy cùng lúc”** sang **빨리빨리: tốc độ như trạng thái cân bằng xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 새마을, nhà máy, căn hộ, trường học: hiện đại hoá không chỉ là GDP
 
 Phát triển nhanh được nhìn thấy trong nhà máy, đường sá, căn hộ, mở rộng trường học và di cư. Những vật thể và thiết chế này thay hành vi hằng ngày.
@@ -243,8 +213,6 @@ Phát triển nhanh được nhìn thấy trong nhà máy, đường sá, căn h
 Ví dụ căn hộ làm không gian hộ gia đình nhỏ và chuẩn hoá hơn; tàu điện mở rộng bán kính đi làm; ca nhà máy thay đồng hồ sinh hoạt; giáo dục đại chúng làm người cùng độ tuổi trải qua những giai đoạn giống nhau hơn.
 
 Vì vậy hiện đại hoá là **tái cấu hình thời gian và không gian**, không chỉ là tăng thu nhập.
-
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **빨리빨리: tốc độ như trạng thái cân bằng xã hội** nối từ **새마을, nhà máy, căn hộ, trường học: hiện đại hoá không chỉ là GDP** sang **Seoul và 수도권 집중: địa lý của cơ hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 빨리빨리: tốc độ như trạng thái cân bằng xã hội
 
@@ -264,8 +232,6 @@ Khi chuẩn nền thay đổi, “10 phút” có thể bị cảm nhận là ch
 
 Đọc thêm tại [`33_service_customer_review_quick_response_culture.md`](33_service_customer_review_quick_response_culture.md).
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Seoul và 수도권 집중: địa lý của cơ hội** nối từ **빨리빨리: tốc độ như trạng thái cân bằng xã hội** sang **Dân chủ hoá và xã hội công dân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Seoul và 수도권 집중: địa lý của cơ hội
 
 Sự tập trung vùng thủ đô ảnh hưởng giáo dục, nhà ở, việc làm và văn hoá. Khi đại học, trụ sở doanh nghiệp, truyền thông, bệnh viện chuyên khoa và giải trí tập trung, người dân di chuyển theo cơ hội.
@@ -284,8 +250,6 @@ cơ hội tập trung
 
 Đọc khác biệt vùng tại [`14_regions_jeju_local_identity_peninsula.md`](14_regions_jeju_local_identity_peninsula.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Dân chủ hoá và xã hội công dân** nối từ **Seoul và 수도권 집중: địa lý của cơ hội** sang **Khủng hoảng kinh tế và xu hướng ưa ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dân chủ hoá và xã hội công dân
 
 Phát triển kinh tế không tự động đồng nghĩa với tự do chính trị. Hàn Quốc từng trải qua các giai đoạn chính quyền độc đoán, phong trào lao động và các phong trào dân chủ. Quá trình dân chủ hoá trong nửa sau thế kỷ XX là một phần quan trọng của ký ức xã hội hiện đại, ảnh hưởng đến không gian công cộng, đại học, lao động và văn hoá biểu tình.
@@ -293,8 +257,6 @@ Phát triển kinh tế không tự động đồng nghĩa với tự do chính 
 Ở đây “văn hoá” không nên tách khỏi **thiết chế (institution / 제도)**. Một chuẩn mực chỉ bền khi được luật, tổ chức, động lực và ký ức hỗ trợ hoặc thách thức.
 
 Các sự kiện và chủ thể chính trị cụ thể nên đọc trong [`../korean_history/`](../korean_history/README.md), nơi có niên đại và nguồn lịch sử đầy đủ hơn.
-
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Khủng hoảng kinh tế và xu hướng ưa ổn định** nối từ **Dân chủ hoá và xã hội công dân** sang **Băng thông rộng và điện thoại thông minh: giao thức xã hội chuyển lên nền tảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khủng hoảng kinh tế và xu hướng ưa ổn định
 
@@ -304,8 +266,6 @@ Khủng hoảng kinh tế có thể thay nhận thức rủi ro của hộ gia �
 
 Văn hoá coi trọng ổn định thường là phản ứng với ký ức về biến động.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Băng thông rộng và điện thoại thông minh: giao thức xã hội chuyển lên nền tảng** nối từ **Khủng hoảng kinh tế và xu hướng ưa ổn định** sang **KakaoTalk, portal và quá trình nền tảng hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Băng thông rộng và điện thoại thông minh: giao thức xã hội chuyển lên nền tảng
 
 Hàn Quốc phát triển hệ sinh thái băng thông rộng và di động mạnh, làm nhiều hành động hằng ngày chuyển lên nền tảng: ngân hàng, bản đồ, giao hàng, chat, mua sắm, đặt lịch và giải trí.
@@ -313,8 +273,6 @@ Hàn Quốc phát triển hệ sinh thái băng thông rộng và di động m�
 Khi chi phí giao dịch số thấp, kỳ vọng ngoài đời cũng đổi. Nếu chuyển tiền mất vài giây, câu “gửi sau” mang nghĩa khác thời chỉ dùng tiền mặt. Nếu bản đồ cho ETA theo thời gian thực, việc đến muộn trở nên đo được rõ hơn.
 
 Công nghệ không chỉ thêm tiện ích; nó **thay kỳ vọng**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **KakaoTalk, portal và quá trình nền tảng hoá** nối từ **Băng thông rộng và điện thoại thông minh: giao thức xã hội chuyển lên nền tảng** sang **Toàn cầu hoá: văn hoá vừa xuất vừa nhập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## KakaoTalk, portal và quá trình nền tảng hoá
 
@@ -331,8 +289,6 @@ tính năng giao diện
 
 Đọc sâu tại [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md).
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Toàn cầu hoá: văn hoá vừa xuất vừa nhập** nối từ **KakaoTalk, portal và quá trình nền tảng hoá** sang **Di cư và xã hội đa văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Toàn cầu hoá: văn hoá vừa xuất vừa nhập
 
 Hallyu dễ khiến người học chỉ nhìn văn hoá Hàn Quốc như thứ “được xuất khẩu”. Nhưng Hàn Quốc hiện đại cũng liên tục tiếp nhận các định dạng toàn cầu: chuỗi cà phê, Kitô giáo, hip-hop, thời trang xa xỉ, mô hình startup, từ vay mượn tiếng Anh và nền tảng streaming.
@@ -341,8 +297,6 @@ Văn hoá không phải tường lửa. Bản sắc địa phương được t�
 
 Một ca khúc K-pop có ảnh hưởng hip-hop/EDM nhưng hệ thống đào tạo và fandom Hàn Quốc; quán cà phê có văn hoá cà phê toàn cầu nhưng mẫu học/làm việc địa phương; đám cưới có nghi thức kiểu phương Tây và trao đổi giữa gia đình Hàn cùng lúc.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Di cư và xã hội đa văn hoá** nối từ **Toàn cầu hoá: văn hoá vừa xuất vừa nhập** sang **Mức sinh thấp và già hoá: dân số thay mặc định văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Di cư và xã hội đa văn hoá
 
 Lao động nước ngoài, người di cư kết hôn, sinh viên quốc tế và cư dân dài hạn làm xã hội đa dạng hơn. Khi thành phần dân số thay đổi, trường học, nơi làm việc và chính quyền địa phương phải xử lý những vấn đề mới về ngôn ngữ và khả năng tiếp cận.
@@ -350,8 +304,6 @@ Lao động nước ngoài, người di cư kết hôn, sinh viên quốc tế v
 `다문화` không nên hiểu đơn giản như “một nền văn hoá khác được thêm vào văn hoá Hàn”. Tương tác tạo **thực hành lai (hybrid practice)**: thực phẩm, ngôn ngữ, gia đình và chuẩn công sở cùng thay đổi.
 
 Đọc thêm tại [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Mức sinh thấp và già hoá: dân số thay mặc định văn hoá** nối từ **Di cư và xã hội đa văn hoá** sang **Liên hệ kiến thức: phụ thuộc đường đi và hệ thống kế thừa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mức sinh thấp và già hoá: dân số thay mặc định văn hoá
 
@@ -368,8 +320,6 @@ Ví dụ:
 
 Dân số là một biến thay chậm nhưng tác động sâu vì chạm tới gần như mọi thiết chế.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Liên hệ kiến thức: phụ thuộc đường đi và hệ thống kế thừa** nối từ **Mức sinh thấp và già hoá: dân số thay mặc định văn hoá** sang **Liên hệ kiến thức: thay đổi văn hoá giống di chuyển hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ kiến thức: phụ thuộc đường đi và hệ thống kế thừa
 
 Trong kỹ thuật phần mềm, **hệ thống kế thừa (legacy system)** là hệ thống cũ vẫn tồn tại vì nhiều hệ thống khác phụ thuộc vào nó. Xã hội cũng có các lớp kế thừa như vậy.
@@ -377,8 +327,6 @@ Trong kỹ thuật phần mềm, **hệ thống kế thừa (legacy system)** l�
 Ví dụ, một công ty có thể xoá chức danh khỏi email nhưng nếu lương, phê duyệt, đánh giá và thứ tự phát biểu vẫn phân tầng, cấu trúc thứ bậc không biến mất chỉ vì giao diện thay đổi.
 
 Mô hình này giúp phân biệt **hiện đại hoá bề mặt** với **thay đổi cấu trúc**.
-
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Liên hệ kiến thức: thay đổi văn hoá giống di chuyển hệ thống** nối từ **Liên hệ kiến thức: phụ thuộc đường đi và hệ thống kế thừa** sang **Một khung phân tích hiện tượng mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: thay đổi văn hoá giống di chuyển hệ thống
 
@@ -394,8 +342,6 @@ quy tắc cũ vẫn hoạt động
 Văn hoá cũng vậy. Luật chính thức có thể đổi trước; thói quen ngôn ngữ đổi sau; kỳ vọng gia đình đổi với tốc độ khác; thiết chế lại đổi theo thị trường.
 
 Vì vậy xã hội trong giai đoạn chuyển tiếp thường chứa mâu thuẫn. Mâu thuẫn không phải lỗi lạ; nó là đặc điểm tự nhiên của thời kỳ di chuyển.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Một khung phân tích hiện tượng mới** nối từ **Liên hệ kiến thức: thay đổi văn hoá giống di chuyển hệ thống** sang **So sánh văn hoá: luôn tìm nhóm đối chứng trước khi nói “đặc trưng Hàn Quốc”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một khung phân tích hiện tượng mới
 
@@ -431,8 +377,6 @@ Mẫu này mạnh ở thế hệ, vùng, tầng lớp hay tổ chức nào? Ai k
 
 Nếu trả lời được bảy câu này, lời giải thích thường mạnh hơn định kiến.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Một khung phân tích hiện tượng mới** đặt tiêu chí; **So sánh văn hoá: luôn tìm nhóm đối chứng trước khi nói “đặc trưng Hàn Quốc”** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tương quan không đủ để kết luận nguyên nhân** mở rộng hệ quả.
-
 ## So sánh văn hoá: luôn tìm nhóm đối chứng trước khi nói “đặc trưng Hàn Quốc”
 
 Một hiện tượng dễ thấy ở Hàn Quốc chưa chắc đặc trưng riêng của Hàn Quốc. Làm thêm giờ, cạnh tranh giáo dục, áp lực nhà ở, giao hàng nhanh hay văn hoá fandom đều tồn tại ở nhiều xã hội với mức độ và cơ chế khác nhau.
@@ -449,8 +393,6 @@ Nếu không có bước 2, ta chỉ biết “hiện tượng tồn tại ở H
 
 Đây là **phương pháp so sánh (comparative method)**. Nhóm so sánh không nhất thiết phải là “phương Tây”; đôi khi Nhật Bản, Đài Loan, Singapore, Việt Nam hoặc một nhóm đô thị có cấu trúc tương tự cho phép so sánh tốt hơn tuỳ câu hỏi.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **So sánh văn hoá: luôn tìm nhóm đối chứng trước khi nói “đặc trưng Hàn Quốc”** đặt tiêu chí; **Tương quan không đủ để kết luận nguyên nhân** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Phản thực tế: điều gì sẽ xảy ra nếu cơ chế ta nghi ngờ không tồn tại?** mở rộng hệ quả.
-
 ## Tương quan không đủ để kết luận nguyên nhân
 
 Giả sử khu vực có nhiều học viện tư cũng có giá nhà cao. Ta chưa thể kết luận học viện làm giá nhà tăng. Có thể cả hai cùng do thu nhập cao, trường học tốt, vị trí trung tâm hoặc nhu cầu gia đình.
@@ -465,8 +407,6 @@ A gây ra B
 
 Khi phân tích văn hoá, câu “xã hội có X nên người dân làm Y” thường chứa giả định nhân quả rất mạnh. Nên hỏi cơ chế trung gian nào nối X với Y, và liệu có lời giải thích thay thế nào hợp lý hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Phản thực tế: điều gì sẽ xảy ra nếu cơ chế ta nghi ngờ không tồn tại?** tổng hợp từ **Tương quan không đủ để kết luận nguyên nhân** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cấp độ phân tích: quốc gia, vùng, tổ chức, nhóm và cá nhân** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Phản thực tế: điều gì sẽ xảy ra nếu cơ chế ta nghi ngờ không tồn tại?
 
 Một cách kiểm tra lời giải thích là đặt câu hỏi **phản thực tế (counterfactual)**.
@@ -476,8 +416,6 @@ Ví dụ, nếu cho rằng giao hàng nhanh chủ yếu do “tính nóng vội�
 Nếu cho rằng kính ngữ chỉ do niềm tin Nho giáo, hãy hỏi: trong công ty quốc tế với nhân viên Hàn nhưng chức danh phẳng và giao tiếp tiếng Anh, cách biểu hiện thứ bậc thay đổi ra sao? Sự thay đổi cho thấy thiết chế và ngôn ngữ cùng tham gia.
 
 Phản thực tế không tự chứng minh nguyên nhân, nhưng nó buộc mô hình phải tạo dự đoán có thể bị sai.
-
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Phản thực tế: điều gì sẽ xảy ra nếu cơ chế ta nghi ngờ không tồn tại?** đặt đầu vào cho **Cấp độ phân tích: quốc gia, vùng, tổ chức, nhóm và cá nhân**, rồi **Thời gian cũng là một biến: đừng trộn thế hệ với tuổi và thời kỳ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cấp độ phân tích: quốc gia, vùng, tổ chức, nhóm và cá nhân
 
@@ -496,8 +434,6 @@ Một công ty có văn hoá làm thêm giờ không chứng minh cả quốc gi
 
 Lỗi suy từ đặc điểm nhóm sang cá nhân gọi là **ngụy biện sinh thái (ecological fallacy)**. Lỗi ngược lại — lấy một vài cá nhân rồi phủ định hoặc khẳng định mẫu nhóm — là vấn đề lấy mẫu quá nhỏ.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Thời gian cũng là một biến: đừng trộn thế hệ với tuổi và thời kỳ** nối từ **Cấp độ phân tích: quốc gia, vùng, tổ chức, nhóm và cá nhân** sang **Thiên lệch chọn mẫu: thứ dễ nhìn thấy không nhất thiết là thứ phổ biến nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thời gian cũng là một biến: đừng trộn thế hệ với tuổi và thời kỳ
 
 Nếu người 60 tuổi và người 25 tuổi có hành vi khác nhau, có ít nhất ba khả năng:
@@ -507,8 +443,6 @@ Nếu người 60 tuổi và người 25 tuổi có hành vi khác nhau, có ít
 - **hiệu ứng thời kỳ (period effect)**: một sự kiện hiện tại tác động đồng thời lên nhiều nhóm tuổi.
 
 Ba hiệu ứng này dễ bị trộn. Ví dụ người cao tuổi dùng ứng dụng ít hơn có thể do tuổi, lịch sử tiếp xúc công nghệ hoặc thiết kế ứng dụng hiện tại. Vì vậy câu “thế hệ này bản chất là…” cần được dùng rất thận trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Thiên lệch chọn mẫu: thứ dễ nhìn thấy không nhất thiết là thứ phổ biến nhất** nối từ **Thời gian cũng là một biến: đừng trộn thế hệ với tuổi và thời kỳ** sang **Tam giác hoá: một nguồn hiếm khi đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiên lệch chọn mẫu: thứ dễ nhìn thấy không nhất thiết là thứ phổ biến nhất
 
@@ -525,8 +459,6 @@ thế giới thật
 
 Nếu không phân tích cơ chế chọn mẫu, người quan sát dễ biến Gangnam thành toàn Seoul, Seoul thành toàn Hàn Quốc, hoặc nội dung viral thành ý kiến số đông.
 
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Thiên lệch chọn mẫu: thứ dễ nhìn thấy không nhất thiết là thứ phổ biến nhất** đặt vấn đề; **Tam giác hoá: một nguồn hiếm khi đủ** đối chiếu bằng chứng, rồi **Khi nào không nên dùng “văn hoá” làm nguyên nhân chính?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Tam giác hoá: một nguồn hiếm khi đủ
 
 Để kiểm tra một tuyên bố văn hoá, nên kết hợp ít nhất hai hoặc ba loại bằng chứng khi có thể:
@@ -541,8 +473,6 @@ Mỗi nguồn có điểm mù. Thống kê cho độ rộng nhưng có thể thi
 
 Kết hợp nguồn giúp giảm nguy cơ một điểm mù chi phối toàn bộ kết luận.
 
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Tam giác hoá: một nguồn hiếm khi đủ** đặt vấn đề; **Khi nào không nên dùng “văn hoá” làm nguyên nhân chính?** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Khi nào không nên dùng “văn hoá” làm nguyên nhân chính?
 
 Nếu hành vi được giải thích tốt hơn bằng giá, luật, thời gian, cấu trúc công việc hoặc thiết kế giao diện, không cần thêm “văn hoá” như một biến mơ hồ.
@@ -551,13 +481,9 @@ Ví dụ một người dùng kiosk vì quầy người đóng không nhất thi
 
 Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ chế đủ để giải thích dữ liệu, không thêm bản chất dân tộc nếu không cần.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Mô hình tư duy** tổng hợp từ **Khi nào không nên dùng “văn hoá” làm nguyên nhân chính?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Hãy nhìn văn hoá Hàn Quốc hiện đại như **nhiều lớp lịch sử chạy đồng thời trên cùng một hạ tầng xã hội**: sinh thái bán đảo, làng và nông nghiệp, nhà nước Phật giáo–Nho giáo, thân tộc, đứt gãy thuộc địa và chiến tranh, công nghiệp hoá, dân chủ hoá, kinh tế căn hộ–giáo dục, băng thông rộng–điện thoại thông minh, toàn cầu hoá và biến đổi dân số. Một hành vi hiện tại thường là kết quả của nhiều lớp chồng lên nhau, không phải sản phẩm của một “truyền thống Hàn Quốc” duy nhất.
-
-> **Nối mạch:** Trong **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -576,8 +502,6 @@ Nguyên tắc **tiết kiệm lời giải thích (parsimony)** là: dùng cơ c
 “Một quan sát cá nhân đủ để kết luận về toàn xã hội” là sai. Trải nghiệm cá nhân là dữ liệu có giá trị nhưng cần biết nó được chọn từ môi trường nào.
 
 “Có tương quan nghĩa là đã biết nguyên nhân” là sai. Không có cơ chế, nhóm so sánh hoặc thiết kế nghiên cứu phù hợp thì kết luận nhân quả vẫn yếu.
-
-> **Nối mạch:** Ở chặng này của **Địa lý, lịch sử và sự hình thành hệ thống văn hoá Hàn Quốc**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

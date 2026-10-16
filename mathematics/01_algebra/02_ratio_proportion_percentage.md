@@ -24,8 +24,6 @@ Ratio không đổi. Đây là reason ratios phù hợp mô tả shape, composit
 
 Recipe 2 parts water : 1 part concentrate vẫn giữ taste nếu quy mô (scale / 규모) từ cups sang liters, miễn cùng ratio.
 
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Ratio, tỷ lệ (rate / 비율) và fraction khác nhau thế nào?** nối từ **Ratio là quantity không phụ thuộc quy mô (scale / 규모) chung** sang **Proportion: equality của ratios**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ratio, tỷ lệ (rate / 비율) và fraction khác nhau thế nào?
 
 Ratio có thể so quantities cùng loại hoặc khác loại.
@@ -45,8 +43,6 @@ Nếu khác units, ratio trở thành tỷ lệ (rate / 비율):
 Tỷ lệ (rate / 비율) có đơn vị (unit / 단위) và thường mô tả “per one đơn vị (unit / 단위)” của denominator quantity.
 
 Fraction như `3/5` có thể represent ratio, xác suất (probability / 확률), operator “divide 3 by 5” hoặc part-whole quan hệ (relation / 관계) tùy ngữ cảnh (context / 맥락). Không nên đồng nhất notation với meaning.
-
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Proportion: equality của ratios** nối từ **Ratio, tỷ lệ (rate / 비율) và fraction khác nhau thế nào?** sang **Direct proportionality: constant ratio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proportion: equality của ratios
 
@@ -73,8 +69,6 @@ bd\frac ab=bd\frac cd,
 rồi cancel denominators.
 
 Understanding này giúp tránh dùng cross multiplication trong expressions nơi denominator có thể zero hoặc equation không thực sự là equality of ratios.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Direct proportionality: constant ratio** nối từ **Proportion: equality của ratios** sang **Inverse proportionality: constant sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Direct proportionality: constant ratio
 
@@ -110,8 +104,6 @@ C=b+pq,
 
 thì chi phí (cost / 비용) không proportional với quantity dù vẫn affine/linear-looking. Fixed fee `b` phá constant ratio.
 
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Inverse proportionality: constant sản phẩm (product / 제품)** nối từ **Direct proportionality: constant ratio** sang **Percentage chỉ là ratio trên cơ sở (base / 기반) 100**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Inverse proportionality: constant sản phẩm (product / 제품)
 
 Nếu
@@ -136,8 +128,6 @@ T=\frac W{rn}.
 
 Thời gian (time / 시간) inverse-proportional với workers. Real teams violate các giả định (assumptions / 가정들) vì communication, dependencies và uneven tasks. Đây là example quan trọng: proportionality is a mô hình (model / 모델), not a law by notation alone.
 
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Percentage chỉ là ratio trên cơ sở (base / 기반) 100** nối từ **Inverse proportionality: constant sản phẩm (product / 제품)** sang **Percentage thay đổi (change / 변경): denominator là tham chiếu (reference / 참조) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Percentage chỉ là ratio trên cơ sở (base / 기반) 100
 
 Phần trăm là một ratio có mẫu chuẩn bằng 100. Đọc nó theo base giúp phân biệt phần trăm, percentage point và thay đổi tương đối trong các bài toán thực tế.
@@ -161,8 +151,6 @@ Ví dụ:
 ```
 
 Điểm quan trọng là luôn xác định **cơ sở (base / 기반)**. “20% increase” nghĩa 20% của old giá trị (value / 값), không phải new giá trị (value / 값).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, sau nội dung của **Percentage chỉ là ratio trên cơ sở (base / 기반) 100**, **Percentage thay đổi (change / 변경): denominator là tham chiếu (reference / 참조) trạng thái (state / 상태)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Vì sao +10% rồi -10% không cancel?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Percentage thay đổi (change / 변경): denominator là tham chiếu (reference / 참조) trạng thái (state / 상태)
 
@@ -194,8 +182,6 @@ Từ 100 xuống 80:
 
 Hai percentages khác nhau vì denominator/cơ sở (base / 기반) khác.
 
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Vì sao +10% rồi -10% không cancel?** nối từ **Percentage thay đổi (change / 변경): denominator là tham chiếu (reference / 참조) trạng thái (state / 상태)** sang **Percentage điểm (point / 지점) khác percentage thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao +10% rồi -10% không cancel?
 
 Repeated percentage changes multiply growth factors.
@@ -222,8 +208,6 @@ Net -1%.
 
 Percentage operations live naturally in multiplicative không gian (space / 공간), không additive không gian (space / 공간).
 
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Percentage điểm (point / 지점) khác percentage thay đổi (change / 변경)** nối từ **Vì sao +10% rồi -10% không cancel?** sang **Repeated rates dẫn tới exponential growth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Percentage điểm (point / 지점) khác percentage thay đổi (change / 변경)
 
 Nếu interest tỷ lệ (rate / 비율) tăng từ 3% lên 5%:
@@ -236,8 +220,6 @@ Nếu interest tỷ lệ (rate / 비율) tăng từ 3% lên 5%:
 ```
 
 Hai statements khác nhau mạnh. Reports về polls, rates, margins và thị trường (market / 시장) share thường bị hiểu sai vì trộn hai concepts này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Repeated rates dẫn tới exponential growth** nối từ **Percentage điểm (point / 지점) khác percentage thay đổi (change / 변경)** sang **Annualized return và geometric mean**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Repeated rates dẫn tới exponential growth
 
@@ -256,8 +238,6 @@ x_n=x_0(1+r)^n.
 Compound interest, population growth, inflation compounding và depreciation đều dùng same multiplicative cấu trúc (structure / 구조).
 
 Arithmetic percentage vì vậy là prerequisite trực tiếp cho exponential functions và finance.
-
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Annualized return và geometric mean** nối từ **Repeated rates dẫn tới exponential growth** sang **Weighted average: denominator tells what is being averaged**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Annualized return và geometric mean
 
@@ -297,8 +277,6 @@ Total wealth giảm 25%, dù arithmetic average return là 0%.
 
 Multiplicative tiến trình (process / 프로세스) cần multiplicative aggregation.
 
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Weighted average: denominator tells what is being averaged** nối từ **Annualized return và geometric mean** sang **Simpson's paradox: aggregated ratios có thể đảo conclusion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Weighted average: denominator tells what is being averaged
 
 Lớp (class / 클래스) A: 10 students average 80. lớp (class / 클래스) B: 30 students average 90.
@@ -323,8 +301,6 @@ General:
 
 Portfolio return, CPI baskets, grades, phân tán (distributed / 분산) metrics và expected values đều dùng weighted cấu trúc (structure / 구조).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Simpson's paradox: aggregated ratios có thể đảo conclusion** nối từ **Weighted average: denominator tells what is being averaged** sang **Rates và dimensional phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Simpson's paradox: aggregated ratios có thể đảo conclusion
 
 Nếu success rates được aggregate across groups có different sizes/difficulty, overall ratio có thể reverse within-group trends.
@@ -332,8 +308,6 @@ Nếu success rates được aggregate across groups có different sizes/difficu
 Reason: weighted composition differs between groups. Ratio comparison without conditioning can hide confounding.
 
 Đây là cầu nối (bridge / 브리지) từ elementary percentages sang statistics và lập luận nhân quả (causal reasoning / 인과적 추론).
-
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Rates và dimensional phân tích (analysis / 분석)** nối từ **Simpson's paradox: aggregated ratios có thể đảo conclusion** sang **Scaling law và ratio lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rates và dimensional phân tích (analysis / 분석)
 
@@ -364,15 +338,11 @@ Currency exchange:
 
 Writing units makes multiply/divide direction tường minh (explicit / 명시적).
 
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Scaling law và ratio lập luận (reasoning / 추론)** nối từ **Rates và dimensional phân tích (analysis / 분석)** sang **AI and dữ liệu (data / 데이터) liên kết (connection / 연결) — normalization and rates**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scaling law và ratio lập luận (reasoning / 추론)
 
 Nếu similar shapes quy mô (scale / 규모) length by `k`, corresponding side ratios constant. Area scales `k^2`, volume `k^3`.
 
 Thus elementary proportion becomes geometric scaling and dimensional phân tích (analysis / 분석).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Scaling law và ratio lập luận (reasoning / 추론)** đặt vấn đề; **AI and dữ liệu (data / 데이터) liên kết (connection / 연결) — normalization and rates** đối chiếu bằng chứng, rồi **Finance liên kết (connection / 연결) — nominal vs real thay đổi (change / 변경)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## AI and dữ liệu (data / 데이터) liên kết (connection / 연결) — normalization and rates
 
@@ -395,8 +365,6 @@ recall
 Same numerator `TP`, different denominators → different questions.
 
 Never compare percentages without checking denominator population.
-
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **AI and dữ liệu (data / 데이터) liên kết (connection / 연결) — normalization and rates** đặt vấn đề; **Finance liên kết (connection / 연결) — nominal vs real thay đổi (change / 변경)** đối chiếu bằng chứng, rồi **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Finance liên kết (connection / 연결) — nominal vs real thay đổi (change / 변경)
 
@@ -424,21 +392,15 @@ works only for small rates.
 
 This is another example where multiplicative ratios are fundamental and additive shortcuts are approximations.
 
-> **Nối mạch:** Ở chặng này của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Finance liên kết (connection / 연결) — nominal vs real thay đổi (change / 변경)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
 Ratios become unstable when denominator near zero. Percentage changes from very small bases can look huge. A 100% increase from 1 to 2 may be operationally tiny; ngữ cảnh (context / 맥락) and absolute magnitude still matter.
 
 Average of ratios may differ from ratio of totals. Weighted aggregation must match desired denominator.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Ratio answers “how many times relative to a tham chiếu (reference / 참조)?” tỷ lệ (rate / 비율) adds units to that comparison. Percentage simply expresses a ratio on a base-100 quy mô (scale / 규모). Repeated percentages multiply, weighted averages reconstruct numerator/denominator cấu trúc (structure / 구조), and many statistical or financial errors come from forgetting which denominator defines the question.
-
-> **Nối mạch:** Trong **Tỉ số, tỉ lệ, tỷ lệ (rate / 비율) và phần trăm: ngôn ngữ của so sánh tương đối**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

@@ -36,8 +36,6 @@ Mô hình tư duy:
 
 > `log n` thường xuất hiện khi mỗi bước loại bỏ hoặc gom lại một tỷ lệ cố định của phần còn lại.
 
-> **Nối mạch:** **Lũy thừa của hai và biểu diễn nhị phân** nối từ **Logarithm: số lần thu nhỏ theo tỷ lệ cố định** sang **Tổng số học và vòng lặp lồng nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lũy thừa của hai và biểu diễn nhị phân
 
 Chuỗi:
@@ -63,8 +61,6 @@ k=\lfloor \log_2 n \rfloor
 Sparse bảng (table / 테이블) lưu khối (block / 블록) độ dài `2^k`. nhị phân (binary / 이진) Lifting lưu tổ tiên cách `2^k` cạnh. Fenwick cây (tree / 트리) dùng bit 1 thấp nhất để xác định kích thước khối (block / 블록) phụ trách. Exponentiation by squaring phân rã số mũ theo bit.
 
 Một insight quan trọng là nhiều kỹ thuật tưởng khác nhau thực ra cùng dùng ý tưởng: **tiền xử lý các bước có kích thước tăng gấp đôi rồi ghép chúng theo biểu diễn nhị phân của một số nguyên**.
-
-> **Nối mạch:** **Tổng số học và vòng lặp lồng nhau** nối từ **Lũy thừa của hai và biểu diễn nhị phân** sang **Cấp số nhân và phân tích khấu hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tổng số học và vòng lặp lồng nhau
 
@@ -100,8 +96,6 @@ for (int i = 1; i <= n; i *= 2)
 
 vòng ngoài chạy `O(log n)` lần, nên tổng là `O(n log n)`.
 
-> **Nối mạch:** **Cấp số nhân và phân tích khấu hao** nối từ **Tổng số học và vòng lặp lồng nhau** sang **Harmonic series**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp số nhân và phân tích khấu hao
 
 Tổng hình học:
@@ -122,8 +116,6 @@ Do đó tổng bản sao (copy / 복사) là `O(n)`, dù một lần append riê
 
 Điểm quan trọng: **amortized** không phải “trung bình theo xác suất”. Nó là bảo đảm về tổng chi phí của một chuỗi thao tác hợp lệ.
 
-> **Nối mạch:** **Harmonic series** nối từ **Cấp số nhân và phân tích khấu hao** sang **Tích và factorial: nhận diện bùng nổ tổ hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Harmonic series
 
 Tổng điều hòa:
@@ -135,8 +127,6 @@ H_n=1+\frac12+\frac13+\cdots+\frac1n=\Theta(\log n)
 xuất hiện trong randomized algorithms, coupon-collector lập luận (reasoning / 추론), một số phân tích hashing và nhiều quá trình xác suất.
 
 Khi thấy tổng nghịch đảo `1/i`, nên nghĩ tới tăng trưởng logarithmic thay vì tuyến tính.
-
-> **Nối mạch:** **Tích và factorial: nhận diện bùng nổ tổ hợp** nối từ **Harmonic series** sang **Công thức truy hồi mô tả cây đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích và factorial: nhận diện bùng nổ tổ hợp
 
@@ -168,8 +158,6 @@ và do đó:
 
 Kết quả này xuất hiện trực tiếp trong cận dưới của comparison sorting.
 
-> **Nối mạch:** **Công thức truy hồi mô tả cây đệ quy** nối từ **Tích và factorial: nhận diện bùng nổ tổ hợp** sang **Master Theorem và giới hạn của nó**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Công thức truy hồi mô tả cây đệ quy
 
 Merge Sort:
@@ -198,8 +186,6 @@ T(n)=T(n-1)+cn=\Theta(n^2)
 
 Truy hồi là bản mô tả toán học của hình dạng recursion cây (tree / 트리). Nếu không hiểu recursion cây (tree / 트리), dùng công thức dễ trở thành thao tác máy móc.
 
-> **Nối mạch:** **Công thức truy hồi mô tả cây đệ quy** đã nêu tiêu chí phân biệt, còn **Master Theorem và giới hạn của nó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **Nguyên lý cộng và nhân trong tổ hợp** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## Master Theorem và giới hạn của nó
 
 Với:
@@ -226,8 +212,6 @@ hoặc subproblem không đều, recurrence phụ thuộc dữ liệu, hay rando
 
 Bài học: theorem là công cụ cho một lớp cấu trúc, không phải phép biến đổi cú pháp tổng quát.
 
-> **Nối mạch:** **Master Theorem và giới hạn của nó** đã nêu tiêu chí phân biệt, còn **Nguyên lý cộng và nhân trong tổ hợp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **Combination và subset** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## Nguyên lý cộng và nhân trong tổ hợp
 
 Nếu bước một có `a` lựa chọn và sau mỗi lựa chọn đó bước hai có `b` lựa chọn độc lập, tổng số đường là:
@@ -250,8 +234,6 @@ O(b^d)
 
 với `b` là branching factor và `d` là độ sâu. Pruning làm branching factor hiệu dụng nhỏ hơn, nhưng không tự thay đổi worst-case nếu vẫn tồn tại đầu vào (input / 입력) buộc duyệt gần toàn cây.
 
-> **Nối mạch:** **Combination và subset** nối từ **Nguyên lý cộng và nhân trong tổ hợp** sang **Pigeonhole principle**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Combination và subset
 
 Số cách chọn `r` phần tử từ `n` phần tử:
@@ -270,8 +252,6 @@ Tổng số subset của một tập `n` phần tử là:
 
 Với `n=20`, khoảng một triệu subset còn có thể xử lý trong nhiều bối cảnh. Với `n=40`, hơn một nghìn tỷ subset thường buộc ta dùng meet-in-the-middle hoặc cấu trúc khác.
 
-> **Nối mạch:** **Pigeonhole principle** nối từ **Combination và subset** sang **Inclusion–exclusion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pigeonhole principle
 
 Nếu đặt nhiều hơn `m` đối tượng vào `m` ngăn, ít nhất một ngăn chứa từ hai đối tượng trở lên.
@@ -279,8 +259,6 @@ Nếu đặt nhiều hơn `m` đối tượng vào `m` ngăn, ít nhất một n
 Trong hashing, miền khóa thường lớn hơn số bucket, nên collision không phải “lỗi hiếm có thể loại bỏ hoàn toàn”; nó là điều toán học không tránh khỏi. Thiết kế đúng phải quản lý collision.
 
 Pigeonhole cũng xuất hiện trong chứng minh duplicate, cycle và nhiều lập luận tồn tại.
-
-> **Nối mạch:** **Inclusion–exclusion** nối từ **Pigeonhole principle** sang **Prefix Sum và cấu trúc đại số phía sau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Inclusion–exclusion
 
@@ -293,8 +271,6 @@ Với hai tập:
 Ta phải trừ phần giao vì nó bị đếm hai lần.
 
 Với nhiều tập, các giao được cộng/trừ luân phiên. Ý tưởng này xuất hiện trong combinatorial counting, bitmask DP, xác suất và một số thuật toán đếm với điều kiện loại trừ.
-
-> **Nối mạch:** **Prefix Sum và cấu trúc đại số phía sau** nối từ **Inclusion–exclusion** sang **Semigroup, monoid và group trong DSA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prefix Sum và cấu trúc đại số phía sau
 
@@ -313,8 +289,6 @@ sum(L,R)=P[R+1]-P[L]
 Điểm sâu hơn không phải công thức, mà là việc phép cộng có **phép nghịch đảo**: contribution của prefix trước `L` có thể bị loại bằng phép trừ.
 
 Điều này giải thích vì sao Prefix Sum làm phạm vi (range / 범위) sum rất tự nhiên, còn prefix minimum không thể “trừ min cũ” để lấy min của một đoạn bất kỳ.
-
-> **Nối mạch:** **Semigroup, monoid và group trong DSA** nối từ **Prefix Sum và cấu trúc đại số phía sau** sang **Commutativity không giống associativity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Semigroup, monoid và group trong DSA
 
@@ -375,8 +349,6 @@ f(x,x)=x
 
 Nhìn bằng đại số giúp trả lời câu hỏi “cấu trúc này có tổng quát sang thao tác (operation / 연산) khác không?” chính xác hơn việc học thuộc danh sách.
 
-> **Nối mạch:** **Commutativity không giống associativity** nối từ **Semigroup, monoid và group trong DSA** sang **Số học modulo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Commutativity không giống associativity
 
 **Giao hoán (commutativity)**:
@@ -395,8 +367,6 @@ Ví dụ nối chuỗi là associative nhưng không commutative:
 
 Phân biệt hai tính chất này tránh nhiều lỗi khi tổng quát hóa phạm vi (range / 범위) cấu trúc (structure / 구조).
 
-> **Nối mạch:** **Số học modulo** nối từ **Commutativity không giống associativity** sang **GCD, coprime và modular inverse**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Số học modulo
 
 Các đồng nhất thức cơ bản:
@@ -412,8 +382,6 @@ Các đồng nhất thức cơ bản:
 Modulo xuất hiện trong hashing, cyclic buffer, rolling băm (hash / 해시) và counting lớn.
 
 Phép chia không thể thay bằng chia số nguyên rồi `% m`. Muốn “chia” trong modulo cần **nghịch đảo modulo (modular inverse)** và inverse chỉ tồn tại khi điều kiện phù hợp được thỏa.
-
-> **Nối mạch:** **GCD, coprime và modular inverse** nối từ **Số học modulo** sang **Modulo âm trong ngôn ngữ lập trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## GCD, coprime và modular inverse
 
@@ -441,8 +409,6 @@ ax+by=gcd(a,b)
 
 Nếu `gcd(a,m)=1`, từ đó suy ra một inverse của `a (mod m)`.
 
-> **Nối mạch:** **Modulo âm trong ngôn ngữ lập trình** nối từ **GCD, coprime và modular inverse** sang **Bit và lũy thừa của hai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Modulo âm trong ngôn ngữ lập trình
 
 Toán học thường chọn phần dư chuẩn không âm, nhưng `%` trong C, Java và JavaScript hoạt động theo quy tắc remainder của ngôn ngữ và có thể trả số âm với toán hạng âm.
@@ -454,8 +420,6 @@ Một mẫu normalize thường gặp:
 ```
 
 Nhưng hiện thực (implementation / 구현) vẫn phải xét overflow trước khi cộng nếu kiểu số hữu hạn.
-
-> **Nối mạch:** **Bit và lũy thừa của hai** nối từ **Modulo âm trong ngôn ngữ lập trình** sang **Xác suất và biến cố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bit và lũy thừa của hai
 
@@ -483,8 +447,6 @@ x & -x
 
 để lấy lowbit, tức giá trị của bit 1 thấp nhất. Đây không phải mẹo thần bí; nó là hệ quả của biểu diễn bù hai.
 
-> **Nối mạch:** **Xác suất và biến cố** nối từ **Bit và lũy thừa của hai** sang **Kỳ vọng và tính tuyến tính của kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác suất và biến cố
 
 Với hai biến cố độc lập:
@@ -502,8 +464,6 @@ P(A\mid B)=\frac{P(A\cap B)}{P(B)}
 \]
 
 là công cụ nền tảng khi phân tích sampling, collision và quá trình ngẫu nhiên phụ thuộc trạng thái trước đó.
-
-> **Nối mạch:** **Kỳ vọng và tính tuyến tính của kỳ vọng** nối từ **Xác suất và biến cố** sang **Indicator variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kỳ vọng và tính tuyến tính của kỳ vọng
 
@@ -524,8 +484,6 @@ không đòi hỏi `X` và `Y` độc lập.
 Nếu tổng chi phí là tổng contribution của nhiều sự kiện, ta có thể phân tích từng contribution rồi cộng expectation.
 
 Đây là một trong những lý do probabilistic phân tích (analysis / 분석) thường trở nên đơn giản hơn sau khi định nghĩa đúng biến ngẫu nhiên.
-
-> **Nối mạch:** **Indicator variable** nối từ **Kỳ vọng và tính tuyến tính của kỳ vọng** sang **Variance và tail hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Indicator variable
 
@@ -558,8 +516,6 @@ E[X]=\sum_i P(i\text{ xảy ra})
 
 Cách này rất hữu ích để đếm kỳ vọng số collision, số phần tử được chọn hoặc số lần một sự kiện (event / 이벤트) xảy ra.
 
-> **Nối mạch:** **Variance và tail hành vi (behavior / 동작)** nối từ **Indicator variable** sang **Union bound**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Variance và tail hành vi (behavior / 동작)
 
 Kỳ vọng chỉ nói trung bình, không nói mức độ phân tán.
@@ -574,8 +530,6 @@ Markov, Chebyshev, Chernoff và Hoeffding là các lớp công cụ để đưa 
 
 > Expected giá trị (value / 값) tốt không tự động chứng minh bad trường hợp (case / 사례) hiếm.
 
-> **Nối mạch:** **Union bound** nối từ **Variance và tail hành vi (behavior / 동작)** sang **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Union bound
 
 Với các biến cố `A_1,...,A_k`:
@@ -588,8 +542,6 @@ Không cần các biến cố độc lập.
 
 Union bound rất hữu ích khi muốn chứng minh “xác suất có ít nhất một lỗi trong nhiều vị trí” nhỏ bằng cách cộng các xác suất lỗi riêng lẻ.
 
-> **Nối mạch:** **Union bound** đặt vấn đề; **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** kiểm tra bằng chứng, rồi **Quy nạp cấu trúc** mở rộng hệ quả.
-
 ## Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)
 
 Cần phân biệt hai khái niệm.
@@ -599,8 +551,6 @@ Randomized Quicksort luôn trả kết quả sort chính xác nhưng thời gian
 Bloom Filter có thể trả false positive; randomness ảnh hưởng cả biểu diễn (representation / 표현) và xác suất lỗi.
 
 Một thuật toán có thể ngẫu nhiên nhưng chính xác (exact / 정확한), hoặc deterministic nhưng approximate, hoặc vừa randomized vừa approximate. Không nên trộn các loại guarantee này.
-
-> **Nối mạch:** **Randomized thuật toán (algorithm / 알고리즘) và probabilistic cấu trúc dữ liệu (data structure / 자료구조)** đặt vấn đề; **Quy nạp cấu trúc** kiểm tra bằng chứng, rồi **Quy nạp mạnh và động (dynamic / 동적) Programming** mở rộng hệ quả.
 
 ## Quy nạp cấu trúc
 
@@ -613,15 +563,11 @@ step: giả sử các substructure đúng, chứng minh cách ghép ở node hi�
 
 Đây là phiên bản toán học của đặc tả hợp đồng (contract / 계약) đệ quy.
 
-> **Nối mạch:** **Quy nạp mạnh và động (dynamic / 동적) Programming** nối từ **Quy nạp cấu trúc** sang **Một số đẳng thức đồ thị cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy nạp mạnh và động (dynamic / 동적) Programming
 
 Một trạng thái DP có thể phụ thuộc nhiều trạng thái nhỏ hơn. Strong induction giả sử tất cả trạng thái nhỏ hơn đã đúng rồi chứng minh trạng thái hiện tại.
 
 Bottom-up DP thực hiện chính thứ tự chứng minh đó: prerequisite được tính trước khi trạng thái (state / 상태) mới sử dụng chúng.
-
-> **Nối mạch:** **Một số đẳng thức đồ thị cơ bản** nối từ **Quy nạp mạnh và động (dynamic / 동적) Programming** sang **Đếm cạnh của đồ thị dày đặc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một số đẳng thức đồ thị cơ bản
 
@@ -649,8 +595,6 @@ Nếu một đồ thị vô hướng liên thông có `n-1` cạnh thì nó là 
 
 Các định danh (identity / 식별자) này vừa hỗ trợ chứng minh vừa hỗ trợ validator.
 
-> **Nối mạch:** **Đếm cạnh của đồ thị dày đặc** nối từ **Một số đẳng thức đồ thị cơ bản** sang **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đếm cạnh của đồ thị dày đặc
 
 Đồ thị vô hướng đơn với `n` đỉnh có tối đa:
@@ -671,15 +615,11 @@ Khi `m` gần `n²`, adjacency ma trận (matrix / 행렬) có thể hợp lý h
 
 Toán đếm giúp chọn biểu diễn (representation / 표현) trước cả khi benchmark.
 
-> **Nối mạch:** **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)** nối từ **Đếm cạnh của đồ thị dày đặc** sang **Phân tích khấu hao: phương pháp tổng hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)
 
 Adjacency ma trận (matrix / 행렬) của đồ thị (graph / 그래프) là một ma trận. Với đồ thị (graph / 그래프) thưa, phần lớn entry bằng 0. CSR và các sparse biểu diễn (representation / 표현) về bản chất là cách lưu chỉ các phần tử khác 0.
 
 Nhiều phép toán đồ thị (graph / 그래프) có thể được nhìn dưới dạng tuyến tính (linear / 선형) algebra. Ví dụ số walk độ dài `k` liên hệ với lũy thừa ma trận kề. Tuy nhiên, cách nhìn ma trận không luôn là hiện thực (implementation / 구현) tốt nhất cho đồ thị (graph / 그래프) traversal thông thường; nó cung cấp một mô hình toán học khác để thấy cấu trúc.
-
-> **Nối mạch:** **Phân tích khấu hao: phương pháp tổng hợp** tổng hợp từ **Sparse ma trận (matrix / 행렬) và đồ thị (graph / 그래프)**; **Phương pháp hạch toán** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Phân tích khấu hao: phương pháp tổng hợp
 
@@ -691,8 +631,6 @@ Nếu `n` thao tác có tổng chi phí `T(n)`, chi phí khấu hao là:
 
 Động (dynamic / 동적) Array doubling là ví dụ điển hình: một số append đắt nhưng tổng chi phí vẫn tuyến tính.
 
-> **Nối mạch:** **Phương pháp hạch toán** tổng hợp từ **Phân tích khấu hao: phương pháp tổng hợp**; **Phương pháp thế năng** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Phương pháp hạch toán
 
 Ta gán cho mỗi thao tác (operation / 연산) một “giá” có thể lớn hơn chi phí thực tế. Phần dư được coi như credit dành cho thao tác đắt trong tương lai.
@@ -700,8 +638,6 @@ Ta gán cho mỗi thao tác (operation / 연산) một “giá” có thể lớ
 Nếu chứng minh credit không bao giờ âm và tổng charge là `O(n)`, tổng actual chi phí (cost / 비용) cũng bị chặn bởi `O(n)`.
 
 Đây là cách suy nghĩ trực quan về việc các thao tác rẻ “trả trước” cho resize sau này.
-
-> **Nối mạch:** **Phương pháp thế năng** nối từ **Phương pháp hạch toán** sang **Lower bound theo lý thuyết thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương pháp thế năng
 
@@ -717,8 +653,6 @@ Nếu một thao tác (operation / 연산) rẻ làm potential tăng, nó tích 
 
 Potential phương thức (method / 메서드) rất mạnh vì không cần gắn credit vào từng đối tượng (object / 객체) cụ thể; chỉ cần một hàm đo toàn trạng thái.
 
-> **Nối mạch:** **Lower bound theo lý thuyết thông tin** nối từ **Phương pháp thế năng** sang **Tìm kiếm (search / 검색) lower bound**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lower bound theo lý thuyết thông tin
 
 Comparison sorting phải phân biệt `n!` thứ tự đầu vào (input / 입력) có thể có. Mỗi comparison nhị phân chỉ tạo tối đa hai nhánh trong cây quyết định (decision tree / 의사결정 트리).
@@ -732,8 +666,6 @@ Chiều cao cây quyết định ít nhất:
 Do đó không thể có general comparison sort worst-case `O(n)`.
 
 Counting Sort/Radix Sort không mâu thuẫn với cận này vì chúng khai thác thông tin khác ngoài pairwise comparison, chẳng hạn miền khóa hữu hạn hoặc biểu diễn (representation / 표현) chữ số.
-
-> **Nối mạch:** **Tìm kiếm (search / 검색) lower bound** nối từ **Lower bound theo lý thuyết thông tin** sang **Big-O, Omega và Theta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tìm kiếm (search / 검색) lower bound
 
@@ -749,8 +681,6 @@ Lower bound thường bắt đầu từ câu hỏi:
 
 > Mỗi observation cung cấp tối đa bao nhiêu thông tin về đáp án?
 
-> **Nối mạch:** **Big-O, Omega và Theta** nối từ **Tìm kiếm (search / 검색) lower bound** sang **Worst-case, average-case, expected-case và amortized**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Big-O, Omega và Theta
 
 `O(g(n))` là cận trên tiệm cận. `Ω(g(n))` là cận dưới. `Θ(g(n))` nói tốc độ tăng bị kẹp cả trên lẫn dưới bởi cùng bậc.
@@ -765,8 +695,6 @@ O(n²)
 
 Việc chỉ nói `O(n³)` cũng đúng về mặt cận trên nhưng quá lỏng và ít thông tin.
 
-> **Nối mạch:** **Big-O, Omega và Theta** nêu quy tắc; **Worst-case, average-case, expected-case và amortized** thử quy tắc trong tình huống, rồi **Sai số số học và miền giá trị** mở rộng hệ quả.
-
 ## Worst-case, average-case, expected-case và amortized
 
 Bốn khái niệm này không giống nhau.
@@ -780,8 +708,6 @@ Bốn khái niệm này không giống nhau.
 **Amortized**: trung bình trên chuỗi thao tác nhưng không cần giả định xác suất.
 
 Trộn các khái niệm này dễ dẫn tới tuyên bố hiệu năng sai.
-
-> **Nối mạch:** **Worst-case, average-case, expected-case và amortized** nêu quy tắc; **Sai số số học và miền giá trị** thử quy tắc trong tình huống, rồi **Một checklist toán học cho DSA** mở rộng hệ quả.
 
 ## Sai số số học và miền giá trị
 
@@ -798,8 +724,6 @@ Với multiplication, overflow có thể xảy ra trước modulo:
 nếu `a*b` vượt miền kiểu. tính đúng đắn (correctness / 정확성) phải xét cả bước trung gian.
 
 JavaScript `Number` chỉ biểu diễn chính xác mọi số nguyên tới `2^53-1`; các bài counting lớn có thể cần `BigInt`.
-
-> **Nối mạch:** **Một checklist toán học cho DSA** nối từ **Sai số số học và miền giá trị** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một checklist toán học cho DSA
 
@@ -819,8 +743,6 @@ Kiểu số có đủ miền giá trị không?
 ```
 
 Những câu hỏi này giúp toán học trở thành công cụ thiết kế thay vì phần phụ lý thuyết.
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Một checklist toán học cho DSA**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

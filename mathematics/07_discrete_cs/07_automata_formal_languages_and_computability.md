@@ -52,8 +52,6 @@ input string w
 
 Đây là cầu nối (bridge / 브리지) từ set lý thuyết (theory / 이론) sang computation.
 
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **2. Recognizer và decider khác nhau ở termination** nối từ **1. Alphabet, string và ngôn ngữ (language / 언어)** sang **3. DFA: finite trạng thái (state / 상태) là finite bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Recognizer và decider khác nhau ở termination
 
 Một machine **recognize** ngôn ngữ (language / 언어) nếu:
@@ -66,8 +64,6 @@ w ∉ L  → có thể reject hoặc chạy mãi
 Một machine **decide** ngôn ngữ (language / 언어) nếu nó luôn halt và trả đúng yes/no.
 
 Sự khác nhau này nhỏ về wording nhưng rất lớn về lô-gic (logic / 논리). Một procedure chỉ “eventually tìm ra yes” chưa đủ để làm môi trường vận hành (production / 운영 환경) quyết định (decision / 결정) hệ thống (system / 시스템) nếu no-case có thể chạy vô hạn.
-
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **3. DFA: finite trạng thái (state / 상태) là finite bộ nhớ (memory / 메모리)** nối từ **2. Recognizer và decider khác nhau ở termination** sang **4. NFA không mạnh hơn DFA về ngôn ngữ (language / 언어) lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. DFA: finite trạng thái (state / 상태) là finite bộ nhớ (memory / 메모리)
 
@@ -108,8 +104,6 @@ Machine không cần nhớ count chính xác. Nó chỉ cần equivalence lớp 
 
 Mô hình tư duy (mental model / 사고 모델) này xuất hiện trong giao thức (protocol / 프로토콜) trạng thái (state / 상태) machines, parsers, động (dynamic / 동적) programming và Markov các mô hình (models / 모델들).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **4. NFA không mạnh hơn DFA về ngôn ngữ (language / 언어) lớp (class / 클래스)** nối từ **3. DFA: finite trạng thái (state / 상태) là finite bộ nhớ (memory / 메모리)** sang **5. Regular expressions và automata**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. NFA không mạnh hơn DFA về ngôn ngữ (language / 언어) lớp (class / 클래스)
 
 **Nondeterministic finite automaton (NFA / 비결정적 유한 오토마타)** có thể có nhiều possible transitions cho một symbol và epsilon transitions.
@@ -126,8 +120,6 @@ Nếu NFA có `n` states, equivalent DFA trong worst trường hợp (case / 사
 expressive power giống nhau
 ≠ representation cost giống nhau
 ```
-
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **5. Regular expressions và automata** nối từ **4. NFA không mạnh hơn DFA về ngôn ngữ (language / 언어) lớp (class / 클래스)** sang **6. Vì sao finite bộ nhớ (memory / 메모리) có giới hạn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Regular expressions và automata
 
@@ -149,8 +141,6 @@ Nhưng regex engines trong programming languages có thể thêm backreferences,
 “regex trong theory”
 ≠ luôn giống hoàn toàn “regex engine trong production”
 ```
-
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **5. Regular expressions và automata** đặt tiêu chí; **6. Vì sao finite bộ nhớ (memory / 메모리) có giới hạn?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. Context-free grammar: recursion trong cú pháp (syntax / 문법)** mở rộng hệ quả.
 
 ## 6. Vì sao finite bộ nhớ (memory / 메모리) có giới hạn?
 
@@ -174,8 +164,6 @@ Giới hạn không đến từ “DFA chạy chậm”. Nó đến từ **thôn
 
 Finite number states chỉ encode finite number equivalence classes của histories.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **6. Vì sao finite bộ nhớ (memory / 메모리) có giới hạn?** đặt tiêu chí; **7. Context-free grammar: recursion trong cú pháp (syntax / 문법)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Pushdown automaton: thêm ngăn xếp (stack / 스택) thì bộ nhớ (memory / 메모리) thay đổi qualitatively** mở rộng hệ quả.
-
 ## 7. Context-free grammar: recursion trong cú pháp (syntax / 문법)
 
 Một **context-free grammar (CFG / 문맥 자유 문법)** gồm variables/nonterminals, terminals, start symbol và môi trường vận hành (production / 운영 환경) rules.
@@ -194,8 +182,6 @@ Parse cây (tree / 트리) là proof rằng một string được derive từ gr
 
 Đây là cầu nối (bridge / 브리지) giữa formal ngôn ngữ (language / 언어), recursion và trình biên dịch (compiler / 컴파일러) parsing.
 
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **8. Pushdown automaton: thêm ngăn xếp (stack / 스택) thì bộ nhớ (memory / 메모리) thay đổi qualitatively** nối từ **7. Context-free grammar: recursion trong cú pháp (syntax / 문법)** sang **9. Chomsky hierarchy như hierarchy của structural bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Pushdown automaton: thêm ngăn xếp (stack / 스택) thì bộ nhớ (memory / 메모리) thay đổi qualitatively
 
 Một **pushdown automaton (PDA / 푸시다운 오토마타)** là finite điều khiển (control / 제어) cộng một ngăn xếp (stack / 스택).
@@ -212,8 +198,6 @@ Balanced parentheses là example tự nhiên:
 Nếu closing bracket xuất hiện khi ngăn xếp (stack / 스택) empty hoặc final ngăn xếp (stack / 스택) không empty, đầu vào (input / 입력) invalid.
 
 Một ngăn xếp (stack / 스택) đủ cho many nested syntactic structures, nhưng không phải mọi computation.
-
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **9. Chomsky hierarchy như hierarchy của structural bộ nhớ (memory / 메모리)** nối từ **8. Pushdown automaton: thêm ngăn xếp (stack / 스택) thì bộ nhớ (memory / 메모리) thay đổi qualitatively** sang **10. Turing machine: lớp trừu tượng (abstraction / 추상화) tối giản của general computation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chomsky hierarchy như hierarchy của structural bộ nhớ (memory / 메모리)
 
@@ -234,8 +218,6 @@ pattern phức tạp hơn
 ```
 
 Regular languages dùng finite trạng thái (state / 상태). Context-free languages tương ứng stack-like bộ nhớ (memory / 메모리). Turing machines có general unbounded read/ghi (write / 쓰기) tape.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **10. Turing machine: lớp trừu tượng (abstraction / 추상화) tối giản của general computation** nối từ **9. Chomsky hierarchy như hierarchy của structural bộ nhớ (memory / 메모리)** sang **11. Church–Turing thesis là thesis, không phải ordinary theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Turing machine: lớp trừu tượng (abstraction / 추상화) tối giản của general computation
 
@@ -262,8 +244,6 @@ program cũng là data
 
 Điều này mở đường cho self-reference, interpreters và undecidability proofs.
 
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **11. Church–Turing thesis là thesis, không phải ordinary theorem** nối từ **10. Turing machine: lớp trừu tượng (abstraction / 추상화) tối giản của general computation** sang **12. Decidable, recognizable và undecidable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Church–Turing thesis là thesis, không phải ordinary theorem
 
 **Church–Turing thesis / 처치-튜링 명제** nói roughly:
@@ -273,8 +253,6 @@ program cũng là data
 Nó không phải theorem từ axioms thuần túy vì “effectively computable” ban đầu là informal concept.
 
 Điều làm thesis mạnh là nhiều independently developed các mô hình (models / 모델들) — lambda calculus, recursive functions, Turing machines — hội tụ về cùng computability lớp (class / 클래스).
-
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **12. Decidable, recognizable và undecidable** nối từ **11. Church–Turing thesis là thesis, không phải ordinary theorem** sang **13. Halting bài toán (problem / 문제) và diagonalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Decidable, recognizable và undecidable
 
@@ -295,8 +273,6 @@ mà nghĩa:
 ```text
 đã chứng minh không có total algorithm cho general case trong model
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **13. Halting bài toán (problem / 문제) và diagonalization** nối từ **12. Decidable, recognizable và undecidable** sang **14. Reduction: chuyển difficulty từ bài toán (problem / 문제) này sang bài toán (problem / 문제) khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Halting bài toán (problem / 문제) và diagonalization
 
@@ -339,8 +315,6 @@ Cốt lõi (core / 핵심) proof mẫu (pattern / 패턴) là **self-reference +
 
 Cùng family lập luận (reasoning / 추론) xuất hiện trong Cantor, Gödel và nhiều impossibility results.
 
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **14. Reduction: chuyển difficulty từ bài toán (problem / 문제) này sang bài toán (problem / 문제) khác** nối từ **13. Halting bài toán (problem / 문제) và diagonalization** sang **15. Computability khác độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Reduction: chuyển difficulty từ bài toán (problem / 문제) này sang bài toán (problem / 문제) khác
 
 Một **reduction / 환원** biến instance của bài toán (problem / 문제) `A` thành instance của `B` sao cho solve `B` giúp solve `A`.
@@ -362,8 +336,6 @@ nếu có decider cho B
 ```
 
 Direction của reduction rất hay bị nhầm. Muốn chứng minh `B` hard, reduce **known hard A into B**, không phải ngược lại.
-
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **15. Computability khác độ phức tạp (complexity / 복잡도)** nối từ **14. Reduction: chuyển difficulty từ bài toán (problem / 문제) này sang bài toán (problem / 문제) khác** sang **16. NP-completeness và reduction mindset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Computability khác độ phức tạp (complexity / 복잡도)
 
@@ -401,8 +373,6 @@ P = NP ?
 
 vẫn open.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **16. NP-completeness và reduction mindset** nối từ **15. Computability khác độ phức tạp (complexity / 복잡도)** sang **17. trạng thái (state / 상태) machines trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. NP-completeness và reduction mindset
 
 Một bài toán (problem / 문제) là **NP-hard** nếu mọi bài toán (problem / 문제) trong NP reduce đến nó theo suitable polynomial-time reduction.
@@ -421,8 +391,6 @@ relaxation
 ```
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang tối ưu hóa (optimization / 최적화).
-
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **17. trạng thái (state / 상태) machines trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nối từ **16. NP-completeness và reduction mindset** sang **18. mô hình (model / 모델) checking liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. trạng thái (state / 상태) machines trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
@@ -443,8 +411,6 @@ Benefit của tường minh (explicit / 명시적) máy trạng thái (state mac
 
 Nhưng môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) có tính đồng thời (concurrency / 동시성), partial thất bại (failure / 실패) và thời gian (time / 시간). Khi trạng thái (state / 상태) của nhiều components tương tác, simple DFA viewpoint có thể phải nâng thành sản phẩm (product / 제품) trạng thái (state / 상태) không gian (space / 공간), temporal lô-gic (logic / 논리) hoặc distributed-state mô hình (model / 모델).
 
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, sau nội dung của **17. trạng thái (state / 상태) machines trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **18. mô hình (model / 모델) checking liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **19. Parser, grammar và ngữ nghĩa (semantic / 의미적) các ràng buộc (constraints / 제약조건들)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. mô hình (model / 모델) checking liên kết (connection / 연결)
 
 Nếu hệ thống (system / 시스템) có finite trạng thái (state / 상태) không gian (space / 공간) đủ nhỏ, ta có thể explore trạng thái (state / 상태) đồ thị (graph / 그래프) để verify properties:
@@ -460,8 +426,6 @@ request có eventually được response không?
 Trạng thái (state / 상태) explosion là bottleneck: nếu `k` components mỗi thành phần (component / 컴포넌트) có `m` states, naive sản phẩm (product / 제품) có thể có `m^k` toàn cục (global / 전역) states.
 
 Combinatorics quay trở lại ngay trong xác minh (verification / 확인).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **19. Parser, grammar và ngữ nghĩa (semantic / 의미적) các ràng buộc (constraints / 제약조건들)** nối từ **18. mô hình (model / 모델) checking liên kết (connection / 연결)** sang **20. dùng chung (common / 공통) thất bại (failure / 실패) modes khi lập luận (reasoning / 추론) về computation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Parser, grammar và ngữ nghĩa (semantic / 의미적) các ràng buộc (constraints / 제약조건들)
 
@@ -486,8 +450,6 @@ lexing
 
 Đây là example đẹp của việc chọn computational mô hình (model / 모델) phù hợp từng tầng (layer / 계층).
 
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **20. dùng chung (common / 공통) thất bại (failure / 실패) modes khi lập luận (reasoning / 추론) về computation** nối từ **19. Parser, grammar và ngữ nghĩa (semantic / 의미적) các ràng buộc (constraints / 제약조건들)** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. dùng chung (common / 공통) thất bại (failure / 실패) modes khi lập luận (reasoning / 추론) về computation
 
 ### “Regex giải được mọi parsing bài toán (problem / 문제)”
@@ -506,8 +468,6 @@ Không. Nhiều specific instances có thể dễ. Claim là không có one tota
 
 Không. Approximation, special cases và heuristics có thể rất hiệu quả.
 
-> **Nối mạch:** Ở chặng này của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** nối từ **20. dùng chung (common / 공통) thất bại (failure / 실패) modes khi lập luận (reasoning / 추론) về computation** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Automata nằm tại intersection của nhiều chủ đề:
@@ -522,13 +482,9 @@ optimization → NP-hard search problems
 software → protocols / parsers / workflows
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi gặp một computational bài toán (problem / 문제), đừng hỏi ngay “dùng thuật toán (algorithm / 알고리즘) nào?”. Trước hết hỏi đầu vào (input / 입력) ngôn ngữ (language / 언어) là gì, machine cần bộ nhớ (memory / 메모리) cấu trúc (structure / 구조) nào, bài toán (problem / 문제) có decidable không, rồi mới hỏi độ phức tạp (complexity / 복잡도). Nhiều confusion trong CS đến từ việc trộn bốn tầng này thành một.
-
-> **Nối mạch:** Trong **Automata, formal languages và computability: từ finite bộ nhớ (memory / 메모리) đến giới hạn của thuật toán (algorithm / 알고리즘)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

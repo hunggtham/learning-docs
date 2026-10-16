@@ -13,8 +13,6 @@ Nhiều tranh luận tưởng là bất đồng về thế giới nhưng thực 
 
 Định nghĩa không tự chứng minh claim thực nghiệm. Định nghĩa “kiến thức (knowledge / 지식) là justified true belief” có thể rõ nhưng vẫn gặp Gettier; định nghĩa “fairness là equal accuracy” có thể nhất quán nhưng bỏ qua phân phối (distribution / 분포) và power.
 
-> **Chuyển mạch:** Definition có thể lexical, stipulative, precising hoặc theoretical; ambiguity audit tiếp theo kiểm tra mỗi nghĩa đang làm premise hay conclusion đổi ra sao.
-
 ## Ambiguity kiểm tra (audit / 감사)
 
 Trước khi tranh luận, thay từ khóa bằng một paraphrase cụ thể, nêu ranh giới (boundary / 경계) trường hợp (case / 사례) và kiểm tra phạm vi (scope / 범위). “Tự do”, “ý thức”, “trí tuệ”, “tự nhiên” và “tiến bộ” đều có nhiều sense. Nếu một bên đổi sense giữa các premise, argument có thể mắc equivocation: cùng một từ nhưng không cùng proposition.

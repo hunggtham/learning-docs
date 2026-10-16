@@ -28,8 +28,6 @@ services / login / application
 
 Mỗi lớp có responsibility riêng và có loại lỗi riêng.
 
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **Từ khi bấm nút nguồn đến khi có shell** đặt vấn đề; **Firmware: BIOS và UEFI** đối chiếu bằng chứng, rồi **Bootloader** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Firmware: BIOS và UEFI
 
 Firmware chạy trước operating hệ thống (system / 시스템). Trên máy hiện đại thường là UEFI.
@@ -41,8 +39,6 @@ Firmware:
 - tải bootloader hoặc EFI executable.
 
 Nếu disk không xuất hiện ở firmware mức (level / 수준) thì Linux kernel còn chưa được chạy. Khi đó chỉnh `/etc/fstab` hay `systemctl` không có tác dụng.
-
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **Bootloader** nối từ **Firmware: BIOS và UEFI** sang **Kernel ảnh (image / 이미지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bootloader
 
@@ -70,8 +66,6 @@ sudo grub2-mkconfig ...
 
 Không sửa bootloader môi trường vận hành (production / 운영 환경) khi chưa có console/khôi phục (recovery / 복구) đường dẫn (path / 경로). Một lỗi nhỏ có thể làm host không boot từ xa được.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **Kernel ảnh (image / 이미지)** nối từ **Bootloader** sang **Kernel command line**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kernel ảnh (image / 이미지)
 
 Kernel thường nằm dưới `/boot`:
@@ -97,8 +91,6 @@ uname -r
 
 Điểm quan trọng: kernel tệp (file / 파일) đã được cài mới **không có nghĩa kernel mới đang chạy**. Nếu cập nhật (update / 업데이트) gói (package / 패키지) nhưng chưa reboot, `uname -r` vẫn có thể cho phiên bản (version / 버전) cũ.
 
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **Kernel command line** nối từ **Kernel ảnh (image / 이미지)** sang **Vì sao cần initramfs?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kernel command line
 
 Bootloader truyền parameters cho kernel.
@@ -112,8 +104,6 @@ cat /proc/cmdline
 Có thể chứa gốc (root / 루트) thiết bị (device / 장치), console settings, cgroup options, crash kernel parameters hoặc gỡ lỗi (debug / 디버그) flags.
 
 Đây là “effective trạng thái (state / 상태)” của boot hiện tại, không nhất thiết giống tệp (file / 파일) cấu hình (config / 설정) bạn vừa sửa nhưng chưa reboot.
-
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **Vì sao cần initramfs?** nối từ **Kernel command line** sang **Khi initramfs có vấn đề**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao cần initramfs?
 
@@ -133,8 +123,6 @@ Ví dụ cần:
 - filesystem mô-đun (module / 모듈).
 
 Sau khi gốc (root / 루트) thật sẵn sàng, hệ thống (system / 시스템) chuyển từ early userspace sang gốc (root / 루트) filesystem chính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **Khi initramfs có vấn đề** nối từ **Vì sao cần initramfs?** sang **UUID và /etc/fstab**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi initramfs có vấn đề
 
@@ -165,8 +153,6 @@ lvm lvscan
 
 Tùy môi trường, command khác nhau.
 
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **UUID và /etc/fstab** nối từ **Khi initramfs có vấn đề** sang **PID 1 xuất hiện khi nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## UUID và `/etc/fstab`
 
 Mount bằng `/dev/sda1` có thể không ổn định khi thiết bị (device / 장치) enumeration thay đổi. UUID cung cấp định danh (identity / 식별자) ổn định hơn.
@@ -180,8 +166,6 @@ Một dòng `fstab` sai có thể làm boot vào emergency chế độ (mode / �
 
 Các option như `nofail` hoặc systemd mount hành vi (behavior / 동작) có thể thay ngữ nghĩa (semantics / 의미론), nhưng không nên dùng để che lỗi lưu trữ (storage / 저장소) quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **PID 1 xuất hiện khi nào?** nối từ **UUID và /etc/fstab** sang **systemd boot giao dịch (transaction / 트랜잭션)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## PID 1 xuất hiện khi nào?
 
 Sau khi gốc (root / 루트) filesystem đã sẵn sàng, kernel chạy init tiến trình (process / 프로세스). Trên phần lớn phân phối (distribution / 분포) hiện đại:
@@ -193,8 +177,6 @@ ps -p 1 -o pid,comm,args
 sẽ cho thấy `systemd`.
 
 Từ đây boot chuyển từ kernel/early-userspace bài toán (problem / 문제) sang dịch vụ (service / 서비스)/phụ thuộc (dependency / 의존성) bài toán (problem / 문제).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **systemd boot giao dịch (transaction / 트랜잭션)** nối từ **PID 1 xuất hiện khi nào?** sang **Journal của boot hiện tại và boot trước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## systemd boot giao dịch (transaction / 트랜잭션)
 
@@ -229,8 +211,6 @@ Một đơn vị (unit / 단위) có thời gian activate dài không nhất thi
 
 `critical-chain` thường hữu ích hơn để thấy đường phụ thuộc (dependency / 의존성) ảnh hưởng trực tiếp đến thời gian boot.
 
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **Journal của boot hiện tại và boot trước** nối từ **systemd boot giao dịch (transaction / 트랜잭션)** sang **Reboot bất ngờ: bắt đầu từ đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Journal của boot hiện tại và boot trước
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -259,8 +239,6 @@ journalctl --list-boots
 journalctl -b -1 -e
 ```
 
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **Reboot bất ngờ: bắt đầu từ đâu?** nối từ **Journal của boot hiện tại và boot trước** sang **Kernel panic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reboot bất ngờ: bắt đầu từ đâu?
 
 Không nên mặc định ứng dụng (application / 애플리케이션) đã gọi reboot.
@@ -286,8 +264,6 @@ Tìm các dấu hiệu:
 
 Nếu log dừng đột ngột mà không có shutdown chuỗi (sequence / 시퀀스), power/hypervisor/kernel crash là giả thuyết đáng xem.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **Kernel panic** nối từ **Reboot bất ngờ: bắt đầu từ đâu?** sang **Kdump**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kernel panic
 
 Kernel panic là thất bại (failure / 실패) nghiêm trọng khiến kernel không thể tiếp tục an toàn.
@@ -302,8 +278,6 @@ Một panic có thể do:
 - third-party mô-đun (module / 모듈).
 
 Nếu host tự reboot sau panic, cục bộ (local / 로컬) logs có thể không còn đủ. môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) quan trọng có thể cấu hình `kdump` để capture crash dump.
-
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **Kdump** nối từ **Kernel panic** sang **Kernel modules trong boot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kdump
 
@@ -324,8 +298,6 @@ postmortem analysis
 Đây là kỹ thuật sâu, thường cần distro-specific setup và đủ reserved bộ nhớ (memory / 메모리).
 
 Không cần mọi ứng dụng (application / 애플리케이션) máy chủ (server / 서버) đều bật kdump, nhưng với kernel/hardware incidents khó tái hiện, nó có thể là bằng chứng (evidence / 증거) duy nhất.
-
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **Kernel modules trong boot** nối từ **Kdump** sang **Secure Boot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kernel modules trong boot
 
@@ -350,8 +322,6 @@ RHEL-family thường dùng `dracut`.
 
 Không chạy các lệnh này theo thói quen nếu chưa hiểu phân phối (distribution / 분포) và boot bố cục (layout / 레이아웃).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **Secure Boot** nối từ **Kernel modules trong boot** sang **Boot và bộ chứa (container / 컨테이너) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Secure Boot
 
 Trên UEFI các hệ thống (systems / 시스템들), Secure Boot có thể yêu cầu boot components/kernel modules được ký tin cậy.
@@ -360,8 +330,6 @@ Third-party kernel mô-đun (module / 모듈) không được ký đúng có th�
 
 Khi driver “cài rồi nhưng không tải (load / 로드)”, Secure Boot là một tầng (layer / 계층) cần xem trên một số hosts.
 
-> **Nối mạch:** Trong **Quá trình boot, kernel và initramfs**, **Boot và bộ chứa (container / 컨테이너) khác nhau** nối từ **Secure Boot** sang **Mô hình tư duy xử lý boot thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Boot và bộ chứa (container / 컨테이너) khác nhau
 
 Bộ chứa (container / 컨테이너) thường không trải qua firmware → bootloader → kernel riêng. bộ chứa (container / 컨테이너) tiến trình (process / 프로세스) dùng host kernel và bắt đầu ở userspace không gian tên (namespace / 네임스페이스) của nó.
@@ -369,8 +337,6 @@ Bộ chứa (container / 컨테이너) thường không trải qua firmware → 
 Đây là khác biệt nền tảng giữa bộ chứa (container / 컨테이너) và VM.
 
 Virtual machine có virtual firmware/hardware và guest kernel riêng, nên có boot chuỗi (chain / 사슬) gần máy thật hơn.
-
-> **Nối mạch:** Ở chặng này của **Quá trình boot, kernel và initramfs**, **Mô hình tư duy xử lý boot thất bại (failure / 실패)** tổng hợp từ **Boot và bộ chứa (container / 컨테이너) khác nhau** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy xử lý boot thất bại (failure / 실패)
 
@@ -393,8 +359,6 @@ Target/services đạt trạng thái mong muốn?
 ```
 
 Mỗi câu trả lời “có” loại bỏ một nhóm nguyên nhân phía trên.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình boot, kernel và initramfs**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy xử lý boot thất bại (failure / 실패)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Những hiểu lầm phổ biến
 

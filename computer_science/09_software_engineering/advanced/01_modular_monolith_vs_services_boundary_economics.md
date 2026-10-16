@@ -10,15 +10,11 @@ Một **modular monolith** deploy như một ứng dụng (application / 애플�
 
 Nếu ranh giới (boundary / 경계) lô-gic (logic / 논리) không tồn tại trong monolith, tách tiến trình (process / 프로세스) thường chỉ biến coupling trong bộ nhớ (memory / 메모리) thành coupling qua mạng (network / 네트워크).
 
-> **Nối mạch:** Modular monolith giữ boundary trong một deployable; services thêm fixed cost vận hành, nên data ownership là boundary kiểm chứng mạnh hơn endpoint khi cân nhắc migration.
-
 ## Dịch vụ (service / 서비스) ranh giới (boundary / 경계) có chi phí cố định
 
 Khi mô-đun (module / 모듈) trở thành dịch vụ (service / 서비스), hàm (function / 함수) lời gọi (call / 호출) biến thành mạng (network / 네트워크) lời gọi (call / 호출). Ta nhận thêm serialization, hết thời gian chờ (timeout / 타임아웃), thử lại (retry / 재시도), authentication, khả năng quan sát (observability / 관측 가능성), triển khai (deployment / 배포), phiên bản (version / 버전) tính tương thích (compatibility / 호환성) và partial thất bại (failure / 실패).
 
 Đổi lại có thể nhận independent triển khai (deployment / 배포), tài nguyên (resource / 자원) scaling, fault isolation và nhóm (team / 팀) autonomy. dịch vụ (service / 서비스) chỉ đáng giá khi lợi ích ranh giới (boundary / 경계) vượt distributed-systems tax.
-
-> **Nối mạch:** **Dịch vụ (service / 서비스) ranh giới (boundary / 경계) có chi phí cố định** đặt tiêu chí; **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) là ranh giới (boundary / 경계) mạnh hơn endpoint** dùng nó để kiểm tra ranh giới, rồi **Giao dịch (transaction / 트랜잭션) trở thành workflow** mở rộng hệ quả.
 
 ## Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) là ranh giới (boundary / 경계) mạnh hơn endpoint
 
@@ -26,15 +22,11 @@ Hai services dùng chung cơ sở dữ liệu (database / 데이터베이스) l�
 
 Điều này không bắt buộc “mỗi dịch vụ (service / 서비스) một cơ sở dữ liệu (database / 데이터베이스) máy chủ (server / 서버)”; điểm quan trọng là quyền thay đổi lược đồ (schema / 스키마)/dữ liệu (data / 데이터) thuộc một đơn vị sở hữu (owner / 오너) và truy cập (access / 접근) đường dẫn (path / 경로) được kiểm soát.
 
-> **Nối mạch:** **Dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) là ranh giới (boundary / 경계) mạnh hơn endpoint** đặt tiêu chí; **Giao dịch (transaction / 트랜잭션) trở thành workflow** dùng nó để kiểm tra ranh giới, rồi **Coupling có nhiều chiều** mở rộng hệ quả.
-
 ## Giao dịch (transaction / 트랜잭션) trở thành workflow
 
 Trong monolith + single cơ sở dữ liệu (database / 데이터베이스), nhiều bất biến (invariant / 불변식) có thể nằm trong ACID giao dịch (transaction / 트랜잭션). Sau khi tách dịch vụ (service / 서비스), giao dịch (transaction / 트랜잭션) xuyên ranh giới (boundary / 경계) trở nên đắt hoặc không khả dụng. nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) phải được modeling thành workflow với message, thử lại (retry / 재시도), idempotency và compensation.
 
 Đây là lý do decomposition không chỉ là cắt gói (package / 패키지) thành REST APIs. giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) thay đổi ngữ nghĩa (semantics / 의미론) của hệ thống.
-
-> **Nối mạch:** **Giao dịch (transaction / 트랜잭션) trở thành workflow** đặt đầu vào cho **Coupling có nhiều chiều**, rồi **Khi modular monolith có lợi** mở rộng hệ quả.
 
 ## Coupling có nhiều chiều
 
@@ -42,15 +34,11 @@ Services có thể loosely coupled về mã (code / 코드) nhưng tightly coupl
 
 Đánh giá ranh giới (boundary / 경계) cần nhìn **thay đổi (change / 변경) coupling, temporal coupling, dữ liệu (data / 데이터) coupling và organizational coupling**.
 
-> **Nối mạch:** **Khi modular monolith có lợi** nối từ **Coupling có nhiều chiều** sang **Khi dịch vụ (service / 서비스) extraction có tín hiệu tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi modular monolith có lợi
 
 Nhóm (team / 팀) nhỏ, lĩnh vực (domain / 도메인) còn thay đổi nhanh, giao dịch (transaction / 트랜잭션) cross-domain nhiều và operational nền tảng (platform / 플랫폼) chưa trưởng thành thường hưởng lợi từ modular monolith. Debugging cục bộ (local / 로컬) đơn giản, refactor cross-module rẻ hơn và consistency dễ giữ.
 
 Điều kiện là kiến trúc (architecture / 아키텍처) phải thực sự enforce mô-đun (module / 모듈) boundaries; nếu không, technical debt tích tụ và extraction sau này khó hơn.
-
-> **Nối mạch:** **Khi dịch vụ (service / 서비스) extraction có tín hiệu tốt** nối từ **Khi modular monolith có lợi** sang **Di chuyển (migration / 마이그레이션) theo seam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi dịch vụ (service / 서비스) extraction có tín hiệu tốt
 
@@ -58,21 +46,15 @@ Một mô-đun (module / 모듈) có scaling profile khác biệt, ranh giới b
 
 “Codebase lớn” một mình chưa đủ; repository có thể lớn nhưng mô-đun (module / 모듈) boundaries vẫn quản lý tốt.
 
-> **Nối mạch:** **Di chuyển (migration / 마이그레이션) theo seam** nối từ **Khi dịch vụ (service / 서비스) extraction có tín hiệu tốt** sang **Reverse di chuyển (migration / 마이그레이션) cũng hợp lệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Di chuyển (migration / 마이그레이션) theo seam
 
 Extraction an toàn thường bắt đầu từ seam rõ: define giao diện (interface / 인터페이스), ngăn direct cơ sở dữ liệu (database / 데이터베이스) truy cập (access / 접근), đưa phụ thuộc (dependency / 의존성) qua lớp trừu tượng (abstraction / 추상화), quan sát traffic, sau đó mới move hiện thực (implementation / 구현) ra tiến trình (process / 프로세스) riêng.
 
 Mẫu (pattern / 패턴) strangler cho phép tuyến (route / 경로) từng năng lực (capability / 역량) sang dịch vụ (service / 서비스) mới thay vì rewrite toàn hệ thống. Branch-by-abstraction giúp mã (code / 코드) cũ và mới cùng tồn tại trong di chuyển (migration / 마이그레이션) mà không cần long-lived branch khổng lồ.
 
-> **Nối mạch:** **Reverse di chuyển (migration / 마이그레이션) cũng hợp lệ** nối từ **Di chuyển (migration / 마이그레이션) theo seam** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reverse di chuyển (migration / 마이그레이션) cũng hợp lệ
 
 Nếu dịch vụ (service / 서비스) ranh giới (boundary / 경계) tạo nhiều operational chi phí (cost / 비용) nhưng không mang autonomy/isolation thực, merge services trở lại modular monolith có thể là quyết định đúng. kiến trúc (architecture / 아키텍처) evolution không phải con đường một chiều từ monolith → microservices.
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Reverse di chuyển (migration / 마이그레이션) cũng hợp lệ**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

@@ -18,8 +18,6 @@ Các nhãn này là bản đồ định hướng, không phải hộp kín. Tác
 
 Đọc cùng [Philosophical reasoning](../00_philosophical_reasoning/00_questions_concepts_and_arguments.md) để tránh biến lịch sử (history / 이력) thành danh sách tên riêng.
 
-> **Chuyển mạch:** Trong **Bản đồ lịch sử các truyền thống triết học**, **Cách đọc một văn bản lịch sử** tiếp nhận điểm tựa từ **Các tuyến lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
-
 ## Cách đọc một văn bản lịch sử
 
 Ghi bốn lớp riêng nhau:

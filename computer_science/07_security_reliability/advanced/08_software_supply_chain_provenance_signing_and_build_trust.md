@@ -72,7 +72,7 @@ CI runner thường đọc nguồn (source / 소스), secret và phụ thuộc (
 
 Đây là lý do bản dựng (build / 빌드) môi trường (environment / 환경) phải được xem như ranh giới bảo mật (security boundary / 보안 경계). Isolation, ephemeral thực thi (execution / 실행), least privilege, mạng (network / 네트워크) egress điều khiển (control / 제어) và credential phạm vi (scope / 범위) giảm blast radius.
 
-Một runner có đơn vị từ (token / 토큰) cho phép push ảnh (image / 이미지), ký sản phẩm tạo ra (artifact / 산출물) và deploy môi trường vận hành (production / 운영 환경) tạo authority concentration quá lớn. Compromise một principal có thể vượt qua nhiều điều khiển (control / 제어) tưởng như độc lập.
+Một runner có token (토큰) cho phép push ảnh (image / 이미지), ký sản phẩm tạo ra (artifact / 산출물) và deploy môi trường vận hành (production / 운영 환경) tạo authority concentration quá lớn. Compromise một principal có thể vượt qua nhiều điều khiển (control / 제어) tưởng như độc lập.
 
 ## 5. Reproducible bản dựng (build / 빌드) và hermetic bản dựng (build / 빌드) giải quyết hai câu hỏi khác nhau
 
@@ -148,7 +148,7 @@ Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) v�
 
 CI thường cần credential để đọc private phụ thuộc (dependency / 의존성), push sản phẩm tạo ra (artifact / 산출물) hoặc gọi cloud API. Long-lived secret với phạm vi (scope / 범위) rộng làm compromise chuỗi xử lý (pipeline / 파이프라인) trở thành compromise hạ tầng (infrastructure / 인프라).
 
-Ưu tiên short-lived credential, tải công việc (workload / 워크로드) định danh (identity / 식별자), least privilege và tách môi trường (environment / 환경). Nhưng rotation chỉ hữu ích nếu old năng lực (capability / 역량) thực sự mất hiệu lực. Nếu đơn vị từ (token / 토큰) bị bản sao (copy / 복사) vào sản phẩm tạo ra (artifact / 산출물)/log/bộ nhớ đệm (cache / 캐시), rotation ở secret store không đủ.
+Ưu tiên short-lived credential, tải công việc (workload / 워크로드) định danh (identity / 식별자), least privilege và tách môi trường (environment / 환경). Nhưng rotation chỉ hữu ích nếu old năng lực (capability / 역량) thực sự mất hiệu lực. Nếu token (토큰) bị bản sao (copy / 복사) vào sản phẩm tạo ra (artifact / 산출물)/log/bộ nhớ đệm (cache / 캐시), rotation ở secret store không đủ.
 
 Cross-link với [Secret, KMS, HSM, rotation và envelope encryption](./06_secrets_kms_hsm_rotation_and_envelope_encryption.md).
 

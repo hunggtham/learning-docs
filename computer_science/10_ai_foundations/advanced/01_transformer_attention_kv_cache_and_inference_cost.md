@@ -2,7 +2,7 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Transformer internals, attention, KV cache và inference cost**. Route đi từ transformer block/attention → token-state flow → KV-cache memory → batching/latency → cost-quality trade-offs, để math được nối với serving behavior.
 
-Transformer quan trọng không chỉ vì mô hình (model / 모델) chất lượng (quality / 품질) mà vì computation đồ thị (graph / 그래프) ánh xạ tốt lên parallel hardware trong huấn luyện (training / 학습). Autoregressive suy luận (inference / 추론) lại có chi phí (cost / 비용) profile rất khác: prompt được xử lý theo batch lớn hơn, còn decode phải sinh đơn vị từ (token / 토큰) nối tiếp và liên tục đọc mô hình (model / 모델) trạng thái (state / 상태)/KV trạng thái (state / 상태).
+Transformer quan trọng không chỉ vì mô hình (model / 모델) chất lượng (quality / 품질) mà vì computation đồ thị (graph / 그래프) ánh xạ tốt lên parallel hardware trong huấn luyện (training / 학습). Autoregressive suy luận (inference / 추론) lại có chi phí (cost / 비용) profile rất khác: prompt được xử lý theo batch lớn hơn, còn decode phải sinh token (토큰) nối tiếp và liên tục đọc mô hình (model / 모델) trạng thái (state / 상태)/KV trạng thái (state / 상태).
 
 Mô hình tư duy (mental model / 사고 모델) của chương này là: **AI suy luận (inference / 추론) serving là một memory-and-scheduling hệ thống (system / 시스템) có mô hình (model / 모델) ngữ nghĩa (semantics / 의미론) ở trên**. tính đúng đắn (correctness / 정확성) cần yêu cầu (request / 요청) nào dùng đúng mô hình (model / 모델)/KV trạng thái (state / 상태); hiệu năng (performance / 성능) phụ thuộc arithmetic intensity, bộ nhớ (memory / 메모리) bandwidth, batching, queueing, fragmentation và scheduler chính sách (policy / 정책).
 
@@ -24,8 +24,6 @@ tensor/model parallelism
 
 Vì vậy “mô hình (model / 모델) có N parameters” không đủ để sức chứa (capacity / 용량) plan. Cần map tải công việc (workload / 워크로드) phân phối (distribution / 분포) vào tài nguyên (resource / 자원) consumption theo serving phase.
 
-> **Nối mạch:** Model math chưa nói rõ serving behavior; transformer block biến token stream thành state, rồi query/key/value attention xác định thông tin nào được trộn ở mỗi bước.
-
 ## 2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)
 
 Đầu vào (input / 입력) tokens được ánh xạ thành vectors. Một transformer khối (block / 블록) điển hình có attention, feed-forward mạng (network / 네트워크), residual paths và normalization.
@@ -41,17 +39,13 @@ scheduler metadata: ownership/lifetime of each sequence
 
 Tách các trạng thái (state / 상태) classes này giúp hiểu bộ nhớ (memory / 메모리) pressure.
 
-> **Nối mạch:** **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)** đặt đầu vào cho **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)**, rồi **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** mở rộng hệ quả.
-
 ## 3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)
 
-Mỗi đơn vị từ (token / 토큰) biểu diễn (representation / 표현) được dự án (project / 프로젝트) thành Q, K, V. truy vấn (query / 쿼리) của position hiện tại so với keys tạo scores/weights; weighted values tạo attention đầu ra (output / 출력).
+Mỗi token (토큰) biểu diễn (representation / 표현) được dự án (project / 프로젝트) thành Q, K, V. truy vấn (query / 쿼리) của position hiện tại so với keys tạo scores/weights; weighted values tạo attention đầu ra (output / 출력).
 
 Multi-head attention dùng nhiều projections/subspaces. Kiến trúc không hứa một head luôn map tới một human-interpretable concept cụ thể.
 
 Tính đúng đắn (correctness / 정확성) ở serving tầng (layer / 계층) cần giữ **chuỗi (sequence / 시퀀스) association**: K/V của yêu cầu (request / 요청) A không được nhầm với yêu cầu (request / 요청) B, và positions/thứ tự (order / 순서) phải map đúng logical prefix của chuỗi (sequence / 시퀀스).
-
-> **Nối mạch:** **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)** đặt đầu vào cho **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length**, rồi **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** mở rộng hệ quả.
 
 ## 4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length
 
@@ -63,13 +57,11 @@ Optimized kernels như tiled/flash-style attention có thể tránh materialize 
 
 > Cùng algorithmic ngữ nghĩa (semantics / 의미론), dữ liệu (data / 데이터) movement chiến lược (strategy / 전략) có thể thay dominant bottleneck.
 
-> **Nối mạch:** **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** đặt đầu vào cho **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau**, rồi **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** mở rộng hệ quả.
-
 ## 5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau
 
 **Prefill** xử lý toàn prompt/ngữ cảnh (context / 맥락) mới. Nhiều tokens có thể được tính song song nên accelerator có cơ hội đạt high compute utilization.
 
-**Decode** sinh đơn vị từ (token / 토큰) từng bước. đơn vị từ (token / 토큰) `t+1` phụ thuộc trạng thái (state / 상태)/kết quả (result / 결과) trước, nên một chuỗi (sequence / 시퀀스) có ít parallelism theo thời gian (time / 시간) dimension.
+**Decode** sinh token (토큰) từng bước. token (토큰) `t+1` phụ thuộc trạng thái (state / 상태)/kết quả (result / 결과) trước, nên một chuỗi (sequence / 시퀀스) có ít parallelism theo thời gian (time / 시간) dimension.
 
 Metrics cần tách:
 
@@ -83,11 +75,9 @@ end-to-end request latency
 
 Average tokens/s có thể che UX xấu nếu hàng đợi (queue / 큐)/TTFT cao.
 
-> **Nối mạch:** **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** nối từ **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** sang **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)
 
-Nếu decode mỗi bước tính lại K/V cho toàn prefix, công việc (work / 작업) lặp rất lớn. **KV bộ nhớ đệm (cache / 캐시)** giữ K/V của prior tokens cho mỗi tầng (layer / 계층) để đơn vị từ (token / 토큰) mới reuse.
+Nếu decode mỗi bước tính lại K/V cho toàn prefix, công việc (work / 작업) lặp rất lớn. **KV bộ nhớ đệm (cache / 캐시)** giữ K/V của prior tokens cho mỗi tầng (layer / 계층) để token (토큰) mới reuse.
 
 Sự đánh đổi (trade-off / 트레이드오프):
 
@@ -99,21 +89,17 @@ per-sequence persistent memory ↑
 
 KV bộ nhớ (memory / 메모리) tăng với ngữ cảnh (context / 맥락) length, active sequences, layers và KV dimensions/precision. ngữ cảnh (context / 맥락) “được hỗ trợ” không đồng nghĩa có thể phục vụ nhiều long-context requests đồng thời.
 
-> **Nối mạch:** **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** nối từ **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** sang **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)
 
 Serving scheduler có thể batch, preempt, swap hoặc free chuỗi (sequence / 시퀀스) trạng thái (state / 상태). bất biến (invariant / 불변식) là:
 
-> KV blocks chỉ được reuse sau khi chuỗi (sequence / 시퀀스) sở hữu chúng thật sự kết thúc/evict theo giao thức (protocol / 프로토콜); bảng trang (page table / 페이지 테이블)/khối (block / 블록) ánh xạ (mapping / 매핑) của chuỗi (sequence / 시퀀스) phải trỏ đúng logical đơn vị từ (token / 토큰) positions.
+> KV blocks chỉ được reuse sau khi chuỗi (sequence / 시퀀스) sở hữu chúng thật sự kết thúc/evict theo giao thức (protocol / 프로토콜); bảng trang (page table / 페이지 테이블)/khối (block / 블록) ánh xạ (mapping / 매핑) của chuỗi (sequence / 시퀀스) phải trỏ đúng logical token (토큰) positions.
 
 Một bug allocator/scheduler có thể tạo corruption cross-request dù mô hình (model / 모델) math hoàn hảo. Đây là liên kết (connection / 연결) trực tiếp giữa AI serving và OS-style bộ nhớ (memory / 메모리) management.
 
-> **Nối mạch:** **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** nối từ **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** sang **9. Decode thường memory-bandwidth-bound**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection
 
-Nếu mỗi chuỗi (sequence / 시퀀스) cần một contiguous buffer theo maximum ngữ cảnh (context / 맥락), bộ nhớ (memory / 메모리) waste lớn và resizing khó. Paged/block-based KV quản bộ nhớ đệm (cache / 캐시) theo chunks và dùng ánh xạ (mapping / 매핑) logical đơn vị từ (token / 토큰) phạm vi (range / 범위) → vật lý (physical / 물리적) khối (block / 블록).
+Nếu mỗi chuỗi (sequence / 시퀀스) cần một contiguous buffer theo maximum ngữ cảnh (context / 맥락), bộ nhớ (memory / 메모리) waste lớn và resizing khó. Paged/block-based KV quản bộ nhớ đệm (cache / 캐시) theo chunks và dùng ánh xạ (mapping / 매핑) logical token (토큰) phạm vi (range / 범위) → vật lý (physical / 물리적) khối (block / 블록).
 
 Lợi ích:
 
@@ -124,8 +110,6 @@ allocate incrementally with sequence growth
 ```
 
 Đổi lại có siêu dữ liệu (metadata / 메타데이터)/indirection chi phí (cost / 비용) và allocator pressure. “Paged” không miễn phí; nó chuyển memory-contiguity bài toán (problem / 문제) thành ánh xạ (mapping / 매핑)/thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제).
-
-> **Nối mạch:** **9. Decode thường memory-bandwidth-bound** nối từ **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** sang **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Decode thường memory-bandwidth-bound
 
@@ -141,9 +125,7 @@ batching increases reuse/amortization
 → arithmetic intensity/utilization improve
 ```
 
-Đây là lý do theoretical FLOPS cao không tự bảo đảm low đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간).
-
-> **Nối mạch:** **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** nối từ **9. Decode thường memory-bandwidth-bound** sang **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute**, vì cơ chế trước tạo đầu vào cho bước sau.
+Đây là lý do theoretical FLOPS cao không tự bảo đảm low token (토큰) độ trễ (latency / 지연 시간).
 
 ## 10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)
 
@@ -158,8 +140,6 @@ larger batch
 ```
 
 Continuous batching chèn/rút sequences động để tận dụng slots tốt hơn fixed batch, nhưng tạo scheduling độ phức tạp (complexity / 복잡도): sequences có lengths khác nhau, finish khác nhau và bộ nhớ (memory / 메모리) footprint thay đổi mỗi decode step.
-
-> **Nối mạch:** **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** nối từ **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** sang **12. Head-of-line blocking có thể xuất hiện trong batch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute
 
@@ -178,8 +158,6 @@ latency class / priority / tenant quota
 
 Đây là weighted admission, giống general software các hệ thống (systems / 시스템들) nhưng tài nguyên (resource / 자원) đơn vị (unit / 단위) là tokens/KV/GPU sức chứa (capacity / 용량).
 
-> **Nối mạch:** **12. Head-of-line blocking có thể xuất hiện trong batch** nối từ **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** sang **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Head-of-line blocking có thể xuất hiện trong batch
 
 Nếu batch chính sách (policy / 정책) ép requests cùng bước theo slowest/longest member, một long chuỗi (sequence / 시퀀스) có thể làm short requests chờ. Continuous scheduling giảm một số form nhưng không xóa all interference.
@@ -187,8 +165,6 @@ Nếu batch chính sách (policy / 정책) ép requests cùng bước theo slowe
 Multi-tenant serving cần fairness: thông lượng (throughput / 처리량) tối đa toàn GPU có thể xung đột (conflict / 충돌) với p99 SLO của interactive requests.
 
 Separate pools/classes hoặc weighted scheduling có thể cần khi workloads khác mạnh.
-
-> **Nối mạch:** **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** nối từ **12. Head-of-line blocking có thể xuất hiện trong batch** sang **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều
 
@@ -206,8 +182,6 @@ Sức chứa (capacity / 용량) planning phải dùng **phân phối (distribut
 
 Một p99 100k-token tải công việc (workload / 워크로드) khác hoàn toàn tải công việc (workload / 워크로드) median 1k dù cùng mô hình (model / 모델)/ngữ cảnh (context / 맥락) limit.
 
-> **Nối mạch:** **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** nối từ **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** sang **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)
 
 Giảm precision weights/activations/KV có thể giảm footprint/bandwidth và tăng thông lượng (throughput / 처리량) nếu hardware/kernel đường dẫn (path / 경로) hỗ trợ tốt.
@@ -222,8 +196,6 @@ some tensors are more sensitive than others
 ```
 
 “4-bit” không tự động nhanh hoặc đủ chất lượng (quality / 품질). Phải benchmark end-to-end tải công việc (workload / 워크로드) + chất lượng (quality / 품질) metrics.
-
-> **Nối mạch:** **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** nối từ **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** sang **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)
 
@@ -241,8 +213,6 @@ synchronization/skew
 
 Thêm GPU có thể chậm hơn nếu per-step công việc (work / 작업) nhỏ nhưng communication dominates. Topology/locality trở thành lower lớp trừu tượng (abstraction / 추상화) quyết định hành vi (behavior / 동작).
 
-> **Nối mạch:** **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** nối từ **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** sang **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng
 
 Nếu serving hệ thống (system / 시스템) reuse KV cho dùng chung (common / 공통) prefix, key phải bind đúng mô hình (model / 모델) phiên bản (version / 버전), tokenizer, prompt bytes/tokens, positional ngữ nghĩa (semantics / 의미론) và any adapter/ngữ cảnh (context / 맥락) affecting computation.
@@ -250,8 +220,6 @@ Nếu serving hệ thống (system / 시스템) reuse KV cho dùng chung (common
 Bộ nhớ đệm (cache / 캐시) hit với wrong ngữ nghĩa (semantic / 의미적) key là tính đúng đắn (correctness / 정확성) bug, không phải stale-performance issue.
 
 Đây là same family với bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화): reuse chỉ an toàn khi định danh (identity / 식별자)/vô hiệu hóa (invalidation / 무효화) đặc tả hợp đồng (contract / 계약) đúng.
-
-> **Nối mạch:** **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** nối từ **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** sang **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)
 
@@ -268,8 +236,6 @@ old in-flight requests drain or migrate only if explicitly supported
 
 Canary mô hình (model / 모델) serving vì vậy là giao thức (protocol / 프로토콜)/trạng thái (state / 상태) rollout, không chỉ tải (load / 로드) new tệp (file / 파일).
 
-> **Nối mạch:** **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** nối từ **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** sang **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure
 
 Trước OOM, allocator fragmentation, KV eviction/swap, lower batch kích thước (size / 크기) và hàng đợi (queue / 큐) growth có thể làm p99 xấu.
@@ -285,8 +251,6 @@ overload → queue/timeout/retry/OOM
 
 Monitor free bộ nhớ (memory / 메모리) alone không đủ; cần khối (block / 블록) fragmentation, active tokens/sequences và hàng đợi (queue / 큐) age.
 
-> **Nối mạch:** **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** nối từ **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** sang **20. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)
 
 Máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) không chứng minh generation đã dừng. thử lại (retry / 재시도) long prompt có thể chạy prefill lần nữa và consume expensive GPU thời gian (time / 시간).
@@ -294,8 +258,6 @@ Máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임
 If streaming phản hồi (response / 응답), partial đầu ra (output / 출력) complicates ngữ nghĩa (semantics / 의미론) further. Serving gateway cần deadline/cancellation propagation và thử lại (retry / 재시도) ngân sách (budget / 예산); deterministic bad yêu cầu (request / 요청) không nên thử lại (retry / 재시도) như transient vận chuyển (transport / 전송) thất bại (failure / 실패).
 
 AI serving obey same thử lại (retry / 재시도)→overload vòng phản hồi (feedback loop / 피드백 루프) as other phân tán (distributed / 분산) các hệ thống (systems / 시스템들), nhưng công việc (work / 작업) đơn vị (unit / 단위) đắt hơn nhiều.
-
-> **Nối mạch:** **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** đặt vấn đề; **20. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả.
 
 ## 20. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -330,8 +292,6 @@ Reliability:
 
 Một GPU-utilization 100% đồ thị (graph / 그래프) không nói thông lượng (throughput / 처리량) useful hay hàng đợi (queue / 큐) health.
 
-> **Nối mạch:** **20. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** kiểm tra bằng chứng, rồi **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
-
 ## 21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)
 
 Tối ưu hóa (optimization / 최적화) suy luận (inference / 추론) không chỉ “tokens/s cao hơn”. Compare phải giữ:
@@ -346,19 +306,13 @@ same concurrency/tenant mix
 
 Nếu quantization tăng thông lượng (throughput / 처리량) nhưng chất lượng (quality / 품질) vượt lỗi (error / 오류) ngân sách (budget / 예산), tối ưu hóa (optimization / 최적화) không đạt nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
 
-> **Nối mạch:** **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** nối từ **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** sang **23. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
-Nếu TTFT cao nhưng decode nhanh, look hàng đợi (queue / 큐)/prefill. Nếu đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간) cao ở large batch, inspect bandwidth/interconnect/scheduler. Nếu OOM dưới long ngữ cảnh (context / 맥락), KV sức chứa (capacity / 용량)/admission quyết định. Nếu one tenant hurts all, fairness is missing. Nếu same mô hình (model / 모델) different hardware behaves oddly, dữ liệu (data / 데이터) movement/kernel hỗ trợ (support / 지원) may dominate theoretical FLOPS.
-
-> **Nối mạch:** **23. Mô hình tư duy** tổng hợp từ **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
+Nếu TTFT cao nhưng decode nhanh, look hàng đợi (queue / 큐)/prefill. Nếu token (토큰) độ trễ (latency / 지연 시간) cao ở large batch, inspect bandwidth/interconnect/scheduler. Nếu OOM dưới long ngữ cảnh (context / 맥락), KV sức chứa (capacity / 용량)/admission quyết định. Nếu one tenant hurts all, fairness is missing. Nếu same mô hình (model / 모델) different hardware behaves oddly, dữ liệu (data / 데이터) movement/kernel hỗ trợ (support / 지원) may dominate theoretical FLOPS.
 
 ## 23. Mô hình tư duy
 
 > Transformer suy luận (inference / 추론) là tương tác (interaction / 상호작용) giữa **mô hình (model / 모델) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), per-sequence KV trạng thái (state / 상태), scheduler và bộ nhớ (memory / 메모리) hierarchy**. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy persistent bộ nhớ (memory / 메모리); batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량); quantization đổi precision/chất lượng (quality / 품질) lấy bytes; parallelism đổi cục bộ (local / 로컬) compute lấy communication. **Serving tính đúng đắn (correctness / 정확성) cần giữ yêu cầu (request / 요청)/mô hình (model / 모델)/KV quyền sở hữu (ownership / 소유권); serving hiệu năng (performance / 성능) cần quản hàng đợi (queue / 큐), bộ nhớ (memory / 메모리) bandwidth và admission như một các hệ thống (systems / 시스템들) bài toán (problem / 문제).**
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **23. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

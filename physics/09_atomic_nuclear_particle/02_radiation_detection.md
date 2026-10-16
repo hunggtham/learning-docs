@@ -46,8 +46,6 @@ Sievert `Sv` dùng cho liều tương đương hoặc hiệu dụng, trong đó 
 
 Một nguồn có activity lớn chưa chắc tạo dose lớn tại người quan sát. Khoảng cách, hình học, thời gian tiếp xúc, shielding và năng lượng phổ đều ảnh hưởng.
 
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Hạt mang điện mất năng lượng như thế nào?** nối từ **Đại lượng cơ bản: hoạt độ, năng lượng và liều** sang **Photon gamma tương tác với vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hạt mang điện mất năng lượng như thế nào?
 
 Hạt mang điện tương tác Coulomb với electron và hạt nhân trong vật liệu. Suất hãm (stopping power)
@@ -63,8 +61,6 @@ Hạt nặng như alpha thường đi gần đường thẳng hơn electron và 
 Đây là cơ sở vật lý quan trọng của proton/heavy-ion therapy: có thể đặt vùng lắng đọng năng lượng lớn gần độ sâu mục tiêu thay vì trên toàn đường đi như photon.
 
 Electron beta nhẹ hơn nên chịu nhiều tán xạ góc và bức xạ hãm (bremsstrahlung), đặc biệt trong vật liệu có số nguyên tử `Z` lớn.
-
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Photon gamma tương tác với vật chất** nối từ **Hạt mang điện mất năng lượng như thế nào?** sang **Neutron: phát hiện gián tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Photon gamma tương tác với vật chất
 
@@ -96,8 +92,6 @@ x_{1/2}=\frac{\ln2}{\mu}.
 
 Mô hình exponential giả định chùm tia và hình học đo đơn giản. Trong detector thật, scattered photons có thể quay lại vùng đo nên buildup và hình học (geometry / 기하학) corrections trở nên quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Neutron: phát hiện gián tiếp** nối từ **Photon gamma tương tác với vật chất** sang **Detector khí: ion chamber, proportional counter và Geiger–Müller**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Neutron: phát hiện gián tiếp
 
 Neutron không mang điện nên không trực tiếp ion hóa theo cách electron hay alpha làm. Detector neutron thường biến neutron thành charged secondary particles qua phản ứng hạt nhân.
@@ -111,8 +105,6 @@ Ví dụ, phản ứng với boron-10:
 Các hạt tích điện thứ cấp sau đó tạo ion hóa và sinh tín hiệu điện.
 
 Với neutron nhanh, hydrogen-rich moderators giúp làm chậm neutron qua elastic scattering. Sau thermalization, vật liệu có cross section bắt neutron lớn như `^3He`, `^10B` hoặc `^6Li` có thể được dùng để detection.
-
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Detector khí: ion chamber, proportional counter và Geiger–Müller** nối từ **Neutron: phát hiện gián tiếp** sang **Dead thời gian (time / 시간) và pile-up**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Detector khí: ion chamber, proportional counter và Geiger–Müller
 
@@ -131,8 +123,6 @@ Cùng một ống khí có thể hoạt động ở các chế độ khác nhau 
 Avalanche lan rộng khiến pulse kích thước (size / 크기) gần như độc lập với ionization ban đầu. Detector rất nhạy để đếm sự kiện nhưng năng lượng (energy / 에너지) spectroscopy kém.
 
 Do đó ba detector không chỉ khác tên; chúng là ba chế độ gain khác nhau của cùng physics ionization trong khí.
-
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Dead thời gian (time / 시간) và pile-up** nối từ **Detector khí: ion chamber, proportional counter và Geiger–Müller** sang **Scintillator: từ năng lượng lắng đọng đến photon ánh sáng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dead thời gian (time / 시간) và pile-up
 
@@ -154,8 +144,6 @@ Khi tỷ lệ (rate / 비율) cao, nếu không hiệu chỉnh dead thời gian 
 
 Nếu hai sự kiện đến quá gần nhau, pulses có thể chồng lên nhau tạo pile-up. Điều này làm méo năng lượng (energy / 에너지) spectrum và đặc biệt quan trọng trong gamma spectroscopy hoặc synchrotron/high-flux measurements.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Scintillator: từ năng lượng lắng đọng đến photon ánh sáng** nối từ **Dead thời gian (time / 시간) và pile-up** sang **Detector bán dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scintillator: từ năng lượng lắng đọng đến photon ánh sáng
 
 Scintillator hấp thụ năng lượng rồi phát photon quang học. Ánh sáng được thu bởi photomultiplier tube (PMT) hoặc silicon photomultiplier (SiPM).
@@ -174,8 +162,6 @@ E_dep
 Nếu các bước gần tuyến tính, pulse height có thể dùng để suy năng lượng lắng đọng.
 
 Scintillator vô cơ như NaI(Tl) có hiệu suất gamma cao nhờ mật độ và `Z` lớn. Scintillator hữu cơ thường nhanh và hữu ích trong timing, neutron detection hoặc pulse-shape discrimination.
-
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Detector bán dẫn** nối từ **Scintillator: từ năng lượng lắng đọng đến photon ánh sáng** sang **Vì sao resolution không chỉ do số hạt tải?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Detector bán dẫn
 
@@ -198,8 +184,6 @@ w\approx3.6\,eV
 Vì `w` nhỏ hơn năng lượng cần tạo photon hữu ích trong nhiều scintillators, semiconductor detectors có thể tạo nhiều charge carriers hơn trên cùng năng lượng lắng đọng và đạt năng lượng (energy / 에너지) resolution tốt.
 
 Germanium tinh khiết có resolution gamma rất cao nhưng thường cần làm lạnh để giảm leakage hiện tại (current / 현재) và electronic noise.
-
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Vì sao resolution không chỉ do số hạt tải?** nối từ **Detector bán dẫn** sang **Năng lượng (energy / 에너지) resolution và FWHM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao resolution không chỉ do số hạt tải?
 
@@ -227,8 +211,6 @@ thì intrinsic tiêu chuẩn (standard / 표준) deviation năng lượng gần
 
 Detector thực còn chịu electronic noise, charge trapping, incomplete collection và calibration errors.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Năng lượng (energy / 에너지) resolution và FWHM** nối từ **Vì sao resolution không chỉ do số hạt tải?** sang **Hiệu suất detector**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng (energy / 에너지) resolution và FWHM
 
 Một line đơn năng lượng lý tưởng không xuất hiện thành delta hàm (function / 함수) trong spectrum thật. Nó có finite width.
@@ -248,8 +230,6 @@ FWHM\approx2.355\sigma.
 ```
 
 Resolution phụ thuộc statistical fluctuations, electronics noise và detector physics.
-
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Hiệu suất detector** nối từ **Năng lượng (energy / 에너지) resolution và FWHM** sang **Solid angle và hình học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu suất detector
 
@@ -273,8 +253,6 @@ Absolute efficiency còn phụ thuộc solid angle và hình học (geometry / �
 
 Một detector có intrinsic efficiency rất cao nhưng đặt xa nguồn vẫn có absolute efficiency thấp.
 
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Solid angle và hình học** nối từ **Hiệu suất detector** sang **Background và signal-to-noise**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Solid angle và hình học
 
 Nếu nguồn đẳng hướng và detector nhỏ ở khoảng cách `r`, fraction photon đi vào diện tích `A` gần
@@ -293,8 +271,6 @@ I\propto\frac{1}{r^2}.
 
 Nhưng gần nguồn mở rộng hoặc detector lớn, phải dùng solid-angle tích hợp (integration / 통합) thay vì công thức điểm đơn giản.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Background và signal-to-noise** nối từ **Solid angle và hình học** sang **Thống kê Poisson của số đếm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Background và signal-to-noise
 
 Detector luôn có background: bức xạ môi trường, cosmic rays, radioactivity nội tại vật liệu, dark counts và electronic noise.
@@ -308,8 +284,6 @@ Khi counts đủ lớn và Poisson độc lập, variance của hiệu gần t�
 ```
 
 Do đó tăng thời gian đo không chỉ tăng tín hiệu (signal / 신호) mà cũng tích lũy background. Thiết kế shielding, coincidence và sự kiện (event / 이벤트) selection thường quan trọng không kém detector volume.
-
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Thống kê Poisson của số đếm** nối từ **Background và signal-to-noise** sang **Detector phản hồi (response / 응답) hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thống kê Poisson của số đếm
 
@@ -337,8 +311,6 @@ Do đó relative statistical bất định (uncertainty / 불확실성) giảm t
 
 Muốn giảm statistical bất định (uncertainty / 불확실성) tương đối từ `10%` xuống `1%`, số đếm cần tăng khoảng 100 lần.
 
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Detector phản hồi (response / 응답) hàm (function / 함수)** nối từ **Thống kê Poisson của số đếm** sang **Calibration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Detector phản hồi (response / 응답) hàm (function / 함수)
 
 Một detector không ánh xạ “một năng lượng thật → một số đo hoàn hảo”. Ta có thể mô tả bằng phản hồi (response / 응답) hàm (function / 함수)
@@ -359,8 +331,6 @@ M(E_m)
 
 Đây là một inverse bài toán (problem / 문제). Unfolding spectrum cần calibration, regularization hoặc Bayesian suy luận (inference / 추론); nếu phản hồi (response / 응답) ma trận (matrix / 행렬) gần suy biến thì không thể khôi phục tùy ý mọi chi tiết.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Calibration** nối từ **Detector phản hồi (response / 응답) hàm (function / 함수)** sang **Coincidence và timing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Calibration
 
 Năng lượng (energy / 에너지) calibration thường dùng nguồn có line năng lượng đã biết. Nếu ADC channel `C` liên hệ gần tuyến tính với năng lượng (energy / 에너지),
@@ -373,8 +343,6 @@ Hai điểm calibration có thể xác định `a,b`, nhưng detector thật có
 
 Calibration không chỉ là fit một đường. Cần kiểm tra residuals, stability theo nhiệt độ/thời gian và bất định (uncertainty / 불확실성) của tham chiếu (reference / 참조) energies.
 
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Coincidence và timing** nối từ **Calibration** sang **Shielding không chỉ là “chọn vật liệu nặng nhất”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Coincidence và timing
 
 Nếu hai detector ghi sự kiện trong một cửa sổ thời gian ngắn, ta có thể dùng coincidence để giảm background hoặc xác định decay cascade.
@@ -383,8 +351,6 @@ Random coincidence tỷ lệ (rate / 비율) tăng khi singles rates và thời 
 
 PET là ví dụ ứng dụng: hai photon annihilation `511 keV` gần đối hướng được phát hiện gần đồng thời để xác định line of phản hồi (response / 응답).
 
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Shielding không chỉ là “chọn vật liệu nặng nhất”** nối từ **Coincidence và timing** sang **Ví dụ: dead-time correction**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Shielding không chỉ là “chọn vật liệu nặng nhất”
 
 Gamma thường cần vật liệu mật độ cao/Z lớn như lead để tăng attenuation. Neutron thường cần hydrogen-rich moderator rồi absorber như boron.
@@ -392,8 +358,6 @@ Gamma thường cần vật liệu mật độ cao/Z lớn như lead để tăng
 Electron beta năng lượng cao chiếu trực tiếp vào vật liệu Z lớn có thể tạo bremsstrahlung mạnh; đôi khi cần lớp low-Z để làm chậm electron rồi lớp high-Z để chặn photon thứ cấp.
 
 Vì vậy shielding là bài toán vận chuyển (transport / 전송) nhiều bước, không phải chỉ tối đa density.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Shielding không chỉ là “chọn vật liệu nặng nhất”** nêu quy tắc; **Ví dụ: dead-time correction** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: dead-time correction
 
@@ -425,15 +389,11 @@ n=\frac{m}{1-m\tau}
 
 Nếu bỏ dead-time correction, tỷ lệ (rate / 비율) bị đánh giá thấp 20%.
 
-> **Nối mạch:** Trong **Bức xạ ion hóa, tương tác với vật chất và detector**, **Ví dụ: dead-time correction** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một detector là **hệ thống suy luận vật lý**, không chỉ là cảm biến. Bức xạ tạo tương tác vi mô; vật liệu chuyển tương tác thành charge/light; electronics biến tín hiệu thành numbers; calibration và statistics biến numbers thành vật lý (physical / 물리적) quantities.
 
 Khi đọc một spectrum, luôn hỏi: detector phản hồi (response / 응답) là gì, efficiency bao nhiêu, dead thời gian (time / 시간) thế nào, background đến từ đâu và observable cuối cùng liên hệ với nguồn (source / 소스) qua mô hình nào.
-
-> **Nối mạch:** Ở chặng này của **Bức xạ ion hóa, tương tác với vật chất và detector**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -452,8 +412,6 @@ Statistical bất định (uncertainty / 불확실성) giảm khi counts tăng, 
 ### “Activity và dose là cùng một đại lượng”
 
 Không. Activity mô tả decay tỷ lệ (rate / 비율) của nguồn (source / 소스); dose mô tả năng lượng được hấp thụ trên khối lượng vật chất, có phụ thuộc hình học (geometry / 기하학) và tương tác (interaction / 상호작용).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ ion hóa, tương tác với vật chất và detector**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

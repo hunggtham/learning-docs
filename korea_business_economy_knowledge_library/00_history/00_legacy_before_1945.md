@@ -14,8 +14,6 @@ Thương mại hóa thay đổi cách người sản xuất ra quyết định. 
 
 Tuy nhiên, trao đổi thị trường vẫn bị giới hạn bởi chi phí vận tải cao, thông tin chậm, thị trường vốn sơ khai và sự bất định về thể chế. Vì vậy không nên chiếu ngược mô hình công ty cổ phần hiện đại vào thế kỷ XIX. Có thị trường không đồng nghĩa đã có một nền kinh tế doanh nghiệp hoàn chỉnh.
 
-> **Chuyển mạch:** Trong **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Mở cửa cuối thế kỷ XIX và tín hiệu giá từ bên ngoài** tiếp nhận điểm tựa từ **Kinh tế Joseon không phải nền kinh tế hoàn toàn không có thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời kỳ thuộc địa: có công nghiệp hóa, nhưng phải hỏi ai sở hữu và phục vụ mục tiêu nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mở cửa cuối thế kỷ XIX và tín hiệu giá từ bên ngoài
 
 Khi Triều Tiên bị kéo sâu hơn vào thương mại khu vực và quốc tế từ cuối thế kỷ XIX, giá trong nước ngày càng liên hệ với nhu cầu bên ngoài. Ngũ cốc, dệt may và hàng chế tạo bắt đầu chịu cạnh tranh cũng như tín hiệu giá từ các thị trường lân cận.
@@ -23,8 +21,6 @@ Khi Triều Tiên bị kéo sâu hơn vào thương mại khu vực và quốc t
 Đây là giai đoạn sớm của một vấn đề sẽ theo Hàn Quốc đến tận hiện đại: **cú sốc giá từ bên ngoài (external price shock / 대외가격충격)**. Khi nền kinh tế phụ thuộc thương mại, giá trong nước không còn chỉ do cung–cầu nội địa quyết định. Thay đổi ở Nhật Bản, Trung Quốc hoặc thị trường hàng hóa thế giới có thể truyền trực tiếp tới hộ gia đình và người sản xuất trên bán đảo.
 
 Thương mại cũng làm cảng, vận tải, tài trợ thương mại và mạng lưới thông tin trở nên quan trọng hơn. Năng lực kinh doanh không chỉ là “làm ra sản phẩm” mà còn bao gồm khả năng tìm nguồn hàng, tìm người mua, tổ chức vận chuyển và tài trợ **vốn lưu động (working capital / 운전자본)** trong thời gian chờ thu tiền.
-
-> **Chuyển mạch:** Ở chặng này của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Thời kỳ thuộc địa: có công nghiệp hóa, nhưng phải hỏi ai sở hữu và phục vụ mục tiêu nào** tiếp nhận điểm tựa từ **Mở cửa cuối thế kỷ XIX và tín hiệu giá từ bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa lý công nghiệp tạo ra sự mất cân đối Bắc–Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thời kỳ thuộc địa: có công nghiệp hóa, nhưng phải hỏi ai sở hữu và phục vụ mục tiêu nào
 
@@ -34,8 +30,6 @@ Khi đọc giai đoạn này cần giữ đồng thời hai sự thật. Thứ n
 
 Điểm cốt lõi là phân biệt **sự tồn tại của tài sản** với **quyền kiểm soát tài sản**. Một nhà máy có thể nằm trên lãnh thổ bán đảo nhưng công nghệ, quản lý, tài chính và quyền tiếp cận thị trường lại do các tổ chức thuộc địa kiểm soát. Khi cấu trúc đó biến mất sau 1945, nhà máy vật chất không tự động tiếp tục vận hành hiệu quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Địa lý công nghiệp tạo ra sự mất cân đối Bắc–Nam** tiếp nhận điểm tựa từ **Thời kỳ thuộc địa: có công nghiệp hóa, nhưng phải hỏi ai sở hữu và phục vụ mục tiêu nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vốn nhân lực và trí nhớ tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Địa lý công nghiệp tạo ra sự mất cân đối Bắc–Nam
 
 Đến cuối thời kỳ thuộc địa, nhiều cơ sở công nghiệp nặng, thủy điện và khai khoáng nằm ở phía Bắc, trong khi phía Nam đông dân hơn, có tỷ trọng nông nghiệp lớn hơn và nhiều trung tâm công nghiệp nhẹ, thương mại hơn.
@@ -43,8 +37,6 @@ Khi đọc giai đoạn này cần giữ đồng thời hai sự thật. Thứ n
 Sau khi bán đảo bị chia cắt, sự phân bố này trở thành một **mất cân đối địa lý công nghiệp (industrial-geography mismatch / 산업지리 불일치)**. Hàn Quốc ở phía Nam không chỉ mất một phần lãnh thổ mà còn mất khả năng tiếp cận một phần nguồn điện, ngành thượng nguồn và các liên kết cung ứng từng nằm trong cùng một không gian kinh tế.
 
 Có thể hình dung một doanh nghiệp hiện đại bị tách trung tâm dữ liệu, nhà cung cấp, nhà máy và khách hàng sang các khu vực pháp lý khác nhau chỉ trong một ngày. Máy móc vẫn tồn tại, nhưng kinh tế mạng lưới bị phá vỡ. Vì vậy việc chia cắt phải được hiểu như **đứt gãy chuỗi cung ứng (supply-chain rupture / 공급망 단절)** chứ không chỉ là thay đổi đường biên chính trị.
-
-> **Chuyển mạch:** Trong **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Vốn nhân lực và trí nhớ tổ chức** tiếp nhận điểm tựa từ **Địa lý công nghiệp tạo ra sự mất cân đối Bắc–Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền sở hữu quan trọng không kém tài sản vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vốn nhân lực và trí nhớ tổ chức
 
@@ -54,8 +46,6 @@ Sau 1945, di cư và biến động chính trị làm vốn nhân lực cũng b�
 
 > **mô hình tư duy (mental model / 사고 모델):** năng lực sản xuất = vốn vật chất + vốn nhân lực + tổ chức + thể chế + các kết nối mạng lưới.
 
-> **Chuyển mạch:** Ở chặng này của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Quyền sở hữu quan trọng không kém tài sản vật chất** tiếp nhận điểm tựa từ **Vốn nhân lực và trí nhớ tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường không thể tách khỏi thể chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quyền sở hữu quan trọng không kém tài sản vật chất
 
 Một tài sản chỉ có thể được đầu tư và sử dụng hiệu quả khi quyền sở hữu tương đối rõ: ai có quyền sử dụng, ai được hưởng dòng tiền, ai chịu rủi ro và ai có quyền bán hoặc thế chấp tài sản.
@@ -64,8 +54,6 @@ Sau giải phóng, nhiều tài sản từng thuộc nhà nước Nhật Bản h
 
 Điều cần tránh là kể một câu chuyện quá đơn giản rằng “chaebol nhận tài sản Nhật rồi trở thành chaebol”. Tài sản ban đầu có thể giúp một số doanh nhân, nhưng để sống sót qua chiến tranh, thiếu ngoại tệ, cạnh tranh xuất khẩu và nhiều thập kỷ thay đổi công nghệ, doanh nghiệp vẫn phải tích lũy năng lực quản lý, kỹ thuật và thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Thị trường không thể tách khỏi thể chế** tiếp nhận điểm tựa từ **Quyền sở hữu quan trọng không kém tài sản vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghiệp hóa không chỉ là xây nhà máy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Thị trường không thể tách khỏi thể chế
 
 Một thị trường cần nhiều hơn người mua và người bán. Nó cần tiền tệ đủ ổn định, hợp đồng có thể thực thi, thông tin về giá, cơ chế tín dụng và một mức độ tin cậy rằng quyền tài sản ngày mai không hoàn toàn khác hôm nay.
@@ -73,8 +61,6 @@ Một thị trường cần nhiều hơn người mua và người bán. Nó c�
 Do đó khi đọc lịch sử kinh tế, không nên hỏi đơn giản “có thị trường hay không”. Câu hỏi tốt hơn là: **chi phí giao dịch (transaction cost / 거래비용)** cao đến đâu và thể chế giúp giảm những chi phí nào?
 
 Nếu đường xấu, thông tin chậm, hợp đồng khó thực thi và tín dụng đắt, hai bên có thể đều muốn giao dịch nhưng giao dịch vẫn không xảy ra. Cơ sở hạ tầng và thể chế vì thế là một phần của chính thị trường.
-
-> **Chuyển mạch:** Trong **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Công nghiệp hóa không chỉ là xây nhà máy** tiếp nhận điểm tựa từ **Thị trường không thể tách khỏi thể chế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Doanh nghiệp Hàn Quốc trước 1945 và giới hạn của việc truy tìm “nguồn gốc chaebol”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Công nghiệp hóa không chỉ là xây nhà máy
 
@@ -87,8 +73,6 @@ Nếu một mắt xích biến mất, giá trị của các mắt xích còn l�
                          ↓
                  năng lực sản xuất
 ```
-
-> **Chuyển mạch:** Ở chặng này của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Công nghiệp hóa không chỉ là xây nhà máy** đã nêu tiêu chí phân biệt, còn **Doanh nghiệp Hàn Quốc trước 1945 và giới hạn của việc truy tìm “nguồn gốc chaebol”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những gì miền Nam thừa hưởng năm 1945** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Doanh nghiệp Hàn Quốc trước 1945 và giới hạn của việc truy tìm “nguồn gốc chaebol”
 
@@ -108,15 +92,11 @@ Thương mại
 
 Các bước này diễn ra qua nhiều thập kỷ và chịu ảnh hưởng mạnh của chính sách sau 1960.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Doanh nghiệp Hàn Quốc trước 1945 và giới hạn của việc truy tìm “nguồn gốc chaebol”** đã nêu tiêu chí phân biệt, còn **Những gì miền Nam thừa hưởng năm 1945** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết (connection / 연결) — Vì sao chương này quan trọng cho giai đoạn sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Những gì miền Nam thừa hưởng năm 1945
 
 Hàn Quốc sau giải phóng thừa hưởng một hỗn hợp không đồng nhất: một phần cơ sở hạ tầng và công nghiệp; kinh nghiệm thương mại và kỹ thuật của một bộ phận dân cư; các thành phố và cảng; nhưng đồng thời là thiếu hụt công nghiệp thượng nguồn, bất ổn quyền sở hữu, đứt gãy mạng lưới với phía Bắc và sự phụ thuộc lớn vào nhập khẩu.
 
 Vì vậy “di sản trước 1945” không phải câu trả lời cho sự phát triển sau này. Nó là **điều kiện ban đầu (initial conditions / 초기조건)** mà chính phủ, doanh nghiệp và hộ gia đình sau chiến tranh phải xử lý.
-
-> **Chuyển mạch:** Trong **Trước 1945: nền tảng thị trường, công nghiệp và doanh nghiệp trên bán đảo Triều Tiên (Pre-1945 Economic Legacy / 1945년 이전 경제사)**, **Liên kết (connection / 연결) — Vì sao chương này quan trọng cho giai đoạn sau** tiếp nhận điểm tựa từ **Những gì miền Nam thừa hưởng năm 1945** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) — Vì sao chương này quan trọng cho giai đoạn sau
 

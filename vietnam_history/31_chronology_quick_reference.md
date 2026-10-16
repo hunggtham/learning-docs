@@ -12,8 +12,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - Khoảng 207 TCN: Triệu Đà hình thành Nam Việt (Nanyue) ở khu vực nam Trung Hoa và Bắc Việt hiện nay.
 - 111 TCN: nhà Hán đánh bại Nam Việt, đưa Bắc Bộ vào imperial commandery hệ thống (system / 시스템).
 
-> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** nối từ **Tiền sử và early trạng thái (state / 상태)** sang **Thế kỷ X và early dynastic trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bắc thuộc và cục bộ (local / 로컬) autonomy attempts
 
 - 40–43: khởi nghĩa Hai Bà Trưng.
@@ -26,8 +24,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 930s: Dương Đình Nghệ và Ngô Quyền tiếp tục contest southern Chinese điều khiển (control / 제어).
 - 938: Ngô Quyền thắng Nam Hán trên Bạch Đằng — major break from direct northern imperial quy tắc (rule / 규칙).
 
-> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Thế kỷ X và early dynastic trạng thái (state / 상태)** nối từ **Bắc thuộc và cục bộ (local / 로컬) autonomy attempts** sang **Lý–Trần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thế kỷ X và early dynastic trạng thái (state / 상태)
 
 - 968: Đinh Bộ Lĩnh establishes Đại Cồ Việt and imperial monarchy at Hoa Lư.
@@ -35,8 +31,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 981: xung đột (conflict / 충돌) with Song; Đại Cồ Việt retains autonomy.
 - 1009: Lý Công Uẩn becomes ruler.
 - 1010: capital moved from Hoa Lư to Thăng Long.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lý–Trần** nối từ **Thế kỷ X và early dynastic trạng thái (state / 상태)** sang **Hồ, Minh occupation, Lam Sơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lý–Trần
 
@@ -47,8 +41,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1285: major Mongol–Yuan invasion defeated.
 - 1287–1288: third major Yuan campaign; Bạch Đằng 1288.
 
-> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Hồ, Minh occupation, Lam Sơn** nối từ **Lý–Trần** sang **Lê sơ and fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hồ, Minh occupation, Lam Sơn
 
 - 1400: Hồ Quý Ly establishes Hồ dynasty.
@@ -56,8 +48,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1418: Lê Lợi begins Lam Sơn uprising.
 - 1427: Ming forces defeated/withdrawal settlement.
 - 1428: Lê Lợi establishes restored Đại Việt under Lê dynasty.
-
-> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Lê sơ and fragmentation** nối từ **Hồ, Minh occupation, Lam Sơn** sang **Trịnh–Nguyễn and southern frontier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lê sơ and fragmentation
 
@@ -67,8 +57,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1533 onward: Lê restoration movement forms rival court.
 - 1592: Trịnh–Lê forces retake Thăng Long; Mạc power survives in northern pockets afterward.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Trịnh–Nguyễn and southern frontier** nối từ **Lê sơ and fragmentation** sang **Tây Sơn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trịnh–Nguyễn and southern frontier
 
 - 1558: Nguyễn Hoàng sent to Thuận Hóa, starting durable Nguyễn regional cơ sở (base / 기반).
@@ -76,8 +64,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - Sixteenth–seventeenth centuries: Hội An becomes major international cổng (port / 포트).
 - 1698: Nguyễn administration commonly associates Nguyễn Hữu Cảnh mission with formalizing Gia Định administration.
 - Eighteenth century: intensified settlement, trade and political competition in southern regions.
-
-> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Tây Sơn** nối từ **Trịnh–Nguyễn and southern frontier** sang **Nguyễn nineteenth century**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tây Sơn
 
@@ -88,8 +74,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1788–1789: Qing intervention and Tây Sơn counteroffensive; victory associated with Quang Trung in spring 1789.
 - 1802: Nguyễn Ánh defeats Tây Sơn, becomes emperor Gia Long and establishes Nguyễn dynasty over unified territory.
 
-> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Nguyễn nineteenth century** nối từ **Tây Sơn** sang **Colonial era and revolution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyễn nineteenth century
 
 - 1802: Huế becomes capital of Nguyễn trạng thái (state / 상태).
@@ -99,8 +83,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1862: Treaty of Saigon cedes three eastern Cochinchina provinces to France.
 - 1867: French điều khiển (control / 제어) extends over remaining Cochinchina provinces.
 - 1883–1884: treaties establish French protectorate khung phần mềm (framework / 프레임워크) over Annam/Tonkin; colonial hệ thống (system / 시스템) consolidates over following years.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Colonial era and revolution** nối từ **Nguyễn nineteenth century** sang **First Indochina War and division**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial era and revolution
 
@@ -113,16 +95,12 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - August 1945: August Revolution amid Japanese surrender and imperial collapse.
 - 2 September 1945: Hồ Chí Minh declares Democratic Republic of Vietnam in Hanoi.
 
-> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **First Indochina War and division** nối từ **Colonial era and revolution** sang **1954–1975**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## First Indochina War and division
 
 - December 1946: full-scale Franco–Viet Minh war begins.
 - 1949–1950: xung đột (conflict / 충돌) internationalizes strongly amid Chinese Communist victory and Cold War alignment.
 - 7 May 1954: French position at Điện Biên Phủ falls.
 - July 1954: Geneva agreements establish provisional military regrouping around seventeenth parallel and political khung phần mềm (framework / 프레임워크); not intended as permanent international border.
-
-> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **1954–1975** nối từ **First Indochina War and division** sang **Reunification, crisis and reform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1954–1975
 
@@ -133,8 +111,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1973: Paris Peace Accords; U.S. combat forces withdraw.
 - 30 April 1975: Republic of Vietnam government collapses; war ends with northern/revolutionary forces controlling Saigon.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Reunification, crisis and reform** nối từ **1954–1975** sang **Toàn cục (global / 전역) reintegration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reunification, crisis and reform
 
 - 1976: Socialist Republic of Vietnam formally established; national political-administrative reunification.
@@ -144,8 +120,6 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 1987: Foreign Investment Law enacted.
 - Late 1980s: household-oriented agricultural reforms expand.
 
-> **Nối mạch:** Trong **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Toàn cục (global / 전역) reintegration** nối từ **Reunification, crisis and reform** sang **Twenty-first century anchors**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Toàn cục (global / 전역) reintegration
 
 - 1994: United States lifts trade embargo.
@@ -154,16 +128,12 @@ Tệp (file / 파일) này là **coordinate map**, không thay thế các chapte
 - 2000/2001: U.S.–Vietnam Bilateral Trade Agreement signed/enters into force.
 - 11 January 2007: Vietnam becomes 150th member of WTO.
 
-> **Nối mạch:** Ở chặng này của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **Twenty-first century anchors** nối từ **Toàn cục (global / 전역) reintegration** sang **How to use this tệp (file / 파일)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Twenty-first century anchors
 
 - 2000s–2010s: manufacturing exports, FDI and urban-industrial corridors expand rapidly.
 - 2010s–2020s: deeper tích hợp (integration / 통합) through multiple regional/free-trade frameworks; digital economy expands.
 - Early 2020s: COVID-19 stress-tests công khai (public / 공개) health, labor mobility and supply chains.
 - 2020s: aging, climate rủi ro (risk / 위험), năng lượng (energy / 에너지) chuyển tiếp (transition / 전이), productivity and higher-value manufacturing become increasingly central structural questions.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chronology Quick Tham chiếu (reference / 참조) — Lịch sử Việt Nam**, **How to use this tệp (file / 파일)** nối từ **Twenty-first century anchors** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## How to use this tệp (file / 파일)
 

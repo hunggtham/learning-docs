@@ -10,15 +10,11 @@ Bên tạo công việc có thể tạm thời tạo dữ liệu nhanh hơn bên
 
 Tuy nhiên, nếu tốc độ đến `λ` liên tục lớn hơn tốc độ phục vụ `μ`, hàng đợi sẽ tăng không giới hạn. Một hệ thống ổn định cần năng lực xử lý dài hạn lớn hơn tải được chấp nhận, hoặc phải có chính sách từ chối hay giảm chất lượng dịch vụ.
 
-> **Chuyển mạch:** Trong **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Tại sao cần hàng đợi?** đã nêu tiêu chí phân biệt, còn **Hàng đợi có giới hạn và không giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Áp lực ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hàng đợi có giới hạn và không giới hạn
 
 Hàng đợi không giới hạn biến quá tải thành độ trễ ngày càng lớn và cuối cùng có thể làm cạn bộ nhớ hoặc dung lượng đĩa. **Hàng đợi có giới hạn (bounded queue)** buộc hệ thống phải có chính sách rõ ràng: chặn bên gửi, từ chối công việc mới, bỏ dữ liệu cũ hoặc mới, ưu tiên một số loại công việc hoặc chuyển sang nơi lưu trữ khác.
 
 Lựa chọn phụ thuộc ngữ nghĩa nghiệp vụ. Mất một số chỉ số (metric / 지표) có thể chấp nhận được; mất lệnh thanh toán thường không thể chấp nhận.
-
-> **Chuyển mạch:** Ở chặng này của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Hàng đợi có giới hạn và không giới hạn** đã nêu tiêu chí phân biệt, còn **Áp lực ngược** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ngữ nghĩa truyền thông điệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Áp lực ngược
 
@@ -26,15 +22,11 @@ Lựa chọn phụ thuộc ngữ nghĩa nghiệp vụ. Mất một số chỉ s�
 
 Nếu tầng phía trước bỏ qua tín hiệu rồi tự tích dữ liệu trong bộ nhớ, vấn đề quá tải chưa được giải quyết. Áp lực ngược cần lan đủ xa trong chuỗi xử lý hoặc phải kết thúc bằng một chính sách giới hạn, từ chối hay loại bỏ rõ ràng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Ngữ nghĩa truyền thông điệp** tiếp nhận điểm tựa từ **Áp lực ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ngữ nghĩa truyền thông điệp
 
 **Tối đa một lần (at-most-once)** có thể làm mất thông điệp nhưng tránh bản sao do thử lại. **Ít nhất một lần (at-least-once)** cho phép thử lại nên có thể tạo thông điệp trùng. Hiệu ứng **chính xác một lần (exactly-once)** đòi hỏi phối hợp hoặc loại trùng mạnh hơn và luôn phải xác định phạm vi bảo đảm.
 
 Việc broker xác nhận đã giao thông điệp không đồng nghĩa giao dịch nghiệp vụ đã hoàn thành. Ví dụ bên tiêu thụ (consumer / 소비자) có thể ghi dữ liệu vào cơ sở dữ liệu rồi bị lỗi trước khi gửi `ack`; thông điệp sẽ được giao lại. Bộ xử lý lũy đẳng (idempotent handler), outbox và inbox là các mẫu thường dùng để xử lý tình huống này.
-
-> **Chuyển mạch:** Trong **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Thứ tự** tiếp nhận điểm tựa từ **Ngữ nghĩa truyền thông điệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vị trí của trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thứ tự
 
@@ -42,15 +34,11 @@ Thứ tự toàn cục tuyệt đối có chi phí cao và thường không cầ
 
 Xử lý đồng thời còn có thể làm thứ tự hoàn thành khác thứ tự lấy thông điệp. Vì vậy hợp đồng về thứ tự phải nói rõ đang bảo đảm thứ tự đưa vào hàng, thứ tự giao, thứ tự xử lý hay thứ tự lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Ở chặng này của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Vị trí của trạng thái** tiếp nhận điểm tựa từ **Thứ tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhật ký sự kiện và trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vị trí của trạng thái
 
 Trạng thái có thể nằm ở máy khách (client / 클라이언트), bộ nhớ ứng dụng, bộ nhớ đệm (cache / 캐시), cơ sở dữ liệu, nhật ký hoặc dịch vụ bên ngoài. Vị trí này ảnh hưởng trực tiếp tới tính sẵn sàng, khả năng mở rộng và phục hồi. Phiên người dùng nằm trong bộ nhớ cục bộ khiến việc mở rộng ngang cần định tuyến dính (sticky routing) hoặc sao chép; kho phiên bên ngoài lại thêm một phụ thuộc mạng.
 
 Một **dịch vụ không trạng thái (stateless service)** thường chỉ có nghĩa trạng thái bền vững hoặc trạng thái phiên đã được đưa ra ngoài, chứ không phải tiến trình hoàn toàn không có trạng thái tạm thời.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Nhật ký sự kiện và trạng thái** tiếp nhận điểm tựa từ **Vị trí của trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp lực ngược và giới hạn tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nhật ký sự kiện và trạng thái
 
@@ -58,25 +46,17 @@ Một **dịch vụ không trạng thái (stateless service)** thường chỉ c
 
 **thay đổi (change / 변경) dữ liệu (data / 데이터) Capture (CDC)** phát các thay đổi trong cơ sở dữ liệu tới chỉ mục, hệ thống phân tích hoặc dịch vụ phía sau. Độ trễ nhất quán phát sinh từ quá trình này phải được chấp nhận và quan sát.
 
-> **Chuyển mạch:** Trong **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Nhật ký sự kiện và trạng thái** đã nêu tiêu chí phân biệt, còn **Áp lực ngược và giới hạn tốc độ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hàng đợi và bão thử lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Áp lực ngược và giới hạn tốc độ
 
 **Giới hạn tốc độ (rate limiting)** bảo vệ ranh giới bằng cách giới hạn lượng yêu cầu được nhận từ một danh tính hoặc toàn hệ thống. Backpressure phản ánh áp lực động từ phía xử lý. Hai cơ chế có thể cùng tồn tại: tỷ lệ (rate / 비율) limiter ngăn lạm dụng và tải vượt ngưỡng; backpressure phản ứng với năng lực hiện tại của hệ thống phía sau.
-
-> **Chuyển mạch:** Ở chặng này của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Áp lực ngược và giới hạn tốc độ** đã nêu tiêu chí phân biệt, còn **Hàng đợi và bão thử lại** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hàng đợi và bão thử lại
 
 Khi một phụ thuộc chậm lại, hàng đợi tăng. hết thời gian chờ (timeout / 타임아웃) có thể kích hoạt thử lại; thử lại làm tốc độ yêu cầu tăng; tải tăng lại khiến phụ thuộc chậm hơn. Đây là vòng phản hồi có thể tạo **bão thử lại (retry storm)**. Circuit breaker, ngân sách thử lại, hàng đợi có giới hạn và deadline giúp cắt vòng phản hồi này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Mô hình tư duy** gom các mảnh từ **Hàng đợi và bão thử lại** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy
 
 > Hàng đợi là **thời gian chờ được lưu lại**. Nó hấp thụ tải tăng đột biến, không giải quyết thiếu năng lực kéo dài. Mỗi hàng đợi cần có giới hạn dung lượng, chính sách nhận tải, ngữ nghĩa lỗi, phạm vi thứ tự và khả năng quan sát.
-
-> **Chuyển mạch:** Trong **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Những hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -85,8 +65,6 @@ Khi một phụ thuộc chậm lại, hàng đợi tăng. hết thời gian ch�
 **“Kafka hoặc RabbitMQ bảo đảm exactly-once cho mọi thứ.”** Bảo đảm của broker luôn có phạm vi; hiệu ứng phụ trên cơ sở dữ liệu hoặc API bên ngoài vẫn cần phối hợp hoặc tính lũy đẳng.
 
 **“Hàng đợi không giới hạn an toàn hơn vì không từ chối.”** Nó thường chỉ trì hoãn lỗi cho tới khi độ trễ hoặc tài nguyên bị cạn kiệt.
-
-> **Chuyển mạch:** Ở chặng này của **Trạng thái, hàng đợi, áp lực ngược và ranh giới hệ thống**, **Kết nối** tiếp nhận điểm tựa từ **Những hiểu lầm thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

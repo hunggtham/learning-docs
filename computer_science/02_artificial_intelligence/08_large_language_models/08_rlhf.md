@@ -67,9 +67,9 @@ PPO biến mục tiêu chính sách thành các cập nhật nhỏ và ổn đ�
 
 **Proximal chính sách (policy / 정책) tối ưu hóa (optimization / 최적화) (PPO)** từng là thuật toán (algorithm / 알고리즘) phổ biến cho RLHF. PPO giới hạn cập nhật (update / 업데이트) quá lớn giữa chính sách (policy / 정책) mới và cũ để huấn luyện (training / 학습) ổn định hơn.
 
-Trong LLM setting, “hành động (action / 동작)” là generated đơn vị từ (token / 토큰) và trajectory là phản hồi (response / 응답) chuỗi (sequence / 시퀀스). Reward thường đến ở cuối chuỗi (sequence / 시퀀스) hoặc qua learned tín hiệu (signal / 신호).
+Trong LLM setting, “hành động (action / 동작)” là generated token (토큰) và trajectory là phản hồi (response / 응답) chuỗi (sequence / 시퀀스). Reward thường đến ở cuối chuỗi (sequence / 시퀀스) hoặc qua learned tín hiệu (signal / 신호).
 
-Điều này làm credit assignment khó: reward tổng cho cả phản hồi (response / 응답) không nói rõ đơn vị từ (token / 토큰) nào đóng góp bao nhiêu.
+Điều này làm credit assignment khó: reward tổng cho cả phản hồi (response / 응답) không nói rõ token (토큰) nào đóng góp bao nhiêu.
 
 Reward hacking nhắc rằng điểm số không tự động là mục tiêu thật; vì vậy cần xem preference đang đo điều gì và không đo điều gì.
 
@@ -183,7 +183,7 @@ PPO là một tối ưu hóa (optimization / 최적화) choice. RLHF rộng hơn
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
-RLHF là ứng dụng của [Reinforcement Learning](../11_reinforcement_learning/00_reinforcement_learning_foundations.md) và [Optimization](../01_mathematical_foundations/06_optimization.md), nhưng practical LLM post-training có cấu trúc (structure / 구조) riêng vì hành động (action / 동작) không gian (space / 공간) là đơn vị từ (token / 토큰) sequences và reward learned from preferences.
+RLHF là ứng dụng của [Reinforcement Learning](../11_reinforcement_learning/00_reinforcement_learning_foundations.md) và [Optimization](../01_mathematical_foundations/06_optimization.md), nhưng practical LLM post-training có cấu trúc (structure / 구조) riêng vì hành động (action / 동작) không gian (space / 공간) là token (토큰) sequences và reward learned from preferences.
 
 Xem tiếp: [DPO](./09_preference_optimization_and_dpo.md).
 

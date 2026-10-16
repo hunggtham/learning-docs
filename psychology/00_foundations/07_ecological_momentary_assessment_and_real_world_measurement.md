@@ -34,8 +34,6 @@ Sau một tuần, ta không chỉ có average lo âu mà còn có mẫu (pattern
 
 ---
 
-> **Nối mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **2. Ba dạng sampling chính** nối từ **1. Tại sao “bạn thường cảm thấy thế nào?” là một câu hỏi khó hơn ta tưởng** sang **3. trạng thái (state / 상태), trait và person-specific dynamics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Ba dạng sampling chính
 
 **Signal-contingent sampling** gửi prompt theo lịch cố định hoặc ngẫu nhiên. Nó hữu ích để ước lượng phân phối (distribution / 분포) của trạng thái (state / 상태) trong ngày nhưng có thể bỏ lỡ sự kiện (event / 이벤트) hiếm.
@@ -47,8 +45,6 @@ Sau một tuần, ta không chỉ có average lo âu mà còn có mẫu (pattern
 Không có sampling thiết kế (design / 설계) tốt nhất cho mọi câu hỏi. Nếu muốn nghiên cứu affect fluctuation, random prompts có thể hợp lý. Nếu muốn nghiên cứu trigger của cigarette cơn thèm, event-contingent dữ liệu (data / 데이터) hữu ích hơn.
 
 ---
-
-> **Nối mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **3. trạng thái (state / 상태), trait và person-specific dynamics** nối từ **2. Ba dạng sampling chính** sang **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. trạng thái (state / 상태), trait và person-specific dynamics
 
@@ -68,8 +64,6 @@ Câu hỏi đó khác với:
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **3. trạng thái (state / 상태), trait và person-specific dynamics** đặt vấn đề; **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** đối chiếu bằng chứng, rồi **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo
 
 Nếu cứ ba giờ một lần app hỏi “bạn đang stress bao nhiêu?”, participant có thể bắt đầu chú ý stress nhiều hơn. Nếu phải log snack mỗi lần ăn, chính act of tracking có thể giảm mindless eating. Đây gọi là **phản ứng do đo lường**.
@@ -79,8 +73,6 @@ Reactivity không làm EMA vô dụng, nhưng nó thay interpretation. Trong res
 Một nguyên tắc thực dụng là chỉ đo variable nếu dữ liệu có khả năng thay một quyết định (decision / 결정). Nếu bạn không biết mình sẽ làm gì với “mood score 7.2”, tracking có thể chỉ tạo noise.
 
 ---
-
-> **Nối mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **4. phản ứng do đo lường (measurement reactivity): đo cũng có thể làm thay đổi thứ đang được đo** đặt vấn đề; **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** đối chiếu bằng chứng, rồi **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)
 
@@ -94,8 +86,6 @@ Ví dụ smartphone screen-on events có thể đo thiết bị (device / 장치
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** nối từ **5. độ tin cậy (reliability / 신뢰성) không giống độ giá trị (validity)** sang **7. Missingness không ngẫu nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)
 
 Wearables và smartphones có thể thu vật lý (physical / 물리적) activity, sleep proxies, heart tỷ lệ (rate / 비율), location mẫu (pattern / 패턴), communication siêu dữ liệu (metadata / 메타데이터) hoặc thiết bị (device / 장치) tương tác (interaction / 상호작용). Khi những signals được dùng để characterize behavioral mẫu (pattern / 패턴), literature đôi khi dùng thuật ngữ **kiểu hình số (디지털 표현형)**.
@@ -106,8 +96,6 @@ Một lỗi (error / 오류) phổ biến là nhảy từ correlation sang suy l
 
 ---
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **7. Missingness không ngẫu nhiên** nối từ **6. cảm biến thụ động (passive sensing) và kiểu hình số (digital phenotyping)** sang **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Missingness không ngẫu nhiên
 
 EMA phụ thuộc compliance. Nhưng missed prompts có thể chính là lúc phenomenon mạnh nhất: participant bỏ survey khi bận, stress hoặc socializing. Khi đó missing dữ liệu (data / 데이터) là informative.
@@ -117,8 +105,6 @@ Nếu chỉ phân tích những prompt được trả lời, mẫu (sample / 표
 Trong self-tracking, missed day cũng là dữ liệu (data / 데이터). Thay vì “mình thất bại vì quên log”, có thể hỏi “những ngày nào hệ thống tracking mất hiệu lực?”.
 
 ---
-
-> **Nối mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **7. Missingness không ngẫu nhiên** đặt vấn đề; **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** đối chiếu bằng chứng, rồi **9. Privacy và ethics** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình
 
@@ -146,8 +132,6 @@ Xem thêm: [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 ---
 
-> **Nối mạch:** Ở chặng này của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **8. N-of-1 và self-experiment: dùng đo lường (measurement / 측정) để học về chính mình** đặt vấn đề; **9. Privacy và ethics** đối chiếu bằng chứng, rồi **10. những hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 9. Privacy và ethics
 
 Real-world dữ liệu (data / 데이터) có thể nhạy cảm hơn laboratory dữ liệu (data / 데이터). Location traces, communication siêu dữ liệu (metadata / 메타데이터) và sleep patterns có thể tiết lộ routine, workplace, relationships hoặc health-related thông tin (information / 정보).
@@ -157,8 +141,6 @@ Các nguyên tắc nên gồm dữ liệu (data / 데이터) minimization, infor
 > **mô hình tư duy:** Càng gần đời sống thật, đo lường (measurement / 측정) càng giàu ngữ cảnh (context / 맥락) nhưng cũng càng gần privacy, tự chủ (autonomy) và power.
 
 ---
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **10. những hiểu lầm phổ biến (common misconceptions)** nối từ **9. Privacy và ethics** sang **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. những hiểu lầm phổ biến (common misconceptions)
 
@@ -171,8 +153,6 @@ Các nguyên tắc nên gồm dữ liệu (data / 데이터) minimization, infor
 **“Nếu một mẫu (pattern / 패턴) đúng với tôi tuần này thì đó là trait.”** trạng thái (state / 상태)–ngữ cảnh (context / 맥락) relationships có thể thay theo khối lượng công việc (workload), season, sleep và life events.
 
 ---
-
-> **Nối mạch:** Trong **Đo tâm lý trong đời sống thật: đánh giá tức thời trong môi trường tự nhiên (ecological momentary assessment) và đo lường trong đời thực (real-world measurement)**, **10. những hiểu lầm phổ biến (common misconceptions)** đặt vấn đề; **11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 11. Kết nối với tâm lý học, dữ liệu (data / 데이터) và AI
 

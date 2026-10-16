@@ -8,7 +8,7 @@ Xem nền: [Text Normalization and Tokenization](../07_natural_language_processi
 
 ## Đơn vị từ (token / 토큰) là đơn vị compute của LLM
 
-Huấn luyện (training / 학습)/suy luận (inference / 추론) chi phí (cost / 비용) thường quy mô (scale / 규모) theo đơn vị từ (token / 토큰) count. Một câu tokenize 20 tokens thay vì 10 roughly doubles chuỗi (sequence / 시퀀스) positions for many operations.
+Huấn luyện (training / 학습)/suy luận (inference / 추론) chi phí (cost / 비용) thường quy mô (scale / 규모) theo token (토큰) count. Một câu tokenize 20 tokens thay vì 10 roughly doubles chuỗi (sequence / 시퀀스) positions for many operations.
 
 Autoregressive đầu ra (output / 출력) độ trễ (latency / 지연 시간) cũng proportional generated tokens because generation serial.
 
@@ -31,14 +31,14 @@ Large vocabulary:
 
 - shorter sequences;
 - larger embedding/đầu ra (output / 출력) ma trận (matrix / 행렬);
-- more rare đơn vị từ (token / 토큰) parameters;
+- more rare token (토큰) parameters;
 - softmax/đầu ra (output / 출력) compute/bộ nhớ (memory / 메모리) bigger.
 
 Small vocabulary:
 
 - more subword reuse;
 - longer sequences;
-- smaller đơn vị từ (token / 토큰) matrices.
+- smaller token (토큰) matrices.
 
 Optimal depends mô hình (model / 모델) kích thước (size / 크기)/dữ liệu (data / 데이터)/languages.
 
@@ -68,7 +68,7 @@ Korean endings create many forms; good subword merges can reuse stem/morpheme pa
 
 Vietnamese words may span syllables separated spaces; tokenizer may or may not merge dùng chung (common / 공통) multi-syllable expressions.
 
-Do not assume 4 characters/đơn vị từ (token / 토큰) English heuristic across languages.
+Do not assume 4 characters/token (토큰) English heuristic across languages.
 
 Chat template quy định role markers và thứ tự serialization mà mô hình đã được huấn luyện để đọc. Những marker này liên quan trực tiếp đến điều kiện bắt đầu, kết thúc và dừng sinh.
 
@@ -92,15 +92,15 @@ BOS/EOS và stop condition là ranh giới giao thức, không chỉ là chuỗi
 
 ## BOS/EOS and Stop Conditions
 
-Beginning/end tokens affect generation boundaries. Chat turn may use special end-of-turn đơn vị từ (token / 토큰) distinct document EOS.
+Beginning/end tokens affect generation boundaries. Chat turn may use special end-of-turn token (토큰) distinct document EOS.
 
-Suy luận (inference / 추론) máy chủ (server / 서버) stop lô-gic (logic / 논리) must align tokens/strings. Stopping by substring can truncate legitimate văn bản (text / 텍스트) or thất bại (fail / 실패) with đơn vị từ (token / 토큰) ranh giới (boundary / 경계) differences.
+Suy luận (inference / 추론) máy chủ (server / 서버) stop lô-gic (logic / 논리) must align tokens/strings. Stopping by substring can truncate legitimate văn bản (text / 텍스트) or thất bại (fail / 실패) with token (토큰) ranh giới (boundary / 경계) differences.
 
 Token healing làm rõ vì sao cùng một prefix có thể được phân đoạn khác nhau khi autocomplete. Với số và dữ liệu có cấu trúc, ta cần kiểm tra thêm các quy tắc biểu diễn thay vì dựa vào trực giác token.
 
 ## Đơn vị từ (token / 토큰) Healing / ranh giới (boundary / 경계) Effects
 
-Prompt ending inside a tokenizable word or with awkward whitespace can create tokenization phân phối (distribution / 분포) unlike huấn luyện (training / 학습). Some các hệ thống (systems / 시스템들) implement đơn vị từ (token / 토큰) healing/re-tokenization around ranh giới (boundary / 경계).
+Prompt ending inside a tokenizable word or with awkward whitespace can create tokenization phân phối (distribution / 분포) unlike huấn luyện (training / 학습). Some các hệ thống (systems / 시스템들) implement token (토큰) healing/re-tokenization around ranh giới (boundary / 경계).
 
 This matters autocomplete/mã (code / 코드) completion more than normal chat.
 
@@ -108,7 +108,7 @@ Số học và tokenization có thể không đồng nhất: một số được
 
 ## Tokenization and Numbers
 
-Numbers split into digit chunks unpredictably. This partly explains weak chính xác (exact / 정확한) arithmetic/counting: mô hình (model / 모델) operates statistical đơn vị từ (token / 토큰) patterns rather than bản địa (native / 네이티브) numeric datatype.
+Numbers split into digit chunks unpredictably. This partly explains weak chính xác (exact / 정확한) arithmetic/counting: mô hình (model / 모델) operates statistical token (토큰) patterns rather than bản địa (native / 네이티브) numeric datatype.
 
 Tools/mã (code / 코드)/calculators should handle chính xác (exact / 정확한) arithmetic when độ tin cậy (reliability / 신뢰성) required.
 
@@ -118,7 +118,7 @@ Structured output giữ tính đúng của dữ liệu bằng quy tắc bên ngo
 
 JSON/XML/mã (code / 코드) punctuation can consume many tokens. Minified format saves tokens but may reduce readability/mô hình (model / 모델) độ tin cậy (reliability / 신뢰성); pretty format uses more ngữ cảnh (context / 맥락).
 
-Lược đồ (schema / 스키마) thiết kế (design / 설계) can optimize both validity and đơn vị từ (token / 토큰) chi phí (cost / 비용). Repeated long trường dữ liệu (field / 필드) names increase đầu ra (output / 출력) tokens.
+Lược đồ (schema / 스키마) thiết kế (design / 설계) can optimize both validity and token (토큰) chi phí (cost / 비용). Repeated long trường dữ liệu (field / 필드) names increase đầu ra (output / 출력) tokens.
 
 Tokenizer và embedding matrix là một cặp phiên bản: token ID chỉ có nghĩa trong vocabulary mà embedding đã học. Special tokens mở rộng giao thức và tạo thêm ranh giới cần bảo vệ.
 
@@ -127,7 +127,7 @@ Tokenizer và embedding matrix là một cặp phiên bản: token ID chỉ có 
 Mô hình (model / 모델) checkpoint assumes chính xác (exact / 정확한) ánh xạ (mapping / 매핑):
 
 \[
-đơn vị từ (token / 토큰)\ string\leftrightarrow đơn vị từ (token / 토큰)\ id\leftrightarrow embedding\ row
+token (토큰)\ string\leftrightarrow token (토큰)\ id\leftrightarrow embedding\ row
 \]
 
 Swap tokenizer destroys ngữ nghĩa (semantics / 의미론) even if vocab kích thước (size / 크기) same.
@@ -166,15 +166,15 @@ Prompt caching biến phần input lặp lại thành yếu tố economics có t
 
 ## Prompt Caching
 
-Repeated prefix tokens can be cached by suy luận (inference / 추론) providers/servers, reducing prefill compute. bộ nhớ đệm (cache / 캐시) usually depends chính xác (exact / 정확한) đơn vị từ (token / 토큰) prefix, so tiny văn bản (text / 텍스트)/template thay đổi (change / 변경) invalidates hit.
+Repeated prefix tokens can be cached by suy luận (inference / 추론) providers/servers, reducing prefill compute. bộ nhớ đệm (cache / 캐시) usually depends chính xác (exact / 정확한) token (토큰) prefix, so tiny văn bản (text / 텍스트)/template thay đổi (change / 변경) invalidates hit.
 
 Stable hệ thống (system / 시스템) prompt/lược đồ (schema / 스키마) organization can improve economics.
 
 Phân biệt input và output token giúp nối tokenization với latency, context window và chi phí. Mental model sau đây tóm tắt các ranh giới đó thành một cách suy luận có thể tái dùng.
 
-## Đầu vào (input / 입력) vs đầu ra (output / 출력) đơn vị từ (token / 토큰) chi phí (cost / 비용)
+## Đầu vào (input / 입력) vs đầu ra (output / 출력) token (토큰) chi phí (cost / 비용)
 
-Transformer **prefill** processes đầu vào (input / 입력) tokens parallel-ish; **decode** generates đầu ra (output / 출력) one by one. Same đơn vị từ (token / 토큰) count has different độ trễ (latency / 지연 시간) characteristics.
+Transformer **prefill** processes đầu vào (input / 입력) tokens parallel-ish; **decode** generates đầu ra (output / 출력) one by one. Same token (토큰) count has different độ trễ (latency / 지연 시간) characteristics.
 
 Long đầu vào (input / 입력) increases prefill and KV bộ nhớ đệm (cache / 캐시); long đầu ra (output / 출력) increases serial decode độ trễ (latency / 지연 시간) strongly.
 
@@ -190,7 +190,7 @@ Các ngộ nhận đã tách bạch token ID, embedding, protocol và economics.
 
 ## Dùng chung (common / 공통) Misconceptions
 
-### “đơn vị từ (token / 토큰) count is roughly word count”
+### “token (토큰) count is roughly word count”
 
 Varies ngôn ngữ (language / 언어)/content/tokenizer dramatically.
 
@@ -200,9 +200,9 @@ It affects chuỗi (sequence / 시퀀스) length, morphology sharing and mô hì
 
 ### “Chat roles are just văn bản (text / 텍스트) labels”
 
-They are serialized through model-specific special đơn vị từ (token / 토큰)/template learned during post-training.
+They are serialized through model-specific special token (토큰)/template learned during post-training.
 
-### “Add a đơn vị từ (token / 토큰) and mô hình (model / 모델) immediately understands it”
+### “Add a token (토큰) and mô hình (model / 모델) immediately understands it”
 
 New embedding must be trained; ID alone has no ý nghĩa (semantic meaning / 의미적 뜻).
 

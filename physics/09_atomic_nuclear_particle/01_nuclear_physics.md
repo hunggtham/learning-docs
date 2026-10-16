@@ -16,8 +16,6 @@ với `R_0\approx1.2 fm` và `A` là số khối. Vì thể tích tỉ lệ `R^3
 
 Điều này gợi ý lực hạt nhân có tính bão hòa: một nucleon tương tác mạnh chủ yếu với các nucleon lân cận thay vì với toàn bộ hạt nhân theo kiểu lực tầm xa.
 
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, sau nội dung của **Hạt nhân là hệ nhiều hạt tương tác mạnh**, **Năng lượng liên kết và độ hụt khối** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình giọt chất lỏng và công thức bán thực nghiệm** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Năng lượng liên kết và độ hụt khối
 
 Năng lượng liên kết là
@@ -35,8 +33,6 @@ với
 Khối lượng của hạt nhân liên kết nhỏ hơn tổng khối lượng các nucleon tự do vì trạng thái liên kết có năng lượng thấp hơn.
 
 Năng lượng liên kết trên mỗi nucleon tăng nhanh với hạt nhân nhẹ, đạt cực đại gần vùng sắt–nickel rồi giảm chậm ở hạt nhân nặng. Hình dạng này giải thích vì sao cả nhiệt hạch của hạt nhẹ và phân hạch của hạt rất nặng đều có thể giải phóng năng lượng.
-
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Mô hình giọt chất lỏng và công thức bán thực nghiệm** nối từ **Năng lượng liên kết và độ hụt khối** sang **Mô hình lớp hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình giọt chất lỏng và công thức bán thực nghiệm
 
@@ -57,8 +53,6 @@ Các hạng có ý nghĩa:
 
 Công thức này không mô tả chi tiết cấu trúc mức nhưng cho trực giác rất tốt về xu hướng ổn định và phân hạch.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Mô hình lớp hạt nhân** nối từ **Mô hình giọt chất lỏng và công thức bán thực nghiệm** sang **Q-value của phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mô hình lớp hạt nhân
 
 Một mô hình khác xem mỗi nucleon chuyển động trong một thế trung bình do các nucleon còn lại tạo ra. Các mức lượng tử tạo “lớp vỏ” tương tự nguyên tử nhưng với Hamiltonian khác.
@@ -74,8 +68,6 @@ cho cấu hình đặc biệt bền và được gọi là số magic.
 Spin–orbit coupling mạnh trong hạt nhân là thành phần quan trọng để tái tạo chuỗi số magic quan sát được.
 
 Mô hình giọt chất lỏng và mô hình lớp không loại trừ nhau. Một cái mô tả tốt xu hướng tập thể, cái kia mô tả cấu trúc mức và hiệu ứng vỏ.
-
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Q-value của phản ứng** nối từ **Mô hình lớp hạt nhân** sang **Tiết diện phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Q-value của phản ứng
 
@@ -95,8 +87,6 @@ Nếu `Q>0`, phản ứng giải phóng năng lượng nghỉ thành động nă
 
 Tuy nhiên ngưỡng năng lượng trong phòng thí nghiệm không nhất thiết chỉ bằng `|Q|` vì động lượng cũng phải bảo toàn. Một phần năng lượng đầu vào phải đi vào chuyển động tâm khối của sản phẩm.
 
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Tiết diện phản ứng** nối từ **Q-value của phản ứng** sang **Resonance hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tiết diện phản ứng
 
 Xác suất phản ứng thường được mô tả bằng tiết diện (cross section) `\sigma`. Tốc độ phản ứng trong chùm hạt có dạng điển hình
@@ -108,8 +98,6 @@ R\sim \Phi N\sigma,
 trong đó `\Phi` là thông lượng hạt tới và `N` là số bia hiệu dụng.
 
 Tiết diện không phải diện tích hình học đơn giản. Nó mã hóa xác suất lượng tử của quá trình và phụ thuộc mạnh vào năng lượng, spin, resonance và kênh phản ứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Resonance hạt nhân** nối từ **Tiết diện phản ứng** sang **Phân rã phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resonance hạt nhân
 
@@ -127,8 +115,6 @@ Nếu năng lượng va chạm gần một trạng thái kích thích của hạ
 ```
 
 Đây là cùng cấu trúc thời gian tồn tại (lifetime / 수명)–linewidth đã gặp trong quang phổ nguyên tử.
-
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phân rã phóng xạ** nối từ **Resonance hạt nhân** sang **Phân rã alpha và xuyên hầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã phóng xạ
 
@@ -152,15 +138,11 @@ t_{1/2}=\frac{\ln2}{\lambda}.
 
 Điểm quan trọng là không thể dự đoán chính xác một hạt nhân đơn lẻ sẽ phân rã lúc nào; mô hình cho phân bố xác suất của tập hợp lớn.
 
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phân rã alpha và xuyên hầm** nối từ **Phân rã phóng xạ** sang **Phân rã beta và tương tác yếu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân rã alpha và xuyên hầm
 
 Hạt alpha nằm trong một thế hạt nhân sâu nhưng bị ngăn bởi hàng rào Coulomb. Cổ điển, nếu năng lượng thấp hơn đỉnh rào, nó không thể thoát. Lượng tử cho xác suất xuyên hầm hữu hạn.
 
 Xác suất xuyên hầm rất nhạy với độ rộng và chiều cao rào, nên một thay đổi nhỏ năng lượng alpha có thể dẫn tới thay đổi rất lớn chu kỳ bán rã. Đây là cơ sở vật lý của quan hệ Geiger–Nuttall.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phân rã beta và tương tác yếu** nối từ **Phân rã alpha và xuyên hầm** sang **Phân rã gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã beta và tương tác yếu
 
@@ -174,15 +156,11 @@ Phổ electron liên tục vì năng lượng và động lượng được chia
 
 Sự tồn tại của neutrino được đề xuất lịch sử để bảo toàn năng lượng, động lượng và mômen động lượng trong phân rã beta.
 
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phân rã gamma** nối từ **Phân rã beta và tương tác yếu** sang **Hoạt độ, liều hấp thụ và liều hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân rã gamma
 
 Hạt nhân kích thích có thể phát photon gamma để chuyển xuống mức năng lượng thấp hơn. `A` và `Z` có thể giữ nguyên.
 
 Cũng như nguyên tử, xác suất chuyển mức phụ thuộc multipole của bức xạ và quy tắc chọn mômen động lượng/parity.
-
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Hoạt độ, liều hấp thụ và liều hiệu dụng** nối từ **Phân rã gamma** sang **Chuỗi phân rã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoạt độ, liều hấp thụ và liều hiệu dụng
 
@@ -204,8 +182,6 @@ D=\frac{E_{dep}}{m}
 
 Sievert `Sv` thêm trọng số sinh học theo loại bức xạ và mô. Vì vậy `Bq`, `Gy`, `Sv` không thể đổi qua lại chỉ bằng một hệ số phổ quát.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Hoạt độ, liều hấp thụ và liều hiệu dụng** đặt đầu vào cho **Chuỗi phân rã**, rồi **Phân hạch** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Chuỗi phân rã
 
 Nếu một hạt nhân mẹ phân rã thành hạt nhân con cũng không bền, số hạt của mỗi loại thỏa hệ phương trình Bateman.
@@ -214,23 +190,17 @@ Trong trường hợp mẹ sống lâu hơn nhiều con, có thể xuất hiện
 
 Khái niệm này quan trọng trong địa chất phóng xạ và quản lý nguồn bức xạ.
 
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Chuỗi phân rã** đặt đầu vào cho **Phân hạch**, rồi **Vì sao neutron hữu ích cho phản ứng hạt nhân?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Phân hạch
 
 Hạt nhân nặng như uranium-235 có thể hấp thụ neutron, tạo hạt nhân hợp chất kích thích rồi tách thành hai mảnh nhẹ hơn, đồng thời giải phóng vài neutron và năng lượng.
 
 Năng lượng đến chủ yếu từ việc sản phẩm có năng lượng liên kết trên nucleon lớn hơn hạt nhân ban đầu.
 
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Vì sao neutron hữu ích cho phản ứng hạt nhân?** nối từ **Phân hạch** sang **Phản ứng dây chuyền và hệ số nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao neutron hữu ích cho phản ứng hạt nhân?
 
 Neutron không mang điện nên không bị hàng rào Coulomb đẩy khi tiếp cận hạt nhân. Do đó neutron năng lượng thấp vẫn có thể bị hấp thụ hiệu quả bởi nhiều hạt nhân.
 
 Đây là lý do neutron đóng vai trò trung tâm trong lò phản ứng phân hạch.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phản ứng dây chuyền và hệ số nhân** nối từ **Vì sao neutron hữu ích cho phản ứng hạt nhân?** sang **Vai trò của neutron trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng dây chuyền và hệ số nhân
 
@@ -246,15 +216,11 @@ k_eff > 1  → trên tới hạn
 
 Trong lò phản ứng công suất ổn định, mục tiêu là giữ `k_eff` rất gần 1.
 
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Vai trò của neutron trễ** nối từ **Phản ứng dây chuyền và hệ số nhân** sang **Chất làm chậm và thanh điều khiển**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vai trò của neutron trễ
 
 Một phần nhỏ neutron được phát ra sau phân rã của các mảnh phân hạch thay vì tức thời. Dù tỉ lệ nhỏ, neutron trễ làm thang thời gian động lực học lò phản ứng chậm hơn rất nhiều, cho phép điều khiển kỹ thuật.
 
 Nếu chỉ có neutron tức thời, việc kiểm soát công suất sẽ khó hơn đáng kể.
-
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Chất làm chậm và thanh điều khiển** nối từ **Vai trò của neutron trễ** sang **Phản hồi nhiệt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất làm chậm và thanh điều khiển
 
@@ -264,15 +230,11 @@ Thanh điều khiển chứa vật liệu hấp thụ neutron như boron hoặc 
 
 Lò phản ứng vì vậy là bài toán kết hợp vận chuyển (transport / 전송) neutron, nhiệt học, chất lưu và phản hồi vật liệu.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phản hồi nhiệt độ** nối từ **Chất làm chậm và thanh điều khiển** sang **Nhiệt hạch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phản hồi nhiệt độ
 
 Một lò phản ứng an toàn thường được thiết kế để có các hệ số phản hồi âm quan trọng. Ví dụ nhiệt độ tăng có thể làm giảm mật độ chất làm chậm hoặc thay đổi resonance absorption, từ đó giảm reactivity.
 
 Không thể đánh giá an toàn lò phản ứng chỉ bằng công thức phân hạch đơn lẻ; phải xét toàn hệ động lực học và phản hồi.
-
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Nhiệt hạch** nối từ **Phản hồi nhiệt độ** sang **Gamow factor và Gamow peak**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt hạch
 
@@ -286,8 +248,6 @@ V_C(r)\sim\frac{Z_1Z_2e^2}{4\pi\varepsilon_0r}.
 
 Ở nhiệt độ sao, năng lượng nhiệt trung bình thường thấp hơn đỉnh rào cổ điển. Xuyên hầm lượng tử làm phản ứng vẫn xảy ra.
 
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Gamow factor và Gamow peak** nối từ **Nhiệt hạch** sang **Phản ứng D–T**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gamow factor và Gamow peak
 
 Xác suất xuyên hầm qua hàng rào Coulomb giảm gần dạng mũ theo năng lượng. Trong plasma nhiệt, tốc độ phản ứng là kết quả cạnh tranh giữa:
@@ -299,8 +259,6 @@ Tích hai hiệu ứng tạo vùng năng lượng gọi là Gamow peak, nơi ph�
 
 Điều này giải thích vì sao tốc độ nhiệt hạch rất nhạy với nhiệt độ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Phản ứng D–T** nối từ **Gamow factor và Gamow peak** sang **Tiêu chuẩn Lawson**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phản ứng D–T
 
 Một phản ứng nhiệt hạch được nghiên cứu nhiều là
@@ -310,8 +268,6 @@ Một phản ứng nhiệt hạch được nghiên cứu nhiều là
 ```
 
 Phần lớn năng lượng đi vào neutron. Điều này thuận lợi cho việc mang năng lượng ra ngoài plasma nhưng đồng thời tạo thách thức vật liệu vì neutron nhanh gây hư hỏng và kích hoạt phóng xạ.
-
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Tiêu chuẩn Lawson** nối từ **Phản ứng D–T** sang **Nucleosynthesis trong sao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiêu chuẩn Lawson
 
@@ -323,8 +279,6 @@ nT\tau_E.
 
 Do đó “đã tạo được plasma rất nóng” chưa đồng nghĩa với nhà máy điện nhiệt hạch đã đạt điều kiện năng lượng ròng.
 
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Nucleosynthesis trong sao** tổng hợp từ **Tiêu chuẩn Lawson** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nucleosynthesis trong sao
 
 Trong Mặt Trời, chuỗi proton–proton chuyển hydro thành heli. Trong sao nặng hơn, chu trình CNO có thể quan trọng.
@@ -332,8 +286,6 @@ Trong Mặt Trời, chuỗi proton–proton chuyển hydro thành heli. Trong sa
 Các nguyên tố nặng hơn được tạo qua nhiều giai đoạn đốt hạt nhân và các quá trình bắt neutron như `s-process` và `r-process`.
 
 Vật lý hạt nhân vì vậy trực tiếp giải thích nguồn gốc hóa học của vật chất trong vũ trụ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Nucleosynthesis trong sao** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -348,8 +300,6 @@ xu hướng tập thể
 Mô hình giọt chất lỏng giải thích xu hướng tập thể; shell mô hình (model / 모델) giải thích mức và số magic; reaction lý thuyết (theory / 이론) giải thích cách hệ chuyển giữa các cấu hình.
 
 Năng lượng hạt nhân không đến từ “phá nguyên tử” một cách chung chung mà từ chênh lệch năng lượng liên kết giữa trạng thái đầu và cuối.
-
-> **Nối mạch:** Trong **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -372,8 +322,6 @@ Không. Mật độ và thời gian giam giữ cũng thiết yếu.
 ### “trọng yếu (critical / 중요) reactor nghĩa sắp phát nổ”
 
 Trong kỹ thuật lò phản ứng, `critical` chỉ có nghĩa `k_eff=1`, tức quần thể neutron duy trì ổn định qua các thế hệ.
-
-> **Nối mạch:** Ở chặng này của **Vật lý hạt nhân: mô hình hạt nhân, phân rã, phản ứng, phân hạch và nhiệt hạch**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -12,8 +12,6 @@ Round này đặt ra chuẩn mới: một chapter chỉ được xem là mạnh 
 
 Chuẩn đó được ghi thành tệp (file / 파일) [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md) để dùng cho các vòng rewrite sau.
 
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Các chapter đã rewrite** nối từ **Mục tiêu** sang **Chuẩn viết mới**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các chapter đã rewrite
 
 ### Functions — `02_functions/00_function_concept.md`
@@ -58,8 +56,6 @@ Bản mới tách rõ mô hình (model / 모델) lỗi (error / 오류), sai s�
 
 Chapter được viết để tạo kỹ thuật (engineering / 엔지니어링) judgment thay vì collection numerical methods.
 
-> **Nối mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Chuẩn viết mới** nối từ **Các chapter đã rewrite** sang **Nhóm ưu tiên cho round tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuẩn viết mới
 
 Từ round này trở đi, các chapter được kiểm tra (audit / 감사) theo các tiêu chí chính:
@@ -75,8 +71,6 @@ Từ round này trở đi, các chapter được kiểm tra (audit / 감사) the
 - dùng chung (common / 공통) Misconceptions phải giải thích vì sao intuition sai xuất hiện.
 
 Chi tiết nằm trong [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Nhóm ưu tiên cho round tiếp theo** nối từ **Chuẩn viết mới** sang **Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm ưu tiên cho round tiếp theo
 
@@ -97,8 +91,6 @@ Các tệp (file / 파일) còn ngắn so với vai trò phụ thuộc (dependen
 13. `08_optimization_numerical/00_optimization.md`
 
 Round sau nên tiếp tục ưu tiên phụ thuộc (dependency / 의존성) centrality trước tệp (file / 파일) count: rewrite những concept nhiều chapter khác dựa vào trước khi mở rộng thêm research-level topics.
-
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 5: nâng chất lượng biên soạn**, **Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn** tổng hợp từ **Nhóm ưu tiên cho round tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델) cho quá trình biên soạn
 

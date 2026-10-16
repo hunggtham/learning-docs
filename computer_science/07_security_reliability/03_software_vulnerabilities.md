@@ -10,8 +10,6 @@ Trong memory-unsafe languages, out-of-bounds ghi (write / 쓰기), use-after-fre
 
 Mitigations tăng difficulty nhưng không thay fix gốc (root / 루트) bug. Memory-safe languages loại nhiều classes này by construction/checks, nhưng bản địa (native / 네이티브) libraries/unsafe blocks vẫn là ranh giới (boundary / 경계).
 
-> **Nối mạch:** Memory corruption phá invariant của address space; injection phá ranh giới khi data bị diễn giải thành code/command, và XSS là trường hợp web-specific của cùng một lỗi boundary.
-
 ## Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command
 
 SQL injection xảy ra khi attacker đầu vào (input / 입력) được concatenated vào truy vấn (query / 쿼리) cú pháp (syntax / 문법), làm dữ liệu trở thành SQL mã (code / 코드). Parameterized truy vấn (query / 쿼리) giữ truy vấn (query / 쿼리) cấu trúc (structure / 구조) và values separate.
@@ -28,65 +26,45 @@ Same mẫu (pattern / 패턴) xuất hiện shell injection, LDAP injection, tem
 
 Parameterization không giải động (dynamic / 동적) identifiers/thứ tự (order / 순서) clauses tự động; allowlist/structured APIs cần cho cú pháp (syntax / 문법) positions không parameterizable.
 
-> **Nối mạch:** **Injection: khi dữ liệu (data / 데이터) bị hiểu thành mã (code / 코드)/command** đặt vấn đề; **XSS** kiểm tra bằng chứng, rồi **CSRF** mở rộng hệ quả.
-
 ## XSS
 
 Cross-Site Scripting cho attacker-controlled content execute trong trình duyệt (browser / 브라우저) origin ngữ cảnh (context / 맥락). Stored, reflected, DOM-based variants khác nguồn (source / 소스)/luồng (flow / 흐름) nhưng gốc (root / 루트) issue là untrusted dữ liệu (data / 데이터) vào executable HTML/JS ngữ cảnh (context / 맥락) without proper context-sensitive escaping/sanitization.
 
 Đầu ra (output / 출력) encoding phải phù hợp HTML văn bản (text / 텍스트), attribute, JavaScript, URL contexts. CSP là defense-in-depth, không thay correct encoding.
 
-> **Nối mạch:** **CSRF** nối từ **XSS** sang **SSRF**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CSRF
 
-Trình duyệt (browser / 브라우저) tự gửi cookies tới matching site; malicious page có thể trigger yêu cầu (request / 요청) nếu máy chủ (server / 서버) chỉ dựa cookie. SameSite, anti-CSRF đơn vị từ (token / 토큰), origin kiểm tra hợp lệ (validation / 검증) và requiring custom headers/API patterns là mitigations theo ngữ cảnh (context / 맥락).
+Trình duyệt (browser / 브라우저) tự gửi cookies tới matching site; malicious page có thể trigger yêu cầu (request / 요청) nếu máy chủ (server / 서버) chỉ dựa cookie. SameSite, anti-CSRF token (토큰), origin kiểm tra hợp lệ (validation / 검증) và requiring custom headers/API patterns là mitigations theo ngữ cảnh (context / 맥락).
 
 CSRF khác XSS: XSS chạy mã (code / 코드) trong trusted origin; CSRF lợi dụng ambient authority từ trình duyệt (browser / 브라우저).
-
-> **Nối mạch:** **SSRF** nối từ **CSRF** sang **Đường dẫn (path / 경로) traversal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SSRF
 
 Server-Side yêu cầu (request / 요청) Forgery khiến máy chủ (server / 서버) yêu cầu (request / 요청) URL attacker-controlled, có thể reach nội bộ (internal / 내부) siêu dữ liệu (metadata / 메타데이터)/services không công khai (public / 공개). Mitigation cần allowlist destinations/protocols, mạng (network / 네트워크) egress controls, DNS/IP kiểm tra hợp lệ (validation / 검증) cẩn thận và siêu dữ liệu (metadata / 메타데이터) protections.
 
-> **Nối mạch:** **SSRF** đặt đầu vào cho **Đường dẫn (path / 경로) traversal**, rồi **Deserialization** mở rộng hệ quả.
-
 ## Đường dẫn (path / 경로) traversal
 
 Đầu vào (input / 입력) như `../../etc/passwd` có thể escape intended directory nếu đường dẫn (path / 경로) phép nối (join / 조인)/canonicalization sai. Safe thiết kế (design / 설계) use generated IDs/lưu trữ (storage / 저장소) APIs, normalize và enforce resolved đường dẫn (path / 경로) under allowed gốc (root / 루트). String prefix check naive có edge cases symbolic links/encoding/nền tảng (platform / 플랫폼).
-
-> **Nối mạch:** **Đường dẫn (path / 경로) traversal** đặt đầu vào cho **Deserialization**, rồi **Race vulnerabilities** mở rộng hệ quả.
 
 ## Deserialization
 
 Unsafe deserialization of attacker dữ liệu (data / 데이터) can instantiate unexpected đối tượng (object / 객체) graphs or trigger gadget chains in ecosystems supporting polymorphic/đối tượng (object / 객체) deserialization. Prefer simple dữ liệu (data / 데이터) formats + tường minh (explicit / 명시적) schemas/types; never treat untrusted serialized đối tượng (object / 객체) stream as trustworthy mã (code / 코드) cấu trúc (structure / 구조).
 
-> **Nối mạch:** **Race vulnerabilities** nối từ **Deserialization** sang **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Race vulnerabilities
 
 TOCTOU — thời gian (time / 시간) Of Check To thời gian (time / 시간) Of Use: check permission/đường dẫn (path / 경로)/trạng thái (state / 상태) rồi attacker changes before use. Atomic OS APIs, tệp (file / 파일) descriptors, transactions hoặc locks reduce gap. bảo mật (security / 보안) often requires same atomicity lập luận (reasoning / 추론) as tính đồng thời (concurrency / 동시성) tính đúng đắn (correctness / 정확성).
-
-> **Nối mạch:** **Race vulnerabilities** đặt đầu vào cho **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)**, rồi **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer** mở rộng hệ quả.
 
 ## Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)
 
 Vulnerability can enter through phụ thuộc (dependency / 의존성), bản dựng (build / 빌드) script, gói (package / 패키지) registry compromise or CI secret leakage. Pin versions/check integrity, minimize dependencies, SBOM/scanning, protected CI credentials and reproducible bản dựng (build / 빌드) practices reduce rủi ro (risk / 위험).
 
-> **Nối mạch:** **Phụ thuộc (dependency / 의존성)/supply chuỗi (chain / 사슬)** đặt đầu vào cho **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer
 
 Validate ngữ nghĩa (semantic / 의미적) lĩnh vực (domain / 도메인) at ranh giới (boundary / 경계); encode when outputting into cú pháp (syntax / 문법) ngữ cảnh (context / 맥락); parameterize mã (code / 코드)/dữ liệu (data / 데이터); authorize every tài nguyên (resource / 자원) hành động (action / 동작). One “sanitize()” hàm (function / 함수) cannot safely cover SQL, HTML, shell, URL and JSON contexts.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Đầu vào (input / 입력) kiểm tra hợp lệ (validation / 검증) không phải universal sanitizer**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Nhiều vulnerabilities là **ranh giới (boundary / 경계) confusion**: dữ liệu (data / 데이터) becomes mã (code / 코드), untrusted định danh (identity / 식별자) becomes authorized, đường dẫn (path / 경로) escapes không gian tên (namespace / 네임스페이스), bộ nhớ (memory / 메모리) ghi (write / 쓰기) escapes đối tượng (object / 객체). Hãy xác định parser/trình thông dịch (interpreter / 인터프리터) nào sẽ đọc đầu vào (input / 입력) tiếp theo và giữ dữ liệu (data / 데이터) ở đúng channel.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -95,8 +73,6 @@ Validate ngữ nghĩa (semantic / 의미적) lĩnh vực (domain / 도메인) at
 **“Frontend kiểm tra hợp lệ (validation / 검증) đủ vì người dùng (user / 사용자) không nhập được giá trị xấu.”** Attacker gọi API trực tiếp; máy chủ (server / 서버) must enforce.
 
 **“Escaping HTML một lần bảo vệ mọi ngữ cảnh (context / 맥락).”** JavaScript/URL/attribute contexts có rules khác.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -10,8 +10,6 @@ Câu hỏi trung tâm của chapter này là: **vì sao một premodern centrali
 
 Ta cần nối ba quy mô (scale / 규모): toàn cục (global / 전역) imperial competition, military-technology/finance gap, và cục bộ (local / 로컬) political-economic các ràng buộc (constraints / 제약조건들).
 
-> **Nối mạch:** Trong **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **1858 không xuất hiện từ khoảng trống** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Đà Nẵng 1858: landing không bằng conquest**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1858 không xuất hiện từ khoảng trống
 
 Pháp và các European actors đã có commercial, missionary và diplomatic contact với Việt Nam từ trước. Đến giữa thế kỷ XIX, European imperial expansion ở Asia tăng mạnh nhờ industrial môi trường vận hành (production / 운영 환경), steam vận chuyển (transport / 전송), hiện đại (modern / 현대적) naval artillery, toàn cục (global / 전역) finance và colonial bases.
@@ -30,8 +28,6 @@ commercial/strategic ambitions
 French-Spanish intervention 1858
 ```
 
-> **Nối mạch:** Ở chặng này của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Đà Nẵng 1858: landing không bằng conquest** nối từ **1858 không xuất hiện từ khoảng trống** sang **Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đà Nẵng 1858: landing không bằng conquest
 
 Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng không nhanh chóng ép Nguyễn court đầu hàng. Disease, logistics và cục bộ (local / 로컬) resistance làm campaign bị kẹt.
@@ -39,8 +35,6 @@ Liên quân Pháp–Tây Ban Nha tấn công Đà Nẵng năm **1858**, nhưng k
 Điểm này quan trọng vì nó phá myth “vũ khí hiện đại = auto-win”. Technology tạo advantage, nhưng terrain, supply và occupation bài toán (problem / 문제) vẫn quyết định.
 
 Pháp chuyển trọng tâm xuống **Gia Định/Sài Gòn**, nơi river truy cập (access / 접근) và southern rice economy tạo strategic lô-gic (logic / 논리) khác.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?** nối từ **Đà Nẵng 1858: landing không bằng conquest** sang **Colonial thuộc tính (property / 속성) hệ thống (system / 시스템): biến land thành legible asset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?
 
@@ -51,8 +45,6 @@ French conquest vì vậy không chỉ là battle map; nó là tìm kiếm (sear
 Năm **1862**, Treaty of Saigon chuyển ba tỉnh miền Đông Nam Kỳ cho Pháp. Đến **1867**, Pháp kiểm soát toàn bộ sáu tỉnh Nam Kỳ và tổ chức Cochinchina như colony trực tiếp.
 
 Đây là một break lớn: southern Vietnam không còn chỉ là occupied zone mà trở thành laboratory của colonial administration, land chính sách (policy / 정책) và commercial agriculture.
-
-> **Nối mạch:** Trong **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Colonial thuộc tính (property / 속성) hệ thống (system / 시스템): biến land thành legible asset** nối từ **Vì sao Nam Bộ trở thành first colonial cơ sở (base / 기반)?** sang **Rice export và Mekong Delta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial thuộc tính (property / 속성) hệ thống (system / 시스템): biến land thành legible asset
 
@@ -72,8 +64,6 @@ tax / sale / concession / credit
 
 Bản ghi (record / 레코드) không chỉ mô tả economy; bản ghi (record / 레코드) có thể remake economy.
 
-> **Nối mạch:** Ở chặng này của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Rice export và Mekong Delta** nối từ **Colonial thuộc tính (property / 속성) hệ thống (system / 시스템): biến land thành legible asset** sang **Rubber plantation: capital, land và coerced labor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Rice export và Mekong Delta
 
 Colonial quy tắc (rule / 규칙) mở rộng canal, cổng (port / 포트) và commercial hạ tầng (infrastructure / 인프라) ở south, đồng thời thúc đẩy rice export. Mekong Delta ngày càng integrated vào toàn cục (global / 전역) commodity thị trường (market / 시장).
@@ -81,8 +71,6 @@ Colonial quy tắc (rule / 규칙) mở rộng canal, cổng (port / 포트) và
 Điều này có thể tăng total đầu ra (output / 출력) và trade nhưng phân phối (distribution / 분포) không đều. Large landholding, tenant farming, indebtedness và merchant-credit networks khiến gains/losses khác nhau giữa xã hội (social / 사회적) groups.
 
 Không nên viết “Pháp phát triển kinh tế” hoặc “Pháp chỉ bóc lột nên không có growth” như hai slogan đối nghịch. Câu hỏi đúng là: **growth ở sector nào, hạ tầng (infrastructure / 인프라) phục vụ luồng (flow / 흐름) nào, ai capture surplus, và household chịu rủi ro (risk / 위험) gì?**
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Rice export và Mekong Delta** nêu quy tắc; **Rubber plantation: capital, land và coerced labor** thử quy tắc trong tình huống, rồi **Taxation: colonial trạng thái (state / 상태) cần tự finance** mở rộng hệ quả.
 
 ## Rubber plantation: capital, land và coerced labor
 
@@ -106,8 +94,6 @@ export market
 
 Đây là cách một toàn cục (global / 전역) technology shift—automobile/tire demand—đi thẳng vào Vietnamese rural labor lịch sử (history / 이력).
 
-> **Nối mạch:** Trong **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Rubber plantation: capital, land và coerced labor** nêu quy tắc; **Taxation: colonial trạng thái (state / 상태) cần tự finance** thử quy tắc trong tình huống, rồi **Hạ tầng (infrastructure / 인프라): railway không neutral** mở rộng hệ quả.
-
 ## Taxation: colonial trạng thái (state / 상태) cần tự finance
 
 Colonial administration không chỉ nhận money từ Paris. Nó tìm revenue cục bộ (local / 로컬) qua land tax, customs, monopolies và indirect taxes.
@@ -115,8 +101,6 @@ Colonial administration không chỉ nhận money từ Paris. Nó tìm revenue c
 Salt, alcohol và opium monopolies trở thành những fiscal instruments nổi tiếng. Economic significance của chúng không chỉ nằm ở commodity; monopoly cho phép trạng thái (state / 상태) điều khiển (control / 제어) phân phối (distribution / 분포) và capture margin.
 
 Một household có thể không gặp French official mỗi ngày nhưng vẫn cảm nhận colonial trạng thái (state / 상태) qua tax collector, monopoly price, labor obligation hoặc court.
-
-> **Nối mạch:** Ở chặng này của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Hạ tầng (infrastructure / 인프라): railway không neutral** nối từ **Taxation: colonial trạng thái (state / 상태) cần tự finance** sang **Từ Sài Gòn tới Hà Nội: conquest kéo dài nhiều thập niên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hạ tầng (infrastructure / 인프라): railway không neutral
 
@@ -128,8 +112,6 @@ Vì vậy câu hỏi cần hỏi khi nhìn Long Biên cầu nối (bridge / 브�
 
 Hạ tầng (infrastructure / 인프라) có thể vừa modernize mobility vừa reinforce colonial điều khiển (control / 제어).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Từ Sài Gòn tới Hà Nội: conquest kéo dài nhiều thập niên** nối từ **Hạ tầng (infrastructure / 인프라): railway không neutral** sang **Cần Vương: resistance không phải một phong trào đồng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ Sài Gòn tới Hà Nội: conquest kéo dài nhiều thập niên
 
 French quy tắc (rule / 규칙) không được thiết lập trong một campaign duy nhất. K. W. Taylor mô tả conquest như tiến trình (process / 프로세스) nhiều phase kéo dài khoảng nửa thế kỷ.
@@ -140,8 +122,6 @@ Sau southern colony, French attention chuyển mạnh ra north, nơi Red River �
 
 Administrative partition này có legacy dài vì chính sách (policy / 정책), education và economy không uniform giữa ba kỳ.
 
-> **Nối mạch:** Trong **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Cần Vương: resistance không phải một phong trào đồng nhất** nối từ **Từ Sài Gòn tới Hà Nội: conquest kéo dài nhiều thập niên** sang **Cities tạo xã hội (social / 사회적) category mới**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cần Vương: resistance không phải một phong trào đồng nhất
 
 Sau crisis 1885 tại Huế, **Cần Vương** kêu gọi resistance nhân danh emperor Hàm Nghi. Nhưng movements địa phương khác nhau về leadership, tài nguyên (resource / 자원) và xã hội (social / 사회적) cơ sở (base / 기반).
@@ -150,8 +130,6 @@ Một số dựa vào scholar-gentry networks; một số gắn với village mi
 
 Đừng đọc Cần Vương như bản prototype hoàn chỉnh của twentieth-century nation-state nationalism. Nó nằm trong chuyển tiếp (transition / 전이): loyalty to monarch, defense of cục bộ (local / 로컬) thứ tự (order / 순서) và anti-colonial resistance chồng lên nhau.
 
-> **Nối mạch:** Ở chặng này của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Cities tạo xã hội (social / 사회적) category mới** nối từ **Cần Vương: resistance không phải một phong trào đồng nhất** sang **Quốc ngữ chuyển từ niche writing hệ thống (system / 시스템) thành mass-information technology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cities tạo xã hội (social / 사회적) category mới
 
 Colonial administration, commerce và education làm urban centres như Sài Gòn, Hà Nội, Hải Phòng biến đổi. New occupations xuất hiện: clerk, teacher, journalist, trình thông dịch (interpreter / 인터프리터), industrial worker, professional.
@@ -159,8 +137,6 @@ Colonial administration, commerce và education làm urban centres như Sài Gò
 Urban society tạo new thông tin (information / 정보) mạng (network / 네트워크). Printing, newspaper, school và association giảm chi phí (cost / 비용) truyền idea.
 
 Đây là key handoff: colonial trạng thái (state / 상태) muốn train personnel và spread administrative ngôn ngữ (language / 언어), nhưng chính education/thông tin (information / 정보) mạng (network / 네트워크) lại giúp anti-colonial politics quy mô (scale / 규모).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Quốc ngữ chuyển từ niche writing hệ thống (system / 시스템) thành mass-information technology** nối từ **Cities tạo xã hội (social / 사회적) category mới** sang **Di tích: đọc colonial city bằng logistics và segregation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quốc ngữ chuyển từ niche writing hệ thống (system / 시스템) thành mass-information technology
 
@@ -180,15 +156,11 @@ new political/public sphere
 
 Nhưng literacy vẫn unequal theo region, lớp (class / 클래스) và gender.
 
-> **Nối mạch:** Trong **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Di tích: đọc colonial city bằng logistics và segregation** nối từ **Quốc ngữ chuyển từ niche writing hệ thống (system / 시스템) thành mass-information technology** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Di tích: đọc colonial city bằng logistics và segregation
 
 Ở **Hà Nội**, hãy nhìn quan hệ (relation / 관계) giữa old quarter, citadel, French administrative quarter, Long Biên cầu nối (bridge / 브리지) và rail station. Ở **Hải Phòng**, nhìn cổng (port / 포트)–rail liên kết (connection / 연결). Ở **Sài Gòn–Chợ Lớn**, nhìn administrative cốt lõi (core / 핵심), Chinese commercial district, river/cổng (port / 포트) và plantation hinterland.
 
 Kiến trúc (architecture / 아키텍처) không chỉ là “Pháp đẹp”. Nó encode functional separation: military, administrative, residential, commercial và hạ tầng (infrastructure / 인프라).
-
-> **Nối mạch:** Ở chặng này của **Pháp chinh phục và thuộc địa: military gap, colonial trạng thái (state / 상태) và một nền kinh tế bị tái cấu trúc**, **Recap và bàn giao** nối từ **Di tích: đọc colonial city bằng logistics và segregation** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

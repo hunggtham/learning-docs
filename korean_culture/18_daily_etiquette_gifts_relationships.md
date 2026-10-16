@@ -20,8 +20,6 @@ khoảng cách quan hệ
 
 Khi một trong bốn biến thay đổi, cùng một hành vi có thể đổi nghĩa.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Hai tay: một cử chỉ của sự chú ý và tôn trọng** nối từ **Phép lịch sự không phải một bộ luật để học thuộc** sang **인사: chào hỏi, bắt tay và thương lượng vi mô**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hai tay: một cử chỉ của sự chú ý và tôn trọng
 
 Khi đưa hoặc nhận danh thiếp, quà, tiền hay ly rượu trong bối cảnh trang trọng, dùng hai tay hoặc một tay được tay kia đỡ thường biểu thị sự chú ý và tôn trọng. Trong tương tác thân mật, quy tắc mềm hơn.
@@ -29,8 +27,6 @@ Khi đưa hoặc nhận danh thiếp, quà, tiền hay ly rượu trong bối c�
 Về ký hiệu học, việc chuyển một vật có hai kênh: vật thật và tín hiệu xã hội. Một tay hay hai tay không làm vật đổi giá trị vật lý, nhưng làm ý nghĩa của hành động chuyển giao thay đổi. Có thể xem nó như siêu dữ liệu (metadata / 메타데이터) đi kèm một gói tin.
 
 Điểm quan trọng là không cần cố biểu diễn quá mức. Nếu dùng hai tay cực kỳ cứng nhắc trong tình huống rất thân mật, hành vi có thể tạo khoảng cách không cần thiết.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **인사: chào hỏi, bắt tay và thương lượng vi mô** nối từ **Hai tay: một cử chỉ của sự chú ý và tôn trọng** sang **명함: danh thiếp như một “gói thông tin nhận dạng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 인사: chào hỏi, bắt tay và thương lượng vi mô
 
@@ -42,8 +38,6 @@ Trong hệ thống phân tán, tín hiệu nhịp tim (heartbeat) cho biết m�
 
 `안녕히 가세요` và `안녕히 계세요` là ví dụ thú vị vì câu tạm biệt phụ thuộc **ai là người rời đi**. Người ở lại nói với người đi `안녕히 가세요`; người đi nói với người ở lại `안녕히 계세요`. Trong đời thường, `들어가세요`, `조심히 들어가세요`, `먼저 들어가 보겠습니다` cũng rất phổ biến.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **명함: danh thiếp như một “gói thông tin nhận dạng”** nối từ **인사: chào hỏi, bắt tay và thương lượng vi mô** sang **시간 약속: đúng giờ là một dạng tôn trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 명함: danh thiếp như một “gói thông tin nhận dạng”
 
 **Danh thiếp (business card / 명함)** từng đặc biệt quan trọng vì chứa công ty, chức vụ, tên và liên hệ — đúng những dữ liệu cần để xác định vai trò. Nhận danh thiếp cẩn thận, nhìn qua trước khi cất thể hiện rằng ta đang ghi nhận danh tính xã hội của người đối diện.
@@ -51,8 +45,6 @@ Trong hệ thống phân tán, tín hiệu nhịp tim (heartbeat) cho biết m�
 Điện thoại và các mạng nghề nghiệp có thể thay chức năng lưu trữ, nhưng nghi thức trao danh thiếp vẫn tồn tại trong nhiều ngành vì chức năng xã hội khác chức năng kỹ thuật.
 
 Trong một cuộc họp, đặt danh thiếp trước mặt còn giúp ánh xạ tên ↔ chức vụ ↔ người, tức nó hoạt động như bộ nhớ ngoài tạm thời.
-
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **시간 약속: đúng giờ là một dạng tôn trọng** nối từ **명함: danh thiếp như một “gói thông tin nhận dạng”** sang **약속 잡기: lời mời thật và lời xã giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 시간 약속: đúng giờ là một dạng tôn trọng
 
@@ -62,8 +54,6 @@ Câu `10분 정도 늦을 것 같습니다. 죄송합니다.` làm ba việc: b�
 
 Trong quan hệ thân, mức dung sai có thể cao hơn. Vì vậy “người Hàn luôn cực kỳ đúng giờ” vẫn là khái quát quá mức; bối cảnh quyết định chi phí của việc chậm.
 
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **약속 잡기: lời mời thật và lời xã giao** nối từ **시간 약속: đúng giờ là một dạng tôn trọng** sang **Quà tặng: giá trị nằm ở thời điểm và quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 약속 잡기: lời mời thật và lời xã giao
 
 `언제 밥 한번 먹어요` có thể là lời mời thật, nhưng đôi khi chỉ là câu kết thúc thân thiện kiểu “hôm nào ăn nhé”. Muốn biến ý định thành kế hoạch, cần thời gian và địa điểm cụ thể.
@@ -71,8 +61,6 @@ Trong quan hệ thân, mức dung sai có thể cao hơn. Vì vậy “người 
 Đây là khác biệt giữa **phát biểu quan hệ (relational statement)** và **cam kết giao dịch (transactional commitment)**. Câu xã giao duy trì thiện chí; lịch hẹn cụ thể tạo cam kết.
 
 Người học không nên kết luận người kia “giả tạo” chỉ vì lời mời chưa được theo dõi ngay. Nhiều ngôn ngữ có những công thức duy trì quan hệ mà không mang tính hợp đồng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Quà tặng: giá trị nằm ở thời điểm và quan hệ** nối từ **약속 잡기: lời mời thật và lời xã giao** sang **기프티콘: quà tặng như mã thông báo số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quà tặng: giá trị nằm ở thời điểm và quan hệ
 
@@ -82,8 +70,6 @@ Một món quà có thể giải ba bài toán: thể hiện sự quan tâm, t�
 
 Quà số qua KakaoTalk là ví dụ của việc một tập quán được chuyển sang nền tảng mới. Trước đây phải biết địa chỉ hoặc gặp trực tiếp; nay chỉ cần liên hệ trên messenger là có thể gửi cà phê, bánh hoặc sản phẩm. Chi phí giao dịch giảm làm việc tặng quà nhỏ trở nên phổ biến hơn.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **기프티콘: quà tặng như mã thông báo số** nối từ **Quà tặng: giá trị nằm ở thời điểm và quan hệ** sang **집들이: bước vào không gian riêng của người khác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 기프티콘: quà tặng như mã thông báo số
 
 `기프티콘` thường được dùng như tên gọi chung cho phiếu quà tặng di động. Người gửi mua mã; người nhận đổi mã thành đồ uống, bánh, đồ ăn hoặc hàng hoá tại cửa hàng.
@@ -91,8 +77,6 @@ Quà số qua KakaoTalk là ví dụ của việc một tập quán được chu
 Ý nghĩa văn hoá nằm ở việc món quà nhỏ trở nên gần như không có ma sát. Một lời cảm ơn có thể ngay lập tức được vật chất hoá thành phiếu cà phê. Nhưng khi quà trở nên quá dễ gửi, chuẩn xã hội cũng có thể tăng: một số tình huống trước đây chỉ cần tin nhắn nay có thể xuất hiện kỳ vọng thêm món quà nhỏ.
 
 Đây là ví dụ điển hình của việc công nghệ giảm chi phí giao dịch rồi làm chuẩn mực thay đổi.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **집들이: bước vào không gian riêng của người khác** nối từ **기프티콘: quà tặng như mã thông báo số** sang **문병: thăm người bệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 집들이: bước vào không gian riêng của người khác
 
@@ -102,8 +86,6 @@ Quan trọng hơn món quà là ranh giới không gian. Nhà ở, đặc biệt
 
 Khi vào nhà, tháo giày là kỳ vọng phổ biến. Nếu không chắc để giày ở đâu, nhìn ranh giới vật lý của `현관` và làm theo chủ nhà là đủ; không cần biến phép lịch sự thành màn biểu diễn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **문병: thăm người bệnh** nối từ **집들이: bước vào không gian riêng của người khác** sang **경조사: đám cưới, tang lễ và mạng lưới quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 문병: thăm người bệnh
 
 **Thăm bệnh (hospital visit / 문병)** là một cách thể hiện sự quan tâm, nhưng bối cảnh y tế đòi hỏi độ nhạy cao hơn các cuộc thăm xã hội khác. Người bệnh có thể mệt, bệnh viện có quy định giờ thăm và kiểm soát lây nhiễm có thể khiến việc đến trực tiếp không phù hợp.
@@ -111,8 +93,6 @@ Khi vào nhà, tháo giày là kỳ vọng phổ biến. Nếu không chắc đ�
 Vì vậy “quan tâm” không luôn đồng nghĩa “phải tới tận nơi”. Tin nhắn, cuộc gọi, giao đồ hoặc hỏi trước `지금 문병 가도 괜찮아요?` có thể tôn trọng người nhận hơn việc tự nhiên xuất hiện.
 
 Nguyên tắc tổng quát là: ý nghĩa của sự quan tâm phải đi cùng ràng buộc của người nhận.
-
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **경조사: đám cưới, tang lễ và mạng lưới quan hệ** nối từ **문병: thăm người bệnh** sang **Phép lịch sự tại 장례식장: mục tiêu là giảm gánh nặng cho gia đình tang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 경조사: đám cưới, tang lễ và mạng lưới quan hệ
 
@@ -122,8 +102,6 @@ Nguyên tắc tổng quát là: ý nghĩa của sự quan tâm phải đi cùng 
 
 Điểm quan trọng là tính có đi có lại có trí nhớ. Một số gia đình hoặc nhóm ghi lại ai đã gửi bao nhiêu không nhất thiết vì tính toán lạnh lùng, mà vì mạng lưới sự kiện kéo dài nhiều năm và người ta muốn sự đáp lại tương đối cân bằng.
 
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Phép lịch sự tại 장례식장: mục tiêu là giảm gánh nặng cho gia đình tang** nối từ **경조사: đám cưới, tang lễ và mạng lưới quan hệ** sang **친구: “bạn” không ánh xạ hoàn toàn với friend**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phép lịch sự tại 장례식장: mục tiêu là giảm gánh nặng cho gia đình tang
 
 Trong nhà tang lễ, mục tiêu chính không phải “thực hiện đúng nghi lễ để được chấm điểm” mà là bày tỏ chia buồn và hỗ trợ gia đình.
@@ -131,8 +109,6 @@ Trong nhà tang lễ, mục tiêu chính không phải “thực hiện đúng n
 Trang phục thường tối và đơn giản; cuộc trò chuyện giữ giọng phù hợp. Cách cúi hoặc lạy có thể khác theo tôn giáo và tập quán gia đình, nên người tham dự nên quan sát hướng dẫn tại chỗ thay vì áp một quy tắc tưởng là phổ quát.
 
 `삼가 고인의 명복을 빕니다` là câu chia buồn trang trọng thường gặp trong văn viết. Khi nói, `많이 힘드시죠`, `뭐라고 말씀드려야 할지 모르겠습니다` có thể tự nhiên hơn tuỳ quan hệ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **친구: “bạn” không ánh xạ hoàn toàn với friend** nối từ **Phép lịch sự tại 장례식장: mục tiêu là giảm gánh nặng cho gia đình tang** sang **형, 누나, 언니, 오빠: từ thân tộc mở rộng thành sự thân mật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 친구: “bạn” không ánh xạ hoàn toàn với friend
 
@@ -151,8 +127,6 @@ Một số nhãn quan hệ khác:
 
 Từ vựng càng chi tiết thì đồ thị quan hệ xã hội càng được mã hoá rõ.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **형, 누나, 언니, 오빠: từ thân tộc mở rộng thành sự thân mật** nối từ **친구: “bạn” không ánh xạ hoàn toàn với friend** sang **소개팅 và thị trường hẹn hò**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 형, 누나, 언니, 오빠: từ thân tộc mở rộng thành sự thân mật
 
 Các từ này ban đầu chỉ anh hoặc chị theo giới của người nói và người được gọi, nhưng được mở rộng cho người thân thiết lớn tuổi hơn. Trong hẹn hò hoặc fandom, `오빠` có thêm sắc thái tuỳ bối cảnh.
@@ -160,8 +134,6 @@ Các từ này ban đầu chỉ anh hoặc chị theo giới của người nói
 Không nên học bằng cách ánh xạ từ điển đơn giản. Chúng là **toán tử quan hệ (relational operators)**: ý nghĩa phụ thuộc giới người nói, giới người nghe, chênh lệch tuổi và độ thân.
 
 Khi một người lớn hơn nói `그냥 형이라고 불러`, đó là lời mời giảm khoảng cách, nhưng không có nghĩa mọi quy tắc quan hệ khác biến mất ngay.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **소개팅 và thị trường hẹn hò** nối từ **형, 누나, 언니, 오빠: từ thân tộc mở rộng thành sự thân mật** sang **썸: vùng trạng thái chưa được xác định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 소개팅 và thị trường hẹn hò
 
@@ -171,8 +143,6 @@ Người giới thiệu đóng vai trò cầu nối niềm tin. Trong lý thuy�
 
 Sau `소개팅`, `애프터` thường chỉ lời mời gặp lần tiếp theo. Không phải mọi nhóm đều dùng cùng một kịch bản, nhưng từ vựng này cho thấy quá trình hẹn hò có các bước được xã hội đặt tên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **썸: vùng trạng thái chưa được xác định** nối từ **소개팅 và thị trường hẹn hò** sang **고백 và “ngày 1”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 썸: vùng trạng thái chưa được xác định
 
 `썸` — từ vay mượn sáng tạo từ “something” — chỉ giai đoạn hai người có tín hiệu tình cảm nhưng chưa chính thức hẹn hò. `썸 타다` nghĩa gần với “đang có gì đó”.
@@ -181,23 +151,17 @@ Khái niệm này đáng chú ý vì nó đặt tên cho **trạng thái mơ h�
 
 `어장관리` là tiếng lóng tiêu cực hơn, ám chỉ giữ nhiều người trong trạng thái quan tâm mà không cam kết rõ. Cùng sự mơ hồ có thể được nhìn như giai đoạn vui vẻ chưa xác định hoặc như thao túng thiếu công bằng, tuỳ ý định và mức minh bạch.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **고백 và “ngày 1”** nối từ **썸: vùng trạng thái chưa được xác định** sang **기념일: ngày kỷ niệm và văn hoá tiêu dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 고백 và “ngày 1”
 
 **Tỏ tình (confession / 고백)** trong văn hoá đại chúng Hàn Quốc thường là thời điểm xác lập quan hệ chính thức. `1일` có thể được tính từ ngày bắt đầu hẹn hò, và kỷ niệm 100 ngày từng là mô-típ phổ biến.
 
 Không nên xem mọi cặp đều theo kịch bản này, nhưng nó cho thấy trạng thái quan hệ có thể được xác lập bằng một chuyển trạng thái rõ ràng hơn so với những văn hoá hẹn hò nơi quan hệ tiến triển dần mà không có mốc chính thức.
 
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **기념일: ngày kỷ niệm và văn hoá tiêu dùng** nối từ **고백 và “ngày 1”** sang **회비, 더치페이 và ai trả tiền?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 기념일: ngày kỷ niệm và văn hoá tiêu dùng
 
 100 ngày, Pepero Day, Valentine’s Day, White Day và ngày kỷ niệm của cặp đôi tạo lịch riêng cho sự thân mật. Thị trường bán lẻ tận dụng các ngày này, nhưng thương mại hoá không có nghĩa cảm xúc là “giả”. Thị trường thường vật chất hoá nhu cầu đã có rồi khuếch đại nó.
 
 Một ngày càng được nền tảng, cửa hàng tiện lợi và mạng xã hội nhắc nhiều thì càng nổi bật — đây là vòng phản hồi chú ý (attention feedback loop).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **회비, 더치페이 và ai trả tiền?** nối từ **기념일: ngày kỷ niệm và văn hoá tiêu dùng** sang **연락 문화: nhịp liên lạc như một kỳ vọng quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 회비, 더치페이 và ai trả tiền?
 
@@ -207,15 +171,11 @@ Cách trả tiền là thương lượng giữa bình đẳng, hiếu khách và
 
 Trong nhóm định kỳ như câu lạc bộ hoặc đội thể thao, `회비` là quỹ hoặc phí nhóm. Đây là cách biến tính có đi có lại không chính thức thành ngân sách chung có quy tắc rõ hơn.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **연락 문화: nhịp liên lạc như một kỳ vọng quan hệ** nối từ **회비, 더치페이 và ai trả tiền?** sang **읽씹, 안읽씹 và lo âu về thời gian phản hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 연락 문화: nhịp liên lạc như một kỳ vọng quan hệ
 
 Trạng thái đã đọc của KakaoTalk, nhắn tin nhanh và điện thoại luôn kết nối tạo kỳ vọng về thời gian phản hồi. Trong quan hệ gần, trả lời chậm có thể được diễn giải về mặt xã hội mạnh hơn email.
 
 Công nghệ tạo **khả năng quan sát (observability / 관측 가능성)**: khi biết tin đã được đọc, bất định về việc “đã nhận chưa?” chuyển thành bất định về ý định “tại sao chưa trả lời?”. Đây là hiệu ứng trực tiếp của tính năng thông báo đã đọc.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **읽씹, 안읽씹 và lo âu về thời gian phản hồi** nối từ **연락 문화: nhịp liên lạc như một kỳ vọng quan hệ** sang **단톡방: chat nhóm như một phòng có kiến trúc xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽씹, 안읽씹 và lo âu về thời gian phản hồi
 
@@ -225,8 +185,6 @@ Trước khi có thông báo đã đọc, người gửi không biết tin đã 
 
 Tuy nhiên không nên diễn giải quá mức. Trả lời chậm không tự động chứng minh thiếu tôn trọng hay mất hứng thú. Công việc, giấc ngủ, năng lượng cảm xúc và quá tải thông báo đều là lời giải thích thay thế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **단톡방: chat nhóm như một phòng có kiến trúc xã hội** nối từ **읽씹, 안읽씹 và lo âu về thời gian phản hồi** sang **Không gian công cộng: phép lịch sự là phối hợp giữa người lạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 단톡방: chat nhóm như một phòng có kiến trúc xã hội
 
 `단톡방` là phòng chat nhóm KakaoTalk. Công ty, gia đình, phụ huynh trường học, khu căn hộ, câu lạc bộ và nhóm bạn đều có thể dùng.
@@ -234,8 +192,6 @@ Tuy nhiên không nên diễn giải quá mức. Trả lời chậm không tự 
 Chat nhóm tạo các vấn đề riêng: ai cần được nhắc tên, tin nào cần trả lời, có nên rời phòng, im lặng có nghĩa gì, tin việc sau giờ làm có tạo kỳ vọng phản hồi hay không. Đây là nơi ranh giới giữa hạ tầng và phép lịch sự rất rõ.
 
 `공지`, tin ghim hoặc reaction giúp giảm trao đổi trùng lặp. Nhưng quá nhiều nhóm cũng tạo mệt mỏi vì thông báo.
-
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Không gian công cộng: phép lịch sự là phối hợp giữa người lạ** nối từ **단톡방: chat nhóm như một phòng có kiến trúc xã hội** sang **Thể hiện tình cảm nơi công cộng và quyền riêng tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Không gian công cộng: phép lịch sự là phối hợp giữa người lạ
 
@@ -245,15 +201,11 @@ Loại quy tắc này gần giao thức giao thông hơn nghi lễ gia đình: m
 
 Một số quy ước như “đứng một bên thang cuốn” có thể thay đổi theo hướng dẫn an toàn và địa điểm, nên không học như truyền thống bất biến. Hãy ưu tiên biển chỉ dẫn hiện tại của cơ sở.
 
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Thể hiện tình cảm nơi công cộng và quyền riêng tư** nối từ **Không gian công cộng: phép lịch sự là phối hợp giữa người lạ** sang **Quan hệ cũng có một ngân sách hữu hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thể hiện tình cảm nơi công cộng và quyền riêng tư
 
 Mức thể hiện tình cảm công khai, đồ đôi, photo booth và đăng mạng xã hội thay đổi mạnh theo thế hệ. Hàn Quốc vừa có văn hoá công khai danh tính cặp đôi ở một số nhóm, vừa có quan tâm cao tới quyền riêng tư. Không có một mức “bảo thủ/tự do” duy nhất cho toàn xã hội.
 
 Photo booth như `인생네컷` và các studio tự chụp trở thành nghi lễ xã hội mới: bạn bè hoặc cặp đôi chụp theo khung rồi chia sẻ trực tuyến. Đây là ví dụ một giao diện thương mại trở thành thực hành lưu giữ ký ức.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Quan hệ cũng có một ngân sách hữu hạn** nối từ **Thể hiện tình cảm nơi công cộng và quyền riêng tư** sang **강한 연결 và 약한 연결: bạn thân và người quen có chức năng khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ cũng có một ngân sách hữu hạn
 
@@ -272,8 +224,6 @@ Không phải quan hệ càng quan trọng thì mọi thành phần càng phải
 
 Điểm quan trọng là mỗi cá nhân có ngân sách hữu hạn. Khi số nhóm chat, đám cưới, cuộc hẹn, công việc và nghĩa vụ gia đình tăng, **chi phí duy trì mạng quan hệ** cũng tăng. Vì vậy việc từ chối một lời mời không tự động đồng nghĩa coi nhẹ quan hệ; đôi khi đó là quản lý năng lực hữu hạn.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **강한 연결 và 약한 연결: bạn thân và người quen có chức năng khác nhau** nối từ **Quan hệ cũng có một ngân sách hữu hạn** sang **관계의 장부: có đi có lại không nhất thiết là “tính toán sòng phẳng”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 강한 연결 và 약한 연결: bạn thân và người quen có chức năng khác nhau
 
 Trong lý thuyết mạng xã hội, **liên kết mạnh (strong tie)** thường có mức tin cậy, tần suất tương tác và hỗ trợ cao; **liên kết yếu (weak tie)** có thể ít thân hơn nhưng mở ra thông tin và mạng mới.
@@ -281,8 +231,6 @@ Trong lý thuyết mạng xã hội, **liên kết mạnh (strong tie)** thườ
 `절친` có thể là liên kết mạnh; `지인`, cựu đồng nghiệp, người cùng câu lạc bộ có thể hoạt động như liên kết yếu. Hai loại không phải tốt–xấu. Liên kết mạnh giúp vượt khủng hoảng; liên kết yếu giúp tìm việc, biết cơ hội hoặc tiếp xúc với nhóm mới.
 
 Một mạng chỉ có bạn rất thân có thể sâu nhưng hẹp; một mạng chỉ có người quen rộng nhưng thiếu hỗ trợ khi gặp khó. Vốn xã hội thường cần cả hai.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **관계의 장부: có đi có lại không nhất thiết là “tính toán sòng phẳng”** nối từ **강한 연결 và 약한 연결: bạn thân và người quen có chức năng khác nhau** sang **거절: nói “không” là một phần của quan hệ, không phải phá huỷ quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관계의 장부: có đi có lại không nhất thiết là “tính toán sòng phẳng”
 
@@ -300,8 +248,6 @@ Quan hệ thân thường hoạt động gần mô hình thứ hai hơn. Việc 
 
 Điểm phân tích là tách **có đi có lại (reciprocity)** khỏi **giao dịch tức thời (immediate exchange)**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **거절: nói “không” là một phần của quan hệ, không phải phá huỷ quan hệ** nối từ **관계의 장부: có đi có lại không nhất thiết là “tính toán sòng phẳng”** sang **친절과 의무: sự tử tế mất ý nghĩa khi bị mặc định là bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 거절: nói “không” là một phần của quan hệ, không phải phá huỷ quan hệ
 
 Trong môi trường coi trọng hài hoà, từ chối trực tiếp có thể được làm mềm bằng lý do hoặc phương án thay thế. Ví dụ, thay vì một `안 돼요` trống, người nói có thể nói `그날은 일정이 있어서 어려울 것 같아요. 다음 주는 괜찮습니다.`
@@ -312,8 +258,6 @@ Một quan hệ lành mạnh cần cho phép cả hai bên nói không. Nếu m�
 
 Do đó khi học phép lịch sự Hàn Quốc, cần học đồng thời **cách giữ quan hệ** và **cách đặt ranh giới**.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **친절과 의무: sự tử tế mất ý nghĩa khi bị mặc định là bắt buộc** nối từ **거절: nói “không” là một phần của quan hệ, không phải phá huỷ quan hệ** sang **관계 피로: mệt mỏi quan hệ là đầu ra của quá nhiều kênh duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 친절과 의무: sự tử tế mất ý nghĩa khi bị mặc định là bắt buộc
 
 Một đồng nghiệp mua cà phê, người lớn tuổi trả bữa ăn hoặc bạn bè giúp chuyển nhà có thể là sự tử tế. Nhưng nếu hành vi được xem như nghĩa vụ tuyệt đối theo tuổi hoặc vai trò, người thực hiện mất quyền lựa chọn.
@@ -321,8 +265,6 @@ Một đồng nghiệp mua cà phê, người lớn tuổi trả bữa ăn hoặ
 Đây là ranh giới giữa **chuẩn mực mô tả** và **chuẩn mực áp đặt**.
 
 Phân tích văn hoá nên nói “hành vi này thường được hiểu là lịch sự trong bối cảnh X”, không nói “người ở vai trò X bắt buộc phải làm”. Cách thứ hai biến mô tả xã hội thành mệnh lệnh đạo đức.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **관계 피로: mệt mỏi quan hệ là đầu ra của quá nhiều kênh duy trì** nối từ **친절과 의무: sự tử tế mất ý nghĩa khi bị mặc định là bắt buộc** sang **관계의 감쇠: quan hệ có thể yếu dần khi tần suất tương tác giảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관계 피로: mệt mỏi quan hệ là đầu ra của quá nhiều kênh duy trì
 
@@ -337,8 +279,6 @@ nhiều kênh liên lạc
 ```
 
 Phản ứng có thể là tắt thông báo, trả lời theo lô, thu hẹp nhóm, chuyển một số quan hệ sang gặp định kỳ thay vì chat liên tục. Đây không nhất thiết là “lạnh lùng hơn”; nó có thể là chiến lược chống quá tải.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **관계의 감쇠: quan hệ có thể yếu dần khi tần suất tương tác giảm** nối từ **관계 피로: mệt mỏi quan hệ là đầu ra của quá nhiều kênh duy trì** sang **관계 중첩: một người có thể đồng thời là đồng nghiệp, tiền bối và bạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관계의 감쇠: quan hệ có thể yếu dần khi tần suất tương tác giảm
 
@@ -356,8 +296,6 @@ không gian chung biến mất
 
 Duy trì quan hệ từ xa cần chủ động hơn vì hạ tầng tình cờ đã mất.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **관계 중첩: một người có thể đồng thời là đồng nghiệp, tiền bối và bạn** nối từ **관계의 감쇠: quan hệ có thể yếu dần khi tần suất tương tác giảm** sang **사과와 관계회복: xin lỗi hiệu quả không chỉ nằm ở từ “미안해”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 관계 중첩: một người có thể đồng thời là đồng nghiệp, tiền bối và bạn
 
 Quan hệ xã hội không luôn nằm trong một nhãn. Một người có thể là `선배`, đồng nghiệp cùng dự án và bạn uống cà phê riêng. Mỗi lớp tạo kỳ vọng khác nhau.
@@ -374,8 +312,6 @@ Nếu không tách bối cảnh, phản hồi công việc có thể bị đọc
 
 Kỹ năng quan hệ trưởng thành là biết **vai trò nào đang hoạt động trong tình huống này**.
 
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **사과와 관계회복: xin lỗi hiệu quả không chỉ nằm ở từ “미안해”** nối từ **관계 중첩: một người có thể đồng thời là đồng nghiệp, tiền bối và bạn** sang **선물 선택: quà tặng là bài toán tín hiệu dưới bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 사과와 관계회복: xin lỗi hiệu quả không chỉ nằm ở từ “미안해”
 
 Khi quan hệ bị tổn thương, lời xin lỗi có nhiều thành phần:
@@ -391,8 +327,6 @@ nhận diện hành vi
 Một lời xin lỗi dài nhưng phủ nhận tác động có thể kém hiệu quả hơn lời ngắn nhưng rõ trách nhiệm. Ngược lại, yêu cầu ai đó nhận trách nhiệm cho điều họ không làm chỉ để “giữ hoà khí” cũng không tạo phục hồi thật.
 
 Trong môi trường có thể diện cao, xin lỗi đôi khi được diễn đạt gián tiếp hơn, nhưng cơ chế phục hồi vẫn cần tín hiệu rằng người kia đã hiểu điều gì gây tổn thương.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **선물 선택: quà tặng là bài toán tín hiệu dưới bất định** nối từ **사과와 관계회복: xin lỗi hiệu quả không chỉ nằm ở từ “미안해”** sang **경조사와 기회비용: “có mặt” cũng là một dạng tài nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 선물 선택: quà tặng là bài toán tín hiệu dưới bất định
 
@@ -411,8 +345,6 @@ phù hợp dịp
 
 Đây là lý do một món thực dụng đúng lúc có thể được đánh giá cao hơn món đắt nhưng sai bối cảnh.
 
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **경조사와 기회비용: “có mặt” cũng là một dạng tài nguyên** nối từ **선물 선택: quà tặng là bài toán tín hiệu dưới bất định** sang **디지털 친밀감: thân mật số không phải bản sao nghèo hơn của gặp trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 경조사와 기회비용: “có mặt” cũng là một dạng tài nguyên
 
 Tham dự đám cưới, tang lễ, tân gia hoặc sự kiện nhóm tiêu tốn thời gian di chuyển, tiền và năng lượng. Với người có gia đình nhỏ, làm ca hoặc sống xa, chi phí có mặt có thể rất cao.
@@ -420,8 +352,6 @@ Tham dự đám cưới, tang lễ, tân gia hoặc sự kiện nhóm tiêu tố
 Vì vậy mức tham dự không thể dùng như thước đo tuyệt đối của tình cảm. Quà hoặc lời nhắn có thể là cách thay thế khi hiện diện vật lý quá đắt.
 
 Khi xã hội di động hơn và mạng quan hệ phân tán địa lý, nghi thức cũng phải thích nghi với **chi phí cơ hội của sự hiện diện (opportunity cost of presence)**.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **디지털 친밀감: thân mật số không phải bản sao nghèo hơn của gặp trực tiếp** nối từ **경조사와 기회비용: “có mặt” cũng là một dạng tài nguyên** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 디지털 친밀감: thân mật số không phải bản sao nghèo hơn của gặp trực tiếp
 
@@ -437,13 +367,9 @@ gặp trực tiếp → băng thông cao + ký ức chung mạnh
 
 Không nên xếp một kênh là “thật” còn kênh kia là “ảo”; câu hỏi là kênh nào phù hợp loại tương tác nào.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Mô hình tư duy** tổng hợp từ **디지털 친밀감: thân mật số không phải bản sao nghèo hơn của gặp trực tiếp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Phép lịch sự hằng ngày là một **giao thức duy trì mạng quan hệ**. Cử chỉ, thời điểm, quà, việc có mặt và phản hồi số đều tiêu tốn một phần ngân sách quan hệ. Khi quan hệ rõ và thân, nghi thức có thể nhẹ đi; khi bất định hoặc thứ bậc cao, giao thức trang trọng hơn. Quan hệ bền không đòi phản hồi tối đa mọi lúc mà cần cân bằng giữa có đi có lại, ranh giới, sửa chữa xung đột và khả năng duy trì lâu dài.
-
-> **Nối mạch:** Trong **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -464,8 +390,6 @@ Không nên xếp một kênh là “thật” còn kênh kia là “ảo”; c�
 “Có đi có lại nghĩa là phải trả đúng bằng giá trị đã nhận” nhầm cân bằng dài hạn với kế toán tức thời.
 
 “Ít nhắn hơn nghĩa là quan hệ chắc chắn kém đi” bỏ qua loại quan hệ, kênh liên lạc và chất lượng hỗ trợ khi cần.
-
-> **Nối mạch:** Ở chặng này của **Phép lịch sự hằng ngày, quà tặng, bạn bè và quan hệ thân mật**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

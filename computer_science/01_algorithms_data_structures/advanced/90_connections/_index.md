@@ -20,8 +20,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 - [Streaming Analytics](./06_case_study_streaming_analytics.md) — Hash Map, Count-Min Sketch, HyperLogLog, heavy hitters, quantile sketch, windows và distributed state.
 - [Scheduler & Backpressure](./07_case_study_scheduler_backpressure.md) — Queue/Deque/Priority Queue, fairness, aging, work stealing, bounded queue, retry và admission control.
 
-> **Chuyển mạch:** Trong **90connections**, **Các chương tổng hợp** cho ta quy tắc; **Trường hợp (case / 사례) study xuyên nhiều chapter** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách dùng các trường hợp (case / 사례) study** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) study xuyên nhiều chapter
 
 - [Database Indexing](./03_case_study_database_indexing.md) — băm (hash / 해시) chỉ mục (index / 인덱스), B+cây (tree / 트리), Buffer Pool, Bloom Filter, LSM, phép nối (join / 조인) và crash consistency.
@@ -29,8 +27,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 - [Routing System](./05_case_study_routing_graph_system.md) — đồ thị (graph / 그래프) biểu diễn (representation / 표현), Dijkstra, Priority hàng đợi (queue / 큐), động (dynamic / 동적) topology, longest-prefix match, ECMP và failover.
 - [Streaming Analytics](./06_case_study_streaming_analytics.md) — băm (hash / 해시) Map, Count-Min Sketch, HyperLogLog, heavy hitters, quantile sketch, windows và phân tán (distributed / 분산) trạng thái (state / 상태).
 - [Scheduler & Backpressure](./07_case_study_scheduler_backpressure.md) — hàng đợi (queue / 큐)/Deque/Priority hàng đợi (queue / 큐), fairness, aging, công việc (work / 작업) stealing, bounded hàng đợi (queue / 큐), thử lại (retry / 재시도) và admission điều khiển (control / 제어).
-
-> **Chuyển mạch:** Ở chặng này của **90connections**, **Trường hợp (case / 사례) study xuyên nhiều chapter** cho ta quy tắc; **Cách dùng các trường hợp (case / 사례) study** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cách dùng các trường hợp (case / 사례) study
 

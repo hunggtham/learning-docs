@@ -12,15 +12,11 @@ Degree đếm connections; đường dẫn (path / 경로) là chuỗi (sequence
 
 Xem nền toán tại [Graph Theory](../../mathematics/07_discrete_cs/00_graph_theory.md).
 
-> **Nối mạch:** **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** nối từ **Đồ thị (graph / 그래프) mô hình (model / 모델)** sang **BFS: shortest đường dẫn (path / 경로) theo số cạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)
 
 Adjacency ma trận (matrix / 행렬) dùng `|V|×|V|` entries, edge lookup O(1) nhưng không gian (space / 공간) O(V²). Phù hợp dense đồ thị (graph / 그래프) hoặc algebraic operations.
 
 Adjacency danh sách (list / 목록) lưu neighbors cho mỗi vertex, không gian (space / 공간) O(V+E), phù hợp sparse graphs phổ biến. biểu diễn (representation / 표현) quyết định iteration chi phí (cost / 비용) và locality.
-
-> **Nối mạch:** **Biểu diễn (representation / 표현): adjacency danh sách (list / 목록) vs ma trận (matrix / 행렬)** đặt đầu vào cho **BFS: shortest đường dẫn (path / 경로) theo số cạnh**, rồi **DFS: đi sâu để lộ cấu trúc (structure / 구조)** mở rộng hệ quả.
 
 ## BFS: shortest đường dẫn (path / 경로) theo số cạnh
 
@@ -30,15 +26,11 @@ Bất biến (invariant / 불변식): trước khi xử lý tầng (layer / 계�
 
 BFS dùng trong degrees-of-separation, shortest hops, crawling và level-order traversal.
 
-> **Nối mạch:** **BFS: shortest đường dẫn (path / 경로) theo số cạnh** đặt đầu vào cho **DFS: đi sâu để lộ cấu trúc (structure / 구조)**, rồi **Topological sort và phụ thuộc (dependency / 의존성)** mở rộng hệ quả.
-
 ## DFS: đi sâu để lộ cấu trúc (structure / 구조)
 
 Depth-First tìm kiếm (search / 검색) dùng recursion hoặc tường minh (explicit / 명시적) ngăn xếp (stack / 스택). Entry/exit times và recursion ngăn xếp (stack / 스택) giúp detect cycles, topological sorting, SCC algorithms và articulation phân tích (analysis / 분석).
 
 DFS không bảo đảm shortest đường dẫn (path / 경로) trong unweighted đồ thị (graph / 그래프), vì nó có thể chọn một nhánh dài trước.
-
-> **Nối mạch:** **Topological sort và phụ thuộc (dependency / 의존성)** nối từ **DFS: đi sâu để lộ cấu trúc (structure / 구조)** sang **Dijkstra và weighted shortest đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Topological sort và phụ thuộc (dependency / 의존성)
 
@@ -46,15 +38,11 @@ Directed acyclic đồ thị (graph / 그래프) — DAG cho phép tuyến tính
 
 Nếu đồ thị (graph / 그래프) có cycle, topological thứ tự (order / 순서) không tồn tại. Cycle thường chính là tín hiệu (signal / 신호) thiết kế: gói (package / 패키지) A phụ thuộc B phụ thuộc lại A; di chuyển (migration / 마이그레이션) dependencies vòng lặp (loop / 루프); tasks deadlock lô-gic (logic / 논리).
 
-> **Nối mạch:** **Topological sort và phụ thuộc (dependency / 의존성)** đặt đầu vào cho **Dijkstra và weighted shortest đường dẫn (path / 경로)**, rồi **Minimum Spanning cây (tree / 트리)** mở rộng hệ quả.
-
 ## Dijkstra và weighted shortest đường dẫn (path / 경로)
 
 Dijkstra giải shortest paths khi edge weights non-negative. Nó repeatedly chọn unsettled vertex có smallest tentative distance, thường bằng priority hàng đợi (queue / 큐).
 
 Tại sao non-negative quan trọng? Khi chọn distance nhỏ nhất làm final, một edge âm từ nút (node / 노드) chưa xử lý có thể sau đó tạo đường ngắn hơn, phá bất biến (invariant / 불변식). Với negative edges, Bellman–Ford hoặc mô hình (model / 모델) khác cần dùng.
-
-> **Nối mạch:** **Dijkstra và weighted shortest đường dẫn (path / 경로)** đặt đầu vào cho **Minimum Spanning cây (tree / 트리)**, rồi **Union-Find** mở rộng hệ quả.
 
 ## Minimum Spanning cây (tree / 트리)
 
@@ -62,15 +50,11 @@ MST kết nối mọi vertices với total edge weight nhỏ nhất, không tạ
 
 MST khác shortest-path cây (tree / 트리): tối ưu tổng mạng (network / 네트워크) chi phí (cost / 비용), không tối ưu distance từ một nguồn (source / 소스).
 
-> **Nối mạch:** **Union-Find** nối từ **Minimum Spanning cây (tree / 트리)** sang **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Union-Find
 
 Disjoint Set Union quản lý partition thành components với `find` và `union`. đường dẫn (path / 경로) compression + union by rank/kích thước (size / 크기) cho amortized gần constant, chính xác hơn là inverse-Ackermann.
 
 Nó minh họa cấu trúc dữ liệu (data structure / 자료구조) được thiết kế quanh một rất nhỏ thao tác (operation / 연산) set nhưng cực hiệu quả cho connectivity.
-
-> **Nối mạch:** **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)** nối từ **Union-Find** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)
 
@@ -78,13 +62,9 @@ Gói (package / 패키지) dependencies, services, quyền sở hữu (ownership
 
 Garbage collector tracing đối tượng (object / 객체) đồ thị (graph / 그래프) từ roots để xác định reachability. Git lần ghi nhận (commit / 커밋) lịch sử (history / 이력) là DAG. Web pages + links tạo directed đồ thị (graph / 그래프).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Đồ thị (graph / 그래프) ở software các hệ thống (systems / 시스템들)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi entities có **many-to-many relationships**, nghĩ bằng đồ thị (graph / 그래프). Sau đó hỏi: directed hay undirected, weighted hay unweighted, sparse hay dense, và thao tác (operation / 연산) chính là reachability, shortest đường dẫn (path / 경로), thứ tự (ordering / 순서), connectivity hay luồng (flow / 흐름)?
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -93,8 +73,6 @@ Garbage collector tracing đối tượng (object / 객체) đồ thị (graph /
 **“BFS luôn nhanh hơn DFS.”** Cả hai O(V+E) trong adjacency-list mô hình (model / 모델); bộ nhớ (memory / 메모리) và traversal hành vi (behavior / 동작) khác.
 
 **“Dijkstra dùng được với negative weight nếu không có negative cycle.”** bất biến (invariant / 불변식) greedy của Dijkstra vẫn có thể sai với negative edge; dùng thuật toán (algorithm / 알고리즘) phù hợp.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

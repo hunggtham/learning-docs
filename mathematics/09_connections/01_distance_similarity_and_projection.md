@@ -41,8 +41,6 @@ Các norms khác nhau định nghĩa đơn vị (unit / 단위) balls khác nhau
 
 `L1` thường gắn với sparse cấu trúc (structure / 구조); `L2` tạo smooth rotationally symmetric hình học (geometry / 기하학); `L∞` kiểm soát worst coordinate deviation.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **2. Distance từ norm** nối từ **1. Norm đo kích thước (size / 크기) của một véc-tơ (vector / 벡터)** sang **3. chỉ số (metric / 지표) cần properties gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Distance từ norm
 
 Một dùng chung (common / 공통) construction:
@@ -65,8 +63,6 @@ d_1(x,y)=\sum_i|x_i-y_i|.
 
 Trong grid movement, `L1` có thể natural hơn `L2`. Trong vật lý (physical / 물리적) Euclidean không gian (space / 공간), `L2` thường phù hợp hơn.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **3. chỉ số (metric / 지표) cần properties gì?** nối từ **2. Distance từ norm** sang **4. quy mô (scale / 규모) quyết định hình học (geometry / 기하학) quan sát được**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. chỉ số (metric / 지표) cần properties gì?
 
 Một chỉ số (metric / 지표) `d` thường thỏa:
@@ -81,8 +77,6 @@ d(x,y) ≥ 0
 Triangle inequality không chỉ là formalism; nó encode idea rằng indirect tuyến (route / 경로) không thể ngắn hơn arbitrary amount so với direct quan hệ (relation / 관계) trong chỉ số (metric / 지표) hình học (geometry / 기하학).
 
 Không phải mọi similarity score là chỉ số (metric / 지표).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **4. quy mô (scale / 규모) quyết định hình học (geometry / 기하학) quan sát được** nối từ **3. chỉ số (metric / 지표) cần properties gì?** sang **5. Inner sản phẩm (product / 제품) đo alignment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. quy mô (scale / 규모) quyết định hình học (geometry / 기하학) quan sát được
 
@@ -113,8 +107,6 @@ Nhưng standardization cũng encode giả định (assumption / 가정):
 
 Preprocessing không neutral; nó thay hình học (geometry / 기하학).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **5. Inner sản phẩm (product / 제품) đo alignment** nối từ **4. quy mô (scale / 규모) quyết định hình học (geometry / 기하학) quan sát được** sang **6. Cosine similarity bỏ magnitude**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Inner sản phẩm (product / 제품) đo alignment
 
 Trong Euclidean không gian (space / 공간):
@@ -137,8 +129,6 @@ Angle:
 
 Inner sản phẩm (product / 제품) không chỉ là multiplication trick. Nó tạo notion angle, orthogonality và projection.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **6. Cosine similarity bỏ magnitude** nối từ **5. Inner sản phẩm (product / 제품) đo alignment** sang **7. Projection là nearest-point bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Cosine similarity bỏ magnitude
 
 Cosine similarity so sánh hướng của hai vector và bỏ qua độ lớn. Nó phù hợp khi pattern tương đối quan trọng hơn scale, nhưng cần thận trọng khi magnitude mang ý nghĩa thực.
@@ -153,8 +143,6 @@ Nếu embeddings cùng direction nhưng norms khác, cosine có thể vẫn gầ
 Điều này hữu ích khi ngữ nghĩa (semantic / 의미적) direction quan trọng hơn quy mô (scale / 규모), nhưng không universal.
 
 Nếu véc-tơ (vector / 벡터) norm chứa meaningful confidence/intensity, normalize có thể bỏ thông tin (information / 정보) quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **7. Projection là nearest-point bài toán (problem / 문제)** nối từ **6. Cosine similarity bỏ magnitude** sang **8. Least squares là projection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Projection là nearest-point bài toán (problem / 문제)
 
@@ -179,8 +167,6 @@ r=v-\hat v
 vuông góc với subspace.
 
 Projection formula không arbitrary; nó xuất hiện vì ta minimize squared Euclidean distance.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **8. Least squares là projection** nối từ **7. Projection là nearest-point bài toán (problem / 문제)** sang **9. PCA là projection nhưng criterion khác tác vụ (task / 작업) relevance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Least squares là projection
 
@@ -212,8 +198,6 @@ A^TA\hat x=A^Tb.
 
 Regression vì vậy là hình học (geometry / 기하학) trước khi là statistics.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **9. PCA là projection nhưng criterion khác tác vụ (task / 작업) relevance** nối từ **8. Least squares là projection** sang **10. Mahalanobis distance: covariance tạo hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. PCA là projection nhưng criterion khác tác vụ (task / 작업) relevance
 
 PCA chọn directions maximize variance.
@@ -230,8 +214,6 @@ high variance
 Một low-variance direction vẫn có thể chứa lớp (class / 클래스) tín hiệu (signal / 신호).
 
 Dimensionality reduction luôn gắn với criterion cụ thể.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **10. Mahalanobis distance: covariance tạo hình học (geometry / 기하학)** nối từ **9. PCA là projection nhưng criterion khác tác vụ (task / 작업) relevance** sang **11. Singular covariance và pseudoinverse**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Mahalanobis distance: covariance tạo hình học (geometry / 기하학)
 
@@ -258,8 +240,6 @@ z=\Sigma^{-1/2}(x-\mu),
 
 Mahalanobis distance trở thành Euclidean distance trong whitened coordinates.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **11. Singular covariance và pseudoinverse** nối từ **10. Mahalanobis distance: covariance tạo hình học (geometry / 기하학)** sang **12. Kernel viewpoint: similarity có thể implicit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Singular covariance và pseudoinverse
 
 Nếu features linearly dependent, `Σ` singular.
@@ -277,8 +257,6 @@ work in lower-dimensional support
 
 Chỉ số (metric / 지표) formula luôn mang các giả định (assumptions / 가정들) về rank và conditioning.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **12. Kernel viewpoint: similarity có thể implicit** nối từ **11. Singular covariance và pseudoinverse** sang **13. Distance concentration ở high dimensions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Kernel viewpoint: similarity có thể implicit
 
 Kernel phương thức (method / 메서드) dùng hàm (function / 함수):
@@ -292,8 +270,6 @@ mà không nhất thiết explicitly construct high-dimensional `φ(x)`.
 Kernel trick nói similarity có thể encode inner sản phẩm (product / 제품) trong tính năng (feature / 기능) không gian (space / 공간) khác.
 
 Điều này nối hình học (geometry / 기하학) với nonlinear các mô hình (models / 모델들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **13. Distance concentration ở high dimensions** nối từ **12. Kernel viewpoint: similarity có thể implicit** sang **14. Clustering phụ thuộc hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Distance concentration ở high dimensions
 
@@ -311,8 +287,6 @@ local neighborhoods kém intuitive hơn
 
 Chỉ số (metric / 지표) choice và biểu diễn (representation / 표현) học tập (learning / 학습) càng quan trọng.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **14. Clustering phụ thuộc hình học (geometry / 기하학)** nối từ **13. Distance concentration ở high dimensions** sang **15. Similarity tìm kiếm (search / 검색) trong embeddings**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Clustering phụ thuộc hình học (geometry / 기하학)
 
 K-means minimizes:
@@ -326,8 +300,6 @@ Nó ưu tiên roughly spherical clusters theo Euclidean hình học (geometry / 
 Nếu clusters curved, categorical hoặc strongly different density, K-means hình học (geometry / 기하학) có thể sai.
 
 “Cluster thật” không độc lập với chỉ số (metric / 지표)/mô hình (model / 모델).
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **15. Similarity tìm kiếm (search / 검색) trong embeddings** nối từ **14. Clustering phụ thuộc hình học (geometry / 기하학)** sang **16. Camera projection và mất mát (loss / 손실) of thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Similarity tìm kiếm (search / 검색) trong embeddings
 
@@ -355,8 +327,6 @@ Vì vậy cosine ranking và Euclidean ranking có thể equivalent trên đơn 
 
 Đây là useful hiện thực (implementation / 구현) liên kết (connection / 연결).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **16. Camera projection và mất mát (loss / 손실) of thông tin (information / 정보)** nối từ **15. Similarity tìm kiếm (search / 검색) trong embeddings** sang **17. Distance trong graphs khác Euclidean distance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Camera projection và mất mát (loss / 손실) of thông tin (information / 정보)
 
 3D điểm (point / 지점) projected lên 2D ảnh (image / 이미지) mất độ sâu (depth / 깊이) thông tin (information / 정보).
@@ -368,8 +338,6 @@ Nó minh họa broader principle:
 > Projection giữ cấu trúc (structure / 구조) theo chosen biểu diễn (representation / 표현) nhưng discard orthogonal/unobserved thông tin (information / 정보).
 
 Inverse reconstruction cần additional các giả định (assumptions / 가정들), multiple views hoặc priors.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **17. Distance trong graphs khác Euclidean distance** nối từ **16. Camera projection và mất mát (loss / 손실) of thông tin (information / 정보)** sang **18. Finance: covariance hình học (geometry / 기하학) của portfolios**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Distance trong graphs khác Euclidean distance
 
@@ -385,8 +353,6 @@ Xã hội (social / 사회적) mạng (network / 네트워크) “2 hops apart�
 
 Đồ thị (graph / 그래프) embeddings cố map structural distance/similarity vào véc-tơ (vector / 벡터) không gian (space / 공간), luôn có distortion sự đánh đổi (trade-off / 트레이드오프).
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **18. Finance: covariance hình học (geometry / 기하학) của portfolios** nối từ **17. Distance trong graphs khác Euclidean distance** sang **19. chỉ số (metric / 지표) choice là modeling giả định (assumption / 가정)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Finance: covariance hình học (geometry / 기하학) của portfolios
 
 Portfolio variance:
@@ -400,8 +366,6 @@ Contours constant variance là ellipsoids.
 Portfolio tối ưu hóa (optimization / 최적화) không dùng Euclidean length của weights; covariance ma trận (matrix / 행렬) định nghĩa rủi ro (risk / 위험) hình học (geometry / 기하학).
 
 Một direction trong weight không gian (space / 공간) có thể “dài” về rủi ro (risk / 위험) dù coefficients numerically nhỏ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **19. chỉ số (metric / 지표) choice là modeling giả định (assumption / 가정)** nối từ **18. Finance: covariance hình học (geometry / 기하학) của portfolios** sang **Dùng chung (common / 공통) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. chỉ số (metric / 지표) choice là modeling giả định (assumption / 가정)
 
@@ -419,8 +383,6 @@ hai người thực sự giống nhau
 ```
 
 Hình học (geometry / 기하학) inherited from dữ liệu (data / 데이터)/mô hình (model / 모델)/mục tiêu (objective / 목표), không phải truth universal.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **Dùng chung (common / 공통) thất bại (failure / 실패) modes** nối từ **19. chỉ số (metric / 지표) choice là modeling giả định (assumption / 가정)** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -444,8 +406,6 @@ Nearest-neighbor hình học (geometry / 기하학) thay đổi mạnh.
 
 Projection discard components ngoài subspace.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** nối từ **Dùng chung (common / 공통) thất bại (failure / 실패) modes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối đưa distance, similarity và projection vào geometry, embeddings, nearest neighbors và anomaly detection. Hãy chọn metric theo invariance mà bài toán thực sự cần.
@@ -462,8 +422,6 @@ graph → shortest-path metric
 AI search → embedding similarity
 Finance → quadratic risk geometry
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Distance, Similarity và Projection: chọn hình học (geometry / 기하학) cho bài toán (problem / 문제)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

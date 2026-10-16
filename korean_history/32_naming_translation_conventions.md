@@ -59,8 +59,6 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | Đấu tranh Dân chủ Tháng Sáu | 6월 민주항쟁 | June Democratic Struggle |
 | Làn sóng Hàn Quốc | 한류 | Hallyu / Korean Wave |
 
-> **Chuyển mạch:** Quick table giữ mapping Việt–Hàn–Anh ổn định; place/institution names dùng dạng tra cứu nhất quán, còn mental model quyết định khi nào cần giữ tên gốc để tránh mất ngữ cảnh.
-
 ## Tên địa điểm và thiết chế trong các companion mới
 
 Phần này là mục tra cứu có mục đích cụ thể trong thư viện. Hãy xác định câu hỏi cần trả lời, chọn mục liên quan và ghi lại giới hạn của thông tin trước khi kết luận.
@@ -79,8 +77,6 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | Khu công nghiệp Ulsan | 울산 산업단지 | Ulsan Industrial Complex; giữ tên thành phố khi nói về không gian công nghiệp |
 
 Với thuật ngữ nhà ở hiện đại, giữ **jeonse (전세)** và **wolse (월세)** sau bản dịch giải thích ở lần đầu; không dùng “thuê nhà Hàn Quốc” như một nhãn chung vì hai cơ chế tiền đặt cọc và trả tháng khác nhau. Với tên sự kiện gây tranh luận, giữ số hiệu hoặc tên gốc trong ngoặc để tránh làm mất lịch sử của cách gọi.
-
-> **Chuyển mạch:** Companion names provide the mapping cases; mental model next explains when a historical place/institution needs a stable Korean, Vietnamese or English form.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

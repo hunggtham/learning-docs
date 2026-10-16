@@ -10,15 +10,11 @@ Giao thức (protocol / 프로토콜) định nghĩa message format, trạng th�
 
 Giao thức (protocol / 프로토콜) không nhất thiết “reliable”. Ethernet frame có CRC detection; IP best-effort; UDP không retransmit; TCP thêm reliable ordered byte stream. Mỗi tầng (layer / 계층) cung cấp thuộc tính (property / 속성) phù hợp phạm vi (scope / 범위).
 
-> **Nối mạch:** Protocol là contract giữa peers; layering tách trách nhiệm và failure domain, rồi encapsulation đóng gói header/payload qua từng layer.
-
 ## Layering
 
 OSI 7-layer mô hình (model / 모델) hữu ích về vocabulary nhưng Internet ngăn xếp (stack / 스택) thực tế thường được lập luận (reasoning / 추론) như link → internet/mạng (network / 네트워크) → vận chuyển (transport / 전송) → ứng dụng (application / 애플리케이션). tầng (layer / 계층) boundaries không hoàn toàn sạch; firewalls, NAT, TLS termination và proxies tạo cross-layer realities.
 
 Một ứng dụng (application / 애플리케이션) HTTP không cần biết Wi-Fi modulation. IP không cần biết HTTP ngữ nghĩa (semantics / 의미론). Đây là lớp trừu tượng (abstraction / 추상화).
-
-> **Nối mạch:** **Encapsulation** nối từ **Layering** sang **Packet switching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Encapsulation
 
@@ -39,15 +35,11 @@ Receiver unwrap theo chiều ngược. Header chứa siêu dữ liệu (metadata
 
 Encapsulation không “mã hóa bảo mật”; nó chỉ đóng gói cấu trúc (structure / 구조). Encryption như TLS là separate thuộc tính (property / 속성).
 
-> **Nối mạch:** **Packet switching** nối từ **Encapsulation** sang **MTU và fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Packet switching
 
 Internet chia dữ liệu (data / 데이터) thành packets thay vì reserve dedicated circuit cho mỗi conversation. Links multiplex packets từ nhiều flows. Routers forward mỗi packet theo routing trạng thái (state / 상태).
 
 Packet switching sử dụng bandwidth linh hoạt nhưng tạo queueing, mất mát (loss / 손실) và variable delay khi demand vượt sức chứa (capacity / 용량). vận chuyển (transport / 전송)/ứng dụng (application / 애플리케이션) phải sống với những effects này.
-
-> **Nối mạch:** **MTU và fragmentation** nối từ **Packet switching** sang **Addressing ở nhiều layers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MTU và fragmentation
 
@@ -55,21 +47,15 @@ Link có Maximum Transmission đơn vị (unit / 단위) — MTU. IP packet quá
 
 TCP MSS liên quan maximum TCP payload based on đường dẫn (path / 경로)/giao diện (interface / 인터페이스) các giả định (assumptions / 가정들). “Packet kích thước (size / 크기)” vì vậy không một con số universal.
 
-> **Nối mạch:** **Addressing ở nhiều layers** nối từ **MTU và fragmentation** sang **Lỗi (error / 오류) detection**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Addressing ở nhiều layers
 
 MAC address phục vụ local-link delivery lĩnh vực (domain / 도메인); IP address cho network-layer routing; cổng (port / 포트) number identify vận chuyển (transport / 전송) endpoint/ứng dụng (application / 애플리케이션) socket; DNS name là human/ứng dụng (application / 애플리케이션) naming ánh xạ (mapping / 매핑) tới records/addresses.
 
 Một yêu cầu (request / 요청) `example.com:443` trải qua nhiều naming/address layers. Không nên gọi tất cả là “địa chỉ mạng” như một khái niệm duy nhất.
 
-> **Nối mạch:** **Lỗi (error / 오류) detection** nối từ **Addressing ở nhiều layers** sang **Queues và độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lỗi (error / 오류) detection
 
 Frame CRC detect corruption ở link; TCP/UDP checksum cover vận chuyển (transport / 전송) pseudo-header/dữ liệu (data / 데이터) với strength limitations; higher layers may use cryptographic integrity. Detection không đồng nghĩa correction/retransmission; tầng (layer / 계층) chính sách (policy / 정책) quyết định reaction.
-
-> **Nối mạch:** **Queues và độ trễ (latency / 지연 시간)** nối từ **Lỗi (error / 오류) detection** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Queues và độ trễ (latency / 지연 시간)
 
@@ -77,13 +63,9 @@ Router/NIC/socket buffers absorb bursts. Khi buffer full, packet drop; khi buffe
 
 Độ trễ (latency / 지연 시간) có propagation + transmission + processing + queueing. Bandwidth cao giảm transmission thời gian (time / 시간) nhưng không làm speed of light nhanh hơn.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Queues và độ trễ (latency / 지연 시간)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > mạng (network / 네트워크) ngăn xếp (stack / 스택) là **nhiều contracts lồng nhau**. Mỗi tầng (layer / 계층) chỉ thấy payload + siêu dữ liệu (metadata / 메타데이터) cần thiết; độ tin cậy (reliability / 신뢰성)/bảo mật (security / 보안)/naming/routing được thêm ở những tầng khác nhau.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,8 +74,6 @@ Router/NIC/socket buffers absorb bursts. Khi buffer full, packet drop; khi buffe
 **“Nhiều bandwidth nghĩa ping thấp.”** RTT có propagation/queueing/processing; bandwidth và độ trễ (latency / 지연 시간) là dimensions khác.
 
 **“Encapsulation = encryption.”** Encapsulation là framing/siêu dữ liệu (metadata / 메타데이터); encryption bảo confidentiality.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

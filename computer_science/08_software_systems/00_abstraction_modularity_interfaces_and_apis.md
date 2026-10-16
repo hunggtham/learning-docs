@@ -12,15 +12,11 @@ High cohesion nghĩa elements trong mô-đun (module / 모듈) phục vụ purpo
 
 Coupling không thể bằng zero; mục tiêu là dependencies tường minh (explicit / 명시적) và stable.
 
-> **Nối mạch:** Module gom responsibility và change boundary; information hiding che detail, còn interface/API contract tiếp theo giữ consumer độc lập với implementation.
-
 ## Thông tin (information / 정보) hiding
 
 Parnas' principle: mô-đun (module / 모듈) nên hide thiết kế (design / 설계) decisions likely to thay đổi (change / 변경). Encapsulation không chỉ `private` fields; nó che biểu diễn (representation / 표현) và expose operations theo ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
 Ví dụ ngăn xếp (stack / 스택) expose push/pop thay vì cho caller sửa nội bộ (internal / 내부) array chỉ mục (index / 인덱스). cơ sở dữ liệu (database / 데이터베이스) repository expose truy vấn (query / 쿼리) intent thay vì leak liên kết (connection / 연결)/cursor vòng đời (lifecycle / 생명주기) nếu caller không cần.
-
-> **Nối mạch:** **Giao diện (interface / 인터페이스) vs hiện thực (implementation / 구현)** nối từ **Thông tin (information / 정보) hiding** sang **Phụ thuộc (dependency / 의존성) inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giao diện (interface / 인터페이스) vs hiện thực (implementation / 구현)
 
@@ -28,15 +24,11 @@ Giao diện (interface / 인터페이스) mô tả operations/hành vi (behavior
 
 Một API trả danh sách (list / 목록) nhưng không nói thứ tự (ordering / 순서) có stable không; máy khách (client / 클라이언트) vô tình dựa hiện tại (current / 현재) thứ tự (order / 순서); hiện thực (implementation / 구현) đổi kế hoạch truy vấn (query plan / 쿼리 계획) làm thứ tự (order / 순서) khác — đó là hidden đặc tả hợp đồng (contract / 계약) phụ thuộc (dependency / 의존성).
 
-> **Nối mạch:** **Phụ thuộc (dependency / 의존성) inversion** nối từ **Giao diện (interface / 인터페이스) vs hiện thực (implementation / 구현)** sang **API thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phụ thuộc (dependency / 의존성) inversion
 
 High-level chính sách (policy / 정책) không nên phụ thuộc trực tiếp low-level volatile details nếu ranh giới (boundary / 경계) lớp trừu tượng (abstraction / 추상화) hợp lý. phụ thuộc (dependency / 의존성) inversion đưa giao diện (interface / 인터페이스) theo needs của high-level mô-đun (module / 모듈), hiện thực (implementation / 구현) adapters implement.
 
 Nhưng tạo giao diện (interface / 인터페이스) cho mọi lớp (class / 클래스) không tự động decouple; lớp trừu tượng (abstraction / 추상화) vô nghĩa chỉ tăng indirection. giao diện (interface / 인터페이스) đáng có khi có genuine ranh giới (boundary / 경계)/variation/testing quyền sở hữu (ownership / 소유권).
-
-> **Nối mạch:** **API thiết kế (design / 설계)** nối từ **Phụ thuộc (dependency / 의존성) inversion** sang **Versioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## API thiết kế (design / 설계)
 
@@ -44,15 +36,11 @@ Good API làm correct use dễ và misuse khó. Types encode valid states; names
 
 Backward tính tương thích (compatibility / 호환성) là đặc tả hợp đồng (contract / 계약) evolution bài toán (problem / 문제). Adding optional phản hồi (response / 응답) trường dữ liệu (field / 필드) usually easier than removing/renaming required trường dữ liệu (field / 필드). ngữ nghĩa (semantic / 의미적) hành vi (behavior / 동작) changes can break clients even if lược đồ (schema / 스키마) unchanged.
 
-> **Nối mạch:** **Versioning** nối từ **API thiết kế (design / 설계)** sang **Cục bộ (local / 로컬) vs remote giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Versioning
 
 Ngữ nghĩa (semantic / 의미적) Versioning convention major/minor/patch chỉ hữu ích nếu dự án (project / 프로젝트) defines API công khai (public API / 공개 API) and follows ngữ nghĩa (semantics / 의미론). phân tán (distributed / 분산) HTTP APIs may use URL/header versions, additive evolution or năng lực (capability / 역량) negotiation.
 
 Phiên bản (version / 버전) proliferation creates maintenance burden; prefer compatible evolution when possible.
-
-> **Nối mạch:** **Cục bộ (local / 로컬) vs remote giao diện (interface / 인터페이스)** nối từ **Versioning** sang **Đặc tả hợp đồng (contract / 계약) testing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cục bộ (local / 로컬) vs remote giao diện (interface / 인터페이스)
 
@@ -60,27 +48,19 @@ Remote Procedure lời gọi (call / 호출) can look like cục bộ (local / �
 
 A remote lời gọi (call / 호출) needs hết thời gian chờ (timeout / 타임아웃), cancellation, idempotency/thử lại (retry / 재시도) chính sách (policy / 정책) and khả năng quan sát (observability / 관측 가능성). Chatty object-style APIs that are fine in-process may be terrible over mạng (network / 네트워크).
 
-> **Nối mạch:** **Đặc tả hợp đồng (contract / 계약) testing** nối từ **Cục bộ (local / 로컬) vs remote giao diện (interface / 인터페이스)** sang **Conway's Law intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đặc tả hợp đồng (contract / 계약) testing
 
 Bên tiêu thụ (consumer / 소비자)/provider đặc tả hợp đồng (contract / 계약) tests verify tương tác (interaction / 상호작용) các giả định (assumptions / 가정들) without full E2E môi trường (environment / 환경). But đặc tả hợp đồng (contract / 계약) should focus observable hành vi (behavior / 동작), not freeze nội bộ (internal / 내부) hiện thực (implementation / 구현).
 
 Schemas like OpenAPI/Protobuf capture structural đặc tả hợp đồng (contract / 계약); ngữ nghĩa (semantic / 의미적) các ràng buộc (constraints / 제약조건들) still need documentation/tests.
 
-> **Nối mạch:** **Conway's Law intuition** nối từ **Đặc tả hợp đồng (contract / 계약) testing** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Conway's Law intuition
 
 Hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) often mirrors communication cấu trúc (structure / 구조) of organization. nhóm (team / 팀) boundaries influence dịch vụ (service / 서비스)/mô-đun (module / 모듈) boundaries because coordination chi phí (cost / 비용) is real. Modular thiết kế (design / 설계) is technical + organizational.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Conway's Law intuition**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > A ranh giới (boundary / 경계) is valuable when it **contains thay đổi (change / 변경) and preserves a small stable đặc tả hợp đồng (contract / 계약)**. Ask what các giả định (assumptions / 가정들) cross ranh giới (boundary / 경계), not how many interfaces/classes exist.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -89,8 +69,6 @@ Hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처) oft
 **“giao diện (interface / 인터페이스) means lớp trừu tượng (abstraction / 추상화).”** giao diện (interface / 인터페이스) with one hiện thực (implementation / 구현) mirroring every nội bộ (internal / 내부) phương thức (method / 메서드) may reveal rather than hide thiết kế (design / 설계).
 
 **“RPC is just hàm (function / 함수) lời gọi (call / 호출) across mạng (network / 네트워크).”** Remote calls have fundamentally different thất bại (failure / 실패)/độ trễ (latency / 지연 시간) ngữ nghĩa (semantics / 의미론).
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

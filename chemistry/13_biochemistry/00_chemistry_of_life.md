@@ -17,8 +17,6 @@ Các tầng này phụ thuộc lẫn nhau. Màng tạo độ dốc (gradient / �
 
 Vì vậy sinh hóa nên được đọc như một **hệ ghép nối (coupled system)**, không phải tập hợp rời rạc của protein, lipid, DNA và ATP.
 
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Nước không chỉ là nền dung môi** nối từ **Câu hỏi nền tảng: điều gì biến hóa học thành hóa học của sự sống?** sang **Hiệu ứng kỵ nước — entropy của dung môi quan trọng hơn ý tưởng “dầu hút dầu”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nước không chỉ là nền dung môi
 
 Hóa học tế bào diễn ra chủ yếu trong môi trường nước. Nước có mômen lưỡng cực lớn, mạng liên kết hydrogen linh động, hằng số điện môi cao và khả năng solvat hóa ion mạnh.
@@ -35,8 +33,6 @@ Những đặc tính này tác động trực tiếp tới:
 
 Điều quan trọng là nước liên tục tái tổ chức. Liên kết hydrogen trong nước lỏng phá và hình thành lại rất nhanh; không nên hình dung nước như một mạng tinh thể cứng.
 
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Hiệu ứng kỵ nước — entropy của dung môi quan trọng hơn ý tưởng “dầu hút dầu”** nối từ **Nước không chỉ là nền dung môi** sang **Tĩnh điện trong nước khác trong chân không**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng kỵ nước — entropy của dung môi quan trọng hơn ý tưởng “dầu hút dầu”
 
 Bề mặt không phân cực trong nước làm các phân tử nước xung quanh bị hạn chế hơn về định hướng. Khi nhiều nhóm kỵ nước tụ lại, tổng diện tích không phân cực tiếp xúc với nước giảm và nhiều phân tử nước được giải phóng khỏi lớp hydrat hóa có trật tự hơn.
@@ -51,8 +47,6 @@ Sự kết hợp kỵ nước thường được thúc đẩy đáng kể bởi 
 
 Điều này giải thích vì sao lõi kỵ nước hình thành trong protein và lớp kép lipid tự lắp ghép. Các nhóm không phân cực không cần một “lực kỵ nước” đặc biệt; hiệu ứng xuất hiện từ nhiệt động lực học của toàn hệ nước–chất tan.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Tĩnh điện trong nước khác trong chân không** nối từ **Hiệu ứng kỵ nước — entropy của dung môi quan trọng hơn ý tưởng “dầu hút dầu”** sang **Trạng thái proton hóa là một biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tĩnh điện trong nước khác trong chân không
 
 Tương tác Coulomb giữa các điện tích bị môi trường che chắn. Một dạng đơn giản:
@@ -64,8 +58,6 @@ E\propto \frac{q_1q_2}{\varepsilon r}
 Nước có hằng số điện môi lớn nên tương tác tĩnh điện giữa các điện tích lộ ra dung môi yếu hơn đáng kể so với khi cùng điện tích nằm trong lõi protein hoặc lõi màng có hằng số điện môi thấp.
 
 Vì vậy cùng một cầu muối có thể có ý nghĩa năng lượng rất khác tùy nó nằm trên bề mặt protein hay bị chôn trong lõi kỵ nước.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Trạng thái proton hóa là một biến động** nối từ **Tĩnh điện trong nước khác trong chân không** sang **Dung dịch đệm không “giữ pH cố định”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái proton hóa là một biến động
 
@@ -83,8 +75,6 @@ Trong protein, điện trường cục bộ, liên kết hydrogen và mức ti�
 
 Enzyme khai thác chính khả năng điều chỉnh này để chuyển proton trong **vị trí hoạt động (active site)**.
 
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Dung dịch đệm không “giữ pH cố định”** nối từ **Trạng thái proton hóa là một biến động** sang **Carbon tạo khung, nhưng dị nguyên tử tạo khả năng phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dung dịch đệm không “giữ pH cố định”
 
 Dung dịch đệm chỉ **chống lại sự thay đổi pH** trong một khả năng hữu hạn. Khi acid hoặc cơ sở (base / 기반) thêm vào vượt khả năng đệm, pH vẫn thay đổi mạnh.
@@ -92,8 +82,6 @@ Dung dịch đệm chỉ **chống lại sự thay đổi pH** trong một khả
 Kiểm soát pH sinh học kết hợp hệ đệm hóa học với vận chuyển ion, hô hấp, chức năng thận, trao đổi ion và điều hòa chuyển hóa.
 
 Đây là ví dụ cho khác biệt giữa cân bằng hóa học và một hệ điều khiển sinh lý.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Carbon tạo khung, nhưng dị nguyên tử tạo khả năng phản ứng** nối từ **Dung dịch đệm không “giữ pH cố định”** sang **Tương tác không cộng hóa trị tạo tính đặc hiệu mà vẫn giữ tính thuận nghịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Carbon tạo khung, nhưng dị nguyên tử tạo khả năng phản ứng
 
@@ -107,8 +95,6 @@ Các mô-típ sinh học quan trọng thực chất là những mẫu hóa hữu
 - imine/enamine trong xúc tác enzyme;
 - phối trí kim loại trong metalloprotein;
 - quinone, flavin và nicotinamide trong chuyển electron.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Tương tác không cộng hóa trị tạo tính đặc hiệu mà vẫn giữ tính thuận nghịch** nối từ **Carbon tạo khung, nhưng dị nguyên tử tạo khả năng phản ứng** sang **Cân bằng liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác không cộng hóa trị tạo tính đặc hiệu mà vẫn giữ tính thuận nghịch
 
@@ -124,8 +110,6 @@ Vì vậy sinh học dùng nhiều tương tác yếu cộng lại:
 - phối trí kim loại.
 
 Một ligand liên kết receptor không phải nhờ “một liên kết hydrogen đặc biệt”, mà do tổng chênh lệch năng lượng tự do giữa các tập hợp trạng thái đã liên kết và chưa liên kết.
-
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, sau nội dung của **Tương tác không cộng hóa trị tạo tính đặc hiệu mà vẫn giữ tính thuận nghịch**, **Cân bằng liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Bù trừ enthalpy–entropy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cân bằng liên kết
 
@@ -151,8 +135,6 @@ với quy ước trạng thái chuẩn thích hợp.
 
 Tuy nhiên ái lực đo được còn phụ thuộc nhiệt độ, lực ion, trạng thái proton hóa, ligand cạnh tranh và trạng thái cấu dạng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Bù trừ enthalpy–entropy** nối từ **Cân bằng liên kết** sang **Hiệu ứng chen chúc đại phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bù trừ enthalpy–entropy
 
 Một tương tác có thể làm enthalpy liên kết thuận lợi nhưng làm giảm entropy cấu dạng. Ngược lại, giải phóng nước bị sắp xếp quanh bề mặt có thể tăng entropy dù ligand bị giữ cứng hơn khi liên kết.
@@ -161,8 +143,6 @@ Vì vậy “có nhiều liên kết hydrogen hơn = liên kết mạnh hơn” 
 
 Nhận diện sinh học là cân bằng năng lượng tự do của toàn hệ, bao gồm cả dung môi.
 
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Hiệu ứng chen chúc đại phân tử** nối từ **Bù trừ enthalpy–entropy** sang **Ghép năng lượng — phản ứng bất lợi không cần tự trở nên thuận lợi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng chen chúc đại phân tử
 
 Bên trong tế bào không phải dung dịch loãng. Đại phân tử chiếm một phần thể tích đáng kể, tạo **sự chen chúc đại phân tử (macromolecular crowding / 거대분자 혼잡)**.
@@ -170,8 +150,6 @@ Bên trong tế bào không phải dung dịch loãng. Đại phân tử chiếm
 Chen chúc ảnh hưởng khuếch tán, hoạt độ hiệu dụng, cân bằng kết hợp và cảnh quan gấp cuộn.
 
 Do đó dữ liệu đo trong ống nghiệm loãng có thể khác đáng kể hành vi trong tế bào.
-
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Ghép năng lượng — phản ứng bất lợi không cần tự trở nên thuận lợi** nối từ **Hiệu ứng chen chúc đại phân tử** sang **ATP không phải “năng lượng nằm trong một liên kết”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghép năng lượng — phản ứng bất lợi không cần tự trở nên thuận lợi
 
@@ -184,8 +162,6 @@ Nếu phản ứng A có \(\Delta G>0\), tế bào có thể ghép nó với ph�
 Nếu tổng âm, quá trình ghép có thể diễn ra.
 
 Điều quan trọng là hai phản ứng phải được **ghép về mặt cơ chế**, thường qua chất trung gian chung hoặc phức enzyme. Chỉ đặt ATP cạnh một phản ứng bất lợi không tự động làm phản ứng đó xảy ra.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, sau nội dung của **Ghép năng lượng — phản ứng bất lợi không cần tự trở nên thuận lợi**, **ATP không phải “năng lượng nằm trong một liên kết”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cofactor oxy hóa-khử** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## ATP không phải “năng lượng nằm trong một liên kết”
 
@@ -201,8 +177,6 @@ Thủy phân ATP thuận lợi không phải vì một “liên kết giàu năn
 
 ATP là đơn vị trao đổi năng lượng hữu ích vì chuyển phosphate dễ ghép với nhiều phản ứng và tỉ lệ ATP/ADP được tế bào chủ động duy trì.
 
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Cofactor oxy hóa-khử** nối từ **ATP không phải “năng lượng nằm trong một liên kết”** sang **Phân ngăn — hình học trở thành tài nguyên nhiệt động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cofactor oxy hóa-khử
 
 Sinh học tách việc chuyển electron khỏi phản ứng cháy trực tiếp bằng các cofactor như NAD⁺/NADH, NADP⁺/NADPH, FAD/FADH₂, quinone và tâm kim loại.
@@ -216,8 +190,6 @@ Năng lượng tự do oxy hóa-khử có thể liên hệ với điện thế:
 Dòng electron từ chất cho có xu hướng khử thấp hơn tới chất nhận có thế khử cao hơn có thể giải phóng năng lượng tự do.
 
 Tế bào thu năng lượng này từng bước thay vì giải phóng toàn bộ thành nhiệt.
-
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Phân ngăn — hình học trở thành tài nguyên nhiệt động** nối từ **Cofactor oxy hóa-khử** sang **Xúc tác — kiểm soát hàng rào, không thay cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân ngăn — hình học trở thành tài nguyên nhiệt động
 
@@ -240,8 +212,6 @@ Hạng đầu là độ dốc (gradient / 기울기) hóa học; hạng sau là 
 
 Nếu không có ranh giới bán thấm, độ dốc (gradient / 기울기) sẽ tiêu tán và khả năng lưu trữ năng lượng tự do bị mất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Xúc tác — kiểm soát hàng rào, không thay cân bằng** nối từ **Phân ngăn — hình học trở thành tài nguyên nhiệt động** sang **Mạng phản ứng và thông lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xúc tác — kiểm soát hàng rào, không thay cân bằng
 
 Enzyme làm giảm năng lượng tự do hoạt hóa:
@@ -253,8 +223,6 @@ Enzyme làm giảm năng lượng tự do hoạt hóa:
 và tăng tốc cả chiều thuận lẫn chiều nghịch phù hợp với cùng một cân bằng.
 
 Enzyme không làm \(\Delta G^\circ\) của phản ứng trở nên thuận lợi hơn. Nó giúp hệ đạt trạng thái được nhiệt động cho phép nhanh hơn hoặc dẫn phản ứng qua một con đường chọn lọc hơn.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Mạng phản ứng và thông lượng** nối từ **Xúc tác — kiểm soát hàng rào, không thay cân bằng** sang **Phản hồi và điều khiển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng phản ứng và thông lượng
 
@@ -272,8 +240,6 @@ thông lượng ≠ 0
 
 Ở cân bằng, thông lượng ròng bằng 0. Tế bào sống thường duy trì thông lượng khác 0 nhờ liên tục trao đổi vật chất và năng lượng.
 
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Phản hồi và điều khiển** nối từ **Mạng phản ứng và thông lượng** sang **Polymer thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phản hồi và điều khiển
 
 Con đường sinh hóa được điều khiển ở nhiều tầng:
@@ -289,15 +255,11 @@ Phản hồi âm ổn định biến trạng thái; điều khiển đón trư�
 
 Vì vậy sinh hóa giao trực tiếp với lý thuyết điều khiển.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Polymer thông tin** nối từ **Phản hồi và điều khiển** sang **Độ chính xác, lỗi và sửa chữa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Polymer thông tin
 
 Trình tự DNA/RNA lưu một mẫu ký hiệu trong thứ tự cộng hóa trị của monomer. Trình tự có thể được sao chép nhờ tính bổ sung của cặp cơ sở (base / 기반).
 
 Nhưng “thông tin” không tồn tại trong phân tử như một khái niệm trừu tượng độc lập. Nó trở thành thông tin sinh học vì bộ máy tế bào diễn giải trình tự thông qua phiên mã, dịch mã và mạng điều hòa.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Độ chính xác, lỗi và sửa chữa** nối từ **Polymer thông tin** sang **Tự tổ chức khác tự sao chép**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chính xác, lỗi và sửa chữa
 
@@ -313,8 +275,6 @@ Hệ sinh học tăng độ chính xác bằng:
 
 Độ chính xác luôn có chi phí năng lượng hoặc thời gian. Đây là đánh đổi giữa tốc độ, năng lượng và độ tin cậy.
 
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Tự tổ chức khác tự sao chép** nối từ **Độ chính xác, lỗi và sửa chữa** sang **Nhiệt độ và sự sống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tự tổ chức khác tự sao chép
 
 Lớp kép lipid có thể tự lắp ghép về mặt nhiệt động mà không cần thông tin di truyền. Tinh thể cũng tự tổ chức.
@@ -323,8 +283,6 @@ Tự sao chép phức tạp hơn: cần khuôn hoặc mạng phản ứng có kh
 
 Không nên đồng nhất tự lắp ghép tự phát với sinh sản sinh học.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Nhiệt độ và sự sống** nối từ **Tự tổ chức khác tự sao chép** sang **Ion kim loại trong sự sống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiệt độ và sự sống
 
 Nhiệt độ tăng thường làm tốc độ phản ứng tăng theo hành vi kiểu Arrhenius, nhưng đồng thời làm cấu trúc đại phân tử kém bền và thay đổi trạng thái pha của màng.
@@ -332,8 +290,6 @@ Nhiệt độ tăng thường làm tốc độ phản ứng tăng theo hành vi 
 Hệ sống vì vậy tồn tại trong một khoảng nhiệt nơi động học đủ nhanh nhưng tổ chức đại phân tử vẫn ổn định.
 
 Sinh vật cực hạn điều chỉnh thành phần lipid, độ bền protein và chất điều hòa thẩm thấu để dịch chuyển khoảng hoạt động này.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Ion kim loại trong sự sống** nối từ **Nhiệt độ và sự sống** sang **Sự sống tồn tại xa cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ion kim loại trong sự sống
 
@@ -347,15 +303,11 @@ Kim loại như Fe, Zn, Cu, Mg, Mn, Co tham gia:
 
 Mức kim loại phải được kiểm soát vì chính hoạt tính oxy hóa-khử hữu ích cũng có thể gây tổn thương oxy hóa khi xuất hiện sai vị trí.
 
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Sự sống tồn tại xa cân bằng** nối từ **Ion kim loại trong sự sống** sang **Liên hệ kiến thức: hóa học ↔ vật lý ↔ thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sự sống tồn tại xa cân bằng
 
 Tế bào sống liên tục trao đổi vật chất và năng lượng với môi trường. Nếu bị cô lập hoàn toàn đủ lâu, độ dốc (gradient / 기울기) giảm, tỉ lệ ATP giảm, đại phân tử phân hủy và hệ tiến dần về cân bằng.
 
 Trật tự trong tế bào không vi phạm định luật hai vì tổng entropy của tế bào + môi trường vẫn tăng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Liên hệ kiến thức: hóa học ↔ vật lý ↔ thông tin** nối từ **Sự sống tồn tại xa cân bằng** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: hóa học ↔ vật lý ↔ thông tin
 
@@ -367,8 +319,6 @@ Sinh hóa là nơi nhiều lĩnh vực hội tụ:
 - lý thuyết thông tin hỗ trợ phân tích trình tự;
 - khoa học máy tính mô hình hóa mạng phản ứng;
 - kỹ thuật hệ thống phân tích phản hồi và độ bền vững.
-
-> **Nối mạch:** Trong **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Những hiểu lầm thường gặp** nối từ **Liên hệ kiến thức: hóa học ↔ vật lý ↔ thông tin** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -387,8 +337,6 @@ Không. Enzyme thay hàng rào hoạt hóa, không thay hằng số cân bằng.
 ### “Nhóm kỵ nước hút nhau trực tiếp”
 
 Không cần giả định một lực riêng như vậy. Sự kết hợp xuất hiện chủ yếu từ tái tổ chức dung môi và tối thiểu hóa năng lượng tự do của toàn hệ nước–chất tan.
-
-> **Nối mạch:** Ở chặng này của **Hóa học của sự sống — nhìn sự sống từ hóa học phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

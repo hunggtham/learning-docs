@@ -8,8 +8,6 @@
 
 Đây là chuyển tiếp (transition / 전이) từ **low-income catch-up bài toán (problem / 문제)** sang **middle-income structural transformation bài toán (problem / 문제)**.
 
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **WTO-era tích hợp (integration / 통합): factory không phải một island** nối từ **Điểm tựa và câu hỏi trung tâm** sang **FDI-led manufacturing: strength và phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## WTO-era tích hợp (integration / 통합): factory không phải một island
 
 Sau WTO accession năm 2007, Việt Nam tiếp tục tích hợp sâu vào toàn cục (global / 전역) môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). Electronics, machinery, garment, footwear và nhiều manufacturing sector được tổ chức theo **toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)**.
@@ -30,8 +28,6 @@ global distribution
 
 Điều này giúp export quy mô (scale / 규모) tăng nhanh, nhưng cũng đặt câu hỏi: **bao nhiêu giá trị (value / 값) added được giữ lại trong domestic economy?**
 
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **FDI-led manufacturing: strength và phụ thuộc (dependency / 의존성)** nối từ **WTO-era tích hợp (integration / 통합): factory không phải một island** sang **Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## FDI-led manufacturing: strength và phụ thuộc (dependency / 의존성)
 
 FDI giúp Việt Nam mở rộng manufacturing sức chứa (capacity / 용량), export thị trường (market / 시장) và employment. Industrial cluster phát triển mạnh ở northern corridor và southeastern region.
@@ -44,8 +40,6 @@ Key distinction:
 
 **export upgrading** không tự động bằng **technological upgrading**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable** nối từ **FDI-led manufacturing: strength và phụ thuộc (dependency / 의존성)** sang **Urbanization: city là labor thị trường (market / 시장) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable
 
 Industrial economy cần reliable hạ tầng (infrastructure / 인프라) ở quy mô (scale / 규모) khác agricultural economy. Highway, deep-water cổng (port / 포트), airport, electricity grid, telecom và logistics nền tảng (platform / 플랫폼) trở thành part của môi trường vận hành (production / 운영 환경) hàm (function / 함수).
@@ -53,8 +47,6 @@ Industrial economy cần reliable hạ tầng (infrastructure / 인프라) ở q
 Một factory có productivity cao nhưng truck kẹt đường, cổng (port / 포트) congested hoặc electricity unreliable thì whole supply chuỗi (chain / 사슬) mất competitiveness.
 
 Vì vậy hiện đại (modern / 현대적) hạ tầng (infrastructure / 인프라) không chỉ “phục vụ giao thông”; nó giảm **giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** và **coordination độ trễ (latency / 지연 시간)** của economy.
-
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Hạ tầng: từ national road tới bộ chứa (container / 컨테이너) timetable** nêu quy tắc; **Urbanization: city là labor thị trường (market / 시장) lớn** thử quy tắc trong tình huống, rồi **Migrant worker và household transformation** mở rộng hệ quả.
 
 ## Urbanization: city là labor thị trường (market / 시장) lớn
 
@@ -72,8 +64,6 @@ more density
 
 Urban chính sách (policy / 정책) phải optimize giữa hai tác động (effect / 효과) này.
 
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Urbanization: city là labor thị trường (market / 시장) lớn** nêu quy tắc; **Migrant worker và household transformation** thử quy tắc trong tình huống, rồi **Demographic dividend không kéo dài mãi** mở rộng hệ quả.
-
 ## Migrant worker và household transformation
 
 Industrialization tạo large luồng (flow / 흐름) lao động tới Bình Dương, Đồng Nai, Bắc Ninh, Hải Phòng, Hà Nội và Thành phố Hồ Chí Minh.
@@ -81,8 +71,6 @@ Industrialization tạo large luồng (flow / 흐름) lao động tới Bình D�
 Worker dormitory, rental district, industrial bus tuyến (route / 경로) và childcare trở thành hạ tầng (infrastructure / 인프라) của export economy dù không xuất hiện trong customs statistics.
 
 Household cấu trúc (structure / 구조) cũng thay đổi: grandparent ở quê có thể chăm child; parent làm factory ở tỉnh khác; remittance quay lại village. Xã hội (social / 사회적) lịch sử (history / 이력) và economic lịch sử (history / 이력) vì thế nối trực tiếp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Demographic dividend không kéo dài mãi** nối từ **Migrant worker và household transformation** sang **Education: từ literacy sang skill mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Demographic dividend không kéo dài mãi
 
@@ -100,8 +88,6 @@ productivity must rise faster
 
 Khi cheap abundant labor giảm relative advantage, economy phải dựa nhiều hơn vào skill, technology và capital efficiency.
 
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Education: từ literacy sang skill mismatch** nối từ **Demographic dividend không kéo dài mãi** sang **Digitalization: thông tin (information / 정보) chi phí (cost / 비용) giảm mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Education: từ literacy sang skill mismatch
 
 Mass education đã giúp tạo workforce nền. Nhưng digital/manufacturing upgrading cần engineer, technician, dữ liệu (data / 데이터) skill, management, ngôn ngữ (language / 언어) và problem-solving.
@@ -111,8 +97,6 @@ Vì vậy education bài toán (problem / 문제) chuyển từ “có đi học
 Degree count không đủ. Firm cần năng lực (capability / 역량) có thể deploy trong môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템).
 
 Đây là ranh giới (boundary / 경계) giữa schooling expansion và human-capital productivity.
-
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Digitalization: thông tin (information / 정보) chi phí (cost / 비용) giảm mạnh** nối từ **Education: từ literacy sang skill mismatch** sang **Toàn cục (global / 전역) trade diversification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digitalization: thông tin (information / 정보) chi phí (cost / 비용) giảm mạnh
 
@@ -124,8 +108,6 @@ Digitalization cũng làm trạng thái (state / 상태) administration thay đ�
 
 Nhưng new năng lực (capability / 역량) đi cùng cybersecurity, privacy, fraud và platform-dependence bài toán (problem / 문제). Technology luôn tạo cả năng lực (capability / 역량) lẫn attack surface.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Toàn cục (global / 전역) trade diversification** nối từ **Digitalization: thông tin (information / 정보) chi phí (cost / 비용) giảm mạnh** sang **U.S.–Vietnam normalization từ 1995 tới deeper economic linkage**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Toàn cục (global / 전역) trade diversification
 
 Việt Nam mở rộng trade relationship qua nhiều bilateral/regional khung phần mềm (framework / 프레임워크) bên cạnh WTO và ASEAN. Điều này tăng thị trường (market / 시장) diversification và làm firm phải đáp ứng nhiều standards hơn về origin, an toàn (safety / 안전), labor, môi trường (environment / 환경) và documentation.
@@ -134,15 +116,11 @@ Hiện đại (modern / 현대적) trade vì thế increasingly là **standards 
 
 Một exporter nhỏ có thể thất bại không phải vì sản phẩm (product / 제품) xấu mà vì traceability/documentation không đạt yêu cầu (requirement / 요구사항).
 
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **U.S.–Vietnam normalization từ 1995 tới deeper economic linkage** nối từ **Toàn cục (global / 전역) trade diversification** sang **China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## U.S.–Vietnam normalization từ 1995 tới deeper economic linkage
 
 Normalization năm 1995 mở một important channel; sau đó trade và people-to-people links tăng đáng kể. Không nên đọc relationship này như một straight line “cựu thù thành bạn”, mà như gradual institutional accumulation: embassy, trade agreement, nghiệp vụ (business / 비즈니스) mạng (network / 네트워크), education, diplomacy và later strategic frameworks.
 
 Historical significance nằm ở giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) và option set mở rộng qua thời gian.
-
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **U.S.–Vietnam normalization từ 1995 tới deeper economic linkage** đặt đầu vào cho **China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc**, rồi **Mekong Delta: climate thay đổi (change / 변경) biến geography thành moving ràng buộc (constraint / 제약조건)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc
 
@@ -154,8 +132,6 @@ Do đó quan hệ (relation / 관계) có dual cấu trúc (structure / 구조):
 
 Đây là ví dụ điển hình vì sao hiện đại (modern / 현대적) economic lịch sử (history / 이력) không thể tách khỏi international relations.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **China: thị trường (market / 시장), supply chuỗi (chain / 사슬) và geopolitical ràng buộc (constraint / 제약조건) cùng lúc** đặt đầu vào cho **Mekong Delta: climate thay đổi (change / 변경) biến geography thành moving ràng buộc (constraint / 제약조건)**, rồi **Red River Delta và coastal industrialization** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mekong Delta: climate thay đổi (change / 변경) biến geography thành moving ràng buộc (constraint / 제약조건)
 
 Mekong Delta từng là central agricultural export region. Nhưng salinity intrusion, subsidence, river-flow thay đổi (change / 변경), extreme weather và sea-level rủi ro (risk / 위험) làm giả định (assumption / 가정) cũ về water/soil ngày càng kém ổn định.
@@ -166,8 +142,6 @@ Câu hỏi phát triển không còn chỉ là “làm sao sản xuất nhiều 
 
 Đây là shift từ maximizing đầu ra (output / 출력) sang resilience tối ưu hóa (optimization / 최적화).
 
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Red River Delta và coastal industrialization** nối từ **Mekong Delta: climate thay đổi (change / 변경) biến geography thành moving ràng buộc (constraint / 제약조건)** sang **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Red River Delta và coastal industrialization
 
 Northern Vietnam cho thấy một geography khác: proximity tới China supply chuỗi (chain / 사슬), cổng (port / 포트) Hải Phòng, dense population và Hanoi kiến thức (knowledge / 지식)/administrative centre hỗ trợ industrial clustering.
@@ -175,8 +149,6 @@ Northern Vietnam cho thấy một geography khác: proximity tới China supply 
 Nhưng flood, typhoon, land conversion và urban congestion vẫn là các ràng buộc (constraints / 제약조건들).
 
 So sánh Mekong với Red River giúp tránh nói “đồng bằng Việt Nam” như một đối tượng (object / 객체) duy nhất.
-
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** nối từ **Red River Delta và coastal industrialization** sang **Middle-income challenge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)
 
@@ -191,8 +163,6 @@ emissions
 Không có solution đơn giản. Coal, gas, hydro, solar, wind, grid lưu trữ (storage / 저장소) và transmission có chi phí (cost / 비용)/rủi ro (risk / 위험) profile khác nhau.
 
 Năng lượng (energy / 에너지) lịch sử (history / 이력) vì vậy trở thành industrial lịch sử (history / 이력) của thế kỷ XXI.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Middle-income challenge** nối từ **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** sang **Inequality: income không phải dimension duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Middle-income challenge
 
@@ -210,8 +180,6 @@ better firm management
 
 Đây thường được gọi là **middle-income challenge/trap** trong development discussion. Không phải một threshold mechanical mà là warning rằng growth mô hình (model / 모델) phải evolve.
 
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Inequality: income không phải dimension duy nhất** nối từ **Middle-income challenge** sang **COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Inequality: income không phải dimension duy nhất
 
 National poverty giảm mạnh từ Đổi Mới, nhưng inequality cần đọc theo nhiều dimension: city–rural, lowland–upland, ethnic majority–minority, formal–informal worker, homeowner–renter và truy cập (access / 접근) tới education/health/mạng (network / 네트워크).
@@ -219,8 +187,6 @@ National poverty giảm mạnh từ Đổi Mới, nhưng inequality cần đọc
 Hai household cùng income hiện tại có thể có very different asset, land, xã hội (social / 사회적) insurance và shock resilience.
 
 Xã hội (social / 사회적) cấu trúc (structure / 구조) therefore cannot be compressed into GDP per capita.
-
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **Inequality: income không phải dimension duy nhất** sang **Heritage trong fast urbanization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
@@ -230,8 +196,6 @@ Historical giá trị (value / 값) của sự kiện (event / 이벤트) không
 
 Hệ thống (system / 시스템) resilience trở thành visible khi luồng bố cục thông thường (normal flow / 일반 흐름) bị interrupted.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Heritage trong fast urbanization** nối từ **COVID-19 như hệ thống (system / 시스템) kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **Việt Nam hiện nay nên được đọc như historical snapshot, không phải endpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Heritage trong fast urbanization
 
 Rapid construction tạo tension giữa development và preservation. Imperial Citadel, Hội An, Huế hay old urban neighborhood không nằm ngoài economy: tourism, land giá trị (value / 값), hạ tầng (infrastructure / 인프라) và conservation quy tắc (rule / 규칙) interact.
@@ -239,8 +203,6 @@ Rapid construction tạo tension giữa development và preservation. Imperial C
 Heritage therefore là tài nguyên (resource / 자원), ràng buộc (constraint / 제약조건) và bộ nhớ (memory / 메모리) institution cùng lúc.
 
 Chapter 30 sẽ phân tích sâu hơn cách trạng thái (state / 상태), scholar, museum và cục bộ (local / 로컬) community cùng tạo công khai (public / 공개) bộ nhớ (memory / 메모리).
-
-> **Nối mạch:** Trong **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Việt Nam hiện nay nên được đọc như historical snapshot, không phải endpoint** nối từ **Heritage trong fast urbanization** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Việt Nam hiện nay nên được đọc như historical snapshot, không phải endpoint
 
@@ -258,8 +220,6 @@ future option set
 ```
 
 Đọc như vậy tránh **teleology**—ảo tưởng rằng toàn bộ lịch sử trước đây tất yếu dẫn tới cấu hình (configuration / 구성) hiện tại.
-
-> **Nối mạch:** Ở chặng này của **Việt Nam thế kỷ XXI: toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬), đô thị hóa và những ràng buộc (constraint / 제약조건) mới**, **Recap và bàn giao** nối từ **Việt Nam hiện nay nên được đọc như historical snapshot, không phải endpoint** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

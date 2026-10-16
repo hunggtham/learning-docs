@@ -12,8 +12,6 @@ Lập thể đặc biệt quan trọng vì phần lớn đại phân tử sinh h
 
 Vì vậy trong sinh học, “cùng thành phần” chưa đủ; cách nguyên tử được sắp xếp trong không gian có thể quyết định hoàn toàn chức năng.
 
-> **Nối mạch:** Molecular structure controls recognition; acid–base chemistry next tunes enzyme function, while redox chemistry supplies the electron flow behind metabolism.
-
 ## Hóa học acid-base → chức năng enzyme
 
 Các nhóm có thể ion hóa trong protein liên tục chuyển giữa trạng thái proton hóa và khử proton. Histidine, aspartate, glutamate, lysine, cysteine và tyrosine có thể tham gia chuyển proton tùy pH và môi trường cục bộ.
@@ -22,8 +20,6 @@ Giá trị `pKa` của một nhóm trong protein có thể lệch đáng kể so
 
 Các hệ đệm của tế bào giúp giữ pH trong vùng mà điện tích, cấu trúc và hoạt tính của protein vẫn phù hợp.
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học oxy hóa-khử → chuyển hóa** nối từ **Hóa học acid-base → chức năng enzyme** sang **Nhiệt động lực học → ghép năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học oxy hóa-khử → chuyển hóa
 
 Các cặp như `NAD+/NADH`, `FAD/FADH2`, quinone và các tâm kim loại đóng vai trò chất mang electron.
@@ -31,8 +27,6 @@ Các cặp như `NAD+/NADH`, `FAD/FADH2`, quinone và các tâm kim loại đón
 Hô hấp tế bào không oxy hóa chất dinh dưỡng trực tiếp với oxygen theo một bước như phản ứng cháy. Electron được truyền qua một chuỗi nhiều bước, cho phép tế bào thu năng lượng dần dần và ghép năng lượng đó với việc bơm proton hoặc tổng hợp ATP.
 
 Đây là ví dụ rõ về cách hóa học oxy hóa-khử được tổ chức thành một hệ năng lượng có kiểm soát.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Nhiệt động lực học → ghép năng lượng** nối từ **Hóa học oxy hóa-khử → chuyển hóa** sang **Động học → điều hòa dòng chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt động lực học → ghép năng lượng
 
@@ -48,8 +42,6 @@ Nếu tổng âm, toàn bộ quá trình có thể thuận lợi về mặt nhi�
 
 Sự sống vì vậy không chống lại nhiệt động lực học. Nó duy trì cấu trúc cục bộ bằng cách liên tục tiêu thụ năng lượng tự do và thải entropy ra môi trường.
 
-> **Nối mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Động học → điều hòa dòng chuyển hóa** nối từ **Nhiệt động lực học → ghép năng lượng** sang **Hóa học màng → sinh lý học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Động học → điều hòa dòng chuyển hóa
 
 Nhiệt động lực học cho biết phản ứng nào có thể thuận lợi, nhưng enzyme quyết định phản ứng nào thực sự xảy ra đủ nhanh để có ý nghĩa sinh học.
@@ -57,8 +49,6 @@ Nhiệt động lực học cho biết phản ứng nào có thể thuận lợi
 Điều hòa dị lập thể (**allosteric regulation**), phosphoryl hóa, thay đổi lượng enzyme và phân ngăn trong tế bào có thể làm thay đổi dòng phản ứng (**metabolic flux**) mà không cần thay đổi toàn bộ trạng thái nhiệt động.
 
 Vì vậy một phản ứng “có thể xảy ra” về nhiệt động không nhất thiết đóng vai trò thực tế nếu không có con đường động học phù hợp.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học màng → sinh lý học** nối từ **Động học → điều hòa dòng chuyển hóa** sang **Hóa học polymer → di truyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học màng → sinh lý học
 
@@ -68,8 +58,6 @@ Các độ dốc (gradient / 기울기) điện hóa này được dùng trong d
 
 Có thể nói màng biến hình học và phân ngăn thành một tài nguyên nhiệt động.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học polymer → di truyền** nối từ **Hóa học màng → sinh lý học** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học polymer → di truyền
 
 DNA và RNA là các **polymer có trình tự xác định (sequence-defined polymers)**. Thông tin nằm trong thứ tự nucleotide, còn ghép cặp cơ sở (base / 기반) cung cấp cơ chế nhận diện phân tử cần cho sao chép và phiên mã.
@@ -77,8 +65,6 @@ DNA và RNA là các **polymer có trình tự xác định (sequence-defined po
 Protein cũng là polymer có trình tự xác định. Trình tự amino acid định hình cảnh quan gấp cuộn và từ đó tạo chức năng xúc tác, cấu trúc hoặc tín hiệu.
 
 Sự sống vì vậy liên kết hóa học polymer với thông tin: cấu trúc phân tử không chỉ mang năng lượng hay vật chất mà còn mang hướng dẫn.
-
-> **Nối mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Mô hình tư duy** tổng hợp từ **Hóa học polymer → di truyền** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

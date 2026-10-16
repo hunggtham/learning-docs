@@ -49,7 +49,7 @@
 
 | Phần thi | Tên nghiệp vụ KCCI | Nội dung bao phủ chi tiết | Trọng số | Trạng thái | Tài liệu phụ trách |
 |---|---|---|:---:|:---:|---|
-| **Excel 1** | **기본작업** (Thao tác cơ bản) | • Lọc nâng cao (고급필터): Biểu thức logic công thức bắt đầu `=`, cố định cột `$A4`, kết hợp AND/OR/YEAR/AVERAGE.<br>• Định dạng có điều kiện (조건부 서식): Công thức định dạng toàn dòng, khóa cột tuyệt đối.<br>• Bố cục trang in & Bảo vệ sheet: Lặp lại dòng tiêu đề khi in, khóa ô và ẩn công thức. | 30 điểm | **FULL** | `1급/실기/01-스프레드시트-기본작업.md` |
+| **Excel 1** | **기본작업** (Thao tác cơ bản) | • Lọc nâng cao (고급필터): Biểu thức logic công thức bắt đầu `=`, cố định cột `$A4`, kết hợp AND/OR/YEAR/AVERAGE. • Định dạng có điều kiện (조건부 서식): Công thức định dạng toàn dòng, khóa cột tuyệt đối. • Bố cục trang in & Bảo vệ sheet: Lặp lại dòng tiêu đề khi in, khóa ô và ẩn công thức. | 30 điểm | **FULL** | `1급/실기/01-스프레드시트-기본작업.md` |
 | **Excel 2** | **계산작업** (배열수식) | 5 cấu trúc công thức mảng chuẩn KCCI: SUM(IF), SUM(*), COUNT(IF), AVERAGE(IF) (chống bẫy số 0), MAX/LARGE(IF), INDEX+MATCH mảng đa điều kiện, kết thúc bằng `Ctrl+Shift+Enter`. | 24 điểm | **FULL** | `1급/실기/02-스프레드시트-계산작업-배열수식.md` |
 | **Excel 2** | **계산작업** (사용자정의함수) | Lập trình hàm VBA tự định nghĩa trong Standard Module (`Public Function fn...`), rẽ nhánh If/ElseIf, Select Case; Nhóm hàm tài chính PMT/FV/PV; Nhóm hàm tra cứu và thời gian. | 6 điểm | **FULL** | `1급/실기/03-스프레드시트-계산작업-사용자정의함수-및-고급함수.md` |
 | **Excel 3** | **분석작업** (Pivot Table & Công cụ) | Quy trình chống điểm 0 của Pivot Table (nguồn dữ liệu ngoài `.accdb`, Grouping ngày/số, Calculated Field, định dạng số qua Value Field Settings); Bảng dữ liệu Data Table 2 biến, Scenario Manager, Consolidate, Subtotal. | 20 điểm | **FULL** | `1급/실기/04-스프레드시트-분석작업.md` |

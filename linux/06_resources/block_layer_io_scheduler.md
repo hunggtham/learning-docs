@@ -26,8 +26,6 @@ controller / storage
 
 Filesystem làm việc với tệp (file / 파일), inode và khối (block / 블록) lô-gic (logic / 논리). khối (block / 블록) tầng (layer / 계층) cung cấp lớp trừu tượng (abstraction / 추상화) chung cho các thiết bị lưu trữ khối như HDD, SSD, NVMe hoặc virtual disk.
 
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Tại sao cần khối (block / 블록) tầng (layer / 계층)?** nối từ **Từ tệp (file / 파일) I/O tới khối (block / 블록) I/O** sang **Bio và yêu cầu (request / 요청)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tại sao cần khối (block / 블록) tầng (layer / 계층)?
 
 Nếu mỗi filesystem phải tự biết cách nói chuyện với mọi loại lưu trữ (storage / 저장소) controller, hệ thống sẽ rất khó duy trì. khối (block / 블록) tầng (layer / 계층) tách hai phía:
@@ -36,8 +34,6 @@ Nếu mỗi filesystem phải tự biết cách nói chuyện với mọi loại
 - phía dưới: driver và thiết bị cụ thể.
 
 Nó còn quản lý hàng đợi, hợp nhất yêu cầu và một số chính sách lập lịch.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Bio và yêu cầu (request / 요청)** nối từ **Tại sao cần khối (block / 블록) tầng (layer / 계층)?** sang **Hàng đợi và độ trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bio và yêu cầu (request / 요청)
 
@@ -57,8 +53,6 @@ device
 
 Điều này giải thích vì sao số lời gọi hệ thống (system call / 시스템 호출) `write()` không bằng số thao tác (operation / 연산) vật lý mà thiết bị thấy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Hàng đợi và độ trễ** nối từ **Bio và yêu cầu (request / 요청)** sang **HDD và SSD khác nhau ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi và độ trễ
 
 Mỗi thiết bị chỉ có khả năng xử lý hữu hạn. Khi tốc độ yêu cầu tới vượt tốc độ phục vụ trong thời gian đủ dài, hàng đợi tăng.
@@ -77,15 +71,11 @@ tail latency tăng
 
 Đây là lý do lưu trữ (storage / 저장소) có thể chưa đạt 100% thông lượng (throughput / 처리량) lý thuyết nhưng độ trễ (latency / 지연 시간) đã xấu do queueing.
 
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **HDD và SSD khác nhau ở đâu?** nối từ **Hàng đợi và độ trễ** sang **Multi-queue khối (block / 블록) tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## HDD và SSD khác nhau ở đâu?
 
 HDD có đầu đọc cơ học, nên thứ tự yêu cầu (request / 요청) ảnh hưởng nhiều tới seek thời gian (time / 시간). SSD không có seek cơ học như HDD, nhưng vẫn có controller, flash translation tầng (layer / 계층), garbage collection và giới hạn song song.
 
 Do đó một I/O scheduler được thiết kế tốt cho HDD chưa chắc tối ưu cho NVMe hiện đại.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Multi-queue khối (block / 블록) tầng (layer / 계층)** nối từ **HDD và SSD khác nhau ở đâu?** sang **I/O scheduler**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-queue khối (block / 블록) tầng (layer / 계층)
 
@@ -101,8 +91,6 @@ CPU3 -> software queue 3 ┘
 ```
 
 Mục tiêu là giảm contention và tăng khả năng song song trên SSD/NVMe.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **I/O scheduler** nối từ **Multi-queue khối (block / 블록) tầng (layer / 계층)** sang **none**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## I/O scheduler
 
@@ -130,25 +118,17 @@ Các scheduler thường cố cân bằng một số mục tiêu như:
 
 Không nên đổi scheduler chỉ vì benchmark của tải công việc (workload / 워크로드) khác.
 
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **none** nối từ **I/O scheduler** sang **mq-deadline**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `none`
 
 Với một số NVMe hiện đại, `none` để khối (block / 블록) tầng (layer / 계층) can thiệp tối thiểu và dựa nhiều vào khả năng queueing của thiết bị. Điều này không có nghĩa “không có hàng đợi (queue / 큐)”; thiết bị vẫn có hardware queues.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **mq-deadline** nối từ **none** sang **kyber**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `mq-deadline`
 
 `mq-deadline` cố hạn chế starvation bằng deadline và vẫn sắp xếp yêu cầu (request / 요청) ở mức phù hợp. Nó có thể hữu ích khi cần độ trễ (latency / 지연 시간) tương đối ổn định.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **kyber** nối từ **mq-deadline** sang **Hàng đợi (queue / 큐) độ sâu (depth / 깊이)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `kyber`
 
 Kyber tập trung kiểm soát độ trễ (latency / 지연 시간) bằng cách điều tiết số yêu cầu (request / 요청) đang đi qua một số lớp hàng đợi (queue / 큐). Tính phù hợp phụ thuộc tải công việc (workload / 워크로드) và kernel.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Hàng đợi (queue / 큐) độ sâu (depth / 깊이)** nối từ **kyber** sang **Đọc iostat đúng hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàng đợi (queue / 큐) độ sâu (depth / 깊이)
 
@@ -157,8 +137,6 @@ Hàng đợi (queue / 큐) độ sâu (depth / 깊이) cho biết bao nhiêu tha
 Hàng đợi (queue / 큐) sâu có thể tăng thông lượng (throughput / 처리량) tới một mức, nhưng cũng tăng thời gian chờ của từng yêu cầu (request / 요청).
 
 Nếu tải công việc (workload / 워크로드) nhạy độ trễ (latency / 지연 시간), hàng đợi (queue / 큐) quá sâu có thể làm p99 xấu.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Đọc iostat đúng hơn** nối từ **Hàng đợi (queue / 큐) độ sâu (depth / 깊이)** sang **await và dịch vụ (service / 서비스) thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc `iostat` đúng hơn
 
@@ -178,8 +156,6 @@ Các trường cụ thể thay đổi theo phiên bản, nhưng thường cần 
 
 Không nên diễn giải `%util=100` trên NVMe giống hệt HDD. Thiết bị đa hàng đợi (queue / 큐) có thể xử lý song song nhiều thao tác (operation / 연산).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **await và dịch vụ (service / 서비스) thời gian (time / 시간)** nối từ **Đọc iostat đúng hơn** sang **I/O kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `await` và dịch vụ (service / 서비스) thời gian (time / 시간)
 
 Một yêu cầu (request / 요청) thấy tổng độ trễ (latency / 지연 시간) gồm thời gian đợi trong hàng đợi (queue / 큐) và thời gian thiết bị thực sự xử lý.
@@ -191,8 +167,6 @@ request latency
 ```
 
 Nếu `await` tăng khi thông lượng (throughput / 처리량) chưa tăng nhiều, có thể hàng đợi (queue / 큐) hoặc lưu trữ (storage / 저장소) backend đang có vấn đề.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **I/O kích thước (size / 크기)** nối từ **await và dịch vụ (service / 서비스) thời gian (time / 시간)** sang **Random và sequential I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## I/O kích thước (size / 크기)
 
@@ -218,8 +192,6 @@ Trong khi:
 
 Vì vậy không thể đánh giá lưu trữ (storage / 저장소) chỉ bằng IOPS.
 
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Random và sequential I/O** nối từ **I/O kích thước (size / 크기)** sang **Read-ahead**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Random và sequential I/O
 
 Sequential I/O thường dễ tối ưu hơn vì có tính liên tục. Random I/O tạo mẫu (pattern / 패턴) truy cập phân tán.
@@ -227,8 +199,6 @@ Sequential I/O thường dễ tối ưu hơn vì có tính liên tục. Random I
 Với HDD, khác biệt này rất lớn do seek. Với SSD vẫn có khác biệt vì nội bộ (internal / 내부) parallelism, ghi (write / 쓰기) amplification và bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작).
 
 Cơ sở dữ liệu (database / 데이터베이스) thường tạo tải công việc (workload / 워크로드) có nhiều random truy cập (access / 접근) hơn log append tuần tự.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Read-ahead** nối từ **Random và sequential I/O** sang **Writeback và dirty throttling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Read-ahead
 
@@ -239,8 +209,6 @@ blockdev --getra /dev/<device>
 ```
 
 Read-ahead tốt cho truy cập tuần tự nhưng có thể lãng phí I/O và bộ nhớ đệm (cache / 캐시) nếu tải công việc (workload / 워크로드) ngẫu nhiên.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Writeback và dirty throttling** nối từ **Read-ahead** sang **fsync() và độ trễ (latency / 지연 시간) spike**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Writeback và dirty throttling
 
@@ -265,8 +233,6 @@ Trên một số hệ thống có thể dùng các biến dạng byte thay vì r
 
 Không nên chỉnh các tham số này nếu chưa hiểu tải công việc (workload / 워크로드).
 
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **fsync() và độ trễ (latency / 지연 시간) spike** nối từ **Writeback và dirty throttling** sang **I/O scheduler không thay thế ứng dụng (application / 애플리케이션) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `fsync()` và độ trễ (latency / 지연 시간) spike
 
 Một hệ thống ghi log có thể thấy thông lượng (throughput / 처리량) cao vì ghi (write / 쓰기) đi vào page bộ nhớ đệm (cache / 캐시), nhưng khi cơ sở dữ liệu (database / 데이터베이스) hoặc ứng dụng (application / 애플리케이션) gọi `fsync()`, nó phải chờ durability đặc tả hợp đồng (contract / 계약) mạnh hơn.
@@ -275,13 +241,9 @@ Nếu lưu trữ (storage / 저장소) backend có tail độ trễ (latency / �
 
 Đây là lý do cơ sở dữ liệu (database / 데이터베이스) benchmark cần quan tâm durability chế độ (mode / 모드), không chỉ số giao dịch (transaction / 트랜잭션) mỗi giây.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **I/O scheduler không thay thế ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** nối từ **fsync() và độ trễ (latency / 지연 시간) spike** sang **Direct I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## I/O scheduler không thay thế ứng dụng (application / 애플리케이션) thiết kế (design / 설계)
 
 Nếu ứng dụng (application / 애플리케이션) phát hàng nghìn synchronous small writes, scheduler không thể biến tải công việc (workload / 워크로드) đó thành một tải công việc (workload / 워크로드) lý tưởng hoàn toàn. Batch, buffering và write-ahead log ở tầng ứng dụng có thể có ảnh hưởng lớn hơn.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Direct I/O** nối từ **I/O scheduler không thay thế ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** sang **Async I/O và iouring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Direct I/O
 
@@ -290,8 +252,6 @@ Một số cơ sở dữ liệu (database / 데이터베이스) dùng **direct I
 Điều này tránh double caching nhưng làm ứng dụng (application / 애플리케이션) chịu trách nhiệm nhiều hơn về I/O mẫu (pattern / 패턴) và alignment.
 
 Không nên suy ra rằng direct I/O luôn nhanh hơn buffered I/O.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Async I/O và iouring** nối từ **Direct I/O** sang **NVMe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Async I/O và io_uring
 
@@ -311,8 +271,6 @@ application nhận kết quả
 
 Điều này đặc biệt hữu ích khi tải công việc (workload / 워크로드) cần tính đồng thời (concurrency / 동시성) cao mà không muốn một luồng thực thi (thread / 스레드) blocking cho mỗi thao tác (operation / 연산).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **NVMe** nối từ **Async I/O và iouring** sang **Virtual disk và cloud lưu trữ (storage / 저장소)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## NVMe
 
 NVMe được thiết kế cho lưu trữ (storage / 저장소) flash tốc độ cao với nhiều hàng đợi (queue / 큐) và hàng đợi (queue / 큐) độ sâu (depth / 깊이) lớn. Nó giảm nhiều giới hạn từ giao thức lưu trữ (storage / 저장소) cũ hơn.
@@ -331,15 +289,11 @@ Nếu có công cụ NVMe:
 nvme list
 ```
 
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Virtual disk và cloud lưu trữ (storage / 저장소)** nối từ **NVMe** sang **Cgroup I/O điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Virtual disk và cloud lưu trữ (storage / 저장소)
 
 Trong VM/cloud, `/dev/vda` hay `/dev/nvme...` không cho bạn toàn bộ sự thật về phần cứng cuối cùng. Phía dưới có thể là network-attached lưu trữ (storage / 저장소), phân tán (distributed / 분산) khối (block / 블록) lưu trữ (storage / 저장소) hoặc lớp giới hạn IOPS của cloud provider.
 
 Do đó guest OS có thể thấy queueing mà nguyên nhân thật nằm ngoài VM.
-
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Cgroup I/O điều khiển (control / 제어)** nối từ **Virtual disk và cloud lưu trữ (storage / 저장소)** sang **Khi iowait cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cgroup I/O điều khiển (control / 제어)
 
@@ -355,15 +309,11 @@ io.weight
 
 Nếu bộ chứa (container / 컨테이너) chậm lưu trữ (storage / 저장소) dù host còn khả năng, cần kiểm tra chính sách (policy / 정책) cgroup.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Khi iowait cao** nối từ **Cgroup I/O điều khiển (control / 제어)** sang **Quy trình điều tra lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi `iowait` cao
 
 `iowait` không phải phần trăm thời gian “ổ đĩa bận”. Nó là cách accounting CPU idle trong một số tình huống có outstanding I/O.
 
 Một hệ thống có lưu trữ (storage / 저장소) bottleneck vẫn có thể có iowait không quá cao nếu CPU bận làm việc khác. Ngược lại iowait cao không tự động chỉ ra thiết bị nào có vấn đề.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Khi iowait cao** đặt đầu vào cho **Quy trình điều tra lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간)**, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quy trình điều tra lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간)
 
@@ -389,8 +339,6 @@ findmnt
 journalctl -k | grep -i -E 'error|timeout|reset|nvme|blk'
 ```
 
-> **Nối mạch:** Ở chặng này của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Mô hình tư duy** tổng hợp từ **Quy trình điều tra lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 Lưu trữ (storage / 저장소) hiệu năng (performance / 성능) là bài toán chuỗi xử lý (pipeline / 파이프라인) và hàng đợi (queue / 큐):
@@ -409,8 +357,6 @@ storage service rate
 
 Bottleneck xuất hiện khi tốc độ đưa việc vào vượt khả năng phục vụ hoặc khi tail độ trễ (latency / 지연 시간) phía dưới tăng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“SSD không cần I/O scheduler.”** khối (block / 블록) tầng (layer / 계층) và queueing vẫn tồn tại; scheduler phù hợp tùy thiết bị và tải công việc (workload / 워크로드).
@@ -422,8 +368,6 @@ Bottleneck xuất hiện khi tốc độ đưa việc vào vượt khả năng p
 **“`write()` nhanh nghĩa dữ liệu đã xuống disk.”** Buffered I/O có thể chỉ mới vào page bộ nhớ đệm (cache / 캐시).
 
 **“iowait cao chính là phần trăm disk utilization.”** Hai chỉ số (metric / 지표) mô tả khái niệm khác nhau.
-
-> **Nối mạch:** Trong **Khối (block / 블록) tầng (layer / 계층), hàng đợi I/O và bộ lập lịch lưu trữ**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

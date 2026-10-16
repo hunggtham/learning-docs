@@ -14,8 +14,6 @@ Doanh nghiệp tiếp tục bán tài sản không cốt lõi, giảm bảo lãn
 
 Trước khủng hoảng, uy tín của tập đoàn có thể giúp tiếp cận tín dụng ngân hàng dễ hơn. Sau khủng hoảng, người cho vay và nhà đầu tư đòi hỏi khả năng trả nợ, lợi nhuận và quản trị rõ hơn. Đây là bước chuyển từ “tăng trưởng trước” sang **tăng trưởng có điều chỉnh theo rủi ro (risk-adjusted growth)**.
 
-> **Chuyển mạch:** Trong **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Quản trị và thị trường vốn thay đổi hành vi doanh nghiệp** tiếp nhận điểm tựa từ **Tái cơ cấu tiếp tục ngay cả khi GDP đã phục hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Internet băng rộng tạo một hàm sản xuất mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quản trị và thị trường vốn thay đổi hành vi doanh nghiệp
 
 Khi cổ đông bên ngoài, nhà đầu tư trái phiếu và tổ chức xếp hạng tín dụng có tiếng nói lớn hơn, ban quản lý phải giải thích rõ hơn cách phân bổ vốn.
@@ -23,8 +21,6 @@ Khi cổ đông bên ngoài, nhà đầu tư trái phiếu và tổ chức xếp
 M&A, thoái vốn, phát hành cổ phiếu và vay nợ trở thành quyết định phải đối diện với thị trường chứ không chỉ là lựa chọn nội bộ tập đoàn.
 
 Điều này không xóa quyền kiểm soát gia đình hoặc bản sắc tập đoàn, nhưng làm thị trường vốn bên ngoài trở thành một tầng kỷ luật mới. Xem [quản trị doanh nghiệp](../08_corporate_governance_ownership_and_control.md).
-
-> **Chuyển mạch:** Ở chặng này của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Internet băng rộng tạo một hàm sản xuất mới** tiếp nhận điểm tựa từ **Quản trị và thị trường vốn thay đổi hành vi doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài học dot-com: tăng người dùng không đồng nghĩa tăng giá trị kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Internet băng rộng tạo một hàm sản xuất mới
 
@@ -36,8 +32,6 @@ Cổng thông tin, trò chơi trực tuyến, ngân hàng Internet, thương m�
 
 Hàn Quốc bắt đầu có một loại quy mô mà CAPEX vật chất không nhất thiết tăng cùng tỷ lệ với doanh thu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Bài học dot-com: tăng người dùng không đồng nghĩa tăng giá trị kinh tế** tiếp nhận điểm tựa từ **Internet băng rộng tạo một hàm sản xuất mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trung Quốc gia nhập WTO: vừa là thị trường, nhà máy và đối thủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bài học dot-com: tăng người dùng không đồng nghĩa tăng giá trị kinh tế
 
 Bùng nổ Internet đầu thời kỳ cũng cho thấy lượng truy cập và số người dùng có thể tăng trước khi mô hình kiếm tiền được chứng minh.
@@ -45,8 +39,6 @@ Bùng nổ Internet đầu thời kỳ cũng cho thấy lượng truy cập và 
 Một dịch vụ có nhiều người dùng nhưng không có khả năng kiếm tiền, tỷ lệ giữ chân hoặc quyền định giá vẫn có thể tiêu hủy vốn.
 
 Bài học này lặp lại nhiều lần trong thời đại startup và đầu tư mạo hiểm: quy mô số giúp tăng trưởng nhanh hơn nhưng không xóa yêu cầu cuối cùng về dòng tiền. Xem [startup và scale-up](../07_startups_venture_and_scaleups.md).
-
-> **Chuyển mạch:** Trong **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Trung Quốc gia nhập WTO: vừa là thị trường, nhà máy và đối thủ** tiếp nhận điểm tựa từ **Bài học dot-com: tăng người dùng không đồng nghĩa tăng giá trị kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sản xuất đa quốc gia thay đổi ý nghĩa của “xuất khẩu Hàn Quốc”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trung Quốc gia nhập WTO: vừa là thị trường, nhà máy và đối thủ
 
@@ -65,8 +57,6 @@ Doanh thu từ Trung Quốc
 
 Cách nhìn nhiều lớp này vẫn rất quan trọng cho phân tích doanh nghiệp Hàn Quốc hiện nay.
 
-> **Chuyển mạch:** Ở chặng này của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Sản xuất đa quốc gia thay đổi ý nghĩa của “xuất khẩu Hàn Quốc”** tiếp nhận điểm tựa từ **Trung Quốc gia nhập WTO: vừa là thị trường, nhà máy và đối thủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Samsung: từ nhà sản xuất điện tử thành doanh nghiệp công nghệ toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Sản xuất đa quốc gia thay đổi ý nghĩa của “xuất khẩu Hàn Quốc”
 
 Khi doanh nghiệp Hàn Quốc xây nhà máy ở Trung Quốc, Đông Nam Á, Mỹ và châu Âu, doanh thu của công ty Hàn Quốc không còn đồng nghĩa với hàng hóa được sản xuất trong lãnh thổ Hàn Quốc.
@@ -81,8 +71,6 @@ Vì vậy cần phân biệt:
 - lợi nhuận và tài sản do công ty Hàn Quốc kiểm soát.
 
 Đây là nền để hiểu [chuỗi giá trị toàn cầu](../02_trade_export_and_global_value_chains.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Samsung: từ nhà sản xuất điện tử thành doanh nghiệp công nghệ toàn cầu** tiếp nhận điểm tựa từ **Sản xuất đa quốc gia thay đổi ý nghĩa của “xuất khẩu Hàn Quốc”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyundai và Kia: từ cạnh tranh bằng giá sang chất lượng và thương hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Samsung: từ nhà sản xuất điện tử thành doanh nghiệp công nghệ toàn cầu
 
@@ -100,8 +88,6 @@ R&D + CAPEX
 
 Nếu vòng lặp bị đứt ở một thế hệ công nghệ, doanh nghiệp có thể mất lợi thế rất nhanh. Vì vậy bán dẫn là ngành nơi quy mô, tốc độ học và kỷ luật đầu tư kết hợp chặt với nhau.
 
-> **Chuyển mạch:** Trong **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Hyundai và Kia: từ cạnh tranh bằng giá sang chất lượng và thương hiệu** tiếp nhận điểm tựa từ **Samsung: từ nhà sản xuất điện tử thành doanh nghiệp công nghệ toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LG, SK và sự chuyên môn hóa sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hyundai và Kia: từ cạnh tranh bằng giá sang chất lượng và thương hiệu
 
 Trong thập niên 2000, các hãng xe Hàn Quốc cải thiện mạnh chất lượng, thiết kế, độ tin cậy và thương hiệu ở thị trường quốc tế.
@@ -110,23 +96,17 @@ Một hãng ô tô toàn cầu không chỉ bán sản phẩm. Nó phải quản
 
 Điều này làm mô hình kinh tế chuyển từ “sản xuất càng nhiều càng tốt” sang tối ưu **sản lượng × cơ cấu sản phẩm × giá × chất lượng × chi phí vòng đời**.
 
-> **Chuyển mạch:** Ở chặng này của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **LG, SK và sự chuyên môn hóa sâu hơn** tiếp nhận điểm tựa từ **Hyundai và Kia: từ cạnh tranh bằng giá sang chất lượng và thương hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thoại di động và chuỗi cung ứng điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## LG, SK và sự chuyên môn hóa sâu hơn
 
 LG tiếp tục xây vị thế trong điện tử, hóa chất và sau này pin. SK phát triển từ dệt may sang năng lượng, viễn thông và bán dẫn thông qua nhiều bước tái cấu trúc và M&A.
 
 Các ví dụ này cho thấy phả hệ chaebol không phải quá trình mở rộng ngẫu nhiên mãi mãi. Sau 1997, nhiều tập đoàn phải lựa chọn rõ hơn ngành nào có thể trở thành cỗ máy tạo tiền hoặc năng lực chiến lược dài hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **LG, SK và sự chuyên môn hóa sâu hơn** xác định đầu vào; **Điện thoại di động và chuỗi cung ứng điện tử** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Thẻ tín dụng và bài học về tăng trưởng tài chính tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Điện thoại di động và chuỗi cung ứng điện tử
 
 Sự phát triển của điện thoại di động tạo nhu cầu cho bán dẫn, màn hình, pin, linh kiện và phần mềm. Hàn Quốc có lợi thế vì đã tích lũy nhiều mắt xích liên quan từ trước.
 
 Đây là ví dụ của **hiệu ứng cụm năng lực (capability cluster)**: khi nhiều ngành bổ trợ nằm gần nhau về công nghệ và nhà cung cấp, một thị trường mới có thể kích hoạt tăng trưởng đồng thời ở nhiều doanh nghiệp.
-
-> **Chuyển mạch:** Trong **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Điện thoại di động và chuỗi cung ứng điện tử** xác định đầu vào; **Thẻ tín dụng và bài học về tăng trưởng tài chính tiêu dùng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Khủng hoảng tài chính toàn cầu 2008: bài kiểm tra mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thẻ tín dụng và bài học về tăng trưởng tài chính tiêu dùng
 
@@ -136,15 +116,11 @@ Bài học là tăng trưởng tài chính có thể kéo nhu cầu hiện tại
 
 Đây là tiền đề để hiểu vai trò lớn của **nợ hộ gia đình (household debt / 가계부채)** trong kinh tế Hàn Quốc hiện đại.
 
-> **Chuyển mạch:** Ở chặng này của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Khủng hoảng tài chính toàn cầu 2008: bài kiểm tra mới** tiếp nhận điểm tựa từ **Thẻ tín dụng và bài học về tăng trưởng tài chính tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ bắt kịp sang cạnh tranh ở biên công nghệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Khủng hoảng tài chính toàn cầu 2008: bài kiểm tra mới
 
 Khủng hoảng 2008 khác 1997. Lần này tâm chấn nằm ở hệ thống tài chính Mỹ và quốc tế, nhưng Hàn Quốc vẫn chịu tác động qua thương mại, USD funding, tỷ giá và tâm lý rủi ro.
 
 So với 1997, hệ thống Hàn Quốc có dự trữ ngoại hối, quản trị tài chính và cấu trúc doanh nghiệp tốt hơn. Điều này cho thấy cải cách sau khủng hoảng trước đã tạo **khả năng chống chịu (resilience / 회복탄력성)**, dù không loại bỏ hoàn toàn rủi ro bên ngoài.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Từ bắt kịp sang cạnh tranh ở biên công nghệ** tiếp nhận điểm tựa từ **Khủng hoảng tài chính toàn cầu 2008: bài kiểm tra mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ số tạo một loại doanh nghiệp mới bên ngoài chaebol truyền thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ bắt kịp sang cạnh tranh ở biên công nghệ
 
@@ -154,8 +130,6 @@ Doanh nghiệp phải đầu tư nhiều hơn vào R&D, thiết kế, phần m�
 
 Bước chuyển này khó hơn vì kết quả R&D bất định và không thể chỉ dựa vào vốn vật chất.
 
-> **Chuyển mạch:** Trong **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, **Dịch vụ số tạo một loại doanh nghiệp mới bên ngoài chaebol truyền thống** tiếp nhận điểm tựa từ **Từ bắt kịp sang cạnh tranh ở biên công nghệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) — Nền kinh tế 2010s–2020s được hình thành như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dịch vụ số tạo một loại doanh nghiệp mới bên ngoài chaebol truyền thống
 
 NAVER, các công ty game và nhiều doanh nghiệp Internet cho thấy một công ty Hàn Quốc có thể đạt quy mô lớn mà không cần đi theo con đường thép–xây dựng–hóa chất của chaebol cũ.
@@ -163,8 +137,6 @@ NAVER, các công ty game và nhiều doanh nghiệp Internet cho thấy một c
 Tài sản quan trọng của nền tảng có thể là phần mềm, dữ liệu, mạng lưới người dùng và thương hiệu số. Điều này làm cấu trúc doanh nghiệp Hàn Quốc đa dạng hơn.
 
 Tuy nhiên khi nền tảng lớn lên, nó lại đối mặt những câu hỏi quen thuộc: quyền lực thị trường, quản trị, đầu tư, cạnh tranh và quan hệ với SME.
-
-> **Chuyển mạch:** Ở chặng này của **Thập niên 2000: tái cơ cấu, CNTT, Trung Quốc và bước ra toàn cầu (Restructuring & Global Expansion / 구조조정·IT·글로벌화)**, sau nội dung của **Dịch vụ số tạo một loại doanh nghiệp mới bên ngoài chaebol truyền thống**, **Liên kết (connection / 연결) — Nền kinh tế 2010s–2020s được hình thành như thế nào?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết (connection / 연결) — Nền kinh tế 2010s–2020s được hình thành như thế nào?
 

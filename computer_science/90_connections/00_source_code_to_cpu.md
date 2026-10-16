@@ -2,7 +2,6 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Từ mã nguồn (source code / 소스 코드) đến CPU**. Route đi từ source semantics → parsing/bytecode → runtime/native instructions → memory/cache → OS/I/O; mỗi chặng giữ một phần contract và mở ra failure/performance question kế tiếp.
 
-
 Một trong những mô hình tư duy (mental models / 사고 모델들) quan trọng nhất của Khoa học máy tính (computer science / 컴퓨터 과학) là nhìn một dòng mã nguồn (source code / 소스 코드) xuyên qua toàn bộ ngăn xếp (stack / 스택). Khi nhà phát triển (developer / 개발자) viết:
 
 ```java
@@ -19,17 +18,11 @@ Nếu dùng `BigDecimal`, thao tác (operation / 연산) không còn map một l
 
 Ngay từ kiểu ở mã nguồn (source type / 소스 타입), ta đã chọn biểu diễn (representation / 표현)/chi phí (cost / 비용) mô hình (model / 모델) khác.
 
-
-> **Nối mạch:** Source semantics được parser biến thành cấu trúc, compiler/VM biến thành bytecode hoặc machine code, rồi runtime thực thi; mỗi bước giữ một phần contract và thêm một lớp failure.
-
 ## Parsing và bytecode
 
 `javac` tokenize/parse nguồn (source / 소스) thành AST, resolve names/types, rồi emit JVM bytecode. Lệnh bytecode (bytecode instruction / 바이트코드 명령어) có thể là `lmul` cho long multiply sau values loaded.
 
 Tệp lớp (class file / 클래스 파일) chứa constant pool, phương thức (method / 메서드) bytecode và siêu dữ liệu (metadata / 메타데이터). JVM verifier kiểm tra các ràng buộc (constraints / 제약조건들) trước thực thi (execution / 실행).
-
-
-> **Nối mạch:** Parsing đã biến tokens thành bytecode, nhưng bytecode chưa nói class nào được nạp hoặc dependency nào được liên kết. **Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)** tiếp tục bằng chính câu hỏi đó: runtime giữ contract của source ở đâu, và failure xuất hiện khi classpath/initialization không khớp thế nào?
 
 ## Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)
 
@@ -37,17 +30,11 @@ Bộ nạp lớp JVM (JVM class loader / JVM 클래스 로더) tải (load / 로
 
 JIT có thể inline getter, eliminate đối tượng (object / 객체) allocation, hoist checks hoặc constant-fold nếu các giả định (assumptions / 가정들)/profile permit. dòng mã nguồn (source line / 소스 코드 줄) và các lệnh cuối (final instructions / 최종 명령어) không 1:1.
 
-
-> **Nối mạch:** Runtime đã quyết định code path, object lifetime và JIT policy; bước kế tiếp phải cho thấy quyết định đó thành thao tác nào trên ISA. **Lệnh máy bản địa (native instructions / 네이티브 명령어)** vì vậy kiểm tra register, branch và calling convention thay vì coi compiler output là “mã máy chung chung”.
-
 ## Lệnh máy bản địa (native instructions / 네이티브 명령어)
 
 Suppose final mục tiêu (target / 대상) x86-64/ARM64. trình biên dịch (compiler / 컴파일러)/JIT allocates values to registers; nếu registers không đủ, spills to ngăn xếp (stack / 스택)/bộ nhớ (memory / 메모리). Multiply uses lệnh máy (machine instruction / 기계 명령어) or chuỗi (sequence / 시퀀스) appropriate.
 
 Instruction bytes are fetched through I-cache, decoded, renamed/scheduled in hiện đại (modern / 현대적) microarchitecture, operands read from registers, đơn vị thực thi (execution unit / 실행 유닛) computes kết quả (result / 결과). CPU may overlap this with other independent instructions.
-
-
-> **Nối mạch:** Instruction sequence chỉ giải thích phép tính nếu biết operand đến từ đâu và cache miss làm đổi chi phí thế nào. **Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)** nối register với địa chỉ, locality và coherence; đây là cầu nối từ semantics sang performance.
 
 ## Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)
 
@@ -55,31 +42,19 @@ Nếu `price` nằm trong đối tượng (object / 객체)/array, CPU needs t�
 
 Thus a dòng mã nguồn (source line / 소스 코드 줄) that “does one multiplication” can be dominated by bộ nhớ (memory / 메모리) truy cập (access / 접근).
 
-
-> **Nối mạch:** Nếu dữ liệu đã nằm trong user-space cache thì hot path có thể không syscall; khi page fault, I/O hoặc scheduling xuất hiện, invariant lại thuộc OS. **OS involvement** phân biệt hai trường hợp để không gán mọi độ trễ cho kernel.
-
 ## OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)
 
 Ordinary arithmetic does not require syscall. tiến trình người dùng (user process / 사용자 프로세스) runs instructions directly in chế độ người dùng (user mode / 사용자 모드). OS becomes involved on events like page fault, scheduling preemption or lời gọi hệ thống (system call / 시스템 호출).
 
 This distinction explains why Vòng lặp giới hạn bởi CPU (CPU-bound loop / CPU 바운드 루프) stays user-space while tệp (file / 파일)/truy cập mạng (network access / 네트워크 접근) crosses ranh giới nhân hệ điều hành (kernel boundary / 커널 경계).
 
-
-> **Nối mạch:** **OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)** cung cấp điều kiện cho **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)
 
 Now line's giá trị (value / 값) crosses more layers: đối tượng (object / 객체) serialization → JDBC driver → socket → TCP/IP → DB parser → giao dịch (transaction / 트랜잭션) → buffer pool → WAL → filesystem/thiết bị (device / 장치). The arithmetic itself is tiny portion of độ trễ (latency / 지연 시간).
 
-
-> **Nối mạch:** **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)** cung cấp điều kiện cho **lan truyền lỗi (error propagation / 오류 전파) across layers**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Lan truyền lỗi (error propagation / 오류 전파) across layers
 
 Overflow may happen at tầng số học của ngôn ngữ (language arithmetic layer / 언어 산술 계층); `NullPointerException` before multiply; page fault transparent at OS; hardware machine check rare; Lỗi ràng buộc cơ sở dữ liệu (DB constraint error / DB 제약조건 오류) later. “The line failed” is not one miền lỗi (failure domain / 장애 도메인).
-
-
-> **Nối mạch:** **lan truyền lỗi (error propagation / 오류 전파) across layers** cung cấp điều kiện cho **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)
 
@@ -98,24 +73,15 @@ flowchart TD
     H -- yes --> I[System call / kernel / device]
 ```
 
-
-> **Nối mạch:** **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)** cung cấp điều kiện cho **Why this liên kết (connection / 연결) matters**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Why this liên kết (connection / 연결) matters
 
 Nhà phát triển cấp cao (high-level developer / 고수준 개발자) does not need assembly every day, but knowing the chuỗi (chain / 사슬) changes diagnosis. CPU high + few bộ nhớ đệm (cache / 캐시) misses suggests compute; high LLC misses suggests bố cục (layout / 레이아웃); syscall-heavy profile suggests I/O ranh giới (boundary / 경계); GC pauses suggest thời gian chạy (runtime / 런타임) allocation; page faults suggest working-set/bộ nhớ (memory / 메모리) pressure.
 
 Tối ưu hóa (optimization / 최적화) becomes evidence-driven instead of “rewrite vòng lặp (loop / 루프) cú pháp (syntax / 문법)”.
 
-
-> **Nối mạch:** **Why this liên kết (connection / 연결) matters** cung cấp điều kiện cho **mô hình tư duy (mental model / 사고 모델)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > mã nguồn (source code / 소스 코드) is a **ngữ nghĩa (semantic / 의미적) description** transformed through trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/ISA into machine trạng thái (state / 상태) transitions. Each tầng (layer / 계층) preserves a đặc tả hợp đồng (contract / 계약) while introducing its own costs and thất bại (failure / 실패) modes.
-
-
-> **Nối mạch:** **mô hình tư duy (mental model / 사고 모델)** cung cấp điều kiện cho **Cross-references**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Cross-references
 

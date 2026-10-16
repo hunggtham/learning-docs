@@ -52,8 +52,6 @@ Lĩnh vực (domain / 도메인) là một phần của hàm (function / 함수)
 
 Ví dụ `f(x)=x^2` trên toàn `R` không injective. Nếu restrict lĩnh vực (domain / 도메인) thành `[0,∞)`, nó trở thành injective và có inverse `√x` trên phạm vi (range / 범위) tương ứng. Việc “chọn lĩnh vực (domain / 도메인)” vì thế có thể thay đổi cả cấu trúc (structure / 구조) của bài toán (problem / 문제).
 
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Codomain và phạm vi (range / 범위): vì sao phải phân biệt?** nối từ **Từ quan hệ (relation / 관계) đến hàm (function / 함수)** sang **Hàm (function / 함수) không nhất thiết là công thức đóng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Codomain và phạm vi (range / 범위): vì sao phải phân biệt?
 
 Phạm vi (range / 범위) hay ảnh (image / 이미지) là tập outputs thực sự đạt được. Codomain là tập mà ta tuyên bố đầu ra (output / 출력) thuộc vào.
@@ -76,8 +74,6 @@ formula không đổi nhưng thuộc tính (property / 속성) “surjective hay
 
 Đây là lý do toán học hiện đại coi hàm (function / 함수) là **ánh xạ (mapping / 매핑) kèm lĩnh vực (domain / 도메인) và codomain**, không chỉ là expression.
 
-> **Nối mạch:** Ở chặng này của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Hàm (function / 함수) không nhất thiết là công thức đóng** nối từ **Codomain và phạm vi (range / 범위): vì sao phải phân biệt?** sang **Đồ thị (graph / 그래프) của hàm (function / 함수) là tập các input-output pairs**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm (function / 함수) không nhất thiết là công thức đóng
 
 Khi học phổ thông, hàm (function / 함수) thường xuất hiện dưới dạng `y=2x+3`, `y=x²` hay `y=sin x`, nên dễ hình thành misconception rằng hàm (function / 함수) phải có closed-form formula.
@@ -92,8 +88,6 @@ Thực tế, một hàm (function / 함수) có thể được định nghĩa b�
 Nó cũng có thể được định nghĩa bằng thuật toán (algorithm / 알고리즘), simulation hoặc program. Một sorting hàm (function / 함수) nhận một danh sách (list / 목록) và trả danh sách (list / 목록) đã sắp xếp; một trình biên dịch (compiler / 컴파일러) pass nhận AST và trả AST mới; một neural mạng (network / 네트워크) nhận véc-tơ (vector / 벡터) đầu vào (input / 입력) và trả logits. Nếu ánh xạ (mapping / 매핑) deterministic và đặc tả hợp đồng (contract / 계약) được xác định rõ, tất cả đều có thể được nhìn như functions.
 
 Điều này rất quan trọng vì nó tách **mathematical đối tượng (object / 객체)** khỏi **biểu diễn (representation / 표현)**. hàm (function / 함수) là ánh xạ (mapping / 매핑); formula chỉ là một cách biểu diễn ánh xạ (mapping / 매핑).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Đồ thị (graph / 그래프) của hàm (function / 함수) là tập các input-output pairs** nối từ **Hàm (function / 함수) không nhất thiết là công thức đóng** sang **Injective, surjective và bijective**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồ thị (graph / 그래프) của hàm (function / 함수) là tập các input-output pairs
 
@@ -114,8 +108,6 @@ x^2+y^2=1
 ```
 
 không phải toàn cục (global / 전역) hàm (function / 함수) `y=f(x)` vì với nhiều `x` có hai values `y=±√(1-x²)`. Ta có thể chia nó thành hai functions, hoặc dùng parametric biểu diễn (representation / 표현). Đây là ví dụ cho thấy “không phải hàm (function / 함수) theo biểu diễn (representation / 표현) hiện tại” không có nghĩa đối tượng (object / 객체) vô dụng; có thể biểu diễn (representation / 표현) chưa phù hợp.
-
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Injective, surjective và bijective** nối từ **Đồ thị (graph / 그래프) của hàm (function / 함수) là tập các input-output pairs** sang **Composition: xây hệ phức tạp từ transformations đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Injective, surjective và bijective
 
@@ -165,8 +157,6 @@ Nếu lĩnh vực (domain / 도메인) là toàn `R`, đầu ra (output / 출력
 
 Trong computing, hashing thường cố ý không invertible: nhiều possible inputs map vào không gian đầu ra (output / 출력) nhỏ hơn. Compression lossless phải preserve đủ thông tin (information / 정보) để decode; lossy compression chấp nhận mất một phần thông tin (information / 정보) để giảm biểu diễn (representation / 표현) kích thước (size / 크기).
 
-> **Nối mạch:** Ở chặng này của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Composition: xây hệ phức tạp từ transformations đơn giản** nối từ **Injective, surjective và bijective** sang **Hàm (function / 함수) như transformation của cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Composition: xây hệ phức tạp từ transformations đơn giản
 
 Giả sử
@@ -215,8 +205,6 @@ f\circ g\ne g\circ f.
 
 Rotate rồi translate một đối tượng (object / 객체) thường khác translate rồi rotate. Normalize dữ liệu (data / 데이터) rồi apply threshold có thể khác threshold rồi normalize. thứ tự (order / 순서) là một phần của tiến trình (process / 프로세스).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Hàm (function / 함수) như transformation của cấu trúc (structure / 구조)** nối từ **Composition: xây hệ phức tạp từ transformations đơn giản** sang **Parameters và family of functions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm (function / 함수) như transformation của cấu trúc (structure / 구조)
 
 Một cách nhìn mạnh hơn “machine input-output” là coi hàm (function / 함수) như một transformation giữa spaces.
@@ -228,8 +216,6 @@ f:A\to B
 nói rằng ta đang chuyển description từ không gian (space / 공간) `A` sang không gian (space / 공간) `B`. Với tuyến tính (linear / 선형) algebra, ma trận (matrix / 행렬) đại diện tuyến tính (linear / 선형) hàm (function / 함수) giữa véc-tơ (vector / 벡터) spaces. Với xác suất (probability / 확률), random variable là hàm (function / 함수) từ mẫu (sample / 표본) không gian (space / 공간) sang numbers. Với tối ưu hóa (optimization / 최적화), mục tiêu (objective / 목표) hàm (function / 함수) map quyết định (decision / 결정) véc-tơ (vector / 벡터) thành scalar chi phí (cost / 비용). Với truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리), truy vấn (query / 쿼리) map cơ sở dữ liệu (database / 데이터베이스) trạng thái (state / 상태) thành kết quả (result / 결과) quan hệ (relation / 관계).
 
 Cùng một concept hàm (function / 함수) vì thế nối nhiều mảng toán khác nhau.
-
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Parameters và family of functions** nối từ **Hàm (function / 함수) như transformation của cấu trúc (structure / 구조)** sang **Piecewise functions và nghiệp vụ (business / 비즈니스) rules**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parameters và family of functions
 
@@ -251,8 +237,6 @@ f_\theta(x)
 
 phù hợp dữ liệu (data / 데이터) và mục tiêu (objective / 목표). huấn luyện (training / 학습) không “tạo phép thuật”; nó tìm kiếm (search / 검색) trong một family functions được kiến trúc (architecture / 아키텍처) cho phép.
 
-> **Nối mạch:** Ở chặng này của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Piecewise functions và nghiệp vụ (business / 비즈니스) rules** nối từ **Parameters và family of functions** sang **Monotonicity và inverse**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Piecewise functions và nghiệp vụ (business / 비즈니스) rules
 
 Không phải hệ thống (system / 시스템) nào cũng dùng cùng quy tắc (rule / 규칙) trên toàn lĩnh vực (domain / 도메인). Piecewise hàm (function / 함수) cho phép quy tắc (rule / 규칙) phụ thuộc region.
@@ -271,8 +255,6 @@ Tax brackets, shipping fees, tiered pricing, ReLU activation, tỷ lệ (rate / 
 
 Điểm cần chú ý là piecewise hàm (function / 함수) vẫn chỉ là **một hàm (function / 함수)**, nếu tại mỗi đầu vào (input / 입력) đúng một branch xác định đầu ra (output / 출력). ranh giới (boundary / 경계) conditions cần được viết cẩn thận để tránh gap hoặc overlap gây ambiguity.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Monotonicity và inverse** nối từ **Piecewise functions và nghiệp vụ (business / 비즈니스) rules** sang **Transformations của đồ thị (graph / 그래프) và tác động lên đầu vào (input / 입력)/đầu ra (output / 출력)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Monotonicity và inverse
 
 Nếu hàm (function / 함수) strictly increasing trên một interval,
@@ -284,8 +266,6 @@ x_1<x_2\Rightarrow f(x_1)<f(x_2),
 thì nó injective trên interval đó. Tương tự với strictly decreasing.
 
 Monotonicity (Monotonicity / 단조성) vì thế là một cách geometric để thấy invertibility cục bộ hoặc trên restricted lĩnh vực (domain / 도메인). Đây là lý do logarithm có thể là inverse của exponential: exponential strictly increasing trên `R` khi cơ sở (base / 기반) `>1`.
-
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Transformations của đồ thị (graph / 그래프) và tác động lên đầu vào (input / 입력)/đầu ra (output / 출력)** nối từ **Monotonicity và inverse** sang **Hàm (function / 함수) equality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transformations của đồ thị (graph / 그래프) và tác động lên đầu vào (input / 입력)/đầu ra (output / 출력)
 
@@ -317,8 +297,6 @@ Quy mô (scale / 규모) đầu vào (input / 입력) axis theo factor nghịch 
 
 Cách nhớ tốt hơn không phải thuộc quy tắc (rule / 규칙) “inside ngược, outside thuận”, mà hỏi: “để hàm (function / 함수) cũ nhận cùng đầu vào (input / 입력) như trước, đầu vào (input / 입력) mới phải thay đổi thế nào?”
 
-> **Nối mạch:** Ở chặng này của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Hàm (function / 함수) equality** nối từ **Transformations của đồ thị (graph / 그래프) và tác động lên đầu vào (input / 입력)/đầu ra (output / 출력)** sang **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수), kiểu (type / 타입) và Đặc tả API (API contract / API 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm (function / 함수) equality
 
 Hai functions bằng nhau khi chúng có cùng lĩnh vực (domain / 도메인) phù hợp và cho cùng đầu ra (output / 출력) với mọi đầu vào (input / 입력) trong lĩnh vực (domain / 도메인) đó. Hai formulas trông khác nhau vẫn có thể represent cùng hàm (function / 함수) trên một lĩnh vực (domain / 도메인).
@@ -332,8 +310,6 @@ Ví dụ
 đúng khi `x≠1`. Nhưng nếu hàm (function / 함수) bên trái có lĩnh vực (domain / 도메인) `R\{1}` còn `x+1` được định nghĩa trên toàn `R`, thì chúng không hoàn toàn là cùng hàm (function / 함수) nếu lĩnh vực (domain / 도메인) được coi là một phần của đối tượng (object / 객체).
 
 Đây là distinction quan trọng khi simplification tạo ra removable discontinuity.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm số: từ quan hệ đến quy tắc biến đổi**, sau nội dung của **Hàm (function / 함수) equality**, **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수), kiểu (type / 타입) và Đặc tả API (API contract / API 계약)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수) trong xác suất (probability / 확률)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수), kiểu (type / 타입) và Đặc tả API (API contract / API 계약)
 
@@ -359,8 +335,6 @@ thay vì giả vờ mọi đầu vào (input / 입력) đều hợp lệ.
 
 Cách nhìn này giúp thấy lĩnh vực (domain / 도메인)/codomain không phải khái niệm hàn lâm xa mã (code / 코드); chúng là mathematical phiên bản (version / 버전) của đặc tả hợp đồng (contract / 계약) thiết kế (design / 설계).
 
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수) trong xác suất (probability / 확률)** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수), kiểu (type / 타입) và Đặc tả API (API contract / API 계약)** sang **Khi hàm (function / 함수) mô hình (model / 모델) không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수) trong xác suất (probability / 확률)
 
 Một biến ngẫu nhiên (Random Variable / 확률변수) thực chất là hàm (function / 함수)
@@ -372,8 +346,6 @@ X:\Omega\to\mathbb R,
 map mỗi elementary kết quả (outcome / 결과) trong mẫu (sample / 표본) không gian (space / 공간) `Ω` thành một number. “Random” nằm ở kết quả (outcome / 결과) được chọn theo xác suất (probability / 확률) mô hình (model / 모델); ánh xạ (mapping / 매핑) `X` itself là deterministic.
 
 Đây là một liên kết (connection / 연결) quan trọng: khi hiểu hàm (function / 함수) tốt, xác suất (probability / 확률) bớt giống một collection công thức riêng biệt.
-
-> **Nối mạch:** Ở chặng này của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Khi hàm (function / 함수) mô hình (model / 모델) không đủ** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결) — hàm (function / 함수) trong xác suất (probability / 확률)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi hàm (function / 함수) mô hình (model / 모델) không đủ
 
@@ -389,13 +361,9 @@ Trong động (dynamic / 동적) các hệ thống (systems / 시스템들), đ�
 
 Điều này không làm hàm (function / 함수) mất giá trị; nó chỉ nhắc rằng mô hình (model / 모델) phải chứa đủ variables để deterministic ánh xạ (mapping / 매핑) trở nên hợp lý, hoặc phải chuyển sang probabilistic mô hình (model / 모델).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi hàm (function / 함수) mô hình (model / 모델) không đủ** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hàm (function / 함수) là một transformation có đặc tả hợp đồng (contract / 계약). lĩnh vực (domain / 도메인) nói những trạng thái đầu vào nào hợp lệ; quy tắc (rule / 규칙) nói chúng được biến đổi ra sao; codomain nói ta đang mô tả đầu ra (output / 출력) trong không gian (space / 공간) nào. Composition xây hệ lớn từ transformations nhỏ, còn invertibility hỏi transformation có giữ đủ thông tin (information / 정보) để quay ngược lại hay không.
-
-> **Nối mạch:** Trong **Hàm số: từ quan hệ đến quy tắc biến đổi**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

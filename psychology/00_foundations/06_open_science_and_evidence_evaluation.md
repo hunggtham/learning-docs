@@ -16,8 +16,6 @@ Mỗi lựa chọn có thể hợp lý riêng lẻ. Nhưng nếu nhiều lựa c
 
 Vấn đề này thường được gọi chung là **researcher degrees of freedom**.
 
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **2. Exploratory và confirmatory research phải được phân biệt** nối từ **1. Vì sao hệ thống khoa học có thể tạo kết quả quá đẹp** sang **3. Preregistration giúp gì — và không giúp gì**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Exploratory và confirmatory research phải được phân biệt
 
 **Nghiên cứu xác nhận (confirmatory research)** kiểm tra hypothesis và phân tích (analysis / 분석) plan đã định trước. **Nghiên cứu khám phá (exploratory research)** dùng dữ liệu (data / 데이터) để tìm mẫu (pattern / 패턴) hoặc hypothesis mới.
@@ -34,8 +32,6 @@ independent test / confirm
 
 Nếu liên tục tune mô hình (model / 모델) trên kiểm thử (test / 테스트) set, kiểm thử (test / 테스트) set không còn độc lập. Tương tự, nếu hypothesis được hình thành sau khi thấy dữ liệu (data / 데이터), study đó phù hợp để generate hypothesis hơn là xác nhận mạnh hypothesis ấy.
 
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **3. Preregistration giúp gì — và không giúp gì** nối từ **2. Exploratory và confirmatory research phải được phân biệt** sang **4. Registered reports thay đổi incentive**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Preregistration giúp gì — và không giúp gì
 
 **Đăng ký trước (preregistration)** ghi hypothesis, kết quả (outcome / 결과), exclusion quy tắc (rule / 규칙) và phân tích (analysis / 분석) plan trước khi biết kết quả.
@@ -43,8 +39,6 @@ Nếu liên tục tune mô hình (model / 모델) trên kiểm thử (test / 테
 Nó giúp phân biệt planned phân tích (analysis / 분석) với exploratory phân tích (analysis / 분석) và giảm một số flexibility hậu nghiệm.
 
 > **Limitation:** preregistration không bảo đảm hypothesis hay, đo lường (measurement / 측정) valid hoặc mẫu (sample / 표본) representative. Một plan kém được đăng ký trước vẫn là plan kém. Preregistration cũng không cấm exploration; nó chỉ yêu cầu ghi nhãn trung thực.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **4. Registered reports thay đổi incentive** nối từ **3. Preregistration giúp gì — và không giúp gì** sang **5. Direct replication và conceptual replication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Registered reports thay đổi incentive
 
@@ -54,8 +48,6 @@ Cách này giảm incentive phải đạt p-value đẹp và chuyển trọng t�
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** registered reports cải thiện một số mặt transparency và publication tiến trình (process / 프로세스), nhưng literature về long-term system-wide impact vẫn tiếp tục phát triển.
 
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **5. Direct replication và conceptual replication** nối từ **4. Registered reports thay đổi incentive** sang **6. Replication cần tác động (effect / 효과) kích thước (size / 크기) và bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Direct replication và conceptual replication
 
 **Tái lập trực tiếp (direct replication)** cố giữ procedure gần original study để kiểm tra tác động (effect / 효과) cụ thể. **Tái lập khái niệm (conceptual replication)** thay operationalization nhưng kiểm tra cùng theoretical quan hệ (relation / 관계).
@@ -63,8 +55,6 @@ Cách này giảm incentive phải đạt p-value đẹp và chuyển trọng t�
 Direct replication mạnh cho câu hỏi “kết quả (result / 결과) này có xuất hiện lại với procedure gần tương tự không?”. Conceptual replication mạnh hơn cho generality nhưng khó interpret hơn khi thất bại (fail / 실패) vì manipulation khác.
 
 Một replication thất bại không tự động chứng minh study gốc fraud hoặc lý thuyết (theory / 이론) sai hoàn toàn. Nhưng nếu mọi thất bại (failure / 실패) đều được giải thích hậu nghiệm bằng “ngữ cảnh (context / 맥락) khác”, lý thuyết (theory / 이론) mất falsifiability.
-
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **6. Replication cần tác động (effect / 효과) kích thước (size / 크기) và bất định (uncertainty / 불확실성)** nối từ **5. Direct replication và conceptual replication** sang **7. Publication độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Replication cần tác động (effect / 효과) kích thước (size / 크기) và bất định (uncertainty / 불확실성)
 
@@ -74,8 +64,6 @@ Cần so tác động (effect / 효과) kích thước (size / 크기), confiden
 
 Xem [[09_replication_meta_analysis_and_bayesian_reasoning]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **7. Publication độ lệch (bias / 편향)** nối từ **6. Replication cần tác động (effect / 효과) kích thước (size / 크기) và bất định (uncertainty / 불확실성)** sang **8. Winner's curse**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Publication độ lệch (bias / 편향)
 
 Nếu positive kết quả (result / 결과) dễ publish hơn null kết quả (result / 결과), visible literature sẽ overestimate tác động (effect / 효과) stability hoặc magnitude.
@@ -83,8 +71,6 @@ Nếu positive kết quả (result / 결과) dễ publish hơn null kết quả 
 **Publication độ lệch (bias / 편향)** không chỉ là “paper null bị giấu”. Incentive có thể tác động sớm hơn: hypothesis nào được viết, kết quả (outcome / 결과) nào được chọn, phân tích (analysis / 분석) nào được report.
 
 Meta-analysis có công cụ (tool / 도구) để đánh giá asymmetry, nhưng không thể reconstruct hoàn hảo studies chưa tồn tại hoặc chưa được chia sẻ.
-
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **8. Winner's curse** nối từ **7. Publication độ lệch (bias / 편향)** sang **9. Reproducibility khác replicability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Winner's curse
 
@@ -94,8 +80,6 @@ Replication lớn hơn thường cho estimate nhỏ hơn mà không có nghĩa �
 
 Đây là reason không nên bản dựng (build / 빌드) intervention mạnh từ một dramatic first paper.
 
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **9. Reproducibility khác replicability** nối từ **8. Winner's curse** sang **10. dữ liệu (data / 데이터)/mã (code / 코드) sharing có ranh giới (boundary / 경계) đạo đức**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Reproducibility khác replicability
 
 **Khả năng tái tạo (reproducibility)**: cùng dữ liệu (data / 데이터) + mã (code / 코드) có tạo lại reported kết quả (result / 결과) không?
@@ -103,8 +87,6 @@ Replication lớn hơn thường cho estimate nhỏ hơn mà không có nghĩa �
 **Khả năng tái lập (replicability)**: dữ liệu (data / 데이터) mới có cho mẫu (pattern / 패턴) tương tự không?
 
 Một study có thể reproducible nhưng not replicable. mã (code / 코드) hoàn hảo không sửa sampling độ lệch (bias / 편향) hoặc poor đo lường (measurement / 측정).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **9. Reproducibility khác replicability** đặt tiêu chí; **10. dữ liệu (data / 데이터)/mã (code / 코드) sharing có ranh giới (boundary / 경계) đạo đức** dùng tiêu chí đó để kiểm tra ranh giới, rồi **11. đo lường (measurement / 측정) reproducibility** mở rộng hệ quả.
 
 ## 10. dữ liệu (data / 데이터)/mã (code / 코드) sharing có ranh giới (boundary / 경계) đạo đức
 
@@ -115,8 +97,6 @@ Mental-health dữ liệu (data / 데이터), genomic dữ liệu (data / 데이
 Vì vậy “open science” không đồng nghĩa “upload everything”. Controlled truy cập (access / 접근) hoặc synthetic dữ liệu (data / 데이터) có thể phù hợp hơn.
 
 Xem [[04_ethics_and_critical_thinking]].
-
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **10. dữ liệu (data / 데이터)/mã (code / 코드) sharing có ranh giới (boundary / 경계) đạo đức** đặt tiêu chí; **11. đo lường (measurement / 측정) reproducibility** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. Không có một hierarchy bằng chứng (evidence / 증거) dùng cho mọi câu hỏi** mở rộng hệ quả.
 
 ## 11. đo lường (measurement / 측정) reproducibility
 
@@ -138,8 +118,6 @@ result có replicate không?
 theory có predict boundary không?
 ```
 
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **11. đo lường (measurement / 측정) reproducibility** đặt vấn đề; **12. Không có một hierarchy bằng chứng (evidence / 증거) dùng cho mọi câu hỏi** đối chiếu bằng chứng, rồi **13. Meta-analysis cần đọc heterogeneity** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12. Không có một hierarchy bằng chứng (evidence / 증거) dùng cho mọi câu hỏi
 
 Randomized trial rất mạnh cho nhiều nhân quả (causal / 인과적) intervention questions nhưng không thích hợp cho mọi hiện tượng. Longitudinal study mạnh cho trajectory; natural experiment có thể hữu ích khi randomization bất khả thi; qualitative research có thể trả lời lived experience hoặc cơ chế (mechanism / 메커니즘) generation tốt hơn numerical estimate.
@@ -147,8 +125,6 @@ Randomized trial rất mạnh cho nhiều nhân quả (causal / 인과적) inter
 Bằng chứng (evidence / 증거) chất lượng (quality / 품질) phải được đánh giá **relative to question**.
 
 Một meta-analysis của studies yếu không tự động thành strong bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **12. Không có một hierarchy bằng chứng (evidence / 증거) dùng cho mọi câu hỏi** đặt vấn đề; **13. Meta-analysis cần đọc heterogeneity** đối chiếu bằng chứng, rồi **14. Multiverse và specification phân tích (analysis / 분석)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Meta-analysis cần đọc heterogeneity
 
@@ -160,8 +136,6 @@ Nếu heterogeneity lớn, câu hỏi “tác động (effect / 효과) trung b�
 
 Nhưng moderator phân tích (analysis / 분석) hậu nghiệm với ít studies rất dễ false positive.
 
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **14. Multiverse và specification phân tích (analysis / 분석)** nối từ **13. Meta-analysis cần đọc heterogeneity** sang **15. Bayesian bằng chứng (evidence / 증거) không thay bất định (uncertainty / 불확실성) bằng certainty**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Multiverse và specification phân tích (analysis / 분석)
 
 Một cách kiểm tra robustness là chạy nhiều reasonable phân tích (analysis / 분석) specifications thay vì chọn một mô hình (model / 모델) duy nhất.
@@ -169,8 +143,6 @@ Một cách kiểm tra robustness là chạy nhiều reasonable phân tích (ana
 **Multiverse phân tích (analysis / 분석)** hoặc **specification curve** cho thấy conclusion có phụ thuộc mạnh vào analytic choice hay không.
 
 > **ranh giới (boundary / 경계):** nếu tất cả specifications cùng dựa trên same biased mẫu (sample / 표본) hoặc invalid measure, robustness analytic không giải quyết độ lệch (bias / 편향) nền.
-
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **14. Multiverse và specification phân tích (analysis / 분석)** đặt vấn đề; **15. Bayesian bằng chứng (evidence / 증거) không thay bất định (uncertainty / 불확실성) bằng certainty** đối chiếu bằng chứng, rồi **16. Triangulation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Bayesian bằng chứng (evidence / 증거) không thay bất định (uncertainty / 불확실성) bằng certainty
 
@@ -180,8 +152,6 @@ Nhưng kết quả (result / 결과) vẫn phụ thuộc mô hình (model / 모�
 
 Bayesian không phải “cách đúng, frequentist là sai”; chúng trả lời và biểu diễn bất định (uncertainty / 불확실성) theo khung phần mềm (framework / 프레임워크) khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **15. Bayesian bằng chứng (evidence / 증거) không thay bất định (uncertainty / 불확실성) bằng certainty** đặt vấn đề; **16. Triangulation** đối chiếu bằng chứng, rồi **17. Generalization và WEIRD samples** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 16. Triangulation
 
 **Tam giác hóa (triangulation)** dùng methods có dạng thất bại (failure mode / 실패 모드) khác nhau để kiểm tra cùng phenomenon.
@@ -190,8 +160,6 @@ Nếu lab experiment, longitudinal dữ liệu (data / 데이터), natural exper
 
 Nhưng convergence chỉ mạnh khi độ lệch (bias / 편향) không dùng chung (shared / 공유). Mười studies dùng cùng một self-report quy mô (scale / 규모) yếu không phải mười nguồn bằng chứng (evidence / 증거) độc lập hoàn toàn.
 
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **17. Generalization và WEIRD samples** nối từ **16. Triangulation** sang **18. bằng chứng (evidence / 증거) taxonomy của thư viện (library / 라이브러리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Generalization và WEIRD samples
 
 Một tác động (effect / 효과) replicate ở nhiều university labs phương Tây chưa chắc là universal human psychology.
@@ -199,8 +167,6 @@ Một tác động (effect / 효과) replicate ở nhiều university labs phư�
 Cần hỏi population, ngôn ngữ (language / 언어), culture, age, socioeconomic ngữ cảnh (context / 맥락) và institutional môi trường (environment / 환경).
 
 **bên ngoài (external / 외부) validity** không phải bonus sau nội bộ (internal / 내부) validity; với claim về “human nature”, nó là cốt lõi (core / 핵심) bằng chứng (evidence / 증거) yêu cầu (requirement / 요구사항).
-
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **17. Generalization và WEIRD samples** đặt vấn đề; **18. bằng chứng (evidence / 증거) taxonomy của thư viện (library / 라이브러리)** đối chiếu bằng chứng, rồi **19. Cách đọc một paper** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. bằng chứng (evidence / 증거) taxonomy của thư viện (library / 라이브러리)
 
@@ -212,8 +178,6 @@ Thư viện (library / 라이브러리) này dùng bốn nhãn chính:
 - **Historical lý thuyết (theory / 이론)**: quan trọng lịch sử nhưng không được trình bày như hiện đại (modern / 현대적) consensus.
 
 Một chapter tốt phải nói rõ claim nằm ở tầng nào thay vì dùng cùng giọng chắc chắn cho tất cả.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **18. bằng chứng (evidence / 증거) taxonomy của thư viện (library / 라이브러리)** đặt vấn đề; **19. Cách đọc một paper** đối chiếu bằng chứng, rồi **20. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Cách đọc một paper
 
@@ -241,8 +205,6 @@ generalize tới đâu?
 
 Không bước nào một mình đủ tạo certainty.
 
-> **Nối mạch:** Trong **Khoa học mở và cách đánh giá bằng chứng**, **20. Những hiểu lầm phổ biến** nối từ **19. Cách đọc một paper** sang **21. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Những hiểu lầm phổ biến
 
 **“Preregistered = đúng.”** Không. Nó tăng transparency, không bảo đảm validity.
@@ -256,8 +218,6 @@ Không bước nào một mình đủ tạo certainty.
 **“p < .05 nghĩa lý thuyết (theory / 이론) đúng.”** Không. Nó không cung cấp xác suất (probability / 확률) trực tiếp rằng lý thuyết (theory / 이론) đúng.
 
 **“Một paper Nature/Science là đủ.”** Journal prestige không thay cumulative bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Ở chặng này của **Khoa học mở và cách đánh giá bằng chứng**, **21. Mô hình tư duy** tổng hợp từ **20. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Mô hình tư duy
 
@@ -274,8 +234,6 @@ Câu hỏi rõ
 ```
 
 Science đáng tin là một **tiến trình (process / 프로세스) tích lũy**, không phải một paper đơn lẻ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Khoa học mở và cách đánh giá bằng chứng**, **Kết nối kiến thức** tổng hợp từ **21. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

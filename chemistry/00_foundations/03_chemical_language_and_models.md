@@ -14,8 +14,6 @@ Ký hiệu không đơn thuần là chữ viết tắt của tên tiếng Anh. M
 
 Điều quan trọng hơn là ký hiệu đại diện cho **bản sắc nguyên tố (element identity)**, về sau sẽ được định nghĩa chính xác bằng **số hiệu nguyên tử (atomic number)**, tức số proton trong hạt nhân.
 
-> **Nối mạch:** Ký hiệu hóa học đặt tên nguyên tố; công thức tiếp theo ghép các ký hiệu thành tỉ lệ thành phần, rồi phân biệt công thức phân tử với công thức thực nghiệm và cấu tạo.
-
 ## Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc
 
 **Công thức hóa học (chemical formula / 화학식)** cho biết loại và số lượng tương đối của nguyên tử trong một tiểu phần hay một chất.
@@ -23,8 +21,6 @@ Ký hiệu không đơn thuần là chữ viết tắt của tên tiếng Anh. M
 `H2O` cho biết một phân tử nước gồm hai nguyên tử hydrogen và một nguyên tử oxygen. Chỉ số dưới (**subscript**) thuộc về ký hiệu ngay trước nó. Nếu không có chỉ số dưới, giá trị mặc định là 1.
 
 `CaCl2` biểu diễn tỉ lệ một calcium với hai chloride trong một **đơn vị công thức (formula unit)**. Với hợp chất ion, không nên luôn hình dung công thức như một phân tử riêng lẻ; nó thường biểu diễn tỉ lệ nguyên đơn giản nhất trong mạng ion.
-
-> **Nối mạch:** Ở chặng này của **Ngôn ngữ và mô hình hóa học**, **Công thức phân tử, công thức thực nghiệm và công thức cấu tạo** nối từ **Công thức hóa học: mô tả thành phần và đôi khi cả cấu trúc** sang **Hệ số và chỉ số dưới không thể đổi chỗ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức phân tử, công thức thực nghiệm và công thức cấu tạo
 
@@ -46,8 +42,6 @@ Hai công thức trả lời hai câu hỏi khác nhau. Công thức thực nghi
 
 Điều này cho thấy thành phần chưa đủ để quyết định hành vi; **cấu trúc mới là yếu tố then chốt**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ và mô hình hóa học**, **Hệ số và chỉ số dưới không thể đổi chỗ** nối từ **Công thức phân tử, công thức thực nghiệm và công thức cấu tạo** sang **Ký hiệu trạng thái: điều kiện là một phần của ý nghĩa hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hệ số và chỉ số dưới không thể đổi chỗ
 
 Trong:
@@ -68,8 +62,6 @@ thì chất đã trở thành hydrogen peroxide chứ không còn là nước.
 
 Vì vậy khi cân bằng phương trình, ta chỉ được thay đổi **hệ số (coefficient)**, không được thay chỉ số dưới để “cân bằng” số nguyên tử. Thay chỉ số dưới là thay bản sắc của tiểu phần hóa học.
 
-> **Nối mạch:** Trong **Ngôn ngữ và mô hình hóa học**, **Ký hiệu trạng thái: điều kiện là một phần của ý nghĩa hóa học** nối từ **Hệ số và chỉ số dưới không thể đổi chỗ** sang **Điện tích: ký hiệu cho sự mất cân bằng electron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ký hiệu trạng thái: điều kiện là một phần của ý nghĩa hóa học
 
 Phương trình hóa học thường thêm ký hiệu pha hoặc trạng thái:
@@ -89,8 +81,6 @@ Phương trình không chỉ nói thành phần thay đổi về cách biểu di
 
 `(aq)` không đồng nghĩa với chất lỏng. Nó nói tiểu phần đang được hòa tan trong nước.
 
-> **Nối mạch:** Ở chặng này của **Ngôn ngữ và mô hình hóa học**, **Điện tích: ký hiệu cho sự mất cân bằng electron** nối từ **Ký hiệu trạng thái: điều kiện là một phần của ý nghĩa hóa học** sang **Phương trình hóa học là mô hình của một biến đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện tích: ký hiệu cho sự mất cân bằng electron
 
 Ion được biểu diễn bằng điện tích viết ở phía trên:
@@ -102,8 +92,6 @@ Ion được biểu diễn bằng điện tích viết ở phía trên:
 Điện tích `2+` không có nghĩa tiểu phần có “hai proton”. Nó nghĩa điện tích tổng của tiểu phần dương hơn trạng thái trung hòa tương ứng hai điện tích electron.
 
 Ở cấp nguyên tử, cation thường hình thành khi nguyên tử mất electron và anion khi nhận electron. Với ion đa nguyên tử, sự phân bố electron phức tạp hơn; không nên hình dung điện tích luôn nằm hoàn toàn trên một nguyên tử.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ và mô hình hóa học**, **Phương trình hóa học là mô hình của một biến đổi** nối từ **Điện tích: ký hiệu cho sự mất cân bằng electron** sang **Vì sao phương trình phải được cân bằng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình hóa học là mô hình của một biến đổi
 
@@ -120,8 +108,6 @@ Nhưng nó không tự cho ta cơ chế phản ứng, tốc độ, hàng rào n�
 Mũi tên `→` không có nghĩa mọi va chạm giữa `H2` và `O2` đều lập tức tạo nước. Phản ứng thực tế cần điều kiện để vượt **hàng rào hoạt hóa (activation barrier)**.
 
 Vì vậy phương trình là một **bản đồ stoichiometric (stoichiometric map)**, không phải “bộ phim” đầy đủ của cơ chế.
-
-> **Nối mạch:** Trong **Ngôn ngữ và mô hình hóa học**, **Vì sao phương trình phải được cân bằng?** nối từ **Phương trình hóa học là mô hình của một biến đổi** sang **Mũi tên phản ứng không phải lúc nào cũng một chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao phương trình phải được cân bằng?
 
@@ -175,8 +161,6 @@ Chọn nghiệm nguyên nhỏ nhất với `a=1`:
 
 Vì vậy cân bằng không phải đoán mò; đó là một bài toán giải ràng buộc (**constraint solving**).
 
-> **Nối mạch:** Ở chặng này của **Ngôn ngữ và mô hình hóa học**, **Mũi tên phản ứng không phải lúc nào cũng một chiều** nối từ **Vì sao phương trình phải được cân bằng?** sang **Mô hình ở nhiều cấp độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mũi tên phản ứng không phải lúc nào cũng một chiều
 
 Một quá trình thuận nghịch thường được viết:
@@ -186,8 +170,6 @@ Một quá trình thuận nghịch thường được viết:
 \]
 
 Mũi tên hai chiều cho biết phản ứng thuận và phản ứng nghịch đều có thể xảy ra. Khi tốc độ hai chiều bằng nhau, hệ có thể đạt **cân bằng động (dynamic equilibrium)**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ và mô hình hóa học**, **Mô hình ở nhiều cấp độ** nối từ **Mũi tên phản ứng không phải lúc nào cũng một chiều** sang **Hình vẽ phân tử là một dạng nén thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình ở nhiều cấp độ
 
@@ -199,15 +181,11 @@ Mỗi cách biểu diễn trả lời một nhóm câu hỏi riêng. Công thứ
 
 Một cách biểu diễn tốt phải được đánh giá theo câu hỏi đang xét.
 
-> **Nối mạch:** Trong **Ngôn ngữ và mô hình hóa học**, **Hình vẽ phân tử là một dạng nén thông tin** nối từ **Mô hình ở nhiều cấp độ** sang **Danh pháp: tên gọi phải truyền đủ bản sắc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hình vẽ phân tử là một dạng nén thông tin
 
 Trong hóa học hữu cơ, **ký hiệu đường gấp khúc (line-angle notation)** có thể bỏ phần lớn ký hiệu carbon và hydrogen để người đọc tập trung vào khung carbon và nhóm chức. Ban đầu ký hiệu có vẻ “thiếu”, nhưng thực chất nó nén các quy tắc đã biết.
 
 Tương tự trong phần mềm, một **lớp trừu tượng (abstraction layer)** bỏ bớt chi tiết triển khai để làm nổi bật cấu trúc cần suy luận. Ký hiệu hóa học cũng hoạt động như một lớp trừu tượng.
-
-> **Nối mạch:** Ở chặng này của **Ngôn ngữ và mô hình hóa học**, **Danh pháp: tên gọi phải truyền đủ bản sắc** nối từ **Hình vẽ phân tử là một dạng nén thông tin** sang **Phương trình, mô hình và thực tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Danh pháp: tên gọi phải truyền đủ bản sắc
 
@@ -216,8 +194,6 @@ Tương tự trong phần mềm, một **lớp trừu tượng (abstraction laye
 Ví dụ `NaCl` là sodium chloride, tiếng Việt là natri chloride và tiếng Hàn là 염화 나트륨. `CO2` là carbon dioxide, thường gọi là carbon dioxide hoặc khí carbonic trong ngữ cảnh thông dụng, tiếng Hàn là 이산화탄소.
 
 Danh pháp hữu cơ phức tạp hơn vì số cấu trúc khả dĩ cực lớn. Danh pháp IUPAC cố gắng tạo một ánh xạ có hệ thống giữa cấu trúc và tên gọi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ và mô hình hóa học**, **Phương trình, mô hình và thực tại** nối từ **Danh pháp: tên gọi phải truyền đủ bản sắc** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình, mô hình và thực tại
 
@@ -233,8 +209,6 @@ Nếu viết phương trình phân tử với `AgNO3` và `NaCl`, ta giữ lại
 
 Không có một cách biểu diễn “luôn tốt nhất”. Cách phù hợp phụ thuộc câu hỏi.
 
-> **Nối mạch:** Trong **Ngôn ngữ và mô hình hóa học**, **Mô hình tư duy** tổng hợp từ **Phương trình, mô hình và thực tại** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 Hãy coi ký hiệu hóa học như một **ngôn ngữ chuyên biệt theo lĩnh vực (domain-specific language)**:
@@ -248,8 +222,6 @@ Hãy coi ký hiệu hóa học như một **ngôn ngữ chuyên biệt theo lĩn
 - công thức cấu tạo mã hóa cách nối nguyên tử.
 
 Giống mã nguồn, cú pháp ngắn nhưng ngữ nghĩa mới là phần quan trọng. Học cú pháp mà không hiểu ngữ nghĩa sẽ dẫn đến thao tác máy móc.
-
-> **Nối mạch:** Ở chặng này của **Ngôn ngữ và mô hình hóa học**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -268,8 +240,6 @@ Không. `(aq)` nghĩa tiểu phần được hòa tan trong nước. Nước là
 ### “Có thể đổi chỉ số dưới để cân bằng phương trình”
 
 Không. Chỉ số dưới thuộc về bản sắc và thành phần của tiểu phần; hệ số mới là đại lượng được điều chỉnh khi cân bằng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ và mô hình hóa học**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

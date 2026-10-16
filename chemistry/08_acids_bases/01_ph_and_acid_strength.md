@@ -20,8 +20,6 @@ pH\approx-\log_{10}[H_3O^+]
 
 Thang logarithm nén một khoảng nồng độ rất rộng. Chênh lệch 1 đơn vị pH tương ứng với chênh lệch khoảng 10 lần về hoạt độ ion hydrogen; chênh lệch 3 đơn vị tương ứng khoảng `10^3 = 1000` lần.
 
-> **Nối mạch:** pH là logarithm của hoạt độ ion hydrogen; pOH và (K_w) nối hai thang đo trong nước, còn mục kế tiếp phải tách **acid mạnh** khỏi **dung dịch đậm đặc** vì độ phân ly và lượng chất là hai câu hỏi khác nhau.
-
 ## pOH và tích số ion của nước
 
 \[
@@ -48,8 +46,6 @@ pH+pOH\approx14.00
 
 Con số 14 không phải hằng số phổ quát vì `K_w` phụ thuộc nhiệt độ.
 
-> **Nối mạch:** (pOH+pK_w) mô tả quan hệ cân bằng của nước, nhưng không quyết định một acid có phân ly hoàn toàn hay không. **Acid mạnh khác acid đậm đặc** làm rõ sự tách biệt đó; tiếp theo **Hằng số phân ly acid** sẽ định lượng mức độ phân ly.
-
 ## Acid mạnh khác acid đậm đặc
 
 **Acid mạnh (strong acid)** phân ly gần như hoàn toàn trong nước ở điều kiện loãng thông thường.
@@ -57,8 +53,6 @@ Con số 14 không phải hằng số phổ quát vì `K_w` phụ thuộc nhiệ
 **Acid yếu (weak acid)** thiết lập cân bằng đáng kể giữa dạng proton hóa và dạng mất proton.
 
 Độ mạnh và nồng độ là hai khái niệm độc lập. `0.001 M HCl` là acid mạnh nhưng loãng; `1 M CH3CO2H` là dung dịch tương đối đậm đặc nhưng acid vẫn yếu về mặt cân bằng phân ly.
-
-> **Nối mạch:** Phân biệt acid mạnh với acid đậm đặc mới chỉ nói về loại acid và lượng chất; (K_a) và (pK_a) cho biết cân bằng phân ly cụ thể. Từ giá trị (pK_a), mục **Cân bằng chuyển proton từ pKa** suy ra chiều ưu tiên của phản ứng giữa hai cặp acid–base.
 
 ## Hằng số phân ly acid
 
@@ -82,8 +76,6 @@ pK_a=-\log_{10}K_a
 
 nên `pKa` càng nhỏ thì acid càng mạnh.
 
-> **Nối mạch:** (K_a) đo xu hướng phân ly của một acid, còn so sánh (pK_a) dự đoán proton sẽ chuyển về phía cặp yếu hơn. Muốn giải thích vì sao các (pK_a) khác nhau, mục **Những yếu tố cấu trúc kiểm soát độ acid** sẽ truy nguyên độ bền của base liên hợp.
-
 ## Cân bằng chuyển proton từ pKa
 
 Xét phản ứng:
@@ -101,8 +93,6 @@ K\approx10^{pK_a(HB)-pK_a(HA)}
 Cân bằng có xu hướng nghiêng về phía chứa acid yếu hơn và cơ sở (base / 기반) yếu hơn.
 
 Đây là công cụ rất mạnh trong hóa học hữu cơ và hóa sinh vì cho phép dự đoán chiều chuyển proton chỉ bằng cách so sánh `pKa`.
-
-> **Nối mạch:** Cân bằng proton cho biết phản ứng đi theo hướng nào; độ âm điện, kích thước, cộng hưởng và hiệu ứng cảm ứng giải thích độ bền của base liên hợp đứng sau hướng đó. Sau khi hiểu nguyên nhân cấu trúc, **pH của acid mạnh** chuyển sang tính nồng độ ion trong trường hợp phân ly gần hoàn toàn.
 
 ## Những yếu tố cấu trúc kiểm soát độ acid
 
@@ -137,8 +127,6 @@ Electron trong obitan có nhiều đặc tính s nằm gần hạt nhân hơn. V
 ### Solvat hóa
 
 Dung môi ổn định các dạng mang điện theo mức khác nhau. Vì thế độ acid quan sát được phụ thuộc môi trường, không chỉ cấu trúc của phân tử cô lập.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **pH của acid mạnh** nối từ **Những yếu tố cấu trúc kiểm soát độ acid** sang **Hoạt độ và lực ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## pH của acid mạnh
 
@@ -176,8 +164,6 @@ Nghiệm dương:
 
 Đây là ví dụ cho thấy mọi công thức xấp xỉ đều có miền áp dụng.
 
-> **Nối mạch:** Trong **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Hoạt độ và lực ion** nối từ **pH của acid mạnh** sang **pH có thể nhỏ hơn 0 hoặc lớn hơn 14**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hoạt độ và lực ion
 
 Với ion:
@@ -204,8 +190,6 @@ I=\frac12\sum_i c_i z_i^2
 
 Do đó pH và các hằng số biểu kiến dựa trên nồng độ có thể thay đổi khi môi trường ion thay đổi.
 
-> **Nối mạch:** Ở chặng này của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **pH có thể nhỏ hơn 0 hoặc lớn hơn 14** nối từ **Hoạt độ và lực ion** sang **Acid đa proton**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## pH có thể nhỏ hơn 0 hoặc lớn hơn 14
 
 Khoảng 0–14 là quy ước tiện lợi cho dung dịch nước không quá đậm đặc ở gần nhiệt độ phòng, không phải giới hạn tuyệt đối.
@@ -213,8 +197,6 @@ Khoảng 0–14 là quy ước tiện lợi cho dung dịch nước không quá 
 Dung dịch acid mạnh đậm đặc có thể có pH nhỏ hơn 0; cơ sở (base / 기반) đậm đặc có thể có pH lớn hơn 14.
 
 Trong các hệ này, hoạt độ và tính không lý tưởng trở nên quan trọng nên không thể chỉ dùng `-log c` một cách máy móc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Acid đa proton** nối từ **pH có thể nhỏ hơn 0 hoặc lớn hơn 14** sang **Phân bố dạng proton hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acid đa proton
 
@@ -237,8 +219,6 @@ K_{a1}>K_{a2}
 vì việc lấy thêm proton khỏi một tiểu phần đã mang điện âm thường kém thuận lợi hơn.
 
 Mỗi bước có `pKa` riêng.
-
-> **Nối mạch:** Trong **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Phân bố dạng proton hóa** nối từ **Acid đa proton** sang **Điểm đẳng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân bố dạng proton hóa
 
@@ -270,8 +250,6 @@ hai dạng có phần số bằng nhau.
 
 **Giản đồ phân bố (speciation diagram)** rất hữu ích cho phosphate, carbonate, amino acid, phối tử kim loại và thuốc có khả năng ion hóa.
 
-> **Nối mạch:** Ở chặng này của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Điểm đẳng điện** nối từ **Phân bố dạng proton hóa** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điểm đẳng điện
 
 Với phân tử lưỡng tính như amino acid, **điểm đẳng điện (isoelectric point, \(pI\))** là pH tại đó điện tích trung bình ròng bằng 0.
@@ -283,8 +261,6 @@ pI\approx\frac{pK_{a1}+pK_{a2}}{2}
 \]
 
 Không nên áp dụng công thức này mù quáng cho amino acid có nhóm bên acid hoặc cơ sở (base / 기반).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Các hiểu lầm thường gặp** nối từ **Điểm đẳng điện** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -303,8 +279,6 @@ Ngược lại: `pKa` càng nhỏ thì acid càng mạnh.
 ### “pH chỉ nằm từ 0 tới 14”
 
 Không. Đây chỉ là khoảng quen thuộc trong các dung dịch nước thông thường.
-
-> **Nối mạch:** Trong **pH và độ mạnh acid — logarithm, hoạt độ và xu hướng cho proton**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -6,79 +6,53 @@
 
 Sau 1987, direct presidential elections trở lại. Political competition dần trở thành routine institution thay vì existential crisis mỗi lần leadership thay đổi (change / 변경). Civil society, press và labor movements mở rộng không gian (space / 공간), dù nhiều authoritarian-era laws/institutions tiếp tục gây debate.
 
-> **Chuyển mạch:** Institutionalizing competition tạo domestic legitimacy; Seoul Olympics tiếp theo mở global exposure, rồi civilian government chuyển pressure đó thành reform agenda.
-
 ## 1988 Seoul Olympics
 
 Seoul Olympics là toàn cục (global / 전역) showcase và hạ tầng (infrastructure / 인프라) catalyst. Mega-event không chỉ là sport; nó là city redevelopment, branding, vận chuyển (transport / 전송) investment và diplomatic tín hiệu (signal / 신호) rằng South Korea đang bước vào một international position mới.
-
-> **Chuyển mạch:** Seoul Olympics mở rộng exposure quốc tế sau khi cạnh tranh thể chế được bình thường hóa; **civilian government** chuyển tính chính danh đó thành cải cách, rồi segyehwa đưa Korea vào dòng vốn và thị trường toàn cầu.
 
 ## Civilian government và reform
 
 1990s chứng kiến civilian presidency, anti-corruption drives, reform of financial transparency và prosecution of former military leaders liên quan 1979–1980 events. Đây là ví dụ **transitional justice**: democracy phải quyết định xử lý legacy của previous regime ra sao.
 
-> **Chuyển mạch:** Civilian government xử lý legacy quân sự và củng cố minh bạch, nhưng cải cách chính trị không tự loại bỏ exposure tài chính. **Segyehwa** nối chương trình cải cách với vay vốn, tự do hóa và mở rộng ra ngoài; **vulnerability trước 1997** sẽ kiểm tra cái giá của tốc độ đó.
-
 ## Segyehwa và tích hợp (integration / 통합) vào toàn cục (global / 전역) economy
 
 “Segyehwa” (세계화, globalization) trở thành chính sách (policy / 정책) từ khóa (keyword / 키워드). Korea gia nhập OECD năm 1996. Firms borrow and expand aggressively; financial liberalization tăng exposure to toàn cục (global / 전역) capital flows.
-
-> **Chuyển mạch:** Segyehwa tăng dòng vốn và quy mô doanh nghiệp nhưng cũng làm lộ đòn bẩy cao, maturity mismatch và giám sát yếu khi dòng vốn đảo chiều. **Robustness vs growth** tiếp theo dùng bài học này để phân biệt throughput lớn với khả năng chịu shock.
 
 ## Vulnerability trước 1997
 
 Rapid growth không loại bỏ fragility. High leverage, maturity mismatch và weak financial supervision tạo systemic rủi ro (risk / 위험). Khi regional Asian Financial Crisis lan rộng, South Korea đối mặt severe foreign-currency liquidity crisis.
 
-> **Chuyển mạch:** Vulnerability cho thấy tăng trưởng và mở cửa có thể tích lũy rủi ro hệ thống; **robustness vs growth** biến nhận xét đó thành câu hỏi về resilience. Trong chính trị, **alternation and trust** là phép thử tương tự: hệ thống có tiếp tục hoạt động khi phe thua chấp nhận luân phiên hay không.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결): robustness vs growth
 
 Một hệ thống (system / 시스템) có thông lượng (throughput / 처리량) cao không đồng nghĩa robust. Trong kỹ thuật (engineering / 엔지니어링), tối ưu hóa (optimization / 최적화) quá sát một operating điều kiện (condition / 조건) có thể giảm resilience. Economy cũng vậy: leverage giúp expansion nhưng làm shock transmission mạnh hơn.
-
-> **Chuyển mạch:** Robustness cần khả năng chịu thất bại lặp lại; trong dân chủ, **alternation and trust** tạo niềm tin rằng phe thua hôm nay vẫn có cơ hội thắng ngày mai. Khi niềm tin đó được thể chế hóa, **local autonomy** mở rộng nơi quyết định được thử nghiệm và kiểm chứng.
 
 ## Alternation and trust
 
 Democracy becomes more robust when losing an election no longer means vật lý (physical / 물리적) elimination of losers. Repeated peaceful competition updates actor beliefs: today’s loser may win later, making compliance rational. This repeated-game lô-gic (logic / 논리) is central to democratic consolidation.
 
-> **Chuyển mạch:** Trong **1987–1997: democratic consolidation và globalization**, **Cục bộ (local / 로컬) autonomy** tiếp nhận điểm tựa từ **Alternation and trust** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chaebol expansion abroad** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cục bộ (local / 로컬) autonomy
 
 Revival of cục bộ (local / 로컬) elections in 1990s redistributed some decision-making away from central trạng thái (state / 상태). cục bộ (local / 로컬) government matters because urban planning, welfare and development xung đột (conflict / 충돌) differ by region. Decentralization creates experimentation but also cục bộ (local / 로컬) inequality/capture rủi ro (risk / 위험).
-
-> **Chuyển mạch:** Ở chặng này của **1987–1997: democratic consolidation và globalization**, **Chaebol expansion abroad** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) autonomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1997 as sudden stop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chaebol expansion abroad
 
 Korean firms internationalized môi trường vận hành (production / 운영 환경) and branding in 1990s. Larger toàn cục (global / 전역) quy mô (scale / 규모) created foreign-currency borrowing and investment exposure. Growth chiến lược (strategy / 전략) shifted from simple export manufacturing toward toàn cục (global / 전역) corporate networks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1987–1997: democratic consolidation và globalization**, **1997 as sudden stop** tiếp nhận điểm tựa từ **Chaebol expansion abroad** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cầu hóa đi vào thành phố và hộ gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 1997 as sudden stop
 
 Firms/banks with short-term foreign debt relied on ability to roll debt. When lenders withdrew, liquidity crisis could occur even if vật lý (physical / 물리적) factories still existed. Finance introduces thời gian (time / 시간) mismatch: asset may be valuable long term but debt due tomorrow can still bankrupt đơn vị sở hữu (owner / 오너).
-
-> **Chuyển mạch:** Trong **1987–1997: democratic consolidation và globalization**, **Toàn cầu hóa đi vào thành phố và hộ gia đình** tiếp nhận điểm tựa từ **1997 as sudden stop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam sau Đổi Mới: cùng hội nhập, khác điểm xuất phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Toàn cầu hóa đi vào thành phố và hộ gia đình
 
 Seoul Olympics năm **1988**, mở rộng tàu điện, sân bay và khu đô thị mới làm toàn cầu hóa hiện ra như đường đi, việc làm và giá đất chứ không chỉ là khẩu hiệu `segyehwa`. Người lao động có thể vào công ty xuất khẩu hoặc ngành dịch vụ quốc tế, nhưng hộ gia đình cũng đối mặt với học phí, tiền thuê và cạnh tranh việc làm tăng. Dân chủ hóa mở rộng quyền lên tiếng trong lúc phân phối lợi ích của tăng trưởng vẫn còn bất bình đẳng.
 
-> **Chuyển mạch:** Ở chặng này của **1987–1997: democratic consolidation và globalization**, **Việt Nam sau Đổi Mới: cùng hội nhập, khác điểm xuất phát** tiếp nhận điểm tựa từ **Toàn cầu hóa đi vào thành phố và hộ gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa điểm để đọc dân chủ hóa sau 1987** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Việt Nam sau Đổi Mới: cùng hội nhập, khác điểm xuất phát
 
 Việt Nam bắt đầu Đổi Mới từ **1986**, bình thường hóa quan hệ với Hàn Quốc năm **1992** và gia nhập ASEAN năm **1995**. Cùng lúc Korea củng cố dân chủ và mở rộng các tập đoàn ra nước ngoài, Việt Nam chuyển dần từ kế hoạch hóa sang kinh tế thị trường định hướng xã hội chủ nghĩa. So sánh nên đặt vào cải cách tài chính, doanh nghiệp, giáo dục và đô thị hóa; không dùng hai mốc hội nhập để giả định hai chế độ đã có cùng cấu trúc chính trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1987–1997: democratic consolidation và globalization**, **Địa điểm để đọc dân chủ hóa sau 1987** tiếp nhận điểm tựa từ **Việt Nam sau Đổi Mới: cùng hội nhập, khác điểm xuất phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối sang khủng hoảng 1997** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Địa điểm để đọc dân chủ hóa sau 1987
 
 **Quảng trường Gwanghwamun** cho thấy không gian biểu tình và nghi lễ nhà nước có thể chồng lên nhau; **Seoul Olympic Park** cho thấy một mega-event để lại hạ tầng, ký ức và tranh luận về di dời. Đọc hai nơi cạnh nhau giúp nối quyền công dân với quy hoạch đô thị và cách quốc gia trình bày mình ra thế giới.
-
-> **Chuyển mạch:** Trong **1987–1997: democratic consolidation và globalization**, **Cầu nối sang khủng hoảng 1997** tiếp nhận điểm tựa từ **Địa điểm để đọc dân chủ hóa sau 1987** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Cầu nối sang khủng hoảng 1997
 

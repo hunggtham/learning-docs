@@ -36,8 +36,6 @@ Nếu derivative positive, tăng `θ` một chút có xu hướng tăng mất m�
 
 Đây là intuition phía sau độ dốc (gradient / 기울기) descent.
 
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Hàm (function / 함수) là điểm xuất phát** đã nêu tiêu chí phân biệt, còn **Limit và derivative** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Limit và derivative
 
 Derivative được định nghĩa qua limit:
@@ -49,8 +47,6 @@ f'(x)=\lim_{h\to0}\frac{f(x+h)-f(x)}{h}
 Ratio này đo slope của secant line khi interval `h` nhỏ dần tới 0.
 
 Trong numerical computation, máy không thật sự lấy `h=0`; analytic derivative hoặc automatic differentiation tránh nhiều lỗi (error / 오류) của naive finite difference.
-
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Limit và derivative** đã nêu tiêu chí phân biệt, còn **Cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Partial derivative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation
 
@@ -67,8 +63,6 @@ f(\mathbf{x}+\Delta\mathbf{x})\approx f(\mathbf{x})+\nabla f(\mathbf{x})^T\Delta
 \]
 
 Độ dốc (gradient / 기울기) vì vậy là best cục bộ (local / 로컬) tuyến tính (linear / 선형) tín hiệu (signal / 신호) mô tả đầu ra (output / 출력) thay đổi theo đầu vào (input / 입력) directions.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Partial derivative** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Partial derivative
 
@@ -93,8 +87,6 @@ L(\theta_1,\theta_2,\ldots,\theta_p)
 \]
 
 Mỗi partial derivative trả lời parameter đó locally ảnh hưởng mất mát (loss / 손실) thế nào.
-
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Partial derivative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Directional derivative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ dốc (gradient / 기울기)
 
@@ -121,8 +113,6 @@ Gradient-descent cập nhật (update / 업데이트):
 
 Độ dốc (gradient / 기울기) không nói minimum toàn cục ở đâu; nó chỉ cung cấp cục bộ (local / 로컬) thông tin (information / 정보).
 
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Directional derivative** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Directional derivative
 
 Nếu muốn biết `f` thay đổi theo direction đơn vị (unit / 단위) véc-tơ (vector / 벡터) `u`:
@@ -132,8 +122,6 @@ D_{\mathbf{u}}f=\nabla f^T\mathbf{u}
 \]
 
 Dot sản phẩm (product / 제품) này nối Calculus với tuyến tính (linear / 선형) Algebra. độ dốc (gradient / 기울기) là véc-tơ (vector / 벡터) chứa đủ thông tin (information / 정보) để tính cục bộ (local / 로컬) tỷ lệ (rate / 비율) theo mọi direction.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Directional derivative** xác định đầu vào; **Chuỗi (chain / 사슬) quy tắc (rule / 규칙)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Một example đơn giản của backpropagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
@@ -160,8 +148,6 @@ f(x)=f_L(f_{L-1}(...f_1(x)))
 \]
 
 Chuỗi (chain / 사슬) quy tắc (rule / 규칙) cho phép propagate tác động (effect / 효과) của final mất mát (loss / 손실) ngược qua từng tầng (layer / 계층).
-
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙)** cho ta quy tắc; **Một example đơn giản của backpropagation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Computation đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Một example đơn giản của backpropagation
 
@@ -208,8 +194,6 @@ và:
 
 Độ dốc (gradient / 기울기) vì vậy có intuitive cấu trúc (structure / 구조): prediction lỗi (error / 오류) nhân với đầu vào (input / 입력) tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Một example đơn giản của backpropagation** cho ta quy tắc; **Computation đồ thị (graph / 그래프)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Backpropagation không phải độ dốc (gradient / 기울기) descent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Computation đồ thị (graph / 그래프)
 
 Một mô hình (model / 모델) có thể được biểu diễn như directed acyclic đồ thị (graph / 그래프) của operations.
@@ -231,8 +215,6 @@ Backward pass dùng chuỗi (chain / 사슬) quy tắc (rule / 규칙) để tru
 
 Khung phần mềm (framework / 프레임워크) autograd lưu đồ thị (graph / 그래프) hoặc thông tin (information / 정보) đủ để compute vector-Jacobian products hiệu quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Backpropagation không phải độ dốc (gradient / 기울기) descent** tiếp nhận điểm tựa từ **Computation đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jacobian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Backpropagation không phải độ dốc (gradient / 기울기) descent
 
 Hai khái niệm thường bị trộn.
@@ -242,8 +224,6 @@ Hai khái niệm thường bị trộn.
 **độ dốc (gradient / 기울기) descent** là tối ưu hóa (optimization / 최적화) chiến lược (strategy / 전략) dùng gradients để cập nhật (update / 업데이트) parameters.
 
 Ta có thể dùng backprop với Adam, SGD, RMSProp hoặc optimizer khác. Và độ dốc (gradient / 기울기) descent có thể dùng cho functions không phải neural mạng (network / 네트워크).
-
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Jacobian** tiếp nhận điểm tựa từ **Backpropagation không phải độ dốc (gradient / 기울기) descent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hessian và curvature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Jacobian
 
@@ -266,8 +246,6 @@ Jacobian mô tả cục bộ (local / 로컬) tuyến tính (linear / 선형) tr
 \]
 
 Trong Deep học tập (learning / 학습), explicitly constructing huge Jacobian thường quá expensive. Automatic differentiation tính products với Jacobian mà không materialize toàn ma trận (matrix / 행렬).
-
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Hessian và curvature** tiếp nhận điểm tựa từ **Jacobian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Derivatives của dùng chung (common / 공통) activations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Hessian và curvature
 
@@ -292,8 +270,6 @@ Newton's phương thức (method / 메서드) uses curvature:
 \]
 
 Nhưng Hessian của large neural networks quá lớn để invert trực tiếp, nên practical tối ưu hóa (optimization / 최적화) thường dùng first-order methods hoặc approximations.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Derivatives của dùng chung (common / 공통) activations** tiếp nhận điểm tựa từ **Hessian và curvature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vanishing gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Derivatives của dùng chung (common / 공통) activations
 
@@ -339,8 +315,6 @@ Tại `x=0`, derivative strict không defined, nhưng hiện thực (implementat
 
 ReLU giúp mitigate saturation ở positive region nhưng neurons có thể “die” nếu persistently negative.
 
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Vanishing gradients** tiếp nhận điểm tựa từ **Derivatives của dùng chung (common / 공통) activations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exploding gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vanishing gradients
 
 Chuỗi (chain / 사슬) quy tắc (rule / 규칙) multiply nhiều derivatives:
@@ -362,8 +336,6 @@ Architectural solutions gồm:
 - normalization;
 - LSTM/GRU gating cho chuỗi (sequence / 시퀀스) các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Exploding gradients** tiếp nhận điểm tựa từ **Vanishing gradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Residual connections từ Calculus perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Exploding gradients
 
 Nếu derivative products có norms >1 repeatedly, gradients có thể grow rất lớn.
@@ -382,8 +354,6 @@ g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 
 Nó không giải quyết nguyên nhân gốc (root cause / 근본 원인) mọi instability nhưng thường useful trong RNN/Transformer huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Residual connections từ Calculus perspective** tiếp nhận điểm tựa từ **Exploding gradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Derivative của ma trận (matrix / 행렬) operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Residual connections từ Calculus perspective
 
 Residual khối (block / 블록):
@@ -399,8 +369,6 @@ Derivative:
 \]
 
 Định danh (identity / 식별자) đường dẫn (path / 경로) cung cấp direct độ dốc (gradient / 기울기) tuyến (route / 경로). Đây là một reason residual architectures train deep các mô hình (models / 모델들) tốt hơn.
-
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Derivative của ma trận (matrix / 행렬) operations** tiếp nhận điểm tựa từ **Residual connections từ Calculus perspective** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) của softmax + cross-entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Derivative của ma trận (matrix / 행렬) operations
 
@@ -424,8 +392,6 @@ x: n
 
 Độ dốc (gradient / 기울기) của parameter phải có same shape với parameter.
 
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) của softmax + cross-entropy** tiếp nhận điểm tựa từ **Derivative của ma trận (matrix / 행렬) operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Automatic differentiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) của softmax + cross-entropy
 
 Cho logits `z`, softmax:
@@ -448,8 +414,6 @@ L=-\sum_i y_i\log p_i
 
 Đây là một elegant liên kết (connection / 연결): độ dốc (gradient / 기울기) trực tiếp là difference giữa predicted phân phối (distribution / 분포) và mục tiêu (target / 대상) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Automatic differentiation** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) của softmax + cross-entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finite-difference độ dốc (gradient / 기울기) checking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Automatic differentiation
 
 Có ba ideas cần phân biệt:
@@ -464,8 +428,6 @@ Reverse-mode autodiff đặc biệt hiệu quả khi có many inputs/parameters 
 
 Backpropagation là reverse-mode differentiation specialized trên mạng (network / 네트워크)/computation đồ thị (graph / 그래프).
 
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Finite-difference độ dốc (gradient / 기울기) checking** tiếp nhận điểm tựa từ **Automatic differentiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differentiability và subgradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Finite-difference độ dốc (gradient / 기울기) checking
 
 Có thể verify độ dốc (gradient / 기울기) hiện thực (implementation / 구현) bằng:
@@ -478,8 +440,6 @@ Nếu autograd độ dốc (gradient / 기울기) khác finite difference nhiề
 
 Nhưng `ε` quá nhỏ gây floating-point cancellation; quá lớn gây approximation lỗi (error / 오류). độ dốc (gradient / 기울기) checking phù hợp debugging small cases, không phải huấn luyện (training / 학습) phương thức (method / 메서드).
 
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Differentiability và subgradients** tiếp nhận điểm tựa từ **Finite-difference độ dốc (gradient / 기울기) checking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Discrete operations và độ dốc (gradient / 기울기) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Differentiability và subgradients
 
 Không phải mọi useful hàm (function / 함수) differentiable mọi nơi. ReLU nondifferentiable tại 0. L1 norm nondifferentiable tại 0.
@@ -488,11 +448,9 @@ Tối ưu hóa (optimization / 최적화) vẫn có thể dùng **subgradient** 
 
 Do đó “Deep học tập (learning / 학습) cần mọi thao tác (operation / 연산) differentiable tuyệt đối” là oversimplification. Cần derivative-like tín hiệu (signal / 신호) đủ cho tối ưu hóa (optimization / 최적화) almost everywhere hoặc surrogate approach phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Discrete operations và độ dốc (gradient / 기울기) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Differentiability và subgradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) không phải explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Discrete operations và độ dốc (gradient / 기울기) bài toán (problem / 문제)
 
-Sampling đơn vị từ (token / 토큰), argmax hoặc hard routing là discrete và derivative không straightforward.
+Sampling token (토큰), argmax hoặc hard routing là discrete và derivative không straightforward.
 
 Đây là lý do nhiều methods dùng:
 
@@ -504,8 +462,6 @@ Sampling đơn vị từ (token / 토큰), argmax hoặc hard routing là discre
 
 Liên kết (connection / 연결) này quan trọng khi học Reinforcement học tập (learning / 학습) và generative discrete các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Độ dốc (gradient / 기울기) không phải explanation** tiếp nhận điểm tựa từ **Discrete operations và độ dốc (gradient / 기울기) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calculus của continuous-time các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) không phải explanation
 
 Biết độ dốc (gradient / 기울기) của đầu ra (output / 출력) theo đầu vào (input / 입력) có thể tạo saliency map, nhưng derivative sensitivity không tự động là nhân quả (causal / 인과적) explanation.
@@ -513,8 +469,6 @@ Biết độ dốc (gradient / 기울기) của đầu ra (output / 출력) theo
 Một tính năng (feature / 기능) có độ dốc (gradient / 기울기) nhỏ tại hiện tại (current / 현재) điểm (point / 지점) vẫn có thể quan trọng globally; correlated features làm interpretation khó.
 
 Explainability cần thận trọng hơn “độ dốc (gradient / 기울기) cao = tính năng (feature / 기능) quan trọng”.
-
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Calculus của continuous-time các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) không phải explanation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Integral và expectation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Calculus của continuous-time các mô hình (models / 모델들)
 
@@ -528,8 +482,6 @@ Neural ODEs và diffusion-related continuous formulations nối Deep học tập
 
 Không cần differential equations để bắt đầu ML, nhưng chúng cho thấy Calculus không chỉ tồn tại ở huấn luyện (training / 학습) độ dốc (gradient / 기울기) mà còn có thể nằm trong mô hình (model / 모델) dynamics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, **Integral và expectation** tiếp nhận điểm tựa từ **Calculus của continuous-time các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Integral và expectation
 
 Xác suất (probability / 확률) expectation continuous:
@@ -541,8 +493,6 @@ Xác suất (probability / 확률) expectation continuous:
 Nhiều mục tiêu (objective / 목표) probabilistic yêu cầu integral khó giải closed-form, dẫn tới Monte Carlo approximation, variational suy luận (inference / 추론) hoặc numerical tích hợp (integration / 통합).
 
 Calculus và xác suất (probability / 확률) vì vậy gắn chặt, không phải hai môn tách rời.
-
-> **Chuyển mạch:** Trong **Calculus cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Integral và expectation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -558,8 +508,6 @@ Jacobian        = local linear map vector → vector
 Hessian         = local curvature
 Autograd        = engine tự động tính derivative từ primitive operations
 ```
-
-> **Chuyển mạch:** Ở chặng này của **Calculus cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -578,8 +526,6 @@ Có thể là cục bộ (local / 로컬) minimum, cục bộ (local / 로컬) m
 ### “Autograd khiến Calculus không cần thiết”
 
 Autograd tính derivative, nhưng không giải thích vanishing gradients, saturation, học tập (learning / 학습) dynamics hoặc instability.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Calculus cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

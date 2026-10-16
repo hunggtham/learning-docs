@@ -20,8 +20,6 @@ leaf certificate
 
 Kiểm tra hợp lệ (validation / 검증) đúng phải chứng minh chuỗi (chain / 사슬) hợp lệ **và** leaf certificate phù hợp với định danh (identity / 식별자)/ngữ cảnh (context / 맥락) đang yêu cầu.
 
-> **Nối mạch:** **2. kiểm tra hợp lệ (validation / 검증) không chỉ là kiểm tra chữ ký** nối từ **1. Certificate là signed assertion, không phải “trust đối tượng (object / 객체)” tự thân** sang **3. DNS và certificate kiểm tra hợp lệ (validation / 검증) giải hai câu hỏi khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. kiểm tra hợp lệ (validation / 검증) không chỉ là kiểm tra chữ ký
 
 Một máy khách (client / 클라이언트) thường cần kiểm tra:
@@ -40,8 +38,6 @@ Certificate có chữ ký hợp lệ nhưng hostname không khớp vẫn không 
 
 Dạng thất bại (failure mode / 실패 모드) classic là “disable xác minh (verification / 확인) để kiểm thử (test / 테스트)” rồi cấu hình (config / 설정) đó lọt môi trường vận hành (production / 운영 환경). Khi đó encryption vẫn tồn tại nhưng peer authentication bất biến (invariant / 불변식) đã bị phá.
 
-> **Nối mạch:** **3. DNS và certificate kiểm tra hợp lệ (validation / 검증) giải hai câu hỏi khác nhau** nối từ **2. kiểm tra hợp lệ (validation / 검증) không chỉ là kiểm tra chữ ký** sang **4. mTLS đưa authentication về cả hai phía**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. DNS và certificate kiểm tra hợp lệ (validation / 검증) giải hai câu hỏi khác nhau
 
 DNS trả lời “hostname này map tới endpoint nào?”. Certificate kiểm tra hợp lệ (validation / 검증) trả lời “endpoint đang nói chuyện có credential hợp lệ cho định danh (identity / 식별자) mình mong đợi không?”.
@@ -50,15 +46,11 @@ DNS bị redirect nhưng TLS hostname xác minh (verification / 확인) đúng c
 
 Đây là liên kết (connection / 연결) trực tiếp với [end-to-end request path](../../90_connections/advanced/01_end_to_end_latency_browser_edge_service_db_storage.md).
 
-> **Nối mạch:** **4. mTLS đưa authentication về cả hai phía** nối từ **3. DNS và certificate kiểm tra hợp lệ (validation / 검증) giải hai câu hỏi khác nhau** sang **5. định danh (identity / 식별자) khác authorization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. mTLS đưa authentication về cả hai phía
 
 TLS máy chủ (server / 서버) authentication chứng minh máy chủ (server / 서버) với máy khách (client / 클라이언트). **Mutual TLS (mTLS / 상호 TLS)** yêu cầu máy khách (client / 클라이언트) cũng trình certificate, từ đó máy chủ (server / 서버) có cryptographic định danh (identity / 식별자) của caller.
 
 Điểm quan trọng là mTLS không tự định nghĩa principal ngữ nghĩa (semantics / 의미론). Certificate subject/SAN/tải công việc (workload / 워크로드) định danh (identity / 식별자) phải được map vào định danh (identity / 식별자) mô hình (model / 모델) ổn định, rồi chính sách (policy / 정책) tầng (layer / 계층) mới quyết định quyền.
-
-> **Nối mạch:** **5. định danh (identity / 식별자) khác authorization** nối từ **4. mTLS đưa authentication về cả hai phía** sang **6. Trust lĩnh vực (domain / 도메인) quyết định blast radius**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. định danh (identity / 식별자) khác authorization
 
@@ -68,8 +60,6 @@ Authentication trả lời **ai**. Authorization trả lời **được làm gì
 
 Một thiết kế (design / 설계) an toàn tránh nhét toàn bộ permission vào certificate nếu chính sách (policy / 정책) thay đổi thường xuyên. Certificate nên cung cấp định danh (identity / 식별자) đủ đáng tin; authorization tầng (layer / 계층) áp least privilege dựa trên định danh (identity / 식별자) đó.
 
-> **Nối mạch:** **6. Trust lĩnh vực (domain / 도메인) quyết định blast radius** nối từ **5. định danh (identity / 식별자) khác authorization** sang **7. Issuance đường dẫn (path / 경로) là một security-critical điều khiển (control / 제어) plane**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Trust lĩnh vực (domain / 도메인) quyết định blast radius
 
 Nếu mọi tải công việc (workload / 워크로드) trong toàn công ty tin cùng một gốc (root / 루트) CA và chính sách (policy / 정책) cho phép định danh (identity / 식별자) rộng, compromise issuance đường dẫn (path / 경로) hoặc private key có thể có blast radius lớn.
@@ -77,8 +67,6 @@ Nếu mọi tải công việc (workload / 워크로드) trong toàn công ty ti
 Chia trust lĩnh vực (domain / 도메인) theo môi trường (environment / 환경), region, tenant hoặc sensitivity có thể giảm phạm vi sự cố (incident / 인시던트), nhưng tăng operational độ phức tạp (complexity / 복잡도).
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) bảo mật (security / 보안)/độ tin cậy (reliability / 신뢰성) thực sự: trust đồ thị (graph / 그래프) càng rộng càng dễ vận hành, nhưng compromise phạm vi (scope / 범위) càng lớn.
-
-> **Nối mạch:** **6. Trust lĩnh vực (domain / 도메인) quyết định blast radius** đặt đầu vào cho **7. Issuance đường dẫn (path / 경로) là một security-critical điều khiển (control / 제어) plane**, rồi **8. Short-lived certificate giảm exposure nhưng tạo availability phụ thuộc (dependency / 의존성)** mở rộng hệ quả.
 
 ## 7. Issuance đường dẫn (path / 경로) là một security-critical điều khiển (control / 제어) plane
 
@@ -96,8 +84,6 @@ identity proofing/workload attestation
 
 Nếu attacker chiếm được issuance authority, TLS cryptography không cứu được trust mô hình (model / 모델). Vì vậy CA key, issuer chính sách (policy / 정책) và workload-attestation đường dẫn (path / 경로) thường quan trọng hơn leaf certificate tệp (file / 파일).
 
-> **Nối mạch:** **7. Issuance đường dẫn (path / 경로) là một security-critical điều khiển (control / 제어) plane** nêu quy tắc; **8. Short-lived certificate giảm exposure nhưng tạo availability phụ thuộc (dependency / 의존성)** thử quy tắc trong tình huống, rồi **9. Revocation là phân tán (distributed / 분산) trạng thái (state / 상태) propagation** mở rộng hệ quả.
-
 ## 8. Short-lived certificate giảm exposure nhưng tạo availability phụ thuộc (dependency / 의존성)
 
 Credential thời gian tồn tại (lifetime / 수명) ngắn giảm cửa sổ lạm dụng nếu key bị lộ và giảm phụ thuộc revocation phức tạp.
@@ -114,8 +100,6 @@ issuer down
 → fail-closed hay degraded mode?
 ```
 
-> **Nối mạch:** **8. Short-lived certificate giảm exposure nhưng tạo availability phụ thuộc (dependency / 의존성)** nêu quy tắc; **9. Revocation là phân tán (distributed / 분산) trạng thái (state / 상태) propagation** thử quy tắc trong tình huống, rồi **10. Rotation cần overlap và version-aware rollout** mở rộng hệ quả.
-
 ## 9. Revocation là phân tán (distributed / 분산) trạng thái (state / 상태) propagation
 
 CRL/OCSP hoặc nội bộ (internal / 내부) deny/revocation danh sách (list / 목록) giúp vô hiệu certificate trước expiry, nhưng revocation trạng thái (state / 상태) phải propagate tới verifiers.
@@ -123,8 +107,6 @@ CRL/OCSP hoặc nội bộ (internal / 내부) deny/revocation danh sách (list 
 Nếu verifier bộ nhớ đệm (cache / 캐시) trạng thái (state / 상태) cũ hoặc không reach revocation dịch vụ (service / 서비스), chính sách (policy / 정책) phải quyết định fail-open/fail-closed. Đây là bảo mật (security / 보안)–availability sự đánh đổi (trade-off / 트레이드오프).
 
 Short-lived credential thường giảm phụ thuộc (dependency / 의존성) vào online revocation nhưng không loại bỏ toàn bộ incident-containment need.
-
-> **Nối mạch:** **10. Rotation cần overlap và version-aware rollout** nối từ **9. Revocation là phân tán (distributed / 분산) trạng thái (state / 상태) propagation** sang **11. dịch vụ (service / 서비스) mesh tự động hóa PKI nhưng không xóa trust thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Rotation cần overlap và version-aware rollout
 
@@ -143,8 +125,6 @@ publish trust mới
 
 Đảo thứ tự có thể gây outage. Đây là cùng family với lược đồ (schema / 스키마)/giao thức (protocol / 프로토콜) tính tương thích (compatibility / 호환성): multiple versions coexist tạm thời.
 
-> **Nối mạch:** **11. dịch vụ (service / 서비스) mesh tự động hóa PKI nhưng không xóa trust thiết kế (design / 설계)** nối từ **10. Rotation cần overlap và version-aware rollout** sang **12. Certificate pinning giảm trust surface nhưng tăng khôi phục (recovery / 복구) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. dịch vụ (service / 서비스) mesh tự động hóa PKI nhưng không xóa trust thiết kế (design / 설계)
 
 Dịch vụ (service / 서비스) mesh có thể cấp tải công việc (workload / 워크로드) định danh (identity / 식별자) và mTLS giữa proxies. Điều này giảm ứng dụng (application / 애플리케이션) boilerplate nhưng di chuyển độ phức tạp (complexity / 복잡도) vào điều khiển (control / 제어) plane.
@@ -161,15 +141,11 @@ control-plane compromise có blast radius gì?
 
 Automation không loại bỏ trust ranh giới (boundary / 경계); nó làm trust ranh giới (boundary / 경계) tập trung hơn.
 
-> **Nối mạch:** **12. Certificate pinning giảm trust surface nhưng tăng khôi phục (recovery / 복구) rủi ro (risk / 위험)** nối từ **11. dịch vụ (service / 서비스) mesh tự động hóa PKI nhưng không xóa trust thiết kế (design / 설계)** sang **13. Clock là lower-layer phụ thuộc (dependency / 의존성) quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Certificate pinning giảm trust surface nhưng tăng khôi phục (recovery / 복구) rủi ro (risk / 위험)
 
 Pinning yêu cầu key/certificate cụ thể hoặc trust subset hẹp hơn. Nó giảm một số CA-based impersonation rủi ro (risk / 위험) nhưng làm rotation và disaster khôi phục (recovery / 복구) khó hơn.
 
 Pin sai hoặc mất backup đường dẫn (path / 경로) có thể tạo self-inflicted outage. Pinning chỉ hợp lý khi threat mô hình (model / 모델) biện minh cho operational chi phí (cost / 비용).
-
-> **Nối mạch:** **13. Clock là lower-layer phụ thuộc (dependency / 의존성) quan trọng** nối từ **12. Certificate pinning giảm trust surface nhưng tăng khôi phục (recovery / 복구) rủi ro (risk / 위험)** sang **14. TLS termination làm định danh (identity / 식별자) ranh giới (boundary / 경계) thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Clock là lower-layer phụ thuộc (dependency / 의존성) quan trọng
 
@@ -179,8 +155,6 @@ Khi nhiều services đồng loạt báo `certificate not yet valid`/`expired`, 
 
 Đây là ví dụ lower lớp trừu tượng (abstraction / 추상화) quyết định hành vi (behavior / 동작) ở bảo mật (security / 보안) tầng (layer / 계층).
 
-> **Nối mạch:** **13. Clock là lower-layer phụ thuộc (dependency / 의존성) quan trọng** đặt tiêu chí; **14. TLS termination làm định danh (identity / 식별자) ranh giới (boundary / 경계) thay đổi** dùng nó để kiểm tra ranh giới, rồi **15. mTLS không thay thế application-level authorization** mở rộng hệ quả.
-
 ## 14. TLS termination làm định danh (identity / 식별자) ranh giới (boundary / 경계) thay đổi
 
 Nếu TLS terminate ở CDN/reverse proxy/bộ cân bằng tải (load balancer / 로드 밸런서) rồi proxy nói plaintext hoặc một TLS liên kết (connection / 연결) khác tới backend, end-to-end định danh (identity / 식별자) đặc tả hợp đồng (contract / 계약) đã đổi.
@@ -189,15 +163,11 @@ Backend có thể xác thực proxy thay vì original máy khách (client / 클�
 
 Header như `X-User` không tự đáng tin chỉ vì nằm trong HTTP yêu cầu (request / 요청). Trust phụ thuộc ai được phép set/forward header đó.
 
-> **Nối mạch:** **14. TLS termination làm định danh (identity / 식별자) ranh giới (boundary / 경계) thay đổi** đặt tiêu chí; **15. mTLS không thay thế application-level authorization** dùng nó để kiểm tra ranh giới, rồi **16. sự cố (incident / 인시던트) containment cần cắt authority đường dẫn (path / 경로)** mở rộng hệ quả.
-
 ## 15. mTLS không thay thế application-level authorization
 
 Một nội bộ (internal / 내부) mạng (network / 네트워크) có mTLS everywhere nhưng authorization chính sách (policy / 정책) “mọi authenticated dịch vụ (service / 서비스) đều truy cập được mọi API” vẫn có blast radius lớn.
 
 mTLS giúp loại anonymous/unauthenticated peer và bảo vệ channel. Least privilege vẫn phải được thực thi ở dịch vụ (service / 서비스)/tài nguyên (resource / 자원) ranh giới (boundary / 경계).
-
-> **Nối mạch:** **15. mTLS không thay thế application-level authorization** đặt đầu vào cho **16. sự cố (incident / 인시던트) containment cần cắt authority đường dẫn (path / 경로)**, rồi **17. hiệu năng (performance / 성능) pressure và TLS** mở rộng hệ quả.
 
 ## 16. sự cố (incident / 인시던트) containment cần cắt authority đường dẫn (path / 경로)
 
@@ -217,8 +187,6 @@ Hành động (action / 동작) phải cắt đúng mức (level / 수준): revo
 
 Đọc cùng [Debugging và incident containment xuyên layers](../../90_connections/advanced/00_debugging_across_abstraction_layers.md).
 
-> **Nối mạch:** **16. sự cố (incident / 인시던트) containment cần cắt authority đường dẫn (path / 경로)** đặt đầu vào cho **17. hiệu năng (performance / 성능) pressure và TLS**, rồi **18. bằng chứng vận hành (production evidence / 운영 증거)** mở rộng hệ quả.
-
 ## 17. hiệu năng (performance / 성능) pressure và TLS
 
 TLS handshake thêm CPU/mạng (network / 네트워크) công việc (work / 작업); certificate chuỗi (chain / 사슬) lớn, cold liên kết (connection / 연결) tỷ lệ (rate / 비율) cao hoặc không reuse liên kết (connection / 연결) có thể tăng độ trễ (latency / 지연 시간). mTLS còn yêu cầu máy khách (client / 클라이언트) authentication.
@@ -226,8 +194,6 @@ TLS handshake thêm CPU/mạng (network / 네트워크) công việc (work / 작
 Nhưng tối ưu hóa (optimization / 최적화) không được phá định danh (identity / 식별자) bất biến (invariant / 불변식). liên kết (connection / 연결)/session reuse có thể giảm handshake chi phí (cost / 비용), nhưng credential/chính sách (policy / 정책) rotation cần biết khi existing sessions được revalidated hoặc expire.
 
 Hiệu năng (performance / 성능) và revocation freshness có thể xung đột nếu session thời gian tồn tại (lifetime / 수명) quá dài.
-
-> **Nối mạch:** **17. hiệu năng (performance / 성능) pressure và TLS** đặt vấn đề; **18. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **19. Mô hình tư duy** mở rộng hệ quả.
 
 ## 18. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -248,13 +214,9 @@ clock/time-sync health
 
 Một generic `SSL error` không đủ để phân biệt chuỗi (chain / 사슬) thất bại (failure / 실패), hostname mismatch, expiry, unknown CA hay giao thức (protocol / 프로토콜) incompatibility.
 
-> **Nối mạch:** các dấu vết trong **18. bằng chứng vận hành (production evidence / 운영 증거)** được đọc cùng nhau ở **19. Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời; **Kết nối** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## 19. Mô hình tư duy
 
 > PKI là **một phân tán (distributed / 분산) định danh (identity / 식별자) hệ thống (system / 시스템)**. Certificate bind key với định danh (identity / 식별자); kiểm tra hợp lệ (validation / 검증) kiểm tra binding theo trust chính sách (policy / 정책); TLS bảo vệ channel; mTLS đưa định danh (identity / 식별자) tới cả hai phía; authorization vẫn là tầng (layer / 계층) riêng; issuance/rotation/revocation là control-plane trạng thái (state / 상태) transitions. bảo mật (security / 보안) bất biến (invariant / 불변식) chỉ mạnh bằng trust gốc (root / 루트), định danh (identity / 식별자) proofing và chính sách (policy / 정책) ở ranh giới (boundary / 경계) thấp nhất mà hệ thống dựa vào.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **19. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

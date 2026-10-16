@@ -16,8 +16,6 @@ Chromosome là một DNA molecule rất dài kết hợp với protein. **Gen (�
 
 Không nên hình dung chromosome như “xâu gene liên tiếp không có khoảng trống”. Eukaryotic genome có promoter, enhancer, intron, repeat, RNA không mã hóa (noncoding RNA) gen, structural region và nhiều chuỗi (sequence / 시퀀스) regulatory.
 
-> **Nối mạch:** Genome/chromosome/gene đặt quy mô thông tin; DNA chemistry giải thích copying, còn 5′→3′ directionality quyết định enzyme và expression mechanism tiếp theo.
-
 ## 2. DNA cấu trúc (structure / 구조): chemistry tạo khả năng bản sao (copy / 복사) thông tin (information / 정보)
 
 DNA là polymer nucleotide. Mỗi nucleotide có deoxyribose, phosphate và cơ sở (base / 기반) A/T/G/C.
@@ -28,8 +26,6 @@ Complementarity tạo một thuộc tính (property / 속성) rất mạnh: **m�
 
 Đây là lý do chemistry của DNA phù hợp cho tính di truyền (heredity).
 
-> **Nối mạch:** DNA’s base-pair chemistry permits copying, but polymerases extend only 5′→3′; replication must therefore coordinate leading and lagging strands around that directional constraint.
-
 ## 3. Directionality 5′ → 3′ không phải ký hiệu trang trí
 
 Mạch DNA (DNA strand) có direction do phosphate-sugar backbone. Polymerase thêm nucleotide vào 3′-OH nên synthesis mới diễn ra 5′ → 3′.
@@ -37,8 +33,6 @@ Mạch DNA (DNA strand) có direction do phosphate-sugar backbone. Polymerase th
 Khi two strand antiparallel, restriction này tạo **mạch dẫn đầu (leading strand)** và **mạch theo sau (lagging strand)** trong sao chép (replication).
 
 Một detail hóa học nhỏ dẫn đến kiến trúc (architecture / 아키텍처) chạc sao chép (replication fork).
-
-> **Nối mạch:** Directionality turns genome copying into a coordinated fork with primers, polymerases, and fragment joining; proofreading and repair then determine which copying errors remain.
 
 ## 4. DNA replication: bản sao (copy / 복사) genome trước khi cell divide
 
@@ -55,8 +49,6 @@ Tiến trình (process / 프로세스) gồm:
 
 Danh sách enzyme chỉ có ý nghĩa khi nhìn theo vấn đề (problem): strand phải được mở, polymerase cần starting điểm (point / 지점), synthesis có directionality, fragment cần nối.
 
-> **Nối mạch:** Replication creates opportunities for mismatch; proofreading and repair lower the error rate, while unrepaired damage, chemical change, or recombination can still produce mutation.
-
 ## 5. Đọc sửa (proofreading) và repair: thông tin (information / 정보) hệ thống (system / 시스템) phải quản lý lỗi (error / 오류)
 
 DNA polymerase có đọc sửa giúp giảm lỗi (error / 오류). Sau sao chép, sửa chữa bắt cặp sai (mismatch repair) và nhiều repair pathway sửa damage khác như cơ sở (base / 기반) modification, strand break.
@@ -68,8 +60,6 @@ Không có hệ thống (system / 시스템) nào hoàn hảo. lỗi (error / �
 - đủ fidelity để organism hoạt động và tính di truyền ổn định;
 - vẫn có biến dị (variation) để evolution xảy ra.
 
-> **Nối mạch:** Mutation is a change in sequence, not automatically a failed replication event; transcription next asks how a changed DNA template is selectively copied into RNA.
-
 ## 6. Mutation không phải lúc nào cũng do replication lỗi (error / 오류)
 
 DNA có thể bị damage bởi UV, reactive chemical, oxidation hoặc spontaneous chemistry. Cell repair phần lớn damage; mutation là thay đổi (change / 변경) chuỗi (sequence / 시퀀스) được giữ lại sau sao chép/repair kết quả (outcome / 결과).
@@ -77,8 +67,6 @@ DNA có thể bị damage bởi UV, reactive chemical, oxidation hoặc spontane
 Mutation có thể là substitution, insertion, deletion, duplication, inversion hoặc larger chromosome rearrangement.
 
 Tác động (effect / 효과) phụ thuộc vị trí và bối cảnh (context), không chỉ “loại mutation”.
-
-> **Nối mạch:** A mutation changes the DNA template, but transcription is selective: RNA polymerase reads only accessible, regulated loci, so promoter and enhancer logic determines which change is expressed.
 
 ## 7. Từ DNA sang RNA: phiên mã (transcription)
 
@@ -90,8 +78,6 @@ Chỉ một portion genome được transcribed ở tế bào/ngữ cảnh (cont
 
 Biểu hiện gen bắt đầu từ regulation của khả năng tiếp cận (accessibility / 접근성) và transcription initiation.
 
-> **Nối mạch:** Transcription produces a primary RNA in response to promoter/enhancer inputs; eukaryotic cells must then cap, tail, and splice that transcript before it can function as mature mRNA.
-
 ## 8. Promoter và enhancer: gene cần địa chỉ và lôgic (logic) điều khiển (control / 제어)
 
 **Promoter (프로모터)** là region gần transcription start site nơi transcription machinery assemble.
@@ -99,8 +85,6 @@ Biểu hiện gen bắt đầu từ regulation của khả năng tiếp cận (a
 **Enhancer (인핸서)** có thể nằm xa gene và bind yếu tố phiên mã; DNA looping đưa regulatory complex lại gần promoter.
 
 Một gene có thể tích hợp nhiều tín hiệu (signal / 신호) qua nhiều regulatory element. Biểu hiện gen vì vậy giống lô-gic (logic / 논리) circuit hơn simple on/off switch.
-
-> **Nối mạch:** Promoter/enhancer activity sets transcript abundance; RNA processing changes its usable sequence, so intron/exon boundaries—not the vague label “coding”—determine what remains in mature RNA.
 
 ## 9. RNA processing: eukaryotic transcript chưa phải mRNA hoàn chỉnh
 
@@ -114,8 +98,6 @@ Primary transcript thường được processing:
 
 Điều này phá mô hình tư duy “một gene = một protein”. Relationship thực tế phức tạp hơn.
 
-> **Nối mạch:** Capping, polyadenylation, and splicing create a mature transcript; exon can include untranslated sequence and splice-site errors can redirect the message, leading to RNA roles beyond messenger.
-
 ## 10. Intron và exon: đừng hiểu exon = coding hoàn toàn
 
 **Exon** là trình tự (sequence) được giữ trong mature RNA; exon có thể chứa untranslated region. **Intron** bị splice ra khỏi transcript mature điển hình.
@@ -123,8 +105,6 @@ Primary transcript thường được processing:
 Splicing phải rất chính xác; mutation tại splice site có thể làm transcript khác thường.
 
 Gen kiến trúc (architecture / 아키텍처) là một phần của regulation.
-
-> **Nối mạch:** Splicing defines mature RNA boundaries; RNA then acts as message, adapter, catalyst, or regulator, and the genetic code specifies how the coding message is read into amino acids.
 
 ## 11. RNA có nhiều role hơn messenger
 
@@ -134,8 +114,6 @@ Ngoài ra còn microRNA, long RNA không mã hóa, small nuclear RNA và nhiều
 
 RNA vì vậy vừa là message, adapter, chất xúc tác (catalyst), scaffold và regulator.
 
-> **Nối mạch:** RNA’s roles provide the substrate and machinery; codons map triplets to amino acids with redundancy, then the ribosome converts that mapping into a growing polypeptide.
-
 ## 12. Mã di truyền (genetic code): chuỗi (sequence / 시퀀스) cơ sở (base / 기반) được ánh xạ sang axit amin
 
 Ribosome đọc mRNA theo **codon** gồm ba nucleotit. Mỗi codon tương ứng axit amin hoặc stop tín hiệu (signal / 신호).
@@ -143,8 +121,6 @@ Ribosome đọc mRNA theo **codon** gồm ba nucleotit. Mỗi codon tương ứn
 Vì 4³ = 64 codon nhưng chỉ khoảng 20 axit amin phổ biến, mã (code / 코드) có redundancy: nhiều codon có thể encode cùng axit amin.
 
 Đây là lý do một số substitution là **synonymous** và không đổi axit amin, dù vẫn có thể ảnh hưởng splicing, RNA stability hoặc translation efficiency trong ngữ cảnh (context / 맥락) tertentu.
-
-> **Nối mạch:** The genetic code defines an amino-acid sequence, but translation produces only a nascent chain; folding, modification, assembly, and targeting determine whether that chain reaches its function.
 
 ## 13. Dịch mã (translation): ribosome biến chuỗi (sequence / 시퀀스) thành polypeptide
 
@@ -156,8 +132,6 @@ Nhưng protein mới tạo chưa chắc functional. Nó cần folding, modificat
 
 Học thuyết trung tâm vì vậy không kết thúc ở “protein được tạo”.
 
-> **Nối mạch:** Translation makes a polypeptide, while targeting routes and folds it into the correct cellular compartment; the central dogma is therefore a causal chain, not a guarantee of function.
-
 ## 14. Protein targeting: tạo đúng protein nhưng gửi sai chỗ vẫn có thể mất hàm (function / 함수)
 
 Tín hiệu (signal / 신호) peptide có thể hướng protein tới ER, mitochondria, nucleus hoặc organelle khác. Vesicle hệ thống (system / 시스템) tiếp tục sort cargo.
@@ -165,8 +139,6 @@ Tín hiệu (signal / 신호) peptide có thể hướng protein tới ER, mitoc
 Nếu protein membrane bị giữ trong ER do folding sai, chức năng ở cell surface mất dù trình tự mã hóa (coding sequence) chỉ thay một axit amin.
 
 Gen → phenotype luôn đi qua tế bào kiến trúc (architecture / 아키텍처).
-
-> **Nối mạch:** Protein targeting shows that DNA→RNA→protein is a causal chain with cellular context; bacterial operons add an economical control layer that decides when the chain should run.
 
 ## 15. Học thuyết trung tâm nên hiểu thế nào cho đúng?
 
@@ -182,8 +154,6 @@ Nhưng có reverse transcription RNA → DNA ở retrovirus; RNA có hàm (funct
 
 Học thuyết trung tâm không nói “mọi thứ chỉ đi một chiều đơn giản”; nó nhấn mạnh chuỗi (sequence / 시퀀스) thông tin (information / 정보) không thường được truyền từ protein trở lại nucleic-acid chuỗi (sequence / 시퀀스) theo cách template.
 
-> **Nối mạch:** The central dogma identifies information flow; an operon couples transcription to substrate and energy availability, whereas multicellular eukaryotes need regulation at multiple layers and cell types.
-
 ## 16. Điều hòa gen (gene regulation) ở bacteria: operon cho thấy economy của unicellular life
 
 Bacteria có thể tổ chức nhiều gene cùng hàm (function / 함수) thành **operon**.
@@ -193,8 +163,6 @@ Lac operon ở E. coli là example kinh điển: gene cần cho lactose utilizat
 Lô-gic (logic / 논리) này cho thấy biểu hiện gen gắn trực tiếp metabolism và môi trường.
 
 Cell không muốn sản xuất enzyme tốn năng lượng (energy / 에너지) khi substrate không có.
-
-> **Nối mạch:** Bacterial operons coordinate nearby genes for economy; eukaryotic regulation distributes control across accessibility, transcription, RNA, translation, and degradation, making chromatin the first gate.
 
 ## 17. Điều hòa gen ở eukaryote: nhiều tầng (layer / 계층) hơn vì multicellularity
 
@@ -210,8 +178,6 @@ Eukaryotic điều hòa gen có thể diễn ra ở:
 
 Các tầng (layer / 계층) tạo khả năng điều khiển (control / 제어) chính xác theo loại tế bào (cell type), development và tín hiệu (signal / 신호).
 
-> **Nối mạch:** Multilayer regulation requires a physical access mechanism; chromatin compaction controls that access, and epigenetic marks can change the state without changing the underlying DNA sequence.
-
 ## 18. Chromatin: DNA phải được đóng gói nhưng vẫn cần đọc
 
 Eukaryotic DNA quấn quanh histone tạo nucleosome. Chromatin compaction giúp genome dài fit trong nucleus nhưng cũng ảnh hưởng khả năng tiếp cận (accessibility / 접근성).
@@ -219,8 +185,6 @@ Eukaryotic DNA quấn quanh histone tạo nucleosome. Chromatin compaction giúp
 Biến đổi histone (histone modification), chromatin remodeler và Methyl hóa DNA (DNA methylation) có thể liên quan trạng thái (state / 상태) expression.
 
 Không nên nghĩ “Methyl hóa DNA = gene tắt” trong mọi ngữ cảnh (context / 맥락); tác động (effect / 효과) phụ thuộc vị trí và hệ thống (system / 시스템).
-
-> **Nối mạch:** Chromatin đóng gói DNA nhưng vẫn giữ khả năng đọc; epigenetic regulation đổi trạng thái trên cùng sequence. **Gene expression là dynamic response**, nên không phải identity cố định.
 
 ## 19. Epigenetic regulation: cùng chuỗi (sequence / 시퀀스), khác trạng thái (state / 상태)
 
@@ -232,8 +196,6 @@ Trong phát triển (development), liver cell và neuron có gần cùng DNA nh�
 
 Epigenetics không có nghĩa môi trường (environment / 환경) “viết lại gene tùy ý” và mọi acquired trait đều truyền qua generation. Transgenerational inheritance ở mammals có limitation và cần bằng chứng (evidence / 증거) cụ thể.
 
-> **Nối mạch:** Epigenetic regulation tạo trạng thái biểu hiện; gene expression biến trạng thái đó thành protein. **Mutation → protein → phenotype** kiểm tra chuỗi nhân quả có intermediate.
-
 ## 20. Biểu hiện gen là động (dynamic / 동적) phản hồi (response / 응답), không phải định danh (identity / 식별자) cố định
 
 Một cell có stable định danh (identity / 식별자) nhưng expression vẫn thay đổi theo chất dinh dưỡng (nutrient), căng thẳng (stress), hoóc-môn (hormone), nhịp sinh học ngày đêm (circadian rhythm) và tín hiệu.
@@ -241,8 +203,6 @@ Một cell có stable định danh (identity / 식별자) nhưng expression vẫ
 Vì vậy transcriptome là snapshot trạng thái, không phải bản định nghĩa cố định của cell.
 
 Điều này rất quan trọng khi đọc RNA-seq dữ liệu (data / 데이터).
-
-> **Nối mạch:** Gene expression là dynamic response; mutation cần đi qua protein và phenotype. **Hemoglobin và sickle-cell** kiểm tra cấu trúc–chức năng–tiến hóa trong case thật.
 
 ## 21. Đột biến (mutation) → protein → kiểu hình: chuỗi nhân quả (causal chain / 인과 사슬) phải có intermediate
 
@@ -258,8 +218,6 @@ Nhưng nhiều mutation không đi theo chuỗi (chain / 사슬) này vì:
 
 Kiểu gen (genotype)–phenotype ánh xạ (mapping / 매핑) không đơn giản một-một.
 
-> **Nối mạch:** **21. Đột biến (mutation) → protein → kiểu hình: chuỗi nhân quả (causal chain / 인과 사슬) phải có intermediate** nêu quy tắc; **22. Hemoglobin và sickle-cell như tình huống phân tích (case study) cấu trúc (structure / 구조)–chức năng–tiến hóa (evolution)** thử quy tắc trong tình huống, rồi **23. Gene dosage: số bản sao (copy / 복사) cũng quan trọng** mở rộng hệ quả.
-
 ## 22. Hemoglobin và sickle-cell như tình huống phân tích (case study) cấu trúc (structure / 구조)–chức năng–tiến hóa (evolution)
 
 Một substitution trong beta-globin thay glutamate bằng valine ở vị trí đặc biệt. Under thiếu oxy (low oxygen), hemoglobin S có tendency polymerize, làm red blood cell biến dạng.
@@ -270,8 +228,6 @@ Nhưng allele có quần thể (population) mẫu (pattern / 패턴) thú vị v
 
 Một molecular thay đổi (change / 변경) nối protein hóa học (chemistry), physiology và chọn lọc tự nhiên (natural selection).
 
-> **Nối mạch:** **22. Hemoglobin và sickle-cell như tình huống phân tích (case study) cấu trúc (structure / 구조)–chức năng–tiến hóa (evolution)** nêu quy tắc; **23. Gene dosage: số bản sao (copy / 복사) cũng quan trọng** thử quy tắc trong tình huống, rồi **24. Mitochondrial DNA: heredity không chỉ trong nucleus** mở rộng hệ quả.
-
 ## 23. Gene dosage: số bản sao (copy / 복사) cũng quan trọng
 
 Không chỉ trình tự; bản sao (copy / 복사) number ảnh hưởng expression.
@@ -280,8 +236,6 @@ Duplication gene tạo material cho tiến hóa: một bản sao (copy / 복사)
 
 Ở chromosome mức (level / 수준), extra/missing chromosome làm dosage của hàng trăm gene đổi đồng thời, tạo systemic tác động (effect / 효과).
 
-> **Nối mạch:** **24. Mitochondrial DNA: heredity không chỉ trong nucleus** nối từ **23. Gene dosage: số bản sao (copy / 복사) cũng quan trọng** sang **25. Gen mạng lưới (network): phenotype thường là đầu ra (output / 출력) của nhiều gene tương tác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Mitochondrial DNA: heredity không chỉ trong nucleus
 
 Mitochondria có genome riêng và ở humans thường inherited chủ yếu qua maternal line.
@@ -289,8 +243,6 @@ Mitochondria có genome riêng và ở humans thường inherited chủ yếu qu
 Một cell có nhiều mitochondria và nhiều mtDNA bản sao (copy / 복사), nên mutation proportion (**heteroplasmy**) có thể ảnh hưởng severity/mô mẫu hình (pattern).
 
 Đây là ví dụ làm Mendelian mô hình (model / 모델) đơn giản không đủ cho mọi inheritance.
-
-> **Nối mạch:** **25. Gen mạng lưới (network): phenotype thường là đầu ra (output / 출력) của nhiều gene tương tác** nối từ **24. Mitochondrial DNA: heredity không chỉ trong nucleus** sang **26. Genomics và giải trình tự (sequencing): làm sao đọc genome?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Gen mạng lưới (network): phenotype thường là đầu ra (output / 출력) của nhiều gene tương tác
 
@@ -308,8 +260,6 @@ F -. feedback .-> B
 
 Mạng (network / 네트워크) có phản hồi (feedback / 피드백), redundancy và ngưỡng (threshold). Vì vậy knockout một gene đôi khi tác động (effect / 효과) nhỏ vì pathway compensate; trong trường hợp khác tác động (effect / 효과) rất lớn nếu gene là bottleneck.
 
-> **Nối mạch:** **26. Genomics và giải trình tự (sequencing): làm sao đọc genome?** nối từ **25. Gen mạng lưới (network): phenotype thường là đầu ra (output / 출력) của nhiều gene tương tác** sang **27. CRISPR như ví dụ từ basic biology tới technology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Genomics và giải trình tự (sequencing): làm sao đọc genome?
 
 Giải trình tự hiện đại (modern sequencing) đọc hàng triệu/billion fragment rồi computational phương thức (method / 메서드) map/assemble chuỗi (sequence / 시퀀스).
@@ -318,8 +268,6 @@ Một DNA chuỗi (sequence / 시퀀스) thô chưa tự giải thích biology. 
 
 Bioinformatics vì vậy không tách khỏi sinh học phân tử (molecular biology); nó là công cụ xử lý quy mô (scale / 규모) thông tin (information / 정보) quá lớn cho manual phân tích (analysis / 분석).
 
-> **Nối mạch:** **26. Genomics và giải trình tự (sequencing): làm sao đọc genome?** nêu quy tắc; **27. CRISPR như ví dụ từ basic biology tới technology** thử quy tắc trong tình huống, rồi **28. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 27. CRISPR như ví dụ từ basic biology tới technology
 
 CRISPR ban đầu được hiểu từ bacterial/archaeal adaptive defense. Guide RNA giúp protein Cas mục tiêu (target / 대상) nucleic-acid chuỗi (sequence / 시퀀스) tương ứng.
@@ -327,8 +275,6 @@ CRISPR ban đầu được hiểu từ bacterial/archaeal adaptive defense. Guid
 Biotechnology tận dụng recognition này để edit genome.
 
 Một discovery từ microbiology → molecular cơ chế (mechanism / 메커니즘) → kỹ thuật (engineering / 엔지니어링) công cụ (tool / 도구). Đây là mẫu (pattern / 패턴) xuyên thư viện (library / 라이브러리): hiểu cơ chế (mechanism / 메커니즘) mở đường cho technology.
-
-> **Nối mạch:** **27. CRISPR như ví dụ từ basic biology tới technology** nêu quy tắc; **28. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Biểu hiện gen là một hệ động, không phải công tắc DNA → protein** mở rộng hệ quả.
 
 ## 28. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -343,8 +289,6 @@ Một discovery từ microbiology → molecular cơ chế (mechanism / 메커니
 “Mutation luôn xấu” sai; tác động (effect / 효과) có thể deleterious, neutral hoặc beneficial tùy ngữ cảnh (context / 맥락).
 
 <!-- depth-audit-2026:expression-dynamics -->
-
-> **Nối mạch:** **Biểu hiện gen là một hệ động, không phải công tắc DNA → protein** nối từ **28. Các hiểu lầm phổ biến (common misconceptions)** sang **Chạc sao chép là một cỗ máy phối hợp, không phải một polymerase chạy dọc DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biểu hiện gen là một hệ động, không phải công tắc DNA → protein
 
@@ -368,8 +312,6 @@ Evolution thường bảo tồn những nucleotide, amino-acid residue, promoter
 
 <!-- continuity-2026:replication-fork -->
 
-> **Nối mạch:** **Chạc sao chép là một cỗ máy phối hợp, không phải một polymerase chạy dọc DNA** nối từ **Biểu hiện gen là một hệ động, không phải công tắc DNA → protein** sang **29. Cầu nối: thông tin được truyền giữa các thế hệ như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chạc sao chép là một cỗ máy phối hợp, không phải một polymerase chạy dọc DNA
 
 Hai mạch DNA ngược chiều nhau tạo ràng buộc (constraint / 제약조건) vật lý. Helicase mở xoắn; topoisomerase giải ứng suất xoắn phía trước; primase tạo mồi; DNA polymerase chỉ kéo dài theo chiều 5′→3′. Vì vậy mạch dẫn đầu có thể được tổng hợp tương đối liên tục, còn mạch theo sau phải tạo các đoạn Okazaki rồi nối lại bằng ligase.
@@ -379,8 +321,6 @@ Cơ chế này cần điều hòa theo thời gian. Ở tế bào nhân thực, 
 Thất bại (failure / 실패) của replication không chỉ tạo điểm (point / 지점) mutation. Fork bị sụp có thể tạo đứt gãy hai mạch, tái sắp xếp chromosome hoặc thay đổi số bản sao (copy-number change). Vì vậy genome stability nối trực tiếp từ chemistry của cơ sở (base / 기반) pairing tới cell-cycle regulation và cuối cùng tới cancer/evolution.
 
 Thí nghiệm Meselson–Stahl dùng isotope nitơ để theo dõi mật độ DNA qua thế hệ và cho kết quả phù hợp với **sao chép bán bảo tồn (semiconservative replication)**. Giá trị của thí nghiệm nằm ở lô-gic (logic / 논리): các mô hình replication khác nhau dự đoán các phân bố mật độ khác nhau, nên đo lường (measurement / 측정) có thể loại trừ mô hình (model / 모델).
-
-> **Nối mạch:** Cầu nối về truyền thông tin giữa các thế hệ tổng hợp cách replication fork phối hợp nhiều protein, rồi khép mạch sang di truyền.
 
 ## 29. Cầu nối: thông tin được truyền giữa các thế hệ như thế nào?
 

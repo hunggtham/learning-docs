@@ -12,8 +12,6 @@ Một tầng đất có thể chứa cát, bụi, khoáng sét, chất hữu cơ
 
 Hành vi hóa học phụ thuộc không chỉ thành phần mà còn **cách các pha phân bố trong không gian**. Cùng tổng lượng Fe hoặc P nhưng đặt ở bề mặt oxide, trong khoáng, trong dung dịch hay trong chất hữu cơ sẽ cho độ linh động hoàn toàn khác.
 
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Khoáng sét và cấu trúc lớp** nối từ **Đất không chỉ là “đất + chất dinh dưỡng”** sang **Thay thế đồng hình tạo điện tích vĩnh viễn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khoáng sét và cấu trúc lớp
 
 Khoáng sét là aluminosilicate dạng lớp, hình thành từ các lớp tứ diện `SiO4` và lớp bát diện chứa Al/Mg hydroxide.
@@ -28,8 +26,6 @@ Cấu trúc lớp quyết định:
 - khả năng giữ ion;
 - khả năng khuếch tán nước và chất tan vào khoảng gian lớp.
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Thay thế đồng hình tạo điện tích vĩnh viễn** nối từ **Khoáng sét và cấu trúc lớp** sang **Bề mặt có điện tích biến đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thay thế đồng hình tạo điện tích vĩnh viễn
 
 Khi `Si4+` bị thay bởi `Al3+`, hoặc `Al3+` bị thay bởi `Mg2+`, mạng tinh thể xuất hiện điện tích âm ròng.
@@ -37,8 +33,6 @@ Khi `Si4+` bị thay bởi `Al3+`, hoặc `Al3+` bị thay bởi `Mg2+`, mạng 
 Điện tích cấu trúc này phần lớn không phụ thuộc pH và phải được cân bằng bởi cation gần bề mặt hoặc trong gian lớp.
 
 Đây là nguồn của phần lớn điện tích vĩnh viễn trong nhiều sét 2:1.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Bề mặt có điện tích biến đổi** nối từ **Thay thế đồng hình tạo điện tích vĩnh viễn** sang **Khả năng trao đổi cation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bề mặt có điện tích biến đổi
 
@@ -54,8 +48,6 @@ Oxide Fe/Al có thể mang điện tích dương trong môi trường acid và h
 
 Đây là cùng lô-gic (logic / 논리) proton hóa bề mặt đã gặp trong [hóa học bề mặt](../14_materials_and_polymer_chemistry/05_surface_and_interface_chemistry.md).
 
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Khả năng trao đổi cation** nối từ **Bề mặt có điện tích biến đổi** sang **Trao đổi ion có tính chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng trao đổi cation
 
 **Khả năng trao đổi cation (cation exchange capacity, CEC / 양이온 교환 용량)** đo lượng điện tích âm có khả năng giữ cation trao đổi trên một đơn vị khối lượng đất.
@@ -63,8 +55,6 @@ Oxide Fe/Al có thể mang điện tích dương trong môi trường acid và h
 Các vị trí trao đổi có thể giữ `Ca2+`, `Mg2+`, `K+`, `NH4+` và nhiều cation khác.
 
 CEC cao thường làm giảm rửa trôi cation, nhưng không đồng nghĩa mọi chất dinh dưỡng đều sẵn sàng như nhau cho cây.
-
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Trao đổi ion có tính chọn lọc** nối từ **Khả năng trao đổi cation** sang **Độ bão hòa cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trao đổi ion có tính chọn lọc
 
@@ -80,15 +70,11 @@ Mức giữ phụ thuộc:
 
 Do đó cùng một nồng độ trong dung dịch đất vẫn có thể cho mức hấp phụ rất khác nhau trên hai loại sét.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Độ bão hòa cơ sở (base / 기반)** nối từ **Trao đổi ion có tính chọn lọc** sang **pH đất và độ acid trao đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ bão hòa cơ sở (base / 기반)
 
 Tỉ lệ CEC được chiếm bởi `Ca2+`, `Mg2+`, `K+`, `Na+` thường được gọi là **độ bão hòa cơ sở (base / 기반) (base saturation)**.
 
 Chỉ số này có ích khi đánh giá bón vôi và độ phì, nhưng không thể thay thế thông tin về pH, cấu trúc đất, nước, sinh học và cân bằng dinh dưỡng.
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **pH đất và độ acid trao đổi** nối từ **Độ bão hòa cơ sở (base / 기반)** sang **Bón vôi và khả năng đệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## pH đất và độ acid trao đổi
 
@@ -112,8 +98,6 @@ tạo thêm proton và có thể duy trì độ acid.
 
 Al hòa tan cao còn có thể ức chế phát triển rễ.
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Bón vôi và khả năng đệm** nối từ **pH đất và độ acid trao đổi** sang **Chất hữu cơ trong đất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bón vôi và khả năng đệm
 
 `CaCO3` tiêu thụ acid:
@@ -127,8 +111,6 @@ Bón vôi làm pH tăng và có thể chuyển Al sang dạng hydroxide ít tan 
 Lượng vôi cần thiết phụ thuộc **khả năng đệm của đất**, không chỉ pH ban đầu.
 
 Hai đất cùng pH có thể cần lượng vôi khác xa nếu kho dự trữ acid và số vị trí trao đổi khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Chất hữu cơ trong đất** nối từ **Bón vôi và khả năng đệm** sang **Chu trình nitrogen trong đất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất hữu cơ trong đất
 
@@ -148,8 +130,6 @@ Nó ảnh hưởng:
 Các phân đoạn humic/fulvic là hỗn hợp rất không đồng nhất, không phải một đại phân tử phổ quát có cấu trúc duy nhất.
 
 Các nhóm carboxylate/phenolate có thể tạo phức kim loại và tương tác với chất hữu cơ kỵ nước.
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Chu trình nitrogen trong đất** nối từ **Chất hữu cơ trong đất** sang **Hóa học phosphorus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chu trình nitrogen trong đất
 
@@ -173,8 +153,6 @@ Khoáng hóa tạo `NH4+`; nitrification oxy hóa nó trong điều kiện hiế
 
 Đây là ví dụ trực tiếp cho việc **điện tích bề mặt quyết định vận chuyển chất dinh dưỡng**.
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Hóa học phosphorus** nối từ **Chu trình nitrogen trong đất** sang **Potassium**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học phosphorus
 
 Phosphate có thể:
@@ -194,8 +172,6 @@ Liên kết kiểu này mạnh hơn hấp phụ tĩnh điện ngoài cầu, nên
 
 Đây là nơi hóa học phối trí và hóa học bề mặt gặp nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Potassium** nối từ **Hóa học phosphorus** sang **Vi lượng và pH**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Potassium
 
 `K+` tồn tại trong nhiều kho:
@@ -209,8 +185,6 @@ dung dịch
 
 Khả năng cây sử dụng K phụ thuộc tốc độ trao đổi giữa các kho, không chỉ tổng lượng K trong đất.
 
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Vi lượng và pH** nối từ **Potassium** sang **Cảnh quan oxy hóa–khử trong đất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vi lượng và pH
 
 Fe, Mn, Zn, Cu và nhiều nguyên tố cần với lượng nhỏ nhưng có thể thiếu hoặc độc tùy pH và redox.
@@ -218,8 +192,6 @@ Fe, Mn, Zn, Cu và nhiều nguyên tố cần với lượng nhỏ nhưng có th
 Ở pH cao, nhiều kim loại kết tủa hoặc hấp phụ mạnh. Ở pH thấp, độ linh động thường tăng.
 
 Do đó “bổ sung vi lượng” không thể tách khỏi hóa học dạng tồn tại.
-
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Cảnh quan oxy hóa–khử trong đất** nối từ **Vi lượng và pH** sang **Hệ quả của điều kiện khử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảnh quan oxy hóa–khử trong đất
 
@@ -238,8 +210,6 @@ O2
 
 Trình tự thực tế không tuyệt đối trong mọi hệ, vì động học và khả năng tiếp cận pha rắn cũng quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Hệ quả của điều kiện khử** nối từ **Cảnh quan oxy hóa–khử trong đất** sang **Ruộng lúa và vùng đất ngập nước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hệ quả của điều kiện khử
 
 Môi trường khử có thể:
@@ -252,8 +222,6 @@ Môi trường khử có thể:
 
 Ngập nước vì vậy không chỉ “thêm nước”; nó có thể tái cấu trúc toàn bộ speciation và kho pha rắn.
 
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Ruộng lúa và vùng đất ngập nước** nối từ **Hệ quả của điều kiện khử** sang **Độ mặn và áp suất thẩm thấu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ruộng lúa và vùng đất ngập nước
 
 Ruộng lúa có thể tạo độ dốc (gradient / 기울기) redox rất sắc giữa vùng rễ có oxygen và đất khối bị khử.
@@ -261,8 +229,6 @@ Ruộng lúa có thể tạo độ dốc (gradient / 기울기) redox rất sắ
 Methane được tạo trong vùng khử mạnh, còn oxy hóa methane xảy ra gần vùng có oxygen.
 
 Thông lượng môi trường vĩ mô vì vậy có thể bắt nguồn từ vi môi trường kích thước rất nhỏ.
-
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Độ mặn và áp suất thẩm thấu** nối từ **Ruộng lúa và vùng đất ngập nước** sang **Sodicity — dư sodium trao đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ mặn và áp suất thẩm thấu
 
@@ -274,8 +240,6 @@ Nồng độ chất tan làm thế nước giảm, khiến cây khó lấy nư�
 
 Phần nền về áp suất thẩm thấu và hoạt độ được nối với [nhiệt động lực học hóa học](../05_thermodynamics/04_chemical_thermodynamics.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Sodicity — dư sodium trao đổi** nối từ **Độ mặn và áp suất thẩm thấu** sang **Phong hóa khoáng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sodicity — dư sodium trao đổi
 
 Đất sodic có tỉ lệ `Na+` trao đổi cao.
@@ -285,8 +249,6 @@ Sét bão hòa Na dễ phân tán, làm cấu trúc đất xấu và giảm th�
 Gypsum cung cấp `Ca2+`, giúp thay Na khỏi vị trí trao đổi; Na sau đó cần được rửa trôi bằng nước và thoát nước thích hợp.
 
 Độ mặn và sodicity liên quan nhưng không phải cùng một vấn đề.
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Phong hóa khoáng** nối từ **Sodicity — dư sodium trao đổi** sang **Khoáng carbonate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phong hóa khoáng
 
@@ -301,8 +263,6 @@ feldspar + carbonic acid + water
 
 Trên thang thời gian dài, phong hóa silicate tham gia chu trình carbon toàn cầu.
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Khoáng carbonate** nối từ **Phong hóa khoáng** sang **Hấp phụ chất ô nhiễm hữu cơ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khoáng carbonate
 
 Kết tủa/hòa tan `CaCO3` phụ thuộc:
@@ -313,8 +273,6 @@ Kết tủa/hòa tan `CaCO3` phụ thuộc:
 - phân bố `HCO3−/CO3²−`.
 
 Đây chính là hệ carbonate đã gặp trong [hóa học nước](./01_water_chemistry.md), nhưng nay nằm trong môi trường rắn xốp có bề mặt hoạt động lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Hấp phụ chất ô nhiễm hữu cơ** nối từ **Khoáng carbonate** sang **Kim loại và dạng tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hấp phụ chất ô nhiễm hữu cơ
 
@@ -327,8 +285,6 @@ K_d=\frac{C_{hấp\ phụ}}{C_{nước}}
 Chuẩn hóa theo carbon hữu cơ cho `Koc`, giúp so sánh tương đối giữa các đất.
 
 Tuy nhiên hấp phụ có thể phi tuyến, cạnh tranh và phụ thuộc cấu trúc bề mặt, nên `Kd` không phải hằng số phổ quát ở mọi nồng độ và mọi điều kiện.
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Kim loại và dạng tồn tại** nối từ **Hấp phụ chất ô nhiễm hữu cơ** sang **Xử lý đất ô nhiễm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kim loại và dạng tồn tại
 
@@ -358,8 +314,6 @@ redox
 → arsenic được giải phóng
 ```
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Xử lý đất ô nhiễm** nối từ **Kim loại và dạng tồn tại** sang **Khả năng sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xử lý đất ô nhiễm
 
 Các chiến lược có thể gồm:
@@ -373,8 +327,6 @@ Các chiến lược có thể gồm:
 
 Mục tiêu có thể là loại bỏ chất ô nhiễm, phá hủy nó hoặc chỉ giảm độ linh động/khả năng sinh học. Ba mục tiêu này không tương đương.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Khả năng sinh học** nối từ **Xử lý đất ô nhiễm** sang **Đất như một hệ vận chuyển có phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng sinh học
 
 Mức phơi nhiễm của cây hoặc sinh vật phụ thuộc phần có thể tiếp cận và dạng tồn tại.
@@ -382,8 +334,6 @@ Mức phơi nhiễm của cây hoặc sinh vật phụ thuộc phần có thể 
 Kim loại bị giữ mạnh hiện tại có thể ít khả dụng, nhưng vẫn có thể được giải phóng nếu pH hoặc redox thay đổi sau này.
 
 Do đó rủi ro phải được đọc theo **điều kiện và thời gian**, không chỉ một phép đo tổng lượng.
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Đất như một hệ vận chuyển có phản ứng** nối từ **Khả năng sinh học** sang **Ví dụ suy luận: vì sao bón phosphate nhiều hơn không nhất thiết làm cây nhận được nhiều P hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đất như một hệ vận chuyển có phản ứng
 
@@ -401,8 +351,6 @@ Mô hình tổng quát ghép:
 
 Đây là bài toán **vận chuyển có phản ứng (reactive transport)**, cùng họ với reactor, nước ngầm và pin xốp.
 
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Đất như một hệ vận chuyển có phản ứng** nêu quy tắc; **Ví dụ suy luận: vì sao bón phosphate nhiều hơn không nhất thiết làm cây nhận được nhiều P hơn?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao ngập nước có thể làm arsenic trong nước ngầm tăng?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao bón phosphate nhiều hơn không nhất thiết làm cây nhận được nhiều P hơn?
 
 Nếu đất giàu oxide Fe/Al và pH phù hợp cho hấp phụ mạnh, phosphate bổ sung có thể nhanh chóng bị giữ trên bề mặt hoặc kết tủa.
@@ -410,8 +358,6 @@ Nếu đất giàu oxide Fe/Al và pH phù hợp cho hấp phụ mạnh, phospha
 Tổng P tăng nhưng hoạt độ phosphate hòa tan — phần cây dễ tiếp cận — có thể chỉ tăng ít.
 
 Muốn hiểu hiệu quả phân bón phải xét **speciation + surface chemistry + kinetics**, không chỉ lượng P đưa vào.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Ví dụ suy luận: vì sao bón phosphate nhiều hơn không nhất thiết làm cây nhận được nhiều P hơn?** nêu quy tắc; **Ví dụ suy luận: vì sao ngập nước có thể làm arsenic trong nước ngầm tăng?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao ngập nước có thể làm arsenic trong nước ngầm tăng?
 
@@ -428,8 +374,6 @@ ngập nước
 → mất vị trí hấp phụ
 → As linh động tăng
 ```
-
-> **Nối mạch:** Trong **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Ví dụ suy luận: vì sao ngập nước có thể làm arsenic trong nước ngầm tăng?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -452,8 +396,6 @@ Không. Nó làm vận chuyển oxygen thay đổi và có thể tái tổ chứ
 ### “Độ mặn và sodicity là một”
 
 Không. Độ mặn liên quan tổng muối hòa tan; sodicity liên quan tỷ lệ Na trên vị trí trao đổi và ảnh hưởng cấu trúc keo đất.
-
-> **Nối mạch:** Ở chặng này của **Hóa học đất — khoáng vật, bề mặt, chất hữu cơ và cảnh quan oxy hóa–khử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

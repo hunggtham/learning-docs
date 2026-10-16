@@ -12,13 +12,9 @@ Primary-replica mô hình (model / 모델) routes writes through leader, ships l
 
 Multi-leader accepts writes in multiple regions, improving locality/offline thao tác (operation / 연산) but creates conflicts. Leaderless/quorum designs use versions/vector-like siêu dữ liệu (metadata / 메타데이터)/read-repair/anti-entropy depending cơ sở dữ liệu (database / 데이터베이스).
 
-> **Nối mạch:** Replication đặt mục tiêu availability và durability; quorum tạo điều kiện giao nhau cho read/write, còn partitioning/sharding phân bố dữ liệu và thay đổi phạm vi consensus.
-
 ## Quorum intuition
 
 With N replicas, ghi (write / 쓰기) quorum W and read quorum R, điều kiện (condition / 조건) `R + W > N` creates overlap between read and most recent ghi (write / 쓰기) quorum under simplifying các giả định (assumptions / 가정들). But real tính đúng đắn (correctness / 정확성) needs versioning, thất bại (failure / 실패)/reconfiguration, sloppy quorum details; formula alone is not full proof.
-
-> **Nối mạch:** **Partitioning/sharding** nối từ **Quorum intuition** sang **Rebalancing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partitioning/sharding
 
@@ -26,13 +22,9 @@ Băm (hash / 해시) partitioning distributes keys evenly but loses natural ph�
 
 Skew is central: one celebrity/người dùng (user / 사용자)/tenant key can create hot partition even with many nodes. Splitting by composite/thời gian (time / 시간) buckets or workload-aware routing may be needed.
 
-> **Nối mạch:** **Rebalancing** nối từ **Partitioning/sharding** sang **Consensus bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Rebalancing
 
 Adding/removing nodes requires moving dữ liệu (data / 데이터) while serving traffic. Rebalancing consumes mạng (network / 네트워크)/disk and can trigger bộ nhớ đệm (cache / 캐시) coldness. Operationally, “quy mô (scale / 규모) out” is not free instantaneous sức chứa (capacity / 용량).
-
-> **Nối mạch:** **Consensus bài toán (problem / 문제)** nối từ **Rebalancing** sang **Raft intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consensus bài toán (problem / 문제)
 
@@ -40,39 +32,27 @@ Consensus asks nodes to agree on a giá trị (value / 값)/log despite failures
 
 Replicated máy trạng thái (state machine / 상태 머신) approach: replicas agree on ordered log of commands, then deterministic máy trạng thái (state machine / 상태 머신) applies same chuỗi (sequence / 시퀀스), producing same trạng thái (state / 상태). Consensus is about agreeing thứ tự (order / 순서)/decisions, not magically replicating arbitrary nondeterministic trạng thái (state / 상태).
 
-> **Nối mạch:** **Raft intuition** nối từ **Consensus bài toán (problem / 문제)** sang **Leader election and split brain**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Raft intuition
 
 Raft divides thời gian (time / 시간) into terms, elects leader, leader replicates log entries, quorum commitment establishes entries. Election hết thời gian chờ (timeout / 타임아웃) randomness helps avoid repeated split votes. Terms/log matching rules preserve an toàn (safety / 안전) across leader changes.
 
 A committed entry is not simply “leader wrote it locally”; quorum and term rules matter. Reads also need giao thức (protocol / 프로토콜) to ensure leader is hiện tại (current / 현재) if linearizable ngữ nghĩa (semantics / 의미론) required.
 
-> **Nối mạch:** **Leader election and split brain** nối từ **Raft intuition** sang **Reconfiguration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Leader election and split brain
 
 Without quorum/fencing, mạng (network / 네트워크) partition may let two nodes both believe leader and perform conflicting bên ngoài (external / 외부) actions. Consensus/quorum prevents both sides from making authoritative progress if neither has majority; fencing tokens can protect bên ngoài (external / 외부) resources from stale leaders.
-
-> **Nối mạch:** **Reconfiguration** nối từ **Leader election and split brain** sang **Replication vs backup**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reconfiguration
 
 Membership changes are consensus bài toán (problem / 문제) too. Naively switching old→new member sets can create disjoint majorities. Safe protocols use joint consensus or staged changes so quorums overlap appropriately.
 
-> **Nối mạch:** **Replication vs backup** nối từ **Reconfiguration** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Replication vs backup
 
 Replication reduces downtime/node-loss impact but copies corruption/deletes. Backup preserves historical independent khôi phục (recovery / 복구) points. Both needed for different thất bại (failure / 실패) các mô hình (models / 모델들).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Replication vs backup**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **Partitioning decides where dữ liệu (data / 데이터) lives; replication decides how many copies; consensus decides who may authoritatively thứ tự (order / 순서) changes.** Scaling one dimension creates coordination costs in another.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -81,8 +61,6 @@ Replication reduces downtime/node-loss impact but copies corruption/deletes. Bac
 **“Consensus is just majority vote.”** giao thức (protocol / 프로토콜) must handle terms, stale messages, log lịch sử (history / 이력), reconfiguration and an toàn (safety / 안전) under timing bất định (uncertainty / 불확실성).
 
 **“Sharding automatically increases all hiệu năng (performance / 성능).”** Cross-shard queries/transactions, skew and rebalancing add costs.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

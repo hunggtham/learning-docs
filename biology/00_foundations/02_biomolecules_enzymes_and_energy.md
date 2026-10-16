@@ -18,8 +18,6 @@ Kiến trúc modular có hai lợi ích lớn. Thứ nhất, cell chỉ cần m�
 
 Điều này tương tự software: alphabet ký tự nhỏ có thể tạo vô số mã nguồn (source code / 소스 코드) khác nhau nhờ thứ tự (order / 순서).
 
-> **Nối mạch:** Monomer được nối bằng phản ứng ngưng tụ và tháo bằng thủy phân; **carbohydrate** cho thấy cùng một polymer có thể vừa làm vật liệu cấu trúc vừa làm kho dự trữ, không chỉ là nhiên liệu chuyển hóa.
-
 ## 2. Condensation và hydrolysis: xây và tháo polyme
 
 Khi monomer được nối lại, cell thường dùng reaction kiểu **condensation/dehydration**; khi phá polyme, **hydrolysis (thủy phân / 가수분해)** dùng water để cắt bond.
@@ -29,8 +27,6 @@ Khi monomer được nối lại, cell thường dùng reaction kiểu **condens
 Một protein không tự “mọc” từ axit amin trong cytoplasm. Ribosome, RNA, enzyme và GTP/ATP phối hợp theo chuỗi (sequence / 시퀀스) encoded trong mRNA.
 
 Ngay từ đây ta thấy matter, năng lượng (energy / 에너지) và thông tin (information / 정보) đã gắn với nhau.
-
-> **Nối mạch:** Ngưng tụ và thủy phân giải thích cách cell xây–tháo polymer, còn **carbohydrate** cho thấy cách liên kết và branching quyết định dự trữ hay vật liệu. Từ khác biệt đó, **lipid** mở một chiến lược khác: kỵ nước để lưu trữ năng lượng đậm đặc và dựng ranh giới màng.
 
 ## 3. Carbohydrate: không chỉ là “đường để lấy năng lượng”
 
@@ -50,8 +46,6 @@ Enzyme digestive của người nhận dạng linkage trong starch nhưng không
 
 Ruminant như cow giải quyết bài toán bằng microbial symbiont trong gut có enzyme thích hợp. liên kết (connection / 연결) này nối biochemistry với ecology và hệ vi sinh (microbiome).
 
-> **Nối mạch:** Carbohydrate đổi chức năng khi linkage và branching đổi; **lipid** lại dùng tính kỵ nước để tạo bilayer và tích trữ năng lượng, không phải polymer lặp đều. Khi cần một phân tử vừa mang thông tin cấu trúc vừa thực hiện xúc tác, **protein** nối tiếp bằng chuỗi amino acid và folding ba chiều.
-
 ## 4. Lipid: molecule kỵ nước tạo ranh giới (boundary / 경계) và lưu trữ (storage / 저장소)
 
 “Lipid” không phải một polymer thống nhất như protein. Đây là nhóm molecule có tính hydrophobic đáng kể.
@@ -67,8 +61,6 @@ Ruminant như cow giải quyết bài toán bằng microbial symbiont trong gut 
 Axit béo **saturated** không có C=C double bond trong chuỗi (chain / 사슬); **unsaturated** có một hoặc nhiều double bond. Cis double bond tạo kink, làm chuỗi (chain / 사슬) khó pack chặt và thường tăng độ lỏng của màng (membrane fluidity).
 
 Cell có thể điều chỉnh lipid composition để membrane không quá cứng hoặc quá lỏng khi nhiệt độ (temperature) đổi. Đây là cân bằng nội môi (homeostasis) ở molecular mức (level / 수준).
-
-> **Nối mạch:** Lipid tạo ranh giới và kho năng lượng nhờ phần kỵ nước; **protein** dùng chuỗi amino acid, tương tác side chain và folding để trở thành máy phân tử. Vì hình dạng không cố định, mục **Protein không phải vật thể cứng** sẽ thêm động lực học vào mối quan hệ cấu trúc–chức năng.
 
 ## 5. Protein: từ chuỗi (sequence / 시퀀스) tới machine phân tử
 
@@ -101,8 +93,6 @@ function
 
 Đột biến (mutation) đổi một axit amin có thể làm chuỗi (chain / 사슬) tương tác (interaction / 상호작용) khác, folding khác và hàm (function / 함수) khác. Genetics vì vậy có thể ảnh hưởng phenotype qua chemistry của protein.
 
-> **Nối mạch:** Protein sequence tạo đầu vào; protein dynamics giải thích folding và function. **Denaturation và protein quality control** kiểm tra khi cấu trúc bị phá vỡ.
-
 ## 6. Protein không phải vật thể cứng
 
 Hình protein trong textbook thường trông như một khối cố định. Thực tế protein liên tục rung, đổi conformation và tương tác với solvent.
@@ -111,8 +101,6 @@ Nhiều protein hoạt động bằng **conformational thay đổi (change / 변
 
 Vì vậy cấu trúc (structure / 구조)–hàm (function / 함수) nên hiểu là **cấu trúc + động lực học (dynamics) → chức năng**.
 
-> **Nối mạch:** **7. Denaturation và protein kiểm soát chất lượng (quality control)** nối từ **6. Protein không phải vật thể cứng** sang **8. Enzym: làm reaction nhanh mà không đổi hướng thermodynamics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Denaturation và protein kiểm soát chất lượng (quality control)
 
 Nhiệt độ, pH hoặc chemical môi trường (environment / 환경) có thể phá tương tác (interaction / 상호작용) giữ protein fold, gây **denaturation (biến tính / 변성)**.
@@ -120,8 +108,6 @@ Nhiệt độ, pH hoặc chemical môi trường (environment / 환경) có th�
 Cell có **chaperone protein** hỗ trợ folding và hệ phân giải (degradation) để loại protein hỏng. Nếu misfolded protein tích tụ, tế bào (cell) stress tăng; một số disease liên quan protein aggregation.
 
 Điều này cho thấy maintenance của life không chỉ là tạo molecule mới mà còn quản lý chất lượng (quality / 품질) của molecule cũ.
-
-> **Nối mạch:** **8. Enzym: làm reaction nhanh mà không đổi hướng thermodynamics** nối từ **7. Denaturation và protein kiểm soát chất lượng (quality control)** sang **9. Trung tâm hoạt động (active site) và độ đặc hiệu (specificity)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Enzym: làm reaction nhanh mà không đổi hướng thermodynamics
 
@@ -135,8 +121,6 @@ Reaction cần vượt **năng lượng hoạt hóa (activation energy)**. Enzym
 
 Nếu một reaction endergonic cần năng lượng (energy / 에너지), cell phải couple nó với reaction favorable như ATP hydrolysis.
 
-> **Nối mạch:** **9. Trung tâm hoạt động (active site) và độ đặc hiệu (specificity)** nối từ **8. Enzym: làm reaction nhanh mà không đổi hướng thermodynamics** sang **10. Động học enzym (enzyme kinetics): tại sao tăng substrate không làm tỷ lệ (rate / 비율) tăng mãi?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Trung tâm hoạt động (active site) và độ đặc hiệu (specificity)
 
 **Trung tâm hoạt động (활성 부위)** là vùng enzyme bind substrate và thực hiện catalysis. Độ đặc hiệu đến từ shape, charge, hydrophobic tương tác (interaction / 상호작용) và động lực học.
@@ -146,8 +130,6 @@ Mô hình (model / 모델) “khóa (lock / 잠금) and key” hữu ích ban đ
 Enzyme có thể stabilize chuyển tiếp (transition / 전이) trạng thái (state / 상태), orient substrate, tạo microenvironment acid/cơ sở (base / 기반) hoặc tạo temporary covalent intermediate.
 
 “Enzyme làm nhanh” vì vậy có cơ chế (mechanism / 메커니즘) cụ thể, không phải phép màu.
-
-> **Nối mạch:** **10. Động học enzym (enzyme kinetics): tại sao tăng substrate không làm tỷ lệ (rate / 비율) tăng mãi?** nối từ **9. Trung tâm hoạt động (active site) và độ đặc hiệu (specificity)** sang **11. Điều hòa enzyme: metabolism phải có traffic điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Động học enzym (enzyme kinetics): tại sao tăng substrate không làm tỷ lệ (rate / 비율) tăng mãi?
 
@@ -162,8 +144,6 @@ v=\frac{V_{max}[S]}{K_m+[S]}
 \(K_m\) trong mô hình đơn giản là nồng độ cơ chất khi tỷ lệ (rate / 비율) bằng một nửa \(V_{max}\). Nó thường được dùng như thông tin về enzym–cơ chất hành vi (behavior / 동작), nhưng không nên luôn đồng nhất máy móc với “affinity” trong mọi cơ chế (mechanism / 메커니즘).
 
 Math ở đây giúp ta thấy một hệ thống sinh học (biological system) có ceiling do số enzyme hữu hạn.
-
-> **Nối mạch:** **11. Điều hòa enzyme: metabolism phải có traffic điều khiển (control / 제어)** nối từ **10. Động học enzym (enzyme kinetics): tại sao tăng substrate không làm tỷ lệ (rate / 비율) tăng mãi?** sang **12. ATP: đồng tiền năng lượng (energy currency) nhưng không phải “kho năng lượng vô hạn”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Điều hòa enzyme: metabolism phải có traffic điều khiển (control / 제어)
 
@@ -183,8 +163,6 @@ D -. inhibits .-> B
 
 Đây là phản hồi âm (negative feedback) ở quy mô phân tử, cùng lô-gic (logic / 논리) với insulin ở quy mô sinh vật (organism scale).
 
-> **Nối mạch:** **12. ATP: đồng tiền năng lượng (energy currency) nhưng không phải “kho năng lượng vô hạn”** nối từ **11. Điều hòa enzyme: metabolism phải có traffic điều khiển (control / 제어)** sang **13. Ghép năng lượng: làm sao ATP drive reaction khác?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. ATP: đồng tiền năng lượng (energy currency) nhưng không phải “kho năng lượng vô hạn”
 
 **ATP — adenosine triphosphate (아데노신 삼인산)** gồm adenine, ribose và ba phosphate.
@@ -203,8 +181,6 @@ ATP giống currency vì nó là intermediate phổ biến: năng lượng (ener
 
 Cell không dự trữ ATP cho nhiều ngày. ATP turnover rất nhanh; organism phải liên tục regenerate nó.
 
-> **Nối mạch:** **13. Ghép năng lượng: làm sao ATP drive reaction khác?** nối từ **12. ATP: đồng tiền năng lượng (energy currency) nhưng không phải “kho năng lượng vô hạn”** sang **14. NADH, FADH₂ và chất mang electron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Ghép năng lượng: làm sao ATP drive reaction khác?
 
 Giả sử reaction A có \(\Delta G>0\) và không favorable. Nếu enzyme couple reaction A với ATP hydrolysis có \(\Delta G\) âm đủ lớn, tổng:
@@ -218,8 +194,6 @@ có thể trở nên âm.
 Coupling thường không phải chỉ “đặt hai reaction cạnh nhau”. Enzyme transfer phosphate hoặc tạo intermediate để chemical pathway thực sự nối với nhau.
 
 Đây là cách cell biến năng lượng tự do thành công việc (work / 작업) cụ thể.
-
-> **Nối mạch:** **14. NADH, FADH₂ và chất mang electron** nối từ **13. Ghép năng lượng: làm sao ATP drive reaction khác?** sang **15. Axit nucleic: polymer có chuỗi (sequence / 시퀀스) làm thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. NADH, FADH₂ và chất mang electron
 
@@ -245,8 +219,6 @@ cellular work
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang respiration.
 
-> **Nối mạch:** NADH, FADH₂ và electron carriers cung cấp năng lượng; nucleic-acid sequence lưu thông tin. **DNA và RNA khác nhau vì chemistry khác nhau** kiểm tra hệ quả của cấu trúc.
-
 ## 15. Axit nucleic: polymer có chuỗi (sequence / 시퀀스) làm thông tin (information / 정보)
 
 **Nucleotit (nucleotide) (뉴클레오타이드)** gồm sugar, phosphate và nitrogenous cơ sở (base / 기반). Nucleotide nối thành axit nucleic.
@@ -257,8 +229,6 @@ DNA dùng deoxyribose và bases A, T, G, C. RNA dùng ribose và thường có U
 
 Ở đây chemistry tạo ra đặc tính (property) thông tin (information / 정보). Không có “thông tin” tách khỏi vật chất; chuỗi (sequence / 시퀀스) là arrangement vật lý của cơ sở (base / 기반).
 
-> **Nối mạch:** Nucleic-acid sequence cung cấp thông tin; DNA/RNA chemistry điều chỉnh độ bền và biểu hiện. **Molecular recognition** kiểm tra cách phân tử nhận ra nhau.
-
 ## 16. DNA và RNA khác nhau vì chemistry khác nhau
 
 DNA thường ổn định hơn RNA một phần vì deoxyribose thiếu 2′-OH, làm backbone ít susceptible với hydrolysis hơn. DNA double strand và repair hệ thống (system / 시스템) phù hợp lưu trữ dài hạn (long-term storage).
@@ -267,8 +237,6 @@ RNA linh động hơn: có thể làm messenger, adapter, structural molecule, r
 
 Điều này phù hợp với phân công chức năng (division of labor): DNA thiên về archive; RNA thiên về bản sao làm việc (working copy) và functional intermediate.
 
-> **Nối mạch:** **17. Nhận dạng phân tử (molecular recognition): làm sao phân tử (molecule) “nhận ra” nhau?** nối từ **16. DNA và RNA khác nhau vì chemistry khác nhau** sang **18. Compartmentalization: cùng chemistry nhưng khác location tạo kết quả (outcome / 결과) khác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Nhận dạng phân tử (molecular recognition): làm sao phân tử (molecule) “nhận ra” nhau?
 
 Enzym–cơ chất (substrate), thụ thể–ligand, kháng thể (antibody)–antigen và DNA cơ sở (base / 기반) pairing đều phụ thuộc **nhận dạng phân tử**.
@@ -276,8 +244,6 @@ Enzym–cơ chất (substrate), thụ thể–ligand, kháng thể (antibody)–
 Không có ý thức ở molecular mức (level / 수준). Recognition xuất hiện vì shape, charge, liên kết hydro (hydrogen bond), hydrophobic surface và dynamics tạo binding favorable hơn cho một số partner.
 
 Specificity thường là tương đối, không tuyệt đối. Drug có thể bind off-target protein; enzym đôi khi nhận substrate tương tự. Đây là nguồn của side tác động (effect / 효과) và metabolic cross-reactivity.
-
-> **Nối mạch:** **18. Compartmentalization: cùng chemistry nhưng khác location tạo kết quả (outcome / 결과) khác** nối từ **17. Nhận dạng phân tử (molecular recognition): làm sao phân tử (molecule) “nhận ra” nhau?** sang **19. Một ví dụ tích hợp: từ miếng bánh mì tới ATP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Compartmentalization: cùng chemistry nhưng khác location tạo kết quả (outcome / 결과) khác
 
@@ -289,8 +255,6 @@ Location trở thành một tầng (layer / 계층) của regulation.
 
 Đây là lý do chapter tiếp theo phải học organelle, không thể chỉ học molecule.
 
-> **Nối mạch:** **18. Compartmentalization: cùng chemistry nhưng khác location tạo kết quả (outcome / 결과) khác** nêu quy tắc; **19. Một ví dụ tích hợp: từ miếng bánh mì tới ATP** thử quy tắc trong tình huống, rồi **20. Một ví dụ tích hợp khác: mutation có thể ảnh hưởng protein ra sao?** mở rộng hệ quả.
-
 ## 19. Một ví dụ tích hợp: từ miếng bánh mì tới ATP
 
 Starch trong bánh mì được digestive enzyme cắt thành glucose. Glucose đi vào bloodstream rồi vào tế bào qua transporter.
@@ -300,8 +264,6 @@ Trong cytoplasm, đường phân chuyển glucose thành pyruvate và tạo mộ
 ATP sau đó có thể drive co cơ (muscle contraction), ion pump hoặc tổng hợp protein (protein synthesis).
 
 Nếu ta chỉ nói “carbohydrate cung cấp năng lượng”, ta bỏ mất toàn bộ cơ chế (mechanism / 메커니즘). Thực tế là một chuỗi (chain / 사슬) matter–electron–chênh lệch (gradient)–ATP–công việc (work / 작업).
-
-> **Nối mạch:** **19. Một ví dụ tích hợp: từ miếng bánh mì tới ATP** nêu quy tắc; **20. Một ví dụ tích hợp khác: mutation có thể ảnh hưởng protein ra sao?** thử quy tắc trong tình huống, rồi **21. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 20. Một ví dụ tích hợp khác: mutation có thể ảnh hưởng protein ra sao?
 
@@ -321,8 +283,6 @@ DNA sequence
 
 Không phải mutation nào cũng có tác động (effect / 효과), nhưng khi tác động (effect / 효과) xuất hiện, molecular cơ chế (mechanism / 메커니즘) thường đi qua chuỗi (chain / 사슬) kiểu này.
 
-> **Nối mạch:** **20. Một ví dụ tích hợp khác: mutation có thể ảnh hưởng protein ra sao?** nêu quy tắc; **21. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **22. Từ molecule sang cell: tại sao phải có membrane và organelle?** mở rộng hệ quả.
-
 ## 21. Các hiểu lầm phổ biến (common misconceptions)
 
 “Carbohydrate chỉ để lấy năng lượng (energy / 에너지)” sai vì chúng còn làm cấu trúc (structure / 구조) và nhận dạng.
@@ -337,8 +297,6 @@ Không phải mutation nào cũng có tác động (effect / 효과), nhưng khi
 
 “Enzyme càng nhiều thì reaction tăng vô hạn” sai vì cơ chất, sản phẩm (product / 제품), cofactor và regulation cũng giới hạn flux.
 
-> **Nối mạch:** **22. Từ molecule sang cell: tại sao phải có membrane và organelle?** nối từ **21. Các hiểu lầm phổ biến (common misconceptions)** sang **Từ cấu trúc enzym đến tốc độ, điều hòa và thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Từ molecule sang cell: tại sao phải có membrane và organelle?
 
 Sau chapter này, ta đã có material: carbohydrate, lipid, protein, axit nucleic; có chất xúc tác: enzym; có năng lượng (energy / 에너지) intermediate: ATP/NADH; có principle regulation.
@@ -350,8 +308,6 @@ Nhưng một túi biomolecule chưa phải cell. Chúng cần được **đặt 
 > **Mô hình tư duy cuối chapter:** biomolecule không phải bốn danh mục để học thuộc. Chúng là những lớp vật liệu phối hợp: lipid tạo ranh giới, protein thực hiện phần lớn công việc (work / 작업), carbohydrate cung cấp/giữ carbon và năng lượng (energy / 에너지), axit nucleic lưu/triển khai thông tin (information / 정보); enzym, ATP và chất mang electron nối chúng thành một hệ động có thể trở thành cell.
 
 <!-- depth-audit-2026:enzyme-control -->
-
-> **Nối mạch:** Từ enzyme structure đến rate, regulation và failure, mạch quay lại câu hỏi membrane/organelle tổ chức chemistry thành cell như thế nào.
 
 ## Từ cấu trúc enzym đến tốc độ, điều hòa và thất bại (failure / 실패)
 

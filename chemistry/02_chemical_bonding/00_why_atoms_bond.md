@@ -33,8 +33,6 @@ Năng lượng
 
 Liên kết không phải một “thanh nối” vật lý. Nó là trạng thái năng lượng của toàn hệ electron–hạt nhân.
 
-> **Nối mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Thế năng và độ bền** nối từ **Khi hai nguyên tử tiến lại gần nhau** sang **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thế năng và độ bền
 
 Trong hóa học, “bền” thường nghĩa một trạng thái có năng lượng thấp tương đối so với các trạng thái khả dĩ khác trong điều kiện xét. Tuy nhiên cần phân biệt **độ bền nhiệt động (thermodynamic stability)** và **độ bền động học (kinetic stability)**.
@@ -42,8 +40,6 @@ Trong hóa học, “bền” thường nghĩa một trạng thái có năng lư
 Một phân tử có thể có xu hướng nhiệt động chuyển thành sản phẩm năng lượng thấp hơn nhưng phản ứng vẫn cực chậm vì hàng rào hoạt hóa cao. Kim cương là ví dụ quen thuộc: graphite bền nhiệt động hơn ở điều kiện thường, nhưng kim cương vẫn tồn tại rất lâu vì sự chuyển đổi trực tiếp diễn ra quá chậm.
 
 Do đó “liên kết mạnh” không tự động nghĩa “chất không phản ứng”. Khả năng phản ứng phụ thuộc cả động lực năng lượng và con đường phản ứng.
-
-> **Nối mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết** nối từ **Thế năng và độ bền** sang **Ba mô hình lớn không phải ba thế giới tách biệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết
 
@@ -60,8 +56,6 @@ Một mô hình liên kết tốt thường kết hợp hai tầng suy luận:
 - **tĩnh điện (electrostatics)** cho trực giác về lực hút và lực đẩy giữa điện tích;
 - **cơ học lượng tử (quantum mechanics)** giải thích trạng thái electron, tổ hợp obitan và các trạng thái được phép chiếm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Ba mô hình lớn không phải ba thế giới tách biệt** nối từ **Tương tác Coulomb cho trực giác cổ điển, cơ học lượng tử quyết định chi tiết** sang **Hình thành liên kết và bảo toàn năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ba mô hình lớn không phải ba thế giới tách biệt
 
 Trong giáo trình, ta thường học liên kết ion, cộng hóa trị và kim loại như ba loại riêng. Thực tế, phân bố electron tạo thành một phổ liên tục.
@@ -74,15 +68,11 @@ Trong giáo trình, ta thường học liên kết ion, cộng hóa trị và ki
 
 Một liên kết thật có thể mang đồng thời tính ion và tính cộng hóa trị. HCl là liên kết cộng hóa trị nhưng phân cực mạnh; nhiều chất rắn được gọi là “ion” vẫn có đóng góp cộng hóa trị đáng kể.
 
-> **Nối mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, sau nội dung của **Ba mô hình lớn không phải ba thế giới tách biệt**, **Hình thành liên kết và bảo toàn năng lượng** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng phân ly liên kết** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Hình thành liên kết và bảo toàn năng lượng
 
 Nếu hai nguyên tử hình thành liên kết và năng lượng của hệ giảm, phần chênh lệch năng lượng phải được truyền đi đâu đó. Nó có thể được phát ra dưới dạng photon, chuyển thành động năng hoặc truyền cho một hạt thứ ba, dung môi hay mạng tinh thể.
 
 Điều này giải thích vì sao hai nguyên tử cô lập trong chân không không phải lúc nào cũng chỉ “va nhau rồi dính lại” vĩnh viễn. Hệ cần một cơ chế để tản phần năng lượng dư nếu muốn ở lại trạng thái liên kết.
-
-> **Nối mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Năng lượng phân ly liên kết** nối từ **Hình thành liên kết và bảo toàn năng lượng** sang **Độ dài liên kết và độ bền liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng phân ly liên kết
 
@@ -98,15 +88,11 @@ cần năng lượng dương. Phản ứng ngược tạo liên kết H–H sẽ
 
 BDE không phải tính chất tuyệt đối của “một loại liên kết” bất kể phân tử. Năng lượng C–H thay đổi theo môi trường phân tử, kiểu lai hóa và độ ổn định cộng hưởng của các mảnh tạo thành.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Độ dài liên kết và độ bền liên kết** nối từ **Năng lượng phân ly liên kết** sang **Electron hóa trị là thành phần chính của liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ dài liên kết và độ bền liên kết
 
 Trong cùng một họ, liên kết ngắn hơn thường mạnh hơn vì mật độ electron giữa hai hạt nhân tương tác hiệu quả hơn, nhưng đây không phải quy tắc tuyệt đối cho mọi loại liên kết.
 
 **Bậc liên kết (bond order)** thường tương quan với độ dài và độ bền: liên kết ba thường ngắn và mạnh hơn liên kết đôi, liên kết đôi thường ngắn và mạnh hơn liên kết đơn giữa cùng một cặp nguyên tử. Lý thuyết obitan phân tử sẽ cho cách hiểu sâu hơn về bậc liên kết.
-
-> **Nối mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Electron hóa trị là thành phần chính của liên kết** nối từ **Độ dài liên kết và độ bền liên kết** sang **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electron hóa trị là thành phần chính của liên kết
 
@@ -115,8 +101,6 @@ Electron lõi thường không thay đổi nhiều khi liên kết hóa học h�
 Vì vậy bảng tuần hoàn dự đoán hành vi liên kết thông qua cấu hình electron hóa trị. Carbon với bốn electron hóa trị có khả năng tạo mạng cộng hóa trị phong phú; halogen với bảy electron hóa trị thường tạo một liên kết mạnh trong nhiều phân tử trung hòa; khí hiếm ít phản ứng hơn vì cấu hình hóa trị của chúng khó được hạ thêm năng lượng bằng các liên kết thông thường.
 
 Xem lại: [Bảng tuần hoàn và các xu hướng tuần hoàn](../01_atomic_structure/04_periodic_table_and_periodic_trends.md).
-
-> **Nối mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản** nối từ **Electron hóa trị là thành phần chính của liên kết** sang **Độ phân cực của liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản
 
@@ -132,8 +116,6 @@ Quy tắc hoạt động tốt với nhiều hợp chất của C, N, O và F, n
 
 Do đó octet nên được dùng như **quy tắc hạch toán (bookkeeping heuristic)**, không phải lời giải thích cuối cùng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, sau nội dung của **Quy tắc octet: hữu ích nhưng không phải nguyên lý cơ bản**, **Độ phân cực của liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hệ phân cấp các mô hình liên kết** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Độ phân cực của liên kết
 
 Nếu hai nguyên tử có độ âm điện khác nhau, mật độ electron dùng chung bị lệch về phía nguyên tử có độ âm điện lớn hơn. Khi đó xuất hiện **điện tích riêng phần (partial charges)**:
@@ -145,8 +127,6 @@ Nếu hai nguyên tử có độ âm điện khác nhau, mật độ electron d�
 Đây là **liên kết cộng hóa trị phân cực (polar covalent bond / 극성 공유 결합)**.
 
 Độ phân cực ảnh hưởng mômen lưỡng cực, lực giữa các phân tử, độ tan và cơ chế phản ứng. Vì thế một xu hướng ở cấp nguyên tử có thể lan lên tính chất của cả phân tử và cuối cùng tới hành vi vĩ mô của vật chất.
-
-> **Nối mạch:** Trong **Vì sao nguyên tử tạo liên kết?**, **Hệ phân cấp các mô hình liên kết** nối từ **Độ phân cực của liên kết** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ phân cấp các mô hình liên kết
 
@@ -164,8 +144,6 @@ Không có một mô hình liên kết duy nhất tối ưu cho mọi câu hỏi
 
 Các mô hình này không phải những “sự thật mâu thuẫn”. Chúng là các mức trừu tượng khác nhau cho các câu hỏi khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Vì sao nguyên tử tạo liên kết?**, **Các hiểu lầm thường gặp** nối từ **Hệ phân cấp các mô hình liên kết** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các hiểu lầm thường gặp
 
 ### “Liên kết chứa năng lượng nên phá liên kết sẽ giải phóng năng lượng”
@@ -179,8 +157,6 @@ Hình ảnh chuyển electron hữu ích ở mức cơ bản, nhưng chất rắ
 ### “Nguyên tử liên kết vì muốn đủ electron”
 
 Nguyên tử không có mục tiêu. Liên kết xuất hiện khi cách sắp xếp mới tạo trạng thái năng lượng thuận lợi hơn trong điều kiện thích hợp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vì sao nguyên tử tạo liên kết?**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

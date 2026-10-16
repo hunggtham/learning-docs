@@ -10,8 +10,6 @@ Nếu tuyến tính hóa lực quanh trạng thái cân bằng và chéo hóa h�
 
 Phonon không phải một loại nguyên tử mới. Nó là quasiparticle: cách đóng gói một kích thích tập thể của rất nhiều nguyên tử thành một đối tượng hiệu dụng có năng lượng và động lượng tinh thể.
 
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Nhánh acoustic và optical phonon** nối từ **Tinh thể không phải một mạng nguyên tử đứng yên** sang **Mô hình Debye và nhiệt dung mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhánh acoustic và optical phonon
 
 Với ô cơ sở chỉ có một nguyên tử, nhánh tần số thấp thường là nhánh âm học (acoustic). Khi
@@ -36,8 +34,6 @@ trong đó `v_s` là vận tốc âm trong tinh thể.
 
 Nếu ô cơ sở có nhiều nguyên tử, có thể xuất hiện nhánh quang học (optical), nơi các mạng con dao động tương đối với nhau. Một số chế độ (mode / 모드) quang học ghép mạnh với bức xạ hồng ngoại hoặc tán xạ Raman.
 
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Mô hình Debye và nhiệt dung mạng** nối từ **Nhánh acoustic và optical phonon** sang **Electron–phonon scattering và điện trở**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mô hình Debye và nhiệt dung mạng
 
 Định lý phân bố đều cổ điển dự đoán nhiệt dung mạng ở nhiệt độ cao gần
@@ -60,8 +56,6 @@ Nguyên nhân là thống kê lượng tử làm các chế độ (mode / 모드
 
 Đây là một trong những thành công sớm cho thấy tính chất nhiệt của chất rắn phải được hiểu bằng các kích thích lượng tử tập thể.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Electron–phonon scattering và điện trở** nối từ **Mô hình Debye và nhiệt dung mạng** sang **Khuyết tật là một phần bình thường của vật liệu thật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Electron–phonon scattering và điện trở
 
 Trong mạng tuần hoàn hoàn hảo, electron Bloch không thể được hình dung đơn giản như viên bi liên tục va vào từng ion. Tính tuần hoàn đã được xây vào trạng thái Bloch.
@@ -80,8 +74,6 @@ Khi làm lạnh, số phonon giảm và điện trở của kim loại tinh khi�
 
 Quy tắc Matthiessen đôi khi xấp xỉ điện trở tổng bằng tổng các cơ chế độc lập, nhưng không phải định luật chính xác trong mọi vật liệu.
 
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Khuyết tật là một phần bình thường của vật liệu thật** nối từ **Electron–phonon scattering và điện trở** sang **Dislocation và biến dạng dẻo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khuyết tật là một phần bình thường của vật liệu thật
 
 Tinh thể hoàn hảo là mô hình lý tưởng. Vật liệu thực có thể chứa:
@@ -96,8 +88,6 @@ Khuyết tật không nhất thiết là “xấu”.
 
 Pha tạp bán dẫn cố ý đưa impurity vào để điều khiển mật độ hạt tải. Dislocation chi phối biến dạng dẻo của kim loại. Color center tạo trạng thái quang học. Grain ranh giới (boundary / 경계) ảnh hưởng độ bền, khuếch tán và độ dẫn.
 
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Dislocation và biến dạng dẻo** nối từ **Khuyết tật là một phần bình thường của vật liệu thật** sang **Quasiparticle: electron trong vật liệu không còn là electron “trần”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dislocation và biến dạng dẻo
 
 Nếu phải trượt toàn bộ một mặt phẳng nguyên tử hoàn hảo đồng thời, ứng suất cần thiết rất lớn.
@@ -109,8 +99,6 @@ Biến cứng (work hardening) xảy ra khi biến dạng làm mật độ dislo
 Ủ nhiệt (annealing) có thể làm khuyết tật tái sắp xếp hoặc giảm mật độ.
 
 Vì vậy tính cơ học vĩ mô của kim loại nổi lên từ cấu trúc và động lực của các khuyết tật vi mô.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Quasiparticle: electron trong vật liệu không còn là electron “trần”** nối từ **Dislocation và biến dạng dẻo** sang **Magnon và tính từ tập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quasiparticle: electron trong vật liệu không còn là electron “trần”
 
@@ -127,8 +115,6 @@ Electron dải, lỗ trống, phonon, magnon và exciton đều là ví dụ qua
 
 Ý tưởng này lặp lại xuyên suốt vật lý: mô hình ở đúng thang không nhất thiết dùng đối tượng cơ bản nhất của tự nhiên.
 
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Magnon và tính từ tập thể** nối từ **Quasiparticle: electron trong vật liệu không còn là electron “trần”** sang **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Magnon và tính từ tập thể
 
 Trong sắt từ, dao động tập thể của spin tạo spin wave. Lượng tử của spin wave được gọi là magnon (마그논).
@@ -136,8 +122,6 @@ Trong sắt từ, dao động tập thể của spin tạo spin wave. Lượng t
 Miền từ hình thành để giảm năng lượng từ tĩnh; lĩnh vực (domain / 도메인) wall là cấu trúc mở rộng phân cách các miền.
 
 Công nghệ bộ nhớ khai thác việc chuyển trạng thái từ, còn spintronics sử dụng spin bên cạnh điện tích như một bậc tự do mang thông tin.
-
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** nối từ **Magnon và tính từ tập thể** sang **Bulk–ranh giới (boundary / 경계) correspondence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ
 
@@ -155,8 +139,6 @@ với `\nu` là số nguyên trong chế độ lý tưởng.
 
 Độ bền của lượng tử hóa liên hệ với topology của các trạng thái lượng tử đã chiếm, chứ không chỉ với từng tham số vật liệu vi mô.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** đặt tiêu chí; **Bulk–ranh giới (boundary / 경계) correspondence** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Chất cách điện tô pô** mở rộng hệ quả.
-
 ## Bulk–ranh giới (boundary / 경계) correspondence
 
 Nếu hai vùng bulk thuộc hai lớp tô pô khác nhau, biên giữa chúng không thể luôn được biến đổi trơn từ pha này sang pha kia mà vẫn giữ gap và symmetry bảo vệ.
@@ -165,8 +147,6 @@ Do đó biên có thể bắt buộc chứa các trạng thái đặc biệt.
 
 Đây là **bulk–ranh giới (boundary / 경계) correspondence**: bất biến tô pô của bulk dự đoán cấu trúc trạng thái ở biên.
 
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Bulk–ranh giới (boundary / 경계) correspondence** đặt tiêu chí; **Chất cách điện tô pô** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vật liệu hai chiều và giảm số chiều** mở rộng hệ quả.
-
 ## Chất cách điện tô pô
 
 Topological insulator có bulk cách điện nhưng có trạng thái dẫn ở bề mặt hoặc cạnh trong điều kiện phù hợp.
@@ -174,8 +154,6 @@ Topological insulator có bulk cách điện nhưng có trạng thái dẫn ở 
 Từ “được bảo vệ” không có nghĩa hoàn toàn không tán xạ. Nó nghĩa một số cơ chế mở gap hoặc backscattering bị cấm hoặc suy giảm nếu symmetry bảo vệ và cấu trúc gap vẫn còn.
 
 Nhiệt độ, tạp chất từ, tiếp xúc, tương tác và hình học mẫu vẫn có thể làm vận chuyển (transport / 전송) thực khác lý tưởng.
-
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Vật liệu hai chiều và giảm số chiều** nối từ **Chất cách điện tô pô** sang **Siêu dẫn như trạng thái lượng tử tập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu hai chiều và giảm số chiều
 
@@ -191,8 +169,6 @@ Trong graphene, phổ năng lượng gần điểm Dirac gần tuyến tính. Qu
 
 Đây là phát biểu hiệu dụng ở năng lượng thấp, không có nghĩa electron cơ bản mất khối lượng nghỉ trong chân không.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Siêu dẫn như trạng thái lượng tử tập thể** nối từ **Vật liệu hai chiều và giảm số chiều** sang **Tính toán vật liệu và kỹ thuật thiết bị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Siêu dẫn như trạng thái lượng tử tập thể
 
 Trong bức tranh BCS truyền thống, tương tác electron–phonon có thể tạo lực hút hiệu dụng giữa electron gần mặt Fermi, hình thành cặp Cooper.
@@ -202,8 +178,6 @@ Các cặp tạo trạng thái kết hợp có gap năng lượng.
 Siêu dẫn không chỉ là “điện trở bằng 0”. Hiệu ứng Meissner cho thấy từ trường bị đẩy khỏi bulk trong điều kiện thích hợp, chứng minh đây là một pha nhiệt động riêng biệt.
 
 Lượng tử hóa từ thông và hiệu ứng Josephson phản ánh tính kết hợp pha lượng tử ở quy mô vĩ mô.
-
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Tính toán vật liệu và kỹ thuật thiết bị** nối từ **Siêu dẫn như trạng thái lượng tử tập thể** sang **Liên hệ với Hóa học và Kỹ thuật vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính toán vật liệu và kỹ thuật thiết bị
 
@@ -220,8 +194,6 @@ Nhưng từ band cấu trúc (structure / 구조) lý tưởng tới thiết b�
 
 Đó là lý do vật lý chất rắn, khoa học vật liệu, kỹ thuật bán dẫn và vật lý tính toán chồng lấn sâu.
 
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** nối từ **Tính toán vật liệu và kỹ thuật thiết bị** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ với Hóa học và Kỹ thuật vật liệu
 
 Năng lượng liên kết hóa học quyết định cấu trúc tinh thể và độ cứng cục bộ; cấu trúc điện tử quyết định band, bonding và phản ứng bề mặt.
@@ -230,8 +202,6 @@ Khuyết tật, pha tạp và grain ranh giới (boundary / 경계) là nơi v�
 
 Trong kỹ thuật, mục tiêu hiếm khi là “tinh thể hoàn hảo nhất”. Mục tiêu là cấu trúc vi mô tạo đúng cơ tính, điện tính, nhiệt tính hoặc quang tính cần thiết.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Miền áp dụng và giới hạn
 
 Phonon là quasiparticle tốt khi dao động mạng có thể được mô tả gần điều hòa và chế độ (mode / 모드) có thời gian sống đủ dài.
@@ -239,8 +209,6 @@ Phonon là quasiparticle tốt khi dao động mạng có thể được mô t�
 Ở nhiệt độ cao hoặc phi điều hòa mạnh, phonon–phonon scattering và biến đổi cấu trúc có thể làm bức tranh quasiparticle đơn giản kém chính xác.
 
 Khối lượng hiệu dụng cũng chỉ có ý nghĩa trong vùng `k` nơi dispersion có thể xấp xỉ phù hợp. Topological protection luôn phụ thuộc gap, symmetry và loại nhiễu loạn.
-
-> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -256,8 +224,6 @@ microscopic atoms + electrons
 → macroscopic material properties
 → device behavior
 ```
-
-> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -276,8 +242,6 @@ Không. Bảo vệ chỉ áp dụng cho những chế độ (mode / 모드) và 
 ### “Band cấu trúc (structure / 구조) lý tưởng đủ để dự đoán thiết bị thật”
 
 Không. giao diện (interface / 인터페이스), contact, disorder, phonon và vận chuyển không cân bằng có thể chi phối thiết bị.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

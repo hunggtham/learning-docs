@@ -28,8 +28,6 @@ Hai investments có arithmetic average return giống nhau không nhất thiết
 
 nên wealth giảm 25%, dù arithmetic average của `+50%` và `-50%` là 0%.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **APR, effective tỷ lệ (rate / 비율) và compounding frequency** nối từ **Growth cộng và growth nhân** sang **Continuous compounding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## APR, effective tỷ lệ (rate / 비율) và compounding frequency
 
 Nếu nominal annual tỷ lệ (rate / 비율) `r` compounded `m` lần mỗi năm, effective annual factor là
@@ -46,8 +44,6 @@ EAR=\left(1+\frac rm\right)^m-1.
 
 Vì vậy hai khoản vay cùng headline annual percentage có thể có effective chi phí (cost / 비용) khác nếu compounding/fees khác. Khi so sản phẩm tài chính, phải đối chiếu cùng thời gian (time / 시간) basis và cash-flow convention.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Continuous compounding** nối từ **APR, effective tỷ lệ (rate / 비율) và compounding frequency** sang **Present giá trị (value / 값) và discounting**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Continuous compounding
 
 Limit
@@ -63,8 +59,6 @@ A(t)=Pe^{rt}.
 ```
 
 `e` không xuất hiện vì finance “thích e”; nó xuất hiện từ limit của repeated proportional growth.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Present giá trị (value / 값) và discounting** nối từ **Continuous compounding** sang **Net present giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Present giá trị (value / 값) và discounting
 
@@ -84,8 +78,6 @@ P=\frac{F}{(1+r)^n}.
 
 Một future cash luồng (flow / 흐름) xa hơn bị discount mạnh hơn vì capital có opportunity chi phí (cost / 비용) qua nhiều periods.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Net present giá trị (value / 값)** nối từ **Present giá trị (value / 값) và discounting** sang **Annuity và payment formula**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Net present giá trị (value / 값)
 
 Với cash flows `C_t` và discount tỷ lệ (rate / 비율) `r`:
@@ -97,8 +89,6 @@ NPV=\sum_{t=0}^{T}\frac{C_t}{(1+r)^t}.
 NPV đưa cash flows ở các thời điểm khác nhau về cùng monetary thời gian (time / 시간) tham chiếu (reference / 참조) trước khi cộng.
 
 Discount tỷ lệ (rate / 비율) không phải universal constant; nó phản ánh các giả định (assumptions / 가정들) về opportunity chi phí (cost / 비용), financing, rủi ro (risk / 위험) và ngữ cảnh (context / 맥락). Thay `r` có thể thay quyết định (decision / 결정).
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Annuity và payment formula** nối từ **Net present giá trị (value / 값)** sang **Inflation và real purchasing power**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Annuity và payment formula
 
@@ -130,8 +120,6 @@ Vì vậy fixed loan payment formula là geometric-series kết quả (result / 
 
 Interest portion ban đầu lớn vì outstanding principal lớn. Khi principal giảm, interest charge giảm và phần payment trả principal tăng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Inflation và real purchasing power** nối từ **Annuity và payment formula** sang **Expected giá trị (value / 값) và rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Inflation và real purchasing power
 
 Nếu nominal growth factor là `1+r_n` và price-level factor `1+\pi`, real purchasing-power factor là
@@ -154,8 +142,6 @@ r_{real}\approx r_n-\pi
 
 chỉ tốt khi rates không quá lớn.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Expected giá trị (value / 값) và rủi ro (risk / 위험)** nối từ **Inflation và real purchasing power** sang **Diversification và covariance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Expected giá trị (value / 값) và rủi ro (risk / 위험)
 
 Nếu kết quả (outcome / 결과) `X` có possible values `x_i` với probabilities `p_i`:
@@ -174,8 +160,6 @@ E[L]=\sum_i p_i L_i,
 
 nhưng variance, tail rủi ro (risk / 위험), liquidity ràng buộc (constraint / 제약조건) và rủi ro (risk / 위험) tolerance cũng matter.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Diversification và covariance** nối từ **Expected giá trị (value / 값) và rủi ro (risk / 위험)** sang **Percentage điểm (point / 지점) và percent thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Diversification và covariance
 
 Portfolio return với weights `w` và asset return véc-tơ (vector / 벡터) `R`:
@@ -192,8 +176,6 @@ Variance:
 
 Không chỉ individual volatility quan trọng; covariance giữa assets quyết định diversification benefit. Hai assets cùng tăng/giảm mạnh cùng lúc không diversify nhiều dù tên ngành khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Percentage điểm (point / 지점) và percent thay đổi (change / 변경)** nối từ **Diversification và covariance** sang **Weighted average**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Percentage điểm (point / 지점) và percent thay đổi (change / 변경)
 
 Nếu lỗi (error / 오류) tỷ lệ (rate / 비율) từ 2% xuống 1%, absolute reduction là **1 percentage điểm (point / 지점)**, relative reduction là
@@ -203,8 +185,6 @@ Nếu lỗi (error / 오류) tỷ lệ (rate / 비율) từ 2% xuống 1%, absol
 ```
 
 Cả hai statements có thể đúng nhưng trả lời câu hỏi khác nhau. Báo cáo chỉ nói “giảm 50%” mà không cho baseline dễ gây hiểu sai quy mô (scale / 규모).
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Weighted average** nối từ **Percentage điểm (point / 지점) và percent thay đổi (change / 변경)** sang **Simpson's paradox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Weighted average
 
@@ -218,15 +198,11 @@ không phải average đơn giản của group means trừ khi group sizes bằn
 
 Lỗi này xuất hiện trong salary reports, phản hồi (response / 응답) times, exam averages và nghiệp vụ (business / 비즈니스) KPIs.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Simpson's paradox** nối từ **Weighted average** sang **Tail độ trễ (latency / 지연 시간) và percentiles trong IT**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Simpson's paradox
 
 Trend có thể đảo khi aggregate groups do group composition thay đổi. Ví dụ treatment tốt hơn trong từng rủi ro (risk / 위험) group nhưng overall tỷ lệ (rate / 비율) thấp hơn nếu treatment group chứa nhiều high-risk cases.
 
 Bài học không phải “statistics lừa người”; aggregation đã bỏ một variable cấu trúc quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Tail độ trễ (latency / 지연 시간) và percentiles trong IT** nối từ **Simpson's paradox** sang **Sức chứa (capacity / 용량) planning bằng dimensional phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tail độ trễ (latency / 지연 시간) và percentiles trong IT
 
@@ -235,8 +211,6 @@ Mean độ trễ (latency / 지연 시간) có thể che slow tail. P95 nghĩa 9
 Nếu 99 requests mất 100 ms và 1 yêu cầu (request / 요청) mất 10 s, mean khoảng 199 ms nhưng người dùng (user / 사용자) gặp yêu cầu (request / 요청) 10 s có experience hoàn toàn khác.
 
 Không chỉ số (metric / 지표) nào đủ một mình: mean liên quan total tài nguyên (resource / 자원) thời gian (time / 시간), percentiles liên quan tail experience, thông lượng (throughput / 처리량) liên quan volume, lỗi (error / 오류) tỷ lệ (rate / 비율) liên quan độ tin cậy (reliability / 신뢰성).
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Sức chứa (capacity / 용량) planning bằng dimensional phân tích (analysis / 분석)** nối từ **Tail độ trễ (latency / 지연 시간) và percentiles trong IT** sang **Forecast xác suất (probability / 확률) và calibration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức chứa (capacity / 용량) planning bằng dimensional phân tích (analysis / 분석)
 
@@ -256,15 +230,11 @@ L=\lambda W,
 
 với `L` average number items in hệ thống (system / 시스템), `\lambda` thông lượng (throughput / 처리량) tỷ lệ (rate / 비율), `W` average thời gian (time / 시간) in hệ thống (system / 시스템). Nếu 200 requests/s và average phản hồi (response / 응답) thời gian (time / 시간) 0.5 s, average in-flight requests khoảng 100.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Forecast xác suất (probability / 확률) và calibration** nối từ **Sức chứa (capacity / 용량) planning bằng dimensional phân tích (analysis / 분석)** sang **Expected giá trị (value / 값) không thay thế utility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Forecast xác suất (probability / 확률) và calibration
 
 Forecast “70% chance” không phải promise sự kiện (event / 이벤트) sẽ xảy ra. Calibration hỏi: trong nhiều events được forecast khoảng 70%, proportion xảy ra có gần 70% không?
 
 Một forecaster có thể calibrated nhưng không sharp nếu luôn nói probabilities gần cơ sở (base / 기반) tỷ lệ (rate / 비율). Good probabilistic forecasting cần both calibration và resolution/sharpness.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Expected giá trị (value / 값) không thay thế utility** nối từ **Forecast xác suất (probability / 확률) và calibration** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Expected giá trị (value / 값) không thay thế utility
 
@@ -272,13 +242,9 @@ Hai gambles cùng expected monetary giá trị (value / 값) có thể khác ho�
 
 Điều này giải thích tại sao insurance có thể rational dù expected payout nhỏ hơn premium: premium mua reduction của catastrophic tail rủi ro (risk / 위험).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Expected giá trị (value / 값) không thay thế utility** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi gặp một con số trong hợp đồng, dashboard hay investment report, hãy phân loại nó trước: mức (level / 수준), ratio, tỷ lệ (rate / 비율), growth factor, percentile, xác suất (probability / 확률), expectation hay discounted giá trị (value / 값). Sau đó mới hỏi denominator, thời gian (time / 시간) đơn vị (unit / 단위), bất định (uncertainty / 불확실성), compounding và các giả định (assumptions / 가정들). Phân loại đúng cấu trúc (structure / 구조) thường quan trọng hơn nhớ thêm một công thức.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong tài chính, công việc và đời sống**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

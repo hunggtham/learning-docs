@@ -14,8 +14,6 @@ Một trạng thái lượng tử có cấu trúc riêng; tùy phép đo mà k�
 
 Xem lại: [Bức xạ điện từ và lượng tử hóa](./01_electromagnetic_radiation_and_quantization.md).
 
-> **Nối mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Hàm sóng và phương trình Schrödinger** nối từ **Vì sao mô hình cổ điển không đủ** sang **Hàm sóng không phải mật độ vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm sóng và phương trình Schrödinger
 
 Trung tâm của cơ học lượng tử phi tương đối tính là **phương trình Schrödinger (Schrödinger equation / 슈뢰딩거 방정식)**. Với trạng thái dừng, dạng quan trọng trong hóa học là:
@@ -40,8 +38,6 @@ Trong cơ học lượng tử, ma trận được thay bằng toán tử, véc-t
 
 Đối với nguyên tử hydrogen, Hamiltonian gồm động năng của electron và thế năng Coulomb giữa electron với proton. Giải phương trình Schrödinger không tạo ra một quỹ đạo; nó tạo ra một họ trạng thái có năng lượng và hình dạng không gian khác nhau. Những nghiệm này dẫn trực tiếp tới khái niệm obitan.
 
-> **Nối mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Hàm sóng không phải mật độ vật chất** nối từ **Hàm sóng và phương trình Schrödinger** sang **Chuẩn hóa xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm sóng không phải mật độ vật chất
 
 Hàm sóng \(\psi\) có thể nhận giá trị dương, âm hoặc phức. Vì vậy bản thân \(\psi\) không phải xác suất. Theo **quy tắc Born (Born rule)**, đại lượng có ý nghĩa xác suất là:
@@ -60,8 +56,6 @@ Hàm sóng \(\psi\) có thể nhận giá trị dương, âm hoặc phức. Vì 
 
 > **Mô hình tư duy:** obitan không phải đường đi của electron. Obitan là một trạng thái lượng tử có phân bố xác suất trong không gian.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Chuẩn hóa xác suất** nối từ **Hàm sóng không phải mật độ vật chất** sang **Obitan và các số lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuẩn hóa xác suất
 
 Vì electron phải được tìm thấy ở đâu đó nếu ta khảo sát toàn bộ không gian, hàm sóng hợp lệ phải thỏa:
@@ -71,8 +65,6 @@ Vì electron phải được tìm thấy ở đâu đó nếu ta khảo sát to�
 \]
 
 Điều kiện này gọi là **chuẩn hóa (normalization)**. Nó cho thấy xác suất trong cơ học lượng tử không phải phép ẩn dụ; nó được ràng buộc bằng toán học rõ ràng.
-
-> **Nối mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Obitan và các số lượng tử** nối từ **Chuẩn hóa xác suất** sang **Hình dạng obitan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Obitan và các số lượng tử
 
@@ -139,8 +131,6 @@ m_s=+\frac12\quad\văn bản (text / 텍스트){hoặc}\quad-\frac12
 
 Spin là nền tảng để hiểu nguyên lý loại trừ Pauli, ghép đôi electron, từ tính và cấu hình electron.
 
-> **Nối mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Hình dạng obitan** nối từ **Obitan và các số lượng tử** sang **Nút và cấu trúc hàm sóng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hình dạng obitan
 
 ### Obitan s
@@ -160,8 +150,6 @@ Pha trở nên đặc biệt quan trọng khi các obitan kết hợp thành obi
 ### Obitan d và f
 
 Obitan d và f có cấu trúc không gian phức tạp hơn. Trong hóa học vô cơ và hóa học phối trí, hướng của obitan d quyết định cách chúng tương tác với phối tử, từ đó ảnh hưởng màu sắc, từ tính và độ bền của phức chất kim loại chuyển tiếp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Nút và cấu trúc hàm sóng** nối từ **Hình dạng obitan** sang **Mật độ xác suất và xác suất theo bán kính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nút và cấu trúc hàm sóng
 
@@ -187,8 +175,6 @@ Ví dụ, obitan `2p` có một nút góc và không có nút xuyên tâm. Obita
 
 Nút không phải chi tiết trang trí của hình vẽ; chúng phản ánh bản chất sóng của trạng thái lượng tử và ảnh hưởng tới năng lượng, độ chồng phủ obitan và liên kết.
 
-> **Nối mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Mật độ xác suất và xác suất theo bán kính** nối từ **Nút và cấu trúc hàm sóng** sang **Trạng thái suy biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mật độ xác suất và xác suất theo bán kính
 
 Mật độ xác suất tại một điểm và xác suất tìm electron ở một khoảng cách nhất định không phải cùng một đại lượng.
@@ -197,15 +183,11 @@ Với obitan s, \(|\psi|^2\) có thể lớn nhất tại hạt nhân. Nhưng th
 
 Đây là ví dụ đẹp cho việc hình học và xác suất kết hợp trong hóa học lượng tử.
 
-> **Nối mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Trạng thái suy biến** nối từ **Mật độ xác suất và xác suất theo bán kính** sang **Vì sao nguyên tử nhiều electron khó hơn hydrogen?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái suy biến
 
 Hai trạng thái khác nhau nhưng có cùng năng lượng gọi là **trạng thái suy biến (degenerate states / 축퇴 상태)**.
 
 Trong nguyên tử hydrogen lý tưởng, các obitan có cùng \(n\) có cùng năng lượng. Nhưng trong nguyên tử nhiều electron, lực đẩy electron–electron và hiệu ứng che chắn làm năng lượng phụ thuộc cả \(n\) và \(l\), nên thứ tự năng lượng phức tạp hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Vì sao nguyên tử nhiều electron khó hơn hydrogen?** nối từ **Trạng thái suy biến** sang **Che chắn và khả năng xuyên thấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao nguyên tử nhiều electron khó hơn hydrogen?
 
@@ -214,8 +196,6 @@ Hydrogen chỉ có một electron nên bài toán chủ yếu là tương tác C
 Vì vậy hóa học dùng các **phương pháp xấp xỉ (approximations)** như mô hình obitan, Hartree–Fock, lý thuyết phiếm hàm mật độ (**density functional theory, DFT**) và nhiều phương pháp hóa học tính toán khác.
 
 Điều quan trọng là các obitan nguyên tử quen thuộc trong hóa học tuần hoàn là những mô hình hiệu dụng rất mạnh, nhưng không nên đồng nhất chúng với “đường bay” thật của từng electron.
-
-> **Nối mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Che chắn và khả năng xuyên thấu** nối từ **Vì sao nguyên tử nhiều electron khó hơn hydrogen?** sang **Nguyên lý loại trừ Pauli**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Che chắn và khả năng xuyên thấu
 
@@ -227,8 +207,6 @@ Các obitan cũng khác nhau về **khả năng xuyên thấu (penetration)** v�
 
 Đây là cơ sở để hiểu thứ tự năng lượng trong cấu hình electron và xu hướng tuần hoàn.
 
-> **Nối mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Nguyên lý loại trừ Pauli** nối từ **Che chắn và khả năng xuyên thấu** sang **Từ mô hình lượng tử sang cấu hình electron**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên lý loại trừ Pauli
 
 **Nguyên lý loại trừ Pauli (Pauli exclusion principle / 파울리 배타 원리)** nói rằng hai electron trong cùng một nguyên tử không thể có cùng toàn bộ bốn số lượng tử.
@@ -236,8 +214,6 @@ Các obitan cũng khác nhau về **khả năng xuyên thấu (penetration)** v�
 Hệ quả quen thuộc là mỗi obitan chỉ chứa tối đa hai electron và nếu có hai electron thì spin của chúng phải đối nhau.
 
 Pauli không phải quy tắc “electron ghét nhau”; nó xuất phát từ tính chất lượng tử của fermion và cấu trúc phản đối xứng của hàm sóng nhiều electron.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình lượng tử của nguyên tử**, **Từ mô hình lượng tử sang cấu hình electron** nối từ **Nguyên lý loại trừ Pauli** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ mô hình lượng tử sang cấu hình electron
 
@@ -253,8 +229,6 @@ mức năng lượng
 ```
 
 Cấu hình electron cho phép ta nối mô hình lượng tử với hóa học thực tế: bảng tuần hoàn, hóa trị, liên kết và khả năng phản ứng.
-
-> **Nối mạch:** Trong **Mô hình lượng tử của nguyên tử**, **Các hiểu lầm thường gặp** nối từ **Từ mô hình lượng tử sang cấu hình electron** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -277,8 +251,6 @@ Không. Hàm sóng là đối tượng toán học; \(|\psi|^2\) cho mật độ
 ### “Các số lượng tử là quy tắc ghi nhớ tùy ý”
 
 Không. Chúng xuất hiện từ cấu trúc nghiệm của phương trình lượng tử và các điều kiện biên.
-
-> **Nối mạch:** Ở chặng này của **Mô hình lượng tử của nguyên tử**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

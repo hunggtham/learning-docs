@@ -24,8 +24,6 @@ Không có một cơ quan nào “làm việc một mình”. Một hành độn
 
 ---
 
-> **Nối mạch:** Organs form coupled control loops, not isolated parts; homeostasis changes continuously, and reserve capacity explains why normal resting output can hide limited resilience.
-
 ## 2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi
 
 **Cân bằng nội môi (Homeostasis / 항상성)** là khả năng giữ môi trường bên trong cơ thể (internal environment) trong phạm vi tương thích với hàm (function / 함수) dù điều kiện bên ngoài (external condition) thay đổi.
@@ -54,8 +52,6 @@ Xem lại nền tảng tại [Sinh lý động vật và Cân bằng nội môi]
 
 ---
 
-> **Nối mạch:** **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** nối từ **2. Cân bằng nội môi (homeostasis) — cơ thể giữ ổn định bằng cách liên tục thay đổi** sang **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”
 
 Một người có thể có các chỉ số cơ bản bình thường khi nghỉ nhưng khả năng dự trữ thấp. **Dự trữ sinh lý (Physiological Reserve / 생리적 예비능)** là khoảng khả năng hệ thống còn có thể tăng hiệu năng (performance / 성능) khi demand tăng.
@@ -73,8 +69,6 @@ an toàn (safety / 안전)\ Margin \approx sức chứa (capacity / 용량) - Us
 Đây không phải phương trình lâm sàng (clinical equation), nhưng là mô hình tư duy tốt. Khi năng lực (capacity) giảm hoặc nhu cầu thường ngày (usual demand) tăng liên tục, hệ thống (system / 시스템) dễ mất ổn định hơn.
 
 ---
-
-> **Nối mạch:** **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** nối từ **3. Khả năng dự trữ (reserve capacity) — khỏe không chỉ là “bình thường khi ngồi yên”** sang **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi
 
@@ -100,8 +94,6 @@ Exercise minh họa rõ nhất: kích thích tập luyện (training stimulus) t
 
 ---
 
-> **Nối mạch:** **5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện** nối từ **4. Stress không chỉ là cảm xúc — nó là yêu cầu thích nghi** sang **6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Năng lượng cơ thể — calories là cần thiết nhưng không phải toàn bộ câu chuyện
 
 Cơ thể cần năng lượng (energy / 에너지) để duy trì chênh lệch ion (ion gradient), tổng hợp protein, co cơ, điều hòa nhiệt, hoạt động thần kinh và repair tissue. năng lượng (energy / 에너지) từ thức ăn cuối cùng được chuyển thành ATP qua chuyển hóa (metabolism).
@@ -117,8 +109,6 @@ Nhưng hai phía của equation không hoàn toàn cố định. Năng lượng 
 Vì vậy “calories matter” và “chất lượng thực phẩm (food quality) matters” không mâu thuẫn. Cân bằng năng lượng (energy balance) ảnh hưởng body mass trong dài hạn, còn thành phần thực phẩm (food composition) ảnh hưởng satiety, micronutrient, fibre, glycemic phản hồi (response / 응답), lipid profile và khả năng duy trì chế độ ăn.
 
 ---
-
-> **Nối mạch:** Body energy cần calories nhưng còn phụ thuộc metabolism; nutrition là supply chain cho chuyển hóa. **Hydration** kiểm tra giới hạn của trực giác “càng nhiều càng tốt”.
 
 ## 6. Dinh dưỡng nên được hiểu như supply chuỗi (chain / 사슬) cho chuyển hóa
 
@@ -160,8 +150,6 @@ Sodium rất cần cho nerve impulse, extracellular fluid và muscle hàm (funct
 
 ---
 
-> **Nối mạch:** Nutrition supply chain cung cấp substrate; hydration giữ water balance; **glucose** kiểm tra fuel cần regulation thay vì bị gắn nhãn độc.
-
 ## 7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai
 
 Nước tham gia circulation, temperature regulation, digestion, kidney hàm (function / 함수) và intracellular chemistry. Nhưng hydration được điều chỉnh bởi thirst, kidney, sodium balance và hormone như ADH.
@@ -173,8 +161,6 @@ Urine quá đậm kéo dài có thể gợi ý intake thấp trong nhiều ngữ
 > **Mô hình tư duy:** mục tiêu là cân bằng dịch (fluid balance), không phải “uống càng nhiều càng khỏe”.
 
 ---
-
-> **Nối mạch:** **8. Glucose — không phải chất độc, mà là fuel cần regulation** nối từ **7. Hydration — nước quan trọng nhưng “càng nhiều càng tốt” là sai** sang **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Glucose — không phải chất độc, mà là fuel cần regulation
 
@@ -188,8 +174,6 @@ Một meal làm glucose tăng tạm thời không đồng nghĩa bệnh. Clinica
 
 ---
 
-> **Nối mạch:** **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** nối từ **8. Glucose — không phải chất độc, mà là fuel cần regulation** sang **10. Muscle — “metabolic organ” thường bị đánh giá thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng
 
 **Mô mỡ (Adipose Tissue / 지방조직)** lưu triglyceride nhưng cũng tiết signaling molecule và tương tác với độ nhạy insulin (insulin sensitivity), inflammation và reproductive/endocrine hàm (function / 함수).
@@ -202,8 +186,6 @@ BMI hữu ích ở quần thể-level screening nhưng không phải diagnostic 
 
 ---
 
-> **Nối mạch:** **10. Muscle — “metabolic organ” thường bị đánh giá thấp** nối từ **9. Fat tissue là một cơ quan chuyển hóa, không chỉ là kho năng lượng** sang **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Muscle — “metabolic organ” thường bị đánh giá thấp
 
 Cơ xương (skeletal muscle) không chỉ tạo movement. Nó là kho axit amin lớn, nơi tiêu thụ glucose đáng kể, tham gia posture và bảo vệ joint, đồng thời tiết myokine khi contraction.
@@ -215,8 +197,6 @@ Một nguyên tắc quan trọng là **tăng tải tiến triển (progressive o
 Nếu kích thích tập luyện tăng mà sleep và nutrition không theo kịp, fatigue có thể tích lũy nhanh hơn adaptation.
 
 ---
-
-> **Nối mạch:** **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** nối từ **10. Muscle — “metabolic organ” thường bị đánh giá thấp** sang **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen
 
@@ -239,8 +219,6 @@ Một lợi ích thực tế của aerobic huấn luyện (training / 학습) l�
 
 ---
 
-> **Nối mạch:** **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** nối từ **11. Thể lực tim phổi (cardiorespiratory fitness) — khả năng vận chuyển và sử dụng oxygen** sang **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên
 
 **Non-Tập luyện (exercise) Activity Thermogenesis, NEAT** là năng lượng tiêu hao từ movement không được gọi là workout: đi bộ, đứng, dọn nhà, leo cầu thang, di chuyển trong công việc.
@@ -250,8 +228,6 @@ Một người có thể tập 45 phút nhưng ngồi gần như toàn bộ th�
 Practical principle đơn giản là **move more, sit less**. Những đoạn đi bộ ngắn, đứng lên thường xuyên và chọn stairs khi phù hợp có thể tích lũy thành lượng movement đáng kể mà không cần mỗi lần đều là một workout chính thức.
 
 ---
-
-> **Nối mạch:** **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** nối từ **12. NEAT và thời gian tĩnh tại (sedentary time) — gym không xóa hoàn toàn một ngày ngồi yên** sang **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống
 
@@ -277,8 +253,6 @@ Nếu một người thường xuyên có difficulty sleeping kéo dài, buồn 
 
 ---
 
-> **Nối mạch:** **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** nối từ **13. Giấc ngủ — thời gian bảo trì chủ động của hệ thống** sang **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới
 
 Caffeine chủ yếu làm giảm signaling của adenosine receptor, từ đó làm cảm giác áp lực ngủ nhỏ hơn tạm thời. Nó không tạo lại sleep đã mất.
@@ -290,8 +264,6 @@ Mô hình tư duy tốt là xem caffeine như **hiệu năng (performance / 성�
 Nếu phải tăng caffeine liên tục để đạt cùng mức tỉnh táo, câu hỏi đáng hỏi không chỉ là “uống loại mạnh hơn nào?” mà là sleep debt, tải công việc (workload / 워크로드), timing và underlying health issue có đang tồn tại không.
 
 ---
-
-> **Nối mạch:** **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** nối từ **14. Caffeine — công cụ độ tỉnh táo (alertness), không phải năng lượng mới** sang **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress
 
@@ -309,8 +281,6 @@ Nếu anxiety, low mood, panic, irritability, substance use hoặc mất mát (l
 
 ---
 
-> **Nối mạch:** **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** nối từ **15. Quản lý căng thẳng (stress management) — mục tiêu không phải loại bỏ mọi stress** sang **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”
 
 Một hệ miễn dịch khỏe phải đạt hai nhiệm vụ ngược nhau: phản ứng đủ mạnh với threat và đồng thời không tấn công quá mức tissue của chính cơ thể.
@@ -322,8 +292,6 @@ Giấc ngủ, adequate nutrition, tiêm chủng (vaccination), hoạt động th
 Xem thêm [Hệ thần kinh, Nội tiết và Miễn dịch](02_nervous_endocrine_and_immune_systems.md).
 
 ---
-
-> **Nối mạch:** **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** nối từ **16. Hệ miễn dịch (immune system) — mục tiêu là điều hòa (regulation), không phải “boost càng mạnh càng tốt”** sang **18. Gan và thận — cơ thể đã có hệ detox rất mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ
 
@@ -342,8 +310,6 @@ Do đó không nên xem mọi marker hay cảm giác “viêm” như một enem
 
 ---
 
-> **Nối mạch:** **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** nối từ **17. Viêm (inflammation) — cần thiết trong đúng thời gian và đúng cường độ** sang **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Gan và thận — cơ thể đã có hệ detox rất mạnh
 
 Liver biến đổi nhiều compound, xử lý chất dinh dưỡng (nutrient), tạo bile, tổng hợp protein huyết tương và tham gia glucose/chuyển hóa lipid (lipid metabolism). Kidney lọc plasma, điều chỉnh water/electrolyte/axit–bazơ (acid-base) và thải nhiều waste qua urine.
@@ -353,8 +319,6 @@ Liver biến đổi nhiều compound, xử lý chất dinh dưỡng (nutrient), 
 Quản lý sức khỏe hữu ích hơn là giảm exposure thật sự có hại, dùng thuốc đúng, tránh substance độc, kiểm soát chronic yếu tố nguy cơ (risk factor) và khám khi có abnormal sign/lab.
 
 ---
-
-> **Nối mạch:** **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** nối từ **18. Gan và thận — cơ thể đã có hệ detox rất mạnh** sang **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng
 
@@ -366,8 +330,6 @@ Practical foundation vẫn là diet diversity, fibre-rich plant foods khi phù h
 
 ---
 
-> **Nối mạch:** **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** nối từ **19. Hệ vi sinh đường ruột (gut microbiome) — quan trọng nhưng không nên biến thành lời giải cho mọi triệu chứng** sang **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe
 
 Miệng là ecosystem có tooth surface, saliva, bacteria, gum tissue và mechanical stress. Caries và periodontal disease không chỉ là vấn đề thẩm mỹ.
@@ -378,8 +340,6 @@ Một principle rộng hơn xuất hiện ở đây: **small maintenance repeate
 
 ---
 
-> **Nối mạch:** **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** nối từ **20. Sức khỏe răng miệng (oral health) là một phần của systemic quản lý sức khỏe** sang **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize
 
 Tobacco exposure làm tăng rủi ro (risk / 위험) của nhiều disease qua carcinogen, vascular injury và chronic inflammation. Từ góc nhìn quản lý sức khỏe, mục tiêu đối với tobacco là tránh hoặc quit; chuyển từ cigarette sang trạng thái không dùng tobacco/nicotine-related exposure là hướng risk-reduction tốt hơn so với tìm “supplement bảo vệ phổi”.
@@ -389,8 +349,6 @@ Alcohol tạo sự đánh đổi (trade-off / 트레이드오프) nhưng không 
 Với prescription drug, principle là dùng đúng indication/dose và không chia sẻ thuốc. “Tự nhiên” không có nghĩa an toàn; “thuốc” cũng không đồng nghĩa độc nếu dùng đúng ngữ cảnh (context / 맥락).
 
 ---
-
-> **Nối mạch:** **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** nối từ **21. Tobacco, vaping, alcohol và substance — quản lý rủi ro (risk / 위험) chứ không moralize** sang **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”
 
@@ -416,8 +374,6 @@ Fat-soluble vitamin, mineral và herbal sản phẩm (product / 제품) có th�
 
 ---
 
-> **Nối mạch:** **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** nối từ **22. Chất bổ sung (supplement) — lấp thiếu hụt khác với “tối ưu vô hạn”** sang **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?
 
 Wearable và app cho phép đo nhịp tim, step, sleep estimate, khối lượng cơ thể (body weight), SpO₂ và nhiều chỉ số (metric / 지표) khác. Nhưng đo lường (measurement / 측정) chỉ có ích khi nó dẫn tới quyết định (decision / 결정) tốt hơn.
@@ -433,8 +389,6 @@ Một khung phần mềm (framework / 프레임워크) thực dụng là chia d�
 Đừng săn noise hàng ngày. Nhiều chỉ số (metric / 지표) dao động tự nhiên do hydration, meal timing, nhiệt độ, stress và sai số đo lường (measurement error / 측정 오차). **Trend có bối cảnh** thường hữu ích hơn một số đơn lẻ.
 
 ---
-
-> **Nối mạch:** **23. Các chỉ số sức khỏe (health metrics) — đo cái gì để không biến cuộc sống thành dashboard quá tải?** đặt vấn đề; **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** kiểm tra bằng chứng, rồi **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** mở rộng hệ quả.
 
 ## 24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe
 
@@ -456,8 +410,6 @@ Ví dụ nhịp tim lúc nghỉ cao hơn một ngày sau thiếu ngủ không đ
 
 ---
 
-> **Nối mạch:** **24. Mức nền (baseline) → Xu hướng (trend) → Deviation → Bối cảnh — cách đọc dữ liệu sức khỏe** đặt vấn đề; **25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số** kiểm tra bằng chứng, rồi **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** mở rộng hệ quả.
-
 ## 25. Huyết áp — hiểu cơ chế (mechanism / 메커니즘) trước khi ám ảnh con số
 
 Huyết áp phản ánh tương tác (interaction / 상호작용) giữa cung lượng tim và sức cản mạch (vascular resistance). Nó thay đổi theo posture, căng thẳng, caffeine, tập luyện, pain, thời gian (time / 시간) of day và đo lường (measurement / 측정) technique.
@@ -469,8 +421,6 @@ Persistent abnormal readings cần professional evaluation vì hypertension thư
 Đây là ví dụ điển hình cho nguyên lý (principle): **absence of symptom không luôn nghĩa absence of rủi ro (risk / 위험)**.
 
 ---
-
-> **Nối mạch:** Blood-pressure mechanism đặt nền; lab reference range thêm bằng chứng nhưng không chia khỏe/bệnh tuyệt đối. **Preventive care** chuyển hiểu biết đó thành xử lý risk sớm.
 
 ## 26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh
 
@@ -488,8 +438,6 @@ Một kiểm thử (test / 테스트) có thể dương tính giả (false posit
 
 ---
 
-> **Nối mạch:** **26. Lab kiểm thử (test / 테스트) — tham chiếu (reference / 참조) phạm vi (range / 범위) không phải ranh giới tuyệt đối giữa khỏe và bệnh** nêu quy tắc; **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** thử quy tắc trong tình huống, rồi **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** mở rộng hệ quả.
-
 ## 27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom
 
 Nhiều disease phát triển lâu trước khi có triệu chứng rõ. **Chăm sóc dự phòng (chăm sóc dự phòng / 예방의료)** gồm vaccination, dental care, huyết áp assessment, age/nguy cơ-appropriate screening và rà soát (review / 검토) tiền sử gia đình (family history).
@@ -499,8 +447,6 @@ Không nên dùng một bảng screening trên Internet cho tất cả mọi ng�
 Practical principle là duy trì primary-care/dental contact phù hợp thay vì chỉ đi khám khi “không chịu nổi nữa”. Preventive visit cũng là lúc rà soát (review / 검토) vaccine, medication và yếu tố nguy cơ.
 
 ---
-
-> **Nối mạch:** **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** nối từ **27. Chăm sóc dự phòng (preventive care) — xử lý rủi ro (risk / 위험) trước khi thành symptom** sang **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật
 
@@ -512,8 +458,6 @@ Vaccination cũng có population tác động (effect / 효과) khi giảm trans
 
 ---
 
-> **Nối mạch:** **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** nối từ **28. Tiêm chủng — huấn luyện (training / 학습) trí nhớ miễn dịch (immune memory) thay vì chờ infection thật** sang **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)
 
 Fatigue sau tập luyện, deadline hoặc một đêm thiếu ngủ có thể là adaptive/temporary. Nhưng persistent fatigue kéo dài không giải thích được cần được xem khác.
@@ -524,8 +468,6 @@ Tự quản lý tốt không phải cố “push through” mọi triệu chứn
 
 ---
 
-> **Nối mạch:** **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** nối từ **29. Hồi phục tín hiệu (signal / 신호) — phân biệt fatigue bình thường với mẫu cảnh báo (warning pattern)** sang **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp
 
 Một số symptom có thể cần urgent hoặc emergency evaluation, đặc biệt khi mới xuất hiện hoặc severe: chest pressure/pain đáng kể; difficulty breathing rõ; dấu hiệu stroke như face droop, arm weakness hoặc speech difficulty; mất mát (loss / 손실) of consciousness; severe allergic reaction với airway/breathing bài toán (problem / 문제); uncontrolled bleeding; sudden severe neurological symptom; hoặc ý nghĩ tự làm hại bản thân.
@@ -535,8 +477,6 @@ Danh sách này không bao phủ mọi emergency. Principle là: **severity + su
 Ngược lại, symptom nhẹ nhưng persistent, recurring hoặc progressively worse cũng đáng được đánh giá y khoa dù không phải emergency.
 
 ---
-
-> **Nối mạch:** **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** nối từ **30. Red flags — khi tự quản lý không còn là lựa chọn phù hợp** sang **32. Minimum effective routine — ưu tiên consistency hơn perfection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Một “Health Operating hệ thống (system / 시스템)” đơn giản
 
@@ -577,8 +517,6 @@ Foundation
 
 ---
 
-> **Nối mạch:** **32. Minimum effective routine — ưu tiên consistency hơn perfection** nối từ **31. Một “Health Operating hệ thống (system / 시스템)” đơn giản** sang **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Minimum effective routine — ưu tiên consistency hơn perfection
 
 Một health hệ thống (system / 시스템) dễ duy trì thường mạnh hơn một plan “tối ưu” nhưng quá phức tạp.
@@ -596,8 +534,6 @@ Một khung phần mềm (framework / 프레임워크) tối giản có thể l�
 Danh sách (list / 목록) này là hiện thực (implementation / 구현) checklist; nền tảng giải thích cho từng item nằm ở các section trước.
 
 ---
-
-> **Nối mạch:** **32. Minimum effective routine — ưu tiên consistency hơn perfection** nêu quy tắc; **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** thử quy tắc trong tình huống, rồi **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** mở rộng hệ quả.
 
 ## 33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?
 
@@ -621,8 +557,6 @@ Nếu chỉ xử lý bằng “uống vitamin gì?”, ta đang can thiệp ở 
 
 ---
 
-> **Nối mạch:** **33. Một ví dụ tích hợp: tại sao một tuần thiếu ngủ có thể “phá” nhiều thứ cùng lúc?** nêu quy tắc; **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** thử quy tắc trong tình huống, rồi **35. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc
 
 Một session exercise làm muscle tiêu ATP và tạo cục bộ (local / 로컬) metabolic tín hiệu (signal / 신호). Qua repeated huấn luyện (training / 학습), muscle tăng mitochondrial/contractile adaptation. Cardiac/vascular phản hồi (response / 응답) hiệu quả hơn. Glucose uptake và độ nhạy insulin có thể cải thiện. Bone/tendon nhận mechanical stimulus. Mood và giấc ngủ ở nhiều người cũng được hỗ trợ.
@@ -632,8 +566,6 @@ Exercise vì vậy không phải một “thuốc cho một disease”. Nó là 
 Nhưng dose vẫn quan trọng. Too little không đủ kích thích (stimulus); too much so với khôi phục (recovery / 복구) sức chứa (capacity / 용량) tăng injury/fatigue rủi ro (risk / 위험). Đây là cùng một quan hệ liều–đáp ứng (dose-response) lô-gic (logic / 논리) như medicine.
 
 ---
-
-> **Nối mạch:** **34. Một ví dụ khác: exercise cải thiện health qua nhiều pathway cùng lúc** nêu quy tắc; **35. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **36. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 35. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -650,8 +582,6 @@ Nhưng dose vẫn quan trọng. Too little không đủ kích thích (stimulus);
 **“Health tracker càng nhiều chỉ số (metric / 지표) càng tốt.”** Không. dữ liệu (data / 데이터) chỉ hữu ích khi phép đo (measurement) đủ đáng tin và có quyết định (decision / 결정) attached.
 
 ---
-
-> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 35; everyday-life application phải bắt đầu bằng mechanism, không bằng mẹo.
 
 ## 36. Mô hình tư duy tổng hợp
 
@@ -689,8 +619,6 @@ Quản lý sức khỏe tác động tốt nhất khi ta làm ba việc cùng l�
 
 <!-- depth-audit-2026:mechanism-first-everyday -->
 
-> **Nối mạch:** Everyday-life application phải bắt đầu bằng mechanism; ứng dụng chỉ có giá trị khi lần ngược được về cơ chế.
-
 ## Everyday-life ứng dụng (application / 애플리케이션) nên bắt đầu bằng cơ chế (mechanism / 메커니즘), không bắt đầu bằng “mẹo”
 
 Một câu hỏi đời sống như “vì sao vận động làm tim đập nhanh?”, “vì sao thiếu ngủ làm hiệu năng (performance / 성능) giảm?” hay “vì sao mất nước ảnh hưởng vận động?” chỉ hữu ích khi truy ngược cơ chế (mechanism / 메커니즘). Vận động tăng ATP turnover → tăng oxygen/substrate demand → circulation và ventilation tăng → nhiệt và fluid balance đổi → endocrine/autonomic điều khiển (control / 제어) điều phối. Thiếu ngủ thay arousal, attention, endocrine timing và khôi phục (recovery / 복구); tác động (effect / 효과) cuối phụ thuộc tác vụ (task / 작업) và duration. Mất nước đổi plasma volume, osmolarity, thermoregulation và cardiovascular strain.
@@ -699,23 +627,17 @@ Cách trình bày này tránh biến Biology thành health advice. thư viện (
 
 <!-- continuity-2026:everyday-mechanism -->
 
-> **Nối mạch:** Mechanism là đầu vào; ứng dụng đời sống giải thích vận hành. **Cầu nối sang các chapter khác** kiểm tra hệ quả và owner phù hợp.
-
 ## Ứng dụng đời sống chỉ có giá trị khi đi ngược được về cơ chế
 
 Một ứng dụng đời sống tốt phải trả lời được chuỗi: **tác nhân → biến sinh lý → sensor/phản hồi (feedback / 피드백) → adaptation → giới hạn**. Ví dụ đứng dậy nhanh làm gravity tạm thời kéo blood xuống chân, giảm venous return; baroreflex tăng sympathetic đầu ra (output / 출력) để giữ cerebral perfusion. Một bữa ăn làm nutrient flux thay đổi, kéo theo insulin/glucagon, liver routing và uptake ở mô. Thiếu ngủ làm thay timing neural/endocrine và giảm khả năng phục hồi của nhiều hệ, nhưng không thể suy từ đó rằng một symptom cụ thể chắc chắn do thiếu ngủ.
 
 Cách dùng chapter này vì vậy không phải “mẹo X chữa Y”. Nó là khung phần mềm (framework / 프레임워크) để hiểu vì sao một hành vi có thể tác động physiology, biến nào có thể đo được và khi nào bằng chứng (evidence / 증거) chỉ là association. Recommendation cá nhân vẫn cần ngữ cảnh (context / 맥락), rủi ro (risk / 위험) và khi thích hợp là đánh giá chuyên môn.
 
-> **Nối mạch:** Ứng dụng có giá trị khi truy ngược được về cơ chế; cầu nối sang chapter khác giữ owner. **Nguồn tham khảo sức khỏe cộng đồng** kiểm tra hệ quả.
-
 ## 37. cầu nối (bridge / 브리지) sang các chapter khác
 
 Nếu muốn hiểu sâu vì sao tuần hoàn, kidney, breathing và metabolism phối hợp như trên, đọc [Sinh lý động vật và Cân bằng nội môi](01_animal_physiology_and_homeostasis.md). Với sleep, căng thẳng (stress) hoóc-môn (hormone), nervous regulation và miễn dịch (immunity), đọc [Hệ thần kinh, Nội tiết và Miễn dịch](02_nervous_endocrine_and_immune_systems.md). Với movement và tập luyện điều khiển, đọc [Tích hợp cảm giác, vận động và hành vi](04_sensory_motor_and_behavioral_integration.md). Với aging, cancer và genome maintenance, xem [Sửa chữa DNA, tái tổ hợp và ổn định genome](../02_genetics_molecular_biology/03_dna_repair_recombination_and_genome_stability.md). Với cách đánh giá health dữ liệu (data / 데이터), bất định (uncertainty / 불확실성) và kiểm thử (test / 테스트) kết quả (result / 결과), xem [Phương pháp thực nghiệm và đo lường trong Sinh học](../06_biotechnology_computation/01_experimental_methods_and_measurement.md) và [Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md).
 
 ---
-
-> **Nối mạch:** Cầu nối sang các chapter khác đặt câu hỏi; nguồn tham khảo sức khỏe cộng đồng đối chiếu bằng chứng để khép mạch.
 
 ## 38. Nguồn tham khảo định hướng sức khỏe cộng đồng
 

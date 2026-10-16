@@ -17,8 +17,6 @@ Một khung phần mềm (framework / 프레임워크) phổ biến phân biệt
 
 Các category này là simplification. Một người có thể tích hợp (integration / 통합) trong workplace nhưng separation trong family practice.
 
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Bicultural định danh (identity / 식별자)** nối từ **Acculturation không đồng nghĩa assimilation** sang **Bicultural định danh (identity / 식별자) tích hợp (integration / 통합)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bicultural định danh (identity / 식별자)
 
 **Bản sắc song văn hóa (bicultural identity)** không nhất thiết là 50/50.
@@ -26,8 +24,6 @@ Các category này là simplification. Một người có thể tích hợp (int
 Một người có thể cảm thấy rất Việt Nam trong family, rất quen workplace Hàn Quốc trong công việc, và dùng English trong professional học tập (learning / 학습).
 
 Các định danh (identity / 식별자) tầng (layer / 계층) có thể bổ sung nhau thay vì cạnh tranh.
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Bicultural định danh (identity / 식별자) tích hợp (integration / 통합)** nối từ **Bicultural định danh (identity / 식별자)** sang **Frame switching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bicultural định danh (identity / 식별자) tích hợp (integration / 통합)
 
@@ -43,8 +39,6 @@ hoặc:
 
 Xung đột (conflict / 충돌) cao có thể tăng stress, nhưng tích hợp (integration / 통합) không có nghĩa blend mọi thứ thành một style duy nhất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Frame switching** nối từ **Bicultural định danh (identity / 식별자) tích hợp (integration / 통합)** sang **Ngôn ngữ (language / 언어) và personality expression**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Frame switching
 
 Người sống giữa nhiều culture có thể **chuyển khung văn hóa (cultural frame switching)** theo ngữ cảnh (context / 맥락).
@@ -52,8 +46,6 @@ Người sống giữa nhiều culture có thể **chuyển khung văn hóa (cul
 Cách nói với cấp cao (senior / 시니어) ở Korean office có thể khác cách nói với friend Việt Nam. Đây không tự động là “giả tạo”; nó giống code-switching về xã hội (social / 사회적) quy tắc (rule / 규칙).
 
 Adaptive switching giúp coordination, nhưng nếu luôn phải monitor hành vi (behavior / 동작) quá mức, cognitive tải (load / 로드) tăng.
-
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Ngôn ngữ (language / 언어) và personality expression** nối từ **Frame switching** sang **Code-switching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngôn ngữ (language / 언어) và personality expression
 
@@ -64,8 +56,6 @@ Một người fluent tiếng Việt có thể witty và assertive, nhưng khi d
 Người khác có thể hiểu sai thành personality difference.
 
 Vì vậy `mình trong ngôn ngữ thứ hai không giống mình` là experience có cơ sở tâm lý: khả năng express self bị ràng buộc (constraint / 제약조건) bởi ngôn ngữ (language / 언어) tài nguyên (resource / 자원).
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Code-switching** nối từ **Ngôn ngữ (language / 언어) và personality expression** sang **Acculturative stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Code-switching
 
@@ -80,8 +70,6 @@ Nó có thể phục vụ:
 - technical precision.
 
 Code-switching không tự động chứng minh confusion. Với multilingual person, nó thường là skill.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Acculturative stress** nối từ **Code-switching** sang **Culture shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acculturative stress
 
@@ -99,8 +87,6 @@ Code-switching không tự động chứng minh confusion. Với multilingual pe
 
 Nếu chỉ gọi tất cả là `culture shock`, ta bỏ mất cơ chế (mechanism / 메커니즘) cần xử lý.
 
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Culture shock** nối từ **Acculturative stress** sang **Status mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Culture shock
 
 Culture shock không nhất thiết đi qua một curve cố định honeymoon → crisis → khôi phục (recovery / 복구).
@@ -108,8 +94,6 @@ Culture shock không nhất thiết đi qua một curve cố định honeymoon �
 Experience có thể dao động theo lĩnh vực (domain / 도메인). Một người quen vận chuyển (transport / 전송) và food rất nhanh nhưng mất nhiều năm để hiểu workplace hierarchy.
 
 Do đó stage mô hình (model / 모델) nên dùng như metaphor, không phải timeline bắt buộc.
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Status mất mát (loss / 손실)** nối từ **Culture shock** sang **Credential devaluation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Status mất mát (loss / 손실)
 
@@ -119,8 +103,6 @@ Mất mát (loss / 손실) không chỉ financial; nó ảnh hưởng định da
 
 Nếu môi trường (environment / 환경) liên tục đối xử một người như novice trong khi họ từng là expert, frustration và shame có thể tăng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Credential devaluation** nối từ **Status mất mát (loss / 손실)** sang **Workplace hierarchy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Credential devaluation
 
 Degree hoặc experience từ country khác đôi khi được đánh giá thấp vì employer thiếu thông tin (information / 정보).
@@ -128,8 +110,6 @@ Degree hoặc experience từ country khác đôi khi được đánh giá thấ
 Đây là hệ thống (system / 시스템) bài toán (problem / 문제), không chỉ confidence bài toán (problem / 문제).
 
 Skill portfolio, cục bộ (local / 로컬) certification và mạng (network / 네트워크) có thể giảm bất định (uncertainty / 불확실성) cho employer nhưng không nên dùng để phủ nhận discrimination thực tế.
-
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Workplace hierarchy** nối từ **Credential devaluation** sang **Face**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Workplace hierarchy
 
@@ -141,8 +121,6 @@ Một foreign worker có thể biết technical content nhưng vẫn phải họ
 
 Học quy tắc (rule / 규칙) này là xã hội (social / 사회적) học tập (learning / 학습), không phải mất authenticity.
 
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Face** nối từ **Workplace hierarchy** sang **High-context và low-context communication**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Face
 
 **Thể diện (face)** liên quan xã hội (social / 사회적) giá trị (value / 값) một người muốn duy trì trong tương tác (interaction / 상호작용).
@@ -153,8 +131,6 @@ Nếu direct correction trước group làm một người mất face, họ có 
 
 Private phản hồi (feedback / 피드백) có thể hiệu quả hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **High-context và low-context communication** nối từ **Face** sang **Discrimination**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## High-context và low-context communication
 
 Khung phần mềm (framework / 프레임워크) high-context/low-context hữu ích như heuristic nhưng dễ stereotype.
@@ -162,8 +138,6 @@ Khung phần mềm (framework / 프레임워크) high-context/low-context hữu 
 Một số môi trường (environment / 환경) dựa nhiều vào implicit relationship kiến thức (knowledge / 지식); môi trường (environment / 환경) khác ưu tiên tường minh (explicit / 명시적) statement.
 
 Trong cross-cultural nhóm (team / 팀), nên externalize trọng yếu (critical / 중요) thông tin (information / 정보) bằng document thay vì assume dùng chung (shared / 공유) ngữ cảnh (context / 맥락).
-
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Discrimination** nối từ **High-context và low-context communication** sang **Minority stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Discrimination
 
@@ -173,8 +147,6 @@ Chronic discrimination tạo vigilance và stress.
 
 Không nên pathologize distress của người bị discrimination như chỉ là “không thích nghi tốt”.
 
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Minority stress** nối từ **Discrimination** sang **Belonging**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Minority stress
 
 Minority stress khung phần mềm (framework / 프레임워크) nhấn mạnh burden thêm từ stigma, concealment và expectation of rejection.
@@ -182,8 +154,6 @@ Minority stress khung phần mềm (framework / 프레임워크) nhấn mạnh b
 Immigrant còn có thể chịu intersection giữa nationality, accent, race và visa status.
 
 Xem [[05_sex_gender_and_identity]] và [[06_stress_coping_and_emotion_regulation]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Belonging** nối từ **Minority stress** sang **Ethnic enclave**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Belonging
 
@@ -193,8 +163,6 @@ Những micro-signal như được nhớ tên, được mời vào informal chat
 
 Xem [[12_loneliness_social_connection_and_belonging]].
 
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Ethnic enclave** nối từ **Belonging** sang **Family transnational**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ethnic enclave
 
 Community cùng ngôn ngữ cung cấp hỗ trợ (support / 지원), thông tin (information / 정보) và định danh (identity / 식별자) continuity.
@@ -202,8 +170,6 @@ Community cùng ngôn ngữ cung cấp hỗ trợ (support / 지원), thông tin
 Nó không tự động cản tích hợp (integration / 통합). Enclave có thể là secure cơ sở (base / 기반) để người mới thử bước ra wider society.
 
 Nhưng nếu toàn bộ thông tin (information / 정보) mạng (network / 네트워크) nằm trong enclave, truy cập (access / 접근) opportunity bên ngoài có thể hạn chế.
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Family transnational** nối từ **Ethnic enclave** sang **Long-distance relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Family transnational
 
@@ -213,8 +179,6 @@ Money transfer, care expectation và thời gian (time / 시간) zone tạo dema
 
 Stress không chỉ “nhớ nhà” mà còn role xung đột (conflict / 충돌) giữa provider, child, sibling và worker.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Long-distance relationship** nối từ **Family transnational** sang **Reverse culture shock**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Long-distance relationship
 
 Digital communication giúp giữ attachment nhưng thiếu vật lý (physical / 물리적) co-presence.
@@ -222,8 +186,6 @@ Digital communication giúp giữ attachment nhưng thiếu vật lý (physical 
 Lời gọi (call / 호출) schedule, expectation phản hồi (response / 응답) và interpretation silence cần tường minh (explicit / 명시적) hơn.
 
 Technology giảm distance nhưng cũng tạo new monitoring pressure.
-
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Reverse culture shock** nối từ **Long-distance relationship** sang **Third culture định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reverse culture shock
 
@@ -233,8 +195,6 @@ Người trở về đã thay đổi, culture nguồn cũng thay đổi, nhưng 
 
 Cảm giác `mình không còn hoàn toàn thuộc nơi nào` không hiếm trong bicultural development.
 
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Third culture định danh (identity / 식별자)** nối từ **Reverse culture shock** sang **Ngôn ngữ (language / 언어) học tập (learning / 학습) và anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Third culture định danh (identity / 식별자)
 
 Một số người xây định danh (identity / 식별자) không chỉ thuộc A hoặc B mà thuộc experience `sống giữa các culture`.
@@ -242,8 +202,6 @@ Một số người xây định danh (identity / 식별자) không chỉ thuộ
 Skill như translation, perspective shifting và ambiguity tolerance có thể trở thành strength.
 
 Nhưng định danh (identity / 식별자) flexibility cũng có chi phí (cost / 비용) nếu người ta luôn phải adapt và ít nơi được “không cần giải thích”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Ngôn ngữ (language / 언어) học tập (learning / 학습) và anxiety** nối từ **Third culture định danh (identity / 식별자)** sang **Accent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngôn ngữ (language / 언어) học tập (learning / 학습) và anxiety
 
@@ -253,8 +211,6 @@ Biết grammar nhưng sợ lỗi (error / 오류) có thể làm speech chậm, 
 
 Graded exposure, safe practice và error-normalizing môi trường (environment / 환경) hỗ trợ học tập (learning / 학습) tốt hơn shame.
 
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Accent** nối từ **Ngôn ngữ (language / 언어) học tập (learning / 학습) và anxiety** sang **Xã hội (social / 사회적) mạng (network / 네트워크) rebuilding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Accent
 
 Accent không đồng nghĩa competence.
@@ -262,8 +218,6 @@ Accent không đồng nghĩa competence.
 Accent độ lệch (bias / 편향) có thể làm người nghe đánh giá speaker kém intelligent hoặc credible hơn dù content giống nhau.
 
 Structured evaluation giúp giảm influence của accent stereotype.
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Xã hội (social / 사회적) mạng (network / 네트워크) rebuilding** nối từ **Accent** sang **Career**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) mạng (network / 네트워크) rebuilding
 
@@ -279,8 +233,6 @@ Repeated setting hiệu quả hơn random sự kiện (event / 이벤트):
 
 Friendship cần recurrence.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Career** nối từ **Xã hội (social / 사회적) mạng (network / 네트워크) rebuilding** sang **Định danh (identity / 식별자) xung đột (conflict / 충돌) và self-regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Career
 
 Career tích hợp (integration / 통합) phụ thuộc ngôn ngữ (language / 언어), credential, cục bộ (local / 로컬) experience và mạng (network / 네트워크).
@@ -289,8 +241,6 @@ Person–môi trường (environment / 환경) fit có thể thay đổi khi mig
 
 Xem [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
 
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Định danh (identity / 식별자) xung đột (conflict / 충돌) và self-regulation** nối từ **Career** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Định danh (identity / 식별자) xung đột (conflict / 충돌) và self-regulation
 
 Nếu một người cảm thấy phải “perform culture” liên tục, monitoring tiêu tốn cognitive tài nguyên (resource / 자원).
@@ -298,8 +248,6 @@ Nếu một người cảm thấy phải “perform culture” liên tục, moni
 Môi trường (environment / 환경) cho phép flexible định danh (identity / 식별자) thường giảm tải (load / 로드) hơn demand `hãy giống local hoàn toàn`.
 
 Xem [[09_self_concept_identity_and_self_regulation]].
-
-> **Nối mạch:** Ở chặng này của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Những hiểu lầm phổ biến** nối từ **Định danh (identity / 식별자) xung đột (conflict / 충돌) và self-regulation** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -312,8 +260,6 @@ Xem [[09_self_concept_identity_and_self_regulation]].
 **“Stress của immigrant chỉ do nhớ nhà.”** Visa, status, discrimination và role xung đột (conflict / 충돌) đều quan trọng.
 
 **“Sống lâu tự động hiểu culture.”** Exposure không đảm bảo tường minh (explicit / 명시적) học tập (learning / 학습) về norm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -332,8 +278,6 @@ culture nguồn + culture mới
 ```
 
 > Acculturation không phải bài kiểm tra xem một người “hòa nhập đủ chưa”. Nó là quá trình nhiều năm trong đó cá nhân và môi trường cùng xác định cách các định danh (identity / 식별자), skill và relationship được tổ chức lại.
-
-> **Nối mạch:** Trong **Thích nghi văn hóa, di cư và bản sắc song văn hóa — Acculturation, di chuyển (migration / 마이그레이션) & Bicultural định danh (identity / 식별자) / 문화적응·이주·이중문화 정체성**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

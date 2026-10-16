@@ -42,8 +42,6 @@ Một **ô nguyên thủy (primitive cell)** chứa đúng một điểm mạng 
 
 Tinh thể thật luôn có defect, thermal vibration và bề mặt. Periodic lattice là mô hình nền để tách phần cấu trúc lý tưởng khỏi các hiệu ứng đó.
 
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Basis và crystal cấu trúc (structure / 구조)** nối từ **Tinh thể và mạng Bravais** sang **Mạng đảo (reciprocal lattice)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Basis và crystal cấu trúc (structure / 구조)
 
 Mạng không đồng nghĩa với vị trí nguyên tử thực tế. Ta có thể gắn một nhóm nguyên tử, gọi là basis, vào mỗi lattice điểm (point / 지점).
@@ -55,8 +53,6 @@ crystal structure = Bravais lattice + basis
 Ví dụ silicon có cấu trúc diamond, có thể xem như FCC lattice cộng basis hai nguyên tử.
 
 Phân biệt lattice và basis giúp tránh nhầm rằng mọi điểm lặp trong mạng đều tương ứng đúng một nguyên tử.
-
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mạng đảo (reciprocal lattice)** nối từ **Basis và crystal cấu trúc (structure / 구조)** sang **Diffraction và cấu trúc tinh thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng đảo (reciprocal lattice)
 
@@ -78,8 +74,6 @@ Reciprocal lattice không phải “một tinh thể khác”. Nó là không gi
 
 Nó đặc biệt hữu ích cho diffraction vì điều kiện giao thoa xây dựng có thể viết bằng reciprocal vectors.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Diffraction và cấu trúc tinh thể** nối từ **Mạng đảo (reciprocal lattice)** sang **Định lý Bloch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Diffraction và cấu trúc tinh thể
 
 Với tia X có bước sóng gần khoảng cách nguyên tử, tinh thể hoạt động như một mạng nhiễu xạ ba chiều.
@@ -95,8 +89,6 @@ Trong reciprocal-space ngôn ngữ (language / 언어), điều kiện scatterin
 Nhờ diffraction, ta có thể suy ra lattice spacing, symmetry và atomic cấu trúc (structure / 구조) từ dữ liệu intensity trong reciprocal không gian (space / 공간).
 
 Đây là cầu nối trực tiếp giữa wave physics, Fourier transform và crystallography.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Định lý Bloch** nối từ **Diffraction và cấu trúc tinh thể** sang **Crystal momentum không hoàn toàn là momentum cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý Bloch
 
@@ -117,8 +109,6 @@ u_{n\mathbf k}(\mathbf r+\mathbf R)
 `n` là chỉ số band, còn `\mathbf k` đóng vai trò quantum number liên hệ với crystal momentum.
 
 Bloch theorem là kết quả của translational symmetry rời rạc của crystal lattice.
-
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Crystal momentum không hoàn toàn là momentum cơ học** nối từ **Định lý Bloch** sang **Brillouin zone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Crystal momentum không hoàn toàn là momentum cơ học
 
@@ -142,8 +132,6 @@ có thể mô tả trạng thái tương đương theo symmetry của lattice.
 
 Điều này dẫn tự nhiên tới Brillouin zone.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Brillouin zone** nối từ **Crystal momentum không hoàn toàn là momentum cơ học** sang **Từ orbital nguyên tử đến dải năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Brillouin zone
 
 Brillouin zone thứ nhất là Wigner–Seitz cell của reciprocal lattice.
@@ -153,8 +141,6 @@ Ta có thể giới hạn `\mathbf k` về vùng này mà không mất thông ti
 Biên Brillouin zone quan trọng vì tại đó Bragg reflection của electron wave có thể ghép các trạng thái và mở band gap.
 
 Đây là cơ chế toán–vật lý sâu hơn cho câu nói đơn giản “mức nguyên tử tách thành dải”.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Từ orbital nguyên tử đến dải năng lượng** nối từ **Brillouin zone** sang **Vì sao band gap xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ orbital nguyên tử đến dải năng lượng
 
@@ -179,8 +165,6 @@ Cách nhìn tight-binding phù hợp khi trạng thái còn mang tính atomic-lo
 
 Hai mô hình đi từ hai giới hạn khác nhau nhưng cùng dẫn tới band cấu trúc (structure / 구조).
 
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Vì sao band gap xuất hiện?** nối từ **Từ orbital nguyên tử đến dải năng lượng** sang **Band cấu trúc (structure / 구조) En(k)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao band gap xuất hiện?
 
 Gần ranh giới (boundary / 경계) của Brillouin zone, hai plane-wave trạng thái (state / 상태) có thể bị ghép mạnh bởi periodic potential.
@@ -190,8 +174,6 @@ Sự ghép này tách degeneracy thành hai tổ hợp có năng lượng khác 
 Đây là nguồn gốc band gap trong picture nearly-free electron.
 
 Vì vậy vùng cấm năng lượng không phải khoảng trống vật lý giữa các nguyên tử. Nó là khoảng trong **phổ năng lượng** không có trạng thái một hạt được phép trong ideal band mô hình (model / 모델).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Band cấu trúc (structure / 구조) En(k)** nối từ **Vì sao band gap xuất hiện?** sang **Khối lượng hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Band cấu trúc (structure / 구조) `E_n(k)`
 
@@ -211,8 +193,6 @@ Từ độ dốc của band, vận tốc nhóm của wavepacket electron là
 Do đó carrier velocity không đơn giản là `p/m` với electron tự do; nó phụ thuộc hình dạng band.
 
 Đây là lý do crystal cấu trúc (structure / 구조) có thể thay đổi carrier dynamics mạnh dù electron vẫn có cùng điện tích cơ bản.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Khối lượng hiệu dụng** nối từ **Band cấu trúc (structure / 구조) En(k)** sang **Density of states**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng hiệu dụng
 
@@ -237,8 +217,6 @@ Nó không có nghĩa electron cơ bản thay đổi rest mass. Đây là tham s
 
 Trong crystal anisotropic, effective mass có thể là tensor.
 
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Density of states** nối từ **Khối lượng hiệu dụng** sang **Mức Fermi và chemical potential**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Density of states
 
 Density of states (DOS) cho biết số trạng thái khả dụng trên một khoảng năng lượng.
@@ -259,8 +237,6 @@ n=\int g_c(E)f(E)\,dE.
 
 Do đó chỉ biết band gap chưa đủ để tính carrier density; còn cần DOS và occupancy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mức Fermi và chemical potential** nối từ **Density of states** sang **Kim loại, bán dẫn và chất cách điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mức Fermi và chemical potential
 
 Fermi–Dirac phân phối (distribution / 분포) là
@@ -276,8 +252,6 @@ Trong nhiều solid-state ngữ cảnh (context / 맥락), `\mu` được gọi 
 Ở nhiệt độ hữu hạn, biên occupancy được làm mờ trên quy mô (scale / 규모) khoảng `k_BT`.
 
 Fermi mức (level / 수준) không nhất thiết phải trùng với một trạng thái năng lượng (energy / 에너지) thực. Trong semiconductor, nó có thể nằm trong band gap.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Kim loại, bán dẫn và chất cách điện** nối từ **Mức Fermi và chemical potential** sang **Fermi surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kim loại, bán dẫn và chất cách điện
 
@@ -297,8 +271,6 @@ Cũng có band gap, nhưng gap và doping cho phép carrier concentration đư�
 
 Sự khác biệt giữa semiconductor và insulator không phải một ranh giới (boundary / 경계) tuyệt đối chỉ dựa vào một con số gap; material ngữ cảnh (context / 맥락) và operating điều kiện (condition / 조건) cũng quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Fermi surface** nối từ **Kim loại, bán dẫn và chất cách điện** sang **Lỗ trống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Fermi surface
 
 Trong kim loại ở nhiệt độ thấp, các trạng thái occupied trong `k`-space tạo một Fermi sea; ranh giới (boundary / 경계) của vùng occupied là Fermi surface.
@@ -307,8 +279,6 @@ Nhiều tính chất low-energy của kim loại được quyết định bởi 
 
 Đây là ví dụ của effective-theory thinking: low-temperature vận chuyển (transport / 전송) thường chỉ cần degrees of freedom gần chemical potential.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Lỗ trống** nối từ **Fermi surface** sang **Phonon từ dao động mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lỗ trống
 
 Trong một band gần đầy, theo dõi mọi electron có thể rất bất tiện.
@@ -316,8 +286,6 @@ Trong một band gần đầy, theo dõi mọi electron có thể rất bất ti
 Một trạng thái thiếu electron có thể được mô tả như một quasiparticle mang điện tích hiệu dụng dương: lỗ trống (hole / 정공).
 
 Hole không phải proton di chuyển trong lattice. Nó là cách biểu diễn collective phản hồi (response / 응답) của nhiều electron trong band gần đầy.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon từ dao động mạng** nối từ **Lỗ trống** sang **Acoustic và optical phonon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phonon từ dao động mạng
 
@@ -337,8 +305,6 @@ Mỗi lượng tử excitation được gọi là phonon.
 
 Phonon là quasiparticle, không phải elementary particle trong vacuum.
 
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Acoustic và optical phonon** nối từ **Phonon từ dao động mạng** sang **Phonon và nhiệt dung**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Acoustic và optical phonon
 
 Nếu đơn vị (unit / 단위) cell có nhiều hơn một atom, lattice có thể có nhiều branch phonon.
@@ -348,8 +314,6 @@ Acoustic branch có frequency tiến tới zero khi wavelength rất dài và li
 Optical branch có thể có frequency khác zero gần `k=0` do các atom trong basis dao động tương đối với nhau.
 
 Tên “optical” đến từ khả năng một số chế độ (mode / 모드) tương tác mạnh với electromagnetic radiation trong ionic crystals.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon và nhiệt dung** nối từ **Acoustic và optical phonon** sang **Electron–phonon scattering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phonon và nhiệt dung
 
@@ -365,8 +329,6 @@ Kết quả này là một thành công quan trọng của quantum statistical p
 
 Classical equipartition chỉ được khôi phục ở nhiệt độ đủ cao so với characteristic phonon năng lượng (energy / 에너지) scales.
 
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Electron–phonon scattering** nối từ **Phonon và nhiệt dung** sang **Defect và vì sao crystal thật không hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Electron–phonon scattering
 
 Lattice vibration làm potential mà electron cảm nhận thay đổi theo thời gian.
@@ -376,8 +338,6 @@ Lattice vibration làm potential mà electron cảm nhận thay đổi theo th�
 Ở một số vật liệu, electron–phonon coupling còn đóng vai trò trung tâm trong conventional superconductivity.
 
 Vì vậy phonon là cầu nối giữa mechanical vibration, thermodynamics và electronic vận chuyển (transport / 전송).
-
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Defect và vì sao crystal thật không hoàn hảo** nối từ **Electron–phonon scattering** sang **Direct và indirect band gap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Defect và vì sao crystal thật không hoàn hảo
 
@@ -398,8 +358,6 @@ Trong semiconductor, impurity được dùng có chủ đích để doping. Tron
 
 Do đó “không hoàn hảo” không phải chỉ là nuisance; nhiều thiết bị (device / 장치) hàm (function / 함수) tồn tại nhờ defect được kiểm soát.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** nối từ **Defect và vì sao crystal thật không hoàn hảo** sang **Các giả định (assumptions / 가정들) và giới hạn của band picture**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Direct và indirect band gap
 
 Band gap còn phụ thuộc vị trí trong `k`-space.
@@ -409,8 +367,6 @@ Nếu valence-band maximum và conduction-band minimum ở cùng `k`, ta có dir
 Nếu chúng nằm ở `k` khác nhau, optical chuyển tiếp (transition / 전이) thường cần thêm phonon để bảo toàn crystal momentum.
 
 Đây là lý do material như GaAs phát sáng hiệu quả hơn silicon trong nhiều LED applications.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** đặt tiêu chí; **Các giả định (assumptions / 가정들) và giới hạn của band picture** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Các giả định (assumptions / 가정들) và giới hạn của band picture
 
@@ -423,8 +379,6 @@ Các hệ strongly correlated có thể cần Hubbard mô hình (model / 모델)
 Crystal periodicity cũng bị phá tại surface, giao diện (interface / 인터페이스), defect và disorder.
 
 Vì vậy band cấu trúc (structure / 구조) là baseline mạnh, không phải lời giải hoàn chỉnh cho mọi solid.
-
-> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Các giả định (assumptions / 가정들) và giới hạn của band picture** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -451,8 +405,6 @@ coupled atomic oscillations
 
 Hai chuỗi gặp nhau qua electron–phonon tương tác (interaction / 상호작용) và tạo phần lớn physics của material thật.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Band gap là khoảng trống giữa các nguyên tử”
@@ -474,8 +426,6 @@ Không. Phonon là lượng tử của collective lattice vibration.
 ### “Crystal hoàn hảo mới hữu ích cho electronics”
 
 Không. Doping, giao diện (interface / 인터페이스) và defect được kiểm soát là nền tảng của semiconductor technology.
-
-> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

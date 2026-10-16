@@ -8,8 +8,6 @@ Chuyển động chỉ có nghĩa khi ta có cách mô tả vị trí và một 
 
 Trong cơ học cổ điển, một hệ quy chiếu thường gồm một gốc tọa độ, các trục không gian và một cách đo thời gian. Ta có thể gắn trục `x` dọc theo đường, `y` ngang đường, `z` theo phương thẳng đứng.
 
-> **Nối mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tọa độ và vị trí** nối từ **Vì sao phải định nghĩa “ở đâu” trước khi nói về chuyển động?** sang **Độ dời khác quãng đường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tọa độ và vị trí
 
 Trong một chiều, vị trí có thể biểu diễn bằng số `x`. Trong ba chiều, vị trí cần vectơ:
@@ -42,8 +40,6 @@ trong đó `\hat i,\hat j,\hat k` là vectơ đơn vị theo ba trục.
 
 Công thức này là định lý Pythagoras mở rộng sang ba chiều. Nó cho thấy hình học Euclid nằm trực tiếp bên trong ngôn ngữ vectơ.
 
-> **Nối mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Độ dời khác quãng đường** nối từ **Tọa độ và vị trí** sang **Cộng vectơ như hợp thành ảnh hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ dời khác quãng đường
 
 Độ dời (Displacement / 변위) là vectơ nối vị trí đầu tới vị trí cuối:
@@ -55,8 +51,6 @@ Công thức này là định lý Pythagoras mở rộng sang ba chiều. Nó ch
 Quãng đường (Distance Traveled / 이동거리) là tổng chiều dài đường thực tế đã đi.
 
 Nếu đi một vòng 400 m quanh sân vận động và trở lại vị trí ban đầu, quãng đường là 400 m nhưng độ dời bằng không (zero). Khác biệt này sẽ quyết định cách định nghĩa tốc độ và vận tốc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Cộng vectơ như hợp thành ảnh hưởng** nối từ **Độ dời khác quãng đường** sang **Tích vô hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng vectơ như hợp thành ảnh hưởng
 
@@ -73,8 +67,6 @@ Nếu đi 3 m về Đông rồi 4 m về Bắc, độ dời tổng không phải
 ```
 
 Trong đồ họa máy tính (Computer Graphics), cùng nguyên lý dùng để dịch chuyển vật thể (object) trong 2D/3D. Trong kỹ thuật robot (robotics), vị trí, vận tốc, lực và mômen (moment) đều được mô tả bằng vectơ hoặc tensor vì hướng là phần không thể tách khỏi đại lượng.
-
-> **Nối mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tích vô hướng** nối từ **Cộng vectơ như hợp thành ảnh hưởng** sang **Tích có hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích vô hướng
 
@@ -102,8 +94,6 @@ Chỉ thành phần lực cùng hướng chuyển động mới truyền năng l
 
 Trong học máy (Machine Learning), cosine similarity dùng cùng hình học để đo hướng tương tự giữa embedding các vectơ (vectors). Đây là một liên hệ (connection) trực tiếp: “hai vectơ gần cùng hướng” có thể nghĩa hai lực gần cùng hướng, hoặc hai embedding biểu diễn ngữ nghĩa gần nhau.
 
-> **Nối mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Tích có hướng** nối từ **Tích vô hướng** sang **Thời gian và sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tích có hướng
 
 Tích có hướng (Cross Product / 외적) tạo ra vectơ vuông góc với mặt phẳng chứa hai vectơ:
@@ -126,15 +116,11 @@ và lực từ:
 
 Sine xuất hiện vì chỉ thành phần vuông góc mới tạo quay (rotation) hoặc lực từ theo dạng này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Thời gian và sự kiện** nối từ **Tích có hướng** sang **Hệ quy chiếu quán tính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thời gian và sự kiện
 
 Trong cơ học Newton, thời gian (Time / 시간) được giả định là một tham số tuyệt đối giống nhau cho mọi người quan sát (observer). Một sự kiện có thể mô tả bằng `(t,x,y,z)`.
 
 Thuyết tương đối sẽ thay đổi giả định (assumption / 가정) này: các người quan sát chuyển động tương đối có thể đo khác nhau về khoảng thời gian và độ dài. Tuy nhiên ở vận tốc đời thường, sai khác cực nhỏ nên thời gian Newton là mô hình rất tốt.
-
-> **Nối mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Hệ quy chiếu quán tính** nối từ **Thời gian và sự kiện** sang **Đổi hệ tọa độ và bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ quy chiếu quán tính
 
@@ -142,15 +128,11 @@ Hệ quy chiếu quán tính (Inertial Frame / 관성계) là hệ mà vật kh�
 
 Một xe đang tăng tốc không phải hệ quy chiếu quán tính (inertial frame) lý tưởng. Người trong xe cảm thấy “bị đẩy lùi” dù không có một vật nào ở phía sau kéo họ. Trong hệ xe, ta phải đưa thêm lực quán tính giả để viết phương trình theo dạng quen thuộc.
 
-> **Nối mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Đổi hệ tọa độ và bất biến (invariant / 불변식)** nối từ **Hệ quy chiếu quán tính** sang **Ví dụ: vận tốc tương đối cổ điển**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đổi hệ tọa độ và bất biến (invariant / 불변식)
 
 Nếu quay hệ trục, các thành phần vectơ thay đổi nhưng độ lớn của vectơ không thay đổi. Đây là ví dụ đơn giản về bất biến (Invariant / 불변량): thứ không phụ thuộc vào cách ta chọn tọa độ.
 
 Vật lý hiện đại tìm kiếm các đại lượng bất biến rất sâu. Trong tương đối hẹp, khoảng không-thời gian là bất biến dù người quan sát khác nhau đo thời gian và khoảng cách riêng lẻ khác nhau. Trong lý thuyết chuẩn (gauge theory), nhiều biểu diễn toán học khác nhau có thể mô tả cùng trạng thái vật lý.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Đổi hệ tọa độ và bất biến (invariant / 불변식)** nêu quy tắc; **Ví dụ: vận tốc tương đối cổ điển** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: vận tốc tương đối cổ điển
 
@@ -162,19 +144,13 @@ v_{person,ground}=v_{person,train}+v_{train,ground}=22\,m/s
 
 Quy tắc cộng này hoạt động cực tốt ở vận tốc nhỏ. Nhưng nếu thay tàu bằng ánh sáng, ta không thể cộng như vậy; thuyết tương đối sẽ thay công thức để giữ tốc độ ánh sáng `c` như bất biến.
 
-> **Nối mạch:** Trong **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Ví dụ: vận tốc tương đối cổ điển** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Tọa độ là nhãn do ta chọn; vectơ là đối tượng hình học không phụ thuộc nhãn đó. Một đại lượng vật lý tốt thường được diễn đạt sao cho khi đổi hệ tọa độ, cách viết có thể đổi nhưng quan hệ vật lý cốt lõi vẫn được bảo toàn.
 
-> **Nối mạch:** Ở chặng này của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 vectơ không phải chỉ là “mảng số”. Mảng số là các thành phần (component / 컴포넌트) của vectơ trong một cơ sở (basis) cụ thể; đổi cơ sở thì thành phần đổi nhưng vectơ hình học không nhất thiết đổi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian, thời gian, vectơ (vector) và hệ quy chiếu**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

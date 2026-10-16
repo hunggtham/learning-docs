@@ -36,8 +36,6 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 | 17 đặc tả hợp đồng (contract / 계약) testing | tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬), bên tiêu thụ (consumer / 소비자) contracts, thời gian chạy (runtime / 런타임) enforcement | Strong |
 | 90 trường hợp (case / 사례) studies | end-to-end thất bại (failure / 실패) and bằng chứng (evidence / 증거) lập luận (reasoning / 추론) | Strong |
 
-> **Chuyển mạch:** **Trạng thái coverage** cho biết chapter nào đã có evidence; **Invariant checklist** kiểm tra cơ chế và boundary, rồi **Gaps còn lại** ghi đúng owner cần bổ sung.
-
 ## Bất biến (invariant / 불변식) checklist
 
 - **định danh (identity / 식별자):** duplicate, cập nhật (update / 업데이트), delete và correction có định danh (identity / 식별자)/phiên bản (version / 버전) rõ.
@@ -50,8 +48,6 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 - **bảo mật (security / 보안):** raw/mô hình (model / 모델)/serving truy cập (access / 접근), masking, retention và deletion có bằng chứng (evidence / 증거).
 - **Economics:** scan, shuffle, spill, lưu trữ (storage / 저장소), maintenance và tính đồng thời (concurrency / 동시성) có attribution.
 
-> **Chuyển mạch:** **Gaps còn lại** chỉ được coi là actionable khi invariant đã rõ; **Rà soát protocol** xác nhận route, link và contract trước khi mở rộng coverage.
-
 ## Gaps còn lại
 
 Các ranh giới (boundary / 경계) P2 phía trên đã có chapter chuẩn gốc (canonical / 정본). Những gap tiếp theo nên được mở chỉ khi có conceptual ranh giới (boundary / 경계) độc lập:
@@ -63,8 +59,6 @@ Các ranh giới (boundary / 경계) P2 phía trên đã có chapter chuẩn g�
 5. **đặc tả hợp đồng (contract / 계약) nền tảng (platform / 플랫폼):** lược đồ (schema / 스키마)/ngữ nghĩa (semantic / 의미적) registry, exception expiry và automated blast-radius đồ thị (graph / 그래프).
 
 Không mở chapter chỉ để liệt kê Kafka/Spark/Airflow/dbt. Mỗi gap phải có bất biến (invariant / 불변식)/thất bại (failure / 실패) mô hình (model / 모델) riêng, nhiều downstream phụ thuộc (dependency / 의존성) và bằng chứng (evidence / 증거) có thể kiểm chứng.
-
-> **Chuyển mạch:** **Rà soát protocol** khép coverage bằng link integrity, owner và evidence; mọi gap chưa đủ dữ kiện phải được giữ lại thay vì ghi pass giả.
 
 ## Rà soát (review / 검토) giao thức (protocol / 프로토콜)
 

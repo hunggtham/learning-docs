@@ -22,8 +22,6 @@ Trong đó:
 
 Bậc phản ứng có thể bằng 0, số nguyên, phân số hoặc thậm chí thay đổi hiệu dụng theo vùng nồng độ nếu cơ chế phức tạp. Vì thế “bậc phản ứng” là một thuộc tính của **mô hình tốc độ dưới điều kiện đang xét**, không phải nhãn cố định gắn vĩnh viễn lên phương trình tổng.
 
-> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** nối từ **Dạng tổng quát** sang **Ý nghĩa của bậc phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?
 
 Phương trình:
@@ -43,8 +41,6 @@ r=k[NO_2]^2[F_2]
 chỉ được suy trực tiếp từ hệ số khi phương trình đó thực sự là **bước cơ bản (elementary step)** phù hợp với định luật tác dụng khối lượng.
 
 Đây là lý do kinetics cung cấp thông tin cơ chế mà stoichiometry không thể cung cấp.
-
-> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ý nghĩa của bậc phản ứng** nối từ **Vì sao hệ số phương trình tổng không tự cho bậc phản ứng?** sang **Đơn vị của hằng số tốc độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ý nghĩa của bậc phản ứng
 
@@ -74,8 +70,6 @@ thì trong vùng điều kiện đó, thay đổi \([A]\) không làm tốc đ�
 
 Bậc 0 không có nghĩa A “không tham gia phản ứng”. Nó có thể nghĩa vị trí xúc tác đã bão hòa, photon là yếu tố giới hạn hoặc một bước khác đang kiểm soát tốc độ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Đơn vị của hằng số tốc độ** nối từ **Ý nghĩa của bậc phản ứng** sang **1. Phương pháp tốc độ ban đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đơn vị của hằng số tốc độ
 
 Tốc độ thường có đơn vị:
@@ -101,8 +95,6 @@ bậc 2: L mol^-1 s^-1
 Đơn vị của \(k\) không phải chi tiết phụ; nó phản ánh cấu trúc toán học của tỷ lệ (rate / 비율) law và giúp phát hiện lỗi mô hình.
 
 # Ba cách chính để tìm phương trình tốc độ
-
-> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **1. Phương pháp tốc độ ban đầu** nối từ **Đơn vị của hằng số tốc độ** sang **2. Theo dõi toàn bộ đường nồng độ–thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. Phương pháp tốc độ ban đầu
 
@@ -132,15 +124,11 @@ Nếu \([B]\) tăng gấp đôi nhưng tốc độ giữ gần như không đổ
 
 Ưu điểm của phương pháp tỉ số là \(k\) triệt tiêu. Nhược điểm là cần nhiều thí nghiệm được kiểm soát tốt và tốc độ ban đầu phải đo đáng tin cậy.
 
-> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** nối từ **1. Phương pháp tốc độ ban đầu** sang **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Theo dõi toàn bộ đường nồng độ–thời gian
 
 Thay vì chỉ dùng vài độ dốc ban đầu, có thể fit toàn bộ trajectory vào nghiệm của phương trình vi phân.
 
 Cách này tận dụng nhiều dữ liệu hơn và đặc biệt hữu ích khi nhiễu làm đạo hàm cục bộ không ổn định.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **2. Theo dõi toàn bộ đường nồng độ–thời gian** đặt đầu vào cho **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law**, rồi **Vì sao hàm mũ xuất hiện?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law
 
@@ -212,8 +200,6 @@ không phụ thuộc \([A]_0\).
 
 Chính tính chất này làm phân rã phóng xạ trở thành ví dụ rất rõ của động học bậc nhất.
 
-> **Nối mạch:** Trong **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **3. Dùng cơ chế để suy tỷ lệ (rate / 비율) law** đặt đầu vào cho **Vì sao hàm mũ xuất hiện?**, rồi **Ví dụ hóa sinh** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Vì sao hàm mũ xuất hiện?
 
 Trong bậc nhất, mỗi phân tử có xác suất biến đổi gần như không đổi trên một đơn vị thời gian. Khi quần thể lớn, số phân tử mất đi mỗi giây tỉ lệ với số còn lại. Một quá trình “mất theo tỉ lệ phần trăm” tự nhiên tạo hàm mũ.
@@ -283,8 +269,6 @@ k'=k[B]_0
 Hệ biểu hiện **động học giả bậc nhất (pseudo-first-order kinetics)**.
 
 Đây không phải “thay đổi bản chất” của bước phản ứng; nó là cách thiết kế thí nghiệm để biến một biến số gần như thành hằng số, giúp phân tích đơn giản hơn.
-
-> **Nối mạch:** Ở chặng này của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Vì sao hàm mũ xuất hiện?** nêu quy tắc; **Ví dụ hóa sinh** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Ví dụ hóa sinh
 
@@ -422,8 +406,6 @@ Không. Linearization có thể bóp méo sai số; cần residuals, kiểm ch�
 ### “Reaction thứ tự (order / 순서) phải là số nguyên không âm”
 
 Không. Mạng cơ chế có thể tạo bậc phân số, 0 hoặc âm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình tốc độ — từ dữ liệu thực nghiệm tới quy luật động học**, **Ví dụ hóa sinh** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

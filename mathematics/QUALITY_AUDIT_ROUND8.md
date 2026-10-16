@@ -23,8 +23,6 @@ Round này tập trung tám chapter:
 
 Tiêu chí vẫn theo [`EDITORIAL_STANDARD.md`](./EDITORIAL_STANDARD.md): intuition trước formalism, formula/theorem có reason và các giả định (assumptions / 가정들), proof idea đủ để hiểu cấu trúc (structure / 구조), examples tạo lập luận (reasoning / 추론) transfer, và connections chỉ thêm khi thật sự cùng mathematical cấu trúc (structure / 구조).
 
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** nối từ **Phạm vi Round 8** sang **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)
 
 ### Lô-gic (logic / 논리) and Proof
@@ -91,8 +89,6 @@ Chapter được nâng theo viewpoint:
 
 Các phần variable/lĩnh vực (domain / 도메인), expression vs equation, distributivity, identities, inverse operations, reversible transformations và lĩnh vực (domain / 도메인) restrictions được làm rõ để hỗ trợ các chapter equation/hàm (function / 함수)/calculus phía sau.
 
-> **Nối mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 1 — Foundations + Algebraic ngôn ngữ (language / 언어)** đặt tiêu chí; **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** mở rộng hệ quả.
-
 ## Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws
 
 ### Euclidean hình học (geometry / 기하학)
@@ -151,8 +147,6 @@ Nội dung mới gồm:
 - Chebyshev inequality;
 - AI mini-batch and finance-risk connections.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Batch 2 — Euclidean hình học (geometry / 기하학) + Expectation/Variance/Limit Laws** đặt tiêu chí; **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Độ sâu (depth / 깊이) balance sau Round 8** mở rộng hệ quả.
-
 ## Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)
 
 ### Boolean Algebra and Digital lô-gic (logic / 논리)
@@ -202,8 +196,6 @@ Proof ideas được thêm cho Euclidean thuật toán (algorithm / 알고리즘
 
 Connections được làm rõ với algorithms, cyclic các hệ thống (systems / 시스템들), hashing, checksums, finite algebra và cryptographic mathematics, đồng thời ghi rõ ranh giới (boundary / 경계) giữa mathematical substrate và practical hệ thống (system / 시스템) guarantees.
 
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Độ sâu (depth / 깊이) balance sau Round 8** nối từ **Batch 3 — Boolean Algebra + Number lý thuyết (theory / 이론)** sang **Remaining độ sâu (depth / 깊이) priorities**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ sâu (depth / 깊이) balance sau Round 8
 
 Sau Round 8, các foundation nodes quan trọng đã cân bằng hơn đáng kể với những chapter advanced.
@@ -232,8 +224,6 @@ optimization
 Fourier / Laplace / control
 ```
 
-> **Nối mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Remaining độ sâu (depth / 깊이) priorities** nối từ **Độ sâu (depth / 깊이) balance sau Round 8** sang **Editorial conclusion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Remaining độ sâu (depth / 깊이) priorities
 
 Round tiếp theo không nên tăng chapter count. Priority hợp lý là các chapter vẫn ngắn hoặc chưa đồng đều về proof/ứng dụng (application / 애플리케이션) độ sâu (depth / 깊이):
@@ -256,8 +246,6 @@ Round tiếp theo không nên tăng chapter count. Priority hợp lý là các c
 ```
 
 Selection cho round sau nên tiếp tục theo **phụ thuộc (dependency / 의존성) centrality + độ sâu (depth / 깊이) gap**, không theo folder thứ tự (order / 순서).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 8: strengthen mathematical foundations and xác suất (probability / 확률) bridges**, **Editorial conclusion** nối từ **Remaining độ sâu (depth / 깊이) priorities** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Editorial conclusion
 

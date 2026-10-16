@@ -6,8 +6,6 @@
 
 Homo sapiens mở rộng không chỉ nhờ “thông minh hơn” mà nhờ ngôn ngữ, học xã hội, mạng trao đổi và khả năng phối hợp giữa những người không cùng họ hàng. Biến động khí hậu, năng lượng kiếm ăn và cạnh tranh với loài khác tạo ràng buộc (constraint / 제약조건); công cụ, lửa, quần áo, thuyền và ký ức tập thể mở rộng niche.
 
-> **Nối mạch:** Luận đề đặt đầu vào về hợp tác, di chuyển và sinh thái; **Chuỗi nhân quả** theo dõi cách các điều kiện đó tạo kết quả. **Chuyển tiếp** kiểm tra khi cơ chế đổi theo thời gian.
-
 ## Chuỗi nhân quả
 
 ```text
@@ -29,19 +27,13 @@ biến thiên môi trường
 - **Demography:** fertility, mortality, di chuyển (migration / 마이그레이션) và bottleneck di truyền quan trọng hơn “dân số tĩnh”.
 - **Ideas:** biểu tượng, chôn cất và nghệ thuật là bằng chứng về thế giới chung, nhưng không tự động chứng minh một tôn giáo cụ thể.
 
-> **Nối mạch:** Chuỗi nhân quả nối ecology, mobility và cooperation thành các bước có thể quan sát; **Bẫy** chỉ ra nơi suy luận nhảy cóc hoặc đánh đồng tương quan với nguyên nhân.
-
 ## Chuyển tiếp
 
 Khi một số loài cây/con vật có thể quản lý theo mùa và khí hậu ổn định hơn ở vài vùng, thử nghiệm định cư và trồng trọt trở nên đáng giá. Đó là **nhiều quá trình địa phương**, không phải một “phát minh duy nhất” lan khắp thế giới.
 
-> **Nối mạch:** Chuyển tiếp cho biết cơ chế thay đổi giữa các bối cảnh; **Bẫy** kiểm tra ranh giới của so sánh. **Cơ chế sâu hơn** quay lại giải thích vì sao các kết quả xuất hiện.
-
 ## Bẫy
 
 Không nên xếp hunter-gatherer là “sơ khai” hay nông nghiệp là tiến bộ thuần túy: nông nghiệp thường tăng sản lượng trên đất nhưng cũng tăng bệnh, lao động, bất bình đẳng và rủi ro mất mùa.
-
-> **Nối mạch:** Bẫy làm rõ cách diễn giải sai; Cơ chế sâu hơn đưa năng lượng, sinh thái và hợp tác trở lại mô hình. **So sánh và phân phối** kiểm tra kết quả giữa nhóm người và không gian.
 
 ## Cơ chế sâu hơn
 
@@ -63,13 +55,9 @@ shock: drought, cold pulse, prey collapse, volcanic event, contact
 
 Một địa điểm khảo cổ thường chỉ giữ lại phần stock bền (đá, xương, than, vỏ sò); luồng (flow / 흐름) như lời nói, cây cỏ và quan hệ chăm sóc dễ biến mất. Vì vậy absence of bằng chứng (evidence / 증거) không đồng nghĩa absence of practice.
 
-> **Nối mạch:** Cơ chế sâu hơn cần được thử qua khác biệt giữa nhóm người và sinh thái; **So sánh và phân phối** làm rõ ai nhận lợi ích hoặc chi phí. **Bằng chứng, giới hạn và cầu nối** đưa so sánh về khảo cổ, di truyền và môi trường.
-
 ## So sánh và phân phối
 
 Ven biển, thảo nguyên, rừng nhiệt đới và vùng băng tạo các gói kỹ năng khác nhau. Người già, trẻ em, phụ nữ, người khuyết tật và người di cư có thể đóng góp vào gathering, chăm sóc và truyền tri thức; không nên dùng mô hình “nam săn–nữ hái” như quy luật phổ quát. Agency nằm trong lựa chọn mùa vụ, kết bạn, rời nhóm và đổi vật liệu.
-
-> **Nối mạch:** So sánh và phân phối đặt nhóm người và sinh thái cạnh nhau; bằng chứng khảo cổ, di truyền và môi trường kiểm tra mô hình trước khi nối sang chương nông nghiệp.
 
 ## Bằng chứng, giới hạn và cầu nối
 

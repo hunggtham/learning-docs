@@ -15,8 +15,6 @@ Phần này tập trung vào hành vi (behavior / 동작) của hệ thống khi
 7. [Tiến hóa schema, protocol và hợp đồng tương thích](./06_schema_protocol_evolution_and_compatibility_contracts.md)
 8. [Fleet profiling, cost attribution và multi-tenant efficiency](./07_fleet_profiling_cost_attribution_and_multi_tenant_efficiency.md)
 
-> **Nối mạch:** **Mô hình tư duy (mental models / 사고 모델들) cần đạt** tổng hợp từ **Chuẩn gốc (canonical / 정본) chapters**; **Hệ thống (system / 시스템) thiết kế (design / 설계) nằm trong lập luận (reasoning / 추론) này** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental models / 사고 모델들) cần đạt
 
 Nhánh học (track / 트랙) này phải giúp lập luận (reasoning / 추론) được các chuỗi như:
@@ -53,23 +51,17 @@ useful demand
 
 Mỗi cơ chế (mechanism / 메커니즘) phải được đọc theo bất biến (invariant / 불변식) mà nó bảo vệ. hàng đợi (queue / 큐) bảo vệ bottleneck nào? bộ nhớ đệm (cache / 캐시) được phép stale tới mức nào? Idempotency key đại diện nghiệp vụ (business / 비즈니스) thao tác (operation / 연산) nào? lược đồ (schema / 스키마) evolution giữ tính tương thích (compatibility / 호환성) qua overlap cửa sổ (window / 윈도우) ra sao? Fleet efficiency đang tối ưu tài nguyên (resource / 자원) nào dưới thất bại (failure / 실패) reserve và fairness ràng buộc (constraint / 제약조건) nào?
 
-> **Nối mạch:** **Hệ thống (system / 시스템) thiết kế (design / 설계) nằm trong lập luận (reasoning / 추론) này** tổng hợp từ **Mô hình tư duy (mental models / 사고 모델들) cần đạt**; **Bằng chứng vận hành (production evidence / 운영 증거)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Hệ thống (system / 시스템) thiết kế (design / 설계) nằm trong lập luận (reasoning / 추론) này
 
 Hệ thống (system / 시스템) thiết kế (design / 설계) không được tách thành gốc (root / 루트) thư viện (library / 라이브러리) riêng. dịch vụ (service / 서비스) ranh giới (boundary / 경계), tải (load / 로드) balancing, pool sizing, bộ nhớ đệm (cache / 캐시) topology, sự kiện (event / 이벤트) processing, graceful degradation, multi-tenant isolation và fleet economics được học bằng cách nối các chuẩn gốc (canonical / 정본) chapters hiện có với [`09_software_engineering/advanced`](../../09_software_engineering/advanced/README.md) và [`06_networks_distributed_systems/advanced`](../../06_networks_distributed_systems/advanced/README.md).
 
 Một thiết kế (design / 설계) tốt bắt đầu từ bất biến (invariant / 불변식), tải công việc (workload / 워크로드) và thất bại (failure / 실패) mô hình (model / 모델); không bắt đầu từ danh sách technology.
 
-> **Nối mạch:** **Hệ thống (system / 시스템) thiết kế (design / 설계) nằm trong lập luận (reasoning / 추론) này** đặt vấn đề; **Bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **Quy tắc mở rộng** mở rộng hệ quả.
-
 ## Bằng chứng vận hành (production evidence / 운영 증거)
 
 Khi hệ thống chậm hoặc không ổn định, phải đo arrival/completion tỷ lệ (rate / 비율), hàng đợi (queue / 큐) độ sâu (depth / 깊이)/wait, active tính đồng thời (concurrency / 동시성), thử lại (retry / 재시도) attempts, rejection/tải (load / 로드) shedding, bộ nhớ đệm (cache / 캐시) hit/miss/hot-key phân phối (distribution / 분포), pool wait, downstream saturation và dấu vết (trace / 추적) đường găng (critical path / 임계 경로). Ở fleet quy mô (scale / 규모) cần giữ cohort theo region/phiên bản (version / 버전)/hardware/shard/tenant đủ để không bị average che skew, nhưng tránh cardinality vô hạn.
 
 Mục tiêu của khả năng quan sát (observability / 관측 가능성) là trả lời **công việc (work / 작업) đang chờ ở đâu, tài nguyên (resource / 자원) nào giới hạn progress, trạng thái (state / 상태) nào có thể stale/duplicate, vòng phản hồi (feedback loop / 피드백 루프) nào đang làm thất bại (failure / 실패) lan rộng, và chi phí (cost / 비용) nào đang tạo useful kết quả (outcome / 결과)**.
-
-> **Nối mạch:** **Bằng chứng vận hành** cho biết hệ thống đang chịu tải và thất bại ra sao; **Quy tắc mở rộng** chỉ cho phép thêm nội dung khi claim đó có boundary và owner rõ.
 
 ## Quy tắc mở rộng
 

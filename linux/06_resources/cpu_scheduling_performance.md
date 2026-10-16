@@ -15,8 +15,6 @@ lscpu
 
 `nproc` cho biết số đơn vị xử lý khả dụng trong môi trường hiện tại; `lscpu` cho topology CPU chi tiết hơn.
 
-> **Nối mạch:** Trong **CPU, lập lịch, tải trung bình và hiệu năng**, **Mức sử dụng CPU** nối từ **CPU là tài nguyên được chia theo thời gian** sang **Tải (load / 로드) average không phải phần trăm CPU**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mức sử dụng CPU
 
 `top` hoặc `mpstat` chia thời gian CPU thành các nhóm như `user`, `system`, `idle`, `iowait` tùy công cụ và nền tảng.
@@ -27,8 +25,6 @@ mpstat -P ALL 1
 ```
 
 `%user` cao thường gợi ý ứng dụng đang tính toán nhiều. `%system` cao cho thấy nhiều thời gian được dùng trong kernel. `iowait` cao có thể liên quan chờ I/O lưu trữ, nhưng không nên dùng một chỉ số đơn lẻ để kết luận nguyên nhân gốc.
-
-> **Nối mạch:** Ở chặng này của **CPU, lập lịch, tải trung bình và hiệu năng**, **Tải (load / 로드) average không phải phần trăm CPU** nối từ **Mức sử dụng CPU** sang **Hàng đợi tác vụ sẵn sàng chạy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tải (load / 로드) average không phải phần trăm CPU
 
@@ -42,8 +38,6 @@ Trên Linux, tải (load / 로드) phản ánh số tác vụ đang sẵn sàng 
 
 Tải (load / 로드) bằng 8 trên máy có 8 CPU lô-gic (logic / 논리) mang ý nghĩa khác với tải (load / 로드) bằng 8 trên máy chỉ có 2 CPU. Tuy nhiên tỷ lệ này vẫn chỉ là một **quy tắc kinh nghiệm (heuristic)**; độ trễ của tải công việc (workload / 워크로드) và thành phần trạng thái tác vụ vẫn cần được kiểm tra.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU, lập lịch, tải trung bình và hiệu năng**, **Hàng đợi tác vụ sẵn sàng chạy** nối từ **Tải (load / 로드) average không phải phần trăm CPU** sang **CPU ở mức tiến trình và mức luồng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi tác vụ sẵn sàng chạy
 
 Trường `r` của `vmstat` cho một góc nhìn về số tác vụ đang sẵn sàng chạy:
@@ -53,8 +47,6 @@ vmstat 1 10
 ```
 
 Nếu `r` liên tục lớn hơn số CPU khả dụng và mức sử dụng CPU cũng cao, giả thuyết tranh chấp CPU trở nên mạnh hơn. Nếu tải (load / 로드) cao nhưng CPU vẫn còn nhàn rỗi đáng kể và có nhiều tác vụ `D`, nên chuyển hướng điều tra sang I/O.
-
-> **Nối mạch:** Trong **CPU, lập lịch, tải trung bình và hiệu năng**, **CPU ở mức tiến trình và mức luồng** nối từ **Hàng đợi tác vụ sẵn sàng chạy** sang **Chuyển ngữ cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU ở mức tiến trình và mức luồng
 
@@ -78,8 +70,6 @@ jcmd <PID> Thread.print > /tmp/thread.txt
 
 Việc đối chiếu ID luồng của hệ điều hành với luồng thực thi (thread / 스레드) dump JVM đôi khi cần chuyển đổi giữa số thập phân và thập lục phân tùy JVM và công cụ. Điểm quan trọng là CPU cao thường thuộc về **một hoặc nhiều luồng/đường thực thi mã**, không chỉ đơn giản là tên tiến trình.
 
-> **Nối mạch:** Ở chặng này của **CPU, lập lịch, tải trung bình và hiệu năng**, **Chuyển ngữ cảnh** nối từ **CPU ở mức tiến trình và mức luồng** sang **Khối lượng công việc thiên về CPU và thiên về I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển ngữ cảnh
 
 Khi scheduler chuyển giữa các luồng, hệ thống phải lưu và phục hồi trạng thái thực thi, đồng thời có thể ảnh hưởng bộ nhớ đệm CPU và TLB. Nhiều luồng hơn không luôn nhanh hơn. Nếu số luồng sẵn sàng chạy vượt xa năng lực CPU, tranh chấp và số lần chuyển ngữ cảnh có thể tăng trong khi thông lượng không tăng tương ứng.
@@ -91,8 +81,6 @@ pidstat -w 1
 
 Các bộ đếm chuyển ngữ cảnh cần được so với mức bình thường của chính hệ thống; không tồn tại một ngưỡng "cao" phù hợp cho mọi tải công việc (workload / 워크로드).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU, lập lịch, tải trung bình và hiệu năng**, **Khối lượng công việc thiên về CPU và thiên về I/O** nối từ **Chuyển ngữ cảnh** sang **Độ trễ và thông lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khối lượng công việc thiên về CPU và thiên về I/O
 
 **CPU-bound tải công việc (workload / 워크로드)** dành phần lớn thời gian để tính toán; thêm CPU có thể tăng thông lượng nếu công việc có thể chạy song song. **I/O-bound tải công việc (workload / 워크로드)** thường chờ ổ đĩa, mạng hoặc cơ sở dữ liệu; thêm CPU có thể gần như không giúp gì.
@@ -101,15 +89,11 @@ Các bộ đếm chuyển ngữ cảnh cần được so với mức bình thư�
 
 Nếu API có độ trễ cao nhưng CPU chỉ dùng 20%, nút thắt có thể nằm ở liên kết (connection / 연결) pool của cơ sở dữ liệu, khóa, API phía sau, thiết bị lưu trữ hoặc luồng thực thi (thread / 스레드) pool.
 
-> **Nối mạch:** Trong **CPU, lập lịch, tải trung bình và hiệu năng**, **Độ trễ và thông lượng** nối từ **Khối lượng công việc thiên về CPU và thiên về I/O** sang **nice và mức ưu tiên lập lịch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ trễ và thông lượng
 
 **thông lượng (throughput / 처리량)** là lượng công việc hoàn thành trong một đơn vị thời gian; **độ trễ (latency / 지연 시간)** là thời gian cần để hoàn thành một đơn vị công việc. Hệ thống có thể tăng thông lượng (throughput / 처리량) bằng cách gom lô (batching) nhưng làm độ trễ (latency / 지연 시간) của từng yêu cầu tăng.
 
 Mức sử dụng CPU gần 100% có thể hợp lý với một batch job nhưng nguy hiểm với dịch vụ tương tác cần khoảng dự phòng để giữ độ trễ ổn định. Không tồn tại một mức sử dụng CPU "tốt nhất" cho mọi loại tải công việc (workload / 워크로드).
-
-> **Nối mạch:** Ở chặng này của **CPU, lập lịch, tải trung bình và hiệu năng**, **nice và mức ưu tiên lập lịch** nối từ **Độ trễ và thông lượng** sang **CPU affinity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `nice` và mức ưu tiên lập lịch
 
@@ -122,8 +106,6 @@ renice 10 -p <PID>
 
 Giá trị nice không phải giới hạn CPU cứng. Nó ảnh hưởng trọng số hoặc mức ưu tiên tương đối. Khi cần cô lập tài nguyên rõ ràng hơn, thường phải dùng cgroup hoặc cơ chế kiểm soát CPU của systemd.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU, lập lịch, tải trung bình và hiệu năng**, **CPU affinity** nối từ **nice và mức ưu tiên lập lịch** sang **Phương pháp tối ưu hiệu năng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CPU affinity
 
 Tiến trình hoặc luồng có thể bị giới hạn vào một tập CPU cụ thể:
@@ -134,15 +116,11 @@ taskset -pc <PID>
 
 **CPU affinity** hữu ích trong một số tình huống tối ưu chuyên biệt nhưng cũng có thể làm hiệu năng xấu đi nếu ghim CPU sai và làm giảm khả năng linh hoạt của scheduler.
 
-> **Nối mạch:** Trong **CPU, lập lịch, tải trung bình và hiệu năng**, **Phương pháp tối ưu hiệu năng** nối từ **CPU affinity** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương pháp tối ưu hiệu năng
 
 Tối ưu hiệu năng tốt bắt đầu bằng mục tiêu rõ ràng: độ trễ (latency / 지연 시간) p95, thông lượng (throughput / 처리량), hay chi phí CPU trên mỗi yêu cầu? Sau đó đo đường cơ sở (baseline), xác định nút thắt, thay đổi một yếu tố rồi đo lại.
 
 Tăng luồng thực thi (thread / 스레드) pool, tăng vùng nhớ động (heap / 힙), ghim CPU hoặc đổi tham số kernel mà không có giả thuyết thường chỉ làm nút thắt di chuyển sang nơi khác.
-
-> **Nối mạch:** Ở chặng này của **CPU, lập lịch, tải trung bình và hiệu năng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Phương pháp tối ưu hiệu năng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -156,8 +134,6 @@ công việc đang chạy hay đang chờ?
 chỉ số nào chứng minh giả thuyết đó?
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU, lập lịch, tải trung bình và hiệu năng**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
 **"tải (load / 로드) 10 = CPU 1000%."** tải (load / 로드) average không phải phần trăm CPU.
@@ -169,8 +145,6 @@ chỉ số nào chứng minh giả thuyết đó?
 **"CPU thấp nghĩa là máy chủ (server / 서버) khỏe."** Ứng dụng có thể deadlock hoặc đang chờ phụ thuộc với CPU gần 0.
 
 **"Tăng CPU sẽ sửa được độ trễ (latency / 지연 시간)."** Chỉ đúng khi CPU thực sự là nút thắt đáng kể.
-
-> **Nối mạch:** Trong **CPU, lập lịch, tải trung bình và hiệu năng**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

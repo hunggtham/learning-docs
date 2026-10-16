@@ -21,8 +21,6 @@ new-only state an toàn
 
 và transitions giữa chúng không làm mất/duplicate authority.
 
-> **Nối mạch:** Production cannot pause for architecture; preserve invariants while strangler/branch-by-abstraction create small cutovers, avoiding the feedback delay and risk of a big-bang rewrite.
-
 ## 2. bất biến (invariant / 불변식) trước roadmap
 
 Trước khi chọn strangler hay rewrite, viết invariants:
@@ -36,8 +34,6 @@ traffic chỉ cutover khi correctness evidence đạt threshold
 ```
 
 Nếu roadmap chỉ có tasks mà không có phase invariants, di chuyển (migration / 마이그레이션) khó biết khi nào thật sự an toàn để đi tiếp.
-
-> **Nối mạch:** **3. Big-bang rewrite tối đa hóa time-to-feedback và cutover rủi ro (risk / 위험)** nối từ **2. bất biến (invariant / 불변식) trước roadmap** sang **4. Strangler di chuyển (migration / 마이그레이션) chuyển năng lực (capability / 역량) từng phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Big-bang rewrite tối đa hóa time-to-feedback và cutover rủi ro (risk / 위험)
 
@@ -55,8 +51,6 @@ rollback khó nếu schema/state đã đổi
 
 Big-bang có thể hợp lý khi ranh giới (boundary / 경계) rất nhỏ/cô lập hoặc replacement gần như stateless. Nhưng phải chứng minh thay vì mặc định “rewrite sạch hơn”.
 
-> **Nối mạch:** **4. Strangler di chuyển (migration / 마이그레이션) chuyển năng lực (capability / 역량) từng phần** nối từ **3. Big-bang rewrite tối đa hóa time-to-feedback và cutover rủi ro (risk / 위험)** sang **5. Branch by lớp trừu tượng (abstraction / 추상화) giữ tích hợp (integration / 통합) trong mainline**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Strangler di chuyển (migration / 마이그레이션) chuyển năng lực (capability / 역량) từng phần
 
 **Strangler mẫu (pattern / 패턴)** đặt routing/facade seam rồi chuyển từng năng lực (capability / 역량) sang hiện thực (implementation / 구현) mới.
@@ -72,8 +66,6 @@ facade/router
 Lợi ích: môi trường vận hành (production / 운영 환경) phản hồi (feedback / 피드백) sớm, blast radius theo slice, quay lui (rollback / 롤백) traffic dễ hơn.
 
 Điểm khó: nếu dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권) vẫn dùng chung (shared / 공유) tùy ý, đường đi mã (code path / 코드 경로) tách nhưng bất biến (invariant / 불변식) vẫn coupled. Seam phải chọn theo năng lực (capability / 역량)/trạng thái (state / 상태) authority, không chỉ URL đường dẫn (path / 경로).
-
-> **Nối mạch:** **5. Branch by lớp trừu tượng (abstraction / 추상화) giữ tích hợp (integration / 통합) trong mainline** nối từ **4. Strangler di chuyển (migration / 마이그레이션) chuyển năng lực (capability / 역량) từng phần** sang **6. Expand-contract là giao thức (protocol / 프로토콜) cho tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Branch by lớp trừu tượng (abstraction / 추상화) giữ tích hợp (integration / 통합) trong mainline
 
@@ -91,8 +83,6 @@ introduce abstraction
 ```
 
 Lợi ích là continuous tích hợp (integration / 통합) và giảm merge divergence. chi phí (cost / 비용) là temporary độ phức tạp (complexity / 복잡도) trong codebase; cần deadline/xóa di chuyển (migration / 마이그레이션) scaffolding để nó không thành permanent dual kiến trúc (architecture / 아키텍처).
-
-> **Nối mạch:** **6. Expand-contract là giao thức (protocol / 프로토콜) cho tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** nối từ **5. Branch by lớp trừu tượng (abstraction / 추상화) giữ tích hợp (integration / 통합) trong mainline** sang **7. nguồn chuẩn (source of truth / 정본) phải duy nhất hoặc xung đột (conflict / 충돌) quy tắc (rule / 규칙) phải tường minh (explicit / 명시적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Expand-contract là giao thức (protocol / 프로토콜) cho tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)
 
@@ -113,8 +103,6 @@ Bất biến (invariant / 불변식) là **trong mỗi coexist cửa sổ (windo
 
 Rename DB column trực tiếp có thể thất bại (fail / 실패) vì old nhị phân (binary / 이진) vẫn truy vấn (query / 쿼리) tên cũ. Add-new → dual-compatible → migrate → drop-old an toàn hơn nếu trạng thái (state / 상태) ngữ nghĩa (semantics / 의미론) được quản lý rõ.
 
-> **Nối mạch:** **6. Expand-contract là giao thức (protocol / 프로토콜) cho tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** đặt vấn đề; **7. nguồn chuẩn (source of truth / 정본) phải duy nhất hoặc xung đột (conflict / 충돌) quy tắc (rule / 규칙) phải tường minh (explicit / 명시적)** kiểm tra bằng chứng, rồi **8. Naive dual-write tạo atomicity gap** mở rộng hệ quả.
-
 ## 7. nguồn chuẩn (source of truth / 정본) phải duy nhất hoặc xung đột (conflict / 충돌) quy tắc (rule / 규칙) phải tường minh (explicit / 명시적)
 
 Một trong những câu nguy hiểm nhất là “tạm thời cả old và new đều authoritative”. Nếu cả hai accept writes, hệ thống (system / 시스템) cần phân tán (distributed / 분산) consistency/xung đột (conflict / 충돌) ngữ nghĩa (semantics / 의미론) thật sự.
@@ -129,8 +117,6 @@ old authoritative, new mirrors
 ```
 
 Nếu dual authority thật sự cần, xung đột (conflict / 충돌)/reconciliation phải được thiết kế như hệ thống phân tán (distributed system / 분산 시스템), không gọi nó là temporary di chuyển (migration / 마이그레이션) hack.
-
-> **Nối mạch:** **7. nguồn chuẩn (source of truth / 정본) phải duy nhất hoặc xung đột (conflict / 충돌) quy tắc (rule / 규칙) phải tường minh (explicit / 명시적)** đặt vấn đề; **8. Naive dual-write tạo atomicity gap** kiểm tra bằng chứng, rồi **9. Dual-read có thể che divergence nếu fallback quá tiện** mở rộng hệ quả.
 
 ## 8. Naive dual-write tạo atomicity gap
 
@@ -147,8 +133,6 @@ Outbox/CDC/log-based replication có thể chuyển bài toán (problem / 문제
 
 Dual-write chỉ an toàn khi thất bại (failure / 실패) trạng thái (state / 상태) và repair giao thức (protocol / 프로토콜) tường minh (explicit / 명시적).
 
-> **Nối mạch:** **9. Dual-read có thể che divergence nếu fallback quá tiện** nối từ **8. Naive dual-write tạo atomicity gap** sang **10. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Dual-read có thể che divergence nếu fallback quá tiện
 
 Mẫu (pattern / 패턴) “read new, nếu miss thì read old” giúp di chuyển (migration / 마이그레이션) nhưng có rủi ro (risk / 위험): new store thiếu dữ liệu (data / 데이터) lâu mà dịch vụ (service / 서비스) vẫn success nhờ fallback, khiến gap không được sửa.
@@ -163,8 +147,6 @@ age of not-yet-backfilled records
 ```
 
 Fallback là an toàn (safety / 안전) cơ chế (mechanism / 메커니즘), không nên biến thành permanent invisibility cloak cho di chuyển (migration / 마이그레이션) debt.
-
-> **Nối mạch:** **10. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경) thật** nối từ **9. Dual-read có thể che divergence nếu fallback quá tiện** sang **11. Shadow traffic cho bằng chứng (evidence / 증거) nhưng side effects phải bị cô lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경) thật
 
@@ -183,8 +165,6 @@ replay after failure
 
 Nếu row được cập nhật (update / 업데이트) trong lúc backfill bản sao (copy / 복사) old snapshot, last-write-wins naïve có thể overwrite fresh trạng thái (state / 상태) bằng historical trạng thái (state / 상태). thứ tự (ordering / 순서)/phiên bản (version / 버전) ranh giới (boundary / 경계) phải tường minh (explicit / 명시적).
 
-> **Nối mạch:** **10. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경) thật** đặt vấn đề; **11. Shadow traffic cho bằng chứng (evidence / 증거) nhưng side effects phải bị cô lập** kiểm tra bằng chứng, rồi **12. Comparison phải biết ngữ nghĩa (semantics / 의미론), không chỉ byte equality** mở rộng hệ quả.
-
 ## 11. Shadow traffic cho bằng chứng (evidence / 증거) nhưng side effects phải bị cô lập
 
 Shadowing gửi bản sao (copy / 복사) yêu cầu (request / 요청) sang new đường dẫn (path / 경로) và bỏ phản hồi (response / 응답). Nó giúp compare tính đúng đắn (correctness / 정확성)/hiệu năng (performance / 성능) với production-shaped đầu vào (input / 입력).
@@ -192,8 +172,6 @@ Shadowing gửi bản sao (copy / 복사) yêu cầu (request / 요청) sang new
 Nhưng shadow yêu cầu (request / 요청) không được duplicate real side tác động (effect / 효과): payment, email, bên ngoài (external / 외부) mutation, expensive downstream quota.
 
 Có thể cần stub/sandbox side tác động (effect / 효과), read-only chế độ (mode / 모드) hoặc compare at a lower pure-computation ranh giới (boundary / 경계).
-
-> **Nối mạch:** **11. Shadow traffic cho bằng chứng (evidence / 증거) nhưng side effects phải bị cô lập** đặt vấn đề; **12. Comparison phải biết ngữ nghĩa (semantics / 의미론), không chỉ byte equality** kiểm tra bằng chứng, rồi **13. Cutover là authority chuyển tiếp (transition / 전이) có preconditions** mở rộng hệ quả.
 
 ## 12. Comparison phải biết ngữ nghĩa (semantics / 의미론), không chỉ byte equality
 
@@ -211,8 +189,6 @@ hard correctness mismatch
 
 Nếu comparison quá strict, noise che tín hiệu (signal / 신호); quá loose, bug thật bị bỏ.
 
-> **Nối mạch:** **13. Cutover là authority chuyển tiếp (transition / 전이) có preconditions** nối từ **12. Comparison phải biết ngữ nghĩa (semantics / 의미론), không chỉ byte equality** sang **14. Reversibility phải xét mã (code / 코드) + dữ liệu (data / 데이터) + giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Cutover là authority chuyển tiếp (transition / 전이) có preconditions
 
 Một cutover gate tốt dựa bằng chứng (evidence / 증거):
@@ -229,8 +205,6 @@ old path can be fenced/read-only if needed
 
 “mã (code / 코드) deployed 100%” không đồng nghĩa di chuyển (migration / 마이그레이션) complete.
 
-> **Nối mạch:** **13. Cutover là authority chuyển tiếp (transition / 전이) có preconditions** đặt vấn đề; **14. Reversibility phải xét mã (code / 코드) + dữ liệu (data / 데이터) + giao thức (protocol / 프로토콜)** kiểm tra bằng chứng, rồi **15. Irreversible step phải được nhận diện trước** mở rộng hệ quả.
-
 ## 14. Reversibility phải xét mã (code / 코드) + dữ liệu (data / 데이터) + giao thức (protocol / 프로토콜)
 
 Cờ tính năng (feature flag / 기능 플래그) tuyến (route / 경로) về old hiện thực (implementation / 구현) chỉ là quay lui (rollback / 롤백) nếu old hiện thực (implementation / 구현) vẫn hiểu hiện tại (current / 현재) dữ liệu (data / 데이터)/giao thức (protocol / 프로토콜).
@@ -245,8 +219,6 @@ new code writes format old code cannot parse
 
 Reversibility cần backward-compatible trạng thái (state / 상태) hoặc a forward repair plan. Đôi khi **roll-forward** an toàn hơn quay lui (rollback / 롤백).
 
-> **Nối mạch:** **14. Reversibility phải xét mã (code / 코드) + dữ liệu (data / 데이터) + giao thức (protocol / 프로토콜)** đặt vấn đề; **15. Irreversible step phải được nhận diện trước** kiểm tra bằng chứng, rồi **16. Traffic ramp phải đi cùng sức chứa (capacity / 용량) mô hình (model / 모델)** mở rộng hệ quả.
-
 ## 15. Irreversible step phải được nhận diện trước
 
 Examples:
@@ -260,8 +232,6 @@ reassign irreversible ownership
 ```
 
 Sau irreversible ranh giới (boundary / 경계), khôi phục (recovery / 복구) plan thay đổi. Runbook phải nói rõ “quay lui (rollback / 롤백) no longer safe after step X”.
-
-> **Nối mạch:** **16. Traffic ramp phải đi cùng sức chứa (capacity / 용량) mô hình (model / 모델)** nối từ **15. Irreversible step phải được nhận diện trước** sang **17. di chuyển (migration / 마이그레이션) kéo theo khả năng quan sát (observability / 관측 가능성) versioned**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Traffic ramp phải đi cùng sức chứa (capacity / 용량) mô hình (model / 모델)
 
@@ -281,8 +251,6 @@ cache warm-up
 
 Có thể cần staged ramp 1% → 5% → 25% → 50% → 100%, nhưng thresholds phải theo tải công việc (workload / 워크로드)/SLO chứ không học thuộc percentages.
 
-> **Nối mạch:** **17. di chuyển (migration / 마이그레이션) kéo theo khả năng quan sát (observability / 관측 가능성) versioned** nối từ **16. Traffic ramp phải đi cùng sức chứa (capacity / 용량) mô hình (model / 모델)** sang **18. thất bại (failure / 실패) modes cần được kiểm thử (test / 테스트) ở chuyển tiếp (transition / 전이), không chỉ endpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. di chuyển (migration / 마이그레이션) kéo theo khả năng quan sát (observability / 관측 가능성) versioned
 
 Trong coexist phase, chỉ số (metric / 지표)/log/dấu vết (trace / 추적) phải biết yêu cầu (request / 요청) chạy old/new đường dẫn (path / 경로), lược đồ (schema / 스키마) phiên bản (version / 버전), dữ liệu (data / 데이터) nguồn (source / 소스) và di chuyển (migration / 마이그레이션) cohort.
@@ -299,8 +267,6 @@ fallback used?
 backfill generation
 comparison result
 ```
-
-> **Nối mạch:** **18. thất bại (failure / 실패) modes cần được kiểm thử (test / 테스트) ở chuyển tiếp (transition / 전이), không chỉ endpoint** nối từ **17. di chuyển (migration / 마이그레이션) kéo theo khả năng quan sát (observability / 관측 가능성) versioned** sang **19. quyền sở hữu (ownership / 소유권) di chuyển (migration / 마이그레이션) là socio-technical chuyển tiếp trạng thái (state transition / 상태 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. thất bại (failure / 실패) modes cần được kiểm thử (test / 테스트) ở chuyển tiếp (transition / 전이), không chỉ endpoint
 
@@ -319,8 +285,6 @@ region fails during migration
 
 Di chuyển (migration / 마이그레이션) tính đúng đắn (correctness / 정확성) nằm ở transitions/failures, không chỉ final happy đường dẫn (path / 경로).
 
-> **Nối mạch:** **19. quyền sở hữu (ownership / 소유권) di chuyển (migration / 마이그레이션) là socio-technical chuyển tiếp trạng thái (state transition / 상태 전이)** nối từ **18. thất bại (failure / 실패) modes cần được kiểm thử (test / 테스트) ở chuyển tiếp (transition / 전이), không chỉ endpoint** sang **20. Temporary tính tương thích (compatibility / 호환성) có carrying chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. quyền sở hữu (ownership / 소유권) di chuyển (migration / 마이그레이션) là socio-technical chuyển tiếp trạng thái (state transition / 상태 전이)
 
 Tách dịch vụ (service / 서비스) sang nhóm (team / 팀) mới nhưng on-call/lược đồ (schema / 스키마) kiến thức (knowledge / 지식)/runbook vẫn ở nhóm (team / 팀) cũ không tạo autonomy.
@@ -338,8 +302,6 @@ consumer contracts
 
 Nếu responsibility split mơ hồ, incidents sẽ tạo human coordination hàng đợi (queue / 큐).
 
-> **Nối mạch:** **20. Temporary tính tương thích (compatibility / 호환성) có carrying chi phí (cost / 비용)** nối từ **19. quyền sở hữu (ownership / 소유권) di chuyển (migration / 마이그레이션) là socio-technical chuyển tiếp trạng thái (state transition / 상태 전이)** sang **21. Branching chiến lược (strategy / 전략) và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략) là hai concerns liên quan nhưng khác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Temporary tính tương thích (compatibility / 호환성) có carrying chi phí (cost / 비용)
 
 Dual paths, adapters, flags, duplicated schemas và fallback đều tăng cognitive tải (load / 로드). Nếu không có removal criterion, di chuyển (migration / 마이그레이션) scaffold trở thành permanent kiến trúc (architecture / 아키텍처).
@@ -355,15 +317,11 @@ metric proving old usage reached zero
 
 Technical debt ở đây không phải mã (code / 코드) xấu; nó là **extra trạng thái (state / 상태) không gian (space / 공간)** mà nhóm (team / 팀) phải reason trong mỗi thay đổi (change / 변경)/sự cố (incident / 인시던트).
 
-> **Nối mạch:** **21. Branching chiến lược (strategy / 전략) và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략) là hai concerns liên quan nhưng khác** nối từ **20. Temporary tính tương thích (compatibility / 호환성) có carrying chi phí (cost / 비용)** sang **22. bằng chứng vận hành (production evidence / 운영 증거) cho di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Branching chiến lược (strategy / 전략) và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략) là hai concerns liên quan nhưng khác
 
 Git short-lived branch/mainline tích hợp (integration / 통합) giảm mã (code / 코드) divergence. thời gian chạy (runtime / 런타임) branch-by-abstraction giảm môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) divergence bằng controllable tuyến (route / 경로).
 
 Long-lived tính năng (feature / 기능) branch + big-bang thời gian chạy (runtime / 런타임) cutover thường trì hoãn tích hợp (integration / 통합) ở cả hai dimensions. Better di chuyển (migration / 마이그레이션) thường tích hợp mã (code / 코드) sớm nhưng expose hành vi (behavior / 동작) dần.
-
-> **Nối mạch:** **21. Branching chiến lược (strategy / 전략) và di chuyển (migration / 마이그레이션) chiến lược (strategy / 전략) là hai concerns liên quan nhưng khác** đặt vấn đề; **22. bằng chứng vận hành (production evidence / 운영 증거) cho di chuyển (migration / 마이그레이션)** kiểm tra bằng chứng, rồi **23. quyết định (decision / 결정) gate nên dựa bất biến (invariant / 불변식) + bằng chứng (evidence / 증거)** mở rộng hệ quả.
 
 ## 22. bằng chứng vận hành (production evidence / 운영 증거) cho di chuyển (migration / 마이그레이션)
 
@@ -381,8 +339,6 @@ Ownership: active old dependencies/callers
 
 Một chỉ số (metric / 지표) “di chuyển (migration / 마이그레이션) 80%” không có nghĩa gì nếu không biết 80% theo traffic, records, tenants, binaries hay features.
 
-> **Nối mạch:** **22. bằng chứng vận hành (production evidence / 운영 증거) cho di chuyển (migration / 마이그레이션)** đặt vấn đề; **23. quyết định (decision / 결정) gate nên dựa bất biến (invariant / 불변식) + bằng chứng (evidence / 증거)** kiểm tra bằng chứng, rồi **24. Mô hình tư duy** mở rộng hệ quả.
-
 ## 23. quyết định (decision / 결정) gate nên dựa bất biến (invariant / 불변식) + bằng chứng (evidence / 증거)
 
 Trước mỗi phase chuyển tiếp (transition / 전이), hỏi:
@@ -398,13 +354,9 @@ Temporary mechanism nào có thể xóa?
 
 Điều này biến di chuyển (migration / 마이그레이션) từ dự án (project / 프로젝트) checklist thành controlled máy trạng thái (state machine / 상태 머신).
 
-> **Nối mạch:** **23. quyết định (decision / 결정) gate nên dựa bất biến (invariant / 불변식) + bằng chứng (evidence / 증거)** đặt vấn đề; **24. Mô hình tư duy** kiểm tra bằng chứng, rồi **Kết nối** mở rộng hệ quả.
-
 ## 24. Mô hình tư duy
 
 > Large-scale refactoring là **thiết kế chuỗi trạng thái trung gian an toàn**. Strangler và branch-by-abstraction giảm blast radius bằng coexistence; expand-contract quản tính tương thích (compatibility / 호환성); backfill/CDC quản trạng thái (state / 상태) movement; cutover chuyển authority; quay lui (rollback / 롤백) chỉ tồn tại khi mã (code / 코드) + dữ liệu (data / 데이터) + giao thức (protocol / 프로토콜) còn compatible. **Đích cuối quan trọng, nhưng kỹ thuật (engineering / 엔지니어링) difficulty nằm ở mọi chuyển tiếp (transition / 전이) phải có bất biến (invariant / 불변식), bằng chứng (evidence / 증거) và khôi phục (recovery / 복구) đường dẫn (path / 경로).**
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **24. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

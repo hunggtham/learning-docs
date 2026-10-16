@@ -36,8 +36,6 @@ f(x)+f'(x)\Delta x.
 
 Cách nhìn thứ ba là sâu nhất để nối sang multivariable calculus, tối ưu hóa (optimization / 최적화), numerical methods và machine học tập (learning / 학습).
 
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Derive x^2 từ nguyên lý nền tảng (first principles / 제일 원리)** nối từ **Ba cách nhìn cần giữ cùng lúc** sang **Vì sao power quy tắc (rule / 규칙) có dạng nx^{n-1}?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Derive `x^2` từ nguyên lý nền tảng (first principles / 제일 원리)
 
 Với
@@ -70,8 +68,6 @@ Trong quá trình limit, `h\neq0`, nên có thể factor/cancel:
 
 Formula `2x` không phải magic quy tắc (rule / 규칙). Nó nói parabola có cục bộ (local / 로컬) slope tăng tuyến tính theo position.
 
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Vì sao power quy tắc (rule / 규칙) có dạng nx^{n-1}?** nối từ **Derive x^2 từ nguyên lý nền tảng (first principles / 제일 원리)** sang **Units: derivative luôn là một tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao power quy tắc (rule / 규칙) có dạng `nx^{n-1}`?
 
 Với positive integer `n`, binomial expansion cho
@@ -98,8 +94,6 @@ Khi `h\to0`, các higher-order terms vanish, còn lại
 
 Đây cũng preview một idea lớn: derivative giữ lại **first-order term** và bỏ những effects nhỏ hơn theo thứ tự (order / 순서) của `h`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Units: derivative luôn là một tỷ lệ (rate / 비율)** nối từ **Vì sao power quy tắc (rule / 규칙) có dạng nx^{n-1}?** sang **Sản phẩm (product / 제품) quy tắc (rule / 규칙): khi hai factors cùng thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Units: derivative luôn là một tỷ lệ (rate / 비율)
 
 Nếu distance đo bằng meters và thời gian (time / 시간) bằng seconds:
@@ -119,8 +113,6 @@ R'(q)
 có đơn vị (unit / 단위) dollars per additional đơn vị (unit / 단위) quanh hiện tại (current / 현재) operating điểm (point / 지점).
 
 Units là sanity check mạnh. Nếu derivative có đơn vị (unit / 단위) vô lý, mô hình (model / 모델) hoặc manipulation có thể sai.
-
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Sản phẩm (product / 제품) quy tắc (rule / 규칙): khi hai factors cùng thay đổi** nối từ **Units: derivative luôn là một tỷ lệ (rate / 비율)** sang **Chuỗi (chain / 사슬) quy tắc (rule / 규칙): sensitivity đi qua một chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sản phẩm (product / 제품) quy tắc (rule / 규칙): khi hai factors cùng thay đổi
 
@@ -144,8 +136,6 @@ Chia cho `\Delta x`. Trong limit, term cuối là second thứ tự (order / 순
 ```
 
 Meaning: total first-order thay đổi (change / 변경) là contribution từ `u` thay đổi khi `v` tạm fixed, cộng contribution từ `v` thay đổi khi `u` tạm fixed.
-
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Sản phẩm (product / 제품) quy tắc (rule / 규칙): khi hai factors cùng thay đổi** đặt đầu vào cho **Chuỗi (chain / 사슬) quy tắc (rule / 규칙): sensitivity đi qua một chuỗi xử lý (pipeline / 파이프라인)**, rồi **Worked example — sensitivity qua một composed mô hình (model / 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi (chain / 사슬) quy tắc (rule / 규칙): sensitivity đi qua một chuỗi xử lý (pipeline / 파이프라인)
 
@@ -174,8 +164,6 @@ output per g-unit × g-unit per x-unit = output per x-unit.
 Nếu temperature ảnh hưởng pressure, pressure ảnh hưởng sensor voltage, chuỗi (chain / 사슬) quy tắc (rule / 규칙) đo sensitivity của voltage đối với temperature bằng cách multiply cục bộ (local / 로컬) sensitivities qua chuỗi xử lý (pipeline / 파이프라인).
 
 Backpropagation trong neural networks chính là chuỗi (chain / 사슬) quy tắc (rule / 규칙) được tổ chức efficient trên computational đồ thị (graph / 그래프).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, sau khi thấy quy trình trong **Chuỗi (chain / 사슬) quy tắc (rule / 규칙): sensitivity đi qua một chuỗi xử lý (pipeline / 파이프라인)**, **Worked example — sensitivity qua một composed mô hình (model / 모델)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Exponential và logarithm: những derivatives có cấu trúc (structure / 구조) đặc biệt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Worked example — sensitivity qua một composed mô hình (model / 모델)
 
@@ -225,8 +213,6 @@ Nếu `x` tăng khoảng `0.01`, đầu ra (output / 출력) tăng xấp xỉ
 
 Derivative đã trở thành cục bộ (local / 로컬) prediction công cụ (tool / 도구).
 
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Worked example — sensitivity qua một composed mô hình (model / 모델)** nêu quy tắc; **Exponential và logarithm: những derivatives có cấu trúc (structure / 구조) đặc biệt** thử quy tắc trong tình huống, rồi **Trigonometric derivatives và vì sao radians quan trọng** mở rộng hệ quả.
-
 ## Exponential và logarithm: những derivatives có cấu trúc (structure / 구조) đặc biệt
 
 Hàm (function / 함수) `e^x` thỏa
@@ -245,8 +231,6 @@ Logarithm có
 
 nên equal relative changes có cấu trúc (structure / 구조) đơn giản trong log coordinates.
 
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Trigonometric derivatives và vì sao radians quan trọng** nối từ **Exponential và logarithm: những derivatives có cấu trúc (structure / 구조) đặc biệt** sang **Implicit differentiation: relationship không cần solve tường minh (explicit / 명시적) trước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trigonometric derivatives và vì sao radians quan trọng
 
 Với radians:
@@ -260,8 +244,6 @@ Với radians:
 ```
 
 Nếu đo bằng degrees, extra conversion factor xuất hiện. Radian không chỉ là convention; nó làm angle bằng arc-length/radius, khiến cục bộ (local / 로컬) hình học (geometry / 기하학) của circle phù hợp tự nhiên với calculus.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Implicit differentiation: relationship không cần solve tường minh (explicit / 명시적) trước** nối từ **Trigonometric derivatives và vì sao radians quan trọng** sang **Derivative như lan truyền lỗi (error propagation / 오류 전파)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Implicit differentiation: relationship không cần solve tường minh (explicit / 명시적) trước
 
@@ -287,8 +269,6 @@ nên
 
 Term `dy/dx` xuất hiện vì `y` itself changes with `x` along the ràng buộc (constraint / 제약조건) curve.
 
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Derivative như lan truyền lỗi (error propagation / 오류 전파)** nối từ **Implicit differentiation: relationship không cần solve tường minh (explicit / 명시적) trước** sang **Relative sensitivity và elasticity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Derivative như lan truyền lỗi (error propagation / 오류 전파)
 
 Nếu đo lường (measurement / 측정) `x` có small lỗi (error / 오류) `\Delta x`, thì
@@ -304,8 +284,6 @@ Derivative magnitude cho cục bộ (local / 로컬) lỗi (error / 오류) ampl
 Ví dụ `y=x^2`, tại `x=100`, derivative là 200. lỗi (error / 오류) `0.01` trong `x` tạo khoảng `2` units lỗi (error / 오류) trong `y`. Same đầu vào (input / 입력) lỗi (error / 오류) ở `x=1` chỉ tạo khoảng `0.02`.
 
 Sensitivity phụ thuộc operating điểm (point / 지점).
-
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Relative sensitivity và elasticity** nối từ **Derivative như lan truyền lỗi (error propagation / 오류 전파)** sang **Differentiability mạnh hơn continuity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Relative sensitivity và elasticity
 
@@ -331,8 +309,6 @@ E(x)=k.
 
 Power-law exponent chính là elasticity constant.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Differentiability mạnh hơn continuity** nối từ **Relative sensitivity và elasticity** sang **Khi derivative không tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Differentiability mạnh hơn continuity
 
 Nếu hàm (function / 함수) differentiable tại `a`, nó continuous tại `a`. Nhưng converse sai.
@@ -340,8 +316,6 @@ Nếu hàm (function / 함수) differentiable tại `a`, nó continuous tại `a
 `|x|` continuous tại 0 nhưng left derivative là `-1`, right derivative là `1`; không có single cục bộ (local / 로컬) tuyến tính (linear / 선형) approximation nên derivative không tồn tại.
 
 Điều này cho thấy derivative không chỉ hỏi “đồ thị (graph / 그래프) có đứt không?” mà hỏi “zoom đủ gần có thấy một line duy nhất không?”.
-
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Khi derivative không tồn tại** nối từ **Differentiability mạnh hơn continuity** sang **Numerical differentiation khác symbolic derivative**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi derivative không tồn tại
 
@@ -355,8 +329,6 @@ Các dùng chung (common / 공통) reasons:
 
 Không nên force symbolic rules ở điểm (point / 지점) nơi các giả định (assumptions / 가정들) của differentiability thất bại (fail / 실패).
 
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Numerical differentiation khác symbolic derivative** nối từ **Khi derivative không tồn tại** sang **Physics, AI và Finance connections**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Numerical differentiation khác symbolic derivative
 
 Máy tính có thể approximate
@@ -369,15 +341,11 @@ Nhưng `h` quá lớn gây truncation lỗi (error / 오류); `h` quá nhỏ gâ
 
 Automatic differentiation lại khác cả hai: nó áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) chính xác ở machine arithmetic lên computation đồ thị (graph / 그래프), không xấp xỉ derivative bằng finite differences.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Physics, AI và Finance connections** nối từ **Numerical differentiation khác symbolic derivative** sang **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Physics, AI và Finance connections
 
 Trong physics, derivative tạo velocity, acceleration, force laws và trường dữ liệu (field / 필드) gradients. Trong AI, gradients đo cục bộ (local / 로컬) sensitivity của mất mát (loss / 손실) đối với parameters. Trong finance, delta của option là derivative của price theo underlying; duration/convexity là related sensitivity concepts. Trong software các hệ thống (systems / 시스템들), derivative-like lập luận (reasoning / 추론) giúp hiểu cục bộ (local / 로컬) sức chứa (capacity / 용량) sensitivity dù measurements thường noisy và discrete.
 
 Điểm chung là cùng một mathematical cấu trúc (structure / 구조): **cục bộ (local / 로컬) phản hồi (response / 응답) to perturbation**.
-
-> **Nối mạch:** Trong **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Physics, AI và Finance connections** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -387,13 +355,9 @@ Small derivative không luôn nghĩa đầu vào (input / 입력) “không quan
 
 A derivative computed from a mô hình (model / 모델) reflects mô hình (model / 모델) sensitivity, not automatically real-world nhân quả (causal / 인과적) sensitivity.
 
-> **Nối mạch:** Ở chặng này của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Đạo hàm là cục bộ (local / 로컬) gain của một hệ thống (system / 시스템). Ta perturb đầu vào (input / 입력) một lượng rất nhỏ và hỏi đầu ra (output / 출력) phản ứng first-order ra sao. Slope, velocity, marginal chi phí (cost / 비용), độ dốc (gradient / 기울기) và backpropagation đều là các biểu hiện của cùng idea: cục bộ (local / 로컬) tuyến tính (linear / 선형) phản hồi (response / 응답).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo hàm: cục bộ (local / 로컬) thay đổi (change / 변경), sensitivity và tuyến tính (linear / 선형) approximation**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

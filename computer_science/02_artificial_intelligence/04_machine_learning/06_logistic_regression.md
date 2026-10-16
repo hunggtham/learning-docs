@@ -38,8 +38,6 @@ p(y=1\mid x)=\sigma(z)
 
 Khi `z=0`, xác suất (probability / 확률) là `0.5`. `z` càng dương thì xác suất (probability / 확률) tiến về `1`; càng âm thì tiến về `0`.
 
-> **Chuyển mạch:** Trong **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Odds và log-odds** tiếp nhận điểm tựa từ **Tại sao tuyến tính (linear / 선형) Regression không phù hợp trực tiếp cho nhị phân (binary / 이진) classification?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maximum Likelihood dẫn tới nhị phân (binary / 이진) Cross-Entropy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Odds và log-odds
 
 Xác suất (probability / 확률) `p` có odds:
@@ -69,8 +67,6 @@ e^{w_j}
 \]
 
 khi giữ tính năng (feature / 기능) khác cố định.
-
-> **Chuyển mạch:** Ở chặng này của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Maximum Likelihood dẫn tới nhị phân (binary / 이진) Cross-Entropy** tiếp nhận điểm tựa từ **Odds và log-odds** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Maximum Likelihood dẫn tới nhị phân (binary / 이진) Cross-Entropy
 
@@ -102,8 +98,6 @@ L=-[y\log p+(1-y)\log(1-p)]
 
 Vì vậy sigmoid và cross-entropy không phải hai recipe vô tình ghép với nhau. Chúng xuất phát từ một probabilistic mô hình (model / 모델) thống nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Maximum Likelihood dẫn tới nhị phân (binary / 이진) Cross-Entropy** đã nêu tiêu chí phân biệt, còn **Quyết định (decision / 결정) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Xác suất (probability / 확률) đầu ra (output / 출력) không tự động calibrated** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quyết định (decision / 결정) ranh giới (boundary / 경계)
 
 Nếu threshold là `0.5`:
@@ -124,8 +118,6 @@ Logistic Regression vì vậy là tuyến tính (linear / 선형) classifier tro
 
 Nếu cần nonlinear ranh giới (boundary / 경계), có thể thêm transformed features hoặc dùng nonlinear mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Quyết định (decision / 결정) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Xác suất (probability / 확률) đầu ra (output / 출력) không tự động calibrated** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Threshold không phải luôn 0.5** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Xác suất (probability / 확률) đầu ra (output / 출력) không tự động calibrated
 
 Logistic Regression thường có xác suất (probability / 확률) interpretation tốt khi mô hình (model / 모델) specification phù hợp, nhưng calibration vẫn phải kiểm tra.
@@ -135,8 +127,6 @@ Nếu mô hình (model / 모델) nói `p≈0.8` cho nhiều samples, ideally kho
 Calibration có thể đánh giá bằng độ tin cậy (reliability / 신뢰성) diagram, Brier score hoặc expected calibration lỗi (error / 오류).
 
 Một classifier có AUC cao nhưng calibration kém vẫn có thể gây bài toán (problem / 문제) nếu downstream hệ thống (system / 시스템) dùng score như rủi ro (risk / 위험) xác suất (probability / 확률).
-
-> **Chuyển mạch:** Ở chặng này của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Threshold không phải luôn 0.5** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) đầu ra (output / 출력) không tự động calibrated** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Threshold không phải luôn 0.5
 
@@ -151,8 +141,6 @@ Choose\ hành động (action / 동작)\ a=\arg\min_a \mathbb E[chi phí (cost /
 \]
 
 Do đó threshold phải được chọn theo operational mục tiêu (objective / 목표), không theo convention.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Lớp (class / 클래스) imbalance** tiếp nhận điểm tựa từ **Threshold không phải luôn 0.5** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Lớp (class / 클래스) imbalance
 
@@ -170,8 +158,6 @@ L=-[w_1y\log p+w_0(1-y)\log(1-p)]
 
 nhưng weighting cũng có thể thay xác suất (probability / 확률) calibration. Nếu cần calibrated xác suất (probability / 확률), phải đánh giá lại sau huấn luyện (training / 학습).
 
-> **Chuyển mạch:** Trong **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Regularization** tiếp nhận điểm tựa từ **Lớp (class / 클래스) imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multiclass: Softmax Regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Regularization
 
 L2-regularized logistic regression:
@@ -183,8 +169,6 @@ J(\mathbf w)=\frac1n\sum_iL_i+\lambda\|\mathbf w\|_2^2
 L1 regularization có thể tạo sparse coefficients.
 
 Regularization đặc biệt hữu ích khi tính năng (feature / 기능) dimension lớn hoặc features correlated.
-
-> **Chuyển mạch:** Ở chặng này của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Multiclass: Softmax Regression** tiếp nhận điểm tựa từ **Regularization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Multiclass: Softmax Regression
 
@@ -210,8 +194,6 @@ L=-\log p(y_{true}\mid x)
 
 Neural mạng (network / 네트워크) classifier thường chỉ thay phần tính năng (feature / 기능) extractor; cuối cùng vẫn có tuyến tính (linear / 선형) logits + softmax.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Numerical stability** tiếp nhận điểm tựa từ **Multiclass: Softmax Regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interpretability và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Numerical stability
 
 Tính sigmoid naive với `e^{-z}` có thể overflow khi `z` rất âm. Softmax naive cũng có overflow.
@@ -232,8 +214,6 @@ m+\log\sum_i e^{z_i-m},\quad m=\max_i z_i
 
 Đây là liên kết (connection / 연결) trực tiếp tới Numerical Computation.
 
-> **Chuyển mạch:** Trong **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Numerical stability** đã nêu tiêu chí phân biệt, còn **Interpretability và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết (connection / 연결) tới ngôn ngữ (language / 언어) các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Interpretability và giới hạn
 
 Coefficients tương đối dễ inspect, nhưng “dễ đọc coefficient” không đồng nghĩa nhân quả (causal / 인과적) interpretability.
@@ -241,8 +221,6 @@ Coefficients tương đối dễ inspect, nhưng “dễ đọc coefficient” k
 Tính năng (feature / 기능) correlation, omitted variables, dữ liệu (data / 데이터) selection và transformations đều ảnh hưởng coefficients.
 
 Nếu đầu vào (input / 입력) là one-hot categories hoặc standardized features, coefficient meaning cũng phụ thuộc biểu diễn (representation / 표현).
-
-> **Chuyển mạch:** Ở chặng này của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Interpretability và giới hạn** đã nêu tiêu chí phân biệt, còn **Liên kết (connection / 연결) tới ngôn ngữ (language / 언어) các mô hình (models / 모델들)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên kết (connection / 연결) tới ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 
@@ -259,8 +237,6 @@ z=W_{out}h+b
 \]
 
 Vì vậy Logistic Regression không phải “thuật toán (algorithm / 알고리즘) cũ không liên quan LLM”; nó là building khối (block / 블록) còn hiện diện ở đầu ra (output / 출력) phân phối (distribution / 분포).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết (connection / 연결) tới ngôn ngữ (language / 언어) các mô hình (models / 모델들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -280,8 +256,6 @@ Threshold / decision policy
 
 Hãy giữ tách hai câu hỏi: mô hình (model / 모델) ước lượng xác suất (probability / 확률) gì, và hệ thống (system / 시스템) dùng xác suất (probability / 확률) đó để ra quyết định thế nào.
 
-> **Chuyển mạch:** Trong **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 ### “Sigmoid đầu ra (output / 출력) 0.9 nghĩa chắc chắn 90% đúng”
@@ -299,8 +273,6 @@ Có thể dùng polynomial/tương tác (interaction / 상호작용)/engineered 
 ### “Softmax xác suất (probability / 확률) là confidence tuyệt đối của mô hình (model / 모델)”
 
 Softmax chỉ normalize logits. Neural mạng (network / 네트워크) có thể overconfident, đặc biệt under phân phối (distribution / 분포) shift.
-
-> **Chuyển mạch:** Ở chặng này của **Logistic Regression: từ tuyến tính (linear / 선형) score tới xác suất phân loại**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -42,8 +42,6 @@ F_\nu
 
 Quy luật nghịch đảo bình phương xuất hiện vì cùng một công suất bị trải trên mặt cầu diện tích `4\pi d^2`.
 
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Vì sao cường độ riêng quan trọng?** nối từ **Cường độ riêng và thông lượng** sang **Phương trình truyền bức xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao cường độ riêng quan trọng?
 
 Một tính chất hữu ích là trong chân không không hấp thụ và không phát xạ, `I_\nu` dọc một tia được bảo toàn trong mô tả cổ điển thích hợp.
@@ -51,8 +49,6 @@ Một tính chất hữu ích là trong chân không không hấp thụ và khô
 Điều này khác thông lượng tổng, vốn thay đổi với khoảng cách do góc khối mà nguồn chiếm trên bầu trời thay đổi.
 
 Phân biệt intensity, flux và luminosity giúp tránh nhiều nhầm lẫn khi chuyển từ “tín hiệu detector đo được” sang “công suất thật của nguồn”.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Phương trình truyền bức xạ** nối từ **Vì sao cường độ riêng quan trọng?** sang **Độ sâu quang học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình truyền bức xạ
 
@@ -99,8 +95,6 @@ với độ sâu quang học
 d\tau_\nu=\alpha_\nu ds.
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Độ sâu quang học** nối từ **Phương trình truyền bức xạ** sang **Nghiệm cho môi trường đồng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ sâu quang học
 
 Nếu
@@ -120,8 +114,6 @@ Nếu
 môi trường **quang học dày (optically thick)**: bức xạ quan sát chủ yếu xuất phát từ lớp gần nơi `\tau_\nu\sim1`.
 
 Đây là lý do “bề mặt” của một ngôi sao trong quan sát không nhất thiết là một ranh giới vật chất sắc nét. Photosphere gần đúng là lớp mà photon có xác suất thoát ra đáng kể.
-
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Nghiệm cho môi trường đồng nhất** nối từ **Độ sâu quang học** sang **Vật đen và định luật Planck**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghiệm cho môi trường đồng nhất
 
@@ -152,8 +144,6 @@ I_\nu\rightarrow S_\nu.
 ```
 
 Ở môi trường cân bằng nhiệt cục bộ, nguồn (source / 소스) hàm (function / 함수) tiến gần hàm Planck, nên vật quang học dày có phổ gần vật đen.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Vật đen và định luật Planck** nối từ **Nghiệm cho môi trường đồng nhất** sang **Vạch phổ hình thành thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật đen và định luật Planck
 
@@ -196,8 +186,6 @@ F=\sigma T^4
 
 thu được khi tích phân phổ vật đen trên toàn bộ tần số và góc.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Vạch phổ hình thành thế nào?** nối từ **Vật đen và định luật Planck** sang **Doppler và vận tốc đường ngắm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vạch phổ hình thành thế nào?
 
 Một vạch hấp thụ xuất hiện khi lớp vật chất tương đối lạnh nằm trước nguồn continuum nóng hơn và hấp thụ photon ở các tần số chuyển mức đặc trưng.
@@ -215,8 +203,6 @@ Vạch phát xạ có thể xuất hiện khi khí loãng được kích thích 
 
 Do đó suy ra thành phần hóa học từ phổ là bài toán vật lý thống kê và truyền bức xạ, không phải chỉ khớp một danh sách bước sóng.
 
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Doppler và vận tốc đường ngắm** nối từ **Vạch phổ hình thành thế nào?** sang **Độ rộng vạch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Doppler và vận tốc đường ngắm
 
 Ở vận tốc nhỏ so với `c`, dịch Doppler gần đúng là
@@ -232,8 +218,6 @@ Do đó suy ra thành phần hóa học từ phổ là bài toán vật lý th�
 Do chỉ đo thành phần đường ngắm, spectroscopy không tự cho toàn bộ vectơ vận tốc ba chiều.
 
 Khi vận tốc relativistic, phải dùng công thức Doppler tương đối tính đầy đủ.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Độ rộng vạch** nối từ **Doppler và vận tốc đường ngắm** sang **Độ phân giải phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ rộng vạch
 
@@ -256,8 +240,6 @@ Các cơ chế khác gồm:
 
 Việc tách các cơ chế này là một bài toán suy luận mô hình.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Độ phân giải phổ** nối từ **Độ rộng vạch** sang **Magnitude và thang logarit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ phân giải phổ
 
 Khả năng phân biệt hai bước sóng gần nhau thường mô tả bằng
@@ -271,8 +253,6 @@ Nếu `R` quá thấp, các vạch gần nhau hòa trộn và thông tin vận t
 Tăng độ phân giải không phải miễn phí: photon bị phân chia vào nhiều bin phổ hơn, có thể làm SNR trên mỗi bin giảm nếu tổng photon không đổi.
 
 Đây là một ví dụ rõ của đánh đổi giữa độ phân giải và độ nhạy.
-
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Magnitude và thang logarit** nối từ **Độ phân giải phổ** sang **Extinction và reddening**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Magnitude và thang logarit
 
@@ -301,8 +281,6 @@ m-M
 
 khi bỏ qua extinction và các hiệu chỉnh khác.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Extinction và reddening** nối từ **Magnitude và thang logarit** sang **Kính thiên văn đo gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Extinction và reddening
 
 Bụi liên sao hấp thụ và tán xạ ánh sáng, thường mạnh hơn ở bước sóng ngắn, làm nguồn trông mờ và đỏ hơn.
@@ -310,8 +288,6 @@ Bụi liên sao hấp thụ và tán xạ ánh sáng, thường mạnh hơn ở 
 Nếu không hiệu chỉnh extinction, ta có thể suy ra sai nhiệt độ, độ sáng và khoảng cách.
 
 Đây là ví dụ điển hình của một **nuisance parameter**: đại lượng không phải mục tiêu chính nhưng nếu bỏ qua sẽ làm tham số quan tâm bị lệch.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Kính thiên văn đo gì?** nối từ **Extinction và reddening** sang **CCD và photon counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kính thiên văn đo gì?
 
@@ -329,8 +305,6 @@ Kính thiên văn không đơn giản “phóng to vật thể”. Chức năng 
 Do đó kính lớn vừa nhạy hơn vừa có tiềm năng phân giải tốt hơn.
 
 Tuy nhiên từ mặt đất, seeing khí quyển thường làm ảnh mờ hơn giới hạn nhiễu xạ nếu không dùng adaptive optics.
-
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **CCD và photon counting** nối từ **Kính thiên văn đo gì?** sang **Tích phân lâu hơn không giải quyết mọi vấn đề**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CCD và photon counting
 
@@ -358,8 +332,6 @@ nên SNR photon-limited tăng gần
 
 Vì vậy muốn tăng SNR gấp đôi thường cần xấp xỉ gấp bốn số photon.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Tích phân lâu hơn không giải quyết mọi vấn đề** nối từ **CCD và photon counting** sang **Parallax và khoảng cách hình học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tích phân lâu hơn không giải quyết mọi vấn đề
 
 Tăng exposure giúp khi noise ngẫu nhiên chi phối. Nhưng nó không tự sửa:
@@ -373,8 +345,6 @@ Tăng exposure giúp khi noise ngẫu nhiên chi phối. Nhưng nó không tự 
 
 Giống mọi thí nghiệm, nhiều dữ liệu không tự động loại sai số hệ thống.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Parallax và khoảng cách hình học** nối từ **Tích phân lâu hơn không giải quyết mọi vấn đề** sang **Thang khoảng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Parallax và khoảng cách hình học
 
 Nếu quan sát một sao từ hai vị trí khác nhau trên quỹ đạo Trái Đất, vị trí biểu kiến của nó thay đổi so với nền xa.
@@ -386,8 +356,6 @@ d(\mathrm{pc})=\frac1{p(\mathrm{arcsec})}.
 ```
 
 Đây là phương pháp hình học trực tiếp nhưng độ chính xác giảm khi nguồn quá xa vì góc quá nhỏ.
-
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Thang khoảng cách** nối từ **Parallax và khoảng cách hình học** sang **Redshift vũ trụ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thang khoảng cách
 
@@ -402,8 +370,6 @@ parallax
 ```
 
 Mỗi bậc được hiệu chuẩn dựa trên bậc gần hơn. Vì vậy sai số hiệu chuẩn có thể lan truyền lên các khoảng cách rất lớn.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Redshift vũ trụ học** nối từ **Thang khoảng cách** sang **K-correction và bandpass**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Redshift vũ trụ học
 
@@ -425,8 +391,6 @@ v\approx cz
 
 chỉ hữu ích ở redshift nhỏ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **K-correction và bandpass** nối từ **Redshift vũ trụ học** sang **Selection tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## K-correction và bandpass
 
 Khi nguồn ở redshift lớn, cùng một filter quan sát tương ứng với vùng bước sóng khác trong hệ nghỉ của nguồn.
@@ -435,8 +399,6 @@ Do đó so sánh luminosity giữa các nguồn ở redshift khác nhau cần hi
 
 Đây là một ví dụ cho thấy dữ liệu detector không thể được diễn giải tách rời mô hình spectral năng lượng (energy / 에너지) phân phối (distribution / 분포) của nguồn.
 
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Selection tác động (effect / 효과)** nối từ **K-correction và bandpass** sang **Bài toán ngược trong thiên văn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Selection tác động (effect / 효과)
 
 Một survey giới hạn thông lượng sẽ dễ phát hiện vật sáng hơn ở khoảng cách lớn. Vì vậy mẫu quan sát không phải một mẫu ngẫu nhiên đơn giản của toàn bộ quần thể.
@@ -444,8 +406,6 @@ Một survey giới hạn thông lượng sẽ dễ phát hiện vật sáng hơ
 Nếu không mô hình selection hàm (function / 함수), ta có thể suy ra sai phân bố luminosity, khối lượng hoặc tốc độ tiến hóa của quần thể.
 
 Đây là vấn đề chung của khoa học dữ liệu: quá trình thu thập dữ liệu là một phần của mô hình xác suất.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Bài toán ngược trong thiên văn** nối từ **Selection tác động (effect / 효과)** sang **Suy biến tham số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bài toán ngược trong thiên văn
 
@@ -476,8 +436,6 @@ P(D|\theta)P(\theta).
 
 Posterior không chỉ phụ thuộc dữ liệu mà còn phụ thuộc likelihood và prior. Vì vậy khi hai phân tích dùng prior hoặc noise mô hình (model / 모델) khác nhau, kết quả có thể khác dù dùng cùng dữ liệu.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Suy biến tham số** nối từ **Bài toán ngược trong thiên văn** sang **Multi-wavelength astronomy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Suy biến tham số
 
 Hai bộ tham số khác nhau có thể tạo phổ hoặc ảnh rất giống nhau.
@@ -490,8 +448,6 @@ Ví dụ một nguồn đỏ có thể do:
 - metallicity khác.
 
 Đây gọi là suy biến (degeneracy). Thêm dữ liệu ở bước sóng khác hoặc phép đo độc lập có thể phá suy biến.
-
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Multi-wavelength astronomy** nối từ **Suy biến tham số** sang **Multi-messenger astronomy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-wavelength astronomy
 
@@ -507,8 +463,6 @@ Ví dụ:
 
 Không có một band duy nhất chứa toàn bộ câu chuyện vật lý.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Multi-messenger astronomy** nối từ **Multi-wavelength astronomy** sang **Worked lập luận (reasoning / 추론): suy nhiệt độ và bán kính sao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Multi-messenger astronomy
 
 Ngoài photon, thiên văn học hiện đại còn dùng:
@@ -520,8 +474,6 @@ Ngoài photon, thiên văn học hiện đại còn dùng:
 Một sự kiện được quan sát bằng nhiều messenger có thể phá các suy biến mà từng kênh riêng không giải quyết được.
 
 Ví dụ sóng hấp dẫn cho trực tiếp thông tin động lực học compact nhị phân (binary / 이진), trong khi counterpart điện từ có thể cho môi trường, redshift hoặc nucleosynthesis.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Multi-messenger astronomy** nêu quy tắc; **Worked lập luận (reasoning / 추론): suy nhiệt độ và bán kính sao** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Worked lập luận (reasoning / 추론): suy nhiệt độ và bán kính sao
 
@@ -559,8 +511,6 @@ blackbody approximation → Stefan-Boltzmann
 
 Nếu extinction hoặc blackbody approximation sai, bán kính suy ra cũng bị lệch.
 
-> **Nối mạch:** Trong **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Worked lập luận (reasoning / 추론): suy nhiệt độ và bán kính sao** nêu quy tắc; **Những ngộ nhận thường gặp (Common Misconceptions)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Ảnh thiên văn là hình chụp trực tiếp của vật thể như mắt người thấy”
@@ -579,8 +529,6 @@ Không hoàn toàn. Cường độ vạch còn phụ thuộc nhiệt độ, ion 
 
 Chỉ là xấp xỉ redshift nhỏ. Ở vũ trụ học, redshift gắn với sự giãn nở không-thời gian.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Thiên văn học quan sát là một bài toán suy luận nhiều tầng. Photon không mang theo nhãn “nhiệt độ = 6000 K” hay “khối lượng = 1 M☉”. Ta phải xây mô hình cho nguồn, truyền bức xạ, instrument và noise rồi mới suy tham số.
@@ -591,8 +539,6 @@ Vì vậy một kết quả thiên văn tốt nên luôn trả lời bốn câu 
 2. Mô hình thuận biến tham số vật lý thành dữ liệu thế nào?
 3. Nguồn noise và systematic nào chi phối?
 4. Tham số nào thực sự được dữ liệu ràng buộc và tham số nào còn suy biến?
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thiên văn quan sát và truyền bức xạ: từ photon tới suy luận vật lý**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -34,13 +34,9 @@ Silver nối châu Mỹ, châu Âu và châu Á nhưng không có nghĩa mọi v
 
 In ấn giảm chi phí bản sao (copy / 복사) nhưng không đảm bảo truth; censorship, literacy, patronage và thị trường (market / 시장) quyết định văn bản (text / 텍스트) nào sống. Reformation, scientific societies và legal debates mở không gian phản biện, đồng thời tạo chiến tranh confession và phân cực mới.
 
-> **Nối mạch:** Cơ chế nhà nước tài chính chỉ thuyết phục khi gắn thuốc súng, đại dương, thuế và tín dụng với dấu vết cụ thể. **Bằng chứng, giới hạn và cầu nối** đặt dữ liệu vào đúng mắt xích trước khi đi tới depth pass.
-
 ## Bằng chứng, giới hạn và cầu nối
 
 Customs ledgers, ship logs, price series, court records, maps và material culture giúp nối court với cổng (port / 포트) nhưng thường bỏ qua informal trade và coerced labor. Counterfactual: nếu credit không mở rộng, gunpowder trạng thái (state / 상태) vẫn có thể chiến thắng địa phương nhưng khó duy trì navy và payroll dài hạn. Cầu nối sang 08 là **cổng (port / 포트)/plantation/silver luồng (flow / 흐름) vượt basin và biến unequal exchange thành hệ thống toàn cầu**.
-
-> **Nối mạch:** Bằng chứng về thuốc súng, thương mại biển và thuế phải đi cùng giới hạn so sánh; **Độ sâu pass** chỉ được nâng khi không còn nhầm tương quan chiến tranh với nguyên nhân duy nhất của nhà nước tài chính.
 
 ## Độ sâu (depth / 깊이) pass: trạng thái (state / 상태) formation dưới áp lực chiến tranh và đại dương
 

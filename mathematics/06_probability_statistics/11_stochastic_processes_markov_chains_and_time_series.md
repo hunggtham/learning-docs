@@ -26,8 +26,6 @@ Một tiến trình (process / 프로세스) vì vậy vừa là collection củ
 
 Ví dụ random walk có mẫu (sample / 표본) đường dẫn (path / 경로) đi lên xuống từng bước; Brownian motion có continuous nhưng nowhere differentiable mẫu (sample / 표본) paths.
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Mẫu (sample / 표본) đường dẫn (path / 경로) và phân phối (distribution / 분포)** đặt đầu vào cho **Discrete-time và continuous-time**, rồi **Mean hàm (function / 함수) và covariance hàm (function / 함수)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Discrete-time và continuous-time
 
 Nếu
@@ -48,8 +46,6 @@ Tiến trình (process / 프로세스) là continuous-time. Poisson tiến trìn
 
 Trạng thái (state / 상태) không gian (space / 공간) cũng có thể discrete hoặc continuous, độc lập với việc thời gian (time / 시간) là discrete hay continuous.
 
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Mean hàm (function / 함수) và covariance hàm (function / 함수)** nối từ **Discrete-time và continuous-time** sang **Stationarity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mean hàm (function / 함수) và covariance hàm (function / 함수)
 
 Mean của tiến trình (process / 프로세스) tại thời gian (time / 시간) `t` là
@@ -67,8 +63,6 @@ C(s,t)=\operatorname{Cov}(X_s,X_t).
 Covariance hàm (function / 함수) mô tả mức độ tiến trình (process / 프로세스) ở hai thời điểm cùng biến thiên.
 
 Nếu covariance giảm khi `|t-s|` lớn, states xa nhau trong thời gian có xu hướng ít liên quan hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Stationarity** nối từ **Mean hàm (function / 함수) và covariance hàm (function / 함수)** sang **Autocorrelation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stationarity
 
@@ -90,8 +84,6 @@ C(s,t)=C(t-s).
 
 Stationarity là giả định (assumption / 가정) mạnh nhưng hữu ích trong tín hiệu (signal / 신호) processing và time-series phân tích (analysis / 분석) vì nó biến một hệ thay đổi theo thời gian (time / 시간) thành cấu trúc (structure / 구조) có thể học từ repeated patterns.
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Autocorrelation** nối từ **Stationarity** sang **Markov thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Autocorrelation
 
 Autocorrelation đo correlation giữa tiến trình (process / 프로세스) và phiên bản delayed của chính nó.
@@ -106,8 +98,6 @@ Autocorrelation cao ở lag `k` cho thấy observation hiện tại chứa thôn
 
 Điều này khác ordinary correlation giữa hai variables khác nhau; đây là self-dependence across thời gian (time / 시간).
 
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Markov thuộc tính (property / 속성)** nối từ **Autocorrelation** sang **Chuyển tiếp (transition / 전이) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Markov thuộc tính (property / 속성)
 
 Một tiến trình (process / 프로세스) có **Markov thuộc tính (property / 속성)** nếu future phụ thuộc trạng thái hiện tại (current state / 현재 상태) nhưng không cần toàn bộ past khi trạng thái hiện tại (current state / 현재 상태) đã biết.
@@ -121,8 +111,6 @@ P(X_{t+1}=x_{t+1}\mid X_t=x_t).
 ```
 
 Câu này không có nghĩa “future độc lập với past” theo nghĩa tuyệt đối. Nó nói trạng thái hiện tại (current state / 현재 상태) chứa đủ relevant thông tin (information / 정보) từ past cho việc dự đoán next trạng thái (state / 상태).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Chuyển tiếp (transition / 전이) ma trận (matrix / 행렬)** nối từ **Markov thuộc tính (property / 속성)** sang **Ví dụ trạng thái hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển tiếp (transition / 전이) ma trận (matrix / 행렬)
 
@@ -148,8 +136,6 @@ Sau `n` steps,
 
 Như vậy Markov chuỗi (chain / 사슬) nối xác suất (probability / 확률) với tuyến tính (linear / 선형) algebra rất trực tiếp.
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Chuyển tiếp (transition / 전이) ma trận (matrix / 행렬)** nêu quy tắc; **Ví dụ trạng thái hệ thống** thử quy tắc trong tình huống, rồi **Stationary phân phối (distribution / 분포)** mở rộng hệ quả.
-
 ## Ví dụ trạng thái hệ thống
 
 Giả sử một dịch vụ (service / 서비스) mỗi ngày ở một trong hai states: `Healthy` hoặc `Degraded`.
@@ -168,8 +154,6 @@ nghĩa là nếu hôm nay Healthy thì ngày mai vẫn Healthy với xác suất
 
 Nhân phân phối (distribution / 분포) véc-tơ (vector / 벡터) với `P` nhiều lần cho ta long-run hành vi (behavior / 동작).
 
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Ví dụ trạng thái hệ thống** nêu quy tắc; **Stationary phân phối (distribution / 분포)** thử quy tắc trong tình huống, rồi **Irreducibility và communicating states** mở rộng hệ quả.
-
 ## Stationary phân phối (distribution / 분포)
 
 Một phân phối (distribution / 분포) `π` là stationary nếu
@@ -184,8 +168,6 @@ Under appropriate irreducibility và aperiodicity conditions, finite Markov chu�
 
 Đây là một liên kết (connection / 연결) đẹp giữa xác suất (probability / 확률), eigenvalues và long-run dynamics.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Irreducibility và communicating states** nối từ **Stationary phân phối (distribution / 분포)** sang **Periodicity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Irreducibility và communicating states
 
 Hai states communicate nếu có positive-probability đường dẫn (path / 경로) từ trạng thái (state / 상태) này tới trạng thái (state / 상태) kia và ngược lại.
@@ -194,8 +176,6 @@ Chuỗi (chain / 사슬) irreducible nếu mọi states communicate.
 
 Nếu chuỗi (chain / 사슬) tách thành nhiều disconnected classes, không thể mong một unique long-run phân phối (distribution / 분포) independent of initial trạng thái (state / 상태).
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Periodicity** nối từ **Irreducibility và communicating states** sang **Absorbing states**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Periodicity
 
 Một trạng thái (state / 상태) có period `d>1` nếu return times chỉ xảy ra ở multiples của `d`.
@@ -203,8 +183,6 @@ Một trạng thái (state / 상태) có period `d>1` nếu return times chỉ x
 Ví dụ chuỗi (chain / 사슬) deterministic alternating giữa A và B có period 2. phân phối (distribution / 분포) không settle theo cách thông thường mà oscillates.
 
 Aperiodicity loại bỏ kiểu rigid cycling này.
-
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Absorbing states** nối từ **Periodicity** sang **Random walk**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Absorbing states
 
@@ -219,8 +197,6 @@ Một khi vào trạng thái (state / 상태) đó chuỗi (chain / 사슬) khô
 Absorbing Markov chains dùng để mô hình churn, thất bại (failure / 실패), completion, bankruptcy hoặc termination states.
 
 Ta có thể tính xác suất (probability / 확률) cuối cùng bị absorb ở mỗi absorbing trạng thái (state / 상태) và expected thời gian (time / 시간) tới absorption.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Random walk** nối từ **Absorbing states** sang **Poisson tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Random walk
 
@@ -240,8 +216,6 @@ Expected position sau `t` steps vẫn bằng initial position, nhưng variance t
 
 Random walk là mô hình (model / 모델) nền tảng cho diffusion, finance, queueing và stochastic algorithms.
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Random walk** đặt đầu vào cho **Poisson tiến trình (process / 프로세스)**, rồi **Brownian motion** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Poisson tiến trình (process / 프로세스)
 
 Poisson tiến trình (process / 프로세스) `N(t)` mô hình số events xảy ra tới thời gian (time / 시간) `t` khi events đến độc lập với constant tỷ lệ (rate / 비율) `λ`.
@@ -255,8 +229,6 @@ N(t)\sim\operatorname{Poisson}(\lambda t).
 Interarrival times độc lập và exponential với mean `1/λ`.
 
 Mô hình (model / 모델) này hợp lý cho rare independent arrivals trong một số hệ, nhưng không phù hợp nếu events cluster mạnh hoặc tỷ lệ (rate / 비율) thay đổi theo thời gian (time / 시간).
-
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Poisson tiến trình (process / 프로세스)** đặt đầu vào cho **Brownian motion**, rồi **Martingale intuition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Brownian motion
 
@@ -278,8 +250,6 @@ Mẫu (sample / 표본) paths continuous gần như chắc chắn nhưng nowhere
 
 Brownian motion là building khối (block / 블록) của stochastic calculus, diffusion các mô hình (models / 모델들) và mathematical finance.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Martingale intuition** nối từ **Brownian motion** sang **Thời gian (time / 시간) series: trend, seasonality và noise**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Martingale intuition
 
 Tiến trình (process / 프로세스) `X_t` là martingale nếu conditional expectation của future trạng thái (state / 상태) bằng trạng thái hiện tại (current state / 현재 상태):
@@ -291,8 +261,6 @@ E[X_{t+1}\mid X_0,\dots,X_t]=X_t.
 Nó formalize idea của “fair game”: với thông tin (information / 정보) hiện có, không có expected drift.
 
 Martingale không có nghĩa values không thay đổi; bất định (uncertainty / 불확실성) có thể tăng mạnh dù conditional mean không đổi.
-
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Thời gian (time / 시간) series: trend, seasonality và noise** nối từ **Martingale intuition** sang **AR mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian (time / 시간) series: trend, seasonality và noise
 
@@ -306,8 +274,6 @@ Y_t=X_t-X_{t-1}.
 
 Đây là lý do differencing xuất hiện trong classical time-series các mô hình (models / 모델들).
 
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **AR mô hình (model / 모델)** nối từ **Thời gian (time / 시간) series: trend, seasonality và noise** sang **Moving-average mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## AR mô hình (model / 모델)
 
 Autoregressive mô hình (model / 모델) bậc 1:
@@ -319,8 +285,6 @@ X_t=\phi X_{t-1}+\varepsilon_t.
 Nếu `|φ|<1`, tác động (effect / 효과) của shock giảm dần và tiến trình (process / 프로세스) có stationary solution dưới dùng chung (common / 공통) các giả định (assumptions / 가정들).
 
 Nếu `φ≈1`, bộ nhớ (memory / 메모리) rất dài. Nếu `φ=1`, ta có random-walk-like hành vi (behavior / 동작).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Moving-average mô hình (model / 모델)** nối từ **AR mô hình (model / 모델)** sang **Hidden Markov mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Moving-average mô hình (model / 모델)
 
@@ -334,8 +298,6 @@ Hiện tại (current / 현재) observation phụ thuộc hiện tại (current 
 
 AR và MA có thể combine thành ARMA; thêm differencing tạo ARIMA.
 
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Hidden Markov mô hình (model / 모델)** nối từ **Moving-average mô hình (model / 모델)** sang **Markov chuỗi (chain / 사슬) Monte Carlo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hidden Markov mô hình (model / 모델)
 
 Trong **Hidden Markov mô hình (model / 모델) — HMM**, hidden trạng thái (state / 상태) `Z_t` tuân Markov chuỗi (chain / 사슬) nhưng ta không observe trực tiếp. Thay vào đó observe `X_t` generated conditional on `Z_t`.
@@ -343,8 +305,6 @@ Trong **Hidden Markov mô hình (model / 모델) — HMM**, hidden trạng thái
 Cấu trúc này phù hợp khi hệ thống (system / 시스템) có latent regimes: speech phonemes, người dùng (user / 사용자) intent states, machine operating modes hoặc thị trường (market / 시장) regimes.
 
 Suy luận (inference / 추론) thường hỏi posterior xác suất (probability / 확률) của hidden states given observations.
-
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Hidden Markov mô hình (model / 모델)** đặt đầu vào cho **Markov chuỗi (chain / 사슬) Monte Carlo**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Markov chuỗi (chain / 사슬) Monte Carlo
 
@@ -354,13 +314,9 @@ Sau burn-in và dưới suitable conditions, samples từ chuỗi (chain / 사�
 
 Điều này tạo cầu nối (bridge / 브리지) giữa Markov chains và Bayesian suy luận (inference / 추론).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Markov chuỗi (chain / 사슬) Monte Carlo** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Random variable mô tả bất định (uncertainty / 불확실성) của một quantity. Stochastic tiến trình (process / 프로세스) mô tả bất định (uncertainty / 불확실성) của cả trajectory. Markov chuỗi (chain / 사슬) thêm giả định (assumption / 가정) rằng trạng thái hiện tại (current state / 현재 상태) là sufficient summary của past cho future evolution. chuyển tiếp (transition / 전이) operator đóng vai trò giống động (dynamic / 동적) quy tắc (rule / 규칙), còn xác suất (probability / 확률) phân phối (distribution / 분포) thay thế một trajectory deterministic duy nhất.
-
-> **Nối mạch:** Trong **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -369,8 +325,6 @@ Markov không có nghĩa observations liên tiếp độc lập. Ngược lại,
 Stationary cũng không có nghĩa tiến trình (process / 프로세스) đứng yên. mẫu (sample / 표본) paths vẫn dao động liên tục; chỉ statistical laws không thay đổi theo thời gian (time / 시간) shift.
 
 Một autocorrelation cao không tự chứng minh nhân quả (causal / 인과적) quan hệ (relation / 관계). Nó chỉ cho biết temporal dependence cấu trúc (structure / 구조).
-
-> **Nối mạch:** Ở chặng này của **Stochastic processes, Markov chains và cách mô hình hóa ngẫu nhiên theo thời gian**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

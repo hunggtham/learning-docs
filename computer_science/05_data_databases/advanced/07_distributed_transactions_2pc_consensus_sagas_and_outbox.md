@@ -19,8 +19,6 @@ Nếu tiến trình (process / 프로세스) chết giữa hai lần ghi nhận 
 
 Vấn đề không phải cú pháp SQL; đó là bài toán phối hợp (coordination) dưới thất bại (failure / 실패).
 
-> **Nối mạch:** **2. Two-Phase lần ghi nhận (commit / 커밋)** nối từ **1. cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션) không tự mở rộng thành phân tán (distributed / 분산) giao dịch (transaction / 트랜잭션)** sang **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Two-Phase lần ghi nhận (commit / 커밋)
 
 **Cam kết hai pha (2PC — Two-Phase Commit)** dùng coordinator và nhiều participant.
@@ -43,23 +41,17 @@ otherwise -> ABORT
 
 2PC tạo atomic commitment nhưng có giá: participant đã prepared có thể phải giữ khóa (lock / 잠금)/tài nguyên (resource / 자원) trong khi chờ quyết định.
 
-> **Nối mạch:** **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt** nối từ **2. Two-Phase lần ghi nhận (commit / 커밋)** sang **4. 2PC không phải consensus**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt
 
 Nếu coordinator chết sau khi participants đã prepare nhưng trước khi họ nhận quyết định, participant không thể tự ý lần ghi nhận (commit / 커밋) hoặc abort mà không có thêm giao thức (protocol / 프로토콜). Nó rơi vào **trạng thái chưa biết quyết định (in-doubt state)**.
 
 Đây là lý do 2PC thường được gọi là blocking giao thức (protocol / 프로토콜) trong một số thất bại (failure / 실패) scenario. Availability giảm để giữ atomicity.
 
-> **Nối mạch:** **4. 2PC không phải consensus** nối từ **3. thất bại (failure / 실패) cửa sổ (window / 윈도우) và trạng thái in-doubt** sang **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. 2PC không phải consensus
 
 2PC và consensus đều có coordinator/leader-looking hành vi (behavior / 동작) nhưng giải quyết vấn đề khác. 2PC hỏi liệu một giao dịch (transaction / 트랜잭션) có lần ghi nhận (commit / 커밋) trên nhiều participant hay không. Consensus giúp một nhóm nút (node / 노드) đồng thuận một chuỗi quyết định dù một số nút (node / 노드) thất bại (fail / 실패).
 
 Một coordinator 2PC đơn lẻ có thể là điểm thất bại (failure / 실패). Hệ thống có thể dùng replicated log/consensus để làm quyết định (decision / 결정) bản ghi (record / 레코드) của coordinator bền vững hơn, nhưng việc kết hợp hai cơ chế không làm chi phí coordination biến mất.
-
-> **Nối mạch:** **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí** nối từ **4. 2PC không phải consensus** sang **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí
 
@@ -73,8 +65,6 @@ client
 ```
 
 Độ trễ (latency / 지연 시간) tăng vì nhiều mạng (network / 네트워크) round trip và durable log. “cơ sở dữ liệu (database / 데이터베이스) phân tán (distributed / 분산) có consensus” không đồng nghĩa cross-shard giao dịch (transaction / 트랜잭션) rẻ như cục bộ (local / 로컬) giao dịch (transaction / 트랜잭션).
-
-> **Nối mạch:** **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation** nối từ **5. Consensus không làm giao dịch (transaction / 트랜잭션) miễn phí** sang **7. Orchestration và choreography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation
 
@@ -95,8 +85,6 @@ release inventory
 
 Compensation không phải quay lui (rollback / 롤백) vật lý. Email đã gửi không thể “unsend”; giá thị trường có thể đổi; refund là nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트) mới. Vì vậy saga cần ngữ nghĩa (semantics / 의미론) nghiệp vụ rõ ràng.
 
-> **Nối mạch:** **7. Orchestration và choreography** nối từ **6. Saga đổi atomic quay lui (rollback / 롤백) thành compensation** sang **8. Dual-write bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Orchestration và choreography
 
 Saga **điều phối tập trung (orchestration)** có một orchestrator quyết định bước tiếp theo. Ưu điểm là workflow dễ nhìn; nhược điểm là coordinator trở thành thành phần quan trọng.
@@ -104,8 +92,6 @@ Saga **điều phối tập trung (orchestration)** có một orchestrator quy�
 Saga **phối hợp qua sự kiện (choreography)** để mỗi dịch vụ (service / 서비스) phản ứng với sự kiện (event / 이벤트). Coupling trực tiếp giảm nhưng luồng (flow / 흐름) tổng thể có thể khó quan sát, và sự kiện (event / 이벤트) cycle hoặc phụ thuộc (dependency / 의존성) ẩn dễ xuất hiện.
 
 Không có mô hình luôn tốt hơn; cần cân bằng visibility, quyền sở hữu (ownership / 소유권) và độ phức tạp (complexity / 복잡도).
-
-> **Nối mạch:** **8. Dual-write bài toán (problem / 문제)** nối từ **7. Orchestration và choreography** sang **9. Transactional Outbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Dual-write bài toán (problem / 문제)
 
@@ -119,8 +105,6 @@ Một lỗi kinh điển:
 Nếu DB lần ghi nhận (commit / 커밋) nhưng tiến trình (process / 프로세스) chết trước publish, trạng thái (state / 상태) đã đổi nhưng sự kiện (event / 이벤트) biến mất. Nếu publish trước rồi DB quay lui (rollback / 롤백), bên tiêu thụ (consumer / 소비자) thấy sự kiện (event / 이벤트) về trạng thái chưa tồn tại.
 
 Đây là **bài toán ghi kép (dual-write problem)**: hai hệ thống độc lập không thể được làm atomic chỉ bằng thứ tự hai lời gọi.
-
-> **Nối mạch:** **9. Transactional Outbox** nối từ **8. Dual-write bài toán (problem / 문제)** sang **10. Inbox và idempotency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Transactional Outbox
 
@@ -137,8 +121,6 @@ Một relay riêng đọc outbox và publish sang broker. Nếu relay crash sau 
 
 Outbox đổi bài toán “không được mất sự kiện (event / 이벤트)” thành bài toán dễ quản lý hơn: **at-least-once delivery + duplicate handling**.
 
-> **Nối mạch:** **10. Inbox và idempotency** nối từ **9. Transactional Outbox** sang **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Inbox và idempotency
 
 Bên tiêu thụ (consumer / 소비자) có thể lưu `event_id` đã xử lý trong một bảng inbox cùng giao dịch (transaction / 트랜잭션) với nghiệp vụ (business / 비즈니스) cập nhật (update / 업데이트):
@@ -153,15 +135,11 @@ else:
 
 Đây là cách biến delivery lặp thành tác động (effect / 효과) gần exactly-once ở ranh giới (boundary / 경계) nghiệp vụ. Exactly-once thường không phải thuộc tính của mạng (network / 네트워크) packet; nó là kết quả của giao thức (protocol / 프로토콜), durable trạng thái (state / 상태) và idempotent ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity** nối từ **10. Inbox và idempotency** sang **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity
 
 Ngay cả khi workflow cuối cùng thành công, các dịch vụ (service / 서비스) khác có thể quan sát trạng thái trung gian. Saga thường chấp nhận **nhất quán cuối cùng (eventual consistency)**.
 
 Ví dụ inventory đã reserve nhưng payment chưa hoàn tất. Reporting dịch vụ (service / 서비스) có thể thấy thứ tự (order / 순서) ở trạng thái `PENDING_PAYMENT`. Thay vì cố giấu mọi trạng thái trung gian, lĩnh vực (domain / 도메인) mô hình (model / 모델) nên biểu diễn chúng rõ ràng.
-
-> **Nối mạch:** **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại** nối từ **11. Isolation xuyên dịch vụ (service / 서비스) khó hơn atomicity** sang **13. Exactly-once là thuộc tính (property / 속성) end-to-end**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại
 
@@ -177,8 +155,6 @@ Thử lại (retry / 재시도) mù có thể charge hai lần. Vì vậy paymen
 
 Hết thời gian chờ (timeout / 타임아웃) chỉ nói rằng caller không nhận kết quả đúng hạn; nó không chứng minh remote thao tác (operation / 연산) chưa xảy ra.
 
-> **Nối mạch:** **13. Exactly-once là thuộc tính (property / 속성) end-to-end** nối từ **12. hết thời gian chờ (timeout / 타임아웃) không cho biết thao tác (operation / 연산) thất bại** sang **14. Khi nào dùng 2PC, saga hay outbox?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Exactly-once là thuộc tính (property / 속성) end-to-end
 
 Broker có thể cung cấp giao dịch (transaction / 트랜잭션) hoặc exactly-once trong phạm vi riêng, nhưng ứng dụng (application / 애플리케이션) còn DB, HTTP side tác động (effect / 효과) và bên ngoài (external / 외부) provider. Nếu một tác động (effect / 효과) nằm ngoài giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계) của broker, guarantee phải được xây lại ở tầng cao hơn.
@@ -187,15 +163,11 @@ Do đó cần hỏi chính xác:
 
 > Exactly once đối với **cái gì**, trong **ranh giới (boundary / 경계) nào**, và được chứng minh bằng durable trạng thái (state / 상태) nào?
 
-> **Nối mạch:** **14. Khi nào dùng 2PC, saga hay outbox?** nối từ **13. Exactly-once là thuộc tính (property / 속성) end-to-end** sang **15. thất bại (failure / 실패) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Khi nào dùng 2PC, saga hay outbox?
 
 Nếu nhiều tài nguyên (resource / 자원) cùng hỗ trợ giao dịch (transaction / 트랜잭션) giao thức (protocol / 프로토콜) và cần atomicity mạnh, 2PC có thể phù hợp dù availability/độ trễ (latency / 지연 시간) có giá. Nếu workflow dài, có nghiệp vụ (business / 비즈니스) compensation tự nhiên và dịch vụ (service / 서비스) quyền sở hữu (ownership / 소유권) độc lập, saga thường phù hợp hơn. Nếu cần đồng bộ cơ sở dữ liệu (database / 데이터베이스) thay đổi (change / 변경) với message publication, outbox là thành phần nguyên thủy (primitive / 기본 요소) thực dụng.
 
 Các mẫu (pattern / 패턴) này không loại trừ nhau. Một hệ thống lớn có thể dùng cục bộ (local / 로컬) ACID giao dịch (transaction / 트랜잭션) + outbox trong mỗi dịch vụ (service / 서비스), saga giữa dịch vụ (service / 서비스), và consensus bên trong cơ sở dữ liệu (database / 데이터베이스) cluster.
-
-> **Nối mạch:** **15. thất bại (failure / 실패) ma trận (matrix / 행렬)** nối từ **14. Khi nào dùng 2PC, saga hay outbox?** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. thất bại (failure / 실패) ma trận (matrix / 행렬)
 
@@ -214,8 +186,6 @@ participant unavailable
 
 Mỗi hàng cần một khôi phục (recovery / 복구) quy tắc (rule / 규칙). Nếu không thể giải thích kết quả (outcome / 결과) sau từng thất bại (failure / 실패), giao thức (protocol / 프로토콜) chưa hoàn chỉnh.
 
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **15. thất bại (failure / 실패) ma trận (matrix / 행렬)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 **“thử lại (retry / 재시도) sẽ làm hệ thống reliable.”** thử lại (retry / 재시도) không có idempotency có thể nhân đôi side tác động (effect / 효과).
@@ -225,8 +195,6 @@ Mỗi hàng cần một khôi phục (recovery / 복구) quy tắc (rule / 규�
 **“Exactly-once delivery giải quyết mọi duplicate.”** Guarantee của vận chuyển (transport / 전송) không tự bao phủ cơ sở dữ liệu (database / 데이터베이스) và bên ngoài (external / 외부) side tác động (effect / 효과).
 
 **“2PC và Raft là cùng một thứ.”** Chúng giải quyết các bài toán coordination khác nhau dù có thể được kết hợp.
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

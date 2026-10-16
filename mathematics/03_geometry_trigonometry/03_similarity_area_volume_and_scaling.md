@@ -22,8 +22,6 @@ Congruence là special trường hợp (case / 사례) `k=1`: same shape và sam
 
 Similarity cho phép ta reason bằng ratios mà không cần biết absolute quy mô (scale / 규모).
 
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Similar triangles: vì sao side ratios bằng nhau?** nối từ **Similarity là bảo toàn shape, không phải bảo toàn kích thước (size / 크기)** sang **Worked example — đo chiều cao bằng shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Similar triangles: vì sao side ratios bằng nhau?
 
 Nếu hai triangles có same angles, corresponding sides quy mô (scale / 규모) uniformly. Có thể tưởng tượng one triangle là zoomed phiên bản (version / 버전) của other.
@@ -40,8 +38,6 @@ Do đó:
 ```
 
 Đây là foundation của trigonometric ratios. Sine/cosine depend only on angle vì all right triangles with same acute angle are similar.
-
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Similar triangles: vì sao side ratios bằng nhau?** nêu quy tắc; **Worked example — đo chiều cao bằng shadow** thử quy tắc trong tình huống, rồi **Area scaling: vì sao exponent là 2?** mở rộng hệ quả.
 
 ## Worked example — đo chiều cao bằng shadow
 
@@ -64,8 +60,6 @@ h_{building}
 ```
 
 Giả định (assumption / 가정) quan trọng: same sun angle và ground approximately mức (level / 수준). Nếu measurements khác thời gian (time / 시간)/slope, proportional mô hình (model / 모델) breaks.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Worked example — đo chiều cao bằng shadow** nêu quy tắc; **Area scaling: vì sao exponent là 2?** thử quy tắc trong tình huống, rồi **Volume scaling: exponent 3** mở rộng hệ quả.
 
 ## Area scaling: vì sao exponent là 2?
 
@@ -96,8 +90,6 @@ A'=4A.
 
 This surprises intuition because “twice as wide and twice as tall” multiplies, not adds.
 
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Volume scaling: exponent 3** nối từ **Area scaling: vì sao exponent là 2?** sang **Surface-to-volume ratio: why small things exchange faster**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Volume scaling: exponent 3
 
 Box:
@@ -117,8 +109,6 @@ V'
 Double side lengths → volume ×8.
 
 This has direct consequences for lưu trữ (storage / 저장소), material, weight, heat sức chứa (capacity / 용량) and voxel grids.
-
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Surface-to-volume ratio: why small things exchange faster** nối từ **Volume scaling: exponent 3** sang **Scaling law không chỉ là hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Surface-to-volume ratio: why small things exchange faster
 
@@ -141,8 +131,6 @@ Consequences:
 
 This is a geometric reason for many biological/kỹ thuật (engineering / 엔지니어링) scaling patterns.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Scaling law không chỉ là hình học (geometry / 기하학)** nối từ **Surface-to-volume ratio: why small things exchange faster** sang **Log-log plots reveal power laws**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scaling law không chỉ là hình học (geometry / 기하학)
 
 General form:
@@ -162,8 +150,6 @@ volume      α=3
 ```
 
 But real các hệ thống (systems / 시스템들) may have other exponents because các ràng buộc (constraints / 제약조건들), mạng (network / 네트워크) cấu trúc (structure / 구조) or fractal hình học (geometry / 기하학) alter effective dimension.
-
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Log-log plots reveal power laws** nối từ **Scaling law không chỉ là hình học (geometry / 기하학)** sang **Ảnh (image / 이미지) resolution: 2D scaling in computing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Log-log plots reveal power laws
 
@@ -185,8 +171,6 @@ On log-log coordinates, ideal power law becomes a line with slope `\alpha`.
 
 This is widely used in physics, biology, finance and mạng (network / 네트워크) science—but fitting a straight log-log line does not prove a true power-law cơ chế (mechanism / 메커니즘). dữ liệu (data / 데이터) phạm vi (range / 범위), noise mô hình (model / 모델) and alternatives matter.
 
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Ảnh (image / 이미지) resolution: 2D scaling in computing** nối từ **Log-log plots reveal power laws** sang **3D voxel grids: cubic explosion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ảnh (image / 이미지) resolution: 2D scaling in computing
 
 Suppose ảnh (image / 이미지) width and height both doubled while điểm ảnh (pixel / 픽셀) density per coordinate đơn vị (unit / 단위) stays same.
@@ -202,8 +186,6 @@ If each điểm ảnh (pixel / 픽셀) stores 4 bytes, raw bộ nhớ (memory / 
 A mô hình (model / 모델) or filter with công việc (work / 작업) proportional to pixels may quy mô (scale / 규모) ×4 even though “resolution doubled” sounds like ×2.
 
 This is why tuyến tính (linear / 선형) resolution and total dữ liệu (data / 데이터) kích thước (size / 크기) must be distinguished.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **3D voxel grids: cubic explosion** nối từ **Ảnh (image / 이미지) resolution: 2D scaling in computing** sang **Curse of dimensionality as generalized scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3D voxel grids: cubic explosion
 
@@ -223,8 +205,6 @@ Triple resolution:
 
 This quickly makes 3D simulations, medical imaging and volumetric neural networks memory-heavy.
 
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Curse of dimensionality as generalized scaling** nối từ **3D voxel grids: cubic explosion** sang **Similarity and coordinate transformations**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Curse of dimensionality as generalized scaling
 
 If each of `d` dimensions has `k` grid positions, total grid cells:
@@ -242,8 +222,6 @@ For `k=10`, `d=8`:
 ```
 
 This is high-dimensional phiên bản (version / 버전) of area/volume scaling.
-
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Similarity and coordinate transformations** nối từ **Curse of dimensionality as generalized scaling** sang **Non-uniform scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Similarity and coordinate transformations
 
@@ -268,8 +246,6 @@ In 3D uniform scaling determinant is `k^3`.
 
 This connects elementary hình học (geometry / 기하학) with tuyến tính (linear / 선형) algebra and Jacobian determinants: determinant measures cục bộ (local / 로컬) volume scaling.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Non-uniform scaling** nối từ **Similarity and coordinate transformations** sang **Physics liên kết (connection / 연결) — square-cube law**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Non-uniform scaling
 
 If x-direction scales `a` and y-direction scales `b`:
@@ -291,8 +267,6 @@ Shape generally changes unless `a=b`, so transformation is not similarity in Euc
 
 Uniform scaling preserves angles; nonuniform scaling usually does not.
 
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, sau nội dung của **Non-uniform scaling**, **Physics liên kết (connection / 연결) — square-cube law** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Reynolds number and dimensionless similarity** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Physics liên kết (connection / 연결) — square-cube law
 
 Suppose an animal/cấu trúc (structure / 구조) is scaled geometrically by `k`.
@@ -313,15 +287,11 @@ So stress-like tải (load / 로드) per area can grow with `k`. A giant scaled-
 
 This is why geometric similarity does not guarantee vật lý (physical / 물리적) similarity.
 
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Reynolds number and dimensionless similarity** nối từ **Physics liên kết (connection / 연결) — square-cube law** sang **Finance liên kết (connection / 연결) — scaling rủi ro (risk / 위험) with thời gian (time / 시간) is not always tuyến tính (linear / 선형)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reynolds number and dimensionless similarity
 
 In fluid mechanics, two geometrically similar các hệ thống (systems / 시스템들) can behave differently if dimensionless parameters differ. Reynolds number compares inertial and viscous effects.
 
 This illustrates a deeper lesson: hình học (geometry / 기하학) gives one tầng (layer / 계층) of similarity; động (dynamic / 동적) similarity needs relevant dimensionless ratios to match too.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, sau nội dung của **Reynolds number and dimensionless similarity**, **Finance liên kết (connection / 연결) — scaling rủi ro (risk / 위험) with thời gian (time / 시간) is not always tuyến tính (linear / 선형)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **AI liên kết (connection / 연결) — mô hình (model / 모델)/dữ liệu (data / 데이터) scaling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Finance liên kết (connection / 연결) — scaling rủi ro (risk / 위험) with thời gian (time / 시간) is not always tuyến tính (linear / 선형)
 
@@ -330,8 +300,6 @@ Under ideal independent-return các giả định (assumptions / 가정들), var
 This is another scaling law, but exponent comes from probabilistic independence cấu trúc (structure / 구조), not geometric dimension.
 
 Thus “how quantity scales” always reflects underlying cơ chế (mechanism / 메커니즘).
-
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Finance liên kết (connection / 연결) — scaling rủi ro (risk / 위험) with thời gian (time / 시간) is not always tuyến tính (linear / 선형)** đặt vấn đề; **AI liên kết (connection / 연결) — mô hình (model / 모델)/dữ liệu (data / 데이터) scaling** đối chiếu bằng chứng, rồi **Fractal dimension: effective scaling can be non-integer** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## AI liên kết (connection / 연결) — mô hình (model / 모델)/dữ liệu (data / 데이터) scaling
 
@@ -342,8 +310,6 @@ O(n^2).
 ```
 
 Doubling chuỗi (sequence / 시퀀스) length can quadruple pairwise tương tác (interaction / 상호작용) count. This is analogous to area scaling: all pairs form a two-dimensional combinatorial grid.
-
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **AI liên kết (connection / 연결) — mô hình (model / 모델)/dữ liệu (data / 데이터) scaling** đặt vấn đề; **Fractal dimension: effective scaling can be non-integer** đối chiếu bằng chứng, rồi **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Fractal dimension: effective scaling can be non-integer
 
@@ -361,8 +327,6 @@ Coastlines, branching patterns and strange attractors can have effective dimensi
 
 This shows dimension is fundamentally a scaling concept, not only “number of axes”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Fractal dimension: effective scaling can be non-integer** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
 Uniform geometric scaling assumes same shape. Real vật lý (physical / 물리적) các hệ thống (systems / 시스템들) often violate material, gravity, heat-transfer or structural các ràng buộc (constraints / 제약조건들).
@@ -371,13 +335,9 @@ Power-law fit over narrow phạm vi (range / 범위) can be misleading. Log tran
 
 High-dimensional dữ liệu (data / 데이터) often lies on lower-dimensional manifolds, so naive `k^d` grid thinking may overstate effective độ phức tạp (complexity / 복잡도) if exploitable cấu trúc (structure / 구조) exists.
 
-> **Nối mạch:** Trong **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Scaling asks how many independent directions are being enlarged and how the quantity depends on them. Each multiplicative dimension contributes a factor. Area, volume, determinant, voxel count, pairwise interactions and curse of dimensionality are variations of one idea: growth compounds across dimensions.
-
-> **Nối mạch:** Ở chặng này của **Đồng dạng, diện tích, thể tích và scaling laws: khi dimension quyết định tốc độ tăng**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

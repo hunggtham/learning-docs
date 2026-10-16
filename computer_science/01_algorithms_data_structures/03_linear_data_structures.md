@@ -12,8 +12,6 @@ Static array có fixed kích thước (size / 크기); động (dynamic / 동적
 
 Array mạnh khi cần scanning, indexing, sorting và bộ nhớ đệm (cache / 캐시) locality. Weakness là insertion/deletion giữa thường cần move tail.
 
-> **Nối mạch:** **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** nối từ **Array: indexing đổi flexibility lấy locality** sang **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)**, vì layout trước quyết định cách cấu trúc sau quản lý thứ tự.
-
 ## Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references
 
 Singly linked danh sách (list / 목록) mỗi nút (node / 노드) giữ giá trị (value / 값) và next tham chiếu (reference / 참조). Doubly linked danh sách (list / 목록) thêm prev. Nó không cần contiguous bộ nhớ (memory / 메모리) và có thể splice nút (node / 노드) nhanh khi đã có tham chiếu (reference / 참조).
@@ -21,8 +19,6 @@ Singly linked danh sách (list / 목록) mỗi nút (node / 노드) giữ giá t
 Nhưng `list[i]` cần traverse từ head, `O(n)`. nút (node / 노드) overhead và poor bộ nhớ đệm (cache / 캐시) locality làm nhiều workloads chậm hơn động (dynamic / 동적) array dù độ phức tạp (complexity / 복잡도) insert nghe hấp dẫn.
 
 Linked danh sách (list / 목록) có giá trị khi nodes cần stable định danh (identity / 식별자)/address, frequent cục bộ (local / 로컬) splice hoặc làm building khối (block / 블록) cho intrusive lists/free lists.
-
-> **Nối mạch:** **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** nối từ **Linked danh sách (list / 목록): thứ tự (order / 순서) bằng references** sang **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)
 
@@ -46,21 +42,15 @@ accept iff stack empty
 
 Ngăn xếp (stack / 스택) lưu unresolved openings — chính là minimal past trạng thái (state / 상태) cần cho quyết định hiện tại.
 
-> **Nối mạch:** **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** nối từ **Ngăn xếp (stack / 스택): LIFO như một lớp trừu tượng (abstraction / 추상화)** sang **Deque: hai đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến
 
 Hàng đợi (queue / 큐) dùng First-In First-Out. `enqueue` thêm tail, `dequeue` lấy head. BFS dùng hàng đợi (queue / 큐) để khám phá đồ thị (graph / 그래프) theo distance layers. Producer/bên tiêu thụ (consumer / 소비자) các hệ thống (systems / 시스템들) dùng hàng đợi (queue / 큐) để decouple tốc độ hai phía.
 
 Array hàng đợi (queue / 큐) không nên shift toàn bộ elements sau mỗi dequeue. Circular buffer dùng head/tail indices modulo sức chứa (capacity / 용량) để giữ operations `O(1)`.
 
-> **Nối mạch:** **Deque: hai đầu** nối từ **Hàng đợi (queue / 큐): FIFO và xử lý công việc theo thời gian đến** sang **Ring buffer và bounded sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Deque: hai đầu
 
 Deque (double-ended queue / 덱) cho push/pop ở cả front và back. Nó có thể implement ngăn xếp (stack / 스택) và hàng đợi (queue / 큐). Sliding-window algorithms dùng deque để giữ candidates monotonic, đạt `O(n)` thay vì scan mỗi cửa sổ (window / 윈도우) `O(k)`.
-
-> **Nối mạch:** **Ring buffer và bounded sức chứa (capacity / 용량)** nối từ **Deque: hai đầu** sang **Sentinel, null và ranh giới (boundary / 경계) conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ring buffer và bounded sức chứa (capacity / 용량)
 
@@ -68,21 +58,15 @@ Ring/circular buffer đặc biệt hữu ích cho streaming và I/O. sức chứ
 
 Đây là cầu nối (bridge / 브리지) tới backpressure: hàng đợi (queue / 큐) không thể tăng vô hạn trong finite hệ thống (system / 시스템).
 
-> **Nối mạch:** **Ring buffer và bounded sức chứa (capacity / 용량)** đặt tiêu chí; **Sentinel, null và ranh giới (boundary / 경계) conditions** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Sentinel, null và ranh giới (boundary / 경계) conditions
 
 Tuyến tính (linear / 선형) structures dễ có off-by-one bugs: empty vs one element, head/tail cập nhật (update / 업데이트), wraparound. Sentinel nút (node / 노드) hoặc half-open intervals có thể đơn giản hóa invariants.
 
 Ví dụ động (dynamic / 동적) array thường lập luận (reasoning / 추론) vùng valid `[0, size)` và allocated `[0, capacity)`, với bất biến (invariant / 불변식) `0 ≤ size ≤ capacity`.
 
-> **Nối mạch:** **Sentinel, null và ranh giới (boundary / 경계) conditions** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Chọn tuyến tính (linear / 선형) cấu trúc (structure / 구조) bằng truy cập (access / 접근) mẫu (pattern / 패턴): **random chỉ mục (index / 인덱스) → array; cục bộ (local / 로컬) splice với nút (node / 노드) tham chiếu (reference / 참조) → linked; newest-first → ngăn xếp (stack / 스택); oldest-first → hàng đợi (queue / 큐); cả hai đầu → deque**. Sau đó kiểm tra locality, bộ nhớ (memory / 메모리) overhead và tính đồng thời (concurrency / 동시성) requirements.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -91,8 +75,6 @@ Ví dụ động (dynamic / 동적) array thường lập luận (reasoning / �
 **“hàng đợi (queue / 큐) luôn unbounded.”** môi trường vận hành (production / 운영 환경) queues nên có tường minh (explicit / 명시적) sức chứa (capacity / 용량)/chính sách (policy / 정책), nếu không overload chỉ chuyển thành bộ nhớ (memory / 메모리) exhaustion.
 
 **“Linked danh sách (list / 목록) delete O(1).”** Chỉ nếu đã có nút (node / 노드) và đủ references; tìm nút (node / 노드) vẫn có thể O(n).
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

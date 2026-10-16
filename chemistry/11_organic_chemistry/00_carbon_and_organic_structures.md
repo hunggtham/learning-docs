@@ -16,8 +16,6 @@ Ba đặc điểm phối hợp tạo nên sự đa dạng của hóa hữu cơ:
 
 Silicon cũng thuộc nhóm 14 và thường hóa trị bốn, nhưng liên kết Si–Si yếu hơn, độ chồng phủ π giữa các orbital 3p kém hơn, còn liên kết Si–O rất mạnh. Vì vậy hóa học silicon thiên về silicate và mạng mở rộng hơn là tạo sự đa dạng khung carbon giống thế giới sinh học.
 
-> **Nối mạch:** Carbon tạo đa dạng nhờ hóa trị và khả năng nối thành mạng; nhìn khung carbon như graph giúp đọc cấu trúc, còn hybridization là model hình học để giải thích góc liên kết.
-
 ## Khung carbon như một đồ thị
 
 Có thể xem một phân tử hữu cơ như một đồ thị:
@@ -34,8 +32,6 @@ Ví dụ \(C_4H_{10}\) có thể là n-butane hoặc isobutane. Cùng công th�
 
 Đây là liên hệ trực tiếp với khoa học máy tính: hóa tin học (cheminformatics) biểu diễn phân tử bằng đồ thị để tìm kiếm, tạo fingerprint, so khớp cấu trúc con và huấn luyện mô hình máy học.
 
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Lai hóa là mô hình hình học, không phải một sự kiện vật lý riêng biệt** nối từ **Khung carbon như một đồ thị** sang **Thành phần s và hệ quả hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lai hóa là mô hình hình học, không phải một sự kiện vật lý riêng biệt
 
 Môi trường cục bộ quanh carbon thường được mô tả bằng mô hình lai hóa:
@@ -50,8 +46,6 @@ Lai hóa (hybridization) là một cấu trúc toán học của mô hình liên
 
 Mô hình orbital phân tử có thể mô tả cùng hệ bằng orbital phi định xứ mà không cần xem orbital lai hóa như những vật thể tồn tại độc lập.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Thành phần s và hệ quả hóa học** nối từ **Lai hóa là mô hình hình học, không phải một sự kiện vật lý riêng biệt** sang **Liên kết sigma và pi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thành phần s và hệ quả hóa học
 
 Orbital sp có khoảng 50% đặc tính s, sp2 khoảng 33%, sp3 khoảng 25%. Mật độ electron trong orbital có nhiều đặc tính s hơn nằm trung bình gần hạt nhân hơn.
@@ -65,8 +59,6 @@ sp C–H  >  sp2 C–H  >  sp3 C–H
 
 Cơ sở (base / 기반) liên hợp trên carbon sp được ổn định hơn vì điện tích âm nằm trong orbital có mật độ gần hạt nhân hơn.
 
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, sau nội dung của **Thành phần s và hệ quả hóa học**, **Liên kết sigma và pi** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Biểu diễn — học đọc hình cấu trúc như đọc mã nguồn** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liên kết sigma và pi
 
 **Liên kết σ (sigma bond / 시그마 결합)** hình thành từ chồng phủ trực diện dọc trục nối hai hạt nhân. **Liên kết π (pi bond / 파이 결합)** hình thành từ chồng phủ bên của hai orbital p song song.
@@ -76,8 +68,6 @@ C=C gồm một liên kết σ và một liên kết π. C≡C gồm một liên
 Tương tác π thường yếu hơn thành phần σ tương ứng và mật độ electron nằm lộ ra phía trên/dưới trục liên kết, nên các hệ π thường dễ bị tác nhân điện ly (electrophile) tấn công hơn.
 
 Sự hạn chế quay của C=C cũng xuất phát từ yêu cầu giữ các orbital p song song. Quay 90° phá chồng phủ π và tốn năng lượng đáng kể.
-
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Liên kết sigma và pi** đặt vấn đề; **Biểu diễn — học đọc hình cấu trúc như đọc mã nguồn** đối chiếu bằng chứng, rồi **Hóa trị và điện tích hình thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Biểu diễn — học đọc hình cấu trúc như đọc mã nguồn
 
@@ -96,8 +86,6 @@ Hóa hữu cơ dùng nhiều mức biểu diễn:
 Không biểu diễn nào “chính là phân tử”. Mỗi biểu diễn chỉ giữ lại một tập thông tin phù hợp với câu hỏi đang xét.
 
 Trong công thức khung, mỗi đỉnh hoặc đầu mút không ghi ký hiệu thường là carbon, còn hydrogen gắn với carbon được hiểu ngầm để thỏa hóa trị. Dị nguyên tử và hydrogen gắn với dị nguyên tử thường được viết rõ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Biểu diễn — học đọc hình cấu trúc như đọc mã nguồn** đặt vấn đề; **Hóa trị và điện tích hình thức** đối chiếu bằng chứng, rồi **Cộng hưởng thay đổi khả năng phản ứng chứ không chỉ “vẽ thêm cấu trúc”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hóa trị và điện tích hình thức
 
@@ -120,8 +108,6 @@ FC=V-N-\frac{B}{2}
 
 là công cụ ghi sổ electron, không phải điện tích riêng phần đo được trên nguyên tử.
 
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Cộng hưởng thay đổi khả năng phản ứng chứ không chỉ “vẽ thêm cấu trúc”** nối từ **Hóa trị và điện tích hình thức** sang **Hiệu ứng cảm ứng và hiệu ứng cộng hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cộng hưởng thay đổi khả năng phản ứng chứ không chỉ “vẽ thêm cấu trúc”
 
 Nếu electron có thể phi định xứ trên nhiều nguyên tử mà không thay đổi cách các nguyên tử nối nhau, ta có thể vẽ nhiều **cấu trúc cộng hưởng (resonance contributors)**.
@@ -139,8 +125,6 @@ Cộng hưởng ảnh hưởng:
 
 Ví dụ liên kết C–N trong amide ngắn hơn liên kết đơn C–N thông thường vì cộng hưởng tạo một phần đặc tính liên kết đôi. Vì vậy liên kết peptide gần phẳng và bị hạn chế quay.
 
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Hiệu ứng cảm ứng và hiệu ứng cộng hưởng** nối từ **Cộng hưởng thay đổi khả năng phản ứng chứ không chỉ “vẽ thêm cấu trúc”** sang **Liên hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng cảm ứng và hiệu ứng cộng hưởng
 
 Ảnh hưởng điện tử có thể truyền qua phân tử bằng nhiều con đường.
@@ -150,8 +134,6 @@ Ví dụ liên kết C–N trong amide ngắn hơn liên kết đơn C–N thôn
 **Hiệu ứng cộng hưởng (resonance effect / 공명 효과)** cần hệ orbital liên hợp và có thể truyền hiệu ứng cho/nhận electron qua hệ π.
 
 Một nhóm thế có thể vừa rút electron theo cảm ứng vừa cho electron theo cộng hưởng, như halogen trên vòng thơm. Vì vậy không nên gắn nhãn “nhóm đẩy electron” hoặc “nhóm hút electron” như một thuộc tính nhị phân tuyệt đối trong mọi tình huống.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Liên hợp** nối từ **Hiệu ứng cảm ứng và hiệu ứng cộng hưởng** sang **Siêu liên hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hợp
 
@@ -168,15 +150,11 @@ amide        cặp electron tự do trên N liên hợp với C=O
 
 Liên hợp thường làm hệ có năng lượng thấp hơn, thay đổi độ dài liên kết và giảm khoảng HOMO–LUMO. Đây là lý do các hệ liên hợp mở rộng hấp thụ ánh sáng ở bước sóng dài hơn và tạo màu trong thuốc nhuộm/chất màu.
 
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Siêu liên hợp** nối từ **Liên hợp** sang **Cấu dạng — cùng kết nối nhưng khác năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Siêu liên hợp
 
 Mật độ electron từ liên kết σ C–H/C–C có thể tương tác với orbital trống hoặc orbital phản liên kết \(\pi^*\) lân cận. **Siêu liên hợp (hyperconjugation / 초공액)** góp phần ổn định carbocation, gốc tự do và alkene có mức thế cao hơn.
 
 Đây là tương tác orbital thực, không chỉ là khẩu quyết “nhóm alkyl đẩy electron”.
-
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Cấu dạng — cùng kết nối nhưng khác năng lượng** nối từ **Siêu liên hợp** sang **Cycloalkane và ứng suất vòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu dạng — cùng kết nối nhưng khác năng lượng
 
@@ -185,8 +163,6 @@ Quay quanh liên kết σ tạo ra các **cấu dạng (conformers)**. Chúng th
 Ở ethane, dạng so le có năng lượng thấp hơn dạng che khuất. Ở butane, dạng anti thấp năng lượng hơn dạng gauche vì hai nhóm methyl ở xa nhau hơn.
 
 Chênh lệch năng lượng đến từ kết hợp của ứng suất xoắn, cản trở lập thể và hiệu ứng orbital; không nên quy toàn bộ cho việc “nguyên tử va vào nhau”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Cycloalkane và ứng suất vòng** nối từ **Cấu dạng — cùng kết nối nhưng khác năng lượng** sang **Cyclohexane dạng ghế — axial và equatorial**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cycloalkane và ứng suất vòng
 
@@ -201,8 +177,6 @@ Cyclopropane buộc góc C–C–C gần 60°, rất xa góc tứ diện lý tư
 
 Cyclohexane dạng ghế gần góc lý tưởng và có các liên kết gần so le nên đặc biệt bền.
 
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Cyclohexane dạng ghế — axial và equatorial** nối từ **Cycloalkane và ứng suất vòng** sang **Tính chất vật lý xuất hiện từ cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cyclohexane dạng ghế — axial và equatorial
 
 Mỗi carbon trong dạng ghế có một vị trí **trục (axial)** và một vị trí **xích đạo (equatorial)**. Lật vòng đổi axial ↔ equatorial nhưng giữ hướng lên/xuống của nhóm thế.
@@ -211,8 +185,6 @@ Nhóm thế lớn thường ưu tiên equatorial vì dạng axial chịu tương
 
 Tư duy này quan trọng cho cơ chế phản ứng: nhiều phản ứng loại hoặc thế trong hệ vòng phụ thuộc việc orbital có thể sắp xếp đúng hướng hình học hay không.
 
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Tính chất vật lý xuất hiện từ cấu trúc** nối từ **Cyclohexane dạng ghế — axial và equatorial** sang **Độ acid/cơ sở (base / 기반) như bài toán độ bền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính chất vật lý xuất hiện từ cấu trúc
 
 Tính chất vật lý của hợp chất hữu cơ không phải danh sách sự kiện rời rạc. Chúng xuất hiện từ tương tác phân tử.
@@ -220,8 +192,6 @@ Tính chất vật lý của hợp chất hữu cơ không phải danh sách s�
 Mạch hydrocarbon dài hơn thường có nhiệt độ sôi cao hơn vì diện tích tương tác phân tán London tăng. Phân nhánh thường làm giảm nhiệt độ sôi do giảm diện tích tiếp xúc hiệu dụng, nhưng nhiệt độ nóng chảy có thể có xu hướng khác vì đóng gói tinh thể.
 
 Nhóm chức phân cực làm tăng tương tác lưỡng cực. Mẫu cho/nhận liên kết hydrogen ảnh hưởng độ tan và nhiệt độ sôi. Tính đối xứng đôi khi giúp đóng gói tinh thể tốt hơn và làm nhiệt độ nóng chảy tăng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Độ acid/cơ sở (base / 기반) như bài toán độ bền** nối từ **Tính chất vật lý xuất hiện từ cấu trúc** sang **Góc nhìn orbital phân tử về khả năng phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ acid/cơ sở (base / 기반) như bài toán độ bền
 
@@ -239,8 +209,6 @@ Các yếu tố chính gồm:
 
 Một acid mạnh hơn khi cơ sở (base / 기반) liên hợp của nó tương đối bền hơn.
 
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Góc nhìn orbital phân tử về khả năng phản ứng** nối từ **Độ acid/cơ sở (base / 기반) như bài toán độ bền** sang **Xác định cấu trúc là bài toán ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Góc nhìn orbital phân tử về khả năng phản ứng
 
 Nhiều phản ứng hữu cơ có thể được hiểu bằng orbital biên (frontier orbitals):
@@ -251,8 +219,6 @@ Nhiều phản ứng hữu cơ có thể được hiểu bằng orbital biên (f
 
 Ví dụ phản ứng \(S_N2\) có thể được nhìn như sự cho mật độ electron từ cặp electron tự do của nucleophile vào orbital phản liên kết \(\sigma^*\) C–LG.
 
-> **Nối mạch:** Ở chặng này của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Xác định cấu trúc là bài toán ngược** nối từ **Góc nhìn orbital phân tử về khả năng phản ứng** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác định cấu trúc là bài toán ngược
 
 Trong tổng hợp, ta đi từ cấu trúc → dự đoán tính chất và khả năng phản ứng. Trong hóa phân tích, ta giải bài toán ngược: dữ liệu phổ → các ràng buộc → cấu trúc hợp lý.
@@ -260,8 +226,6 @@ Trong tổng hợp, ta đi từ cấu trúc → dự đoán tính chất và kh�
 IR cho manh mối về nhóm chức, NMR cho môi trường hóa học và kết nối, MS cho khối lượng và mảnh vỡ, còn nhiễu xạ tia X có thể cho cấu trúc ba chiều trực tiếp hơn.
 
 Vì vậy “biết vẽ cấu trúc” và “biết đọc bằng chứng” là hai mặt của cùng một kỹ năng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Những hiểu lầm thường gặp** nối từ **Xác định cấu trúc là bài toán ngược** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -280,8 +244,6 @@ Không. Quay có hàng rào năng lượng và có thể bị hạn chế mạnh
 ### “Các cấu trúc cộng hưởng là những tiểu phân thay nhau tồn tại”
 
 Không. Chúng là các cách biểu diễn của một trạng thái electron phi định xứ duy nhất.
-
-> **Nối mạch:** Trong **Carbon và cấu trúc hữu cơ — từ hóa trị carbon đến kiến trúc phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

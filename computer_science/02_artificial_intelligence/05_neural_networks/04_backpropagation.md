@@ -30,8 +30,6 @@ L=f_L(f_{L-1}(...f_1(x)))
 
 Backprop áp dụng chuỗi (chain / 사슬) quy tắc (rule / 규칙) theo reverse topological thứ tự (order / 순서) của computation đồ thị (graph / 그래프).
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Bắt đầu từ chuỗi (chain / 사슬) quy tắc (rule / 규칙)** cho ta quy tắc; **Một scalar example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Reverse-Mode Automatic Differentiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Một scalar example
 
 Giả sử:
@@ -79,8 +77,6 @@ nên:
 
 Không có magic. Đây chỉ là chuỗi (chain / 사슬) quy tắc (rule / 규칙) qua các operations đã chạy ở forward pass.
 
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Một scalar example** cho ta quy tắc; **Reverse-Mode Automatic Differentiation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cục bộ (local / 로컬) gradients và upstream độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Reverse-Mode Automatic Differentiation
 
 Nếu có millions parameters nhưng chỉ một scalar mất mát (loss / 손실), ta cần derivatives:
@@ -93,8 +89,6 @@ Nếu có millions parameters nhưng chỉ một scalar mất mát (loss / 손�
 Reverse-mode AD cực hiệu quả vì một backward traversal có thể compute độ dốc (gradient / 기울기) cho tất cả parameters với chi phí (cost / 비용) cùng thứ tự (order / 순서) với forward pass, thường vài lần forward chi phí (cost / 비용) chứ không `m` forward passes.
 
 Backpropagation trong neural networks là ứng dụng (application / 애플리케이션) đặc biệt của reverse-mode automatic differentiation.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Cục bộ (local / 로컬) gradients và upstream độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Reverse-Mode Automatic Differentiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Branching đồ thị (graph / 그래프) và độ dốc (gradient / 기울기) accumulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cục bộ (local / 로컬) gradients và upstream độ dốc (gradient / 기울기)
 
@@ -133,8 +127,6 @@ Với multiply `z=ab`:
 
 Autograd frameworks compose thousands such cục bộ (local / 로컬) rules.
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Branching đồ thị (graph / 그래프) và độ dốc (gradient / 기울기) accumulation** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) gradients và upstream độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Véc-tơ (vector / 벡터)/Jacobian perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Branching đồ thị (graph / 그래프) và độ dốc (gradient / 기울기) accumulation
 
 Nếu một tensor ảnh hưởng mất mát (loss / 손실) qua nhiều paths:
@@ -152,8 +144,6 @@ thì:
 Backward phải **sum gradients từ mọi downstream paths**.
 
 Đây là lý do frameworks accumulate gradients. Trong PyTorch, gọi `.backward()` nhiều lần mà không zero gradients có thể cộng độ dốc (gradient / 기울기) ngoài ý muốn — hoặc intentionally để độ dốc (gradient / 기울기) accumulation across mini-batches.
-
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Véc-tơ (vector / 벡터)/Jacobian perspective** tiếp nhận điểm tựa từ **Branching đồ thị (graph / 그래프) và độ dốc (gradient / 기울기) accumulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backprop qua tuyến tính (linear / 선형) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Véc-tơ (vector / 벡터)/Jacobian perspective
 
@@ -180,8 +170,6 @@ v^TJ
 mà không xây `J` đầy đủ.
 
 Điều này cực quan trọng cho bộ nhớ (memory / 메모리)/compute feasibility.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Backprop qua tuyến tính (linear / 선형) tầng (layer / 계층)** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터)/Jacobian perspective** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backprop qua activation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Backprop qua tuyến tính (linear / 선형) tầng (layer / 계층)
 
@@ -213,8 +201,6 @@ thì:
 
 Đây là ma trận (matrix / 행렬) multiplications — lý do GPU rất phù hợp cả forward và backward.
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Backprop qua activation** tiếp nhận điểm tựa từ **Backprop qua tuyến tính (linear / 선형) tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sigmoid + Cross-Entropy simplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Backprop qua activation
 
 Elementwise activation:
@@ -227,12 +213,11 @@ thì:
 
 \[
 \frac{\partial L}{\partial z}
-=rac{\partial L}{\partial h}\odot\phi'(z)
+=
+rac{\partial L}{\partial h}\odot\phi'(z)
 \]
 
 Nếu `φ'(z)` thường gần zero, độ dốc (gradient / 기울기) shrink. Đây là vanishing-gradient liên kết (connection / 연결).
-
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Sigmoid + Cross-Entropy simplification** tiếp nhận điểm tựa từ **Backprop qua activation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vanishing Gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sigmoid + Cross-Entropy simplification
 
@@ -262,8 +247,6 @@ Softmax + cross-entropy multiclass cũng có analogous kết quả (result / 결
 
 Sự cancellation này giúp độ dốc (gradient / 기울기) hành vi (behavior / 동작) và numerical hiện thực (implementation / 구현) tốt hơn việc treat từng khối (block / 블록) naive.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Vanishing Gradients** tiếp nhận điểm tựa từ **Sigmoid + Cross-Entropy simplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exploding Gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vanishing Gradients
 
 Độ dốc (gradient / 기울기) qua độ sâu (depth / 깊이) là sản phẩm (product / 제품) của many Jacobians:
@@ -285,8 +268,6 @@ Solutions/lịch sử (history / 이력):
 - normalization;
 - residual connections;
 - gated architectures.
-
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Exploding Gradients** tiếp nhận điểm tựa từ **Vanishing Gradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Residual liên kết (connection / 연결) và độ dốc (gradient / 기울기) highway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Exploding Gradients
 
@@ -311,8 +292,6 @@ g\leftarrow g\cdot\min\left(1,\frac{c}{\|g\|}\right)
 
 limits toàn cục (global / 전역) độ dốc (gradient / 기울기) norm to threshold `c`.
 
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, sau nội dung của **Exploding Gradients**, **Residual liên kết (connection / 연결) và độ dốc (gradient / 기울기) highway** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độ dốc (gradient / 기울기) Checkpointing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Residual liên kết (connection / 연결) và độ dốc (gradient / 기울기) highway
 
 Residual khối (block / 블록):
@@ -331,8 +310,6 @@ Derivative:
 
 Transformers và ResNets đều phụ thuộc insight này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Độ dốc (gradient / 기울기) Checkpointing** tiếp nhận điểm tựa từ **Residual liên kết (connection / 연결) và độ dốc (gradient / 기울기) highway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stop độ dốc (gradient / 기울기) / Detach** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) Checkpointing
 
 Backward cần activations từ forward. Nếu mô hình (model / 모델) lớn, bộ nhớ (memory / 메모리) cao.
@@ -349,8 +326,6 @@ more compute
 
 Đây là các hệ thống (systems / 시스템들) consequence trực tiếp của backprop phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Stop độ dốc (gradient / 기울기) / Detach** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) Checkpointing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Higher-Order Gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Stop độ dốc (gradient / 기울기) / Detach
 
 Đôi khi muốn giá trị (value / 값) participate forward nhưng không receive độ dốc (gradient / 기울기).
@@ -366,27 +341,19 @@ Use cases:
 
 Dùng sai có thể silently break học tập (learning / 학습).
 
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Higher-Order Gradients** tiếp nhận điểm tựa từ **Stop độ dốc (gradient / 기울기) / Detach** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backprop không phải biologically plausible explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Higher-Order Gradients
 
 Backprop thường compute first-order gradients. Một số algorithms cần độ dốc (gradient / 기울기) of độ dốc (gradient / 기울기), Hessian-vector products hoặc meta-learning derivatives.
 
 Khung phần mềm (framework / 프레임워크) có thể bản dựng (build / 빌드) đồ thị (graph / 그래프) of backward computation nếu configured, nhưng bộ nhớ (memory / 메모리)/compute tăng mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Backprop không phải biologically plausible explanation** tiếp nhận điểm tựa từ **Higher-Order Gradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) không phải explanation của mô hình (model / 모델) prediction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Backprop không phải biologically plausible explanation
 
 Backprop là computational tối ưu hóa (optimization / 최적화) thuật toán (algorithm / 알고리즘), không phải established mô hình (model / 모델) về cách biological brain learns. Research có biologically plausible alternatives, nhưng kỹ thuật (engineering / 엔지니어링) success của backprop không chứng minh brain dùng same cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Độ dốc (gradient / 기울기) không phải explanation của mô hình (model / 모델) prediction** tiếp nhận điểm tựa từ **Backprop không phải biologically plausible explanation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Debugging gradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) không phải explanation của mô hình (model / 모델) prediction
 
 Độ dốc (gradient / 기울기) `∂output/∂input` có thể dùng saliency, nhưng độ dốc (gradient / 기울기) chỉ cục bộ (local / 로컬) sensitivity. Nó không automatically là nhân quả (causal / 인과적) explanation hay full lập luận (reasoning / 추론) dấu vết (trace / 추적).
-
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Debugging gradients** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) không phải explanation của mô hình (model / 모델) prediction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Debugging gradients
 
@@ -408,8 +375,6 @@ Finite-difference độ dốc (gradient / 기울기) check cho small mạng (net
 
 có thể verify custom backward hiện thực (implementation / 구현). Không dùng cho large-scale huấn luyện (training / 학습) vì expensive/numerically sensitive.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Debugging gradients** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -428,8 +393,6 @@ loss sensitivity
 
 Backprop không “biết” cách sửa mô hình (model / 모델) theo ý nghĩa (semantic meaning / 의미적 뜻). Nó chỉ propagate quantitative credit/blame defined bởi mất mát (loss / 손실) và computation đồ thị (graph / 그래프).
 
-> **Chuyển mạch:** Trong **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 ### “Backpropagation = độ dốc (gradient / 기울기) Descent”
@@ -447,8 +410,6 @@ Không hiểu độ dốc (gradient / 기울기) luồng (flow / 흐름) khiến
 ### “Backward pass lưu toàn bộ Jacobian”
 
 Reverse-mode AD dùng VJP/cục bộ (local / 로컬) rules để tránh materialize full Jacobians.
-
-> **Chuyển mạch:** Ở chặng này của **Backpropagation: chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên Computational đồ thị (graph / 그래프)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

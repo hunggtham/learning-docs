@@ -10,8 +10,6 @@ Câu hỏi trung tâm của chapter là: **làm thế nào nhà Lê biến milit
 
 Đây là phase mà paperwork itself trở thành historical bằng chứng (evidence / 증거) quan trọng.
 
-> **Nối mạch:** Trong **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Từ war coalition sang administration** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Early Lê: reconstruction sau hai decades disruption**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ war coalition sang administration
 
 Lam Sơn thắng nhờ personal loyalty, regional military networks và flexible command. Peace đòi thứ khác: predictable tax, appointments, courts, cadastral kiến thức (knowledge / 지식) và succession.
@@ -32,15 +30,11 @@ more impersonal state capacity
 
 Bureaucratization không xóa patronage, nhưng làm trạng thái (state / 상태) ít phụ thuộc hơn vào single campaign mạng (network / 네트워크).
 
-> **Nối mạch:** Ở chặng này của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Early Lê: reconstruction sau hai decades disruption** nối từ **Từ war coalition sang administration** sang **Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Early Lê: reconstruction sau hai decades disruption
 
 Ming occupation và Lam Sơn war làm fields, settlements và elite cấu trúc (structure / 구조) bị disruption. Postwar government cần restore agriculture, resettle population và regularize tax cơ sở (base / 기반).
 
 Land chính sách (policy / 정책) vì vậy không chỉ là ideology. Nếu peasants thiếu trường dữ liệu (field / 필드) hoặc fields abandoned, trạng thái (state / 상태) mất grain và labor. Reconstruction chính sách (policy / 정책) trực tiếp tied to fiscal survival.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Early Lê: reconstruction sau hai decades disruption** đặt đầu vào cho **Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)**, rồi **Lê Thánh Tông 1460–1497: bureaucratization tăng tốc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)
 
@@ -58,8 +52,6 @@ who may accumulate control?
 
 Nếu elite concentration quá mạnh, central trạng thái (state / 상태) loses direct truy cập (access / 접근) to households. Nếu land rights quá unstable, farmers underinvest and môi trường vận hành (production / 운영 환경) falls.
 
-> **Nối mạch:** Trong **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Quân điền: land allocation như fiscal-military cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **Lê Thánh Tông 1460–1497: bureaucratization tăng tốc**, rồi **Administrative map: territory trở thành đối tượng (object / 객체) có thể bản ghi (record / 레코드)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Lê Thánh Tông 1460–1497: bureaucratization tăng tốc
 
 Reign của **Lê Thánh Tông** thường được xem là peak của Lê sơ. Scholarship của John Whitmore nhấn mạnh growth of bureaucracy và paperwork dưới reign này.
@@ -68,8 +60,6 @@ Reign của **Lê Thánh Tông** thường được xem là peak của Lê sơ. 
 
 Thông tin (information / 정보) reduces ruler's blindness. Một center biết province nào có officials, households và routes tốt hơn sẽ tax và mobilize hiệu quả hơn.
 
-> **Nối mạch:** Ở chặng này của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Administrative map: territory trở thành đối tượng (object / 객체) có thể bản ghi (record / 레코드)** nối từ **Lê Thánh Tông 1460–1497: bureaucratization tăng tốc** sang **Law: Hồng Đức không chỉ là danh sách (list / 목록) punishments**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Administrative map: territory trở thành đối tượng (object / 객체) có thể bản ghi (record / 레코드)
 
 Lê trạng thái (state / 상태) refine provincial administration và ánh xạ (mapping / 매핑). **Hồng Đức bản đồ** trong tradition của reign Lê Thánh Tông biểu tượng cho effort represent territory as governable không gian (space / 공간).
@@ -77,8 +67,6 @@ Lê trạng thái (state / 상태) refine provincial administration và ánh x�
 Map không chỉ mô tả. Nó là quản trị (governance / 거버넌스) công cụ (tool / 도구): border, tuyến (route / 경로), district và tài nguyên (resource / 자원) location trở thành thông tin (information / 정보) objects.
 
 Đây là một historical parallel với cơ sở dữ liệu (database / 데이터베이스): trạng thái (state / 상태) cannot manage what it cannot identify consistently.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Law: Hồng Đức không chỉ là danh sách (list / 목록) punishments** nối từ **Administrative map: territory trở thành đối tượng (object / 객체) có thể bản ghi (record / 레코드)** sang **Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Law: Hồng Đức không chỉ là danh sách (list / 목록) punishments
 
@@ -90,8 +78,6 @@ Nhưng written law không equal daily practice. Village custom, bargaining và c
 
 Cần tách **legal văn bản (text / 텍스트)**, **legal ideology** và **actual practice**.
 
-> **Nối mạch:** Trong **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Law: Hồng Đức không chỉ là danh sách (list / 목록) punishments** đặt đầu vào cho **Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)**, rồi **Bia Tiến sĩ như cơ sở dữ liệu (database / 데이터베이스) bằng đá** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)
 
 Lê sơ mở rộng Nho học và examination hệ thống (system / 시스템). Năm **1484**, Lê Thánh Tông cho dựng những bia Tiến sĩ đầu tiên ở Văn Miếu–Quốc Tử Giám để bản ghi (record / 레코드) successful candidates từ các examinations bắt đầu năm 1442.
@@ -99,8 +85,6 @@ Lê sơ mở rộng Nho học và examination hệ thống (system / 시스템).
 UNESCO's Bộ nhớ (memory / 메모리) of the World records 82 surviving stelae covering royal examinations from 1442 to 1779 across Lê và Mạc periods.
 
 Hệ thống (system / 시스템) này tạo incentive mạnh cho elite households invest in literacy. In lý thuyết (theory / 이론), examination allows recruitment based on learned hiệu năng (performance / 성능) rather than pure heredity; in practice, truy cập (access / 접근) to teachers, books và thời gian (time / 시간) still favors resource-rich families.
-
-> **Nối mạch:** Ở chặng này của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, cơ chế trong **Education and examinations: recruiting officials through a kiến thức (knowledge / 지식) chuỗi xử lý (pipeline / 파이프라인)** cần được kiểm chứng bằng dấu vết cụ thể; **Bia Tiến sĩ như cơ sở dữ liệu (database / 데이터베이스) bằng đá** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bia Tiến sĩ như cơ sở dữ liệu (database / 데이터베이스) bằng đá
 
@@ -110,15 +94,11 @@ Collectively, stelae cho phép ask social-history questions: talent came from wh
 
 Đây là điểm (point / 지점) where monument becomes dataset.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Bia Tiến sĩ như cơ sở dữ liệu (database / 데이터베이스) bằng đá** đặt vấn đề; **Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất** đối chiếu bằng chứng, rồi **Economy: agrarian cơ sở (base / 기반) + markets + craft specialization** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất
 
 Court ideology và official education trở nên more Confucian, nhưng village cults, Buddhism và Daoist practices vẫn tồn tại. State-sponsored orthodoxy không map one-to-one onto lived religion.
 
 Điều thay đổi rõ hơn là **official career đường dẫn (path / 경로)**: classical học tập (learning / 학습) ngày càng central to bureaucracy. Religion and administration therefore diverge somewhat more than under Lý–Trần, nhưng society vẫn plural.
-
-> **Nối mạch:** Trong **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Economy: agrarian cơ sở (base / 기반) + markets + craft specialization** nối từ **Confucian trạng thái (state / 상태) không có nghĩa Buddhism biến mất** sang **1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy: agrarian cơ sở (base / 기반) + markets + craft specialization
 
@@ -126,15 +106,11 @@ Trạng thái (state / 상태) revenue vẫn anchored in agriculture, nhưng mar
 
 Bureaucratic stability can lower giao dịch (transaction / 트랜잭션) rủi ro (risk / 위험), but tax and corvée also impose costs. Economic lịch sử (history / 이력) phải giữ both sides: trạng thái (state / 상태) thứ tự (order / 순서) may facilitate exchange while extraction funds army and court.
 
-> **Nối mạch:** Ở chặng này của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power** nối từ **Economy: agrarian cơ sở (base / 기반) + markets + craft specialization** sang **Lam Kinh và Thăng Long: two centers of legitimacy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power
 
 Năm **1471**, Lê Thánh Tông dẫn major campaign against Vijaya/Champa, producing a decisive shift in central Vietnam. Chapter này chỉ cần thấy một cơ chế (mechanism / 메커니즘): bureaucratic-fiscal trạng thái (state / 상태) có larger mobilization sức chứa (capacity / 용량) than earlier fragmented courts.
 
 Nhưng không nên kể sự kiện (event / 이벤트) này như empty “mở rộng lãnh thổ”. Nó involved war, population displacement, surviving Cham polities và long-term frontier tương tác (interaction / 상호작용). [`14_champa_khmer_uplands_and_southern_frontiers.md`](14_champa_khmer_uplands_and_southern_frontiers.md) sẽ xử lý đầy đủ from multiple sides.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Lam Kinh và Thăng Long: two centers of legitimacy** nối từ **1471 và Champa: trạng thái (state / 상태) sức chứa (capacity / 용량) biến thành territorial power** sang **Ranh giới (boundary / 경계): “thịnh trị Hồng Đức” không nên trở thành golden-age myth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lam Kinh và Thăng Long: two centers of legitimacy
 
@@ -142,15 +118,11 @@ Lê dynasty rules from Thăng Long but keeps **Lam Kinh** as ancestral–memoria
 
 Một dynasty có thể centralize bureaucracy ở one city while grounding legitimacy in another landscape.
 
-> **Nối mạch:** Trong **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Lam Kinh và Thăng Long: two centers of legitimacy** đặt tiêu chí; **Ranh giới (boundary / 경계): “thịnh trị Hồng Đức” không nên trở thành golden-age myth** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Recap và bàn giao** mở rộng hệ quả.
-
 ## Ranh giới (boundary / 경계): “thịnh trị Hồng Đức” không nên trở thành golden-age myth
 
 Reign Lê Thánh Tông có clear advances in paperwork, examinations, law và military sức chứa (capacity / 용량). Nhưng “golden age” label dễ hide coercion, war, tax burden và uneven cục bộ (local / 로컬) experience.
 
 Historical evaluation tốt hơn là specify capacities: trạng thái (state / 상태) became more bureaucratic, information-rich và territorially ambitious. Whether every xã hội (social / 사회적) group “prospered” equally is a different question requiring separate bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Ở chặng này của **Lê sơ: bureaucracy, law, land và education trong Đại Việt thế kỷ XV**, **Ranh giới (boundary / 경계): “thịnh trị Hồng Đức” không nên trở thành golden-age myth** đã nêu tiêu chí phân biệt, còn **Recap và bàn giao** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

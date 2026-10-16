@@ -32,8 +32,6 @@ Với chất lỏng, phân tử có thể tái sắp xếp tương đối dễ n
 
 Với chất rắn, **năng lượng tự do bề mặt (surface free energy)** thường thích hợp hơn vì từng mặt tinh thể có thể có năng lượng khác nhau và mạng tinh thể không tái sắp xếp dễ như chất lỏng.
 
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mặt tinh thể và khả năng phản ứng** nối từ **Vì sao tạo bề mặt tốn năng lượng tự do?** sang **Độ cong và áp suất Laplace**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mặt tinh thể và khả năng phản ứng
 
 Các mặt tinh thể khác nhau có mật độ nguyên tử, mức phối trí và cấu trúc electron khác nhau. Mặt có nhiều nguyên tử thiếu phối trí thường có năng lượng cao hơn và có thể phản ứng mạnh hơn.
@@ -47,8 +45,6 @@ Hình dạng hạt nano vì vậy là kết quả cạnh tranh giữa:
 
 Trong xúc tác, hình học của tâm hấp phụ cũng thay đổi theo mặt tinh thể, nên hoạt tính và độ chọn lọc không chỉ phụ thuộc “nguyên tố nào” mà còn phụ thuộc “bề mặt nào”.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Độ cong và áp suất Laplace** nối từ **Mặt tinh thể và khả năng phản ứng** sang **Làm ướt và góc tiếp xúc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ cong và áp suất Laplace
 
 Với giọt cầu:
@@ -60,8 +56,6 @@ Với giọt cầu:
 Bán kính càng nhỏ, chênh áp qua mặt phân cách càng lớn.
 
 Độ cong cũng ảnh hưởng thế hóa học. Hạt rất nhỏ có thể có xu hướng hòa tan mạnh hơn hạt lớn. Đây là nền nhiệt động của **chín Ostwald (Ostwald ripening)**, trong đó vật chất chuyển dần từ hạt nhỏ sang hạt lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Làm ướt và góc tiếp xúc** nối từ **Độ cong và áp suất Laplace** sang **Độ nhám khuếch đại hành vi làm ướt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làm ướt và góc tiếp xúc
 
@@ -78,8 +72,6 @@ trong đó `SV`, `SL`, `LV` tương ứng rắn–hơi, rắn–lỏng và lỏn
 Góc tiếp xúc nhỏ thường biểu thị làm ướt tốt hơn. Tuy nhiên `θ` không phải một hằng số tuyệt đối của “vật liệu”. Nó còn phụ thuộc độ nhám, nhiễm bẩn, không đồng nhất hóa học, góc tiến/góc lùi và lịch sử giọt.
 
 Vì vậy suy năng lượng bề mặt từ một góc tiếp xúc đơn lẻ có thể gây hiểu sai.
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Độ nhám khuếch đại hành vi làm ướt** nối từ **Làm ướt và góc tiếp xúc** sang **Hấp phụ và hấp thụ không phải cùng một quá trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ nhám khuếch đại hành vi làm ướt
 
@@ -103,8 +95,6 @@ hóa học năng lượng bề mặt thấp
 
 “Kỵ nước” vì vậy là kết quả của cả hóa học và hình học.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Hấp phụ và hấp thụ không phải cùng một quá trình** nối từ **Độ nhám khuếch đại hành vi làm ướt** sang **Mô hình Langmuir**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hấp phụ và hấp thụ không phải cùng một quá trình
 
 **Hấp phụ (adsorption / 흡착)** là sự tích tụ chất tại bề mặt hoặc mặt phân cách.
@@ -120,8 +110,6 @@ Phân biệt này quan trọng vì cơ chế, động học và mô hình địn
 **Hấp phụ hóa học (chemisorption)** liên quan tạo liên kết hóa học đặc hiệu hơn và có thể có hàng rào hoạt hóa đáng kể.
 
 Hai loại này là hai đầu của một phổ; hệ thực có thể mang cả hai đặc tính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mô hình Langmuir** nối từ **Hấp phụ và hấp thụ không phải cùng một quá trình** sang **Freundlich và BET — mô hình trả lời câu hỏi khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Langmuir
 
@@ -142,8 +130,6 @@ Langmuir giả định:
 
 Mô hình rất hữu ích vì gắn được công thức với cơ chế đơn giản, nhưng bề mặt thật thường không đồng nhất và chất hấp phụ có thể tương tác với nhau.
 
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Freundlich và BET — mô hình trả lời câu hỏi khác nhau** nối từ **Mô hình Langmuir** sang **Chu trình xúc tác dị thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Freundlich và BET — mô hình trả lời câu hỏi khác nhau
 
 Phương trình Freundlich:
@@ -157,8 +143,6 @@ là mô hình thực nghiệm hữu ích cho bề mặt không đồng nhất nh
 Mô hình **BET (Brunauer–Emmett–Teller)** dùng hấp phụ đa lớp để ước lượng diện tích bề mặt riêng từ dữ liệu hấp phụ khí.
 
 Giá trị BET không phải “diện tích hình học tuyệt đối”; nó là diện tích có thể tiếp cận đối với chất dò trong điều kiện và mô hình đã chọn.
-
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Chu trình xúc tác dị thể** nối từ **Freundlich và BET — mô hình trả lời câu hỏi khác nhau** sang **Nguyên lý Sabatier và đánh đổi độ bền hấp phụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chu trình xúc tác dị thể
 
@@ -178,8 +162,6 @@ Bất kỳ bước nào cũng có thể giới hạn tốc độ tổng.
 
 Đây là lý do tăng hoạt tính nội tại của một tâm xúc tác có thể không cải thiện tốc độ thiết bị nếu hệ đang bị giới hạn bởi vận chuyển khối.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Nguyên lý Sabatier và đánh đổi độ bền hấp phụ** nối từ **Chu trình xúc tác dị thể** sang **Langmuir–Hinshelwood và Eley–Rideal**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên lý Sabatier và đánh đổi độ bền hấp phụ
 
 Một chất xúc tác tốt thường phải liên kết trung gian **không quá yếu và không quá mạnh**.
@@ -195,8 +177,6 @@ hấp phụ quá mạnh
 
 Đánh đổi này là trực giác nền của nhiều **đồ thị núi lửa (volcano plot)**, nơi hoạt tính cực đại xuất hiện ở vùng năng lượng hấp phụ trung gian.
 
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Langmuir–Hinshelwood và Eley–Rideal** nối từ **Nguyên lý Sabatier và đánh đổi độ bền hấp phụ** sang **Ngộ độc và chất xúc tiến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Langmuir–Hinshelwood và Eley–Rideal
 
 Trong cơ chế **Langmuir–Hinshelwood**, cả hai chất phản ứng đều hấp phụ trước khi phản ứng.
@@ -205,8 +185,6 @@ Trong cơ chế **Eley–Rideal**, một chất đã hấp phụ phản ứng tr
 
 Vì độ phủ thay đổi theo áp suất hoặc nồng độ, bậc phản ứng quan sát có thể thay đổi theo điều kiện. Do đó không nên suy cơ chế chỉ từ một bậc phản ứng đo tại một điều kiện duy nhất.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Ngộ độc và chất xúc tiến** nối từ **Langmuir–Hinshelwood và Eley–Rideal** sang **Bề mặt có thể tái cấu trúc trong khi phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ngộ độc và chất xúc tiến
 
 Một tạp chất hấp phụ quá mạnh có thể chiếm tâm hoạt động và gây **ngộ độc xúc tác (catalyst poisoning)**. Sulfur trên nhiều bề mặt kim loại là ví dụ điển hình.
@@ -214,8 +192,6 @@ Một tạp chất hấp phụ quá mạnh có thể chiếm tâm hoạt động
 Ngược lại, **chất xúc tiến (promoter)** có thể không trực tiếp xúc tác bước phản ứng chính nhưng làm thay đổi độ phân tán, trạng thái điện tử, hình học hoặc độ bền của pha hoạt động.
 
 Chất xúc tác công nghiệp vì vậy thường là hệ đa thành phần, không phải một nguyên tố tinh khiết đơn giản.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Bề mặt có thể tái cấu trúc trong khi phản ứng** nối từ **Ngộ độc và chất xúc tiến** sang **Lớp điện kép ở mặt phân cách điện cực–điện ly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bề mặt có thể tái cấu trúc trong khi phản ứng
 
@@ -226,8 +202,6 @@ Bề mặt đo trong chân không sau khi làm nguội chưa chắc giống bề
 Các kỹ thuật **đo khi đang vận hành (operando)** cố gắng quan sát vật liệu trong điều kiện gần trạng thái chức năng thật.
 
 Điều này nhắc một nguyên tắc quan trọng: **cấu trúc của chất xúc tác là một biến động, không nhất thiết là một ảnh tĩnh**.
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Lớp điện kép ở mặt phân cách điện cực–điện ly** nối từ **Bề mặt có thể tái cấu trúc trong khi phản ứng** sang **Dòng Faraday và dòng không Faraday**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp điện kép ở mặt phân cách điện cực–điện ly
 
@@ -251,8 +225,6 @@ Vật liệu **siêu tụ điện (supercapacitor)** tận dụng diện tích b
 
 Động học chuyển electron chi tiết, Butler–Volmer, Tafel và EIS được trình bày ở [Động học điện hóa và trở kháng](../09_redox_and_electrochemistry/06_electrochemical_kinetics_and_impedance.md); chương này chỉ giữ phần cần thiết để hiểu vai trò của mặt phân cách.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Dòng Faraday và dòng không Faraday** nối từ **Lớp điện kép ở mặt phân cách điện cực–điện ly** sang **Lớp liên pha điện ly rắn trong pin lithium-ion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dòng Faraday và dòng không Faraday
 
 **Dòng Faraday (Faradaic current)** đi kèm phản ứng oxy hóa–khử có chuyển electron qua mặt phân cách.
@@ -260,8 +232,6 @@ Vật liệu **siêu tụ điện (supercapacitor)** tận dụng diện tích b
 **Dòng không Faraday (non-Faradaic current)** chủ yếu liên quan nạp/xả lớp điện kép mà không có biến đổi redox ròng.
 
 Trong phép đo thực, hai thành phần có thể cùng xuất hiện và phải được tách bằng thiết kế thí nghiệm hoặc mô hình phù hợp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Lớp liên pha điện ly rắn trong pin lithium-ion** nối từ **Dòng Faraday và dòng không Faraday** sang **Bám dính — nhiều cơ chế cùng đóng góp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp liên pha điện ly rắn trong pin lithium-ion
 
@@ -278,8 +248,6 @@ SEI quá dày làm tăng điện trở. SEI nứt rồi tái tạo liên tục t
 
 Đây là ví dụ điển hình cho việc tính năng của vật liệu khối có thể tốt nhưng tuổi thọ thiết bị vẫn bị giới hạn bởi hóa học mặt phân cách.
 
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Lớp liên pha điện ly rắn trong pin lithium-ion** đặt đầu vào cho **Bám dính — nhiều cơ chế cùng đóng góp**, rồi **Chuẩn bị bề mặt** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Bám dính — nhiều cơ chế cùng đóng góp
 
 Độ bám dính có thể đến từ:
@@ -295,8 +263,6 @@ SEI quá dày làm tăng điện trở. SEI nứt rồi tái tạo liên tục t
 
 Phân biệt hai kiểu này cho biết nên cải thiện hóa học bề mặt hay tính chất cơ học khối.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Bám dính — nhiều cơ chế cùng đóng góp** đặt đầu vào cho **Chuẩn bị bề mặt**, rồi **Lớp đơn phân tử tự lắp ghép** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Chuẩn bị bề mặt
 
 Dầu, bụi hoặc một lớp oxide yếu có thể tạo **lớp biên yếu (weak boundary layer)** và làm liên kết thất bại dù chất kết dính rất tốt.
@@ -304,8 +270,6 @@ Dầu, bụi hoặc một lớp oxide yếu có thể tạo **lớp biên yếu 
 Xử lý plasma, corona, UV–ozone hoặc phản ứng hóa học có thể tạo nhóm phân cực, loại nhiễm bẩn hoặc tăng năng lượng bề mặt.
 
 Trong sản xuất, bước làm sạch và hoạt hóa bề mặt thường quan trọng ngang với việc chọn chất kết dính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Lớp đơn phân tử tự lắp ghép** nối từ **Chuẩn bị bề mặt** sang **Mặt phân cách trong bán dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp đơn phân tử tự lắp ghép
 
@@ -317,8 +281,6 @@ Ví dụ:
 - silane trên oxide.
 
 Một lớp chỉ dày cỡ phân tử có thể thay đổi độ ướt, công thoát electron, tương hợp sinh học, chống ăn mòn hoặc độ chọn lọc của cảm biến.
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mặt phân cách trong bán dẫn** nối từ **Lớp đơn phân tử tự lắp ghép** sang **Tăng trưởng màng mỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mặt phân cách trong bán dẫn
 
@@ -334,8 +296,6 @@ Tiếp xúc kim loại–bán dẫn có thể tạo rào năng lượng phụ th
 
 Mô hình lý tưởng có thể lệch khỏi thực nghiệm vì dipole bề mặt, hóa học tiếp xúc và hiện tượng **ghim mức Fermi (Fermi-level pinning)**.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Tăng trưởng màng mỏng** nối từ **Mặt phân cách trong bán dẫn** sang **Ăn mòn bắt đầu ở vùng biên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tăng trưởng màng mỏng
 
 ### Lắng đọng hơi hóa học
@@ -348,8 +308,6 @@ Trong **ALD**, các tiền chất phản ứng theo chu kỳ tự giới hạn. 
 
 Do đó lắng đọng màng không chỉ là “đưa vật liệu lên nền”; nó bắt đầu từ hóa học của các tâm bề mặt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Ăn mòn bắt đầu ở vùng biên** nối từ **Tăng trưởng màng mỏng** sang **Các kỹ thuật phân tích bề mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ăn mòn bắt đầu ở vùng biên
 
 Ăn mòn kim loại là quá trình điện hóa ghép giữa vùng oxy hóa và vùng khử trên bề mặt.
@@ -359,8 +317,6 @@ Tính không đồng nhất cục bộ như pha thứ hai, biên hạt, ứng su
 **Lớp phủ (coating)**, **chất ức chế (inhibitor)** và thụ động hóa đều hoạt động bằng cách thay đổi vận chuyển chất hoặc động học phản ứng ở mặt phân cách.
 
 Cơ chế điện hóa chi tiết được nối với [Pin, ăn mòn và lưu trữ năng lượng](../09_redox_and_electrochemistry/05_batteries_corrosion_and_energy_storage.md).
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Các kỹ thuật phân tích bề mặt** nối từ **Ăn mòn bắt đầu ở vùng biên** sang **Khuếch tán bề mặt và tạo mầm dị thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các kỹ thuật phân tích bề mặt
 
@@ -382,8 +338,6 @@ Cơ chế điện hóa chi tiết được nối với [Pin, ăn mòn và lưu t
 
 Không kỹ thuật nào đơn độc mô tả toàn bộ mặt phân cách. Thường phải ghép thông tin thành phần, trạng thái hóa học, cấu trúc, hình thái và tính chất điện.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Khuếch tán bề mặt và tạo mầm dị thể** nối từ **Các kỹ thuật phân tích bề mặt** sang **Chất hoạt động bề mặt, micelle và nhũ tương**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khuếch tán bề mặt và tạo mầm dị thể
 
 Chất hấp phụ có thể nhảy giữa các tâm với tốc độ hoạt hóa:
@@ -397,8 +351,6 @@ Khuếch tán bề mặt ảnh hưởng thiêu kết, tăng trưởng tinh thể
 Tạo mầm trên bề mặt thường dễ hơn tạo mầm đồng thể vì bề mặt sẵn có làm giảm năng lượng cần thiết để tạo vùng biên mới.
 
 Đây là lý do bụi, vết xước hoặc tinh thể mồi có thể kích hoạt kết tinh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Chất hoạt động bề mặt, micelle và nhũ tương** nối từ **Khuếch tán bề mặt và tạo mầm dị thể** sang **Mặt phân cách sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất hoạt động bề mặt, micelle và nhũ tương
 
@@ -416,8 +368,6 @@ tăng làm ướt
 ```
 
 Nhũ tương thường không bền về nhiệt động nhưng có thể bền lâu về động học. Tách kem, kết tụ giọt và chín Ostwald là các cơ chế mất ổn định khác nhau; không nên gộp tất cả thành một hiện tượng “tách lớp”.
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mặt phân cách sinh học** nối từ **Chất hoạt động bề mặt, micelle và nhũ tương** sang **Ví dụ suy luận: vì sao diện tích bề mặt lớn chưa chắc làm chất xúc tác tốt hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mặt phân cách sinh học
 
@@ -437,15 +387,11 @@ vật liệu khối
 
 không phải một nhãn cố định của vật liệu.
 
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mặt phân cách sinh học** nêu quy tắc; **Ví dụ suy luận: vì sao diện tích bề mặt lớn chưa chắc làm chất xúc tác tốt hơn?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao lớp phủ tốt ban đầu vẫn có thể hỏng sau thời gian dài?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao diện tích bề mặt lớn chưa chắc làm chất xúc tác tốt hơn?
 
 Giả sử vật liệu A có diện tích BET gấp đôi B nhưng phần lớn diện tích của A nằm trong lỗ quá hẹp để chất phản ứng tiếp cận hoặc trên các mặt tinh thể không hoạt tính.
 
 Khi đó diện tích hình học lớn hơn không đảm bảo tốc độ phản ứng lớn hơn. Cần hỏi **bao nhiêu diện tích có thể tiếp cận, bao nhiêu tâm thật sự hoạt động và vận chuyển có đủ nhanh không**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Ví dụ suy luận: vì sao diện tích bề mặt lớn chưa chắc làm chất xúc tác tốt hơn?** nêu quy tắc; **Ví dụ suy luận: vì sao lớp phủ tốt ban đầu vẫn có thể hỏng sau thời gian dài?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao lớp phủ tốt ban đầu vẫn có thể hỏng sau thời gian dài?
 
@@ -461,8 +407,6 @@ khuếch tán chậm
 ```
 
 không thể giải thích chỉ bằng một phép đo bám dính ban đầu.
-
-> **Nối mạch:** Trong **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Ví dụ suy luận: vì sao lớp phủ tốt ban đầu vẫn có thể hỏng sau thời gian dài?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -485,8 +429,6 @@ Không. SEI, mặt phân cách, vận chuyển ion, phản ứng phụ và cấu
 ### “Mặt phân cách là một lớp tĩnh”
 
 Không. Nó có thể hấp phụ, giải hấp, tái cấu trúc, oxy hóa, khử, nứt hoặc hình thành pha mới trong khi hệ vận hành.
-
-> **Nối mạch:** Ở chặng này của **Hóa học bề mặt và mặt phân cách — nơi các pha gặp nhau và phản ứng tập trung**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

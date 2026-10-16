@@ -20,8 +20,6 @@ ps -p 1 -o pid,comm,args
 
 `PID 1` có quy tắc đặc biệt liên quan tới vòng đời hệ thống và việc thu nhận trạng thái của tiến trình con.
 
-> **Nối mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?** nối từ **Từ firmware tới không gian người dùng** sang **Đơn vị (unit / 단위) là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?
 
 Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi khởi động. Ứng dụng có thể cần cơ sở dữ liệu nhưng không nên giải quyết bằng cách cố định `sleep 30`. Systemd mô tả các **đơn vị (unit / 단위)** và quan hệ giữa chúng theo thứ tự và phụ thuộc thay vì chỉ dựa vào thời gian chờ giả định.
@@ -29,8 +27,6 @@ Cơ sở dữ liệu có thể cần hệ thống tệp và mạng trước khi 
 Điểm quan trọng là **thứ tự (ordering / 순서)** và **yêu cầu phụ thuộc (requirement)** là hai khái niệm khác nhau. `After=` chỉ định thứ tự khi các đơn vị (unit / 단위) cùng được đưa vào quá trình khởi động; nó không tự động kéo đơn vị (unit / 단위) kia vào. `Requires=` và `Wants=` mô tả các mức quan hệ phụ thuộc khác nhau.
 
 Vì vậy sao chép một đơn vị (unit / 단위) tệp (file / 파일) mà không hiểu các chỉ thị có thể tạo ra lỗi tranh chấp trong quá trình khởi động (boot race).
-
-> **Nối mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Đơn vị (unit / 단위) là gì?** nối từ **Vì sao trình quản lý dịch vụ cần đồ thị phụ thuộc?** sang **Vòng đời dịch vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị (unit / 단위) là gì?
 
@@ -49,8 +45,6 @@ systemctl show app.service -p MainPID -p User -p Group -p ExecStart
 ```
 
 `systemctl cat` đặc biệt hữu ích vì nó hiển thị đơn vị (unit / 단위) cùng các cấu hình bổ sung (drop-in) thực tế, tốt hơn việc đoán tệp nằm trong `/etc/systemd/system` hay `/usr/lib/systemd/system`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Vòng đời dịch vụ** nối từ **Đơn vị (unit / 단위) là gì?** sang **reload khác restart**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vòng đời dịch vụ
 
@@ -73,8 +67,6 @@ systemctl show app -p MainPID -p ExecMainStatus
 
 Sau khi khởi động lại, trạng thái gây lỗi ban đầu có thể biến mất.
 
-> **Nối mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **reload khác restart** nối từ **Vòng đời dịch vụ** sang **enable khác start**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `reload` khác `restart`
 
 Nếu daemon hỗ trợ nạp lại cấu hình, `reload` yêu cầu tiến trình đang chạy đọc cấu hình mới mà không dừng rồi khởi động lại toàn bộ:
@@ -86,8 +78,6 @@ sudo nginx -t && sudo systemctl reload nginx
 Ở đây `nginx -t` kiểm tra cấu hình trước; `&&` bảo đảm chỉ reload khi bước kiểm tra thành công.
 
 Không phải dịch vụ nào cũng hỗ trợ reload. `systemctl reload app` không tự tạo ra khả năng này nếu bản thân ứng dụng không triển khai cơ chế nạp lại.
-
-> **Nối mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **enable khác start** nối từ **reload khác restart** sang **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `enable` khác `start`
 
@@ -105,8 +95,6 @@ sudo systemctl enable --now app
 ```
 
 thường vừa bật tự khởi động vừa khởi động ngay dịch vụ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi** nối từ **enable khác start** sang **daemon-reload**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi
 
@@ -133,8 +121,6 @@ WantedBy=multi-user.target
 
 Nên dùng đường dẫn tuyệt đối và khai báo rõ các biến môi trường thật sự cần thiết.
 
-> **Nối mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **daemon-reload** nối từ **Đơn vị (unit / 단위) tệp (file / 파일) và môi trường thực thi** sang **Chính sách khởi động lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `daemon-reload`
 
 Sau khi thay đổi đơn vị (unit / 단위) tệp (file / 파일) hoặc cấu hình drop-in:
@@ -144,8 +130,6 @@ sudo systemctl daemon-reload
 ```
 
 systemd sẽ nạp lại định nghĩa các đơn vị (unit / 단위). Lệnh này **không tự khởi động lại ứng dụng**. Nếu tiến trình đang chạy cần dùng cấu hình mới, hành động tiếp theo phụ thuộc vào loại thay đổi.
-
-> **Nối mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Chính sách khởi động lại** nối từ **daemon-reload** sang **Dừng dịch vụ có kiểm soát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chính sách khởi động lại
 
@@ -157,15 +141,11 @@ sudo systemctl reset-failed app
 
 Không nên coi `reset-failed` là cách sửa lỗi; nó chỉ đặt lại trạng thái thất bại và bộ đếm liên quan trong trình quản lý.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Dừng dịch vụ có kiểm soát** nối từ **Chính sách khởi động lại** sang **Mục tiêu (target / 대상)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dừng dịch vụ có kiểm soát
 
 Khi dừng dịch vụ, systemd gửi tín hiệu (signal / 신호) theo cấu hình, thường bắt đầu bằng `SIGTERM`. Ứng dụng cần xử lý quá trình dừng đúng cách để ngừng nhận lưu lượng mới, hoàn tất hoặc hủy công việc an toàn, ghi nốt trạng thái cần thiết và đóng tài nguyên.
 
 Nếu ứng dụng không dừng trong khoảng thời gian cho phép, trình quản lý có thể chuyển sang biện pháp mạnh hơn. Xem thêm [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md).
-
-> **Nối mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Mục tiêu (target / 대상)** nối từ **Dừng dịch vụ có kiểm soát** sang **Kích hoạt bằng socket và bộ hẹn giờ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mục tiêu (target / 대상)
 
@@ -176,15 +156,11 @@ systemctl get-default
 systemctl list-dependencies multi-user.target
 ```
 
-> **Nối mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Kích hoạt bằng socket và bộ hẹn giờ** nối từ **Mục tiêu (target / 대상)** sang **Xử lý khi dịch vụ không khởi động được**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kích hoạt bằng socket và bộ hẹn giờ
 
 Systemd có thể quản lý socket đơn vị (unit / 단위) và chỉ khởi động dịch vụ khi lưu lượng tới, hoặc dùng timer đơn vị (unit / 단위) thay cho `cron` trong nhiều tình huống. Điều này cho thấy systemd không chỉ là công cụ để "restart dịch vụ (service / 서비스)", mà là trình quản lý vòng đời và quan hệ phụ thuộc của hệ thống.
 
 Bộ hẹn giờ được trình bày thêm tại [Lập lịch và tự động hóa](../08_operations/scheduling_automation.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Xử lý khi dịch vụ không khởi động được** nối từ **Kích hoạt bằng socket và bộ hẹn giờ** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xử lý khi dịch vụ không khởi động được
 
@@ -201,13 +177,9 @@ Sau đó kiểm tra đường dẫn, quyền, môi trường, chương trình th
 
 Nếu Java không được tìm thấy khi chạy dưới systemd nhưng lại chạy được trong SSH shell, hãy kiểm tra `ExecStart` và đường dẫn tuyệt đối thay vì thêm `PATH` ngẫu nhiên.
 
-> **Nối mạch:** Trong **Quá trình khởi động, systemd và dịch vụ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Xử lý khi dịch vụ không khởi động được** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc và trình quản lý trạng thái hệ thống**. đơn vị (unit / 단위) tệp (file / 파일) là mô tả khai báo về cách tài nguyên hoặc dịch vụ tham gia vào đồ thị hệ thống; `systemctl` là công cụ khách để yêu cầu systemd thay đổi hoặc báo cáo trạng thái.
-
-> **Nối mạch:** Ở chặng này của **Quá trình khởi động, systemd và dịch vụ**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -220,8 +192,6 @@ Systemd là **trình giám sát tiến trình có hiểu quan hệ phụ thuộc
 **"`After=network.target` nghĩa là Internet hoặc DNS chắc chắn đã sẵn sàng."** Quan hệ thứ tự của mục tiêu (target / 대상) không chứng minh phụ thuộc mạng ở mức ứng dụng đã khỏe mạnh.
 
 **"`systemctl status` chứa toàn bộ nhật ký."** Nó chỉ hiển thị một phần ngữ cảnh gần đây; dùng `journalctl` để truy vấn sâu hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quá trình khởi động, systemd và dịch vụ**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

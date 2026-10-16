@@ -20,8 +20,6 @@ Nếu `\lambda/L` không nhỏ, hiện tượng nhiễu xạ trở nên quan tr�
 
 Vì vậy quang hình học nên được xem là **giới hạn eikonal** của quang học sóng, không phải một lý thuyết hoàn toàn độc lập.
 
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Chỉ số khúc xạ** nối từ **Khi nào mô hình tia hợp lý?** sang **Độ dài quang học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chỉ số khúc xạ
 
 Trong môi trường, tốc độ pha của ánh sáng là
@@ -39,8 +37,6 @@ n=\frac{c}{v}.
 `n` thường phụ thuộc tần số, vì vậy cùng một vật liệu có thể khúc xạ các màu khác nhau. Hiện tượng này gọi là **tán sắc (dispersion)**.
 
 Chỉ số khúc xạ không nên được hiểu đơn giản là “ánh sáng va vào nguyên tử nên chậm lại từng đoạn”. Trong mô tả điện từ cổ điển, trường kích thích phân cực vật chất và đáp ứng tập thể của môi trường làm thay đổi quan hệ pha giữa sóng và nguồn.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Độ dài quang học** nối từ **Chỉ số khúc xạ** sang **Nguyên lý Fermat**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ dài quang học
 
@@ -64,8 +60,6 @@ t=\frac1c\int n\,ds,
 
 độ dài quang học tỉ lệ trực tiếp với thời gian truyền.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Nguyên lý Fermat** nối từ **Độ dài quang học** sang **Suy ra định luật phản xạ từ Fermat**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên lý Fermat
 
 Nguyên lý Fermat phát biểu rằng đường đi vật lý của tia làm thời gian truyền, hay tương đương độ dài quang học, **dừng (stationary)** đối với những biến thiên nhỏ của đường đi:
@@ -77,8 +71,6 @@ Nguyên lý Fermat phát biểu rằng đường đi vật lý của tia làm th
 “Dừng” không nhất thiết luôn là “ngắn nhất”. Trong một số hệ, đường quang học có thể là cực đại hoặc điểm yên ngựa.
 
 Đây là một nguyên lý biến phân giống về cấu trúc với nguyên lý tác dụng dừng trong cơ học Lagrange.
-
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Suy ra định luật phản xạ từ Fermat** nối từ **Nguyên lý Fermat** sang **Suy ra định luật Snell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy ra định luật phản xạ từ Fermat
 
@@ -101,8 +93,6 @@ A → điểm phản xạ → B'.
 ```
 
 Định luật phản xạ vì vậy không cần được xem là một quy tắc độc lập phải học thuộc; nó là hệ quả của nguyên lý đường quang học dừng.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Suy ra định luật Snell** nối từ **Suy ra định luật phản xạ từ Fermat** sang **Tần số không đổi, bước sóng thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy ra định luật Snell
 
@@ -132,8 +122,6 @@ n_1\sin\theta_1=n_2\sin\theta_2.
 
 Ta cũng có thể suy ra cùng kết quả từ điều kiện liên tục pha tại biên: thành phần song song với mặt phân cách của vectơ sóng được bảo toàn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Tần số không đổi, bước sóng thay đổi** nối từ **Suy ra định luật Snell** sang **Phản xạ toàn phần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tần số không đổi, bước sóng thay đổi
 
 Tại mặt phân cách đứng yên, tần số của sóng không đổi vì pha phải khớp theo thời gian. Do
@@ -145,8 +133,6 @@ v=f\lambda,
 khi `v` thay đổi thì `\lambda` thay đổi.
 
 Vì vậy khi ánh sáng từ không khí đi vào thủy tinh, tần số và màu không tự đổi chỉ vì tốc độ pha giảm; bước sóng trong môi trường mới thay đổi.
-
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Phản xạ toàn phần** nối từ **Tần số không đổi, bước sóng thay đổi** sang **Mặt cầu và công thức tạo ảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản xạ toàn phần
 
@@ -165,8 +151,6 @@ Khi vế phải vượt 1, không còn nghiệm góc truyền lan thực. Góc g
 Với `\theta_1>\theta_c`, xảy ra phản xạ toàn phần.
 
 Tuy nhiên trường phía môi trường thứ hai không hoàn toàn bằng không. Một **trường suy giảm mũ (evanescent field)** vẫn tồn tại gần biên. Điều này quan trọng trong cảm biến, ghép quang và kính hiển vi trường gần.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Mặt cầu và công thức tạo ảnh** nối từ **Phản xạ toàn phần** sang **Công thức Lens-maker**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mặt cầu và công thức tạo ảnh
 
@@ -189,8 +173,6 @@ Paraxial nghĩa là các tia nằm gần trục quang học và góc đủ nhỏ
 
 Nếu góc lớn, các hạng bậc cao tạo quang sai.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Công thức Lens-maker** nối từ **Mặt cầu và công thức tạo ảnh** sang **Phương trình thấu kính mỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Công thức Lens-maker
 
 Với thấu kính mỏng trong không khí có chỉ số `n`, hai bán kính cong `R_1,R_2`, tiêu cự gần đúng là
@@ -207,8 +189,6 @@ Với thấu kính mỏng trong không khí có chỉ số `n`, hai bán kính c
 Công thức này cho thấy tiêu cự không chỉ phụ thuộc vật liệu mà còn phụ thuộc hình học của hai mặt.
 
 Một thấu kính hội tụ không “hút tia vào trục”. Nó thay đổi pha của sóng theo vị trí xuyên qua độ dày vật liệu, tạo một wavefront mới có xu hướng hội tụ.
-
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Phương trình thấu kính mỏng** nối từ **Công thức Lens-maker** sang **Ma trận ABCD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình thấu kính mỏng
 
@@ -227,8 +207,6 @@ m=\frac{h_i}{h_o}=-\frac{d_i}{d_o}.
 Dấu âm cho biết ảnh thật thường bị đảo chiều trong quy ước chuẩn.
 
 Công thức này chỉ đúng tốt cho thấu kính mỏng và tia paraxial. Với hệ nhiều thấu kính hoặc lens dày, nên dùng ma trận truyền tia hoặc quang học Gaussian tổng quát.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Ma trận ABCD** nối từ **Phương trình thấu kính mỏng** sang **Camera tạo ảnh như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ma trận ABCD
 
@@ -261,8 +239,6 @@ còn thấu kính mỏng:
 
 Cách này cho phép phân tích hệ nhiều thấu kính bằng đại số ma trận thay vì vẽ tia từng bước.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Camera tạo ảnh như thế nào?** nối từ **Ma trận ABCD** sang **F-number và numerical aperture**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Camera tạo ảnh như thế nào?
 
 Một điểm vật phát nhiều tia. Hệ thấu kính biến wavefront phân kỳ từ điểm đó thành wavefront hội tụ về một điểm ảnh gần tương ứng.
@@ -270,8 +246,6 @@ Một điểm vật phát nhiều tia. Hệ thấu kính biến wavefront phân 
 Nếu sensor đặt đúng mặt phẳng ảnh, các tia của một điểm hội tụ gần cùng vị trí và ảnh sắc nét. Nếu sensor lệch khỏi mặt phẳng này, điểm biến thành một vùng mờ gọi là **circle of confusion**.
 
 Khẩu độ nhỏ tăng độ sâu trường nhưng đồng thời tăng ảnh hưởng nhiễu xạ. Vì vậy không thể làm ảnh sắc vô hạn bằng cách đóng khẩu vô hạn.
-
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **F-number và numerical aperture** nối từ **Camera tạo ảnh như thế nào?** sang **Quang sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## F-number và numerical aperture
 
@@ -291,8 +265,6 @@ NA=n\sin\theta.
 
 `NA` càng lớn, hệ thu được góc không gian lớn hơn và có khả năng phân giải chi tiết nhỏ hơn, nhưng giới hạn cuối vẫn là nhiễu xạ chứ không phải hình học tia thuần túy.
 
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Quang sai** nối từ **F-number và numerical aperture** sang **Mắt người**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quang sai
 
 Thấu kính thực không hội tụ mọi tia và mọi màu vào cùng một điểm.
@@ -305,8 +277,6 @@ Ngoài ra còn coma, astigmatism và trường dữ liệu (field / 필드) curv
 
 Hệ quang học thực thường dùng nhiều phần tử với vật liệu và hình dạng khác nhau để bù các sai lệch này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Mắt người** nối từ **Quang sai** sang **Sợi quang: từ ray picture tới chế độ (mode / 모드) picture**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mắt người
 
 Giác mạc cung cấp phần lớn công suất khúc xạ của mắt, còn thủy tinh thể điều chỉnh tiêu cự qua accommodation.
@@ -315,8 +285,6 @@ Cận thị thường làm ảnh của vật xa hội tụ trước võng mạc 
 
 Mắt không chỉ là camera sinh học. Võng mạc và hệ thần kinh xử lý tín hiệu mạnh trước khi thông tin trở thành nhận thức thị giác.
 
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Sợi quang: từ ray picture tới chế độ (mode / 모드) picture** nối từ **Mắt người** sang **Khi nào quang hình học thất bại?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sợi quang: từ ray picture tới chế độ (mode / 모드) picture
 
 Mô hình tia nói ánh sáng bị giữ trong lõi nhờ phản xạ toàn phần. Mô hình sóng nói chỉ những chế độ (mode / 모드) thỏa điều kiện biên mới lan truyền ổn định.
@@ -324,8 +292,6 @@ Mô hình tia nói ánh sáng bị giữ trong lõi nhờ phản xạ toàn ph�
 Số chế độ (mode / 모드) phụ thuộc kích thước lõi, bước sóng và numerical aperture. Trong truyền thông tốc độ cao, dispersion chế độ (mode / 모드), dispersion vật liệu, suy hao và hiệu ứng phi tuyến đều có thể giới hạn băng thông.
 
 Vì vậy ray optics là trực giác ban đầu, còn thiết kế hệ sợi chính xác cần quang học sóng và điện từ học.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Khi nào quang hình học thất bại?** nối từ **Sợi quang: từ ray picture tới chế độ (mode / 모드) picture** sang **Những ngộ nhận thường gặp (Common Misconceptions)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi nào quang hình học thất bại?
 
@@ -339,8 +305,6 @@ Quang hình học trở nên không đủ khi:
 - cần photon statistics hoặc tương tác lượng tử.
 
 Khi đó phải chuyển sang quang học sóng, Maxwell hoặc quang học lượng tử tùy thang bài toán.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Những ngộ nhận thường gặp (Common Misconceptions)** nối từ **Khi nào quang hình học thất bại?** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -356,13 +320,9 @@ Nguyên lý Fermat nói đường quang học là stationary, không phải lúc
 
 Ban đầu giảm khẩu có thể giảm quang sai hình học, nhưng khi khẩu quá nhỏ, nhiễu xạ làm độ phân giải xấu đi.
 
-> **Nối mạch:** Trong **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Quang hình học là bài toán tối ưu pha và đường truyền trong giới hạn `\lambda/L\ll1`. Tia sáng hữu ích vì nó nén thông tin của wavefront thành hướng truyền cục bộ. Khi hệ bắt đầu nhạy với pha, bước sóng hoặc khẩu độ, phải quay lại mô hình sóng đầy đủ hơn.
-
-> **Nối mạch:** Ở chặng này của **Quang hình học: Fermat, phản xạ, khúc xạ, thấu kính và hệ tạo ảnh**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

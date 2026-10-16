@@ -10,21 +10,15 @@ Có thể phân biệt rough categories: lĩnh vực (domain / 도메인) kiểm
 
 Thử lại (retry / 재시도) invalid password vô hạn không giúp; thử lại (retry / 재시도) transient 503 có thể hợp lý với backoff; thử lại (retry / 재시도) non-idempotent payment yêu cầu (request / 요청) mù quáng có thể duplicate charge.
 
-> **Nối mạch:** **Return values, kết quả (result / 결과) types và exceptions** nối từ **Lỗi (error / 오류) categories** sang **Checked vs unchecked**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Return values, kết quả (result / 결과) types và exceptions
 
 C-style lỗi (error / 오류) codes buộc caller check manually. Exceptions tách lan truyền lỗi (error propagation / 오류 전파) khỏi normal return nhưng tạo non-local điều khiển (control / 제어) luồng (flow / 흐름). kết quả (result / 결과)/Either types làm success/lỗi (error / 오류) tường minh (explicit / 명시적) trong hệ kiểu (type system / 타입 시스템) và compose transformations.
 
 Không có cơ chế (mechanism / 메커니즘) nào tự đảm bảo good thiết kế (design / 설계). Quan trọng là encode ngữ cảnh (context / 맥락), preserve cause và tránh swallowing failures.
 
-> **Nối mạch:** **Checked vs unchecked** nối từ **Return values, kết quả (result / 결과) types và exceptions** sang **Tài nguyên (resource / 자원) an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Checked vs unchecked
 
 Checked exceptions buộc declaration/handling một số failures compile-time; unchecked giảm signature noise nhưng dễ bỏ sót. Ecosystems có trade-offs khác. Thay vì tranh luận tuyệt đối, hãy hỏi caller có meaningful khôi phục (recovery / 복구) không và đặc tả hợp đồng (contract / 계약) API cần expose gì.
-
-> **Nối mạch:** **Checked vs unchecked** đặt vấn đề; **Tài nguyên (resource / 자원) an toàn (safety / 안전)** kiểm tra bằng chứng, rồi **Exception an toàn (safety / 안전) và invariants** mở rộng hệ quả.
 
 ## Tài nguyên (resource / 자원) an toàn (safety / 안전)
 
@@ -32,43 +26,29 @@ Bộ nhớ (memory / 메모리) GC không tự close socket/tệp (file / 파일
 
 Cancellation cũng là error-like điều khiển (control / 제어) đường dẫn (path / 경로). Async tác vụ (task / 작업) cancelled phải bản phát hành (release / 릴리스) locks/connections/buffers và không để partial trạng thái (state / 상태).
 
-> **Nối mạch:** **Tài nguyên (resource / 자원) an toàn (safety / 안전)** đặt vấn đề; **Exception an toàn (safety / 안전) và invariants** kiểm tra bằng chứng, rồi **Panic/abort vs recoverable lỗi (error / 오류)** mở rộng hệ quả.
-
 ## Exception an toàn (safety / 안전) và invariants
 
 Một thao tác (operation / 연산) có thể thất bại (fail / 실패) giữa chừng. Strong exception-safety style cố giữ trạng thái (state / 상태) unchanged nếu thất bại (fail / 실패); basic guarantee giữ invariants/no leaks dù trạng thái (state / 상태) thay đổi. cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션) quay lui (rollback / 롤백) là analogous cơ chế (mechanism / 메커니즘) ở persistent trạng thái (state / 상태) tầng (layer / 계층).
-
-> **Nối mạch:** **Panic/abort vs recoverable lỗi (error / 오류)** nối từ **Exception an toàn (safety / 안전) và invariants** sang **Bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Panic/abort vs recoverable lỗi (error / 오류)
 
 Bất biến (invariant / 불변식) corruption đôi khi không nên tiếp tục cục bộ (local / 로컬) khôi phục (recovery / 복구) vì trạng thái (state / 상태) không trustworthy. Fail-fast có thể an toàn hơn silently continuing. Nhưng crash whole tiến trình (process / 프로세스) có blast radius; supervision/restart kiến trúc (architecture / 아키텍처) có thể isolate failures.
 
-> **Nối mạch:** **Bộ nhớ (memory / 메모리) an toàn (safety / 안전)** nối từ **Panic/abort vs recoverable lỗi (error / 오류)** sang **Kiểu (type / 타입) an toàn (safety / 안전) và thời gian chạy (runtime / 런타임) an toàn (safety / 안전) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ nhớ (memory / 메모리) an toàn (safety / 안전)
 
 Memory-safe môi trường (environment / 환경) ngăn classes lỗi như use-after-free, out-of-bounds hoặc dangling references ở safe subset/thời gian chạy (runtime / 런타임). C/C++ đòi discipline/tooling; Rust quyền sở hữu (ownership / 소유권) enforces many properties statically; Java/.NET checks + GC. bộ nhớ (memory / 메모리) an toàn (safety / 안전) không ngăn lô-gic (logic / 논리) bugs, injection hay authorization errors.
-
-> **Nối mạch:** **Kiểu (type / 타입) an toàn (safety / 안전) và thời gian chạy (runtime / 런타임) an toàn (safety / 안전) khác nhau** nối từ **Bộ nhớ (memory / 메모리) an toàn (safety / 안전)** sang **Defensive programming vs contracts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểu (type / 타입) an toàn (safety / 안전) và thời gian chạy (runtime / 런타임) an toàn (safety / 안전) khác nhau
 
 Type-safe program có thể divide by zero, hết thời gian chờ (timeout / 타임아웃), OOM hoặc deadlock. hệ kiểu (type system / 타입 시스템) chỉ cover properties được mô hình (model / 모델). Richer types/tác động (effect / 효과) các hệ thống (systems / 시스템들) có thể encode thêm states, nhưng real world luôn có bên ngoài (external / 외부) failures.
 
-> **Nối mạch:** **Defensive programming vs contracts** nối từ **Kiểu (type / 타입) an toàn (safety / 안전) và thời gian chạy (runtime / 런타임) an toàn (safety / 안전) khác nhau** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Defensive programming vs contracts
 
 Checking everything everywhere có thể hide programming bugs hoặc duplicate kiểm tra hợp lệ (validation / 검증). Validate at trust boundaries, assert nội bộ (internal / 내부) invariants, encode impossible states in types khi hợp lý, và document đặc tả hợp đồng (contract / 계약).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Defensive programming vs contracts**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > lỗi (error / 오류) handling là **state-transition thiết kế (design / 설계) dưới thất bại (failure / 실패)**. Hỏi thất bại (failure / 실패) xảy ra ở đâu, trạng thái (state / 상태) còn valid không, thao tác (operation / 연산) có retry-safe không, resources nào đang held, và ranh giới (boundary / 경계) nào chịu trách nhiệm khôi phục (recovery / 복구).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -77,8 +57,6 @@ Checking everything everywhere có thể hide programming bugs hoặc duplicate 
 **“GC xử lý mọi tài nguyên (resource / 자원) cleanup.”** bên ngoài (external / 외부) resources cần tường minh (explicit / 명시적)/deterministic thời gian tồn tại (lifetime / 수명).
 
 **“thử lại (retry / 재시도) làm hệ thống reliable.”** thử lại (retry / 재시도) có thể khuếch đại overload hoặc duplicate side effects nếu thiếu backoff/idempotency.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

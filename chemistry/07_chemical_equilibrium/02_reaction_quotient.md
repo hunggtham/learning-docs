@@ -30,8 +30,6 @@ Q=K
 
 Ngoài cân bằng, \(Q\) có thể nhỏ hơn hoặc lớn hơn \(K\).
 
-> **Nối mạch:** Q là snapshot của activities hiện tại; so sánh Q với K suy ra chiều dịch chuyển, nhưng Q không phải lượng sản phẩm vì còn phụ thuộc stoichiometry và reactant activities.
-
 ## Vì sao so sánh Q với K cho biết chiều tự diễn ra?
 
 Ta có:
@@ -62,8 +60,6 @@ Q = K → ΔrG = 0 → cân bằng
 
 Đây không phải mẹo ghi nhớ. Nó là hệ quả trực tiếp của chemical potential và Gibbs free năng lượng (energy / 에너지).
 
-> **Nối mạch:** So sánh (Q/K) đã cho chiều của (Delta_rG), nhưng chưa nói (Q) là bao nhiêu sản phẩm. **Q không phải “lượng sản phẩm”** vì mỗi hoạt độ còn mang lũy thừa stoichiometric; từ đó có thể đọc **Q là “ảnh chụp”, K là “đích”** của một trạng thái cụ thể.
-
 ## Q không phải “lượng sản phẩm”
 
 Một sai lầm phổ biến là nghĩ \(Q<K\) nghĩa “sản phẩm đang ít”. Q là **tỉ số hoạt độ có lũy thừa stoichiometric**, nên kết luận phải dựa trên toàn biểu thức.
@@ -80,8 +76,6 @@ Q=\frac{a_{NH_3}^2}{a_{N_2}a_{H_2}^3}
 
 Một thay đổi nhỏ ở \(H_2\) có thể ảnh hưởng Q mạnh vì lũy thừa ba.
 
-> **Nối mạch:** Vì (Q) là ảnh chụp composition hiện tại còn (K) là đích ở nhiệt độ cố định, chỉ cần thay đổi áp suất hoặc thành phần là (Q) đổi trước khi phản ứng tiến tới cân bằng. Với **Khí lý tưởng**, hoạt độ có thể thay bằng áp suất riêng phần để tính thay đổi đó.
-
 ## Q là “ảnh chụp”, K là “đích”
 
 Có thể hình dung:
@@ -93,8 +87,6 @@ so Q/K → chiều thermodynamic driving force
 ```
 
 K không phụ thuộc composition ban đầu; Q thì thay đổi mỗi khi composition, pressure hoặc activity thay đổi.
-
-> **Nối mạch:** Với khí gần lý tưởng, áp suất riêng phần cung cấp cách tính hoạt độ thuận tiện và cho thấy nén hệ làm (Q_p) đổi ngay. Trong **Dung dịch và hoạt độ**, nồng độ chỉ là xấp xỉ; hoạt độ phải phản ánh tương tác giữa các ion và phân tử.
 
 ## Khí lý tưởng
 
@@ -120,8 +112,6 @@ Q_p\approx
 
 Nếu nén hệ, các partial pressures thay đổi và Q có thể thay đổi ngay trước khi composition kịp phản ứng. Chính thay đổi Q đó tạo driving force mới.
 
-> **Nối mạch:** Khí lý tưởng dùng (P_i/P^\circ) làm hoạt độ gần đúng; dung dịch cần hệ số hoạt độ để sửa sai lệch do lực ion và tương tác dung môi. Ngược lại, **Chất rắn và chất lỏng tinh khiết** thường có hoạt độ quy ước gần 1 nên không xuất hiện như biến số trong (Q).
-
 ## Dung dịch và hoạt độ
 
 Trong dung dịch loãng:
@@ -141,8 +131,6 @@ với \(\gamma_i\) là **hệ số hoạt độ (activity coefficient)**.
 Nếu chỉ dùng concentration trong nước biển hoặc electrolyte đậm đặc, Q tính được có thể lệch đáng kể khỏi thermodynamic Q.
 
 Đây là lý do pH, solubility, electrochemistry và speciation ở hệ đậm đặc cần activity các mô hình (models / 모델들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Chất rắn và chất lỏng tinh khiết** nối từ **Dung dịch và hoạt độ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn và chất lỏng tinh khiết
 
@@ -441,8 +429,6 @@ Không. Supersaturation có thể tồn tại nếu nucleation chậm.
 ### “Mỗi equilibrium trong dung dịch có thể giải độc lập”
 
 Không khi chúng chia sẻ species. Phải giải coupled hệ thống (system / 시스템).
-
-> **Nối mạch:** Trong **Thương số phản ứng — xác định chiều dịch chuyển từ trạng thái hiện tại**, **Mô hình tư duy** tổng hợp từ **Chất rắn và chất lỏng tinh khiết** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

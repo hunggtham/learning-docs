@@ -8,7 +8,7 @@ Không cần giả định mô hình (model / 모델) suy nghĩ giống con ngư
 
 ## Direct answer vs intermediate computation
 
-Một prompt có thể yêu cầu mô hình (model / 모델) trả lời trực tiếp hoặc tạo intermediate steps. Với tasks nhiều bước, việc tạo scratch lập luận (reasoning / 추론) có thể giúp vì mô hình (model / 모델) có thêm đơn vị từ (token / 토큰) positions để thực hiện computation tuần tự.
+Một prompt có thể yêu cầu mô hình (model / 모델) trả lời trực tiếp hoặc tạo intermediate steps. Với tasks nhiều bước, việc tạo scratch lập luận (reasoning / 추론) có thể giúp vì mô hình (model / 모델) có thêm token (토큰) positions để thực hiện computation tuần tự.
 
 Mô hình tư duy (mental model / 사고 모델):
 
@@ -103,7 +103,7 @@ Công cụ bên ngoài xử lý những phép tính mà mô hình không cần t
 
 ## Lập luận (reasoning / 추론) và latent computation
 
-Một phần computation xảy ra trong hidden states trước mỗi đơn vị từ (token / 토큰). Visible rationale chỉ là một projection thành ngôn ngữ (language / 언어). Vì vậy absence of long rationale không đồng nghĩa absence of computation, và presence of rationale không guarantee fidelity.
+Một phần computation xảy ra trong hidden states trước mỗi token (토큰). Visible rationale chỉ là một projection thành ngôn ngữ (language / 언어). Vì vậy absence of long rationale không đồng nghĩa absence of computation, và presence of rationale không guarantee fidelity.
 
 Kỹ thuật (engineering / 엔지니어링) evaluation nên đo tác vụ (task / 작업) success, xác minh (verification / 확인) và robustness, không đo “trông có vẻ suy nghĩ”.
 

@@ -16,8 +16,6 @@ Carbon có bốn electron hóa trị nên có thể tạo bốn liên kết cộ
 
 Các nguyên tố xuất hiện nhiều trong biomolecule thường được nhớ bằng CHNOPS: carbon, hydrogen, nitrogen, oxy (oxygen), phosphorus và sulfur. Nhưng cần hiểu vai trò thay vì học thuộc acronym. Carbon tạo skeleton; oxygen và hydrogen liên quan mạnh tới water/redox; nitrogen xuất hiện trong axit amin (amino acid) và nucleotit (nucleotide); phosphorus quan trọng trong ATP, axit nucleic (nucleic acid) và phospholipid; sulfur có thể tạo liên kết disulfide (disulfide bond) trong protein (protein).
 
-> **Nối mạch:** Cấu trúc nguyên tử quyết định cách electron được phân bố; khi phân bố điện tích lệch, nguyên tử trở thành ion và tương tác mạnh với nước. Từ đó, **liên kết cộng hóa trị** giải thích cách các nguyên tử chia sẻ electron để tạo phân tử bền hơn.
-
 ## 2. Ion: khi electron không được chia đều
 
 Nếu atom mất hoặc nhận electron, nó trở thành **ion (ion / 이온)**. Ion dương là cation; ion âm là anion.
@@ -27,8 +25,6 @@ Na⁺, K⁺, Ca²⁺, Cl⁻ và H⁺ không phải những ký hiệu ngẫu nhi
 Điểm quan trọng là ion trong water không đứng “trần”. Molecule nước có polarity nên quay orientation quanh ion, tạo lớp hydrat hóa (hydration shell). Điều này ảnh hưởng diffusion, binding và khả năng ion đi qua màng (membrane).
 
 Chapter về membrane sẽ cho thấy một ion rất nhỏ như Na⁺ vẫn không dễ xuyên lớp kép lipid (lipid bilayer) vì charge của nó tương tác mạnh với water.
-
-> **Nối mạch:** Ion cho thấy điện tích không được chia đều và vì thế bị nước hydrat hóa; **liên kết cộng hóa trị** bổ sung cơ chế tạo khung phân tử bằng cách chia sẻ electron. Khi liên kết phân cực tạo partial charge, **nước** trở thành môi trường có tính chất chủ động chứ không chỉ là nơi chứa tế bào.
 
 ## 3. Liên kết cộng hóa trị: cùng chia electron để xây molecule
 
@@ -40,8 +36,6 @@ Một subtle điểm (point / 지점) quan trọng là electron không phải l�
 
 Chính polarity này dẫn ta sang một trong những molecule quan trọng nhất của life: nước (water).
 
-> **Nối mạch:** Liên kết cộng hóa trị phân cực tạo nên hình học và partial charge của H₂O; **nước** dùng các đặc điểm đó để hòa tan ion, điều hòa nhiệt và tổ chức biomolecule. Nhiều hiệu ứng ở quy mô lớn bắt đầu từ **liên kết hydro**, nên mục kế tiếp nối tương tác phân tử với tính chất của mô và hệ sinh thái.
-
 ## 4. Nước: không chỉ là “môi trường chứa cell”
 
 Nước (water / 물) chiếm phần lớn khối lượng nhiều cell và mô (tissue). Nhưng lý do water quan trọng không chỉ vì “có nhiều”. thuộc tính (property / 속성) của water định hình cách biomolecule fold, membrane self-assemble, ion dissolve và heat được điều hòa.
@@ -51,8 +45,6 @@ Molecule H₂O có hình học (geometry / 기하학) làm charge phân bố kh�
 Liên kết hydro yếu hơn liên kết cộng hóa trị, nhưng số lượng rất lớn. Nhiều tương tác yếu (weak interaction) cộng lại có thể tạo tác động (effect / 효과) mạnh mà vẫn đủ linh động để rearrange liên tục.
 
 Đây là mẫu (pattern / 패턴) quan trọng trong sinh học (biology): hệ thống (system / 시스템) thường dùng **rất nhiều tương tác (interaction / 상호작용) yếu** thay vì vài bond cực mạnh, vì tương tác (interaction / 상호작용) yếu cho phép recognition, assembly và disassembly có kiểm soát.
-
-> **Nối mạch:** Liên kết hydro giải thích cohesion, nhiệt dung và mạng tinh thể của băng; cùng nguyên lý tương tác với nước còn quyết định phân tử nào tránh nước. Vì vậy, **hydrophilic/hydrophobic** là bước tiếp theo để giải thích vì sao phospholipid tự tổ chức thành màng.
 
 ## 5. Liên kết hydro giải thích nhiều phenomenon tưởng không liên quan
 
@@ -66,8 +58,6 @@ Ice ít dense hơn liquid water vì liên kết hydro tạo open lattice. Nhờ 
 
 Một thuộc tính (property / 속성) molecular nhỏ có thể lan lên organism và ecosystem quy mô (scale / 규모). Đây chính là quy mô (scale / 규모) thinking từ chương (chapter) đầu.
 
-> **Nối mạch:** **6. Hydrophilic và hydrophobic: vì sao membrane tự hình thành?** nối từ **5. Liên kết hydro giải thích nhiều phenomenon tưởng không liên quan** sang **7. Nhóm chức (functional group): thay đổi một nhóm nhỏ, thay đổi cả hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Hydrophilic và hydrophobic: vì sao membrane tự hình thành?
 
 Molecule có group polar hoặc charged thường tương tác tốt với water và được gọi là **ưa nước (hydrophilic / 친수성)**. Molecule nonpolar thường tương tác kém với water và được gọi là **kỵ nước (hydrophobic / 소수성)**.
@@ -80,8 +70,6 @@ Không cần một “thợ xây tế bào” đặt từng phospholipid vào v�
 
 Đây là một ví dụ đẹp của **tự tổ chức** và sẽ trở thành nền của membrane sinh học.
 
-> **Nối mạch:** **7. Nhóm chức (functional group): thay đổi một nhóm nhỏ, thay đổi cả hành vi (behavior / 동작)** nối từ **6. Hydrophilic và hydrophobic: vì sao membrane tự hình thành?** sang **8. Acid, cơ sở (base / 기반) và pH: tại sao một số enzym (enzyme) “nhạy pH”?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Nhóm chức (functional group): thay đổi một nhóm nhỏ, thay đổi cả hành vi (behavior / 동작)
 
 Khung carbon (carbon skeleton) có thể gắn các **nhóm chức (functional group / 작용기)** khác nhau. Những group này quyết định nhiều thuộc tính (property / 속성) hóa học.
@@ -91,8 +79,6 @@ Hydroxyl (–OH) tăng polarity và hydrogen bonding. Carboxyl (–COOH) có th�
 Điều quan trọng không phải thuộc một bảng group, mà nhận ra rằng **một thay đổi hóa học nhỏ có thể làm molecule đổi solubility, charge, shape hoặc reactivity**, từ đó đổi biological hàm (function / 함수).
 
 Phosphorylation protein là ví dụ: thêm phosphate group có thể thay charge và conformation, làm protein bật/tắt trong truyền tín hiệu (signaling).
-
-> **Nối mạch:** **8. Acid, cơ sở (base / 기반) và pH: tại sao một số enzym (enzyme) “nhạy pH”?** nối từ **7. Nhóm chức (functional group): thay đổi một nhóm nhỏ, thay đổi cả hành vi (behavior / 동작)** sang **9. Buffer: hệ sinh học giảm shock pH bằng cách nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Acid, cơ sở (base / 기반) và pH: tại sao một số enzym (enzyme) “nhạy pH”?
 
@@ -110,8 +96,6 @@ Một enzyme có trung tâm hoạt động (active site) cần phân phối (dis
 
 Stomach có môi trường acid mạnh, trong khi blood được giữ quanh pH hẹp. Hai môi trường (environment / 환경) khác nhau cho phép chemistry khác nhau.
 
-> **Nối mạch:** **9. Buffer: hệ sinh học giảm shock pH bằng cách nào?** nối từ **8. Acid, cơ sở (base / 기반) và pH: tại sao một số enzym (enzyme) “nhạy pH”?** sang **10. Phản ứng hóa học (chemical reaction): reactant không “biến mất”, atom được sắp xếp lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Buffer: hệ sinh học giảm shock pH bằng cách nào?
 
 **Hệ đệm (buffer / 완충계)** là cặp molecule có thể nhận hoặc nhả H⁺, giúp giảm biến động pH khi acid/cơ sở (base / 기반) được thêm vào.
@@ -126,8 +110,6 @@ Khi CO₂ tăng, equilibrium có thể dịch theo hướng tăng H⁺, làm pH 
 
 Vì vậy khi chạy và tạo nhiều CO₂, cơ thể không chỉ “thiếu oxygen”; axit–bazơ regulation cũng tham gia phản hồi (response / 응답).
 
-> **Nối mạch:** **10. Phản ứng hóa học (chemical reaction): reactant không “biến mất”, atom được sắp xếp lại** nối từ **9. Buffer: hệ sinh học giảm shock pH bằng cách nào?** sang **11. Năng lượng: “có năng lượng” chưa đủ, phải hỏi usable theo cách nào**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Phản ứng hóa học (chemical reaction): reactant không “biến mất”, atom được sắp xếp lại
 
 Trong reaction, atom được rearrange. **Chất phản ứng (reactant / 반응물)** trở thành **sản phẩm (product / 생성물)** nhưng mass/atom được bảo toàn trong hệ kín.
@@ -141,8 +123,6 @@ Glucose + O_2 \rightarrow CO_2 + H_2O
 Nhưng hô hấp tế bào (cellular respiration) không xảy ra trong một bước. Nếu giải phóng toàn bộ năng lượng (energy / 에너지) cùng lúc, phần lớn sẽ thành heat và khó capture. Cell chia tiến trình (process / 프로세스) thành nhiều bước enzyme-catalyzed để lấy năng lượng (energy / 에너지) từng phần và transfer qua NADH, chênh lệch proton (proton gradient), ATP.
 
 Điều này sẽ rất quan trọng ở chuyển hóa (metabolism) chương (chapter).
-
-> **Nối mạch:** **11. Năng lượng: “có năng lượng” chưa đủ, phải hỏi usable theo cách nào** nối từ **10. Phản ứng hóa học (chemical reaction): reactant không “biến mất”, atom được sắp xếp lại** sang **12. Thermodynamics không nói tốc độ reaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Năng lượng: “có năng lượng” chưa đủ, phải hỏi usable theo cách nào
 
@@ -166,8 +146,6 @@ Người mới không cần dùng công thức này để tính mọi reaction, 
 
 Đây chính là nơi enzyme bước vào.
 
-> **Nối mạch:** **12. Thermodynamics không nói tốc độ reaction** nối từ **11. Năng lượng: “có năng lượng” chưa đủ, phải hỏi usable theo cách nào** sang **13. Entropy: “mất trật tự” là cách diễn giải quá đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Thermodynamics không nói tốc độ reaction
 
 Thermodynamics trả lời “chiều nào favorable”. **Kinetics (động học / 반응속도론)** trả lời “reaction nhanh đến đâu”.
@@ -178,8 +156,6 @@ Enzyme làm giảm năng lượng hoạt hóa bằng cách cung cấp pathway th
 
 Phân biệt thermodynamics–kinetics là một trong những điểm nền giúp tránh hiểu sai enzyme.
 
-> **Nối mạch:** **13. Entropy: “mất trật tự” là cách diễn giải quá đơn giản** nối từ **12. Thermodynamics không nói tốc độ reaction** sang **14. Redox: electron là “currency” của nhiều năng lượng (energy / 에너지) transformation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Entropy: “mất trật tự” là cách diễn giải quá đơn giản
 
 **Entropy (엔트로피)** thường được nói là “độ hỗn loạn”, nhưng cách này có thể gây hiểu lầm. Một cách hữu ích hơn là nghĩ entropy liên quan số cách microscopic trạng thái (state / 상태) có thể sắp xếp tương ứng cùng macroscopic trạng thái (state / 상태).
@@ -187,8 +163,6 @@ Phân biệt thermodynamics–kinetics là một trong những điểm nền gi�
 Sinh vật tạo cục bộ (local / 로컬) cấu trúc (structure / 구조) có vẻ giảm entropy, nhưng organism là hệ mở (open system). Nó nhận low-entropy tài nguyên (resource / 자원)/usable năng lượng (energy / 에너지) và thải heat/chất thải (waste), làm tổng entropy của universe vẫn tăng.
 
 Khi protein fold, nội bộ (internal / 내부) cấu trúc (structure / 구조) tăng thứ tự (order / 순서), nhưng hiệu ứng kỵ nước có thể giải phóng water molecule khỏi shell bị ràng buộc (constraint / 제약조건), khiến entropy của surroundings tăng. Vì vậy phải xét toàn hệ thống (system / 시스템), không chỉ molecule riêng.
-
-> **Nối mạch:** **14. Redox: electron là “currency” của nhiều năng lượng (energy / 에너지) transformation** nối từ **13. Entropy: “mất trật tự” là cách diễn giải quá đơn giản** sang **15. Concentration và khuếch tán (diffusion): từ chemistry sang movement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Redox: electron là “currency” của nhiều năng lượng (energy / 에너지) transformation
 
@@ -204,8 +178,6 @@ Quang hợp (photosynthesis) thực hiện chiều khác: light năng lượng (
 
 Respiration và quang hợp vì vậy là hai chương của cùng một câu chuyện redox.
 
-> **Nối mạch:** **15. Concentration và khuếch tán (diffusion): từ chemistry sang movement** nối từ **14. Redox: electron là “currency” của nhiều năng lượng (energy / 에너지) transformation** sang **16. Equilibrium không có nghĩa “không có chuyển động”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Concentration và khuếch tán (diffusion): từ chemistry sang movement
 
 Nếu molecule phân bố không đều, chuyển động nhiệt (thermal motion) làm chuyển động ròng (net movement) từ vùng concentration cao sang thấp. Đây là **khuếch tán (diffusion / 확산)**.
@@ -215,8 +187,6 @@ Không cần molecule “biết đường”. Từng molecule di chuyển ngẫu
 Diffusion hoạt động tốt ở distance ngắn. Thời gian diffusion tăng mạnh theo distance xấp xỉ bình phương distance. Đây là lý do cell nhỏ, alveoli mỏng và organism lớn cần circulation thay vì trông chờ khuếch tán qua toàn cơ thể.
 
 Chemistry và hình học (geometry / 기하학) bắt đầu chạm nhau.
-
-> **Nối mạch:** **16. Equilibrium không có nghĩa “không có chuyển động”** nối từ **15. Concentration và khuếch tán (diffusion): từ chemistry sang movement** sang **17. Thẩm thấu (osmosis): water cũng “đi theo chênh lệch” nhưng phải hiểu đúng độ dốc (gradient / 기울기) nào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Equilibrium không có nghĩa “không có chuyển động”
 
@@ -228,8 +198,6 @@ Hệ thống sinh học thường chủ động duy trì trạng thái **không 
 
 Sự sống phụ thuộc vào việc liên tục duy trì độ dốc (gradient / 기울기) khỏi equilibrium.
 
-> **Nối mạch:** **17. Thẩm thấu (osmosis): water cũng “đi theo chênh lệch” nhưng phải hiểu đúng độ dốc (gradient / 기울기) nào** nối từ **16. Equilibrium không có nghĩa “không có chuyển động”** sang **18. Một cầu nối (bridge / 브리지) quan trọng: chemistry tạo tự tổ chức**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Thẩm thấu (osmosis): water cũng “đi theo chênh lệch” nhưng phải hiểu đúng độ dốc (gradient / 기울기) nào
 
 **Thẩm thấu (osmosis / 삼투)** là chuyển động ròng của water qua selectively permeable membrane do chênh lệch thế nước (water potential)/solute điều kiện (condition / 조건).
@@ -239,8 +207,6 @@ Cách nói “nước đi từ nơi ít muối sang nơi nhiều muối” có t
 Trong tế bào, osmosis có consequence lớn. Animal cell trong hypotonic solution có thể swell; plant cell có thành tế bào (cell wall) nên turgor pressure tăng và giúp cây cứng.
 
 Khái niệm này sẽ được xây kỹ trong màng tế bào (cell membrane) và plant physiology.
-
-> **Nối mạch:** **18. Một cầu nối (bridge / 브리지) quan trọng: chemistry tạo tự tổ chức** nối từ **17. Thẩm thấu (osmosis): water cũng “đi theo chênh lệch” nhưng phải hiểu đúng độ dốc (gradient / 기울기) nào** sang **19. Các hiểu lầm phổ biến (common misconceptions)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Một cầu nối (bridge / 브리지) quan trọng: chemistry tạo tự tổ chức
 
@@ -254,8 +220,6 @@ Ta đã thấy ba ví dụ:
 
 Biology thường kết hợp **tự tổ chức** với **điều hòa**. Bilayer tự hình thành, nhưng cell regulation composition của membrane. Protein tự fold phần nào, nhưng chaperone giúp tránh misfolding. Molecule diffuse tự nhiên, nhưng transporter kiểm soát permeability.
 
-> **Nối mạch:** **19. Các hiểu lầm phổ biến (common misconceptions)** nối từ **18. Một cầu nối (bridge / 브리지) quan trọng: chemistry tạo tự tổ chức** sang **20. Tình huống phân tích (case study) xuyên chapter: tại sao high fever nguy hiểm?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Các hiểu lầm phổ biến (common misconceptions)
 
 “Bond chứa năng lượng (energy / 에너지) nên phá bond giải phóng năng lượng (energy / 에너지)” là câu nói nguy hiểm. Phá bond luôn cần đầu vào (input / 입력) năng lượng (energy / 에너지); năng lượng (energy / 에너지) bản phát hành (release / 릴리스) phụ thuộc việc bond mới hình thành ổn định hơn bond cũ. Trong reaction overall, ta phải xét cả breaking và forming.
@@ -268,8 +232,6 @@ Biology thường kết hợp **tự tổ chức** với **điều hòa**. Bilay
 
 “Equilibrium nghĩa là molecule dừng” sai; chuyển động vi mô (microscopic motion) vẫn tiếp tục.
 
-> **Nối mạch:** **19. Các hiểu lầm phổ biến (common misconceptions)** nêu quy tắc; **20. Tình huống phân tích (case study) xuyên chapter: tại sao high fever nguy hiểm?** thử quy tắc trong tình huống, rồi **Thế hóa học và thế điện hóa: vì sao “chênh lệch” có thể làm công** mở rộng hệ quả.
-
 ## 20. Tình huống phân tích (case study) xuyên chapter: tại sao high fever nguy hiểm?
 
 Temperature tăng làm molecular motion tăng và có thể làm tốc độ phản ứng (reaction rate) thay đổi. Nhưng chức năng protein (protein function) phụ thuộc conformation được giữ bởi nhiều tương tác yếu. Nếu temperature quá cao, tương tác (interaction / 상호작용) ổn định cấu trúc (structure / 구조) có thể bị phá, protein unfold hoặc hoạt động sai.
@@ -279,8 +241,6 @@ Temperature tăng làm molecular motion tăng và có thể làm tốc độ ph�
 Ở đây chemistry giải thích physiology.
 
 <!-- depth-audit-2026:chemical-potential -->
-
-> **Nối mạch:** **20. Tình huống phân tích (case study) xuyên chapter: tại sao high fever nguy hiểm?** nêu quy tắc; **Thế hóa học và thế điện hóa: vì sao “chênh lệch” có thể làm công** thử quy tắc trong tình huống, rồi **21. cầu nối (bridge / 브리지) sang biomolecule: atom và water chưa đủ để tạo tế bào** mở rộng hệ quả.
 
 ## Thế hóa học và thế điện hóa: vì sao “chênh lệch” có thể làm công
 
@@ -297,8 +257,6 @@ Trong đó \(R\) là hằng số khí, \(T\) là nhiệt độ tuyệt đối, \
 Điểm sâu hơn là hệ sống **không ở cân bằng nhiệt động (thermodynamic equilibrium)**. Tế bào liên tục tiêu ATP để tái tạo các chênh lệch mà khuếch tán luôn có xu hướng xóa đi. Khi nguồn năng lượng mất, các chênh lệch điện hóa sụp dần; chức năng màng, thể tích tế bào và truyền tín hiệu cũng mất theo. Vì thế chuỗi `matter → energy → regulation` đã xuất hiện ngay từ hóa học của sự sống.
 
 Buffer cũng nên được hiểu theo cách động như vậy. Một hệ đệm không “khóa pH tại một số”, mà hấp thụ một phần tải axit–bazơ nhờ cân bằng thuận nghịch. Khi tải vượt **dung lượng đệm (buffer capacity)**, pH thay đổi mạnh hơn. Cùng một lô-gic (logic / 논리) sẽ quay lại ở máu, dịch tế bào và hệ sinh thái nước.
-
-> **Nối mạch:** Cầu nối sang biomolecule tổng hợp thế hóa học và thế điện hóa, rồi chỉ ra vì sao atom và water vẫn chưa đủ để tạo tế bào.
 
 ## 21. cầu nối (bridge / 브리지) sang biomolecule: atom và water chưa đủ để tạo tế bào
 

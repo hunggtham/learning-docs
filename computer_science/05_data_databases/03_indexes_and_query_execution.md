@@ -12,13 +12,9 @@ Ordered thuộc tính (property / 속성) hỗ trợ `<, >, BETWEEN`, prefix th�
 
 “Leftmost prefix” là consequence của thứ tự (ordering / 순서), không quy tắc (rule / 규칙) thần bí.
 
-> **Nối mạch:** B+ tree hỗ trợ range scan nhờ thứ tự; hash index tối ưu equality lookup, còn clustered/secondary index quyết định dữ liệu được tìm thấy rồi đọc từ storage với bao nhiêu lần I/O.
-
 ## Băm (hash / 해시) chỉ mục (index / 인덱스)
 
 Băm (hash / 해시) chỉ mục (index / 인덱스) map key qua băm (hash / 해시) buckets, tốt equality nhưng không giữ thứ tự (order / 순서) cho phạm vi (range / 범위) scan. Engine-specific implementations/limitations khác nhau.
-
-> **Nối mạch:** **Clustered và secondary indexes** nối từ **Băm (hash / 해시) chỉ mục (index / 인덱스)** sang **Covering chỉ mục (index / 인덱스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Clustered và secondary indexes
 
@@ -26,21 +22,15 @@ Clustered organization đặt bảng (table / 테이블) rows theo primary/clust
 
 Wide primary keys vì vậy có thể làm secondary indexes lớn ở engines store PK in them.
 
-> **Nối mạch:** **Covering chỉ mục (index / 인덱스)** nối từ **Clustered và secondary indexes** sang **Selectivity và cardinality**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Covering chỉ mục (index / 인덱스)
 
 Nếu chỉ mục (index / 인덱스) chứa đủ columns truy vấn (query / 쿼리) cần, engine có thể answer từ chỉ mục (index / 인덱스) mà không fetch cơ sở (base / 기반) row, giảm I/O. Included columns/visibility map ngữ nghĩa (semantics / 의미론) khác DB, nhưng principle là trade lưu trữ (storage / 저장소)/ghi (write / 쓰기) amplification lấy read locality.
-
-> **Nối mạch:** **Selectivity và cardinality** nối từ **Covering chỉ mục (index / 인덱스)** sang **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Selectivity và cardinality
 
 Chỉ mục (index / 인덱스) trên boolean column thường không lọc nhiều rows nếu phân phối (distribution / 분포) gần 50/50; full scan có thể rẻ hơn random lookups. Optimizer estimate cardinality từ statistics/histograms để chọn plan.
 
 Selectivity không phải thuộc tính (property / 속성) column cố định; predicate giá trị (value / 값) và correlations ảnh hưởng. Parameter-sensitive plans có thể gặp “parameter sniffing”-style issues tùy DB.
-
-> **Nối mạch:** **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** nối từ **Selectivity và cardinality** sang **Chi phí (cost / 비용) mô hình (model / 모델) và statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Truy vấn (query / 쿼리) thực thi (execution / 실행) operators
 
@@ -50,33 +40,23 @@ Nested vòng lặp (loop / 루프) tốt khi outer nhỏ và inner indexed. băm
 
 Không có phép nối (join / 조인) thuật toán (algorithm / 알고리즘) luôn tốt nhất.
 
-> **Nối mạch:** **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** nối từ **Truy vấn (query / 쿼리) thực thi (execution / 실행) operators** sang **Sorting, spilling và bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chi phí (cost / 비용) mô hình (model / 모델) và statistics
 
 Optimizer tìm kiếm (search / 검색) plan không gian (space / 공간), estimate I/O/CPU/bộ nhớ (memory / 메모리). chính xác (exact / 정확한) optimal plan tìm kiếm (search / 검색) có thể quá lớn với many joins, nên optimizers dùng động (dynamic / 동적) programming/heuristics/pruning.
 
 Bad cardinality estimate cascades: nghĩ intermediate kết quả (result / 결과) 10 rows nhưng thật 1M có thể chọn nested vòng lặp (loop / 루프) tệ. `EXPLAIN`/actual plan giúp so estimate vs actual.
 
-> **Nối mạch:** **Sorting, spilling và bộ nhớ (memory / 메모리)** nối từ **Chi phí (cost / 비용) mô hình (model / 모델) và statistics** sang **Chỉ mục (index / 인덱스) maintenance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sorting, spilling và bộ nhớ (memory / 메모리)
 
 Sort/băm (hash / 해시) operators cần working bộ nhớ (memory / 메모리). Nếu vượt ngân sách (budget / 예산), spill disk làm độ trễ (latency / 지연 시간) tăng lớn. truy vấn (query / 쿼리) tuning vì vậy liên quan row width, cardinality, bộ nhớ (memory / 메모리) grant và concurrent workloads—not chỉ chỉ mục (index / 인덱스) presence.
-
-> **Nối mạch:** **Chỉ mục (index / 인덱스) maintenance** nối từ **Sorting, spilling và bộ nhớ (memory / 메모리)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chỉ mục (index / 인덱스) maintenance
 
 Insert/cập nhật (update / 업데이트)/delete phải cập nhật (update / 업데이트) indexes. Nhiều indexes tăng ghi (write / 쓰기) amplification, lưu trữ (storage / 저장소) và vacuum/maintenance. Random insert key có thể cause page splits; monotonically increasing key tạo locality nhưng có hot-page contention ở high tính đồng thời (concurrency / 동시성).
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Chỉ mục (index / 인덱스) maintenance**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chỉ mục (index / 인덱스) là **materialized alternate truy cập (access / 접근) đường dẫn (path / 경로)**. Nó đáng giá nếu truy vấn (query / 쿼리) savings vượt ghi (write / 쓰기)/lưu trữ (storage / 저장소)/maintenance chi phí (cost / 비용). Optimizer chọn đường dẫn (path / 경로) dựa estimated cardinality và chi phí (cost / 비용), không theo quy tắc (rule / 규칙) “có chỉ mục (index / 인덱스) thì dùng”.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -85,8 +65,6 @@ Insert/cập nhật (update / 업데이트)/delete phải cập nhật (update /
 **“Composite chỉ mục (index / 인덱스) dùng được như nhau cho mọi column.”** thứ tự (ordering / 순서)/prefix matters.
 
 **“EXPLAIN chi phí (cost / 비용) là milliseconds.”** chi phí (cost / 비용) units thường nội bộ (internal / 내부)/relative, engine-specific; cần actual timings/buffers để validate.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

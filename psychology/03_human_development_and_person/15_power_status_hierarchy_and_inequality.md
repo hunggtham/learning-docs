@@ -20,8 +20,6 @@ constraint nào đã biến mất?
 accountability còn đủ không?
 ```
 
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **2. Approach–inhibition các mô hình (models / 모델들)** nối từ **1. Quyền lực thay đổi mức phụ thuộc và attention** sang **3. Status tín hiệu (signal / 신호) và confidence–competence gap**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Approach–inhibition các mô hình (models / 모델들)
 
 Một số mô hình hiện đại đề xuất rằng quyền lực cao có thể tăng xu hướng **tiếp cận (approach)** như chủ động, focus reward và risk-taking, trong khi quyền lực thấp tăng vigilance với threat và hậu quả xã hội.
@@ -30,15 +28,11 @@ Một số mô hình hiện đại đề xuất rằng quyền lực cao có th�
 
 Một junior theo dõi phản ứng của cấp cao (senior / 시니어) rất kỹ có thể đang phản ứng hợp lý với chi phí (cost / 비용) sai lệch cao hơn. Im lặng trong meeting vì vậy không tự động nghĩa là đồng ý.
 
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **3. Status tín hiệu (signal / 신호) và confidence–competence gap** nối từ **2. Approach–inhibition các mô hình (models / 모델들)** sang **4. Prestige và dominance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Status tín hiệu (signal / 신호) và confidence–competence gap
 
 Con người suy luận status từ chức danh, expertise, mạng (network / 네트워크), cách nói hoặc mức được người khác chú ý.
 
 Tín hiệu (signal / 신호) có thể hữu ích nhưng cũng tạo độ lệch (bias / 편향): sự tự tin dễ bị nhầm với năng lực. Structured quyết định (decision / 결정) tiến trình (process / 프로세스), independent estimate và bằng chứng (evidence / 증거) rà soát (review / 검토) giúp giảm việc status bề mặt chi phối nội dung.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **4. Prestige và dominance** nối từ **3. Status tín hiệu (signal / 신호) và confidence–competence gap** sang **5. Hierarchy có chức năng phối hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Prestige và dominance
 
@@ -48,8 +42,6 @@ Hai con đường tạo ảnh hưởng thường được phân biệt:
 - **thống trị (dominance)**: influence dựa trên threat, fear hoặc coercion.
 
 Cả hai có thể tạo compliance nhưng climate rất khác. Prestige thường phù hợp hơn với môi trường học hỏi và kiến thức (knowledge / 지식) sharing.
-
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **5. Hierarchy có chức năng phối hợp** nối từ **4. Prestige và dominance** sang **6. Power distance và văn hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hierarchy có chức năng phối hợp
 
@@ -61,8 +53,6 @@ Flat organization vẫn thường hình thành informal hierarchy. Vấn đề q
 - thông tin xấu có đi ngược chiều lên được không;
 - người có authority có accountability không.
 
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **6. Power distance và văn hóa** nối từ **5. Hierarchy có chức năng phối hợp** sang **7. Authority độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Power distance và văn hóa
 
 **Khoảng cách quyền lực (power distance)** mô tả mức một culture hoặc organization chấp nhận hierarchy bất bình đẳng.
@@ -70,8 +60,6 @@ Flat organization vẫn thường hình thành informal hierarchy. Vấn đề q
 Trong môi trường (environment / 환경) power distance cao, challenge cấp cao (senior / 시니어) trực tiếp có thể mang xã hội (social / 사회적) chi phí (cost / 비용) lớn. Nói “mọi người cứ speak up” không đủ nếu appraisal, promotion hoặc face mất mát (loss / 손실) vẫn trừng phạt dissent.
 
 Xem [[16_acculturation_migration_and_bicultural_identity]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **7. Authority độ lệch (bias / 편향)** nối từ **6. Power distance và văn hóa** sang **8. Obedience và responsibility diffusion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Authority độ lệch (bias / 편향)
 
@@ -86,8 +74,6 @@ authority này có expertise đúng domain không?
 evidence nào độc lập với status?
 ```
 
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **8. Obedience và responsibility diffusion** nối từ **7. Authority độ lệch (bias / 편향)** sang **9. Inequality, scarcity và cognitive bandwidth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Obedience và responsibility diffusion
 
 Nghiên cứu về obedience cho thấy role, legitimacy của institution và diffusion of responsibility có thể ảnh hưởng hành vi.
@@ -95,8 +81,6 @@ Nghiên cứu về obedience cho thấy role, legitimacy của institution và d
 Trong hierarchy dài, mỗi người có thể cảm thấy mình chỉ làm một phần tiến trình (process / 프로세스) nên trách nhiệm đạo đức bị “pha loãng”. kiểm tra (audit / 감사) trail, escalation đường dẫn (path / 경로) và accountability rõ giúp chống ethical fading.
 
 Xem [[08_moral_psychology_and_prosocial_behavior]].
-
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **9. Inequality, scarcity và cognitive bandwidth** nối từ **8. Obedience và responsibility diffusion** sang **10. Status anxiety và xã hội (social / 사회적) comparison**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Inequality, scarcity và cognitive bandwidth
 
@@ -108,8 +92,6 @@ Không nên diễn giải scarcity thành “người nghèo irrational hơn”.
 
 Xem [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **10. Status anxiety và xã hội (social / 사회적) comparison** nối từ **9. Inequality, scarcity và cognitive bandwidth** sang **11. Gender, di chuyển (migration / 마이그레이션) và role power**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Status anxiety và xã hội (social / 사회적) comparison
 
 Khi rank xã hội trở thành threat, comparison và vigilance tăng. Status anxiety có thể thúc đẩy overwork, consumption hoặc impression management.
@@ -117,8 +99,6 @@ Khi rank xã hội trở thành threat, comparison và vigilance tăng. Status a
 Mạng xã hội làm comparison hiển thị và lặp lại hơn, nhưng tác động (effect / 효과) phụ thuộc cách dùng và cá nhân. Không nên nói xã hội (social / 사회적) media tự động gây status anxiety.
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
-
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **11. Gender, di chuyển (migration / 마이그레이션) và role power** nối từ **10. Status anxiety và xã hội (social / 사회적) comparison** sang **12. Workplace politics và allocation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Gender, di chuyển (migration / 마이그레이션) và role power
 
@@ -128,15 +108,11 @@ Tương tự, người di cư có thể mất occupational status vì ngôn ng�
 
 Xem [[05_sex_gender_and_identity]] và [[16_acculturation_migration_and_bicultural_identity]].
 
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **12. Workplace politics và allocation** nối từ **11. Gender, di chuyển (migration / 마이그레이션) và role power** sang **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Workplace politics và allocation
 
 Organization luôn có tài nguyên (resource / 자원) khan hiếm như promotion, headcount và visibility. Politics xuất hiện khi formal quy tắc (rule / 규칙) không đủ quyết định allocation.
 
 Political skill không đồng nghĩa manipulation; nó có thể là hiểu stakeholder, timing và influence theo cách có đạo đức. Tuy nhiên tiến trình (process / 프로세스) mơ hồ làm rumor và distrust tăng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực** nối từ **12. Workplace politics và allocation** sang **14. Upward phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực
 
@@ -146,8 +122,6 @@ Nếu nói `quality first` nhưng chỉ celebrate deadline, nhóm (team / 팀) h
 
 Xem [[../06_applied/00_work_organization_and_leadership]].
 
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **14. Upward phản hồi (feedback / 피드백)** nối từ **13. Leader hành vi (behavior / 동작) là tín hiệu chuẩn mực** sang **15. Expert power và kiến thức (knowledge / 지식) concentration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Upward phản hồi (feedback / 피드백)
 
 Phản hồi (feedback / 피드백) đi lên khó vì evaluation rủi ro (risk / 위험).
@@ -156,15 +130,11 @@ Anonymous survey có thể tăng candor nhưng không tạo trust nếu không c
 
 Đây là lý do psychological an toàn (safety / 안전) phải được nhìn như thuộc tính (property / 속성) của tương tác (interaction / 상호작용) hệ thống (system / 시스템), không chỉ personality của employee.
 
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **15. Expert power và kiến thức (knowledge / 지식) concentration** nối từ **14. Upward phản hồi (feedback / 피드백)** sang **16. mạng (network / 네트워크) power**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Expert power và kiến thức (knowledge / 지식) concentration
 
 Expertise tạo power ngay cả khi không có title. Trong technical nhóm (team / 팀), người duy nhất hiểu legacy hệ thống (system / 시스템) có **phụ thuộc (dependency / 의존성) power** lớn.
 
 Bus factor thấp là một vấn đề quyền lực tổ chức: kiến thức (knowledge / 지식) concentration làm nhóm (team / 팀) phụ thuộc một cá nhân. Documentation, pair công việc (work / 작업) và cross-training giảm phụ thuộc (dependency / 의존성) mà không làm mất expertise.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **16. mạng (network / 네트워크) power** nối từ **15. Expert power và kiến thức (knowledge / 지식) concentration** sang **17. Accountability không đồng nghĩa punishment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. mạng (network / 네트워크) power
 
@@ -172,15 +142,11 @@ Người kết nối nhiều nhóm có truy cập (access / 접근) thông tin (
 
 Hệ thống (system / 시스템) tốt cần tận dụng cầu nối (bridge / 브리지) role nhưng tránh tạo single bottleneck.
 
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **17. Accountability không đồng nghĩa punishment** nối từ **16. mạng (network / 네트워크) power** sang **18. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Accountability không đồng nghĩa punishment
 
 Power ít ràng buộc (constraint / 제약조건) có thể tăng rủi ro (risk / 위험) self-serving hành vi (behavior / 동작) ở một số ngữ cảnh (context / 맥락), nhưng accountability phù hợp có thể counteract.
 
 Accountability gồm transparency, rà soát (review / 검토), traceability và yêu cầu (requirement / 요구사항) giải thích quyết định (decision / 결정), không chỉ punishment sau lỗi.
-
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **17. Accountability không đồng nghĩa punishment** đặt vấn đề; **18. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **19. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Ranh giới bằng chứng
 
@@ -192,8 +158,6 @@ Accountability gồm transparency, rà soát (review / 검토), traceability và
 
 **Không được nói:** power luôn làm người ta xấu, flat organization không có hierarchy, hoặc confidence chứng minh competence.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **18. Ranh giới bằng chứng** đặt vấn đề; **19. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 19. Những hiểu lầm phổ biến
 
 **“Power luôn corrupt.”** Quá thô.
@@ -203,8 +167,6 @@ Accountability gồm transparency, rà soát (review / 검토), traceability và
 **“Flat nhóm (team / 팀) không có status.”** Informal hierarchy vẫn xuất hiện.
 
 **“Người có title cao nhất luôn có expertise cao nhất.”** Authority và expertise là hai construct khác nhau.
-
-> **Nối mạch:** Trong **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **Mô hình tư duy** tổng hợp từ **19. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -223,8 +185,6 @@ reinforcement của hierarchy
 ```
 
 > Quyền lực không phải một “tính cách”; nó là quan hệ giữa người, tài nguyên (resource / 자원), role và ràng buộc (constraint / 제약조건).
-
-> **Nối mạch:** Ở chặng này của **Quyền lực, địa vị, thứ bậc và bất bình đẳng**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

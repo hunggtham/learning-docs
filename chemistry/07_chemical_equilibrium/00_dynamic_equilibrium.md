@@ -34,8 +34,6 @@ Khi đó nồng độ trung bình không còn đổi, nhưng các phân tử v�
 
 Đây là lý do cân bằng không thể hiểu là “phản ứng đã dừng”.
 
-> **Nối mạch:** Equilibrium cần một tiêu chí động lực học; net rate bằng zero không có nghĩa reactions dừng, và mô hình A ⇌ B làm rõ flux thuận/nghịch.
-
 ## Tốc độ ròng bằng 0
 
 Với một phản ứng thuận nghịch, tốc độ ròng có thể viết khái niệm:
@@ -59,8 +57,6 @@ v_{thuận}=v_{nghịch}=0
 Hai tốc độ có thể đều lớn nhưng triệt tiêu ở mức ròng.
 
 Đây là một điểm nền tảng vì nhiều người nhầm “không đổi theo thời gian” với “không còn quá trình vi mô”.
-
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Tốc độ ròng bằng 0** nêu quy tắc; **Ví dụ động học đơn giản A ⇌ B** thử quy tắc trong tình huống, rồi **Cân bằng từ góc nhìn năng lượng tự do Gibbs** mở rộng hệ quả.
 
 ## Ví dụ động học đơn giản A ⇌ B
 
@@ -100,8 +96,6 @@ K_c=\frac{k_f}{k_r}
 
 Quan hệ này rất hữu ích để nối động học với cân bằng, nhưng không nên áp dụng máy móc cho mọi phản ứng tổng. Nếu cơ chế có nhiều bước, tỷ lệ (rate / 비율) law phức tạp hoặc hệ không lý tưởng, mối liên hệ giữa các hằng số tốc độ vi mô và `K` cần được xây dựng từ toàn cơ chế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Ví dụ động học đơn giản A ⇌ B** nêu quy tắc; **Cân bằng từ góc nhìn năng lượng tự do Gibbs** thử quy tắc trong tình huống, rồi **Cực tiểu Gibbs và mức tiến triển phản ứng** mở rộng hệ quả.
-
 ## Cân bằng từ góc nhìn năng lượng tự do Gibbs
 
 Ở nhiệt độ và áp suất không đổi:
@@ -140,8 +134,6 @@ Q=K
 
 Do đó cân bằng là trạng thái mà không còn dịch chuyển vi phân được phép nào theo tọa độ phản ứng có thể làm giảm Gibbs thêm trong các ràng buộc đang xét.
 
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cực tiểu Gibbs và mức tiến triển phản ứng** nối từ **Cân bằng từ góc nhìn năng lượng tự do Gibbs** sang **Cân bằng không có nghĩa 50/50**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cực tiểu Gibbs và mức tiến triển phản ứng
 
 Gọi \(\xi\) là **mức tiến triển phản ứng (extent of reaction)**:
@@ -166,8 +158,6 @@ Một cân bằng bền còn cần độ cong cục bộ phù hợp để một 
 
 Mô hình này cho thấy Le Châtelier, `Q`, `K` và cân bằng pha đều có thể quy về hình dạng của bề mặt Gibbs.
 
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng không có nghĩa 50/50** nối từ **Cực tiểu Gibbs và mức tiến triển phản ứng** sang **Cân bằng khác trạng thái ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng không có nghĩa 50/50
 
 Tốc độ thuận và nghịch bằng nhau không có nghĩa nồng độ chất phản ứng bằng nồng độ sản phẩm.
@@ -190,8 +180,6 @@ cân bằng có thể nghiêng mạnh về chất phản ứng.
 
 Điều bằng nhau là **động lực ròng** hoặc **tốc độ ròng**, không phải lượng của hai phía.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng khác trạng thái ổn định** nối từ **Cân bằng không có nghĩa 50/50** sang **Vì sao sự sống không ở cân bằng?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng khác trạng thái ổn định
 
 Một hệ mở có thể có nồng độ gần không đổi nhưng vẫn có dòng vật chất ròng.
@@ -213,8 +201,6 @@ nhưng các biến vĩ mô không đổi theo thời gian
 
 Tế bào sống là ví dụ quan trọng của hệ trạng thái ổn định xa cân bằng.
 
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Vì sao sự sống không ở cân bằng?** nối từ **Cân bằng khác trạng thái ổn định** sang **Cân bằng chi tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao sự sống không ở cân bằng?
 
 Tế bào liên tục:
@@ -229,8 +215,6 @@ Nếu tế bào đạt cân bằng nhiệt động hoàn toàn với môi trư�
 
 Sinh học vì vậy hoạt động nhờ **duy trì trạng thái ngoài cân bằng** bằng dòng năng lượng tự do liên tục.
 
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng chi tiết** nối từ **Vì sao sự sống không ở cân bằng?** sang **Thuận nghịch vi mô và cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng chi tiết
 
 Trong nhiều hệ ở cân bằng nhiệt động, **cân bằng chi tiết (detailed balance)** nói rằng mỗi quá trình vi mô và quá trình nghịch tương ứng có dòng trung bình cân bằng nhau.
@@ -239,8 +223,6 @@ Trong nhiều hệ ở cân bằng nhiệt động, **cân bằng chi tiết (de
 
 Tuy nhiên cần cẩn thận khi áp dụng cho mạng phản ứng được dẫn động bởi ánh sáng, điện trường, dòng vật chất hoặc nguồn năng lượng ngoài. Những hệ ngoài cân bằng có thể có chu trình dòng ròng dù nồng độ trung bình gần ổn định.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng chi tiết** đặt đầu vào cho **Thuận nghịch vi mô và cơ chế**, rồi **Chất xúc tác làm gì tại cân bằng?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Thuận nghịch vi mô và cơ chế
 
 Nếu một bước cơ bản có thể xảy ra theo chiều thuận, nguyên lý vi mô cho phép chiều nghịch tương ứng khi trạng thái và năng lượng phù hợp.
@@ -248,8 +230,6 @@ Nếu một bước cơ bản có thể xảy ra theo chiều thuận, nguyên l
 Nhưng từ đó không được suy ra mọi phương trình phản ứng tổng đều có cơ chế nghịch đơn giản bằng cách “đảo mũi tên”. Cơ chế thực có thể gồm nhiều bước và trung gian khác nhau.
 
 Đây là lý do cân bằng nhiệt động không tự cho cơ chế phản ứng.
-
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Thuận nghịch vi mô và cơ chế** đặt đầu vào cho **Chất xúc tác làm gì tại cân bằng?**, rồi **Cân bằng vật lý** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chất xúc tác làm gì tại cân bằng?
 
@@ -265,8 +245,6 @@ nhưng không đổi K tại cùng T
 ```
 
 Nếu quan sát thấy “nhiều sản phẩm hơn” sau khi thêm xúc tác vào một thí nghiệm trước đó chưa đạt cân bằng, đó là vì hệ tiến gần cân bằng nhanh hơn, không phải vì xúc tác đổi vị trí cân bằng.
-
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng vật lý** nối từ **Chất xúc tác làm gì tại cân bằng?** sang **Cân bằng acid–cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng vật lý
 
@@ -290,8 +268,6 @@ NaCl(s)\rightleftharpoons Na^+(aq)+Cl^-(aq)
 
 Do đó “bão hòa” không nghĩa các hạt ngừng chuyển động.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng acid–cơ sở (base / 기반)** nối từ **Cân bằng vật lý** sang **Cân bằng điện hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng acid–cơ sở (base / 기반)
 
 Trong nước:
@@ -304,8 +280,6 @@ proton liên tục được chuyển giữa các tiểu phần. Giá trị `Ka` 
 
 Đây là cầu nối giữa cân bằng động và phần acid–cơ sở (base / 기반).
 
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng điện hóa** nối từ **Cân bằng acid–cơ sở (base / 기반)** sang **Dao động cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng điện hóa
 
 Ở điện cực hở mạch, phản ứng oxy hóa và khử có thể vẫn xảy ra ở cấp vi mô nhưng dòng Faraday ròng bằng 0.
@@ -316,8 +290,6 @@ Khi ta kéo dòng qua điện cực, hệ bị đẩy ra khỏi cân bằng và 
 
 Vì vậy electrochemistry là một ví dụ rất rõ của sự chuyển từ equilibrium sang nonequilibrium thao tác (operation / 연산).
 
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Dao động cân bằng** nối từ **Cân bằng điện hóa** sang **Thời gian thư giãn về cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dao động cân bằng
 
 Ở hệ vĩ mô, số hạt rất lớn nên dao động tương đối nhỏ và ta thấy nồng độ gần như cố định.
@@ -325,8 +297,6 @@ Vì vậy electrochemistry là một ví dụ rất rõ của sự chuyển từ
 Ở hệ nano hoặc thí nghiệm đơn phân tử, dao động có thể đủ lớn để quan sát.
 
 Cân bằng nhiệt động vì vậy là trạng thái thống kê, không phải từng vi trạng thái đứng yên.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Thời gian thư giãn về cân bằng** nối từ **Dao động cân bằng** sang **Cân bằng cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian thư giãn về cân bằng
 
@@ -336,8 +306,6 @@ Sau một nhiễu nhỏ, hệ thường cần thời gian để trở lại cân
 
 Các kỹ thuật relaxation kinetics từng đóng vai trò quan trọng trong nghiên cứu phản ứng nhanh.
 
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng cục bộ** nối từ **Thời gian thư giãn về cân bằng** sang **Ví dụ: bình kín có N₂O₄/NO₂**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng cục bộ
 
 Trong một hệ lớn có độ dốc (gradient / 기울기) nhiệt độ hoặc nồng độ, toàn hệ có thể chưa cân bằng. Tuy nhiên một vùng rất nhỏ đôi khi vẫn có thể được xấp xỉ gần cân bằng nội bộ.
@@ -345,8 +313,6 @@ Trong một hệ lớn có độ dốc (gradient / 기울기) nhiệt độ ho�
 Đó là ý tưởng **cân bằng cục bộ (local equilibrium)** trong nhiệt động lực học không cân bằng.
 
 Nó cho phép dùng các đại lượng như nhiệt độ hay thế hóa học cục bộ trong mô hình truyền nhiệt và truyền khối.
-
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Cân bằng cục bộ** nêu quy tắc; **Ví dụ: bình kín có N₂O₄/NO₂** thử quy tắc trong tình huống, rồi **Khi nào dùng mô hình cân bằng?** mở rộng hệ quả.
 
 ## Ví dụ: bình kín có N₂O₄/NO₂
 
@@ -377,8 +343,6 @@ Q = K
 
 Nếu tăng nhiệt độ hoặc thể tích, `Q`, `K` hoặc cả hai có thể thay đổi tùy loại nhiễu; hệ sau đó tiến tới một cân bằng mới.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Ví dụ: bình kín có N₂O₄/NO₂** nêu quy tắc; **Khi nào dùng mô hình cân bằng?** thử quy tắc trong tình huống, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Khi nào dùng mô hình cân bằng?
 
 Mô hình cân bằng phù hợp khi thời gian quan sát dài hơn đáng kể thời gian hệ cần để thư giãn về cân bằng.
@@ -388,8 +352,6 @@ Nếu phản ứng quá chậm, hệ có thể chưa đạt cân bằng dù tr�
 Ví dụ diamond có thể tồn tại lâu ở điều kiện mà graphite bền hơn nhiệt động vì hàng rào chuyển pha lớn.
 
 Trong hóa phân tích, nhiều phép tính acid–cơ sở (base / 기반) giả định cân bằng proton nhanh. Với hệ tạo phức chậm hoặc kết tủa chậm, giả định này cần được kiểm tra.
-
-> **Nối mạch:** Trong **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Các hiểu lầm thường gặp** nối từ **Khi nào dùng mô hình cân bằng?** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -416,8 +378,6 @@ Không nhất thiết. Tại cân bằng là \(\Delta_rG=0\). Đại lượng ch
 ### “Cân bằng cho biết tốc độ phản ứng”
 
 Không. `K` cho vị trí cân bằng; động học cho tốc độ tiến tới đó.
-
-> **Nối mạch:** Ở chặng này của **Cân bằng động — từ tốc độ thuận nghịch đến cực tiểu Gibbs**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -32,8 +32,6 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [08 — Actor-Critic](./08_actor_critic.md)
 - [09 — Deep Reinforcement Learning](./09_deep_reinforcement_learning.md)
 
-> **Chuyển mạch:** **Chapters** đặt state, action, reward và policy cạnh nhau; **Core distinctions** cho thấy feedback loop nào thực sự thuộc RL và loop nào là supervised learning.
-
 ## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
@@ -51,8 +49,6 @@ RL ≠ RLHF
 High reward ≠ safe behavior
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Reinforcement học tập (learning / 학습) — Reading Map**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cốt lõi (core / 핵심) distinctions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Prerequisites và Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -67,8 +63,6 @@ Value / policy update
 ```
 
 Khác với supervised học tập (learning / 학습), chính sách (policy / 정책) ảnh hưởng phân phối (distribution / 분포) của dữ liệu (data / 데이터) tác nhân (agent / 에이전트) sẽ thu được tiếp theo. Vì vậy RL là học tập (learning / 학습) bài toán (problem / 문제) nằm trong một vòng phản hồi (feedback loop / 피드백 루프).
-
-> **Chuyển mạch:** **Mental model** khóa quan hệ policy–environment–return; **Prerequisites và Connections** nối quan hệ đó về probability, control và agent owner để mở rộng đúng hướng.
 
 ## Prerequisites và Connections
 

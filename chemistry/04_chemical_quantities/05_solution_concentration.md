@@ -10,8 +10,6 @@ Trong phòng thí nghiệm, thể tích thường dễ đo nên nồng độ mol
 
 Chọn đơn vị nồng độ là chọn cách biểu diễn phù hợp với bài toán.
 
-> **Nối mạch:** Nồng độ mol dùng thể tích dung dịch để tính molarity; molality dùng khối lượng dung môi nên bền hơn trước thay đổi nhiệt độ, tạo nền cho việc chọn thước đo phù hợp.
-
 ## Nồng độ mol
 
 **Nồng độ mol (molarity / 몰 농도)**:
@@ -32,8 +30,6 @@ M=0.250\,M
 
 Nồng độ mol phụ thuộc nhiệt độ vì thể tích chất lỏng thay đổi do giãn nở nhiệt.
 
-> **Nối mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ molan** nối từ **Nồng độ mol** sang **Phần mol**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nồng độ molan
 
 **Nồng độ molan (molality / 몰랄 농도)**:
@@ -45,8 +41,6 @@ m=\frac{n_{chất\ tan}}{m_{dung\ môi}(kg)}
 Mẫu số là khối lượng dung môi nên molality gần như không phụ thuộc nhiệt độ nếu không mất vật chất.
 
 Các phương trình tính chất tập hợp thường dùng molality vì khối lượng dung môi ổn định hơn thể tích dung dịch theo nhiệt độ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Phần mol** nối từ **Nồng độ molan** sang **Phần khối lượng, phần trăm khối lượng, ppm và ppb**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phần mol
 
@@ -66,8 +60,6 @@ P_i=x_iP_{total}
 
 Trong dung dịch lỏng, phần mol xuất hiện trong định luật Raoult và các biểu thức thế hóa học.
 
-> **Nối mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Phần khối lượng, phần trăm khối lượng, ppm và ppb** nối từ **Phần mol** sang **Pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phần khối lượng, phần trăm khối lượng, ppm và ppb
 
 **Phần khối lượng (mass fraction)**:
@@ -85,8 +77,6 @@ Phần trăm khối lượng là:
 Với hỗn hợp rất loãng, `ppm` thường biểu diễn phần `10^-6` và `ppb` biểu diễn phần `10^-9`, nhưng cần chỉ rõ cơ sở là khối lượng/khối lượng, thể tích/thể tích hay mol/mol khi ngữ cảnh chưa rõ.
 
 Trong dung dịch nước loãng có khối lượng riêng gần `1.00 kg/L`, `mg/L` đôi khi có giá trị số gần `ppm` theo khối lượng. Đây chỉ là xấp xỉ trong điều kiện phù hợp, không phải đồng nhất thức phổ quát.
-
-> **Nối mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Pha loãng** nối từ **Phần khối lượng, phần trăm khối lượng, ppm và ppb** sang **Pha dung dịch từ chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha loãng
 
@@ -114,8 +104,6 @@ Lấy `25.0 mL` dung dịch gốc rồi thêm dung môi tới thể tích cuối
 
 Nếu cần độ chính xác cao, không nên đơn giản đo và thêm `225.0 mL` dung môi vì thể tích của các chất lỏng khi trộn không phải lúc nào cũng cộng tuyến tính tuyệt đối.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Pha dung dịch từ chất rắn** nối từ **Pha loãng** sang **Nồng độ và hoạt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha dung dịch từ chất rắn
 
 Muốn pha `V` lít dung dịch có nồng độ mol `M`, cần số mol:
@@ -134,8 +122,6 @@ Trong phòng thí nghiệm, thường hòa tan chất rắn trong một phần d
 
 Cách này kiểm soát thể tích cuối tốt hơn việc đo riêng một thể tích dung môi rồi giả định thể tích sau hòa tan không đổi.
 
-> **Nối mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Nồng độ và hoạt độ** nối từ **Pha dung dịch từ chất rắn** sang **Đo nồng độ trong hóa học phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nồng độ và hoạt độ
 
 Trong dung dịch loãng gần lý tưởng, nồng độ thường là xấp xỉ tốt trong các biểu thức cân bằng. Ở lực ion cao hoặc hệ không lý tưởng, hành vi nhiệt động được mô tả tốt hơn bằng **hoạt độ (activity)**:
@@ -148,8 +134,6 @@ trong đó `γ_i` là **hệ số hoạt độ (activity coefficient)**.
 
 Điều này giải thích vì sao pH về mặt nhiệt động được định nghĩa qua hoạt độ ion hydrogen, không đơn giản bằng nồng độ mol thô.
 
-> **Nối mạch:** Ở chặng này của **Nồng độ dung dịch — các cách định lượng thành phần**, **Đo nồng độ trong hóa học phân tích** nối từ **Nồng độ và hoạt độ** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đo nồng độ trong hóa học phân tích
 
 Nồng độ thường không được “nhìn thấy” trực tiếp mà được suy ra từ một đại lượng có thể đo, chẳng hạn:
@@ -161,8 +145,6 @@ Nồng độ thường không được “nhìn thấy” trực tiếp mà đư
 - tín hiệu khối phổ.
 
 Do đó phép đo nồng độ luôn gắn với mô hình hiệu chuẩn và độ không đảm bảo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nồng độ dung dịch — các cách định lượng thành phần**, **Các hiểu lầm thường gặp** nối từ **Đo nồng độ trong hóa học phân tích** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -177,8 +159,6 @@ Không. Nó chỉ áp dụng khi lượng chất tan được bảo toàn và c�
 ### “ppm luôn bằng mg/L”
 
 Chỉ gần đúng trong một số dung dịch nước loãng có khối lượng riêng gần `1 kg/L`.
-
-> **Nối mạch:** Trong **Nồng độ dung dịch — các cách định lượng thành phần**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

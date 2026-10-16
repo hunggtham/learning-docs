@@ -52,8 +52,6 @@ np=n_i^2.
 
 Nó cho thấy nếu doping làm electron tăng mạnh thì hole concentration giảm tương ứng ở equilibrium.
 
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Pha tạp và mức Fermi** nối từ **Bán dẫn nội tại và nồng độ hạt tải** sang **Drift và diffusion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha tạp và mức Fermi
 
 Pha tạp (doping / 도핑) thêm impurity có mức năng lượng gần band edge.
@@ -79,8 +77,6 @@ E_F dịch gần E_V hơn
 Tên N/P không có nghĩa toàn vật liệu mang net charge lớn. Bulk vẫn gần trung hòa vì mobile carriers được cân bằng bởi ionized dopants cố định.
 
 Ở doping rất mạnh, semiconductor có thể trở thành **suy biến (degenerate semiconductor)** và Maxwell–Boltzmann approximation không còn đủ; cần dùng Fermi–Dirac statistics đầy đủ.
-
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Drift và diffusion** nối từ **Pha tạp và mức Fermi** sang **Mobility không phải hằng số tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drift và diffusion
 
@@ -121,8 +117,6 @@ D=\mu\frac{k_BT}{q}.
 
 Nó cho thấy drift và diffusion không phải hai cơ chế thống kê hoàn toàn độc lập; cả hai bắt nguồn từ vận chuyển (transport / 전송) của carrier trong môi trường nhiệt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Mobility không phải hằng số tuyệt đối** nối từ **Drift và diffusion** sang **Tiếp giáp P–N hình thành như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mobility không phải hằng số tuyệt đối
 
 Mobility bị ảnh hưởng bởi
@@ -140,8 +134,6 @@ temperature
 Do đó phương trình drift đơn giản chỉ là mô hình low-field hiệu dụng.
 
 Ở trường dữ liệu (field / 필드) cao, carrier velocity có thể tiến tới saturation thay vì tiếp tục tăng tuyến tính với `E`.
-
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Tiếp giáp P–N hình thành như thế nào?** nối từ **Mobility không phải hằng số tuyệt đối** sang **Band bending và electrostatic potential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiếp giáp P–N hình thành như thế nào?
 
@@ -173,8 +165,6 @@ diffusion current + drift current = 0
 
 nhưng từng thành phần riêng không nhất thiết bằng zero.
 
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Band bending và electrostatic potential** nối từ **Tiếp giáp P–N hình thành như thế nào?** sang **Điện thế tiếp xúc nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Band bending và electrostatic potential
 
 Electron năng lượng (energy / 에너지) thay đổi theo electrostatic potential `\phi` gần như
@@ -190,8 +180,6 @@ Hiện tượng này được gọi là **uốn cong dải năng lượng (band 
 Band diagram vì vậy là cách biểu diễn electrostatic potential bằng năng lượng (energy / 에너지) coordinates.
 
 Ở equilibrium, Fermi mức (level / 수준) phải phẳng xuyên qua junction. Nếu `E_F` thay đổi theo vị trí ở một hệ cân bằng, carrier sẽ có xu hướng tái phân bố.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện thế tiếp xúc nội tại** nối từ **Band bending và electrostatic potential** sang **Depletion approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế tiếp xúc nội tại
 
@@ -214,8 +202,6 @@ doping concentration
 ```
 
 Nó không phải “pin ẩn” có thể lấy điện liên tục ra ngoài. Ở equilibrium, electrochemical potentials của toàn cấu trúc đã cân bằng nên không có net DC power đầu ra (output / 출력).
-
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Depletion approximation** nối từ **Điện thế tiếp xúc nội tại** sang **Phân cực thuận và phân cực ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Depletion approximation
 
@@ -247,8 +233,6 @@ Khi reverse độ lệch (bias / 편향) tăng, `V` âm theo convention forward-
 
 Junction capacitance do đó phụ thuộc điện áp.
 
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phân cực thuận và phân cực ngược** nối từ **Depletion approximation** sang **Phương trình diode**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân cực thuận và phân cực ngược
 
 ### Forward độ lệch (bias / 편향)
@@ -267,8 +251,6 @@ avalanche multiplication
 ```
 
 Cơ chế trội phụ thuộc doping và trường dữ liệu (field / 필드) quy mô (scale / 규모).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phương trình diode** nối từ **Phân cực thuận và phân cực ngược** sang **LED: band gap và photon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình diode
 
@@ -296,8 +278,6 @@ negligible series resistance
 
 Ở hiện tại (current / 현재) lớn, series resistance; ở voltage thấp hoặc defect-rich junction, recombination; và ở reverse breakdown, các cơ chế khác làm phương trình đơn giản không còn đúng.
 
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **LED: band gap và photon** nối từ **Phương trình diode** sang **Photodiode và pin mặt trời**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## LED: band gap và photon
 
 Trong direct-band-gap material, electron và hole có thể tái hợp radiatively với
@@ -315,8 +295,6 @@ Do
 band gap quyết định quy mô (scale / 규모) của emission wavelength.
 
 Trong indirect-gap material như silicon, chuyển tiếp (transition / 전이) thường cần phonon để hỗ trợ crystal-momentum conservation, nên light emission kém hiệu quả hơn.
-
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Photodiode và pin mặt trời** nối từ **LED: band gap và photon** sang **Từ tiếp giáp P–N đến MOS capacitor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Photodiode và pin mặt trời
 
@@ -342,8 +320,6 @@ optical reflection
 series/shunt losses
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Từ tiếp giáp P–N đến MOS capacitor** nối từ **Photodiode và pin mặt trời** sang **Accumulation, depletion và inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ tiếp giáp P–N đến MOS capacitor
 
 MOSFET được hiểu rõ nhất nếu trước tiên xem cấu trúc **MOS capacitor**:
@@ -359,8 +335,6 @@ Oxide ngăn DC conduction lý tưởng nhưng cho electric trường dữ liệu
 Gate voltage làm thay đổi surface potential trong semiconductor và do đó làm band edges cong gần giao diện (interface / 인터페이스).
 
 Đây là bản chất electrostatic của field-effect điều khiển (control / 제어).
-
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Accumulation, depletion và inversion** nối từ **Từ tiếp giáp P–N đến MOS capacitor** sang **Oxide capacitance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Accumulation, depletion và inversion
 
@@ -390,8 +364,6 @@ Ta đã tạo một **inversion tầng (layer / 계층)** N-like ngay dưới ox
 
 Đó chính là nền của kênh nMOS.
 
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Oxide capacitance** nối từ **Accumulation, depletion và inversion** sang **Điện áp ngưỡng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Oxide capacitance
 
 Với oxide dày `t_{ox}` và permittivity `\varepsilon_{ox}`, capacitance trên một đơn vị diện tích là
@@ -405,8 +377,6 @@ Oxide mỏng hơn tăng gate điều khiển (control / 제어) vì capacitance 
 High-k dielectric cho phép tăng effective capacitance mà không cần vật lý (physical / 물리적) thickness nhỏ đến mức tunneling quá mạnh.
 
 Đây là ví dụ trực tiếp của sự đánh đổi (trade-off / 트레이드오프) giữa electrostatics và quantum tunneling.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện áp ngưỡng** nối từ **Oxide capacitance** sang **MOSFET channel và drain độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện áp ngưỡng
 
@@ -426,8 +396,6 @@ temperature
 ```
 
 Vì vậy threshold là thuộc tính (property / 속성) của cả cấu trúc, không chỉ của material bulk.
-
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **MOSFET channel và drain độ lệch (bias / 편향)** nối từ **Điện áp ngưỡng** sang **Subthreshold conduction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MOSFET channel và drain độ lệch (bias / 편향)
 
@@ -469,8 +437,6 @@ I_{D,sat}
 
 Các công thức này không phải law phổ quát; chúng dựa trên long-channel, mobility gần constant và quasi-static các giả định (assumptions / 가정들).
 
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Subthreshold conduction** nối từ **MOSFET channel và drain độ lệch (bias / 편향)** sang **Short-channel effects**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Subthreshold conduction
 
 Ngay dưới threshold, hiện tại (current / 현재) không bằng zero. Carrier concentration tại surface thay đổi gần exponential với gate voltage, tạo subthreshold hiện tại (current / 현재).
@@ -486,8 +452,6 @@ Subthreshold swing được đo bằng số millivolt gate voltage cần để h
 trong điều kiện thích hợp.
 
 Kết quả này liên hệ trực tiếp với Boltzmann statistics và là một giới hạn quan trọng của low-voltage lô-gic (logic / 논리).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Short-channel effects** nối từ **Subthreshold conduction** sang **FinFET và gate-all-around**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Short-channel effects
 
@@ -508,8 +472,6 @@ DIBL (Drain-Induced Barrier Lowering) nghĩa là tăng drain voltage làm source
 
 Đây là lý do thiết bị (device / 장치) scaling không thể hiểu chỉ bằng việc “thu nhỏ hình học”. Electrostatic length scales phải giảm tương ứng.
 
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **FinFET và gate-all-around** nối từ **Short-channel effects** sang **CMOS**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## FinFET và gate-all-around
 
 Planar gate chỉ điều khiển channel chủ yếu từ một mặt.
@@ -517,8 +479,6 @@ Planar gate chỉ điều khiển channel chủ yếu từ một mặt.
 FinFET bao quanh channel nhiều mặt hơn; gate-all-around tiếp tục tăng electrostatic điều khiển (control / 제어).
 
 Các kiến trúc này không thay đổi nguyên lý transistor cơ bản. Chúng thay đổi hình học (geometry / 기하학) để gate trường dữ liệu (field / 필드) kiểm soát channel tốt hơn so với nguồn (source / 소스)/drain fields.
-
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **CMOS** nối từ **FinFET và gate-all-around** sang **RC delay và interconnect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CMOS
 
@@ -540,8 +500,6 @@ P_{dynamic}\approx\alpha CV^2f.
 
 Do phụ thuộc `V^2`, giảm supply voltage tiết kiệm năng lượng (energy / 에너지) rất mạnh. Nhưng voltage thấp làm giảm noise margin và drive hiện tại (current / 현재), nên xuất hiện sự đánh đổi (trade-off / 트레이드오프) power–hiệu năng (performance / 성능)–độ tin cậy (reliability / 신뢰성).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** nối từ **CMOS** sang **Quantum tunneling và scaling limit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## RC delay và interconnect
 
 Gate và wiring tạo capacitance; conductor có resistance.
@@ -556,8 +514,6 @@ Khi transistor nhỏ dần, interconnect delay, parasitic capacitance, coupling,
 
 Vì vậy CPU speed không được quyết định chỉ bởi transistor switching thời gian (time / 시간).
 
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** đặt tiêu chí; **Quantum tunneling và scaling limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Nhiệt và độ tin cậy (reliability / 신뢰성)** mở rộng hệ quả.
-
 ## Quantum tunneling và scaling limit
 
 Oxide quá mỏng cho gate leakage qua tunneling.
@@ -568,8 +524,6 @@ Ngoài ra variability từ discrete dopants, line-edge roughness và atomic-scal
 
 Ở nanoscale, “thiết bị (device / 장치) parameter” không còn hoàn toàn là giá trị continuum deterministic; statistical variation trở thành vấn đề kỹ thuật (engineering / 엔지니어링) trực tiếp.
 
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Quantum tunneling và scaling limit** đặt tiêu chí; **Nhiệt và độ tin cậy (reliability / 신뢰성)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Các giả định (assumptions / 가정들) và giới hạn** mở rộng hệ quả.
-
 ## Nhiệt và độ tin cậy (reliability / 신뢰성)
 
 Power density tạo nhiệt.
@@ -579,8 +533,6 @@ Temperature cao có thể thay đổi mobility, leakage, threshold voltage và a
 Vì vậy semiconductor physics nối trực tiếp với heat vận chuyển (transport / 전송) và độ tin cậy (reliability / 신뢰성) kỹ thuật (engineering / 엔지니어링).
 
 Một chip không thể được tối ưu chỉ ở electrical mô hình (model / 모델); thermal ranh giới (boundary / 경계) conditions và gói (package / 패키지) cooling cũng quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Nhiệt và độ tin cậy (reliability / 신뢰성)** đặt tiêu chí; **Các giả định (assumptions / 가정들) và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Các giả định (assumptions / 가정들) và giới hạn
 
@@ -600,8 +552,6 @@ Các square-law equations mất chính xác trong hiện đại (modern / 현대
 
 Basic semiconductor mô hình (model / 모델) thường dùng effective-mass/single-particle approximations. Strong interactions, disorder hoặc nanostructure có thể cần treatment khác.
 
-> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Các giả định (assumptions / 가정들) và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Semiconductor thiết bị (device / 장치) physics có thể nhìn như một chuỗi:
@@ -618,8 +568,6 @@ band structure
 ```
 
 Lô-gic (logic / 논리) digital `0/1` vì vậy nằm ở cuối một chuỗi physics liên tục, không phải ở đầu chuỗi.
-
-> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -646,8 +594,6 @@ Không. Leakage, interconnect, electrostatic điều khiển (control / 제어),
 ### “Lỗ trống là proton chạy trong silicon”
 
 Sai. Hole là quasiparticle description của trạng thái thiếu electron trong band gần đầy.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

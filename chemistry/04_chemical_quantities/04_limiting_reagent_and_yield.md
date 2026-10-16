@@ -16,8 +16,6 @@ Ví dụ:
 
 Nếu có `3 mol H2` và `3 mol O2`, lượng hydrogen không đủ để dùng hết oxygen. Theo tỉ lệ phản ứng, `3 mol H2` chỉ cần `1.5 mol O2`, nên `H2` là chất giới hạn và còn `1.5 mol O2` dư.
 
-> **Nối mạch:** Tỉ lệ stoichiometric xác định chất phản ứng giới hạn; biểu diễn mức tiến triển giúp kiểm tra chất nào cạn trước, rồi ví dụ nối giới hạn lý thuyết với hiệu suất thực tế.
-
 ## Xác định bằng mức tiến triển phản ứng
 
 Thay vì dùng mẹo “chia số mol cho hệ số rồi chọn nhỏ nhất” mà không hiểu ý nghĩa, hãy xem đại lượng đó như giới hạn của **mức tiến triển phản ứng (extent of reaction)**.
@@ -31,8 +29,6 @@ Với chất phản ứng `i` có lượng ban đầu `n_i` và độ lớn hệ
 Chất cho giá trị `ξ_max` nhỏ nhất sẽ giới hạn hệ.
 
 Cách nhìn này mở rộng tốt sang những phản ứng phức tạp hơn.
-
-> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Xác định bằng mức tiến triển phản ứng** nêu quy tắc; **Ví dụ** thử quy tắc trong tình huống, rồi **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** mở rộng hệ quả.
 
 ## Ví dụ
 
@@ -66,8 +62,6 @@ Lượng `NH3` lý thuyết:
 
 `N2` tiêu thụ `4.0 mol`, nên còn lại `1.0 mol`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Ví dụ** nêu quy tắc; **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** thử quy tắc trong tình huống, rồi **Độ chuyển hóa và độ chọn lọc** mở rộng hệ quả.
-
 ## Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất
 
 **Hiệu suất lý thuyết (theoretical yield)** là lượng sản phẩm tối đa theo hóa lượng với chất giới hạn, giả định phản ứng tổng đã chọn và chuyển hóa hoàn toàn.
@@ -80,8 +74,6 @@ Lượng `NH3` lý thuyết:
 
 Hiệu suất thấp có thể do cân bằng, động học, phản ứng cạnh tranh, phân hủy, tách không hoàn toàn hoặc thất thoát khi thao tác.
 
-> **Nối mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Độ chuyển hóa và độ chọn lọc** nối từ **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** sang **Vì sao cố ý dùng chất dư?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ chuyển hóa và độ chọn lọc
 
 Trong hóa học công nghiệp và hóa học hữu cơ, phần trăm hiệu suất một mình đôi khi không đủ.
@@ -91,8 +83,6 @@ Trong hóa học công nghiệp và hóa học hữu cơ, phần trăm hiệu su
 **Độ chọn lọc (selectivity)** hỏi trong phần đã phản ứng, bao nhiêu đi tới sản phẩm mong muốn thay vì sản phẩm phụ.
 
 Một quá trình có độ chuyển hóa cao nhưng độ chọn lọc thấp vẫn gây lãng phí. Thiết kế chất xúc tác thường tập trung mạnh vào tăng độ chọn lọc, không chỉ tăng tốc độ phản ứng.
-
-> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao cố ý dùng chất dư?** nối từ **Độ chuyển hóa và độ chọn lọc** sang **Hiệu quả nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao cố ý dùng chất dư?
 
@@ -107,8 +97,6 @@ Tuy nhiên dùng dư cũng có đánh đổi về chi phí, tinh chế, an toàn
 
 Trong thiết kế quá trình, tỉ lệ tối ưu không nhất thiết chính là tỉ lệ stoichiometric.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** nối từ **Vì sao cố ý dùng chất dư?** sang **Khái niệm chất giới hạn ngoài phòng thí nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu quả nguyên tử
 
 **Hiệu quả nguyên tử (atom economy)** đánh giá phần khối lượng lý tưởng của chất phản ứng đi vào sản phẩm mong muốn:
@@ -121,8 +109,6 @@ Khác với phần trăm hiệu suất, hiệu quả nguyên tử là tính ch�
 
 Hóa học xanh quan tâm cả hiệu suất lẫn hiệu quả nguyên tử vì một phản ứng đạt `99%` hiệu suất vẫn có thể tạo lượng lớn chất thải stoichiometric.
 
-> **Nối mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** đặt tiêu chí; **Khái niệm chất giới hạn ngoài phòng thí nghiệm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Khái niệm chất giới hạn ngoài phòng thí nghiệm
 
 Ý tưởng này xuất hiện trong nhiều bài toán kỹ thuật dưới dạng **nút thắt nguồn lực (bottleneck)**.
@@ -130,8 +116,6 @@ Hóa học xanh quan tâm cả hiệu suất lẫn hiệu quả nguyên tử vì
 Nếu dây chuyền có 100 CPU nhưng chỉ 80 bo mạch chủ và mỗi máy tính cần một CPU cùng một bo mạch, tối đa chỉ lắp được 80 máy. Hệ số stoichiometric giống như định mức nguyên liệu của sản phẩm.
 
 Trong chuyển hóa sinh học, chất dinh dưỡng có thể giới hạn sinh khối theo yêu cầu nguyên tố. Trong đốt cháy, hỗn hợp giàu nhiên liệu hoặc nghèo nhiên liệu cũng là bài toán mất cân bằng stoichiometric.
-
-> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** đặt tiêu chí; **Các hiểu lầm thường gặp** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Các hiểu lầm thường gặp
 
@@ -146,8 +130,6 @@ Mô hình stoichiometric giả định phản ứng tiến hoàn toàn theo phư
 ### “Hiệu suất phần trăm thấp nghĩa là phương trình cân bằng sai”
 
 Không. Hiệu suất phản ánh quá trình thực tế; cân bằng phương trình là ràng buộc bảo toàn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -12,8 +12,6 @@ Một người ADHD có thể tập trung rất lâu vào nhiệm vụ mới l�
 
 Vấn đề phù hợp hơn là **điều chỉnh chú ý (attention regulation)**: khi nào chú ý được duy trì, chuyển đổi hoặc ưu tiên đúng với mục tiêu.
 
-> **Nối mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **2. Chức năng điều hành** nối từ **1. Chú ý không phải một “bình xăng tập trung”** sang **3. Phần thưởng, trì hoãn và động lực**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Chức năng điều hành
 
 Khó khăn có thể xuất hiện ở việc giữ mục tiêu trong trí nhớ làm việc, bắt đầu nhiệm vụ, ức chế phản ứng, chuyển đổi giữa nhiệm vụ, lập kế hoạch, ước lượng thời gian, nhớ việc cần làm trong tương lai và phân bổ nỗ lực.
@@ -21,8 +19,6 @@ Khó khăn có thể xuất hiện ở việc giữ mục tiêu trong trí nhớ
 Không phải mọi người ADHD đều có cùng hồ sơ nhận thức. Bài kiểm thử (test / 테스트) chức năng điều hành trong phòng thí nghiệm cũng không phản ánh hoàn hảo suy giảm chức năng ngoài đời.
 
 Xem [[../02_learning_and_cognition/01_memory]] và [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
-
-> **Nối mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **3. Phần thưởng, trì hoãn và động lực** nối từ **2. Chức năng điều hành** sang **4. Lịch sử phát triển là phần bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Phần thưởng, trì hoãn và động lực
 
@@ -32,15 +28,11 @@ Một số mô hình hiện đại chú ý tới độ nhạy với trì hoãn v
 
 Vì vậy câu “nếu thực sự muốn thì sẽ tập trung” là quá đơn giản. Động lực ảnh hưởng hiệu suất nhưng không xóa đi khó khăn điều chỉnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **4. Lịch sử phát triển là phần bắt buộc** nối từ **3. Phần thưởng, trì hoãn và động lực** sang **5. Chẩn đoán phân biệt và đồng mắc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Lịch sử phát triển là phần bắt buộc
 
 ADHD không nên được suy ra chỉ từ triệu chứng hiện tại ở người trưởng thành. Đánh giá cần lịch sử phát triển, biểu hiện ở nhiều bối cảnh và ảnh hưởng lên học tập, công việc hoặc quan hệ.
 
 Một người có thể được nhận diện muộn nếu tuổi nhỏ được hỗ trợ rất nhiều, môi trường có cấu trúc chặt hoặc yêu cầu chức năng điều hành chưa cao. Việc “chẩn đoán muộn” không đồng nghĩa rối loạn mới xuất hiện muộn.
-
-> **Nối mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **5. Chẩn đoán phân biệt và đồng mắc** nối từ **4. Lịch sử phát triển là phần bắt buộc** sang **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chẩn đoán phân biệt và đồng mắc
 
@@ -53,15 +45,11 @@ Có nguyên nhân nào khác giải thích tốt hơn không?
 Và có tình trạng nào đang cùng tồn tại không?
 ```
 
-> **Nối mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?** nối từ **5. Chẩn đoán phân biệt và đồng mắc** sang **7. Thuốc và hỗ trợ không dùng thuốc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. “thời gian (time / 시간) blindness” nên hiểu thế nào?
 
 `Time blindness` là cách nói phổ biến, không phải một cơ chế chẩn đoán chính thức duy nhất. Nó có thể phản ánh kết hợp của trí nhớ tương lai, ước lượng thời gian, chiết khấu trì hoãn và khó giữ mục tiêu tương lai ở trạng thái hoạt động.
 
 Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **7. Thuốc và hỗ trợ không dùng thuốc** nối từ **6. “thời gian (time / 시간) blindness” nên hiểu thế nào?** sang **8. Học tập và công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Thuốc và hỗ trợ không dùng thuốc
 
@@ -70,8 +58,6 @@ Thuốc có bằng chứng hỗ trợ điều trị ADHD ở nhiều người nh
 Hỗ trợ không dùng thuốc có thể gồm lời nhắc bên ngoài, chia nhỏ nhiệm vụ, cấu trúc bằng văn bản, thay đổi môi trường, chiến lược CBT cho chức năng điều hành, coaching hoặc hỗ trợ học tập/công việc.
 
 Điểm quan trọng là không xem hỗ trợ môi trường như “che giấu điểm yếu”. Đây là cách thiết kế hệ thống để giảm gánh nặng điều hành không cần thiết.
-
-> **Nối mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **8. Học tập và công việc** nối từ **7. Thuốc và hỗ trợ không dùng thuốc** sang **9. Áp lực xấu hổ thường không phải giải pháp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Học tập và công việc
 
@@ -91,13 +77,9 @@ phản hồi sớm
 
 Xem [[../06_applied/01_education_learning_and_habit_design]] và [[../06_applied/00_work_organization_and_leadership]].
 
-> **Nối mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **9. Áp lực xấu hổ thường không phải giải pháp** nối từ **8. Học tập và công việc** sang **10. Neurodiversity và suy giảm chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Áp lực xấu hổ thường không phải giải pháp
 
 Áp lực kiểu “chỉ cần kỷ luật hơn” có thể làm tăng stress, né tránh và thất bại trong khởi động nhiệm vụ. Điều này không có nghĩa mọi kỳ vọng đều nên hạ thấp; mục tiêu là thiết kế yêu cầu sao cho phản ánh kỹ năng thật thay vì đo khả năng tự xoay xở với hỗn loạn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **10. Neurodiversity và suy giảm chức năng** nối từ **9. Áp lực xấu hổ thường không phải giải pháp** sang **11. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Neurodiversity và suy giảm chức năng
 
@@ -111,8 +93,6 @@ và
 ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 ```
 
-> **Nối mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **10. Neurodiversity và suy giảm chức năng** đặt vấn đề; **11. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **12. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 11. Ranh giới bằng chứng
 
 **Bằng chứng tương đối vững:** khởi phát trong phát triển, suy giảm chức năng ở nhiều bối cảnh, đóng góp di truyền/gia đình và lợi ích của một số điều trị đã được nghiên cứu tốt.
@@ -123,8 +103,6 @@ ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 
 **Không được nói:** ADHD = dùng điện thoại nhiều, ADHD = thiếu kỷ luật, hoặc tập trung cao vào một sở thích loại trừ chẩn đoán.
 
-> **Nối mạch:** Ở chặng này của **ADHD, chú ý, chức năng điều hành và phát triển**, **11. Ranh giới bằng chứng** đặt vấn đề; **12. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 12. Những hiểu lầm phổ biến
 
 **“Chơi game tập trung được thì không ADHD.”** Sai.
@@ -132,8 +110,6 @@ ADHD có thể gây suy giảm chức năng đáng kể cần hỗ trợ
 **“ADHD ở người lớn xuất hiện đột ngột ở tuổi 30.”** Không phù hợp với bản chất phát triển; chẩn đoán ở tuổi trưởng thành vẫn cần bằng chứng về lịch sử phát triển.
 
 **“Thuốc sẽ giải quyết mọi vấn đề.”** Sai. Chức năng còn phụ thuộc môi trường, kỹ năng, giấc ngủ và tình trạng đồng mắc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **ADHD, chú ý, chức năng điều hành và phát triển**, **Mô hình tư duy** tổng hợp từ **12. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -147,8 +123,6 @@ hồ sơ phát triển
            ↓
 chức năng ngoài đời
 ```
-
-> **Nối mạch:** Trong **ADHD, chú ý, chức năng điều hành và phát triển**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

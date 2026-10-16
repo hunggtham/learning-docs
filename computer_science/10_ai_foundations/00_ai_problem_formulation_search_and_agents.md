@@ -12,8 +12,6 @@ Môi trường (environment / 환경) có thể fully/partially observable, dete
 
 Phân loại này quyết định thuật toán (algorithm / 알고리즘) family phù hợp.
 
-> **Nối mạch:** Agent model xác định trạng thái, hành động và mục tiêu; state-space search duyệt các khả năng đó, còn heuristic ưu tiên nhánh có vẻ gần lời giải nhưng phải được kiểm tra về tính đúng đắn.
-
 ## State-space tìm kiếm (search / 검색)
 
 Nhiều AI problems có thể biểu diễn bằng states, actions, chuyển tiếp (transition / 전이) mô hình (model / 모델), initial trạng thái (state / 상태) và goal kiểm thử (test / 테스트).
@@ -21,8 +19,6 @@ Nhiều AI problems có thể biểu diễn bằng states, actions, chuyển ti�
 Đường dẫn (path / 경로) planning, puzzle, planning và game tìm kiếm (search / 검색) đều trở thành đồ thị (graph / 그래프) tìm kiếm (search / 검색) trên implicit trạng thái (state / 상태) không gian (space / 공간).
 
 BFS tìm shortest đường dẫn (path / 경로) theo số edges khi costs bằng nhau; Dijkstra dùng non-negative costs; A* dùng heuristic để hướng tìm kiếm (search / 검색).
-
-> **Nối mạch:** **Heuristic** nối từ **State-space tìm kiếm (search / 검색)** sang **Tìm kiếm (search / 검색) explosion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Heuristic
 
@@ -38,15 +34,11 @@ Nếu heuristic admissible—không overestimate true remaining chi phí (cost /
 
 Heuristic tốt encode lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식) và giảm explored states.
 
-> **Nối mạch:** **Tìm kiếm (search / 검색) explosion** nối từ **Heuristic** sang **Adversarial tìm kiếm (search / 검색)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tìm kiếm (search / 검색) explosion
 
 Branching factor `b` và độ sâu (depth / 깊이) `d` có thể tạo khoảng `b^d` states. Đây là combinatorial explosion; bộ nhớ (memory / 메모리) thường là bottleneck của BFS/A*.
 
 AI tìm kiếm (search / 검색) vì vậy liên hệ trực tiếp độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론), approximation và heuristics.
-
-> **Nối mạch:** **Adversarial tìm kiếm (search / 검색)** nối từ **Tìm kiếm (search / 검색) explosion** sang **Planning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adversarial tìm kiếm (search / 검색)
 
@@ -56,15 +48,11 @@ Thứ tự (ordering / 순서) moves tốt làm pruning mạnh hơn nhưng khôn
 
 Real games quá lớn nên cần heuristic evaluation, độ sâu (depth / 깊이) limit, Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색) hoặc learned policies/giá trị (value / 값) functions.
 
-> **Nối mạch:** **Planning** nối từ **Adversarial tìm kiếm (search / 검색)** sang **Utility và bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Planning
 
 Planning khác simple đường dẫn (path / 경로) tìm kiếm (search / 검색) khi actions có preconditions/effects và goals gồm logical conditions. Classical planning có thể tìm kiếm (search / 검색) trong trạng thái (state / 상태) không gian (space / 공간) hoặc plan không gian (space / 공간).
 
 Robotics/real-world planning thêm bất định (uncertainty / 불확실성), continuous trạng thái (state / 상태)/hành động (action / 동작) và partial khả năng quan sát (observability / 관측 가능성).
-
-> **Nối mạch:** **Utility và bất định (uncertainty / 불확실성)** nối từ **Planning** sang **Reinforcement học tập (learning / 학습) liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Utility và bất định (uncertainty / 불확실성)
 
@@ -72,15 +60,11 @@ Khi outcomes stochastic, “đạt goal hay không” quá đơn giản. Expecte
 
 Quyết định (decision / 결정) lý thuyết (theory / 이론) nối xác suất (probability / 확률) suy luận (inference / 추론) với hành động (action / 동작) selection.
 
-> **Nối mạch:** **Reinforcement học tập (learning / 학습) liên kết (connection / 연결)** nối từ **Utility và bất định (uncertainty / 불확실성)** sang **Dùng chung (common / 공통) Misconceptions**, vì policy học phải được đọc cùng giả định và giới hạn.
-
 ## Reinforcement học tập (learning / 학습) liên kết (connection / 연결)
 
 RL xem tác nhân (agent / 에이전트) tương tác môi trường (environment / 환경) và học chính sách (policy / 정책) từ rewards thay vì được cho chuyển tiếp (transition / 전이) mô hình (model / 모델) hoàn chỉnh. trạng thái (state / 상태), hành động (action / 동작), reward và chính sách (policy / 정책) vẫn dùng same tác nhân (agent / 에이전트) vocabulary.
 
 Chapter ML/RL sâu hơn có thể thành thư viện (library / 라이브러리) riêng; ở đây trọng tâm là conceptual cầu nối (bridge / 브리지).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Reinforcement học tập (learning / 학습) liên kết (connection / 연결)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -90,13 +74,9 @@ Chapter ML/RL sâu hơn có thể thành thư viện (library / 라이브러리)
 
 **“Rational tác nhân (agent / 에이전트) luôn chọn kết quả (outcome / 결과) tốt nhất thực tế.”** Nó chọn theo mô hình (model / 모델)/kiến thức (knowledge / 지식)/mục tiêu (objective / 목표) hiện có; bất định (uncertainty / 불확실성) có thể khiến kết quả (outcome / 결과) xấu.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > AI bắt đầu bằng việc formalize perception → trạng thái (state / 상태)/belief → hành động (action / 동작) → mục tiêu (objective / 목표). thuật toán (algorithm / 알고리즘) chỉ có ý nghĩa sau khi bài toán (problem / 문제) biểu diễn (representation / 표현) rõ.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

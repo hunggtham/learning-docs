@@ -12,15 +12,11 @@ Nhóm vi sinh vật bao gồm bacteria, archaea, nhiều eukaryote đơn bào, n
 
 Điểm chung thực dụng là kích thước khiến ta thường cần kính hiển vi, nuôi cấy hoặc kỹ thuật phân tử để quan sát và đo lường.
 
-> **Nối mạch:** “Vi sinh vật” là nhóm theo kích thước, không phải clade; kiến trúc bacteria quyết định envelope và metabolism, từ đó Gram dương/âm tạo khác biệt về chức năng và đáp ứng.
-
 ## 2. Kiến trúc tế bào bacteria
 
 Bacteria thường có màng sinh chất, cytoplasm, ribosome, vùng nucleoid và ở nhiều loài có thành peptidoglycan. Một số còn có capsule, pili, flagellum hoặc hệ màng chuyên hóa.
 
 Không có nucleus không có nghĩa là không có tổ chức. DNA được sắp xếp trong không gian, protein có vị trí ưu tiên, transcription và translation có thể diễn ra gần nhau, và mạng điều hòa có thể phản ứng rất nhanh với nutrient hay stress.
-
-> **Nối mạch:** **3. Gram dương và Gram âm: cấu trúc vỏ tế bào tạo khác biệt chức năng** nối từ **2. Kiến trúc tế bào bacteria** sang **4. Archaea khác bacteria ở nền hóa học và bộ máy thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Gram dương và Gram âm: cấu trúc vỏ tế bào tạo khác biệt chức năng
 
@@ -28,15 +24,11 @@ Bacteria Gram dương thường có lớp peptidoglycan dày và không có oute
 
 Khác biệt cấu trúc này ảnh hưởng tính thấm, nhận diện miễn dịch và độ nhạy với một số antibiotic. Tuy nhiên Gram stain không thể đại diện toàn bộ đa dạng bacteria; Mycobacterium chẳng hạn có envelope giàu lipid rất khác hai mô hình điển hình.
 
-> **Nối mạch:** **4. Archaea khác bacteria ở nền hóa học và bộ máy thông tin** nối từ **3. Gram dương và Gram âm: cấu trúc vỏ tế bào tạo khác biệt chức năng** sang **5. Chuyển hóa vi sinh vật là bài toán nguồn electron, carbon và năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Archaea khác bacteria ở nền hóa học và bộ máy thông tin
 
 Archaea cũng không có nucleus, nhưng lipid màng, thành tế bào và nhiều thành phần xử lý thông tin khác bacteria. Nhiều archaeal lipid dùng liên kết ether; một số hệ transcription có quan hệ tiến hóa gần với eukaryote hơn.
 
 Điều này minh họa một nguyên tắc phylogeny quan trọng: hình dạng tương tự không đồng nghĩa quan hệ tiến hóa gần.
-
-> **Nối mạch:** **4. Archaea khác bacteria ở nền hóa học và bộ máy thông tin** đặt vấn đề; **5. Chuyển hóa vi sinh vật là bài toán nguồn electron, carbon và năng lượng** kiểm tra bằng chứng, rồi **6. Hiếu khí, kỵ khí và lên men** mở rộng hệ quả.
 
 ## 5. Chuyển hóa vi sinh vật là bài toán nguồn electron, carbon và năng lượng
 
@@ -44,15 +36,11 @@ Archaea cũng không có nucleus, nhưng lipid màng, thành tế bào và nhi�
 
 Phân loại theo nguồn năng lượng, nguồn carbon và cặp cho–nhận electron giúp giải thích vai trò sinh thái tốt hơn việc chỉ hỏi “bacteria ăn gì”.
 
-> **Nối mạch:** **5. Chuyển hóa vi sinh vật là bài toán nguồn electron, carbon và năng lượng** đặt vấn đề; **6. Hiếu khí, kỵ khí và lên men** kiểm tra bằng chứng, rồi **7. Growth curve phản ánh thay đổi trạng thái, không chỉ thay đổi số lượng** mở rộng hệ quả.
-
 ## 6. Hiếu khí, kỵ khí và lên men
 
 **Sinh vật hiếu khí bắt buộc (obligate aerobe)** cần oxygen cho metabolism chính. **Sinh vật kỵ khí bắt buộc (obligate anaerobe)** có thể bị oxygen gây hại. **Sinh vật kỵ khí tùy nghi (facultative anaerobe)** đổi con đường chuyển hóa tùy availability của oxygen và chất nhận electron khác.
 
 Hô hấp kỵ khí vẫn dùng chuỗi chuyền electron nhưng chất nhận electron cuối không phải oxygen. Lên men thì chủ yếu dùng phản ứng nội bộ để tái sinh carrier oxy hóa–khử, không dùng chuỗi hô hấp theo cùng lô-gic (logic / 논리).
-
-> **Nối mạch:** **7. Growth curve phản ánh thay đổi trạng thái, không chỉ thay đổi số lượng** nối từ **6. Hiếu khí, kỵ khí và lên men** sang **8. Biofilm: quần xã vi sinh tạo vi môi trường của chính nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Growth curve phản ánh thay đổi trạng thái, không chỉ thay đổi số lượng
 
@@ -66,15 +54,11 @@ N(t)=N_0e^{rt}
 
 Đây là cầu nối trực tiếp tới population ecology: cùng một phương trình tăng trưởng có thể xuất hiện ở bacteria, nhưng cơ chế (mechanism / 메커니즘) bên dưới là metabolism và tài nguyên (resource / 자원) limitation.
 
-> **Nối mạch:** **8. Biofilm: quần xã vi sinh tạo vi môi trường của chính nó** nối từ **7. Growth curve phản ánh thay đổi trạng thái, không chỉ thay đổi số lượng** sang **9. Cảm nhận mật độ quần thể: signaling ở quy mô (scale / 규모) quần thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Biofilm: quần xã vi sinh tạo vi môi trường của chính nó
 
 **Màng sinh học (biofilm / 생물막)** là cộng đồng vi sinh bám bề mặt và nằm trong chất nền ngoại bào. Diffusion qua biofilm tạo độ dốc (gradient / 기울기) oxygen, nutrient, pH và waste, nên các cell ở độ sâu khác nhau có thể ở trạng thái chuyển hóa khác nhau.
 
 Cấu trúc này làm tolerance với stress hoặc antibiotic tăng trong nhiều trường hợp, ngay cả khi chưa có mutation resistance. Vì vậy phenotype của community không thể suy chỉ từ genome của một cell tách rời.
-
-> **Nối mạch:** **9. Cảm nhận mật độ quần thể: signaling ở quy mô (scale / 규모) quần thể** nối từ **8. Biofilm: quần xã vi sinh tạo vi môi trường của chính nó** sang **10. Chuyển gen ngang làm evolution của vi sinh vật giống mạng lưới hơn cây đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Cảm nhận mật độ quần thể: signaling ở quy mô (scale / 규모) quần thể
 
@@ -82,15 +66,11 @@ Trong **cảm nhận mật độ quần thể (quorum sensing / 정족수 감지
 
 Cơ chế này có thể điều phối biofilm, luminescence, virulence factor hoặc enzyme tiết ra ngoài. Nó nối trực tiếp cell signaling với population-level regulation.
 
-> **Nối mạch:** **10. Chuyển gen ngang làm evolution của vi sinh vật giống mạng lưới hơn cây đơn giản** nối từ **9. Cảm nhận mật độ quần thể: signaling ở quy mô (scale / 규모) quần thể** sang **11. Plasmid là phần tử di truyền có lợi ích và chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Chuyển gen ngang làm evolution của vi sinh vật giống mạng lưới hơn cây đơn giản
 
 Bacteria có thể nhận DNA bằng **biến nạp (transformation)** từ môi trường, **tải nạp (transduction)** qua phage và **tiếp hợp (conjugation)** qua tiếp xúc trực tiếp/plasmid. Vì thế một gene có thể đi ngang giữa các dòng dõi thay vì chỉ đi dọc từ tế bào mẹ sang tế bào con.
 
 Cơ chế này đặc biệt quan trọng với resistance và pathway chuyển hóa. Một gene có lợi có thể lan nhanh hơn nhiều so với chờ mutation tương tự xuất hiện độc lập ở từng lineage.
-
-> **Nối mạch:** **11. Plasmid là phần tử di truyền có lợi ích và chi phí** nối từ **10. Chuyển gen ngang làm evolution của vi sinh vật giống mạng lưới hơn cây đơn giản** sang **12. Antibiotic khai thác khác biệt cấu trúc/cơ chế giữa bacteria và host**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Plasmid là phần tử di truyền có lợi ích và chi phí
 
@@ -98,15 +78,11 @@ Cơ chế này đặc biệt quan trọng với resistance và pathway chuyển 
 
 Plasmid không mặc định “có lợi”: sao chép thêm DNA và biểu hiện thêm protein tốn tài nguyên (resource / 자원). Khi môi trường (environment / 환경) không còn ưu tiên gene trên plasmid, cell mất plasmid có thể tăng trưởng nhanh hơn. Selection vì vậy tác động cả lên host genome lẫn các phần tử di truyền di động.
 
-> **Nối mạch:** **11. Plasmid là phần tử di truyền có lợi ích và chi phí** cung cấp nền; **12. Antibiotic khai thác khác biệt cấu trúc/cơ chế giữa bacteria và host** giải thích cơ chế; **13. Resistance và tolerance không giống nhau** kiểm tra hệ quả.
-
 ## 12. Antibiotic khai thác khác biệt cấu trúc/cơ chế giữa bacteria và host
 
 Các nhóm antibiotic có thể nhắm tổng hợp thành tế bào, ribosome, DNA replication, folate pathway hoặc membrane. **Độc tính chọn lọc (selective toxicity)** xuất hiện khi mục tiêu (target / 대상) quan trọng với bacteria nhưng khác hoặc không có ở tế bào người.
 
 Cơ chế thuốc chỉ là một nửa bài toán; phần còn lại là population evolution. Nếu variation cho phép một số cell sống sót tốt hơn, treatment tạo selection rất mạnh cho lineage đó.
-
-> **Nối mạch:** **12. Antibiotic khai thác khác biệt cấu trúc/cơ chế giữa bacteria và host** cung cấp nền; **13. Resistance và tolerance không giống nhau** giải thích cơ chế; **14. Hệ vi sinh là một ecosystem nằm trong hoặc trên host** kiểm tra hệ quả.
 
 ## 13. Resistance và tolerance không giống nhau
 
@@ -114,15 +90,11 @@ Resistance di truyền có thể do thay mục tiêu (target / 대상), enzyme p
 
 Điều này quan trọng vì phenotype “sống sót sau thuốc” có thể đến từ genotype resistance hoặc physiological trạng thái (state / 상태). Muốn hiểu cơ chế (mechanism / 메커니즘) phải phân biệt hai trường hợp.
 
-> **Nối mạch:** **14. Hệ vi sinh là một ecosystem nằm trong hoặc trên host** nối từ **13. Resistance và tolerance không giống nhau** sang **15. Symbiosis phụ thuộc bối cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Hệ vi sinh là một ecosystem nằm trong hoặc trên host
 
 **Hệ vi sinh (microbiome / 마이크로바이옴)** gồm cộng đồng vi sinh vật cùng môi trường và chức năng gene của chúng. Ở ruột, microbe lên men một số fiber mà enzyme người không phân giải được, tạo metabolite như short-chain fatty acid, tương tác với immune hệ thống (system / 시스템) và cạnh tranh với pathogen.
 
 Nhưng association giữa microbiome và disease không tự chứng minh causation. Diet, thuốc, tuổi, địa lý, host genetics và chính disease đều có thể thay community. nhân quả (causal / 인과적) suy luận (inference / 추론) cần thí nghiệm hoặc thiết kế đủ mạnh để tách các hướng ảnh hưởng.
-
-> **Nối mạch:** **15. Symbiosis phụ thuộc bối cảnh** nối từ **14. Hệ vi sinh là một ecosystem nằm trong hoặc trên host** sang **16. Virulence là phenotype của tương tác (interaction / 상호작용) host–pathogen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Symbiosis phụ thuộc bối cảnh
 
@@ -130,15 +102,11 @@ Nhưng association giữa microbiome và disease không tự chứng minh causat
 
 Vì vậy “pathogen” không chỉ là nhãn cố định của species; disease severity còn phụ thuộc vị trí, dose, barrier integrity và trạng thái miễn dịch của host.
 
-> **Nối mạch:** **15. Symbiosis phụ thuộc bối cảnh** cung cấp nền; **16. Virulence là phenotype của tương tác (interaction / 상호작용) host–pathogen** giải thích cơ chế; **17. Koch’s postulates mở đường cho nhân quả (causal / 인과적) microbiology nhưng có giới hạn** kiểm tra hệ quả.
-
 ## 16. Virulence là phenotype của tương tác (interaction / 상호작용) host–pathogen
 
 **Độc lực (virulence)** mô tả mức độ gây hại. Adhesion, invasion, toxin, immune evasion và tốc độ replication đều có thể đóng góp.
 
 Tổn thương cũng có thể đến từ phản ứng immune của host. Một infection nặng vì vậy không nhất thiết nghĩa pathogen có “nhiều toxin hơn”; nó có thể là kết quả của pathogen burden + tissue tropism + host inflammatory phản hồi (response / 응답).
-
-> **Nối mạch:** **16. Virulence là phenotype của tương tác (interaction / 상호작용) host–pathogen** đặt tiêu chí; **17. Koch’s postulates mở đường cho nhân quả (causal / 인과적) microbiology nhưng có giới hạn** dùng nó để kiểm tra ranh giới, rồi **18. Virus là cấu trúc thông tin phụ thuộc tế bào chủ** mở rộng cơ chế.
 
 ## 17. Koch’s postulates mở đường cho nhân quả (causal / 인과적) microbiology nhưng có giới hạn
 
@@ -146,15 +114,11 @@ Các tiêu chuẩn cổ điển của Koch giúp chuyển từ correlation “mi
 
 Molecular epidemiology, sequencing, gnotobiotic mô hình (model / 모델) và perturbation experiment mở rộng nhân quả (causal / 인과적) toolkit. Đây là scientific thinking quay trở lại microbiology.
 
-> **Nối mạch:** **17. Koch’s postulates mở đường cho nhân quả (causal / 인과적) microbiology nhưng có giới hạn** đặt tiêu chí; **18. Virus là cấu trúc thông tin phụ thuộc tế bào chủ** dùng nó để kiểm tra ranh giới, rồi **19. Chu kỳ virus là một chuỗi bước có điểm kiểm soát** mở rộng cơ chế.
-
 ## 18. Virus là cấu trúc thông tin phụ thuộc tế bào chủ
 
 Virion thường gồm genome DNA hoặc RNA, capsid protein và ở một số virus có lipid envelope lấy từ host membrane. Virus không có ribosome và phần lớn không có metabolism đủ để tự tạo thế hệ mới.
 
 Vì vậy cấu trúc (structure / 구조) của virus tối ưu cho hai việc: **bảo vệ/đưa genome tới đúng cell** và **khai thác machinery của host sau entry**.
-
-> **Nối mạch:** **18. Virus là cấu trúc thông tin phụ thuộc tế bào chủ** cung cấp nền; **19. Chu kỳ virus là một chuỗi bước có điểm kiểm soát** giải thích cơ chế; **20. Tropism: có receptor là cần nhưng chưa đủ** kiểm tra hệ quả.
 
 ## 19. Chu kỳ virus là một chuỗi bước có điểm kiểm soát
 
@@ -172,15 +136,11 @@ bám receptor
 
 Mỗi bước là một bottleneck và có thể là mục tiêu (target / 대상) của immunity hoặc thuốc. Viral fitness ở cấp organism không chỉ phụ thuộc replication trong một cell mà còn phụ thuộc khả năng truyền sang cell/host tiếp theo.
 
-> **Nối mạch:** **19. Chu kỳ virus là một chuỗi bước có điểm kiểm soát** cung cấp nền; **20. Tropism: có receptor là cần nhưng chưa đủ** giải thích cơ chế; **21. RNA virus minh họa sự đánh đổi (trade-off / 트레이드오프) giữa tốc độ và độ chính xác** kiểm tra hệ quả.
-
 ## 20. Tropism: có receptor là cần nhưng chưa đủ
 
 **Hướng mô (tropism)** phụ thuộc receptor/entry factor, nhiệt độ, protease, transcription factor, metabolism của cell và immune barrier. Một cell có receptor phù hợp vẫn có thể không hỗ trợ replication nếu thiếu host factor quan trọng.
 
 Tropism vì vậy nối cấu trúc receptor với phân bố tissue damage và đường transmission.
-
-> **Nối mạch:** **21. RNA virus minh họa sự đánh đổi (trade-off / 트레이드오프) giữa tốc độ và độ chính xác** nối từ **20. Tropism: có receptor là cần nhưng chưa đủ** sang **22. Retrovirus cho thấy dòng thông tin sinh học không phải mũi tên một chiều cứng nhắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. RNA virus minh họa sự đánh đổi (trade-off / 트레이드오프) giữa tốc độ và độ chính xác
 
@@ -188,15 +148,11 @@ Nhiều RNA polymerase có proofreading thấp hơn DNA replication hệ thống
 
 Nếu fidelity quá thấp, quần thể vượt **ngưỡng lỗi (error threshold)** và không duy trì được thông tin (information / 정보) genome. Nếu fidelity quá cao, diversity có thể giảm trong môi trường (environment / 환경) thay đổi nhanh. Evolution tối ưu sự đánh đổi (trade-off / 트레이드오프) theo vòng đời (lifecycle / 생명주기) cụ thể, không theo nguyên tắc “càng ít lỗi càng tốt”.
 
-> **Nối mạch:** **22. Retrovirus cho thấy dòng thông tin sinh học không phải mũi tên một chiều cứng nhắc** nối từ **21. RNA virus minh họa sự đánh đổi (trade-off / 트레이드오프) giữa tốc độ và độ chính xác** sang **23. Phage nối virus với ecology của bacteria**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Retrovirus cho thấy dòng thông tin sinh học không phải mũi tên một chiều cứng nhắc
 
 Retrovirus dùng reverse transcriptase chuyển RNA thành DNA rồi integrase đưa DNA vào genome host. Trạng thái tích hợp này tạo **provirus**, có thể tồn tại lâu và được sao chép cùng host chromosome.
 
 Central dogma nên hiểu là mạng (network / 네트워크) tiến trình (process / 프로세스) cụ thể của từng hệ thống (system / 시스템), không phải khẩu hiệu “RNA không bao giờ quay về DNA”.
-
-> **Nối mạch:** **23. Phage nối virus với ecology của bacteria** nối từ **22. Retrovirus cho thấy dòng thông tin sinh học không phải mũi tên một chiều cứng nhắc** sang **24. CRISPR là sản phẩm của cuộc chạy đua bacteria–phage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Phage nối virus với ecology của bacteria
 
@@ -204,15 +160,11 @@ Bacteriophage có thể đi theo chu trình tan (lytic), tạo nhiều virion r�
 
 Phage làm chết lượng lớn bacteria trong môi trường (environment / 환경), chuyển gene giữa cells và tạo selection lên receptor/defense. Vì vậy chúng ảnh hưởng cả community composition và chu trình vật chất.
 
-> **Nối mạch:** **24. CRISPR là sản phẩm của cuộc chạy đua bacteria–phage** nối từ **23. Phage nối virus với ecology của bacteria** sang **25. Host immunity và pathogen evolution tạo phản hồi (feedback / 피드백) liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. CRISPR là sản phẩm của cuộc chạy đua bacteria–phage
 
 Bacteria/Archaea có thể lưu đoạn chuỗi (sequence / 시퀀스) của yếu tố xâm nhập thành spacer, sau đó dùng RNA guide và protein Cas để nhận diện chuỗi (sequence / 시퀀스) tương ứng. Phage lại evolve mutation hoặc protein chống CRISPR.
 
 Genome editing hiện đại tận dụng chính recognition cơ chế (mechanism / 메커니즘) này. Đây là ví dụ rõ của đường `ecological conflict → evolutionary adaptation → molecular mechanism → biotechnology`.
-
-> **Nối mạch:** **24. CRISPR là sản phẩm của cuộc chạy đua bacteria–phage** cung cấp nền; **25. Host immunity và pathogen evolution tạo phản hồi (feedback / 피드백) liên tục** giải thích cơ chế; **26. One Health: ranh giới human–animal–môi trường (environment / 환경) không phải ranh giới cho pathogen** kiểm tra hệ quả.
 
 ## 25. Host immunity và pathogen evolution tạo phản hồi (feedback / 피드백) liên tục
 
@@ -220,15 +172,11 @@ Innate immunity nhận diện mẫu (pattern / 패턴) tương đối bảo tồ
 
 Phản hồi (feedback / 피드백) này xảy ra trên nhiều timescale: phút–ngày trong một infection, tháng–năm ở population pathogen và nhiều generation ở host species.
 
-> **Nối mạch:** **25. Host immunity và pathogen evolution tạo phản hồi (feedback / 피드백) liên tục** cung cấp nền; **26. One Health: ranh giới human–animal–môi trường (environment / 환경) không phải ranh giới cho pathogen** giải thích cơ chế; **27. Growth tỷ lệ (rate / 비율) và yield là hai mục tiêu có thể xung đột** kiểm tra hệ quả.
-
 ## 26. One Health: ranh giới human–animal–môi trường (environment / 환경) không phải ranh giới cho pathogen
 
 Pathogen có thể di chuyển giữa wildlife, livestock và người. Antibiotic dùng trong người, chăn nuôi hoặc phát tán ra môi trường (environment / 환경) có thể tạo selection ở nhiều reservoir khác nhau.
 
 Cách nhìn **One Health** vì vậy coi disease emergence và resistance là bài toán (problem / 문제) của một mạng (network / 네트워크) sinh thái–tiến hóa, không chỉ bài toán (problem / 문제) trong bệnh viện.
-
-> **Nối mạch:** **26. One Health: ranh giới human–animal–môi trường (environment / 환경) không phải ranh giới cho pathogen** cung cấp nền; **27. Growth tỷ lệ (rate / 비율) và yield là hai mục tiêu có thể xung đột** giải thích cơ chế; **28. độ trễ (latency / 지연 시간), persistence và virulence là chiến lược lịch sử sống của virus** kiểm tra hệ quả.
 
 ## 27. Growth tỷ lệ (rate / 비율) và yield là hai mục tiêu có thể xung đột
 
@@ -236,23 +184,17 @@ Một metabolic chiến lược (strategy / 전략) có thể tạo ATP nhanh nh
 
 Điều này nối trực tiếp metabolism với ecology: năng lượng tự do của phản ứng giới hạn pathway khả dụng; regulation chọn pathway theo trạng thái (state / 상태); selection giữ chiến lược (strategy / 전략) phù hợp với môi trường (environment / 환경).
 
-> **Nối mạch:** **28. độ trễ (latency / 지연 시간), persistence và virulence là chiến lược lịch sử sống của virus** nối từ **27. Growth tỷ lệ (rate / 비율) và yield là hai mục tiêu có thể xung đột** sang **29. Hai ứng dụng đời sống dựa trên cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. độ trễ (latency / 지연 시간), persistence và virulence là chiến lược lịch sử sống của virus
 
 Replication nhanh có thể tạo nhiều virion nhưng cũng làm host chết nhanh hoặc kích hoạt immunity mạnh. độ trễ (latency / 지연 시간) giảm môi trường vận hành (production / 운영 환경) tạm thời, giúp genome tồn tại và chờ điều kiện thuận lợi hơn.
 
 Virulence vì vậy chịu sự đánh đổi (trade-off / 트레이드오프) với transmission. Không có quy luật universal rằng pathogen “sẽ tiến hóa thành hiền hơn”; kết quả (outcome / 결과) phụ thuộc đường lây, véc-tơ (vector / 벡터), contact cấu trúc (structure / 구조), immunity và thời gian host còn truyền được.
 
-> **Nối mạch:** **28. độ trễ (latency / 지연 시간), persistence và virulence là chiến lược lịch sử sống của virus** cung cấp nền; **29. Hai ứng dụng đời sống dựa trên cơ chế (mechanism / 메커니즘)** giải thích cơ chế; **30. Các hiểu lầm cần tránh** kiểm tra hệ quả.
-
 ## 29. Hai ứng dụng đời sống dựa trên cơ chế (mechanism / 메커니즘)
 
 **Lên men yogurt:** bacteria lactic chuyển hóa đường thành lactic acid; pH giảm làm protein sữa thay cấu trúc và hạn chế một số competitor. Đây là microbial metabolism + ecology được điều khiển có chủ đích.
 
 **Fiber ở ruột:** enzyme người không phân giải hết một số chất xơ; gut microbe lên men chúng thành metabolite mà host có thể hấp thu. Dòng vật chất vì vậy có thể đi `thức ăn → microbe → metabolite → host`.
-
-> **Nối mạch:** **29. Hai ứng dụng đời sống dựa trên cơ chế (mechanism / 메커니즘)** cung cấp nền; **30. Các hiểu lầm cần tránh** giải thích cơ chế; **31. cầu nối (bridge / 브리지): từ microbial cell tới sinh vật đa bào (multicellular organism)** kiểm tra hệ quả.
 
 ## 30. Các hiểu lầm cần tránh
 
@@ -267,8 +209,6 @@ Virulence vì vậy chịu sự đánh đổi (trade-off / 트레이드오프) v
 “Virus tự sinh sản như tế bào” sai; chúng cần machinery của host.
 
 > **Mô hình tư duy:** microbiology nối hóa học năng lượng, cell regulation, gene luồng (flow / 흐름), population evolution và ecosystem. Virus cho thấy một hệ thống (system / 시스템) thông tin có thể tiến hóa mạnh dù không tự duy trì metabolism như cell.
-
-> **Nối mạch:** **31. cầu nối (bridge / 브리지): từ microbial cell tới sinh vật đa bào (multicellular organism)** khép mạch từ **30. Các hiểu lầm cần tránh** bằng cách mở rộng cơ chế.
 
 ## 31. cầu nối (bridge / 브리지): từ microbial cell tới sinh vật đa bào (multicellular organism)
 

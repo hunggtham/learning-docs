@@ -10,8 +10,6 @@ Message là envelope vận chuyển (transport / 전송). Command thường bi�
 
 Terminology không tuyệt đối giữa frameworks, nhưng distinction intent vs fact hữu ích cho coupling.
 
-> **Nối mạch:** **Hàng đợi (queue / 큐) và log** nối từ **Sự kiện (event / 이벤트), command và message** sang **At-most-once, at-least-once, effectively-once**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi (queue / 큐) và log
 
 Traditional công việc (work / 작업) hàng đợi (queue / 큐) phân phối messages để worker xử lý, thường mỗi message bởi một bên tiêu thụ (consumer / 소비자) trong group.
@@ -20,15 +18,11 @@ Append-only phân tán (distributed / 분산) log như Kafka giữ ordered recor
 
 Hàng đợi (queue / 큐) nhấn mạnh công việc (work / 작업) phân phối (distribution / 분포); log nhấn mạnh durable ordered lịch sử (history / 이력)/replay.
 
-> **Nối mạch:** **At-most-once, at-least-once, effectively-once** nối từ **Hàng đợi (queue / 큐) và log** sang **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## At-most-once, at-least-once, effectively-once
 
 At-most-once có thể mất message nhưng không redeliver. At-least-once thử lại (retry / 재시도) nên có duplicates. Exactly-once end-to-end rất khó vì broker acknowledgment và bên ngoài (external / 외부) side tác động (effect / 효과) không atomic mặc định.
 
 Thực tế thường dùng idempotent consumers, deduplication keys hoặc transactional tích hợp (integration / 통합) để đạt effectively-once nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과).
-
-> **Nối mạch:** **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** nối từ **At-most-once, at-least-once, effectively-once** sang **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)
 
@@ -38,8 +32,6 @@ Nếu account updates phải ordered, partition theo account ID giúp cùng acco
 
 Thứ tự (ordering / 순서) yêu cầu (requirement / 요구사항) vì vậy ảnh hưởng partitioning và thông lượng (throughput / 처리량).
 
-> **Nối mạch:** **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** đặt đầu vào cho **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)**, rồi **Backpressure** mở rộng hệ quả.
-
 ## Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)
 
 Processing thời gian (time / 시간) là lúc hệ thống (system / 시스템) xử lý bản ghi (record / 레코드). sự kiện (event / 이벤트) thời gian (time / 시간) là lúc sự kiện (event / 이벤트) thực sự xảy ra theo nguồn (source / 소스) timestamp.
@@ -48,15 +40,11 @@ Late/out-of-order events làm cửa sổ (window / 윈도우) aggregation khó. 
 
 Streaming tính đúng đắn (correctness / 정확성) phải nói rõ lateness chính sách (policy / 정책), cửa sổ (window / 윈도우) kiểu (type / 타입) và cập nhật (update / 업데이트)/retraction ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** đặt đầu vào cho **Backpressure**, rồi **Dead-letter hàng đợi (queue / 큐)** mở rộng hệ quả.
-
 ## Backpressure
 
 Producer nhanh hơn bên tiêu thụ (consumer / 소비자) vô hạn thời gian thì hàng đợi (queue / 큐) grow vô hạn. Backpressure cần giới hạn/buffering/tỷ lệ (rate / 비율) điều khiển (control / 제어) hoặc drop/degrade chính sách (policy / 정책).
 
 Hàng đợi (queue / 큐) chỉ hấp thụ burst tạm thời; nó không tạo processing sức chứa (capacity / 용량).
-
-> **Nối mạch:** **Dead-letter hàng đợi (queue / 큐)** nối từ **Backpressure** sang **Sự kiện (event / 이벤트) sourcing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dead-letter hàng đợi (queue / 큐)
 
@@ -64,15 +52,11 @@ Messages thử lại (retry / 재시도) mãi do malformed dữ liệu (data / �
 
 Nhưng DLQ không nên là nơi dữ liệu (data / 데이터) biến mất vô thời hạn; cần quyền sở hữu (ownership / 소유권), alerting và replay tiến trình (process / 프로세스).
 
-> **Nối mạch:** **Sự kiện (event / 이벤트) sourcing** nối từ **Dead-letter hàng đợi (queue / 큐)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sự kiện (event / 이벤트) sourcing
 
 Sự kiện (event / 이벤트) sourcing lưu trạng thái (state / 상태) changes như chuỗi (sequence / 시퀀스) events và derive trạng thái hiện tại (current state / 현재 상태) bằng replay/projection. Nó tạo kiểm tra (audit / 감사)/lịch sử (history / 이력) mạnh nhưng lược đồ (schema / 스키마) evolution, sự kiện (event / 이벤트) immutability và replay chi phí (cost / 비용) phức tạp.
 
 Không phải mọi event-driven hệ thống (system / 시스템) đều event-sourced.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Sự kiện (event / 이벤트) sourcing** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,13 +66,9 @@ Không phải mọi event-driven hệ thống (system / 시스템) đều event-
 
 **“hàng đợi (queue / 큐) giải overload.”** Nó trì hoãn overload; sustained arrival tỷ lệ (rate / 비율) > dịch vụ (service / 서비스) tỷ lệ (rate / 비율) vẫn không ổn định.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Event-driven thiết kế (design / 설계) biến temporal coupling thành trạng thái (state / 상태) in queues/logs. Đổi lại bạn phải tường minh (explicit / 명시적) delivery, thứ tự (ordering / 순서), replay, idempotency và backpressure.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

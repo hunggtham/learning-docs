@@ -19,8 +19,6 @@ Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nộ
 | 역사 | 38~44 | `07_역사.md` | 고조선, 삼국·남북국, 고려, 조선, 일제강점·독립운동, 문화유산, 광복 이후 | ✅ cốt lõi (core / 핵심) + cross-reference |
 | 지리 | 45~50 | `08_지리.md` | 사계절, 지형, 수도권, 충청, 전라, 경상, 강원, 제주, 사투리 | ✅ expanded |
 
-> **Nối mạch:** Trong **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**, **2. 귀화용 심화 đã được gộp ở đâu** nối từ **1. Coverage theo 8 PDF** sang **3. Current-version risks**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. 귀화용 심화 đã được gộp ở đâu
 
 Không có folder riêng cho 귀화. Nội dung bổ sung được đặt theo concept:
@@ -34,8 +32,6 @@ Không có folder riêng cho 귀화. Nội dung bổ sung được đặt theo c
 | 헌법·국가·정부 | `04_정치.md` |
 | 정부수립·한국전쟁·민주화 | `04_정치.md`, `07_역사.md` |
 | 국가상징 설명·구술 | `01_사회.md`, `10_작문_구술.md` |
-
-> **Nối mạch:** Ở chặng này của **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**, **3. Current-version risks** nối từ **2. 귀화용 심화 đã được gộp ở đâu** sang **4. tầng (layer / 계층) học tập đã có**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Current-version risks
 
@@ -54,8 +50,6 @@ Các nhóm không được học cứng từ infographic cũ:
 
 Tất cả được tuyến (route / 경로) qua `00_current_facts_and_corrections.md`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**, **4. tầng (layer / 계층) học tập đã có** nối từ **3. Current-version risks** sang **5. Những gì cố ý không duplicate**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. tầng (layer / 계층) học tập đã có
 
 Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, rồi dùng bảng/list để đối chiếu các ngoại lệ trong ngữ cảnh.
@@ -72,8 +66,6 @@ Coverage control       → 16
 
 Như vậy bộ KIIP hiện không chỉ có summary mà đã có **đầu vào (input / 입력) → recall → đầu ra (output / 출력) → kiểm thử (test / 테스트) → kiểm tra (audit / 감사) vòng lặp (loop / 루프)**.
 
-> **Nối mạch:** Trong **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**, **5. Những gì cố ý không duplicate** nối từ **4. tầng (layer / 계층) học tập đã có** sang **6. Tiêu chí “hoàn thiện” cho từng concept**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Những gì cố ý không duplicate
 
 Không bản sao (copy / 복사) toàn bộ lịch sử Hàn Quốc vào `07_역사.md`; phần sâu nằm trong `korean_history/`.
@@ -83,8 +75,6 @@ Không bản sao (copy / 복사) toàn bộ văn hóa Hàn Quốc vào KIIP; ph�
 Không tạo lại cùng nội dung cho `영주용` và `귀화용`; dùng tag.
 
 Không đưa mọi hiện tại (current / 현재) law vào từng chapter; dùng một correction tầng (layer / 계층) để tránh nhiều bản bản sao (copy / 복사) mâu thuẫn.
-
-> **Nối mạch:** Ở chặng này của **16. Coverage kiểm tra (audit / 감사) — KIIP 한국사회 이해**, **6. Tiêu chí “hoàn thiện” cho từng concept** nối từ **5. Những gì cố ý không duplicate** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 6. Tiêu chí “hoàn thiện” cho từng concept
 

@@ -15,8 +15,6 @@ Replication kiểm tra độ ổn định của finding dưới mẫu (sample / 
 
 Open dữ liệu (data / 데이터), preregistration, multiverse phân tích (analysis / 분석) và meta-analysis giúp giảm researcher degrees of freedom, nhưng không loại bỏ judgment. Philosophy of science ở đây gặp statistics: calibration của claim phải tương xứng với chuỗi xử lý (pipeline / 파이프라인) tạo ra dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Data chỉ trở thành claim qua phép đo và model; statistics lượng hóa bất định, còn replication kiểm tra claim có vượt khỏi một mẫu hoặc một phòng thí nghiệm hay không.
-
 ## Độ sâu (depth / 깊이) pass: đo lường (measurement / 측정) như một lập luận, không phải con số
 
 ### Question và definitions

@@ -10,15 +10,11 @@ Mục tiêu confidentiality là che plaintext; integrity/authenticity là phát 
 
 Hiện đại (modern / 현대적) ứng dụng (application / 애플리케이션) thường ưu tiên **AEAD — Authenticated Encryption with Associated dữ liệu (data / 데이터)**, nơi encryption và authentication được thiết kế cùng nhau. Associated dữ liệu (data / 데이터) cho phép authenticate siêu dữ liệu (metadata / 메타데이터) cần nhìn thấy nhưng không được phép sửa, như giao thức (protocol / 프로토콜) phiên bản (version / 버전) hoặc routing identifier.
 
-> **Nối mạch:** **Nonce không nhất thiết bí mật** nối từ **Encryption không tự động tạo integrity** sang **Randomness và uniqueness là hai yêu cầu (requirement / 요구사항) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nonce không nhất thiết bí mật
 
 **Nonce** thường là giá trị “number used once”. Nhiều chế độ (mode / 모드) yêu cầu nonce unique dưới cùng key, không yêu cầu nonce secret. Reuse nonce có thể phá guarantee nghiêm trọng tùy construction.
 
 Sai lầm phổ biến là tập trung bảo vệ nonce như password nhưng lại không đảm bảo uniqueness. yêu cầu (requirement / 요구사항) phải được đọc đúng theo thuật toán (algorithm / 알고리즘)/giao thức (protocol / 프로토콜) cụ thể.
-
-> **Nối mạch:** **Randomness và uniqueness là hai yêu cầu (requirement / 요구사항) khác nhau** nối từ **Nonce không nhất thiết bí mật** sang **Key separation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Randomness và uniqueness là hai yêu cầu (requirement / 요구사항) khác nhau
 
@@ -26,15 +22,11 @@ Một nonce random đủ dài có thể đạt uniqueness với xác suất cao,
 
 Do đó thiết kế (design / 설계) phải lập luận (reasoning / 추론) cả persistence, multi-process coordination, backup/restore và key rotation — không chỉ hàm (function / 함수) `random()`.
 
-> **Nối mạch:** **Key separation** nối từ **Randomness và uniqueness là hai yêu cầu (requirement / 요구사항) khác nhau** sang **Password không phải encryption key trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Key separation
 
 Dùng cùng key material cho nhiều mục đích có thể tạo tương tác (interaction / 상호작용) không được bảo mật (security / 보안) proof giả định. **Key derivation hàm (function / 함수) (KDF)** có thể tạo subkeys riêng cho encryption, authentication hoặc từng ngữ cảnh (context / 맥락)/dịch vụ (service / 서비스) từ master secret.
 
 Ngữ cảnh (context / 맥락) label/lĩnh vực (domain / 도메인) separation giúp đảm bảo đầu ra (output / 출력) dùng cho mục đích A không bị nhầm với mục đích B. Đây là một ví dụ ranh giới bảo mật (security boundary / 보안 경계) được encode vào key schedule.
-
-> **Nối mạch:** **Password không phải encryption key trực tiếp** nối từ **Key separation** sang **Rotation không đơn giản là thay một biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Password không phải encryption key trực tiếp
 
@@ -42,15 +34,11 @@ Human password có entropy thấp và phân phối (distribution / 분포) dễ 
 
 Key encryption key, dữ liệu (data / 데이터) encryption key và password-derived key nên được phân biệt theo role thay vì gọi tất cả là “secret key”.
 
-> **Nối mạch:** **Rotation không đơn giản là thay một biến** nối từ **Password không phải encryption key trực tiếp** sang **Giao thức (protocol / 프로토콜) transcript và downgrade**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Rotation không đơn giản là thay một biến
 
 Nếu key mới xuất hiện, dữ liệu cũ vẫn có thể được mã hóa bằng key cũ. Hệ thống cần key identifier/phiên bản (version / 버전) để biết key nào decrypt đối tượng (object / 객체) nào, chính sách (policy / 정책) giữ old keys bao lâu và di chuyển (migration / 마이그레이션)/re-encryption diễn ra thế nào.
 
 Rotation tốt tách **ghi (write / 쓰기) key hiện tại** khỏi **read keys còn hợp lệ**. Xóa key cũ quá sớm biến rotation thành dữ liệu (data / 데이터) mất mát (loss / 손실); giữ vô hạn làm giảm giá trị của rotation.
-
-> **Nối mạch:** **Giao thức (protocol / 프로토콜) transcript và downgrade** nối từ **Rotation không đơn giản là thay một biến** sang **“Encrypt everything” vẫn cần threat mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giao thức (protocol / 프로토콜) transcript và downgrade
 
@@ -58,15 +46,11 @@ Handshake thường thương lượng phiên bản (version / 버전)/thuật to
 
 Bài học tổng quát: bảo mật (security / 보안) thuộc tính (property / 속성) của từng message phụ thuộc ngữ cảnh (context / 맥락) của toàn conversation, không chỉ payload hiện tại.
 
-> **Nối mạch:** **“Encrypt everything” vẫn cần threat mô hình (model / 모델)** nối từ **Giao thức (protocol / 프로토콜) transcript và downgrade** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## “Encrypt everything” vẫn cần threat mô hình (model / 모델)
 
 Encryption at rest không giúp nếu attacker đã chiếm ứng dụng (application / 애플리케이션) tiến trình (process / 프로세스) và tiến trình (process / 프로세스) có quyền lấy plaintext/key. TLS không bảo vệ dữ liệu sau khi endpoint giải mã. HSM/KMS giảm exposure của key material nhưng không tự giải quyết authorization sai.
 
 Cryptography phải được đặt đúng ranh giới (boundary / 경계) trong threat mô hình (model / 모델).
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **“Encrypt everything” vẫn cần threat mô hình (model / 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

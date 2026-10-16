@@ -40,8 +40,6 @@ Nếu `r>1`, quantity tăng. Nếu `0<r<1`, nó decay. Nếu `r=1`, quantity kh�
 
 Điều quan trọng là absolute increment không cố định. Với `r=1.1`, một balance `100` tăng `10` trong period đầu, nhưng khi balance đã là `1000`, cùng 10% tạo increment `100`. Exponential growth tăng tốc vì cơ sở (base / 기반) mà percentage được áp dụng cũng đang tăng.
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Percentage growth là multiplicative** nối từ **Từ cộng lặp sang nhân lặp** sang **Exponential decay và half-life**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Percentage growth là multiplicative
 
 Nếu quantity tăng `p%` mỗi period, growth factor là
@@ -66,8 +64,6 @@ trừ khi ta đang mô hình (model / 모델) simple interest hoặc một tuy�
 
 Đây là khác biệt cơ bản giữa **percentage thay đổi (change / 변경)** và **absolute thay đổi (change / 변경)**.
 
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Exponential decay và half-life** nối từ **Percentage growth là multiplicative** sang **Continuous exponential: vì sao số e xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Exponential decay và half-life
 
 Nếu quantity mất cùng một tỷ lệ sau mỗi period, ta có exponential decay. Giả sử sau mỗi half-life `H`, lượng còn một nửa. Sau thời gian `t`, số half-lives đã trôi qua là `t/H`, nên
@@ -79,8 +75,6 @@ A(t)=A_0\left(\frac12\right)^{t/H}.
 Nếu `t=H`, exponent bằng `1`, quantity còn `A_0/2`. Nếu `t=2H`, còn `A_0/4`.
 
 Half-life mô hình (model / 모델) xuất hiện trong radioactive decay và pharmacokinetics gần đúng. Nhưng thực tế biological elimination có thể multi-compartment hoặc nonlinear; exponential decay là mô hình (model / 모델) dựa trên giả định (assumption / 가정) rằng **fractional removal tỷ lệ (rate / 비율) gần constant**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Continuous exponential: vì sao số e xuất hiện?** nối từ **Exponential decay và half-life** sang **Doubling thời gian (time / 시간) và logarithm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Continuous exponential: vì sao số `e` xuất hiện?
 
@@ -130,8 +124,6 @@ Số `e≈2.71828` không xuất hiện vì convention tùy ý. Exponential cơ 
 
 Vì differential equation nói growth tỷ lệ (rate / 비율) proportional hiện tại (current / 현재) amount, `e^x` là biểu diễn (representation / 표현) tự nhiên nhất.
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Doubling thời gian (time / 시간) và logarithm** nối từ **Continuous exponential: vì sao số e xuất hiện?** sang **Logarithm là inverse của exponentiation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Doubling thời gian (time / 시간) và logarithm
 
 Giả sử
@@ -172,8 +164,6 @@ Với decay `A=A_0e^{-\lambda t}`, half-life là
 T_{1/2}=\frac{\ln2}{\lambda}.
 ```
 
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Logarithm là inverse của exponentiation** nối từ **Doubling thời gian (time / 시간) và logarithm** sang **Các luật logarithm đến từ luật exponent**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Logarithm là inverse của exponentiation
 
 Definition
@@ -212,8 +202,6 @@ x>0.
 
 Lý do là positive cơ sở (base / 기반) exponential `b^y` luôn positive, nên inverse real của nó chỉ có lĩnh vực (domain / 도메인) `(0,∞)`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Các luật logarithm đến từ luật exponent** nối từ **Logarithm là inverse của exponentiation** sang **Vì sao logarithm biến multiplication thành addition?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các luật logarithm đến từ luật exponent
 
 Vì
@@ -242,8 +230,6 @@ và
 
 Các laws này không phải rules rời để memorise. Chúng là ảnh (image / 이미지) của exponent laws khi chuyển qua inverse thao tác (operation / 연산).
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Vì sao logarithm biến multiplication thành addition?** nối từ **Các luật logarithm đến từ luật exponent** sang **Compound interest**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao logarithm biến multiplication thành addition?
 
 Đây là một insight quan trọng. Multiplication trong original quy mô (scale / 규모) trở thành addition trong log quy mô (scale / 규모):
@@ -269,8 +255,6 @@ Lấy log:
 ```
 
 Vì vậy machine học tập (learning / 학습) và statistics thường tối ưu **log-likelihood** thay cho likelihood sản phẩm (product / 제품) trực tiếp.
-
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Compound interest** nối từ **Vì sao logarithm biến multiplication thành addition?** sang **Quy tắc (rule / 규칙) of 72 là approximation từ logarithm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compound interest
 
@@ -320,8 +304,6 @@ amount khoảng
 
 Lợi nhuận không phải `8%×10=80%` theo simple addition; compounding tạo khoảng 115.9% total growth.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Quy tắc (rule / 규칙) of 72 là approximation từ logarithm** nối từ **Compound interest** sang **Semi-log plot: exponential trở thành line**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc (rule / 규칙) of 72 là approximation từ logarithm
 
 Doubling thời gian (time / 시간) discrete với tỷ lệ (rate / 비율) `r` mỗi period thỏa
@@ -355,8 +337,6 @@ T\approx\frac{69.3}{p}.
 ```
 
 “quy tắc (rule / 규칙) of 72” thay `69.3` bằng `72` vì dễ chia và khá chính xác quanh nhiều rates thực tế. Đây là ví dụ một financial heuristic có nguồn gốc từ logarithmic approximation.
-
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Semi-log plot: exponential trở thành line** nối từ **Quy tắc (rule / 규칙) of 72 là approximation từ logarithm** sang **Logarithmic scales và orders of magnitude**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Semi-log plot: exponential trở thành line
 
@@ -394,8 +374,6 @@ log-transform lại tự nhiên hơn vì
 
 Modeling choice phải dựa trên data-generating cơ chế (mechanism / 메커니즘), không chỉ vì đồ thị (graph / 그래프) nhìn thẳng đẹp hơn.
 
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Logarithmic scales và orders of magnitude** nối từ **Semi-log plot: exponential trở thành line** sang **pH: logarithm biến concentration quy mô (scale / 규모) thành manageable numbers**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Logarithmic scales và orders of magnitude
 
 Khi quantities trải qua nhiều powers of ten, tuyến tính (linear / 선형) axis khó đọc. Log quy mô (scale / 규모) compress magnitude theo ratio.
@@ -411,8 +389,6 @@ Trên base-10 log quy mô (scale / 규모), khoảng cách từ `1` đến `10` 
 - thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도) như `O(log n)`.
 
 Điểm chung không phải “các lĩnh vực này đều thích log”, mà là underlying cấu trúc (structure / 구조) có **multiplicative ratios hoặc repeated scaling**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **pH: logarithm biến concentration quy mô (scale / 규모) thành manageable numbers** nối từ **Logarithmic scales và orders of magnitude** sang **Decibel: measuring ratios chứ không phải absolute amount**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## pH: logarithm biến concentration quy mô (scale / 규모) thành manageable numbers
 
@@ -440,8 +416,6 @@ cho pH khoảng `5`.
 
 Hai units pH tương ứng factor `100` concentration, không phải additive difference nhỏ. Log quy mô (scale / 규모) làm một phạm vi (range / 범위) cực rộng trở thành quy mô (scale / 규모) dễ thao tác.
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Decibel: measuring ratios chứ không phải absolute amount** nối từ **pH: logarithm biến concentration quy mô (scale / 규모) thành manageable numbers** sang **Exponential và algorithmic growth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Decibel: measuring ratios chứ không phải absolute amount
 
 Một dùng chung (common / 공통) power-ratio form là
@@ -453,8 +427,6 @@ L=10\log_{10}\left(\frac{P}{P_0}\right)\text{ dB}.
 Nếu power ratio tăng factor 10, mức (level / 수준) tăng 10 dB. Logarithm biến multiplicative ratio thành additive mức (level / 수준) difference.
 
 Cần chú ý công thức coefficient có thể khác với amplitude quantities vì power thường proportional amplitude squared. ngữ cảnh (context / 맥락) quyết định formula cụ thể.
-
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Exponential và algorithmic growth** nối từ **Decibel: measuring ratios chứ không phải absolute amount** sang **Logistic growth: khi exponential bị giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exponential và algorithmic growth
 
@@ -486,8 +458,6 @@ k\approx\log_2 n.
 
 Tìm kiếm nhị phân (binary search / 이진 탐색) có logarithmic độ sâu (depth / 깊이) vì mỗi comparison loại bỏ một fraction lớn của tìm kiếm (search / 검색) không gian (space / 공간).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Exponential và algorithmic growth** đặt tiêu chí; **Logistic growth: khi exponential bị giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Exponential as eigenfunction of differentiation** mở rộng hệ quả.
-
 ## Logistic growth: khi exponential bị giới hạn
 
 Pure exponential mô hình (model / 모델) ngầm giả định growth factor không suy giảm khi quantity lớn. Trong population các hệ thống (systems / 시스템들) hoặc resource-limited processes, giả định (assumption / 가정) đó thường sai.
@@ -516,8 +486,6 @@ Khi `P→K`, factor tiến về `0`, growth slow và equilibrium xuất hiện.
 
 Đây là ví dụ quan trọng về mô hình (model / 모델) refinement: exponential không “sai”, nhưng chỉ đúng trong regime nơi tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건) chưa đáng kể.
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Logistic growth: khi exponential bị giới hạn** đặt tiêu chí; **Exponential as eigenfunction of differentiation** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Exponential family không có nghĩa mọi rapid growth là exponential** mở rộng hệ quả.
-
 ## Exponential as eigenfunction of differentiation
 
 Một thuộc tính (property / 속성) sâu hơn là exponential giữ nguyên shape dưới differentiation:
@@ -530,8 +498,6 @@ Differentiation chỉ quy mô (scale / 규모) hàm (function / 함수) bởi `k
 
 Liên kết (connection / 연결) này giải thích tại sao exponentials xuất hiện tự nhiên khi solve tuyến tính (linear / 선형) differential equations, Fourier/Laplace methods, điều khiển (control / 제어) các hệ thống (systems / 시스템들) và tín hiệu (signal / 신호) processing.
 
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Exponential family không có nghĩa mọi rapid growth là exponential** nối từ **Exponential as eigenfunction of differentiation** sang **Liên kết kiến thức (knowledge connection / 지식 연결) — logarithm và thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Exponential family không có nghĩa mọi rapid growth là exponential
 
 Một curve tăng nhanh chưa đủ chứng minh exponential. Polynomial `x^10` có thể trông rất steep trên một interval nhỏ. Super-exponential processes như `e^{t^2}` còn tăng nhanh hơn.
@@ -543,8 +509,6 @@ Một curve tăng nhanh chưa đủ chứng minh exponential. Polynomial `x^10` 
 ```
 
 Đây là diagnostic bản chất: relative tỷ lệ (rate / 비율) constant tạo exponential.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, sau nội dung của **Exponential family không có nghĩa mọi rapid growth là exponential**, **Liên kết kiến thức (knowledge connection / 지식 연결) — logarithm và thông tin (information / 정보)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — logarithm và thông tin (information / 정보)
 
@@ -568,13 +532,9 @@ I(A,B)=I(A)+I(B).
 
 Logarithm chính là hàm (function / 함수) biến sản phẩm (product / 제품) thành sum. Đây là reason structural, không phải convention ngẫu nhiên.
 
-> **Nối mạch:** Trong **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결) — logarithm và thông tin (information / 정보)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Exponential là toán học của repeated proportional thay đổi (change / 변경): cùng một **tỷ lệ**, không phải cùng một **lượng**, được áp dụng liên tục hoặc lặp lại. Logarithm quay ngược quá trình đó để đo số lần scaling, thời gian cần đạt threshold hoặc thứ tự (order / 순서) of magnitude. Khi thấy multiplication lặp, percentage compounding, constant relative tỷ lệ (rate / 비율) hoặc tìm kiếm (search / 검색) không gian (space / 공간) co theo ratio, hãy nghĩ đến exponential/logarithm như một cặp inverse.
-
-> **Nối mạch:** Ở chặng này của **Hàm mũ và logarithm: toán học của tăng trưởng theo tỷ lệ**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

@@ -12,8 +12,6 @@ Các hệ thống chẩn đoán hiện đại ngày càng chú ý đến cách n
 
 Cách nhìn này có lợi vì hai người cùng một nhãn cũ có thể khác nhau đáng kể về cơ chế và nhu cầu điều trị. Ngược lại, hai nhãn khác nhau có thể cùng chia sẻ các vấn đề nền như bất ổn cảm xúc, thiếu linh hoạt, khó tin người hoặc kiểm soát xung động kém.
 
-> **Nối mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Các miền chức năng cốt lõi** nối từ **Từ category sang dimension** sang **Trait lĩnh vực (domain / 도메인)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các miền chức năng cốt lõi
 
 Một formulation hữu ích thường xem xét ít nhất hai hệ lớn:
@@ -39,8 +37,6 @@ Bao gồm:
 
 Một người có thể rất thành công về nghề nghiệp nhưng vẫn có suy giảm nghiêm trọng trong relationship, hoặc ngược lại.
 
-> **Nối mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Trait lĩnh vực (domain / 도메인)** nối từ **Các miền chức năng cốt lõi** sang **Borderline mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trait lĩnh vực (domain / 도메인)
 
 Một số lĩnh vực (domain / 도메인) thường được dùng để mô tả mẫu (pattern / 패턴):
@@ -52,8 +48,6 @@ Một số lĩnh vực (domain / 도메인) thường được dùng để mô t
 - **Anankastia**: cứng nhắc, cầu toàn, kiểm soát và tuân thủ quá mức.
 
 Đây là dimension mô tả, không phải “kiểu người” cố định.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Borderline mẫu (pattern / 패턴)** nối từ **Trait lĩnh vực (domain / 도메인)** sang **Narcissistic mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Borderline mẫu (pattern / 패턴)
 
@@ -75,8 +69,6 @@ niềm tin "mình sẽ bị bỏ" được củng cố
 
 Điều trị không chỉ nhắm giảm symptom mà còn tăng emotion regulation, mentalization, interpersonal effectiveness và khả năng giữ nhiều perspective cùng lúc.
 
-> **Nối mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Narcissistic mẫu (pattern / 패턴)** nối từ **Borderline mẫu (pattern / 패턴)** sang **Avoidant mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Narcissistic mẫu (pattern / 패턴)
 
 Narcissistic pathology không chỉ là “tự tin quá mức”. Nó có thể bao gồm grandiosity, entitlement, nhu cầu được công nhận và đồng thời self-esteem rất dễ tổn thương.
@@ -85,23 +77,17 @@ Một số người biểu hiện kiểu overt, rõ sự vượt trội; ngườ
 
 Điểm cốt lõi là self-worth phụ thuộc quá mạnh vào status, admiration hoặc comparison.
 
-> **Nối mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Avoidant mẫu (pattern / 패턴)** nối từ **Narcissistic mẫu (pattern / 패턴)** sang **Dependent mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Avoidant mẫu (pattern / 패턴)
 
 Avoidant pathology thường liên quan đến mong muốn liên kết (connection / 연결) nhưng đồng thời kỳ vọng rejection cao. Người ta có thể tránh tương tác (interaction / 상호작용) không phải vì không cần relationship mà vì chi phí (cost / 비용) dự đoán quá lớn.
 
 Điều này khác detachment thuần túy. Một người avoidant có thể rất muốn intimacy nhưng bị threat prediction giữ lại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dependent mẫu (pattern / 패턴)** nối từ **Avoidant mẫu (pattern / 패턴)** sang **Obsessive-compulsive personality và OCD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dependent mẫu (pattern / 패턴)
 
 Dependent mẫu (pattern / 패턴) liên quan khó tự quyết, sợ mất hỗ trợ (support / 지원) và có xu hướng giao quá nhiều quyền quyết định cho người khác.
 
 Vấn đề không phải “cần người khác” — con người vốn phụ thuộc lẫn nhau — mà là autonomy bị thu hẹp và relationship dễ trở thành nơi duy trì fear.
-
-> **Nối mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Obsessive-compulsive personality và OCD** nối từ **Dependent mẫu (pattern / 패턴)** sang **Dissocial và psychopathy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Obsessive-compulsive personality và OCD
 
@@ -111,15 +97,11 @@ OCD thường có obsession và compulsion nhằm giảm distress. Personality m
 
 Hai điều kiện (condition / 조건) có thể cùng tồn tại nhưng không đồng nghĩa.
 
-> **Nối mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Obsessive-compulsive personality và OCD** đặt đầu vào cho **Dissocial và psychopathy**, rồi **Developmental perspective** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Dissocial và psychopathy
 
 Dissocial traits có thể gồm callousness, exploitation và disregard for others. **Psychopathy** là construct nghiên cứu phức tạp, không nên dùng như insult hoặc synonym cho criminality.
 
 Không phải mọi người có dissocial trait đều phạm tội; không phải mọi người phạm tội đều có personality disorder.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dissocial và psychopathy** đặt đầu vào cho **Developmental perspective**, rồi **Comorbidity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Developmental perspective
 
@@ -129,15 +111,11 @@ Một principle quan trọng là **equifinality**: nhiều pathway khác nhau c�
 
 Xem [[./12_developmental_psychopathology_risk_and_resilience]].
 
-> **Nối mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Comorbidity** nối từ **Developmental perspective** sang **Formulation quan trọng hơn stereotype**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Comorbidity
 
 Personality pathology thường đồng tồn tại với depression, anxiety, trauma-related symptoms, substance use và eating disorders.
 
 Nếu chỉ điều trị symptom hiện tại mà bỏ qua interpersonal mẫu (pattern / 패턴) duy trì nó, relapse có thể dễ xảy ra. Nhưng ngược lại, không nên quy mọi khó khăn của một người về “personality”.
-
-> **Nối mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Formulation quan trọng hơn stereotype** nối từ **Comorbidity** sang **Điều trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formulation quan trọng hơn stereotype
 
@@ -154,8 +132,6 @@ trigger nào?
 → loop nào được duy trì?
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Điều trị** nối từ **Formulation quan trọng hơn stereotype** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điều trị
 
 Nhiều psychotherapy có bằng chứng (evidence / 증거) cho personality pathology, đặc biệt các approach có cấu trúc và tập trung relationship/emotion regulation.
@@ -170,8 +146,6 @@ Một số mô hình (model / 모델) thường gặp:
 
 Không nên hiểu rằng “personality disorder không chữa được”. Personality có tính ổn định tương đối nhưng vẫn có khả năng thay đổi đáng kể theo thời gian và treatment.
 
-> **Nối mạch:** Trong **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Dùng chung (common / 공통) misconceptions** nối từ **Điều trị** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dùng chung (common / 공통) misconceptions
 
 **“Personality disorder = người độc hại.”** Đây là nhãn đạo đức hóa, không phải formulation lâm sàng.
@@ -182,13 +156,9 @@ Không nên hiểu rằng “personality disorder không chữa được”. Per
 
 **“Personality không thay đổi.”** Trait tương đối ổn định nhưng hàm (function / 함수), coping và relationship mẫu (pattern / 패턴) có thể thay đổi.
 
-> **Nối mạch:** Ở chặng này của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Personality pathology không phải một “loại người”; nó là một hệ mẫu (pattern / 패턴) cứng nhắc giữa self, emotion và relationship làm giảm khả năng thích nghi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Bệnh lý nhân cách — Personality Pathology / 성격 병리**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

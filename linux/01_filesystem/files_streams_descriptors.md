@@ -10,8 +10,6 @@ Một tiến trình có thể cần đọc tệp cấu hình, ghi nhật ký, nh
 
 Linux cung cấp cho mỗi tiến trình một bảng các tệp (file / 파일) descriptor. tệp (file / 파일) descriptor thường là một số nguyên nhỏ và đóng vai trò như tay cầm (handle) dẫn tới một điểm cuối I/O đang mở.
 
-> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Các luồng chuẩn** nối từ **Vấn đề cần giải quyết** sang **Chuyển hướng là thay đổi cách nối các luồng I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các luồng chuẩn
 
 Khi shell khởi chạy một chương trình thông thường, chương trình thường nhận ba bộ mô tả chuẩn:
@@ -37,8 +35,6 @@ echo hello > output.txt
 shell thiết lập lại tệp (file / 파일) descriptor trước khi chương trình chạy để `FD 1` trỏ tới `output.txt`. `echo` không cần có mã riêng cho tình huống "ghi vào tệp đầu ra (output / 출력).txt".
 
 Đây là một ví dụ rõ về **tách biệt trách nhiệm (separation of concerns)**: chương trình tạo dữ liệu đầu ra, còn shell quyết định dữ liệu đó được chuyển tới đâu.
-
-> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Chuyển hướng là thay đổi cách nối các luồng I/O** nối từ **Các luồng chuẩn** sang **Pipe là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển hướng là thay đổi cách nối các luồng I/O
 
@@ -72,8 +68,6 @@ không nhất thiết tương đương. Khi `2>&1` xảy ra trước, `stderr` �
 
 Đây không phải cú pháp bí ẩn. Nó là thao tác thay đổi đồ thị kết nối của các tệp (file / 파일) descriptor.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Pipe là gì?** nối từ **Chuyển hướng là thay đổi cách nối các luồng I/O** sang **Vì sao cần stderr riêng?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pipe là gì?
 
 **Đường ống (pipe)** là một kênh giao tiếp do kernel quản lý, có đầu ghi và đầu đọc. Biểu thức:
@@ -91,8 +85,6 @@ ps stdout (FD 1) -> [pipe] -> grep stdin (FD 0)
 ```
 
 Vì vậy chuỗi xử lý (pipeline / 파이프라인) không đơn giản là "chạy lệnh đầu xong rồi sao chép toàn bộ văn bản sang lệnh sau". Với lượng dữ liệu đủ lớn, bên tạo dữ liệu và bên tiêu thụ có thể hoạt động đồng thời theo kiểu truyền dòng (streaming), đồng thời pipe buffer tạo ra cơ chế ép tốc độ ngược (backpressure) ở mức nhất định.
-
-> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vì sao cần stderr riêng?** nối từ **Pipe là gì?** sang **/dev/null và /dev/zero**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao cần `stderr` riêng?
 
@@ -112,8 +104,6 @@ Khi xử lý sự cố, không nên luôn loại bỏ `stderr` vì đó có th�
 find / -name app.log >results.txt 2>errors.txt
 ```
 
-> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **/dev/null và /dev/zero** nối từ **Vì sao cần stderr riêng?** sang **Bộ mô tả tệp đang mở và trạng thái tiến trình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `/dev/null` và `/dev/zero`
 
 `/dev/null` là một điểm cuối thiết bị bỏ mọi dữ liệu được ghi vào và trả về cuối luồng khi đọc. Nó hữu ích khi ta thực sự không cần một luồng đầu ra.
@@ -123,8 +113,6 @@ command >/dev/null 2>&1
 ```
 
 `/dev/zero` trả về các byte bằng 0 khi đọc và có nhiều trường hợp sử dụng ở mức hệ thống. Hai đường dẫn này minh họa rằng vùng tên `/dev` chứa các đối tượng không phải tệp dữ liệu thông thường trên đĩa nhưng vẫn dùng giao diện I/O giống tệp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ mô tả tệp đang mở và trạng thái tiến trình** nối từ **/dev/null và /dev/zero** sang **Rò rỉ bộ mô tả tệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ mô tả tệp đang mở và trạng thái tiến trình
 
@@ -154,8 +142,6 @@ cat /proc/12345/limits
 
 Hãy kiểm tra mục `Max open files`.
 
-> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Rò rỉ bộ mô tả tệp** nối từ **Bộ mô tả tệp đang mở và trạng thái tiến trình** sang **Bộ đệm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Rò rỉ bộ mô tả tệp
 
 Nếu ứng dụng mở tệp hoặc socket nhưng không đóng đúng cách, số tệp (file / 파일) descriptor đang mở có thể tăng dần. Khi chạm giới hạn, những thao tác nhìn bề ngoài không liên quan cũng có thể thất bại vì tiến trình không thể tạo thêm descriptor.
@@ -171,8 +157,6 @@ Theo dõi số lượng theo thời gian hữu ích hơn một ảnh chụp tứ
 
 Mối liên hệ với Java rất rõ: `InputStream`, `OutputStream`, socket hoặc tài nguyên JDBC cuối cùng đều phụ thuộc vào tài nguyên của hệ điều hành. `try-with-resources` không chỉ là phong cách viết mã; nó giúp bảo đảm tài nguyên nền được giải phóng đúng vòng đời.
 
-> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ đệm** nối từ **Rò rỉ bộ mô tả tệp** sang **Vị trí đọc/ghi và trạng thái dùng chung**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ đệm
 
 Khi chương trình gọi một hàm ghi ở tầng cao, dữ liệu không nhất thiết lập tức tới thiết bị lưu trữ hoặc mạng. Bộ đệm (buffering) có thể tồn tại ở ứng dụng, môi trường chạy, `libc`, bộ nhớ đệm trang của kernel, hệ thống tệp, bộ nhớ đệm thiết bị hoặc ngăn xếp mạng.
@@ -187,13 +171,9 @@ tail -F app.log | grep --line-buffered ERROR
 
 `--line-buffered` yêu cầu GNU `grep` đẩy đầu ra theo từng dòng để giảm độ trễ trong chuỗi xử lý (pipeline / 파이프라인) truyền dòng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vị trí đọc/ghi và trạng thái dùng chung** nối từ **Bộ đệm** sang **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vị trí đọc/ghi và trạng thái dùng chung
 
 Đối tượng tệp đã mở trong kernel có trạng thái như vị trí hiện tại (current offset). Khi tiến trình đọc tuần tự, vị trí này tiến lên. Các descriptor có thể được sao chép và trong một số trường hợp chia sẻ trạng thái tệp đang mở bên dưới. Vì vậy tệp (file / 파일) descriptor không chỉ là "số thứ tự tệp"; nó là một tay cầm tới trạng thái mà kernel đang duy trì.
-
-> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** nối từ **Vị trí đọc/ghi và trạng thái dùng chung** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor
 
@@ -205,15 +185,11 @@ sudo lsof -nP -iTCP:8080
 
 kết nối góc nhìn tiến trình với góc nhìn mạng. Phần này được giải thích sâu hơn tại [Mạng, DNS, socket và cổng](../07_networking/networking_dns_sockets_ports.md).
 
-> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy hình dung mỗi tiến trình có một **bảng các ổ cắm I/O**. Số descriptor là nhãn của ổ cắm; đối tượng phía sau có thể là terminal, tệp, pipe hoặc socket. Chuyển hướng và pipe không sửa lô-gic (logic / 논리) nghiệp vụ của chương trình; shell chỉ đấu lại các ổ cắm trước khi chương trình chạy.
 
 Mô hình này giúp hiểu cú pháp shell mà không cần học thuộc từng ký hiệu như những quy tắc rời rạc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Từ tệp (file / 파일) descriptor tới shell** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -224,8 +200,6 @@ Mô hình này giúp hiểu cú pháp shell mà không cần học thuộc từn
 **"Chuyển hướng chỉ là sao chép văn bản."** Shell thiết lập tệp (file / 파일) descriptor để chương trình sử dụng; bản chất là thay đổi cách nối I/O.
 
 **"Đưa tiến trình xuống nền thì đóng terminal vẫn chắc chắn chạy."** Tiến trình có thể nhận `SIGHUP` hoặc mất tài nguyên gắn với terminal. Với dịch vụ lâu dài trong môi trường vận hành (production / 운영 환경), trình quản lý dịch vụ ổn định hơn `nohup`.
-
-> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Từ tệp (file / 파일) descriptor tới shell** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Từ tệp (file / 파일) descriptor tới shell
 

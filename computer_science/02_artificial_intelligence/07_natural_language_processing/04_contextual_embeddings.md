@@ -2,9 +2,9 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Contextual embeddings**. Route đi từ static/contextual distinction → bidirectional context → ELMo-style representations → transformer contextual states → polysemy/transfer limits, để meaning được nối với vị trí trong sequence.
 
-Static word embedding gán một véc-tơ (vector / 벡터) duy nhất cho mỗi word/đơn vị từ (token / 토큰) kiểu (type / 타입). Nhưng ngôn ngữ (language / 언어) có polysemy và contextual meaning: `bank` trong `river bank` khác `bank loan`. **Contextual Embedding (문맥 임베딩)** tính biểu diễn (representation / 표현) của đơn vị từ (token / 토큰) như hàm (function / 함수) của cả ngữ cảnh (context / 맥락).
+Static word embedding gán một véc-tơ (vector / 벡터) duy nhất cho mỗi word/token (토큰) kiểu (type / 타입). Nhưng ngôn ngữ (language / 언어) có polysemy và contextual meaning: `bank` trong `river bank` khác `bank loan`. **Contextual Embedding (문맥 임베딩)** tính biểu diễn (representation / 표현) của token (토큰) như hàm (function / 함수) của cả ngữ cảnh (context / 맥락).
 
-Transformer làm điều này bằng self-attention: đơn vị từ (token / 토큰) ban đầu có embedding lookup giống nhau, nhưng qua layers nó trao đổi thông tin (information / 정보) với neighboring/distant tokens và trở thành hidden trạng thái (state / 상태) context-specific.
+Transformer làm điều này bằng self-attention: token (토큰) ban đầu có embedding lookup giống nhau, nhưng qua layers nó trao đổi thông tin (information / 정보) với neighboring/distant tokens và trở thành hidden trạng thái (state / 상태) context-specific.
 
 ## Static vs Contextual
 
@@ -20,7 +20,7 @@ Contextual:
 h_i=f_\theta(x_1,...,x_T,i)
 \]
 
-Cùng đơn vị từ (token / 토큰) ID ở position/ngữ cảnh (context / 맥락) khác có `h_i` khác.
+Cùng token (토큰) ID ở position/ngữ cảnh (context / 맥락) khác có `h_i` khác.
 
 Biểu diễn tĩnh chỉ có một véc-tơ cho mỗi kiểu từ, còn contextual embedding cần một trạng thái phụ thuộc cả câu. ELMo thực hiện điều đó bằng mô hình ngôn ngữ hai chiều; BERT mở rộng ý tưởng với kiến trúc Transformer.
 
@@ -28,7 +28,7 @@ Biểu diễn tĩnh chỉ có một véc-tơ cho mỗi kiểu từ, còn context
 
 ELMo là milestone trước Transformer. Nó dùng stacked bidirectional LSTMs; biểu diễn (representation / 표현) kết hợp hidden states từ multiple layers.
 
-Insight: different layers capture different linguistic thông tin (information / 정보), and context-sensitive đơn vị từ (token / 토큰) biểu diễn (representation / 표현) improves downstream tasks.
+Insight: different layers capture different linguistic thông tin (information / 정보), and context-sensitive token (토큰) biểu diễn (representation / 표현) improves downstream tasks.
 
 ELMo và BERT đều tạo trạng thái theo ngữ cảnh, nhưng BERT biểu diễn từng token qua các tầng Transformer. Muốn dùng các trạng thái ấy cho truy hồi hoặc phân loại câu, cần phân biệt token representation với sentence representation.
 
@@ -36,9 +36,9 @@ ELMo và BERT đều tạo trạng thái theo ngữ cảnh, nhưng BERT biểu d
 
 BERT uses bidirectional Transformer encoder trained with masked-language-model mục tiêu (objective / 목표).
 
-Đầu vào (input / 입력) biểu diễn (representation / 표현) combines đơn vị từ (token / 토큰)/subword + position + segment/kiểu (type / 타입) embeddings (implementation-specific).
+Đầu vào (input / 입력) biểu diễn (representation / 표현) combines token (토큰)/subword + position + segment/kiểu (type / 타입) embeddings (implementation-specific).
 
-After each Transformer tầng (layer / 계층), đơn vị từ (token / 토큰) véc-tơ (vector / 벡터) becomes contextualized.
+After each Transformer tầng (layer / 계층), token (토큰) véc-tơ (vector / 벡터) becomes contextualized.
 
 Final/selected layers feed classification, QA, NER etc.
 
@@ -62,7 +62,7 @@ Contrastive learning làm cho sentence embedding phù hợp với similarity và
 
 ## Sentence-BERT / Contrastive Sentence Embeddings
 
-Cross-encoder BERT jointly processes two texts and can mô hình (model / 모델) rich đơn vị từ (token / 토큰) interactions, but expensive for retrieval because every query-document pair needs forward pass.
+Cross-encoder BERT jointly processes two texts and can mô hình (model / 모델) rich token (토큰) interactions, but expensive for retrieval because every query-document pair needs forward pass.
 
 Bi-encoder encodes separately:
 
@@ -115,9 +115,9 @@ This kiến trúc (architecture / 아키텍처) is cốt lõi (core / 핵심) RA
 
 Khoảng cách giữa các trạng thái contextual phụ thuộc vị trí trong mạng và mục tiêu đã huấn luyện; khả năng giải mã một thuộc tính không chứng minh mô hình dùng nó theo cách nhân quả. Vì vậy, chọn tầng cần gắn với tác vụ và đánh giá thực nghiệm.
 
-## Contextual đơn vị từ (token / 토큰) hình học (geometry / 기하학)
+## Contextual token (토큰) hình học (geometry / 기하학)
 
-A đơn vị từ (token / 토큰)'s hidden trạng thái (state / 상태) encodes mixture of lexical, syntactic, ngữ nghĩa (semantic / 의미적) and positional factors. Layers often show progression but not clean strict hierarchy.
+A token (토큰)'s hidden trạng thái (state / 상태) encodes mixture of lexical, syntactic, ngữ nghĩa (semantic / 의미적) and positional factors. Layers often show progression but not clean strict hierarchy.
 
 Probing studies can decode linguistic attributes from hidden states, but decodability does not prove nhân quả (causal / 인과적) use.
 
@@ -135,7 +135,7 @@ Mean pooling, attention pooling và các chiến lược theo đoạn tạo ra c
 
 ## Pooling and Length độ lệch (bias / 편향)
 
-Mean pooling averages đơn vị từ (token / 토큰) vectors; long docs may dilute salient segments. `[CLS]` depends huấn luyện (training / 학습) mục tiêu (objective / 목표); max pooling favors strongest tính năng (feature / 기능) per dimension.
+Mean pooling averages token (토큰) vectors; long docs may dilute salient segments. `[CLS]` depends huấn luyện (training / 학습) mục tiêu (objective / 목표); max pooling favors strongest tính năng (feature / 기능) per dimension.
 
 For long document retrieval, chunk-level embeddings often better than one véc-tơ (vector / 벡터) for entire document.
 

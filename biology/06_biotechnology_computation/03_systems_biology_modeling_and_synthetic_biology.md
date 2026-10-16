@@ -16,8 +16,6 @@ Nếu A activate B rất chậm còn B degrade rất nhanh, hành vi (behavior /
 
 Điểm này rất quan trọng khi đọc pathway figure: arrow là hypothesis về quan hệ (relation / 관계), không phải full prediction.
 
-> **Nối mạch:** Sơ đồ mạng chỉ cho thấy topology, chưa cho thấy động lực; các rate biến cạnh thành thay đổi sinh học, còn steady state có thể tồn tại xa cân bằng nhiệt động.
-
 ## 2. tỷ lệ (rate / 비율) of thay đổi (change / 변경) là ngôn ngữ tự nhiên của động (dynamic / 동적) biology
 
 Nếu B được tạo theo A và degraded theo B hiện tại:
@@ -30,8 +28,6 @@ Equation không chỉ là toán. Nó buộc ta phát biểu rõ: môi trường 
 
 Khi \(dB/dt=0\), B ở **trạng thái ổn định (steady state)**, nhưng môi trường vận hành (production / 운영 환경) và degradation vẫn có thể diễn ra liên tục.
 
-> **Nối mạch:** **3. Trạng thái ổn định không đồng nghĩa cân bằng nhiệt động (thermodynamic equilibrium)** nối từ **2. tỷ lệ (rate / 비율) of thay đổi (change / 변경) là ngôn ngữ tự nhiên của động (dynamic / 동적) biology** sang **4. Sự tạo ra (production)–phân giải mô hình (model / 모델) và hằng số thời gian (time constant)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Trạng thái ổn định không đồng nghĩa cân bằng nhiệt động (thermodynamic equilibrium)
 
 Cell sống thường duy trì **non-equilibrium trạng thái ổn định**. ATP được tạo và tiêu thụ liên tục. Ion được pump ra rồi leak vào. Glucose blood có thể gần ổn định dù uptake và bản phát hành (release / 릴리스) xảy ra liên tục.
@@ -39,8 +35,6 @@ Cell sống thường duy trì **non-equilibrium trạng thái ổn định**. A
 Cân bằng nhiệt động thực sự sẽ làm nhiều độ dốc (gradient / 기울기) collapse. Life cần dòng năng lượng (energy flow) để giữ hệ thống (system / 시스템) xa equilibrium.
 
 Đây là liên kết (connection / 연결) trực tiếp giữa thermodynamics và cân bằng nội môi (homeostasis).
-
-> **Nối mạch:** **4. Sự tạo ra (production)–phân giải mô hình (model / 모델) và hằng số thời gian (time constant)** nối từ **3. Trạng thái ổn định không đồng nghĩa cân bằng nhiệt động (thermodynamic equilibrium)** sang **5. Saturation làm phản hồi (response / 응답) nonlinear**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Sự tạo ra (production)–phân giải mô hình (model / 모델) và hằng số thời gian (time constant)
 
@@ -60,8 +54,6 @@ Nhưng còn một thông tin (information / 정보) khác: tốc độ hệ th�
 
 Biology thường sự đánh đổi (trade-off / 트레이드오프) **responsiveness vs tài nguyên (resource / 자원) chi phí (cost / 비용)**.
 
-> **Nối mạch:** **5. Saturation làm phản hồi (response / 응답) nonlinear** nối từ **4. Sự tạo ra (production)–phân giải mô hình (model / 모델) và hằng số thời gian (time constant)** sang **6. Phản hồi âm (negative feedback) tạo stability nhưng có thể tạo dao động (oscillation)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Saturation làm phản hồi (response / 응답) nonlinear
 
 Enzym (enzyme), receptor và transporter có sức chứa (capacity / 용량) hữu hạn. Michaelis–Menten-like quan hệ (relation / 관계):
@@ -74,8 +66,6 @@ v=\frac{V_{max}[S]}{K_m+[S]}
 
 Tính phi tuyến (nonlinearity) là nền cho ngưỡng (threshold), ultrasensitivity và công tắc. Nếu cứ giả định quan hệ (relation / 관계) tuyến tính, ta sẽ bỏ lỡ nhiều hành vi (behavior / 동작) quan trọng.
 
-> **Nối mạch:** **6. Phản hồi âm (negative feedback) tạo stability nhưng có thể tạo dao động (oscillation)** nối từ **5. Saturation làm phản hồi (response / 응답) nonlinear** sang **7. Phản hồi dương (positive feedback) tạo bộ nhớ (memory / 메모리) và tính lưỡng ổn (bistability)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Phản hồi âm (negative feedback) tạo stability nhưng có thể tạo dao động (oscillation)
 
 Phản hồi âm làm đầu ra (output / 출력) giảm upstream drive. Metabolic end sản phẩm (product / 제품) inhibit enzyme đầu; glucose–insulin regulation giảm deviation; gene sản phẩm (product / 제품) có thể repress transcription của chính nó.
@@ -83,8 +73,6 @@ Phản hồi âm làm đầu ra (output / 출력) giảm upstream drive. Metabol
 Phản hồi (feedback / 피드백) giúp disturbance decay nhanh hơn và giảm variation. Nhưng nếu phản hồi (feedback / 피드백) có delay lớn hoặc gain quá mạnh, hệ thống (system / 시스템) có thể overshoot và oscillate.
 
 Lý thuyết điều khiển (control theory) giúp ta thấy stability không chỉ phụ thuộc “có phản hồi hay không” mà cả strength và delay.
-
-> **Nối mạch:** **7. Phản hồi dương (positive feedback) tạo bộ nhớ (memory / 메모리) và tính lưỡng ổn (bistability)** nối từ **6. Phản hồi âm (negative feedback) tạo stability nhưng có thể tạo dao động (oscillation)** sang **8. Hiện tượng trễ (hysteresis): threshold bật và threshold tắt có thể khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Phản hồi dương (positive feedback) tạo bộ nhớ (memory / 메모리) và tính lưỡng ổn (bistability)
 
@@ -94,15 +82,11 @@ Một transient tín hiệu (signal / 신호) có thể đẩy hệ thống (sys
 
 Biệt hóa tế bào (cell differentiation) và tế bào (cell)-cycle chuyển tiếp (transition / 전이) thường có công tắc-like motif. Phản hồi dương biến graded đầu vào (input / 입력) thành discrete quyết định (decision / 결정).
 
-> **Nối mạch:** **8. Hiện tượng trễ (hysteresis): threshold bật và threshold tắt có thể khác nhau** nối từ **7. Phản hồi dương (positive feedback) tạo bộ nhớ (memory / 메모리) và tính lưỡng ổn (bistability)** sang **9. Feed-forward vòng lặp (loop / 루프) tạo filter thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Hiện tượng trễ (hysteresis): threshold bật và threshold tắt có thể khác nhau
 
 Trong bistable hệ thống (system / 시스템), đầu vào (input / 입력) cần để bật trạng thái (state / 상태) high có thể cao hơn đầu vào (input / 입력) cần để giữ trạng thái (state / 상태) high. Khi giảm đầu vào (input / 입력), hệ thống (system / 시스템) không quay lại ngay đường cũ.
 
 Đây là **hiện tượng trễ**, cùng concept đã gặp ở ecosystem alternative states. Một motif mathematical có thể xuất hiện từ gene circuit đến lake ecology.
-
-> **Nối mạch:** **9. Feed-forward vòng lặp (loop / 루프) tạo filter thời gian** nối từ **8. Hiện tượng trễ (hysteresis): threshold bật và threshold tắt có thể khác nhau** sang **10. Oscillator cần phản hồi (feedback / 피드백) + delay + tính phi tuyến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Feed-forward vòng lặp (loop / 루프) tạo filter thời gian
 
@@ -112,8 +96,6 @@ Coherent feed-forward vòng lặp (loop / 루프) vì vậy có thể lọc puls
 
 Mạng lưới (network) topology tự thực hiện computation về duration mà không cần central processor.
 
-> **Nối mạch:** **10. Oscillator cần phản hồi (feedback / 피드백) + delay + tính phi tuyến** nối từ **9. Feed-forward vòng lặp (loop / 루프) tạo filter thời gian** sang **11. Tính ngẫu nhiên (stochasticity): khi molecule count thấp, average không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Oscillator cần phản hồi (feedback / 피드백) + delay + tính phi tuyến
 
 Nhịp sinh học ngày đêm (circadian rhythm), tế bào-cycle oscillator và many mạch sinh học tổng hợp (synthetic circuit) tạo periodic dynamics.
@@ -121,8 +103,6 @@ Nhịp sinh học ngày đêm (circadian rhythm), tế bào-cycle oscillator và
 Phản hồi âm với delay có thể làm đầu ra (output / 출력) lên xuống. Phản hồi dương có thể sharpen chuyển tiếp (transition / 전이). Degradation tỷ lệ (rate / 비율) quyết định period.
 
 Snapshot omics ở một thời gian (time / 시간) điểm (point / 지점) có thể bỏ hoàn toàn phase thông tin (information / 정보); time-series vì vậy quan trọng khi hệ thống (system / 시스템) oscillatory.
-
-> **Nối mạch:** **11. Tính ngẫu nhiên (stochasticity): khi molecule count thấp, average không đủ** nối từ **10. Oscillator cần phản hồi (feedback / 피드백) + delay + tính phi tuyến** sang **12. Population average có thể che tính lưỡng ổn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Tính ngẫu nhiên (stochasticity): khi molecule count thấp, average không đủ
 
@@ -132,8 +112,6 @@ Nếu chỉ có vài yếu tố phiên mã (transcription factor) phân tử (mo
 
 Noise có thể làm genetically identical cell vào trạng thái (state / 상태) khác nhau. Trong bacterial persistence hoặc developmental fate, tính ngẫu nhiên có functional consequence.
 
-> **Nối mạch:** **12. Population average có thể che tính lưỡng ổn** nối từ **11. Tính ngẫu nhiên (stochasticity): khi molecule count thấp, average không đủ** sang **13. Phân tích độ nhạy (sensitivity analysis): parameter nào thật sự kiểm soát đầu ra (output / 출력)?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Population average có thể che tính lưỡng ổn
 
 Nếu nửa cell OFF và nửa ON, bulk đo lường (measurement / 측정) có thể cho average 50%. Nhưng không cell nào thật sự ở 50% trạng thái (state / 상태).
@@ -141,8 +119,6 @@ Nếu nửa cell OFF và nửa ON, bulk đo lường (measurement / 측정) có 
 Single-tế bào đo lường (measurement / 측정) vì vậy cần thiết để phân biệt continuous shift với mixture trạng thái (state / 상태).
 
 Đây là cầu nối (bridge / 브리지) giữa sinh học hệ thống và đo tế bào dòng chảy (flow cytometry)/single-cell omics.
-
-> **Nối mạch:** **13. Phân tích độ nhạy (sensitivity analysis): parameter nào thật sự kiểm soát đầu ra (output / 출력)?** nối từ **12. Population average có thể che tính lưỡng ổn** sang **14. Identifiability: fit tốt không nghĩa parameter đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Phân tích độ nhạy (sensitivity analysis): parameter nào thật sự kiểm soát đầu ra (output / 출력)?
 
@@ -152,8 +128,6 @@ Nếu small thay đổi (change / 변경) ở parameter A làm đầu ra (output
 
 Độ nhạy (sensitivity) giúp chọn experiment nào đáng làm và nút (node / 노드) nào có tiềm năng intervention.
 
-> **Nối mạch:** **14. Identifiability: fit tốt không nghĩa parameter đúng** nối từ **13. Phân tích độ nhạy (sensitivity analysis): parameter nào thật sự kiểm soát đầu ra (output / 출력)?** sang **15. Overfitting cũng tồn tại trong mô hình cơ chế (mechanistic model)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Identifiability: fit tốt không nghĩa parameter đúng
 
 Nhiều combination parameter có thể tạo curve giống nhau. Đây là **khả năng nhận dạng tham số (parameter identifiability) vấn đề (problem) (매개변수 식별성)**.
@@ -161,8 +135,6 @@ Nhiều combination parameter có thể tạo curve giống nhau. Đây là **kh
 Mô hình (model / 모델) có thể fit dữ liệu (data / 데이터) đẹp nhưng individual parameter không uniquely determined.
 
 Giải pháp có thể là thêm đo lường (measurement / 측정) intermediate, perturb hệ thống (system / 시스템), dùng prior kiến thức (knowledge / 지식) hoặc simplify mô hình (model / 모델).
-
-> **Nối mạch:** **14. Identifiability: fit tốt không nghĩa parameter đúng** đặt đầu vào cho **15. Overfitting cũng tồn tại trong mô hình cơ chế (mechanistic model)**, rồi **16. Perturbation phân biệt correlation với causality** mở rộng hệ quả.
 
 ## 15. Overfitting cũng tồn tại trong mô hình cơ chế (mechanistic model)
 
@@ -172,8 +144,6 @@ Mô hình (model / 모델) selection cần balance fit và độ phức tạp (c
 
 Mục tiêu không phải “fit mọi điểm” mà là capture cơ chế (mechanism / 메커니즘) đủ để generalize.
 
-> **Nối mạch:** **15. Overfitting cũng tồn tại trong mô hình cơ chế (mechanistic model)** đặt đầu vào cho **16. Perturbation phân biệt correlation với causality**, rồi **17. Genetic tương tác (interaction / 상호작용): whole lớn hơn hoặc nhỏ hơn tổng tác động (effect / 효과) riêng** mở rộng hệ quả.
-
 ## 16. Perturbation phân biệt correlation với causality
 
 Co-expression A và B không cho biết A→B, B→A hay cả hai cùng do C.
@@ -181,8 +151,6 @@ Co-expression A và B không cho biết A→B, B→A hay cả hai cùng do C.
 Knockout A rồi đo B tạo nhân quả (causal / 인과적) bằng chứng (evidence / 증거) mạnh hơn. Dose perturbation nhiều mức giúp infer nonlinear phản hồi (response / 응답). Time-resolved perturbation giúp infer direction.
 
 Sinh học hệ thống mạnh nhất khi mô hình (model / 모델) tạo prediction rồi experiment perturb để cố làm prediction sai.
-
-> **Nối mạch:** **17. Genetic tương tác (interaction / 상호작용): whole lớn hơn hoặc nhỏ hơn tổng tác động (effect / 효과) riêng** nối từ **16. Perturbation phân biệt correlation với causality** sang **18. Epistasis nối genetics cổ điển với mạng (network / 네트워크) hiện đại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Genetic tương tác (interaction / 상호작용): whole lớn hơn hoặc nhỏ hơn tổng tác động (effect / 효과) riêng
 
@@ -192,8 +160,6 @@ Nếu mutation A làm fitness giảm 10% và B giảm 10%, double mutant có th�
 
 **Synthetic lethality** là trường hợp A hoặc B riêng vẫn sống nhưng A+B chết. Đây là mạng (network / 네트워크) phụ thuộc (dependency / 의존성) quan trọng trong cancer therapy.
 
-> **Nối mạch:** **18. Epistasis nối genetics cổ điển với mạng (network / 네트워크) hiện đại** nối từ **17. Genetic tương tác (interaction / 상호작용): whole lớn hơn hoặc nhỏ hơn tổng tác động (effect / 효과) riêng** sang **19. Metabolic concentration và flux không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Epistasis nối genetics cổ điển với mạng (network / 네트워크) hiện đại
 
 Trong classical genetics, **epistasis** mô tả alen (allele) ở gene này che hoặc thay tác động (effect / 효과) gene khác. Sinh học hệ thống diễn giải điều đó bằng pathway cấu trúc liên kết (topology).
@@ -202,8 +168,6 @@ Nếu A tạo cơ chất (substrate) cho B, mất mát (loss / 손실) A có th�
 
 Một concept Mendel-era vì vậy nối trực tiếp mạng (network / 네트워크) suy luận (inference / 추론) hiện đại.
 
-> **Nối mạch:** **19. Metabolic concentration và flux không giống nhau** nối từ **18. Epistasis nối genetics cổ điển với mạng (network / 네트워크) hiện đại** sang **20. Stoichiometric ma trận (matrix / 행렬) và Phân tích cân bằng dòng chuyển hóa (flux balance analysis)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Metabolic concentration và flux không giống nhau
 
 Một metabolite concentration ổn định có thể có flux rất cao nếu môi trường vận hành (production / 운영 환경) và consumption cùng nhanh.
@@ -211,8 +175,6 @@ Một metabolite concentration ổn định có thể có flux rất cao nếu m
 Ví dụ bathtub giữ water mức (level / 수준) constant dù faucet và drain luồng (flow / 흐름) lớn.
 
 Do đó metabolomics đo concentration chưa đủ để biết metabolic tỷ lệ (rate / 비율). Isotope tracing và dòng chuyển hóa mô hình (model / 모델) cần khi muốn biết material thực sự đi đâu.
-
-> **Nối mạch:** **20. Stoichiometric ma trận (matrix / 행렬) và Phân tích cân bằng dòng chuyển hóa (flux balance analysis)** nối từ **19. Metabolic concentration và flux không giống nhau** sang **21. điều khiển (control / 제어) coefficient phân bố qua mạng lưới (network)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Stoichiometric ma trận (matrix / 행렬) và Phân tích cân bằng dòng chuyển hóa (flux balance analysis)
 
@@ -226,8 +188,6 @@ Sau đó ràng buộc (constraint / 제약조건) đặt upper/lower bound cho d
 
 **Phân tích cân bằng dòng chuyển hóa, FBA** mạnh vì không cần mọi kinetic parameter, nhưng mục tiêu (objective / 목표) giả định (assumption / 가정) là giới hạn (limitation). Microbe trong natural ecosystem không luôn maximize growth như lab culture.
 
-> **Nối mạch:** **21. điều khiển (control / 제어) coefficient phân bố qua mạng lưới (network)** nối từ **20. Stoichiometric ma trận (matrix / 행렬) và Phân tích cân bằng dòng chuyển hóa (flux balance analysis)** sang **22. Multi-scale modeling: molecular trạng thái (state / 상태) phải gặp tissue hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. điều khiển (control / 제어) coefficient phân bố qua mạng lưới (network)
 
 Một misconception cổ điển là “một enzyme rate-limiting duy nhất kiểm soát whole pathway”. Trong mạng (network / 네트워크) thật, điều khiển (control / 제어) thường phân bố.
@@ -235,8 +195,6 @@ Một misconception cổ điển là “một enzyme rate-limiting duy nhất ki
 Tăng enzyme A 10× có thể không tăng flux nếu enzyme B hoặc substrate supply trở thành bottleneck mới.
 
 Kỹ thuật chuyển hóa (metabolic engineering) vì vậy cần các hệ thống (systems / 시스템들) view, không chỉ overexpress một gene.
-
-> **Nối mạch:** **22. Multi-scale modeling: molecular trạng thái (state / 상태) phải gặp tissue hình học (geometry / 기하학)** nối từ **21. điều khiển (control / 제어) coefficient phân bố qua mạng lưới (network)** sang **23. Sinh học tổng hợp: xây circuit để kiểm tra principle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Multi-scale modeling: molecular trạng thái (state / 상태) phải gặp tissue hình học (geometry / 기하학)
 
@@ -246,8 +204,6 @@ Mỗi quy mô (scale / 규모) dùng variable/thời gian (time / 시간) step k
 
 Khó khăn chính không chỉ computational; nó là quyết định thông tin (information / 정보) nào cần pass giữa quy mô (scale / 규모).
 
-> **Nối mạch:** **23. Sinh học tổng hợp: xây circuit để kiểm tra principle** tổng hợp từ **22. Multi-scale modeling: molecular trạng thái (state / 상태) phải gặp tissue hình học (geometry / 기하학)**; **24. Tính mô-đun (modularity) trong cell không sạch như electronics** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 23. Sinh học tổng hợp: xây circuit để kiểm tra principle
 
 Sinh học tổng hợp dùng promoter, repressor, ribosome binding site, enzyme và sensor như mô-đun (module / 모듈).
@@ -255,8 +211,6 @@ Sinh học tổng hợp dùng promoter, repressor, ribosome binding site, enzyme
 Nếu hai repressor inhibit nhau, circuit có thể tạo toggle switch. Nếu phản hồi âm có delay, circuit có thể oscillate.
 
 Kỹ thuật (engineering / 엔지니어링) circuit là cách mạnh để kiểm thử (test / 테스트) sufficiency: topology dự đoán có thật sự tạo hành vi (behavior / 동작) không?
-
-> **Nối mạch:** **24. Tính mô-đun (modularity) trong cell không sạch như electronics** tổng hợp từ **23. Sinh học tổng hợp: xây circuit để kiểm tra principle**; **25. ngữ cảnh (context / 맥락) dependence là challenge central của sinh học tổng hợp** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Tính mô-đun (modularity) trong cell không sạch như electronics
 
@@ -266,8 +220,6 @@ Khi synthetic construct expression quá mạnh, nó tạo **tài nguyên (resour
 
 Vì vậy mô-đun (module / 모듈) tương tác (interaction / 상호작용) có thể tồn tại dù diagram không vẽ edge.
 
-> **Nối mạch:** **25. ngữ cảnh (context / 맥락) dependence là challenge central của sinh học tổng hợp** tổng hợp từ **24. Tính mô-đun (modularity) trong cell không sạch như electronics**; **26. Kỹ thuật chuyển hóa là tối ưu hóa (optimization / 최적화) dưới ràng buộc (constraint / 제약조건)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 25. ngữ cảnh (context / 맥락) dependence là challenge central của sinh học tổng hợp
 
 Cùng promoter có thể hoạt động khác tùy host strain, bản sao (copy / 복사) number, tốc độ tăng trưởng (growth rate) và genomic insertion site.
@@ -275,8 +227,6 @@ Cùng promoter có thể hoạt động khác tùy host strain, bản sao (copy 
 Biological part có lịch sử (history / 이력) và môi trường (environment / 환경). Standardization hữu ích nhưng không xóa ngữ cảnh (context / 맥락).
 
 Điều này dạy ngược lại về natural biology: hàm (function / 함수) của gene cũng phụ thuộc mạng (network / 네트워크) bối cảnh (context).
-
-> **Nối mạch:** **26. Kỹ thuật chuyển hóa là tối ưu hóa (optimization / 최적화) dưới ràng buộc (constraint / 제약조건)** tổng hợp từ **25. ngữ cảnh (context / 맥락) dependence là challenge central của sinh học tổng hợp**; **27. Biosensor: biology như đo lường (measurement / 측정) thiết bị (device / 장치)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Kỹ thuật chuyển hóa là tối ưu hóa (optimization / 최적화) dưới ràng buộc (constraint / 제약조건)
 
@@ -286,8 +236,6 @@ Nhưng mỗi modification có sự đánh đổi (trade-off / 트레이드오프
 
 Kỹ thuật (engineering / 엔지니어링) bài toán (problem / 문제) thường multi-objective: maximize sản phẩm (product / 제품) nhưng giữ cell sống đủ lâu và circuit không bị evolution phá nhanh.
 
-> **Nối mạch:** **26. Kỹ thuật chuyển hóa là tối ưu hóa (optimization / 최적화) dưới ràng buộc (constraint / 제약조건)** đặt vấn đề; **27. Biosensor: biology như đo lường (measurement / 측정) thiết bị (device / 장치)** kiểm tra bằng chứng, rồi **28. Tế bào-free hệ thống (system / 시스템): giảm ngữ cảnh (context / 맥락) để prototype nhanh** mở rộng hệ quả.
-
 ## 27. Biosensor: biology như đo lường (measurement / 측정) thiết bị (device / 장치)
 
 Biosensor có đầu vào (input / 입력) mô-đun (module / 모듈) nhận molecule, processing mô-đun (module / 모듈) và đầu ra (output / 출력) như huỳnh quang (fluorescence)/electrical tín hiệu (signal / 신호).
@@ -295,8 +243,6 @@ Biosensor có đầu vào (input / 입력) mô-đun (module / 모듈) nhận mol
 Chỉ số (metric / 지표) gồm sensitivity, độ đặc hiệu (specificity), dải động (dynamic range), phản hồi (response / 응답) thời gian (time / 시간), leak và nhiễu (noise).
 
 Biosensor nối experimental đo lường (measurement / 측정) với synthetic thiết kế (design / 설계): ta dùng biology để đo biology hoặc môi trường (environment / 환경).
-
-> **Nối mạch:** **27. Biosensor: biology như đo lường (measurement / 측정) thiết bị (device / 장치)** đặt vấn đề; **28. Tế bào-free hệ thống (system / 시스템): giảm ngữ cảnh (context / 맥락) để prototype nhanh** kiểm tra bằng chứng, rồi **29. Evolution là một “dạng thất bại (failure mode / 실패 모드)” của engineered circuit — và cũng là thiết kế (design / 설계) áp suất (pressure)** mở rộng hệ quả.
 
 ## 28. Tế bào-free hệ thống (system / 시스템): giảm ngữ cảnh (context / 맥락) để prototype nhanh
 
@@ -306,8 +252,6 @@ Nhưng kết quả (result / 결과) không tự translate sang cell vì tài ng
 
 Tế bào-free giống simplified mô hình (model / 모델): useful để isolate principle, nhưng phải validate lại in vivo.
 
-> **Nối mạch:** **29. Evolution là một “dạng thất bại (failure mode / 실패 모드)” của engineered circuit — và cũng là thiết kế (design / 설계) áp suất (pressure)** nối từ **28. Tế bào-free hệ thống (system / 시스템): giảm ngữ cảnh (context / 맥락) để prototype nhanh** sang **30. Digital twin và predictive biology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Evolution là một “dạng thất bại (failure mode / 실패 모드)” của engineered circuit — và cũng là thiết kế (design / 설계) áp suất (pressure)
 
 Synthetic construct gây burden có thể bị mutation làm mất hàm (function / 함수); mutant grow nhanh hơn và chiếm population.
@@ -315,8 +259,6 @@ Synthetic construct gây burden có thể bị mutation làm mất hàm (functio
 Do đó engineered biology phải nghĩ đến **độ ổn định tiến hóa (evolutionary stability)**. thiết kế (design / 설계) tốt không chỉ hoạt động ngày đầu mà còn phải giữ chức năng (function) qua generation.
 
 Sinh học tổng hợp vì vậy buộc kỹ thuật (engineering / 엔지니어링) phải học evolution.
-
-> **Nối mạch:** **30. Digital twin và predictive biology** nối từ **29. Evolution là một “dạng thất bại (failure mode / 실패 모드)” của engineered circuit — và cũng là thiết kế (design / 설계) áp suất (pressure)** sang **31. data-driven và mô hình cơ chế bổ sung nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Digital twin và predictive biology
 
@@ -326,8 +268,6 @@ Nhưng hệ thống sinh học (biological system) high-dimensional, partially o
 
 Prediction useful vẫn có thể đạt được mà không cần mô hình (model / 모델) mọi molecule.
 
-> **Nối mạch:** **30. Digital twin và predictive biology** đặt đầu vào cho **31. data-driven và mô hình cơ chế bổ sung nhau**, rồi **32. Xác thực mô hình (model validation) phải dựa trên prediction chưa dùng để fit** mở rộng hệ quả.
-
 ## 31. data-driven và mô hình cơ chế bổ sung nhau
 
 ML mạnh khi mẫu (pattern / 패턴) phức tạp và dữ liệu (data / 데이터) lớn. Mô hình cơ chế mạnh khi quan hệ (relation / 관계) nhân quả (causal / 인과적)/vật lý (physical / 물리적) đã biết.
@@ -335,8 +275,6 @@ ML mạnh khi mẫu (pattern / 패턴) phức tạp và dữ liệu (data / 데�
 Hybrid mô hình (model / 모델) có thể dùng neural mạng (network / 네트워크) estimate unknown hàm (function / 함수) nhưng giữ mass balance hoặc thermodynamic ràng buộc (constraint / 제약조건).
 
 Tương lai quantitative biology nhiều khả năng là tích hợp (integration / 통합), không phải “AI thay thế cơ chế (mechanism / 메커니즘)”.
-
-> **Nối mạch:** **31. data-driven và mô hình cơ chế bổ sung nhau** đặt đầu vào cho **32. Xác thực mô hình (model validation) phải dựa trên prediction chưa dùng để fit**, rồi **33. bất định (uncertainty / 불확실성) phải đi cùng prediction** mở rộng hệ quả.
 
 ## 32. Xác thực mô hình (model validation) phải dựa trên prediction chưa dùng để fit
 
@@ -346,8 +284,6 @@ Ví dụ mô hình signaling predict knockout A sẽ tăng B sau 30 phút. Nếu
 
 Science tiến bộ bằng cycle prediction → kiểm thử (test / 테스트) → revision.
 
-> **Nối mạch:** **33. bất định (uncertainty / 불확실성) phải đi cùng prediction** nối từ **32. Xác thực mô hình (model validation) phải dựa trên prediction chưa dùng để fit** sang **34. Ethics và biosafety không phải appendix ngoài science**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. bất định (uncertainty / 불확실성) phải đi cùng prediction
 
 Mô hình parameter không chắc, đo lường (measurement / 측정) noisy, cấu trúc (structure / 구조) có thể sai. Prediction nên có interval hoặc scenario phạm vi (range / 범위) khi phù hợp.
@@ -355,8 +291,6 @@ Mô hình parameter không chắc, đo lường (measurement / 측정) noisy, c�
 Một điểm (point / 지점) estimate duy nhất dễ tạo false precision.
 
 Bất định (uncertainty / 불확실성) không làm mô hình (model / 모델) yếu; tường minh (explicit / 명시적) bất định (uncertainty / 불확실성) làm quyết định (decision / 결정) tốt hơn.
-
-> **Nối mạch:** **34. Ethics và biosafety không phải appendix ngoài science** nối từ **33. bất định (uncertainty / 불확실성) phải đi cùng prediction** sang **35. Tình huống phân tích (case study): lactose-like genetic switch như exercise tư duy hệ thống (systems thinking)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Ethics và biosafety không phải appendix ngoài science
 
@@ -366,8 +300,6 @@ Question cần xem containment, reversibility, off-target, horizontal transfer, 
 
 Technical feasibility không tự quyết định acceptability. Thiết kế tiến trình (process / 프로세스) cần rủi ro (risk / 위험) mô hình (model / 모델) cùng lúc với hiệu năng (performance / 성능) mô hình.
 
-> **Nối mạch:** **34. Ethics và biosafety không phải appendix ngoài science** nêu quy tắc; **35. Tình huống phân tích (case study): lactose-like genetic switch như exercise tư duy hệ thống (systems thinking)** thử quy tắc trong tình huống, rồi **36. Tình huống phân tích: drug combination và mạng (network / 네트워크) redundancy** mở rộng hệ quả.
-
 ## 35. Tình huống phân tích (case study): lactose-like genetic switch như exercise tư duy hệ thống (systems thinking)
 
 Giả sử nutrient S activate regulator, regulator bật transporter T, transporter làm S đi vào cell nhanh hơn. Đây là positive vòng lặp (loop / 루프). Nhưng khi S được metabolize, intracellular S giảm, tạo negative tác động (effect / 효과).
@@ -376,8 +308,6 @@ Chỉ bằng topology, ta đã có thể hỏi: hệ thống (system / 시스템
 
 Sinh học hệ thống biến “pathway diagram” thành câu hỏi prediction.
 
-> **Nối mạch:** **35. Tình huống phân tích (case study): lactose-like genetic switch như exercise tư duy hệ thống (systems thinking)** nêu quy tắc; **36. Tình huống phân tích: drug combination và mạng (network / 네트워크) redundancy** thử quy tắc trong tình huống, rồi **37. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 36. Tình huống phân tích: drug combination và mạng (network / 네트워크) redundancy
 
 Drug A khối (block / 블록) pathway 1 nhưng cell sống nhờ con đường (pathway) 2. Drug B khối (block / 블록) pathway 2 nhưng pathway 1 đủ bù. Combination A+B gây collapse.
@@ -385,8 +315,6 @@ Drug A khối (block / 블록) pathway 1 nhưng cell sống nhờ con đường 
 Nếu chỉ study single drug, ta có thể kết luận cả hai mục tiêu (target / 대상) “không quan trọng”. mạng (network / 네트워크) view reveal redundancy.
 
 Đây là lý do combination therapy và genetic tương tác (interaction / 상호작용) map quan trọng trong cancer/infectious disease research.
-
-> **Nối mạch:** **36. Tình huống phân tích: drug combination và mạng (network / 네트워크) redundancy** nêu quy tắc; **37. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **38. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 37. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -397,8 +325,6 @@ Nếu chỉ study single drug, ta có thể kết luận cả hai mục tiêu (t
 “Sinh học tổng hợp biến cell thành machine deterministic” sai; nhiễu, evolution và ngữ cảnh (context / 맥락) vẫn tồn tại.
 
 “AI càng lớn thì không cần experiment” sai; prediction nhân quả (causal / 인과적) và phân phối (distribution / 분포) shift vẫn cần kiểm tra hợp lệ (validation / 검증).
-
-> **Nối mạch:** **38. Mô hình tư duy tổng hợp** tổng hợp từ **37. Các hiểu lầm phổ biến (common misconceptions)**; **39. Synthesis với toàn thư viện kiến thức (knowledge library / 지식 라이브러리)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 38. Mô hình tư duy tổng hợp
 
@@ -428,8 +354,6 @@ model principle
 
 Đây là biology dưới dạng iterative science + kỹ thuật (engineering / 엔지니어링).
 
-> **Nối mạch:** **39. Synthesis với toàn thư viện kiến thức (knowledge library / 지식 라이브러리)** tổng hợp từ **38. Mô hình tư duy tổng hợp**; **Khả năng quan sát (observability / 관측 가능성) và controllability: biết trạng thái (state / 상태) không đồng nghĩa điều khiển được hệ thống (system / 시스템)** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 39. Synthesis với toàn thư viện kiến thức (knowledge library / 지식 라이브러리)
 
 Nhìn lại từ đầu, same motifs xuất hiện ở mọi quy mô (scale / 규모): độ dốc (gradient / 기울기) tạo vận chuyển (transport / 전송); phản hồi (feedback / 피드백) tạo điều khiển (control / 제어); selection tạo thích nghi (adaptation); mạng (network / 네트워크) tạo emergence; ràng buộc (constraint / 제약조건) tạo sự đánh đổi (trade-off / 트레이드오프).
@@ -439,8 +363,6 @@ Sinh học hệ thống chỉ làm các motif đó tường minh (explicit / 명
 Đi tiếp sang [Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md) và [Sinh học nhìn qua Vật lý, Hóa học và Kỹ thuật](../90_connections/01_biology_physics_chemistry_and_engineering.md) để tổng hợp các mẫu (pattern / 패턴) định lượng xuyên toàn thư viện.
 
 <!-- depth-audit-2026:control-observability-evolution -->
-
-> **Nối mạch:** **39. Synthesis với toàn thư viện kiến thức (knowledge library / 지식 라이브러리)** chuyển kết luận mô hình thành điểm vào cho **Khả năng quan sát (observability / 관측 가능성) và controllability: biết trạng thái (state / 상태) không đồng nghĩa điều khiển được hệ thống (system / 시스템)**; mục sau chỉ ra giới hạn điều khiển.
 
 ## Khả năng quan sát (observability / 관측 가능성) và controllability: biết trạng thái (state / 상태) không đồng nghĩa điều khiển được hệ thống (system / 시스템)
 

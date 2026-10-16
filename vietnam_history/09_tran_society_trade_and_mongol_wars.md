@@ -10,8 +10,6 @@ Câu hỏi trung tâm của chapter là: **nhà Trần đã kế thừa gì từ
 
 Để trả lời, phải đặt chiến tranh cạnh economy, logistics và xã hội (social / 사회적) organization. Nếu chỉ học “ba lần chống Nguyên–Mông”, ta thấy kết quả nhưng không thấy cơ chế (mechanism / 메커니즘).
 
-> **Nối mạch:** Trong **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Từ Lý sang Trần: đổi dynasty nhưng không reset hệ thống (system / 시스템)** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Royal clan như một quản trị (governance / 거버넌스) technology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ Lý sang Trần: đổi dynasty nhưng không reset hệ thống (system / 시스템)
 
 Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability cuối Lý. Gia tộc Trần có nền tảng mạnh ở vùng ven biển và lower Red River mạng (network / 네트워크); scholarship cũng nhấn mạnh rằng thế kỷ XII–XIII là lúc coastal trade ngày càng quan trọng.
@@ -20,23 +18,17 @@ Nhà Trần lên ngôi năm **1225**, sau một giai đoạn court instability c
 
 Nhà Trần tiếp tục dùng Thăng Long, tiếp tục bureaucracy, education và Buddhist institutions của thời trước. Nhưng họ reorganize royal family và military elite theo cách riêng, đặc biệt dựa mạnh vào kinship within ruling house.
 
-> **Nối mạch:** Ở chặng này của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Royal clan như một quản trị (governance / 거버넌스) technology** nối từ **Từ Lý sang Trần: đổi dynasty nhưng không reset hệ thống (system / 시스템)** sang **Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Royal clan như một quản trị (governance / 거버넌스) technology
 
 Trong trạng thái (state / 상태) chưa có professional bureaucracy đủ dày như hiện đại (modern / 현대적) government, trust là scarce tài nguyên (resource / 자원). Nhà Trần phân bố members của royal clan vào nhiều vị trí quân sự–chính trị để giảm agency bài toán (problem / 문제): ruler biết người chỉ huy là họ hàng gần và có stake trong survival của dynasty.
 
 Nhưng kinship quản trị (governance / 거버넌스) có sự đánh đổi (trade-off / 트레이드오프). Nó tăng trust trong short term nhưng dễ sinh rivalry nếu succession hoặc tài nguyên (resource / 자원) allocation không rõ. Vì vậy Trần vừa dùng family mạng (network / 네트워크) vừa cần rituals, offices và law để giữ mạng (network / 네트워크) đó coherent.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng** nối từ **Royal clan như một quản trị (governance / 거버넌스) technology** sang **Buddhism, Confucian học tập (learning / 학습) và plural political culture**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng
 
 Rice agriculture của Red River Delta tiếp tục nuôi capital và army. Tuy nhiên Đại Việt thế kỷ XIII không phải economy đóng kín. Coastal mạng (network / 네트워크) kết nối với southern China và maritime Southeast Asia; ports, river mouths và craft môi trường vận hành (production / 운영 환경) tạo thêm tài nguyên (resource / 자원) luồng (flow / 흐름).
 
 Một dynasty có cơ sở (base / 기반) mạnh ở coastal zone có thể hiểu rõ hơn giá trị (value / 값) của maritime logistics. Điều này đặc biệt quan trọng khi đối thủ Mongol–Yuan tìm cách move troops và supplies qua cả land lẫn sea.
-
-> **Nối mạch:** Trong **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Buddhism, Confucian học tập (learning / 학습) và plural political culture** nối từ **Agriculture vẫn là nền, nhưng coast và trade ngày càng quan trọng** sang **Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buddhism, Confucian học tập (learning / 학습) và plural political culture
 
@@ -46,8 +38,6 @@ Buddhism tiếp tục có ảnh hưởng sâu dưới Trần. Sau các wars, vua
 
 Văn Miếu–Quốc Tử Giám tiếp tục được tu sửa và sử dụng dưới Trần; Chu Văn An về sau trở thành một symbol của learned official culture.
 
-> **Nối mạch:** Ở chặng này của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia** nối từ **Buddhism, Confucian học tập (learning / 학습) và plural political culture** sang **1258: thắng hay thua không quan trọng bằng học tập (learning / 학습) cycle**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia
 
 Để hiểu Đại Việt thế kỷ XIII, phải zoom out. Mongol conquests không phải một xung đột (conflict / 충돌) song phương “Việt Nam–Trung Quốc”. Mongol armies đã đánh từ Central Asia tới Eastern Europe, chinh phục Dali/Yunnan, hủy Southern Song và pressure nhiều states ở Southeast Asia.
@@ -55,8 +45,6 @@ Văn Miếu–Quốc Tử Giám tiếp tục được tu sửa và sử dụng d
 Vì vậy Đại Việt đối diện một **systemic shock**: một military empire có mobility, manpower và regional reach chưa từng thấy đang tiến xuống phía nam.
 
 First campaign thường được ghi trong Vietnamese chronology là **1258**; một số scholarship dùng late 1257 vì cách chuyển calendar. Đây là ví dụ tốt về việc date conversion có thể khác nhưng chuỗi (sequence / 시퀀스) không đổi.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **1258: thắng hay thua không quan trọng bằng học tập (learning / 학습) cycle** nối từ **Mongol expansion làm thay đổi bảo mật (security / 보안) môi trường (environment / 환경) của toàn Eurasia** sang **1285: chiến tranh lớn hơn, mobilization cũng lớn hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1258: thắng hay thua không quan trọng bằng học tập (learning / 학습) cycle
 
@@ -80,15 +68,11 @@ defender counterattacks when attacker weakens
 
 Đây là **defense in độ sâu (depth / 깊이) (phòng ngự chiều sâu)**, không phải đơn giản “bỏ chạy rồi thắng”.
 
-> **Nối mạch:** Trong **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **1285: chiến tranh lớn hơn, mobilization cũng lớn hơn** nối từ **1258: thắng hay thua không quan trọng bằng học tập (learning / 학습) cycle** sang **1287–1288: supply chuỗi (chain / 사슬) trở thành center của war**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1285: chiến tranh lớn hơn, mobilization cũng lớn hơn
 
 Sau Yuan conquest of Southern Song, pressure tăng mạnh. Campaign **1285** lớn hơn và liên quan cả demand về passage toward Champa. Yuan armies tiến sâu, Trần court tiếp tục strategic retreat, sau đó counterattack khi coordination và supply của enemy suy yếu.
 
 Các chiến thắng như Hàm Tử, Chương Dương thường được nhớ như heroic events; nhân quả (causal / 인과적) view cần đặt chúng vào broader collapse của attacker logistics. Tactical victory có giá trị nhất khi nó phá cầu nối (bridge / 브리지), fleet, food depot hoặc tuyến (route / 경로) mà opponent cần để sustain campaign.
-
-> **Nối mạch:** Ở chặng này của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **1285: chiến tranh lớn hơn, mobilization cũng lớn hơn** đặt đầu vào cho **1287–1288: supply chuỗi (chain / 사슬) trở thành center của war**, rồi **Bạch Đằng 1288: archaeology khớp tốt hơn với material bằng chứng (evidence / 증거) hiện nay** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 1287–1288: supply chuỗi (chain / 사슬) trở thành center của war
 
@@ -112,15 +96,11 @@ Bạch Đằng terrain converts retreat into disaster
 
 Baldanza nhấn mạnh rằng destruction của supply fleet diễn ra trước khi Yuan main forces rút; điều này làm rõ vì sao 1288 không thể giải thích bằng một battlefield trick duy nhất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **1287–1288: supply chuỗi (chain / 사슬) trở thành center của war** đặt vấn đề; **Bạch Đằng 1288: archaeology khớp tốt hơn với material bằng chứng (evidence / 증거) hiện nay** đối chiếu bằng chứng, rồi **War chi phí (cost / 비용): chiến thắng không có nghĩa society không bị tổn thương** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Bạch Đằng 1288: archaeology khớp tốt hơn với material bằng chứng (evidence / 증거) hiện nay
 
 Các bãi cọc **Yên Giang, Đồng Vạn Muối, Đồng Má Ngựa** tại Quảng Ninh có niên đại thường được gắn với thế kỷ XIII và chiến thắng 1288. Khác với 938, ở đây material dating của các bãi nổi tiếng phù hợp hơn với battle tradition thời Trần.
 
 Nếu đi thực địa, hãy quan sát tidal landscape, tributaries và narrow channels trước khi nhìn cọc. Cọc chỉ hiệu quả khi integrated với water mức (level / 수준), timing, decoy và blocking force.
-
-> **Nối mạch:** Trong **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Bạch Đằng 1288: archaeology khớp tốt hơn với material bằng chứng (evidence / 증거) hiện nay** đặt vấn đề; **War chi phí (cost / 비용): chiến thắng không có nghĩa society không bị tổn thương** đối chiếu bằng chứng, rồi **Điền trang, thái ấp và elite economy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## War chi phí (cost / 비용): chiến thắng không có nghĩa society không bị tổn thương
 
@@ -128,15 +108,11 @@ Một narrative quá heroic dễ quên rằng multiple invasions gây displaceme
 
 Để mobilize repeatedly, trạng thái (state / 상태) cần food reserve, boats, horses, cục bộ (local / 로컬) militia và communication. Military resilience vì vậy là đầu ra (output / 출력) của economic sức chứa (capacity / 용량) + xã hội (social / 사회적) coordination, không chỉ generalship.
 
-> **Nối mạch:** Ở chặng này của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Điền trang, thái ấp và elite economy** nối từ **War chi phí (cost / 비용): chiến thắng không có nghĩa society không bị tổn thương** sang **Yên Tử, Thiên Trường, Phổ Minh: political geography ngoài Thăng Long**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điền trang, thái ấp và elite economy
 
 Thời Trần thường gắn với growth của **điền trang / thái ấp** và landholding của royal–elite families, temples và institutions. Đây là tài nguyên (resource / 자원) cơ sở (base / 기반) cho elite nhưng cũng có thể giảm direct fiscal reach của center nếu cục bộ (local / 로컬) estates quá autonomous.
 
 Không nên translate đơn giản thành European feudalism. Rights over land, labor và village communities có institutional lô-gic (logic / 논리) riêng. Điều cần hỏi là: ai có quyền collect đầu ra (output / 출력), ai provide dịch vụ (service / 서비스), và trạng thái (state / 상태) giữ leverage bằng cách nào?
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Yên Tử, Thiên Trường, Phổ Minh: political geography ngoài Thăng Long** nối từ **Điền trang, thái ấp và elite economy** sang **Sau war: victory không giải quyết structural problems cuối Trần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Yên Tử, Thiên Trường, Phổ Minh: political geography ngoài Thăng Long
 
@@ -144,15 +120,11 @@ Không nên translate đơn giản thành European feudalism. Rights over land, 
 
 Ba site này đặt cạnh nhau cho ta một picture đầy đủ hơn: dynasty không tồn tại chỉ trong palace. Nó là mạng (network / 네트워크) của sacred landscape, family homeland, agricultural region và strategic corridor.
 
-> **Nối mạch:** Trong **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Sau war: victory không giải quyết structural problems cuối Trần** nối từ **Yên Tử, Thiên Trường, Phổ Minh: political geography ngoài Thăng Long** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sau war: victory không giải quyết structural problems cuối Trần
 
 Thành công trước Yuan không làm dynasty immune với long-term stress. Thế kỷ XIV chứng kiến succession problems, elite competition, fiscal pressure, natural disaster và bên ngoài (external / 외부) xung đột (conflict / 충돌), đặc biệt với Champa dưới Chế Bồng Nga.
 
 Đây là lesson quan trọng: military victory có thể tăng legitimacy nhưng không thay thế economic reform và institutional adaptation.
-
-> **Nối mạch:** Ở chặng này của **Nhà Trần: society, trade và chiến tranh trong Mongol world**, **Recap và bàn giao** nối từ **Sau war: victory không giải quyết structural problems cuối Trần** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

@@ -10,8 +10,6 @@ Quyết định tài chính không chỉ là bài toán tính lãi suất. Tiề
 
 Mental accounting đôi khi hữu ích vì nó tạo ngân sách (budget / 예산) ranh giới (boundary / 경계). Nhưng nó cũng có thể gây quyết định kỳ lạ, ví dụ giữ tiền mặt lãi thấp trong khi vay bên tiêu thụ (consumer / 소비자) debt lãi cao chỉ vì hai khoản nằm trong “ngăn” khác nhau.
 
-> **Nối mạch:** Trong **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Mất mát (loss / 손실) aversion và đầu tư** nối từ **Mental accounting** sang **Present độ lệch (bias / 편향) và saving**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mất mát (loss / 손실) aversion và đầu tư
 
 Mất tiền thường gây distress mạnh hơn niềm vui từ gain tương đương. Điều này có thể làm investor giữ position lỗ quá lâu vì bán đồng nghĩa “xác nhận mất mát (loss / 손실)”, hoặc bán winner quá sớm để khóa cảm giác thắng.
@@ -20,23 +18,17 @@ Tuy nhiên mất mát (loss / 손실) aversion không giải thích mọi hành 
 
 Xem [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
 
-> **Nối mạch:** Ở chặng này của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Present độ lệch (bias / 편향) và saving** nối từ **Mất mát (loss / 손실) aversion và đầu tư** sang **Scarcity và cognitive bandwidth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Present độ lệch (bias / 편향) và saving
 
 Saving đòi present self chịu chi phí (cost / 비용) còn future self nhận benefit. **Thiên lệch hiện tại (present bias)** làm immediate reward dễ thắng future reward.
 
 Automation như auto-transfer ngay sau payday giảm số lần phải “quyết định tiết kiệm”. Đây là môi trường (environment / 환경) thiết kế (design / 설계): thay vì kỳ vọng willpower mỗi tháng, hệ thống (system / 시스템) biến saving thành default.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Scarcity và cognitive bandwidth** nối từ **Present độ lệch (bias / 편향) và saving** sang **Debt và psychological burden**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scarcity và cognitive bandwidth
 
 Khi tài chính căng thẳng, attention bị hút vào urgent bill, debt và deadline. **Tư duy khan hiếm (scarcity mindset)** có thể tạo tunnel attention: rất tập trung vào bài toán (problem / 문제) trước mắt nhưng bỏ qua long-term consequence.
 
 Điều này không có nghĩa người thiếu tiền “quản lý kém”. ràng buộc (constraint / 제약조건) thật sự làm quyết định (decision / 결정) không gian (space / 공간) hẹp hơn và lỗi (error / 오류) chi phí (cost / 비용) cao hơn.
-
-> **Nối mạch:** Trong **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Debt và psychological burden** nối từ **Scarcity và cognitive bandwidth** sang **FOMO và xã hội (social / 사회적) comparison**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Debt và psychological burden
 
@@ -55,8 +47,6 @@ financial facts
 
 Giải quyết debt thường cần cả arithmetic lẫn hành vi (behavior / 동작) thiết kế (design / 설계).
 
-> **Nối mạch:** Ở chặng này của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **FOMO và xã hội (social / 사회적) comparison** nối từ **Debt và psychological burden** sang **Overconfidence**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## FOMO và xã hội (social / 사회적) comparison
 
 Thị trường tăng mạnh dễ tạo **sợ bỏ lỡ (fear of missing out — FOMO)**. xã hội (social / 사회적) media làm visible winner nhiều hơn loser, tạo mẫu (sample / 표본) độ lệch (bias / 편향).
@@ -65,15 +55,11 @@ Nếu người dùng chỉ thấy screenshot lợi nhuận, cơ sở (base / 기
 
 Xem [[05_digital_psychology_social_media_and_online_behavior]] và [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Overconfidence** nối từ **FOMO và xã hội (social / 사회적) comparison** sang **Sunk chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Overconfidence
 
 Người ta thường overestimate ability phân biệt skill với luck, đặc biệt trong môi trường (environment / 환경) noisy. Một chuỗi thắng ngắn có thể làm confidence tăng nhanh hơn bằng chứng (evidence / 증거) thực tế.
 
 Quyết định (decision / 결정) log giúp bằng cách ghi forecast trước kết quả (outcome / 결과): lý do mua, điều kiện (condition / 조건) khiến thesis sai, expected horizon và downside. Sau đó có thể rà soát (review / 검토) calibration thay vì chỉ nhớ trade thành công.
-
-> **Nối mạch:** Trong **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Sunk chi phí (cost / 비용)** nối từ **Overconfidence** sang **Lifestyle inflation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sunk chi phí (cost / 비용)
 
@@ -81,15 +67,11 @@ Quyết định (decision / 결정) log giúp bằng cách ghi forecast trước
 
 Điều này xuất hiện cả trong investment, subscription, education và career. Câu hỏi tốt hơn là: “nếu hôm nay chưa sở hữu position này, với thông tin (information / 정보) hiện tại mình có chọn mua không?”.
 
-> **Nối mạch:** Ở chặng này của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Lifestyle inflation** nối từ **Sunk chi phí (cost / 비용)** sang **Financial stress và relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lifestyle inflation
 
 Income tăng có thể kéo spending baseline tăng theo. Hedonic adaptation làm upgrade nhanh chóng trở thành normal, khiến subjective gain giảm dần.
 
 Không phải mọi lifestyle inflation đều xấu; chất lượng (quality / 품질) of life thật sự có thể tăng. Vấn đề là tăng recurring obligation nhanh hơn margin of an toàn (safety / 안전).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Financial stress và relationship** nối từ **Lifestyle inflation** sang **Rủi ro (risk / 위험) tolerance và rủi ro (risk / 위험) sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Financial stress và relationship
 
@@ -97,15 +79,11 @@ Money xung đột (conflict / 충돌) thường không chỉ về amount mà cò
 
 Xem [[03_interpersonal_communication_and_conflict]] và [[../03_human_development_and_person/07_close_relationships_intimacy_and_family]].
 
-> **Nối mạch:** Trong **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Rủi ro (risk / 위험) tolerance và rủi ro (risk / 위험) sức chứa (capacity / 용량)** nối từ **Financial stress và relationship** sang **Default và automation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Rủi ro (risk / 위험) tolerance và rủi ro (risk / 위험) sức chứa (capacity / 용량)
 
 **Khả năng chịu rủi ro tâm lý (risk tolerance)** khác **năng lực chịu rủi ro tài chính (risk capacity)**. Một người thích rủi ro (risk / 위험) nhưng đang có short-term debt và emergency fund thấp có thể có sức chứa (capacity / 용량) thấp.
 
 Ngược lại, người có sức chứa (capacity / 용량) cao vẫn có thể sleep poorly với volatility lớn. Plan tốt cần fit cả hai.
-
-> **Nối mạch:** Ở chặng này của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Default và automation** nối từ **Rủi ro (risk / 위험) tolerance và rủi ro (risk / 위험) sức chứa (capacity / 용량)** sang **Financial advice và trust**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Default và automation
 
@@ -113,15 +91,11 @@ Automatic saving, automatic bill payment và rebalancing quy tắc (rule / 규�
 
 Vì vậy nên định kỳ rà soát (review / 검토) automation thay vì “set and forget” mãi mãi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Financial advice và trust** nối từ **Default và automation** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Financial advice và trust
 
 Advisor, influencer và AI công cụ (tool / 도구) đều tạo vấn đề **appropriate reliance**. người dùng (user / 사용자) cần biết incentive của nguồn (source / 소스), bất định (uncertainty / 불확실성) và giới hạn prediction.
 
 Không nên confuse confidence của presentation với chất lượng (quality / 품질) của bằng chứng (evidence / 증거). Một chart đẹp không thay due diligence.
-
-> **Nối mạch:** Trong **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Những hiểu lầm phổ biến** nối từ **Financial advice và trust** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -132,8 +106,6 @@ Không nên confuse confidence của presentation với chất lượng (quality
 **“Investor giỏi là người ít cảm xúc.”** Goal thực tế là quyết định (decision / 결정) tiến trình (process / 프로세스) không bị emotion chi phối vô thức, không phải loại bỏ cảm xúc.
 
 **“Tiết kiệm càng nhiều càng tốt.”** Money là tài nguyên (resource / 자원) để phục vụ goal; extreme saving có thể xung đột (conflict / 충돌) với health, relationship hoặc opportunity.
-
-> **Nối mạch:** Ở chặng này của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -154,8 +126,6 @@ feedback vào stress và future options
 ```
 
 > Tâm lý tài chính không thay thế toán tài chính; nó giải thích vì sao con người thường không thực hiện đúng kế hoạch mà chính họ đã tính ra.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý tiền bạc và quyết định tài chính cá nhân — Financial Psychology**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

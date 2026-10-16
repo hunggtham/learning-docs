@@ -44,8 +44,6 @@ production troubleshooting across layers
 
 Không cần học thuộc công cụ theo thứ tự này. phụ thuộc (dependency / 의존성) quan trọng hơn sản phẩm (product / 제품). Nếu đang dùng Docker/Kubernetes mỗi ngày nhưng chưa rõ tiến trình (process / 프로세스), filesystem, DNS hoặc tài nguyên (resource / 자원) limit, hãy quay lại thời gian chạy (runtime / 런타임) foundations. Nếu đã triển khai được tải công việc (workload / 워크로드) nhưng quay lui (rollback / 롤백) và sự cố (incident / 인시던트) vẫn dựa vào trực giác, hãy ưu tiên CI/CD, khả năng quan sát (observability / 관측 가능성) và SRE trước khi học thêm nền tảng (platform / 플랫폼) tính năng (feature / 기능).
 
-> **Chuyển mạch:** **Cách đọc** xác định mental model và owner; **Bản đồ thư viện** đặt các domain cạnh nhau, rồi **Trình tự đọc chi tiết** biến dependency thành route có thể theo.
-
 ## Bản đồ thư viện (library / 라이브러리)
 
 | Phần | Mục tiêu |
@@ -62,8 +60,6 @@ Không cần học thuộc công cụ theo thứ tự này. phụ thuộc (depen
 | [`09_platform_engineering`](./09_platform_engineering/00_platform_as_product_golden_paths_and_abstractions.md) | nền tảng (platform / 플랫폼) as sản phẩm (product / 제품), golden đường dẫn (path / 경로), self-service, tenancy, quản trị (governance / 거버넌스) và chi phí (cost / 비용) |
 | [`10_production_practice`](./10_production_practice/00_production_troubleshooting_and_change_failure_patterns.md) | Troubleshooting xuyên tầng và các thất bại (failure / 실패) mẫu (pattern / 패턴) của thay đổi môi trường vận hành (production / 운영 환경) |
 | [`90_connections`](./90_connections/00_devops_platform_cross_domain_map.md) | Bản đồ nối DevOps/nền tảng (platform / 플랫폼) với Khoa học máy tính (computer science / 컴퓨터 과학) và các chuẩn gốc (canonical / 정본) docs khác |
-
-> **Chuyển mạch:** **Trình tự đọc chi tiết** sắp xếp runtime, delivery, platform và production theo tiền đề; **Nguyên tắc học** giải thích cách kiểm chứng từng bước thay vì chỉ mở file theo thứ tự.
 
 ## Trình tự đọc chi tiết
 
@@ -89,15 +85,11 @@ Không cần học thuộc công cụ theo thứ tự này. phụ thuộc (depen
 
 [`GLOSSARY.md`](./GLOSSARY.md) là tài liệu tra thuật ngữ. [`COVERAGE_AUDIT.md`](./COVERAGE_AUDIT.md) ghi rõ ranh giới (boundary / 경계), phần đã bao phủ, phần cố ý cross-link và các điểm cần kiểm tra (audit / 감사) khi mở rộng.
 
-> **Chuyển mạch:** **Trình tự đọc chi tiết** cho biết route và prerequisite; **Nguyên tắc học** đặt tiêu chí failure/evidence, rồi **canonical prerequisites** giữ kiến thức ở đúng owner.
-
 ## Nguyên tắc học
 
 Một nền tảng (platform / 플랫폼) tốt không được đánh giá bằng số lượng công cụ (tool / 도구). Nó được đánh giá bằng khả năng làm cho **đường đi đúng trở thành đường đi dễ nhất**. Vì vậy mỗi chapter cố gắng trả lời cùng một chuỗi câu hỏi: vấn đề nào buộc concept đó xuất hiện; desired bất biến (invariant / 불변식) là gì; cơ chế (mechanism / 메커니즘) giữ bất biến (invariant / 불변식) như thế nào; thất bại (failure / 실패) xảy ra ở đâu; bằng chứng (evidence / 증거) nào xác nhận giả thuyết; và lớp trừu tượng (abstraction / 추상화) nào nên được cung cấp cho người dùng nền tảng (platform / 플랫폼).
 
 Khi gặp YAML, CLI hoặc API, hãy đọc chúng như một giao diện điều khiển trạng thái (state / 상태) chứ không phải thứ cần học thuộc. Cấu hình chỉ có ý nghĩa khi biết controller, thời gian chạy (runtime / 런타임) hoặc dịch vụ (service / 서비스) nào đọc nó, trạng thái (state / 상태) nào được tạo ra, ai là đơn vị sở hữu (owner / 오너) của trạng thái (state / 상태) đó và thất bại (failure / 실패) nào xuất hiện khi desired trạng thái (state / 상태) khác actual trạng thái (state / 상태).
-
-> **Chuyển mạch:** **Canonical prerequisites** chỉ ra các nền tảng phải quay về; **Đích đến** mô tả năng lực vận hành và bằng chứng cần có sau khi đi hết route.
 
 ## Chuẩn gốc (canonical / 정본) prerequisites thay vì duplicate
 
@@ -106,8 +98,6 @@ Khi gặp YAML, CLI hoặc API, hãy đọc chúng như một giao diện điề
 Các vấn đề phân tán (distributed / 분산) thất bại (failure / 실패), thứ tự (ordering / 순서), consensus và multi-region thuộc [Networks & Distributed Systems](../computer_science/06_networks_distributed_systems/advanced/README.md). dịch vụ (service / 서비스) định danh (identity / 식별자), PKI, secrets và key vòng đời (lifecycle / 생명주기) thuộc [Security & Reliability](../computer_science/07_security_reliability/advanced/README.md). triển khai (deployment / 배포) chiến lược (strategy / 전략) và quay lui (rollback / 롤백) lý thuyết (theory / 이론) được nối sang [deployment safety](../computer_science/09_software_engineering/advanced/05_deployment_safety_canary_blue_green_flags_and_rollback.md).
 
 DevOps thư viện (library / 라이브러리) sử dụng những nền đó để trả lời câu hỏi áp dụng: “thiết kế delivery/nền tảng (platform / 플랫폼) ra sao để nhiều nhóm (team / 팀) thay đổi môi trường vận hành (production / 운영 환경) an toàn và tự chủ?”.
-
-> **Chuyển mạch:** **Đích đến** khép README bằng mental model control loop và contract: lần theo thay đổi, runtime evidence, incident và cải thiện platform mà không phụ thuộc một công cụ cụ thể.
 
 ## Đích đến
 

@@ -30,8 +30,6 @@ tia X            → electron lõi / cấu trúc ở thang nguyên tử
 
 Thứ tự này xuất phát từ chính thang năng lượng lượng tử của các bậc tự do khác nhau.
 
-> **Nối mạch:** Năng lượng photon chọn được transition; hấp thụ, phát xạ và tán xạ là các đường tương tác khác nhau, còn selection rule quyết định tín hiệu có quan sát mạnh hay bị cấm.
-
 ## Hấp thụ, phát xạ và tán xạ
 
 Trong **phổ hấp thụ (absorption spectroscopy)**, mẫu lấy đi photon có năng lượng phù hợp với một chuyển mức được phép.
@@ -41,8 +39,6 @@ Trong **phổ phát xạ (emission spectroscopy)**, hệ kích thích trở về
 Trong **phương pháp tán xạ (scattering)**, photon thay đổi hướng và đôi khi thay đổi năng lượng. Raman là ví dụ tán xạ không đàn hồi liên hệ với dao động phân tử.
 
 Cùng một phân tử vì vậy có thể cung cấp nhiều loại thông tin bổ sung tùy kênh tương tác được đo.
-
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Quy tắc chọn — đủ năng lượng chưa chắc tạo tín hiệu mạnh** nối từ **Hấp thụ, phát xạ và tán xạ** sang **Định luật Beer–Lambert — biến hấp thụ thành nồng độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc chọn — đủ năng lượng chưa chắc tạo tín hiệu mạnh
 
@@ -55,8 +51,6 @@ Trong Raman, dao động phải làm thay đổi khả năng phân cực.
 Với chuyển mức điện tử, các quy tắc chọn về đối xứng và spin cũng ảnh hưởng cường độ.
 
 Do đó **không có đỉnh mạnh** không đồng nghĩa **không có mô-típ cấu trúc**; chuyển mức có thể yếu hoặc bị cấm theo quy tắc chọn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Định luật Beer–Lambert — biến hấp thụ thành nồng độ** nối từ **Quy tắc chọn — đủ năng lượng chưa chắc tạo tín hiệu mạnh** sang **UV–Vis — chuyển mức electron hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Beer–Lambert — biến hấp thụ thành nồng độ
 
@@ -118,8 +112,6 @@ Các nguyên nhân thường gặp gồm:
 
 Do đó cần thẩm định đường hiệu chuẩn trong đúng khoảng làm việc.
 
-> **Nối mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **UV–Vis — chuyển mức electron hóa trị** nối từ **Định luật Beer–Lambert — biến hấp thụ thành nồng độ** sang **Phổ hồng ngoại — dao động phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## UV–Vis — chuyển mức electron hóa trị
 
 UV–Vis thường thăm dò chuyển mức electron hóa trị.
@@ -154,8 +146,6 @@ Một quy trình định lượng tốt thường gồm:
 
 Dùng một điểm chuẩn đơn lẻ yếu hơn nhiều so với một đường hiệu chuẩn được kiểm tra đúng nghĩa.
 
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Phổ hồng ngoại — dao động phân tử** nối từ **UV–Vis — chuyển mức electron hóa trị** sang **Raman — bổ sung cho IR**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phổ hồng ngoại — dao động phân tử
 
 Phân tử không phải các thanh cứng đứng yên. Liên kết kéo giãn, góc uốn và nhiều nhóm nguyên tử dao động phối hợp.
@@ -188,8 +178,6 @@ Dưới khoảng `1500 cm⁻¹`, nhiều dao động ghép tạo mẫu phổ ph�
 
 Vùng này hữu ích để xác nhận danh tính vì hai hợp chất có cùng nhóm chức vẫn có thể có mẫu dấu vân tay khác nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Raman — bổ sung cho IR** nối từ **Phổ hồng ngoại — dao động phân tử** sang **NMR — cấu trúc qua môi trường spin hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Raman — bổ sung cho IR
 
 Raman đo tán xạ không đàn hồi. Một dao động có hoạt tính Raman khi nó làm thay đổi khả năng phân cực của phân tử.
@@ -199,8 +187,6 @@ Một số dao động đối xứng yếu trong IR có thể mạnh trong Raman
 Do hai kỹ thuật có quy tắc chọn khác nhau, IR và Raman thường bổ sung lẫn nhau thay vì thay thế nhau.
 
 Raman đặc biệt hữu ích với nhiều mẫu nước, nhưng huỳnh quang nền có thể che tín hiệu Raman yếu.
-
-> **Nối mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **NMR — cấu trúc qua môi trường spin hạt nhân** nối từ **Raman — bổ sung cho IR** sang **Huỳnh quang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NMR — cấu trúc qua môi trường spin hạt nhân
 
@@ -250,8 +236,6 @@ Khi phổ một chiều quá chật, thí nghiệm 2D tạo thêm chiều tươn
 
 Các thí nghiệm này biến xác định cấu trúc thành bài toán dựng lại đồ thị từ nhiều ràng buộc phổ.
 
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Huỳnh quang** nối từ **NMR — cấu trúc qua môi trường spin hạt nhân** sang **Phổ nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Huỳnh quang
 
 Một phân tử hấp thụ photon, lên trạng thái kích thích, mất một phần năng lượng qua quá trình không bức xạ rồi phát photon năng lượng thấp hơn.
@@ -263,8 +247,6 @@ Huỳnh quang có thể rất nhạy vì photon phát ra được đo trên nề
 Nhưng cường độ còn phụ thuộc hiệu suất lượng tử, dập tắt huỳnh quang, oxygen, nồng độ và hình học thiết bị.
 
 Ở nồng độ cao, **hiệu ứng lọc trong (inner-filter effect)** có thể làm tín hiệu lệch khỏi tuyến tính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Phổ nguyên tử** nối từ **Huỳnh quang** sang **Phương pháp tia X**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ nguyên tử
 
@@ -283,8 +265,6 @@ Nguồn sáng đặc trưng nguyên tố giúp tăng độ chọn lọc.
 ### ICP-MS
 
 ICP cũng có thể làm nguồn ion cho MS, kết hợp nguyên tử hóa hiệu quả với khả năng phát hiện nguyên tố và đồng vị rất nhạy.
-
-> **Nối mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Phương pháp tia X** nối từ **Phổ nguyên tử** sang **Độ phân giải, băng thông và tỉ số tín hiệu/nhiễu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương pháp tia X
 
@@ -306,8 +286,6 @@ Mẫu nhiễu xạ mã hóa cấu trúc tuần hoàn của mật độ electron 
 
 Cùng dùng tia X nhưng XRD và XPS trả lời những câu hỏi khác nhau vì cơ chế tương tác khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Độ phân giải, băng thông và tỉ số tín hiệu/nhiễu** nối từ **Phương pháp tia X** sang **Hiệu chuẩn và đường nền là một phần của phép đo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ phân giải, băng thông và tỉ số tín hiệu/nhiễu
 
 **Độ phân giải (resolution)** mô tả khả năng phân biệt hai đặc trưng phổ gần nhau.
@@ -323,8 +301,6 @@ SNR\propto\sqrt N
 Muốn tăng SNR gấp đôi thường phải tăng thời gian đo xấp xỉ bốn lần.
 
 Đây là một sự đánh đổi (trade-off / 트레이드오프) thực nghiệm rất quan trọng giữa **chất lượng dữ liệu và thời gian đo**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Hiệu chuẩn và đường nền là một phần của phép đo** nối từ **Độ phân giải, băng thông và tỉ số tín hiệu/nhiễu** sang **Kết hợp nhiều kỹ thuật phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu chuẩn và đường nền là một phần của phép đo
 
@@ -342,8 +318,6 @@ Trôi đường nền, sai hiệu chuẩn bước sóng, đáp ứng bộ phát 
 
 Vì vậy “phổ đẹp” chưa đủ; cần biết đường xử lý dữ liệu đã được thực hiện như thế nào.
 
-> **Nối mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Kết hợp nhiều kỹ thuật phổ** nối từ **Hiệu chuẩn và đường nền là một phần của phép đo** sang **Ví dụ suy luận: vì sao một dải IR biến mất chưa chắc nhóm chức đã biến mất?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kết hợp nhiều kỹ thuật phổ
 
 Một phổ đơn lẻ thường không đủ để chứng minh cấu trúc hữu cơ phức tạp.
@@ -358,8 +332,6 @@ Một bộ bằng chứng mạnh có thể gồm:
 
 Đây là **hợp nhất thông tin (information fusion)**: mỗi kỹ thuật ràng buộc một chiều khác nhau của bản sắc hóa học.
 
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Kết hợp nhiều kỹ thuật phổ** nêu quy tắc; **Ví dụ suy luận: vì sao một dải IR biến mất chưa chắc nhóm chức đã biến mất?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao một tín hiệu NMR rộng có thể mang thông tin cơ chế?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao một dải IR biến mất chưa chắc nhóm chức đã biến mất?
 
 Cường độ IR phụ thuộc thay đổi mômen lưỡng cực trong dao động. Nếu cấu trúc hoặc đối xứng làm chuyển mức rất yếu, dải có thể khó quan sát dù liên kết vẫn tồn tại.
@@ -368,8 +340,6 @@ Ngoài ra chồng dải, nền dung môi hoặc nồng độ thấp cũng có th
 
 Do đó cần phân biệt **không quan sát được tín hiệu** với **chứng minh không có cấu trúc**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Ví dụ suy luận: vì sao một dải IR biến mất chưa chắc nhóm chức đã biến mất?** nêu quy tắc; **Ví dụ suy luận: vì sao một tín hiệu NMR rộng có thể mang thông tin cơ chế?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao một tín hiệu NMR rộng có thể mang thông tin cơ chế?
 
 Nếu phân tử trao đổi giữa nhiều trạng thái với tốc độ gần thang thời gian NMR, các tín hiệu có thể rộng ra hoặc hợp nhất.
@@ -377,8 +347,6 @@ Nếu phân tử trao đổi giữa nhiều trạng thái với tốc độ gầ
 Thay đổi nhiệt độ rồi quan sát độ rộng và vị trí tín hiệu có thể cung cấp thông tin về động học trao đổi, không chỉ về cấu trúc tĩnh.
 
 Phổ học vì vậy có thể thăm dò cả **cấu trúc lẫn động lực học phân tử**.
-
-> **Nối mạch:** Trong **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Ví dụ suy luận: vì sao một tín hiệu NMR rộng có thể mang thông tin cơ chế?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -401,8 +369,6 @@ Không. NMR phản ánh môi trường từ và tương tác được lấy trun
 ### “Tín hiệu mạnh hơn luôn nghĩa nồng độ cao hơn”
 
 Không. Cường độ còn phụ thuộc hệ số đáp ứng, xác suất chuyển mức, điều kiện thiết bị và xử lý dữ liệu.
-
-> **Nối mạch:** Ở chặng này của **Phổ học — biến tương tác vật chất–bức xạ thành thông tin hóa học**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

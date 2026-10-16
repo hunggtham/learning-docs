@@ -10,8 +10,6 @@ Tác tử nhận **cảm nhận (percept)** từ môi trường và tạo hành 
 
 Môi trường có thể quan sát đầy đủ hoặc một phần, xác định hoặc ngẫu nhiên, theo từng phiên độc lập hoặc theo chuỗi, tĩnh hoặc động, rời rạc hoặc liên tục. Những đặc tính này ảnh hưởng trực tiếp đến họ thuật toán phù hợp.
 
-> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Tìm kiếm trong không gian trạng thái** tiếp nhận điểm tựa từ **Mô hình tác tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heuristic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tìm kiếm trong không gian trạng thái
 
 Nhiều bài toán AI có thể biểu diễn bằng trạng thái, hành động, mô hình chuyển trạng thái, trạng thái ban đầu và điều kiện mục tiêu.
@@ -19,8 +17,6 @@ Nhiều bài toán AI có thể biểu diễn bằng trạng thái, hành độn
 Lập đường đi, giải câu đố, lập kế hoạch và tìm kiếm trong trò chơi đều có thể trở thành bài toán tìm kiếm đồ thị trên một **không gian trạng thái (state space)** thường không được tạo sẵn toàn bộ.
 
 BFS tìm đường ngắn nhất theo số cạnh khi chi phí các cạnh bằng nhau; Dijkstra xử lý chi phí không âm; A* dùng **hàm heuristic** để hướng quá trình tìm kiếm về phía mục tiêu.
-
-> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Heuristic** tiếp nhận điểm tựa từ **Tìm kiếm trong không gian trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bùng nổ không gian tìm kiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Heuristic
 
@@ -36,15 +32,11 @@ Nếu heuristic **chấp nhận được (admissible)**, tức không đánh gi�
 
 Heuristic tốt mã hóa kiến thức miền và giúp giảm số trạng thái phải khám phá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Bùng nổ không gian tìm kiếm** tiếp nhận điểm tựa từ **Heuristic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm đối kháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bùng nổ không gian tìm kiếm
 
 Nếu hệ số phân nhánh là `b` và độ sâu là `d`, số trạng thái có thể tăng gần `b^d`. Đây là **bùng nổ tổ hợp (combinatorial explosion)**; với BFS hoặc A*, bộ nhớ thường trở thành nút thắt trước cả CPU.
 
 Vì vậy tìm kiếm trong AI liên hệ trực tiếp với lý thuyết độ phức tạp, thuật toán xấp xỉ và heuristic.
-
-> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Tìm kiếm đối kháng** tiếp nhận điểm tựa từ **Bùng nổ không gian tìm kiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập kế hoạch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm đối kháng
 
@@ -52,29 +44,21 @@ Trò chơi hai người tổng bằng không có thể dùng **minimax**: một 
 
 Thứ tự xét nước đi tốt có thể làm cắt tỉa hiệu quả hơn nhưng không thay đổi kết quả minimax. Với trò chơi có không gian quá lớn, hệ thống còn cần hàm đánh giá heuristic, giới hạn độ sâu, Monte Carlo cây (tree / 트리) tìm kiếm (search / 검색) hoặc chính sách/hàm giá trị được học.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Lập kế hoạch** tiếp nhận điểm tựa từ **Tìm kiếm đối kháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ hữu dụng và bất định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Lập kế hoạch
 
 **Lập kế hoạch (planning)** khác tìm đường đơn giản khi hành động có điều kiện tiên quyết và hiệu ứng, còn mục tiêu có thể là tập điều kiện lô-gic (logic / 논리). Lập kế hoạch cổ điển có thể tìm kiếm trong không gian trạng thái hoặc không gian kế hoạch.
 
 Robot và bài toán thế giới thực bổ sung bất định, trạng thái/hành động liên tục và khả năng quan sát không đầy đủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Độ hữu dụng và bất định** tiếp nhận điểm tựa từ **Lập kế hoạch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với học tăng cường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ hữu dụng và bất định
 
 Khi kết quả mang tính ngẫu nhiên, câu hỏi “có đạt mục tiêu hay không” thường quá đơn giản. **Độ hữu dụng kỳ vọng (expected utility)** kết hợp xác suất với mức ưu tiên, lợi ích hoặc chi phí. Lý thuyết quyết định nối suy luận xác suất với lựa chọn hành động.
-
-> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Liên hệ với học tăng cường** tiếp nhận điểm tựa từ **Độ hữu dụng và bất định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Liên hệ với học tăng cường
 
 **Học tăng cường (Reinforcement Learning — RL)** xem tác tử tương tác với môi trường và học **chính sách (policy / 정책)** từ phần thưởng thay vì được cung cấp đầy đủ mô hình chuyển trạng thái. Các khái niệm trạng thái, hành động, phần thưởng và chính sách vẫn sử dụng cùng mô hình tác tử.
 
 Học máy và RL có thể được đào sâu trong thư viện riêng; ở đây trọng tâm là cầu nối khái niệm.
-
-> **Chuyển mạch:** Ở chặng này của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với học tăng cường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -84,13 +68,9 @@ Học máy và RL có thể được đào sâu trong thư viện riêng; ở đ
 
 **“Tác tử hợp lý luôn tạo kết quả tốt nhất trong thực tế.”** Nó chỉ chọn hành động tốt nhất theo mô hình, thông tin và mục tiêu hiện có; bất định hoặc mô hình sai vẫn có thể dẫn tới kết quả xấu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy
 
 > AI bắt đầu bằng việc hình thức hóa chuỗi **cảm nhận → trạng thái hoặc niềm tin → hành động → mục tiêu**. Thuật toán chỉ có ý nghĩa sau khi cách biểu diễn bài toán đã rõ.
-
-> **Chuyển mạch:** Trong **Mô hình hóa bài toán AI, tìm kiếm và tác tử**, **Kết nối** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

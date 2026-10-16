@@ -20,8 +20,6 @@ Một số cặp tương ứng hữu ích là:
 
 Sự tương tự này hữu ích nhưng không hoàn hảo. Ví dụ mômen động lượng và vận tốc góc của một vật rắn tổng quát không nhất thiết cùng phương. Muốn hiểu chuyển động quay ba chiều cần tensor quán tính chứ không chỉ một số `I`.
 
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Radian là đơn vị tự nhiên của góc** nối từ **Từ tịnh tiến sang quay** sang **Động học quay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Radian là đơn vị tự nhiên của góc
 
 Radian được định nghĩa bởi
@@ -39,8 +37,6 @@ Giải tích lượng giác có dạng tự nhiên khi góc đo bằng radian:
 ```
 
 Đây là lý do các công thức `v=\omega r` hay `a_t=\alpha r` sử dụng trực tiếp `\theta` theo radian.
-
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Động học quay** nối từ **Radian là đơn vị tự nhiên của góc** sang **Mômen lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học quay
 
@@ -72,8 +68,6 @@ Ngay cả khi `\omega` không đổi, hướng vận tốc vẫn thay đổi nê
 a_c=\omega^2r=\frac{v^2}{r}.
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen lực** nối từ **Động học quay** sang **Vì sao τ=Iα xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mômen lực
 
 Mômen lực (torque / 돌림힘) được định nghĩa
@@ -91,8 +85,6 @@ Mômen lực (torque / 돌림힘) được định nghĩa
 trong đó `\ell` là cánh tay đòn vuông góc từ trục tới đường tác dụng của lực.
 
 Cùng một lực có thể tạo hiệu ứng quay rất khác nhau tùy vị trí đặt lực. Đây là lý do tay nắm cửa đặt xa bản lề.
-
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Vì sao τ=Iα xuất hiện?** nối từ **Mômen lực** sang **Mômen quán tính phụ thuộc trục quay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao `τ=Iα` xuất hiện?
 
@@ -134,8 +126,6 @@ I=\sum_i m_ir_i^2.
 
 `I` xuất hiện vì khối lượng ở xa trục khó tăng tốc góc hơn theo hệ số `r^2`.
 
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen quán tính phụ thuộc trục quay** nối từ **Vì sao τ=Iα xuất hiện?** sang **Định lý trục song song**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mômen quán tính phụ thuộc trục quay
 
 Với phân bố liên tục,
@@ -154,8 +144,6 @@ Ví dụ:
 
 Cùng `M` và `R`, vành có `I` lớn hơn đĩa vì nhiều khối lượng nằm xa trục hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Định lý trục song song** nối từ **Mômen quán tính phụ thuộc trục quay** sang **Động năng quay**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Định lý trục song song
 
 Nếu biết mômen quán tính quanh trục đi qua tâm khối,
@@ -167,8 +155,6 @@ I=I_{cm}+Md^2,
 với `d` là khoảng cách giữa hai trục song song.
 
 Định lý này rất hữu ích khi vật quay quanh bản lề hoặc trục không đi qua tâm khối.
-
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Động năng quay** nối từ **Định lý trục song song** sang **Mômen động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động năng quay
 
@@ -199,8 +185,6 @@ P=\tau\omega.
 
 Đây là phiên bản quay của `dW=Fdx` và `P=Fv`.
 
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen động lượng** nối từ **Động năng quay** sang **Tensor quán tính và trục chính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mômen động lượng
 
 Đối với chất điểm,
@@ -223,8 +207,6 @@ Nếu mômen lực ngoài bằng không,
 
 Bảo toàn mômen động lượng là nguyên lý tổng quát hơn công thức `L=I\omega`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Tensor quán tính và trục chính** nối từ **Mômen động lượng** sang **Hiện tượng “vợt tennis”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tensor quán tính và trục chính
 
 Trong chuyển động quay ba chiều,
@@ -241,8 +223,6 @@ L=I\omega.
 
 Tensor quán tính giải thích vì sao một vật có hình dạng bất đối xứng có thể có chuyển động quay phức tạp dù không chịu mômen lực ngoài.
 
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Hiện tượng “vợt tennis”** nối từ **Tensor quán tính và trục chính** sang **Bảo toàn mômen động lượng và người trượt băng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiện tượng “vợt tennis”
 
 Một vật rắn tự do có ba trục chính với ba mômen quán tính `I_1<I_2<I_3`. Quay gần trục có `I_1` nhỏ nhất hoặc `I_3` lớn nhất thường ổn định, còn quay gần trục trung gian `I_2` có thể không ổn định.
@@ -250,8 +230,6 @@ Một vật rắn tự do có ba trục chính với ba mômen quán tính `I_1<
 Đây là định lý trục trung gian (intermediate-axis theorem), thường được thấy khi ném một quyển sách hoặc vợt tennis lên không: quay quanh một trục có thể đột ngột lật hướng.
 
 Hiện tượng này cho thấy chuyển động quay ba chiều không thể hiểu đầy đủ chỉ bằng trực giác `τ=Iα` một chiều.
-
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Bảo toàn mômen động lượng và người trượt băng** nối từ **Hiện tượng “vợt tennis”** sang **Con quay và tiến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo toàn mômen động lượng và người trượt băng
 
@@ -265,8 +243,6 @@ Do `I_f<I_i`, ta có `\omega_f>\omega_i`.
 
 Động năng không nhất thiết bảo toàn trong thao tác này. Người trượt băng thực hiện công bằng cơ bắp để kéo tay vào, nên năng lượng quay có thể tăng dù mômen động lượng bảo toàn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Con quay và tiến động** nối từ **Bảo toàn mômen động lượng và người trượt băng** sang **Lăn không trượt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Con quay và tiến động
 
 Một con quay quay nhanh có mômen động lượng lớn. Nếu trọng lực tạo mômen lực gần vuông góc với `\vec L`, mômen lực chủ yếu đổi **hướng** của `\vec L` thay vì làm giảm nhanh độ lớn của nó.
@@ -278,8 +254,6 @@ Kết quả là trục quay tiến động (precession). Trong mô hình đơn g
 ```
 
 Hiện tượng này xuất hiện trong con quay hồi chuyển, vệ tinh, động lực học hành tinh và cảm biến quán tính.
-
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Lăn không trượt** nối từ **Con quay và tiến động** sang **Vai trò của ma sát tĩnh khi lăn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lăn không trượt
 
@@ -309,15 +283,11 @@ v^2=\frac{2gh}{1+I/(MR^2)}.
 
 Vật có `I/(MR^2)` lớn hơn sẽ có tốc độ tâm khối nhỏ hơn tại cùng độ cao vì nhiều năng lượng nằm trong chuyển động quay.
 
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** nối từ **Lăn không trượt** sang **Ví dụ: đĩa đặc lăn xuống dốc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vai trò của ma sát tĩnh khi lăn
 
 Trong lăn không trượt trên bề mặt cố định, điểm tiếp xúc tức thời có vận tốc bằng không so với mặt đất. Vì vậy ma sát tại tiếp xúc có thể là ma sát tĩnh và không nhất thiết tiêu tán cơ năng.
 
 Hướng của ma sát không thể đoán chỉ từ hướng chuyển động tâm khối; phải xét xu hướng trượt tương đối tại điểm tiếp xúc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** nêu quy tắc; **Ví dụ: đĩa đặc lăn xuống dốc** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: đĩa đặc lăn xuống dốc
 
@@ -365,13 +335,9 @@ a=\frac23g\sin\theta.
 
 Gia tốc nhỏ hơn `g\sin\theta` của một vật trượt không ma sát vì một phần năng lượng đi vào quay.
 
-> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Ví dụ: đĩa đặc lăn xuống dốc** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển động quay là cơ học của **phân bố khối lượng và hình học quanh trục**. Mômen lực đo khả năng thay đổi mômen động lượng; mômen quán tính đo cách khối lượng được phân bố; còn bảo toàn mômen động lượng là hệ quả sâu hơn của đối xứng quay.
-
-> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -390,8 +356,6 @@ Không. Ma sát tĩnh trong lăn không trượt có thể không sinh công t�
 ### “L luôn song song với ω”
 
 Chỉ đúng đơn giản khi quay quanh trục chính hoặc trong những hình học đủ đối xứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

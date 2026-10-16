@@ -22,8 +22,6 @@ hazard vừa + exposure kéo dài rộng khắp
 
 Do đó phát hiện một chất trong mẫu chưa đủ để kết luận mức nguy hiểm thực tế.
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **“Liều tạo nên độc tính” — nhưng liều nào?** nối từ **Mối nguy không đồng nghĩa rủi ro** sang **Đường phơi nhiễm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## “Liều tạo nên độc tính” — nhưng liều nào?
 
 “Liều” có thể nghĩa:
@@ -36,8 +34,6 @@ Do đó phát hiện một chất trong mẫu chưa đủ để kết luận m�
 - tổng phơi nhiễm tích lũy.
 
 Cùng liều ngoài không đảm bảo cùng liều trong vì hấp thu, phân bố, chuyển hóa và thải trừ khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đường phơi nhiễm** nối từ **“Liều tạo nên độc tính” — nhưng liều nào?** sang **Độc tính cấp và mãn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường phơi nhiễm
 
@@ -52,8 +48,6 @@ Các đường chính gồm:
 
 Một chất hít vào có thể tới phổi rất nhanh, trong khi chất ăn vào có thể trải qua acid dạ dày và chuyển hóa qua gan trước.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính cấp và mãn** nối từ **Đường phơi nhiễm** sang **Quan hệ liều–đáp ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độc tính cấp và mãn
 
 **Độc tính cấp (acute toxicity)** xuất hiện sau phơi nhiễm ngắn hoặc liều cao.
@@ -61,8 +55,6 @@ Một chất hít vào có thể tới phổi rất nhanh, trong khi chất ăn 
 **Độc tính mãn (chronic toxicity)** liên quan phơi nhiễm kéo dài/lặp lại và có thể gây ảnh hưởng cơ quan, thần kinh, sinh sản hoặc ung thư.
 
 `LD50` chỉ là một endpoint tử vong cấp trong điều kiện thử nghiệm cụ thể, không phải “điểm độc tính tổng quát”.
-
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Quan hệ liều–đáp ứng** nối từ **Độc tính cấp và mãn** sang **Độc động học — cơ thể làm gì với chất?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ liều–đáp ứng
 
@@ -76,8 +68,6 @@ Các đại lượng thường gặp gồm:
 - liều tham chiếu.
 
 Chúng là kết quả của mô hình và dữ liệu, không phải hằng số phân tử bất biến.
-
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc động học — cơ thể làm gì với chất?** nối từ **Quan hệ liều–đáp ứng** sang **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độc động học — cơ thể làm gì với chất?
 
@@ -108,8 +98,6 @@ Nếu chất được đưa vào lặp lại nhanh hơn tốc độ thải trừ
 
 Đây là ứng dụng trực tiếp của động học bậc nhất, không phải một công thức độc học tách biệt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính** nối từ **Độc động học — cơ thể làm gì với chất?** sang **Dạng tồn tại hóa học quyết định hành vi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính
 
 Chuyển hóa thường làm phân tử phân cực hơn và dễ thải hơn, nhưng có thể tạo chất trung gian phản ứng mạnh hơn chất mẹ.
@@ -137,8 +125,6 @@ GSH + electrophile
 
 Nếu hệ giải độc bị quá tải, phản ứng cộng hóa trị với đại phân tử sinh học có thể tăng.
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Dạng tồn tại hóa học quyết định hành vi** nối từ **Chuyển hóa có thể giải độc hoặc hoạt hóa độc tính** sang **Redox và stress oxy hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dạng tồn tại hóa học quyết định hành vi
 
 Cùng một nguyên tố có thể có độc tính và độ linh động rất khác tùy trạng thái oxy hóa, ligand và dạng pha.
@@ -154,8 +140,6 @@ Cr(III) và Cr(VI) khác mạnh về trạng thái oxy hóa, hình học ion, v�
 Vì vậy “tổng Cr” không mô tả đầy đủ rủi ro.
 
 Phần này nối trực tiếp với khái niệm **speciation** trong [hóa học nước](./01_water_chemistry.md) và [hóa vô cơ](../10_inorganic_chemistry/00_inorganic_compounds.md).
-
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Redox và stress oxy hóa** nối từ **Dạng tồn tại hóa học quyết định hành vi** sang **Chất ô nhiễm hữu cơ bền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Redox và stress oxy hóa
 
@@ -173,8 +157,6 @@ Gốc hydroxyl phản ứng rất nhanh gần nơi được tạo.
 
 ROS không phải lúc nào cũng “xấu”; chúng còn tham gia tín hiệu tế bào. Vấn đề là **liều, vị trí và khả năng kiểm soát**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất ô nhiễm hữu cơ bền** nối từ **Redox và stress oxy hóa** sang **Tích lũy và khuếch đại sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất ô nhiễm hữu cơ bền
 
 **Chất ô nhiễm hữu cơ bền (persistent organic pollutants, POPs)** thường có một số đặc điểm:
@@ -187,8 +169,6 @@ ROS không phải lúc nào cũng “xấu”; chúng còn tham gia tín hiệu 
 
 Các ví dụ lịch sử gồm PCB và một số thuốc trừ sâu organochlorine.
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Tích lũy và khuếch đại sinh học** nối từ **Chất ô nhiễm hữu cơ bền** sang **Hệ số phân bố octanol/nước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tích lũy và khuếch đại sinh học
 
 **Tích lũy sinh học (bioaccumulation)** xảy ra khi tốc độ hấp thu vượt tốc độ thải trong khoảng thời gian đủ dài.
@@ -198,8 +178,6 @@ Các ví dụ lịch sử gồm PCB và một số thuốc trừ sâu organochlo
 **Khuếch đại sinh học (biomagnification)** mô tả nồng độ tăng qua các bậc dinh dưỡng khi chất bền được truyền qua thức ăn.
 
 Không phải mọi chất bền đều khuếch đại giống nhau vì chuyển hóa và thải trừ khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Hệ số phân bố octanol/nước** nối từ **Tích lũy và khuếch đại sinh học** sang **PFAS — một họ hóa chất, không phải một chất duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số phân bố octanol/nước
 
@@ -215,8 +193,6 @@ Nhưng với chất có thể ion hóa, **hệ số phân bố D ở pH xác đ�
 
 Đây là ứng dụng của phân bố pha và acid–cơ sở (base / 기반), không chỉ là một chỉ số độc học độc lập.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **PFAS — một họ hóa chất, không phải một chất duy nhất** nối từ **Hệ số phân bố octanol/nước** sang **Chất gây rối loạn nội tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## PFAS — một họ hóa chất, không phải một chất duy nhất
 
 Nhiều PFAS có các phần carbon fluor hóa với liên kết C–F bền.
@@ -226,8 +202,6 @@ Tuy nhiên độ dài chuỗi, nhóm đầu và tiền chất làm vận chuyể
 Một số PFAS chuỗi ngắn linh động trong nước; một số chất chuỗi dài liên kết mạnh hơn với protein/trầm tích.
 
 Cụm từ “forever chemicals” dễ nhớ nhưng không thay thế phân tích hóa học từng cấu trúc và sản phẩm biến đổi.
-
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất gây rối loạn nội tiết** nối từ **PFAS — một họ hóa chất, không phải một chất duy nhất** sang **Độc gen và sinh ung thư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất gây rối loạn nội tiết
 
@@ -243,8 +217,6 @@ Chất ngoại lai có thể:
 
 Một số hệ có quan hệ liều–đáp ứng không đơn điệu, nên ngoại suy từ liều cao xuống liều thấp cần thận trọng.
 
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc gen và sinh ung thư** nối từ **Chất gây rối loạn nội tiết** sang **Độc tính của hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độc gen và sinh ung thư
 
 Chất độc gen có thể làm tổn thương DNA trực tiếp hoặc gián tiếp.
@@ -254,8 +226,6 @@ Một số chất được chuyển hóa thành electrophile tạo **adduct DNA*
 Nhưng sinh ung thư là quá trình nhiều bước còn phụ thuộc sửa chữa, tăng sinh, miễn dịch và bối cảnh mô.
 
 Đây là cầu nối trực tiếp giữa cơ chế hữu cơ và sinh học phân tử.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính của hạt** nối từ **Độc gen và sinh ung thư** sang **Chất ô nhiễm không khí và nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độc tính của hạt
 
@@ -274,8 +244,6 @@ Sợi asbestos còn có yếu tố hình học và độ bền sinh học làm q
 
 Phần nền về kích thước/bề mặt nối với [vật liệu nano](../14_materials_and_polymer_chemistry/04_nanomaterials.md).
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Chất ô nhiễm không khí và nước** nối từ **Độc tính của hạt** sang **Phú dưỡng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất ô nhiễm không khí và nước
 
 Không khí có thể chứa bụi hạt, ozone, `NOx`, `SO2`, CO và VOC. Nhiều chất quan trọng là **ô nhiễm thứ cấp**, không phải chất phát thải ban đầu.
@@ -284,8 +252,6 @@ Nước có thể chứa N/P, mầm bệnh, kim loại, thuốc trừ sâu, dung
 
 Cách xử lý phụ thuộc dạng hóa học, kích thước, pha và cơ chế phân hủy.
 
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Phú dưỡng** nối từ **Chất ô nhiễm không khí và nước** sang **Số phận môi trường — chất đi đâu và biến đổi thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phú dưỡng
 
 Dư nitrogen/phosphorus thúc đẩy tăng trưởng sinh khối.
@@ -293,8 +259,6 @@ Dư nitrogen/phosphorus thúc đẩy tăng trưởng sinh khối.
 Khi sinh khối phân hủy, oxygen bị tiêu thụ và có thể tạo vùng thiếu oxygen hoặc kỵ khí.
 
 Chuỗi cơ chế đã được giải thích sâu hơn ở [hóa học nước](./01_water_chemistry.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Số phận môi trường — chất đi đâu và biến đổi thế nào?** nối từ **Phú dưỡng** sang **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số phận môi trường — chất đi đâu và biến đổi thế nào?
 
@@ -309,8 +273,6 @@ Chất ô nhiễm có thể trải qua:
 - chuyển pha.
 
 Sản phẩm biến đổi có thể ít độc hơn, tương đương hoặc độc hơn chất ban đầu.
-
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Số phận môi trường — chất đi đâu và biến đổi thế nào?** đặt tiêu chí; **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Quang phân trực tiếp và gián tiếp** mở rộng hệ quả.
 
 ## Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm
 
@@ -333,8 +295,6 @@ phân hủy thật
 ≠ chuyển sang pha khác
 ```
 
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Phân hủy gần bậc nhất và giới hạn của việc nhìn nồng độ giảm** đặt tiêu chí; **Quang phân trực tiếp và gián tiếp** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** mở rộng hệ quả.
-
 ## Quang phân trực tiếp và gián tiếp
 
 Quang phân trực tiếp yêu cầu chất hấp thụ ánh sáng ở vùng bước sóng thật sự tới môi trường.
@@ -345,8 +305,6 @@ Tốc độ phụ thuộc phổ ánh sáng, độ sâu, độ đục và thành 
 
 Phần nền photon/phổ được nối với [phổ học](../12_analytical_chemistry/03_spectroscopy.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** nối từ **Quang phân trực tiếp và gián tiếp** sang **Đám ô nhiễm nước ngầm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất
 
 Một chất hấp phụ mạnh lên đất có thể di chuyển chậm nhưng vẫn tồn tại nguyên vẹn.
@@ -354,8 +312,6 @@ Một chất hấp phụ mạnh lên đất có thể di chuyển chậm nhưng 
 Nếu pH, độ mặn hoặc chất hữu cơ thay đổi, nó có thể giải hấp và trở lại pha nước.
 
 Do đó **cố định** giảm phơi nhiễm hiện tại nhưng không đồng nghĩa **phân hủy**.
-
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đám ô nhiễm nước ngầm** nối từ **Hấp phụ làm chậm vận chuyển nhưng không phá hủy chất** sang **Khung đánh giá rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đám ô nhiễm nước ngầm
 
@@ -372,8 +328,6 @@ Vận chuyển dưới đất ghép:
 
 Hình dạng đám ô nhiễm vì vậy phản ánh cả thủy văn lẫn hóa học.
 
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Khung đánh giá rủi ro** nối từ **Đám ô nhiễm nước ngầm** sang **Đánh giá phơi nhiễm và vai trò của hóa phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khung đánh giá rủi ro
 
 Một quy trình thường gồm:
@@ -384,8 +338,6 @@ Một quy trình thường gồm:
 4. đặc trưng hóa rủi ro.
 
 Độ không đảm bảo và khác biệt giữa cá thể/quần thể phải được thể hiện rõ thay vì giấu trong một con số duy nhất.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Đánh giá phơi nhiễm và vai trò của hóa phân tích** nối từ **Khung đánh giá rủi ro** sang **Liều tham chiếu và hệ số không đảm bảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đánh giá phơi nhiễm và vai trò của hóa phân tích
 
@@ -402,15 +354,11 @@ Nếu dữ liệu lấy mẫu hoặc định lượng bị độ lệch (bias / 
 
 Đây là lý do [thẩm định phương pháp](../12_analytical_chemistry/07_method_validation_and_chemometrics.md) là prerequisite thực tế của rủi ro (risk / 위험) assessment.
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, sau nội dung của **Đánh giá phơi nhiễm và vai trò của hóa phân tích**, **Liều tham chiếu và hệ số không đảm bảo** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độc tính hỗn hợp** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liều tham chiếu và hệ số không đảm bảo
 
 Mức hướng dẫn có thể được xây từ một điểm hiệu ứng rồi áp dụng hệ số không đảm bảo để xét khác biệt loài, quần thể và thiếu dữ liệu.
 
 Các hệ số này là công cụ quản lý rủi ro, không phải ngưỡng sinh học chính xác tuyệt đối.
-
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Độc tính hỗn hợp** nối từ **Liều tham chiếu và hệ số không đảm bảo** sang **Truyền thông rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độc tính hỗn hợp
 
@@ -424,8 +372,6 @@ Tác động có thể:
 - đối kháng.
 
 Số tổ hợp tăng rất nhanh nên đánh giá hỗn hợp là bài toán khó. Nhóm chất theo cơ chế tác động đôi khi giúp giảm độ phức tạp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Truyền thông rủi ro** nối từ **Độc tính hỗn hợp** sang **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Truyền thông rủi ro
 
@@ -444,8 +390,6 @@ presence
 ≠ risk
 ```
 
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Truyền thông rủi ro** nêu quy tắc; **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?
 
 Hai mẫu cá có thể có cùng tổng Hg nhưng tỷ lệ methylmercury khác nhau.
@@ -454,8 +398,6 @@ Methylmercury có khả năng tích lũy và phân bố sinh học khác nhiều
 
 Do đó **speciation** có thể quan trọng hơn tổng nguyên tố khi đánh giá phơi nhiễm thực.
 
-> **Nối mạch:** Ở chặng này của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Ví dụ suy luận: vì sao tổng Hg không đủ để đánh giá rủi ro ăn cá?** nêu quy tắc; **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?
 
 Nếu chất hấp phụ lên trầm tích, nồng độ nước giảm nhưng tổng khối lượng trong hệ gần như không đổi.
@@ -463,8 +405,6 @@ Nếu chất hấp phụ lên trầm tích, nồng độ nước giảm nhưng t
 Một thay đổi pH hoặc redox sau này có thể làm chất được giải phóng trở lại.
 
 Cần theo dõi **mass balance + phase phân phối (distribution / 분포) + transformation**, không chỉ một pha nước.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Ví dụ suy luận: vì sao nồng độ chất ô nhiễm trong nước giảm chưa chắc môi trường đã sạch hơn?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -487,8 +427,6 @@ Không. Dạng tồn tại, khả năng sinh học và đường phơi nhiễm r
 ### “Phát hiện bằng thiết bị nghĩa có rủi ro sức khỏe”
 
 Không. Phát hiện chỉ nói tín hiệu vượt tiêu chí đo; rủi ro (risk / 위험) cần thêm hazard và exposure.
-
-> **Nối mạch:** Trong **Chất ô nhiễm và hóa học độc chất — liều, dạng tồn tại, phơi nhiễm và số phận môi trường**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

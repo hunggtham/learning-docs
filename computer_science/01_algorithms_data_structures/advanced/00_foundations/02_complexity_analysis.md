@@ -28,8 +28,6 @@ Các ký hiệu này không phải ba cách nói cùng một điều:
 
 Trong trao đổi kỹ thuật, Big-O đôi khi được dùng tương đối lỏng để chỉ **bậc tăng trưởng (order of growth)**. Khi cần lập luận chặt chẽ, phải phân biệt rõ đang nói về cận trên, cận dưới hay cận chặt.
 
-> **Nối mạch:** **1. Tại sao không chỉ đo thời gian thực thi?** đặt vấn đề; **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** kiểm tra bằng chứng, rồi **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** mở rộng hệ quả.
-
 ## 2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn
 
 Một hàm 5 dòng có thể có độ phức tạp `O(n²)`, trong khi một hàm 100 dòng có thể chỉ là `O(n)`. Độ phức tạp không đo số dòng mã nguồn mà đo **số thao tác hoặc lượng trạng thái cần xử lý tăng như thế nào theo đầu vào**.
@@ -60,8 +58,6 @@ Sau `k` bước:
 
 `log n` xuất hiện vì mỗi bước thu nhỏ phần còn lại theo một tỷ lệ cố định, chứ không phải vì “tìm kiếm nhị phân mặc nhiên có log”.
 
-> **Nối mạch:** **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** đặt vấn đề; **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** kiểm tra bằng chứng, rồi **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** mở rộng hệ quả.
-
 ## 3. Kích thước đầu vào không phải lúc nào cũng chỉ là `n`
 
 Đồ thị thường cần hai biến `V` và `E`. Ma trận có thể cần `R` và `C`. Thuật toán chuỗi có thể phụ thuộc vào `n + m`. Hiệu năng của bảng băm (hash table / 해시 테이블) còn phụ thuộc vào hệ số tải (load factor). Bài toán Knapsack có `n` vật phẩm và sức chứa `W`.
@@ -76,8 +72,6 @@ Không nên tùy tiện rút gọn thành `O(n)` nếu việc đó làm mất th
 
 Với đồ thị thưa (sparse graph), thường `E≈V`; với đồ thị dày (dense graph), `E` có thể gần `V²`. Cùng một công thức `O(V+E)` nhưng hành vi thực tế có thể rất khác giữa hai trường hợp.
 
-> **Nối mạch:** **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** nối từ **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** sang **5. Chi phí khấu hao không phải chi phí trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất
 
 Các khái niệm này thường bị dùng lẫn lộn nhưng có ý nghĩa khác nhau.
@@ -87,8 +81,6 @@ Tìm kiếm tuyến tính có trường hợp tốt nhất `O(1)` nếu phần t
 **Độ phức tạp kỳ vọng (expected complexity)** thường xuất hiện khi thuật toán hoặc cấu trúc dữ liệu sử dụng tính ngẫu nhiên. Quickselect ngẫu nhiên có thời gian kỳ vọng tuyến tính dưới các giả định phân tích chuẩn. Bảng băm có thời gian tra cứu kỳ vọng gần `O(1)` khi hàm băm phân phối khóa đủ tốt.
 
 Giá trị kỳ vọng không có nghĩa là “đa số trường hợp đều bằng đúng giá trị trung bình”. Một phân phối có thể có trung bình tốt nhưng phần đuôi rất xấu. Trong hệ thống nhạy với độ trễ, các phân vị p95/p99 và những đợt tăng đột biến ở trường hợp xấu nhất có thể quan trọng hơn giá trị kỳ vọng.
-
-> **Nối mạch:** **5. Chi phí khấu hao không phải chi phí trung bình** nối từ **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** sang **6. Ba cách phân tích chi phí khấu hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chi phí khấu hao không phải chi phí trung bình
 
@@ -110,8 +102,6 @@ Do đó `n` lần thêm cuối có tổng chi phí `O(n)`, tương đương chi 
 
 Một lần thêm riêng lẻ vẫn có thể tốn `O(n)` khi phải thay đổi kích thước mảng. Đây là khác biệt quan trọng trong hệ thống thời gian thực: thông lượng khấu hao tốt không đồng nghĩa với độ trễ đuôi thấp.
 
-> **Nối mạch:** **6. Ba cách phân tích chi phí khấu hao** nối từ **5. Chi phí khấu hao không phải chi phí trung bình** sang **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Ba cách phân tích chi phí khấu hao
 
 Có ba phương pháp kinh điển.
@@ -127,8 +117,6 @@ Có ba phương pháp kinh điển.
 \]
 
 Mảng động, thao tác `multipop` trên ngăn xếp, cây Splay và một số phân tích của cấu trúc hợp nhất–tìm kiếm (Union-Find) đều có thể được hiểu rõ hơn bằng các phương pháp này.
-
-> **Nối mạch:** **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** nối từ **6. Ba cách phân tích chi phí khấu hao** sang **8. Phép tổng là công cụ phân tích quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề
 
@@ -151,8 +139,6 @@ Vòng ngoài chạy `n` lần, vòng trong chạy khoảng `log n` lần, nên t
 Ngược lại, một vòng lặp đơn cũng có thể chứa thao tác ẩn có chi phí `O(n)`, chẳng hạn xóa phần tử đầu của mảng động, nối chuỗi theo cách phải sao chép toàn bộ tiền tố, hoặc gọi `LinkedList.get(i)` lặp đi lặp lại.
 
 Nguyên tắc đúng là: **phân tích chi phí của từng thao tác nguyên thủy hoặc API được gọi, sau đó cộng hoặc nhân chi phí theo luồng điều khiển (control flow)**.
-
-> **Nối mạch:** **8. Phép tổng là công cụ phân tích quan trọng** nối từ **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** sang **9. Công thức truy hồi cho thuật toán đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Phép tổng là công cụ phân tích quan trọng
 
@@ -179,8 +165,6 @@ Một mẫu khác:
 Đây là lý do một số thuật toán có số thao tác ở từng giai đoạn tăng theo lũy thừa của hai nhưng tổng công việc vẫn chỉ tuyến tính.
 
 Phân tích độ phức tạp thường là quá trình nhận ra dãy hoặc phép tổng đang ẩn trong mã nguồn.
-
-> **Nối mạch:** **9. Công thức truy hồi cho thuật toán đệ quy** nối từ **8. Phép tổng là công cụ phân tích quan trọng** sang **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Công thức truy hồi cho thuật toán đệ quy
 
@@ -210,8 +194,6 @@ T(n)=T(n-1)+\Theta(n)=\Theta(n^2)
 
 Định lý Master là công cụ rút gọn cho một họ công thức truy hồi. Tuy nhiên, cây đệ quy hoặc phương pháp thế (substitution) thường cho trực giác rõ hơn khi kích thước các bài toán con không đều nhau.
 
-> **Nối mạch:** **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** nối từ **9. Công thức truy hồi cho thuật toán đệ quy** sang **11. Độ phức tạp nhạy theo kích thước đầu ra**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát
 
 Một thuật toán có thể cấp phát tổng cộng rất nhiều byte trong suốt quá trình chạy nhưng lượng bộ nhớ tồn tại đồng thời ở thời điểm cực đại vẫn nhỏ nếu bộ nhớ được thu hồi dần. Khi nói bộ nhớ phụ trợ là `O(n)`, ta thường quan tâm đến **lượng bộ nhớ phụ trợ còn sống đồng thời**, không phải tổng số byte từng được xin từ bộ cấp phát.
@@ -219,8 +201,6 @@ Một thuật toán có thể cấp phát tổng cộng rất nhiều byte trong
 DFS đệ quy trên cây có chiều cao `h` dùng ngăn xếp lời gọi `O(h)`. Merge Sort trên mảng thường cần bộ đệm phụ trợ `O(n)`. Quicksort tại chỗ (in-place) dùng ít dữ liệu phụ trợ, nhưng ngăn xếp đệ quy có độ sâu kỳ vọng `O(log n)` và có thể đạt `O(n)` trong trường hợp xấu nhất.
 
 Trong môi trường có bộ thu gom rác (GC), **tốc độ cấp phát (allocation rate)** và **lượng bộ nhớ được giữ lại (retained memory)** là hai chỉ số khác nhau. Nhiều đối tượng tạm thời có thể gây áp lực lên GC dù kích thước cấu trúc dữ liệu sống tại một thời điểm không lớn.
-
-> **Nối mạch:** **11. Độ phức tạp nhạy theo kích thước đầu ra** nối từ **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** sang **12. Độ phức tạp phụ thuộc đặc điểm đầu vào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Độ phức tạp nhạy theo kích thước đầu ra
 
@@ -234,23 +214,17 @@ Cây tìm kiếm nhị phân cân bằng có thể trả lời truy vấn khoả
 
 Góc nhìn này giúp tránh những mục tiêu bất khả thi như “liệt kê một triệu kết quả trong `O(log n)`”.
 
-> **Nối mạch:** **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** nối từ **11. Độ phức tạp nhạy theo kích thước đầu ra** sang **13. Độ phức tạp giả đa thức và độ dài biểu diễn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Độ phức tạp phụ thuộc đặc điểm đầu vào
 
 Một số thuật toán chạy nhanh hơn đáng kể khi đầu vào có cấu trúc thuận lợi. Insertion Sort có thể gần `O(n)` khi dữ liệu gần như đã được sắp xếp. Timsort khai thác các đoạn đã có thứ tự (runs) trong dữ liệu. Hiệu năng của Union-Find phụ thuộc chuỗi thao tác nhưng vẫn có cận khấu hao rất mạnh.
 
 Nếu hiệu năng phụ thuộc vào các tham số như **mức độ mất trật tự**, **số nghịch thế (number of inversions)**, chiều cao cây hoặc số khóa phân biệt, nên giữ các tham số đó trong phân tích thay vì ép mọi thứ về một biến `n`.
 
-> **Nối mạch:** **13. Độ phức tạp giả đa thức và độ dài biểu diễn** nối từ **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** sang **14. Mô hình so sánh và cận dưới**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Độ phức tạp giả đa thức và độ dài biểu diễn
 
 Quy hoạch động cho Knapsack có độ phức tạp `O(nW)` với sức chứa `W`. Công thức này trông giống đa thức, nhưng chỉ cần `O(log W)` bit để biểu diễn giá trị `W`. Vì vậy, nếu đo theo độ dài biểu diễn của đầu vào, `O(nW)` có thể tăng theo hàm mũ. Loại độ phức tạp này được gọi là **thời gian giả đa thức (pseudopolynomial time / 의사 다항 시간)**.
 
 Sự phân biệt này quan trọng khi chuyển từ thiết kế thuật toán sang lý thuyết độ phức tạp: “đa thức theo giá trị số” không đồng nghĩa với “đa thức theo độ dài mã hóa của đầu vào”.
-
-> **Nối mạch:** **13. Độ phức tạp giả đa thức và độ dài biểu diễn** đã nêu tiêu chí phân biệt, còn **14. Mô hình so sánh và cận dưới** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **15. Độ phức tạp là một phần của hợp đồng API** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 14. Mô hình so sánh và cận dưới
 
@@ -266,8 +240,6 @@ Counting Sort và Radix Sort không vi phạm cận này vì chúng khai thác t
 
 Cận dưới giúp ta nhận ra khi nào phải thay đổi mô hình bài toán thay vì tiếp tục cố tối ưu mã nguồn trong một mô hình vốn đã đạt giới hạn lý thuyết.
 
-> **Nối mạch:** **14. Mô hình so sánh và cận dưới** đã nêu tiêu chí phân biệt, còn **15. Độ phức tạp là một phần của hợp đồng API** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** mở rộng hệ quả hoặc giới hạn của cơ chế này.
-
 ## 15. Độ phức tạp là một phần của hợp đồng API
 
 Lớp trừu tượng của thư viện (library abstraction) không làm biến mất mô hình chi phí.
@@ -277,8 +249,6 @@ Trong Java, `ArrayList.get(i)` gần `O(1)` còn `LinkedList.get(i)` là `O(n)`.
 Một lần tái cấu trúc chỉ thay cách triển khai tập hợp dữ liệu cũng có thể làm thay đổi bậc độ phức tạp của toàn hàm dù lô-gic (logic / 논리) nghiệp vụ không đổi.
 
 Vì vậy, độ phức tạp nên được xem là một phần của **hợp đồng kỹ thuật của API**.
-
-> **Nối mạch:** **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** nối từ **15. Độ phức tạp là một phần của hợp đồng API** sang **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm
 
@@ -293,8 +263,6 @@ Trong **mô hình bộ nhớ ngoài (external-memory model)**, đôi khi ta đ�
 
 Mô hình RAM tiệm cận vẫn rất hữu ích, nhưng khi phân tích hệ thống thực tế cần xét thêm tính cục bộ (locality) và chi phí di chuyển dữ liệu giữa các tầng bộ nhớ.
 
-> **Nối mạch:** **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** nối từ **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** sang **18. Độ trễ đuôi và các loại bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa
 
 Một thuật toán có nhiều nhánh phụ thuộc dữ liệu khó dự đoán có thể chậm hơn một phép quét tuyến tính đơn giản dù số lượng thao tác tương đương. Các mảng số nằm liên tiếp trong bộ nhớ còn có thể tận dụng **véc-tơ (vector / 벡터) hóa (vectorization)** hoặc SIMD.
@@ -302,8 +270,6 @@ Một thuật toán có nhiều nhánh phụ thuộc dữ liệu khó dự đoá
 Điều này giải thích vì sao tìm kiếm nhị phân với ít phép so sánh chưa chắc nhanh hơn quét tuyến tính trên mảng rất nhỏ: chi phí phụ của dự đoán nhánh và bộ nhớ đệm có thể chi phối các hệ số hằng.
 
 Big-O mô tả hình dạng tăng trưởng khi quy mô thay đổi; **vi kiến trúc (microarchitecture)** quyết định nhiều hệ số hằng trong thực tế.
-
-> **Nối mạch:** **18. Độ trễ đuôi và các loại bảo đảm** nối từ **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** sang **19. Đồng thời làm thay đổi mô hình chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Độ trễ đuôi và các loại bảo đảm
 
@@ -322,15 +288,11 @@ high-probability bound  -> cận đúng với xác suất cao
 
 Các loại bảo đảm này không thể thay thế lẫn nhau.
 
-> **Nối mạch:** **19. Đồng thời làm thay đổi mô hình chi phí** nối từ **18. Độ trễ đuôi và các loại bảo đảm** sang **20. Độ phức tạp trong hệ thống phân tán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Đồng thời làm thay đổi mô hình chi phí
 
 Một ánh xạ dùng đồng thời (concurrent map) không chỉ có chi phí `get/put` phụ thuộc số phần tử. Tranh chấp tài nguyên, việc một dòng bộ nhớ đệm liên tục chuyển giữa các lõi (cache-line bouncing), đoàn khóa (lock convoy), số lần thử lại và hàng rào bộ nhớ (memory fence) có thể trở thành nút thắt hiệu năng.
 
 Một vòng lặp nguyên tử có độ phức tạp lý thuyết `O(1)` vẫn có thể chậm khi nhiều luồng cùng tranh chấp một trạng thái. Vì vậy, độ phức tạp của thuật toán tuần tự chỉ là đường cơ sở, không phải toàn bộ mô hình hiệu năng khi chạy đồng thời.
-
-> **Nối mạch:** **20. Độ phức tạp trong hệ thống phân tán** nối từ **19. Đồng thời làm thay đổi mô hình chi phí** sang **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Độ phức tạp trong hệ thống phân tán
 
@@ -348,8 +310,6 @@ bytes transferred        -> số byte được truyền
 
 MapReduce, sắp xếp phân tán, lập kế hoạch truy vấn cơ sở dữ liệu và xử lý đồ thị thường phải tối ưu chi phí truyền thông không kém chi phí CPU.
 
-> **Nối mạch:** **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** nối từ **20. Độ phức tạp trong hệ thống phân tán** sang **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Đo hiệu năng để kiểm chứng, không thay thế phân tích
 
 Một quy trình tốt thường gồm:
@@ -362,8 +322,6 @@ Một quy trình tốt thường gồm:
 6. đo trên khối lượng công việc gần với hệ thống thực tế.
 
 Nếu đường cong thời gian chạy không giống dự đoán lý thuyết, hãy kiểm tra hệ số hằng, JIT/GC, bộ nhớ đệm, tối ưu hóa của trình biên dịch, miền kích thước đầu vào hoặc lỗi trong phép đo trước khi kết luận rằng phân tích độ phức tạp sai.
-
-> **Nối mạch:** **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** nêu quy tắc; **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** thử quy tắc trong tình huống, rồi **23. Danh sách kiểm tra khi phân tích độ phức tạp** mở rộng hệ quả.
 
 ## 22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu
 
@@ -378,8 +336,6 @@ Giả sử hệ thống có 10 triệu bản ghi với khối lượng công vi�
 Bảng băm có thời gian tra cứu kỳ vọng tốt nhưng không hỗ trợ quét theo thứ tự trên một khoảng. Cây cân bằng có tra cứu `O(log n)` nhưng hỗ trợ thao tác theo khoảng tốt hơn. Trong thực tế, có thể dùng bảng băm cho các tra cứu chính xác thường xuyên và một chỉ mục có thứ tự riêng cho truy vấn khoảng, hoặc để hệ quản trị cơ sở dữ liệu quản lý cả hai đường truy cập.
 
 Phân tích độ phức tạp không tự chọn cấu trúc thay ta; nó giúp định lượng **sự đánh đổi (trade-off / 트레이드오프)** theo khối lượng công việc.
-
-> **Nối mạch:** **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** nêu quy tắc; **23. Danh sách kiểm tra khi phân tích độ phức tạp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## 23. Danh sách kiểm tra khi phân tích độ phức tạp
 
@@ -397,8 +353,6 @@ Cách biểu diễn dữ liệu ảnh hưởng đến tính cục bộ như th�
 Lời gọi API/thư viện có ẩn thao tác duyệt hoặc sao chép không?
 Hệ thống thực tế cần thông lượng trung bình hay độ trễ trường hợp xấu nhất?
 ```
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **23. Danh sách kiểm tra khi phân tích độ phức tạp**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

@@ -53,8 +53,6 @@ Cổng chất lượng (quality gate / 품질 게이트) mới cho mọi cập n
 
 <!-- continuity-2026:followup -->
 
-> **Nối mạch:** **Kiểm tra (audit / 감사) 2026-09-21 — matter → năng lượng (energy / 에너지) → thông tin (information / 정보) → regulation → adaptation → evolution → ecosystem** đặt đầu vào cho **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass**, rồi **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem** mở rộng hệ quả.
-
 ## Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass
 
 Pass này tập trung vào các điểm yếu còn lại sau kiểm tra (audit / 감사) 2026-09-21 thay vì tạo chapter mới.
@@ -74,8 +72,6 @@ Pass này tập trung vào các điểm yếu còn lại sau kiểm tra (audit /
 Cổng chất lượng (quality gate / 품질 게이트) cho pass sau: chỉ thêm nội dung khi nó sửa một lỗ hổng nhân quả (causal / 인과적) cụ thể. Nếu chapter đã có cấu trúc (structure / 구조) → cơ chế (mechanism / 메커니즘) → regulation → hàm (function / 함수) → thất bại (failure / 실패) → adaptation/evolution và link tới cấp kế tiếp, ưu tiên polish/cross-link thay vì kéo dài tệp (file / 파일).
 
 <!-- continuity-2026:final-validation -->
-
-> **Nối mạch:** **Follow-up kiểm tra (audit / 감사) — continuous mạch học (learning flow / 학습 흐름) pass** đặt đầu vào cho **Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem**, rồi **1. Chuẩn một chapter được xem là hoàn chỉnh** mở rộng hệ quả.
 
 ## Final continuity kiểm tra hợp lệ (validation / 검증) — molecular → cell → organism → population → ecosystem
 
@@ -97,8 +93,6 @@ Chemistry / matter / energy
 ```
 
 Cổng chất lượng (quality gate / 품질 게이트) tiếp theo không phải “thêm tệp (file / 파일)”. Chỉ deepen khi một chapter cụ thể còn thiếu nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘), regulation, thất bại (failure / 실패) ranh giới (boundary / 경계), evolutionary liên kết (connection / 연결) hoặc worked bằng chứng (evidence / 증거).
-
-> **Nối mạch:** **Final continuity validation** kiểm tra chuỗi molecular → ecosystem; **Chuẩn một chapter hoàn chỉnh** chuyển continuity đó thành tiêu chí owner, mechanism và evidence cho **Foundations**.
 
 ## 1. Chuẩn một chapter được xem là hoàn chỉnh
 
@@ -123,8 +117,6 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Nối mạch:** **Chapter-complete standard** đặt mức depth tối thiểu; **Foundations** áp dụng mức đó cho chemistry, physics và evolution prerequisite trước khi bàn giao **Cell Biology**.
-
 ## 2. Foundations — trạng thái: hoàn chỉnh ở mức cốt lõi (core / 핵심)
 
 `00_scientific_thinking_scale_and_models.md` thiết lập tư duy hệ thống (systems thinking), suy luận nhân quả (causal reasoning), quy mô (scale / 규모), emergence, cấu trúc (structure / 구조)–chức năng (function), vật chất (matter)–năng lượng (energy / 에너지)–thông tin (information / 정보), phản hồi (feedback / 피드백), xác suất (probability / 확률) và mô hình (model / 모델) giới hạn (limitation).
@@ -141,8 +133,6 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Nối mạch:** **Foundations** cung cấp energy, matter và scale; **Cell Biology** biến chúng thành cơ chế tissue-scale, rồi **Genetics/Molecular Biology** truy nguyên thông tin và stability.
-
 ## 3. Sinh học tế bào (cell biology) — trạng thái: hoàn chỉnh ở mức cốt lõi (core / 핵심) và đã có cầu nối (bridge / 브리지) mô (tissue)-scale
 
 `00_cells_membranes_and_transport.md` cover prokaryote/eukaryote, organelle, phospholipid membrane, khuếch tán (diffusion), thẩm thấu (osmosis), vận chuyển chủ động (active transport), chênh lệch điện hóa (electrochemical gradient), vận chuyển bằng túi màng (vesicle transport), cytoskeleton và scaling ràng buộc (constraint / 제약조건).
@@ -156,8 +146,6 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 **Continuity:** màng (membrane)/chênh lệch (gradient) → năng lượng → truyền tín hiệu (signaling)/điều khiển (control / 제어) → tế bào sự phối hợp (cooperation) → kiến trúc mô (tissue architecture) → cơ quan (organ)-level physiology.
 
 ---
-
-> **Nối mạch:** **Genetics/Molecular Biology** giải thích inheritance và variation ở cấp phân tử; **Evolution & Diversity** dùng variation đó để nối microevolution, phylogeny và macrohistory.
 
 ## 4. Di truyền học (genetics) & Sinh học phân tử (molecular biology) — trạng thái: core-complete và có stability tầng (layer / 계층) mạnh
 
@@ -173,8 +161,6 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 
 ---
 
-> **Nối mạch:** **Evolution & Diversity** xác định lịch sử và constraint của sự sống; **Organismal Biology** áp dụng chúng vào function, development và systems-level behavior.
-
 ## 5. Tiến hóa & Diversity — trạng thái: microevolution, phylogeny và macrohistory đã nối đầy đủ
 
 `00_evolution_and_population_genetics.md` cover tần số alen (allele frequency), Hardy–Weinberg, chọn lọc (selection), drift, dòng gen (gene flow), đột biến, mức thích nghi sinh sản (fitness), kích thước quần thể hiệu dụng (effective population size) và speciation.
@@ -188,8 +174,6 @@ Với health-related chapter, cổng chất lượng (quality gate / 품질 게�
 **Continuity:** molecular variation → alen (allele)-tần số (frequency) dynamics → lineage branching → major transitions under ecological/energetic ràng buộc (constraint / 제약조건).
 
 ---
-
-> **Nối mạch:** **Organismal Biology** nối gene và evolution với physiology; **Ecology** mở rộng cùng causal chain từ individual đến biosphere.
 
 ## 6. Organismal Biology — trạng thái: đã nâng từ cốt lõi (core / 핵심) overview thành systems-level textbook
 
@@ -260,8 +244,6 @@ Wearable section giải sensor → thuật toán (algorithm / 알고리즘) → 
 
 ---
 
-> **Nối mạch:** **6. Organismal Biology — trạng thái: đã nâng từ cốt lõi (core / 핵심) overview thành systems-level textbook** đặt đầu vào cho **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)**, rồi **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh** mở rộng hệ quả.
-
 ## 7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)
 
 `00_population_community_and_behavior.md` cover exponential/tăng trưởng logistic (logistic growth), density dependence, species tương tác (interaction / 상호작용), niche, vật săn mồi–con mồi (predator–prey), lưới thức ăn (food web) và xã hội (social / 사회적) hành vi (behavior / 동작).
@@ -273,8 +255,6 @@ Wearable section giải sensor → thuật toán (algorithm / 알고리즘) → 
 **Continuity:** sinh vật (organism) hành vi → quần thể/quần xã (community) → hệ sinh thái (ecosystem) dòng chuyển hóa → Earth-system phản hồi (feedback / 피드백).
 
 ---
-
-> **Nối mạch:** **7. Sinh thái học — trạng thái: individual → sinh quyển (biosphere) đã có đủ chuỗi nhân quả (causal chain / 인과 사슬)** đặt đầu vào cho **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh**, rồi **9. Cross-domain synthesis — trạng thái: mạnh** mở rộng hệ quả.
 
 ## 8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh
 
@@ -292,8 +272,6 @@ Human Health nối trực tiếp vào section này qua blood-áp suất (pressur
 
 ---
 
-> **Nối mạch:** **9. Cross-domain synthesis — trạng thái: mạnh** tổng hợp từ **8. Công nghệ sinh học (biotechnology), Phép đo & Computation — trạng thái: end-to-end hiện đại (modern / 현대적) biology workflow đã hoàn chỉnh**; **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 9. Cross-domain synthesis — trạng thái: mạnh
 
 `00_biology_math_computation_and_scale.md` nối xác suất (probability / 확률), exponential/mô hình logistic (logistic model), differential equation, đồ thị (graph / 그래프), lý thuyết thông tin (information theory), tối ưu hóa (optimization / 최적화), thuật toán (algorithm / 알고리즘) và ML với Biology.
@@ -303,8 +281,6 @@ Human Health nối trực tiếp vào section này qua blood-áp suất (pressur
 Organismal Biology hiện tái sử dụng trực tiếp các motif này: plant thế nước/cavitation, cardiovascular luồng (flow / 흐름)/compliance, Nernst/neural coding, phản ứng–khuếch tán/development và health đo lường (measurement / 측정) độ bất định (uncertainty / 불확실성).
 
 ---
-
-> **Nối mạch:** **10. Continuity motifs đã được kiểm tra (audit / 감사) lại** tổng hợp từ **9. Cross-domain synthesis — trạng thái: mạnh**; **11. Health-content an toàn (safety / 안전) & chất lượng (quality / 품질) gates** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Continuity motifs đã được kiểm tra (audit / 감사) lại
 
@@ -342,8 +318,6 @@ Phân tử (molecule) → tế bào → mô → cơ quan → sinh vật → qu�
 
 ---
 
-> **Nối mạch:** **Continuity motifs** xác nhận các scale vẫn nối được; **Health-content safety/quality gates** bảo vệ claim nhạy cảm trước khi phân loại **specialization gaps**.
-
 ## 11. Health-content an toàn (safety / 안전) & chất lượng (quality / 품질) gates
 
 Mọi future cập nhật (update / 업데이트) liên quan health phải qua các gate sau.
@@ -364,8 +338,6 @@ Thứ bảy, chapter phải có **escalation lô-gic (logic / 논리)** cho symp
 
 ---
 
-> **Nối mạch:** **Specialization gaps** được giữ riêng để không lẫn với core hole; **Quality gates cho pass tiếp theo** định nghĩa evidence cần có nếu mở rộng.
-
 ## 12. Các khoảng trống còn lại là specialization, không phải cốt lõi (core / 핵심) hole
 
 Thư viện (library / 라이브러리) hiện đủ nền để tách riêng các chuyên ngành như Biochemistry/Structural Biology, Neuroscience, Immunology, Microbiology/Pathogenesis, Human Anatomy & Pathology, Pharmacology, Sinh học phát triển (developmental biology), Sinh học tiến hóa (evolutionary biology) và Sự tạo ra (production) Sinh tin học (bioinformatics).
@@ -374,8 +346,6 @@ Các chapter Organismal Biology vừa được deepen đủ để làm prerequis
 
 ---
 
-> **Nối mạch:** **Quality gates** biến gap thành điều kiện review cụ thể; **Final audit conclusion** tổng hợp trạng thái coverage và ưu tiên còn lại.
-
 ## 13. chất lượng (quality / 품질) gates cho các pass tiếp theo
 
 Từ trạng thái này, không nên tạo tệp (file / 파일) chỉ để tăng số lượng. Expansion mới chỉ hợp lý khi nó tạo **conceptual ranh giới (boundary / 경계) thực sự mới**.
@@ -383,8 +353,6 @@ Từ trạng thái này, không nên tạo tệp (file / 파일) chỉ để tă
 Các pass tiếp theo nên ưu tiên những lĩnh vực (domain / 도메인) cốt lõi (core / 핵심) còn tương đối ngắn hơn phần organismal mới, đặc biệt Sinh học tế bào, Genetics và Sinh thái học: thêm worked cơ chế (mechanism / 메커니즘), quantitative derivation, experiment lịch sử có giá trị giải thích và cross-link giữa chapter. Với health-related content, định kỳ verify guideline có thể thay đổi theo thời gian.
 
 ---
-
-> **Nối mạch:** **Final audit conclusion** khép coverage bằng owner, evidence và boundary; phần specialization tiếp theo quay về chapter biology canonical.
 
 ## 14. Final kiểm tra (audit / 감사) conclusion
 

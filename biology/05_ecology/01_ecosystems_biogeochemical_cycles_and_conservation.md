@@ -12,8 +12,6 @@ Quần thể (population)/sinh thái học quần xã (community ecology) theo d
 
 Một forest ecosystem không chỉ là cây (tree / 트리), animal, fungi. Nó còn có light đầu vào (input / 입력), lượng mưa (rainfall), đất khoáng chất (mineral), kho carbon (carbon pool), decomposition và heat exchange.
 
-> **Nối mạch:** Community describes biotic interaction; ecosystem adds abiotic flows, so primary production brings energy into the food web and trophic transfer loses usable energy at each level.
-
 ## 2. Primary môi trường vận hành (production / 운영 환경): năng lượng (energy / 에너지) vào lưới thức ăn (food web)
 
 **Sinh vật sản xuất sơ cấp (primary producer)** như plant, algae và cyanobacteria capture năng lượng (energy / 에너지) để fix inorganic carbon thành chất hữu cơ (organic matter).
@@ -26,8 +24,6 @@ NPP=GPP-R
 
 NPP là phần biomass/năng lượng (energy / 에너지) còn lại cho growth và bên tiêu thụ (consumer / 소비자)/decomposer.
 
-> **Nối mạch:** **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** nối từ **2. Primary môi trường vận hành (production / 운영 환경): năng lượng (energy / 에너지) vào lưới thức ăn (food web)** sang **4. Ecological pyramid**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)
 
 Không phải toàn năng lượng (energy / 에너지) trong prey trở thành biomass predator. Một phần không được ăn, không digest, dùng cho respiration hoặc mất dưới dạng heat.
@@ -36,15 +32,11 @@ Vì vậy năng lượng (energy / 에너지) giảm mạnh khi đi lên bậc d
 
 Điều này giải thích vì sao top predator thường ít biomass/abundance hơn producer trong nhiều ecosystem.
 
-> **Nối mạch:** **4. Ecological pyramid** nối từ **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** sang **5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Ecological pyramid
 
 Pyramid có thể biểu diễn number, biomass hoặc năng lượng (energy / 에너지). năng lượng (energy / 에너지) pyramid luôn giảm theo trophic transfer vì thermodynamics; biomass pyramid có thể đảo ở aquatic hệ thống (system / 시스템) nơi phytoplankton turnover rất nhanh.
 
 Phân biệt stock và luồng (flow / 흐름) rất quan trọng: biomass là stock tại thời điểm; productivity là tốc độ (rate).
-
-> **Nối mạch:** Ecological pyramid mô tả phân bố energy; decomposer cho thấy matter không chỉ đi theo grazing chain. **Carbon cycle** kiểm tra hệ quả ở cấp hệ sinh thái.
 
 ## 5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản
 
@@ -54,8 +46,6 @@ Nếu decomposition dừng, nutrient bị khóa trong dead biomass và primary m
 
 Microbiology là engine của ecosystem cycling.
 
-> **Nối mạch:** Decomposer trả matter về chu trình; carbon cycle mô tả stock và flux. **Carbon pools và metabolic flux** kiểm tra nơi carbon tích lũy hoặc chuyển đi.
-
 ## 6. Chu trình carbon (carbon cycle)
 
 Carbon đi giữa atmosphere, đại dương (ocean), sinh vật (organism), soil và rock.
@@ -64,15 +54,11 @@ Quang hợp (photosynthesis) đưa CO₂ vào chất hữu cơ; hô hấp/decomp
 
 Timescale rất khác nhau: leaf carbon có thể cycle tháng/năm; rock carbon hàng triệu năm.
 
-> **Nối mạch:** **7. Kho carbon và dòng chuyển hóa (flux)** nối từ **6. Chu trình carbon (carbon cycle)** sang **8. Chu trình nitơ (nitrogen cycle)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Kho carbon và dòng chuyển hóa (flux)
 
 Một reservoir lớn không nhất thiết có flux lớn nhất. Ocean có kho carbon rất lớn; atmosphere nhỏ hơn nhưng thay đổi (change / 변경) nhỏ ở pool atmosphere có climate tác động (effect / 효과) đáng kể.
 
 Sinh thái học (ecology)/earth science phải phân biệt **pool** (lượng chứa) và **dòng chuyển hóa** (rate transfer).
-
-> **Nối mạch:** **8. Chu trình nitơ (nitrogen cycle)** nối từ **7. Kho carbon và dòng chuyển hóa (flux)** sang **9. Chu trình phospho (phosphorus cycle)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Chu trình nitơ (nitrogen cycle)
 
@@ -84,8 +70,6 @@ Nitrification chuyển ammonium → nitrite/nitrate; assimilation đưa nitrogen
 
 Microbial metabolism điều khiển phần lớn cycle.
 
-> **Nối mạch:** **9. Chu trình phospho (phosphorus cycle)** nối từ **8. Chu trình nitơ (nitrogen cycle)** sang **10. Chất dinh dưỡng giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Chu trình phospho (phosphorus cycle)
 
 Phosphorus quan trọng cho ATP, axit nucleic (nucleic acid) và phospholipid. Cycle phosphorus không có atmospheric gas phase lớn như nitrogen/carbon trong mô hình (model / 모델) cơ bản.
@@ -94,8 +78,6 @@ Weathering rock giải phóng phosphate, organism uptake, decomposition recycle,
 
 Phosphorus thường là chất dinh dưỡng giới hạn (limiting nutrient) trong freshwater/đất bối cảnh (context).
 
-> **Nối mạch:** **9. Chu trình phospho (phosphorus cycle)** đặt tiêu chí; **10. Chất dinh dưỡng giới hạn** dùng nó để kiểm tra ranh giới, rồi **11. Eutrophication** mở rộng cơ chế.
-
 ## 10. Chất dinh dưỡng giới hạn
 
 Growth không tăng mãi chỉ vì tăng một tài nguyên (resource / 자원). **Law of the minimum** nhấn mạnh tài nguyên (resource / 자원) thiếu nhất relative demand có thể giới hạn productivity.
@@ -103,8 +85,6 @@ Growth không tăng mãi chỉ vì tăng một tài nguyên (resource / 자원).
 Nếu nitrogen đã dư nhưng phosphorus thiếu, thêm nitrogen nữa ít tác động (effect / 효과).
 
 Concept này giúp hiểu fertilizer và eutrophication.
-
-> **Nối mạch:** **10. Chất dinh dưỡng giới hạn** đặt tiêu chí; **11. Eutrophication** dùng nó để kiểm tra ranh giới, rồi **12. Water cycle** mở rộng cơ chế.
 
 ## 11. Eutrophication
 
@@ -123,8 +103,6 @@ nutrient input
 
 Pollution tác động (effect / 효과) xuất hiện qua hệ sinh thái chuyển hóa (metabolism), không chỉ “algae độc”.
 
-> **Nối mạch:** **12. Water cycle** nối từ **11. Eutrophication** sang **13. Biome và khí hậu (climate)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Water cycle
 
 Evaporation, thoát hơi nước (transpiration), condensation, precipitation, runoff và infiltration nối atmosphere–land–đại dương.
@@ -132,8 +110,6 @@ Evaporation, thoát hơi nước (transpiration), condensation, precipitation, r
 Vegetation ảnh hưởng water cycle qua gốc (root / 루트) uptake, canopy interception và thoát hơi nước.
 
 Deforestation có thể đổi runoff/erosion/cục bộ (local / 로컬) moisture, cho thấy organism cũng modify vật lý (physical / 물리적) môi trường (environment / 환경).
-
-> **Nối mạch:** **13. Biome và khí hậu (climate)** nối từ **12. Water cycle** sang **14. Nhiễu động (disturbance)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Biome và khí hậu (climate)
 
@@ -143,8 +119,6 @@ Nhưng biome ranh giới (boundary / 경계) không chỉ do khí hậu; fire, �
 
 Climate là ràng buộc (constraint / 제약조건) lớn, không phải sole determinant.
 
-> **Nối mạch:** **14. Nhiễu động (disturbance)** nối từ **13. Biome và khí hậu (climate)** sang **15. Resistance và khả năng phục hồi (resilience)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Nhiễu động (disturbance)
 
 Fire, storm, flood, drought và herbivory có thể reset cấu trúc (structure / 구조) nhưng không nhất thiết “phá hủy ecosystem” theo nghĩa tuyệt đối.
@@ -152,8 +126,6 @@ Fire, storm, flood, drought và herbivory có thể reset cấu trúc (structure
 Nhiều ecosystem evolved với disturbance regime. Fire suppression quá mạnh có thể tăng fuel accumulation ở một số rừng (forest).
 
 Ecological health không đồng nghĩa không có nhiễu động.
-
-> **Nối mạch:** **15. Resistance và khả năng phục hồi (resilience)** nối từ **14. Nhiễu động (disturbance)** sang **16. Alternative stable states**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Resistance và khả năng phục hồi (resilience)
 
@@ -165,8 +137,6 @@ Một ecosystem có thể resistance thấp nhưng resilience cao.
 
 Hai concept khác nhau và cần chỉ số (metric / 지표)/thời gian (time / 시간) quy mô (scale / 규모) cụ thể.
 
-> **Nối mạch:** **16. Alternative stable states** nối từ **15. Resistance và khả năng phục hồi (resilience)** sang **17. Địa sinh học đảo (island biogeography)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Alternative stable states
 
 Strong phản hồi (feedback / 피드백) có thể tạo nhiều stable regime. Lake có thể chuyển từ clear-nước trạng thái (state / 상태) sang turbid eutrophic trạng thái (state / 상태) và khó quay lại dù chất dinh dưỡng giảm một phần.
@@ -174,8 +144,6 @@ Strong phản hồi (feedback / 피드백) có thể tạo nhiều stable regime
 Hiện tượng trễ (hysteresis) cho thấy “đảo nguyên nhân” không luôn đưa hệ thống (system / 시스템) quay đúng đường dẫn (path / 경로) cũ.
 
 Lý thuyết điều khiển (control theory) và ecology gặp nhau.
-
-> **Nối mạch:** **17. Địa sinh học đảo (island biogeography)** nối từ **16. Alternative stable states** sang **18. Phân mảnh sinh cảnh (habitat fragmentation)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Địa sinh học đảo (island biogeography)
 
@@ -185,8 +153,6 @@ Island gần nguồn (source / 소스) có immigration cao; island lớn thườ
 
 Mô hình (model / 모델) này ảnh hưởng conservation reserve thiết kế (design / 설계), dù real landscape phức tạp hơn island ocean.
 
-> **Nối mạch:** **18. Phân mảnh sinh cảnh (habitat fragmentation)** nối từ **17. Địa sinh học đảo (island biogeography)** sang **19. Biodiversity và hệ sinh thái chức năng (function)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Phân mảnh sinh cảnh (habitat fragmentation)
 
 Khi continuous habitat bị chia thành patch nhỏ, total area giảm, edge tác động (effect / 효과) tăng và connectivity giảm.
@@ -194,8 +160,6 @@ Khi continuous habitat bị chia thành patch nhỏ, total area giảm, edge tá
 Species cần large territory hoặc dispersal kém dễ bị ảnh hưởng.
 
 Wildlife corridor có thể tăng movement/dòng gen (gene flow) nhưng cũng có sự đánh đổi (trade-off / 트레이드오프) như disease spread; thiết kế (design / 설계) cần species-specific bằng chứng (evidence / 증거).
-
-> **Nối mạch:** **19. Biodiversity và hệ sinh thái chức năng (function)** nối từ **18. Phân mảnh sinh cảnh (habitat fragmentation)** sang **20. Ecosystem dịch vụ (service / 서비스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Biodiversity và hệ sinh thái chức năng (function)
 
@@ -205,15 +169,11 @@ Nhưng relationship không đơn giản tuyến tính (linear / 선형); định
 
 Bảo tồn biodiversity không chỉ là “càng nhiều species càng tốt” mà là giữ evolutionary/ecological tiến trình (process / 프로세스).
 
-> **Nối mạch:** **20. Ecosystem dịch vụ (service / 서비스)** nối từ **19. Biodiversity và hệ sinh thái chức năng (function)** sang **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Ecosystem dịch vụ (service / 서비스)
 
 Human society phụ thuộc pollination, water purification, soil formation, lưu trữ carbon (carbon storage), fisheries và cultural giá trị (value / 값).
 
 **Ecosystem services** là khung phần mềm (framework / 프레임워크) nối ecological tiến trình (process / 프로세스) với human benefit, nhưng monetary valuation không capture toàn bộ intrinsic/cultural giá trị (value / 값).
-
-> **Nối mạch:** **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** nối từ **20. Ecosystem dịch vụ (service / 서비스)** sang **22. Dịch chuyển vùng phân bố và phenology mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology
 
@@ -223,8 +183,6 @@ Ecological tác động (effect / 효과) gồm phenology shift, dịch chuyển
 
 Không nên hiểu climate tác động (effect / 효과) chỉ là “nóng hơn vài độ”; timing và phân bố không gian (spatial distribution) cũng đổi.
 
-> **Nối mạch:** **22. Dịch chuyển vùng phân bố và phenology mismatch** nối từ **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** sang **23. Axit hóa đại dương (ocean acidification)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Dịch chuyển vùng phân bố và phenology mismatch
 
 Species có thể move poleward/uphill nếu climate niche dịch chuyển, nhưng dispersal barrier/đất/tương tác (interaction / 상호작용) có thể giới hạn.
@@ -232,8 +190,6 @@ Species có thể move poleward/uphill nếu climate niche dịch chuyển, như
 Nếu plant flowering sớm hơn nhưng pollinator timing không shift tương tự, tương tác (interaction / 상호작용) mismatch có thể xảy ra.
 
 Quần xã phản hồi (response / 응답) không đồng bộ giữa species.
-
-> **Nối mạch:** **23. Axit hóa đại dương (ocean acidification)** nối từ **22. Dịch chuyển vùng phân bố và phenology mismatch** sang **24. Conservation genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Axit hóa đại dương (ocean acidification)
 
@@ -247,15 +203,11 @@ H⁺ tăng làm pH giảm và carbonate availability thay đổi, ảnh hưởng
 
 Chemistry foundation quay lại ở Earth-system quy mô (scale / 규모).
 
-> **Nối mạch:** **24. Conservation genetics** nối từ **23. Axit hóa đại dương (ocean acidification)** sang **25. Inbreeding depression**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Conservation genetics
 
 Small population dễ mất đa dạng di truyền (genetic diversity) bởi drift/inbreeding. Kích thước quần thể hiệu dụng (effective population size) thấp có thể làm adaptive potential giảm.
 
 Conservation vì vậy không chỉ đếm individual; cần dòng gen, pedigree/genomic diversity và demographic stability.
-
-> **Nối mạch:** **25. Inbreeding depression** nối từ **24. Conservation genetics** sang **26. Minimum viable population không phải con số universal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Inbreeding depression
 
@@ -265,8 +217,6 @@ Genetic rescue bằng di chuyển (migration / 마이그레이션) có thể tă
 
 Genetics và conservation nối trực tiếp.
 
-> **Nối mạch:** **26. Minimum viable population không phải con số universal** nối từ **25. Inbreeding depression** sang **27. Restoration ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Minimum viable population không phải con số universal
 
 Kích thước quần thể (population size) cần để survive phụ thuộc species, môi trường (environment / 환경), thời gian thế hệ (generation time), catastrophe rủi ro (risk / 위험) và management horizon.
@@ -274,8 +224,6 @@ Kích thước quần thể (population size) cần để survive phụ thuộc 
 Một threshold cố định áp cho mọi species là sai.
 
 Population viability phân tích (analysis / 분석) dùng simulation/xác suất (probability / 확률) để estimate rủi ro (risk / 위험) dưới giả định (assumption / 가정) cụ thể.
-
-> **Nối mạch:** **27. Restoration ecology** nối từ **26. Minimum viable population không phải con số universal** sang **28. Rewilding và trophic restoration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Restoration ecology
 
@@ -285,15 +233,11 @@ Nếu underlying tiến trình (process / 프로세스) không trở lại, cấ
 
 Tư duy hệ thống (systems thinking): phục hồi tiến trình (process / 프로세스) trước khi chỉ phục hồi appearance.
 
-> **Nối mạch:** **28. Rewilding và trophic restoration** nối từ **27. Restoration ecology** sang **29. Adaptive management**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Rewilding và trophic restoration
 
 Reintroducing key bên tiêu thụ (consumer / 소비자)/predator có thể phục hồi tương tác (interaction / 상호작용) mạng (network / 네트워크), nhưng kết quả (outcome / 결과) bối cảnh-dependent và có xã hội (social / 사회적) xung đột (conflict / 충돌).
 
 Conservation intervention là thí nghiệm (experiment) ở complex hệ thống (system / 시스템), cần monitoring và adaptive management.
-
-> **Nối mạch:** **29. Adaptive management** nối từ **28. Rewilding và trophic restoration** sang **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Adaptive management
 
@@ -309,23 +253,17 @@ hypothesis
 
 Đây là scientific phương thức (method / 메서드) áp dụng vào ecosystem management.
 
-> **Nối mạch:** **29. Adaptive management** nêu quy tắc; **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** thử quy tắc trong tình huống, rồi **31. Tình huống phân tích: mangrove** mở rộng hệ quả.
-
 ## 30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone
 
 Fertilizer tăng crop môi trường vận hành (production / 운영 환경) nhưng excess nitrate runoff ra river/coast. Algal môi trường vận hành (production / 운영 환경) tăng; decomposition tiêu oxygen; seasonal hypoxic zone hình thành.
 
 Một quyết định (decision / 결정) agriculture cục bộ (local / 로컬) có hệ quả (consequence) ecosystem hàng trăm kilomet qua material luồng (flow / 흐름).
 
-> **Nối mạch:** **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** nêu quy tắc; **31. Tình huống phân tích: mangrove** thử quy tắc trong tình huống, rồi **32. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 31. Tình huống phân tích: mangrove
 
 Mangrove giữ sediment, buffer wave, nursery habitat, carbon-rich soil và tài nguyên (resource / 자원) cho human community.
 
 Destroy mangrove không chỉ mất cây (tree / 트리) biomass mà mất nhiều dịch vụ (service / 서비스)/mạng lưới (network) hàm (function / 함수) cùng lúc.
-
-> **Nối mạch:** **31. Tình huống phân tích: mangrove** nêu quy tắc; **32. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Ecological stoichiometry: organism không cần “carbon” một mình** mở rộng hệ quả.
 
 ## 32. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -341,15 +279,11 @@ Destroy mangrove không chỉ mất cây (tree / 트리) biomass mà mất nhi�
 
 <!-- depth-audit-2026:stoichiometry-resilience -->
 
-> **Nối mạch:** **Ecological stoichiometry: organism không cần “carbon” một mình** nối từ **32. Các hiểu lầm phổ biến (common misconceptions)** sang **Resilience, threshold và hysteresis**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ecological stoichiometry: organism không cần “carbon” một mình
 
 Biomass được xây từ nhiều nguyên tố với tỉ lệ hữu hạn. Producer có thể có nhiều carbon nhưng thiếu nitrogen hoặc phosphorus; bên tiêu thụ (consumer / 소비자) ăn food có C:N:P không phù hợp phải thải bớt carbon hoặc tăng intake. **Stoichiometry sinh thái (ecological stoichiometry)** vì vậy nối chemistry của biomolecule với food web và nutrient cycle.
 
 Decomposition cũng phụ thuộc chất lượng (quality / 품질) của detritus, temperature, oxygen, moisture và microbial community. Carbon flux không thể tách khỏi nitrogen/phosphorus availability; nutrient limitation có thể đổi NPP, decomposition và carbon lưu trữ (storage / 저장소) cùng lúc.
-
-> **Nối mạch:** **Resilience, threshold và hysteresis** nối từ **Ecological stoichiometry: organism không cần “carbon” một mình** sang **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resilience, threshold và hysteresis
 
@@ -360,8 +294,6 @@ Conservation do đó không chỉ hỏi “bao nhiêu species còn lại?” mà
 Genetic diversity liên kết trực tiếp với resilience dài hạn vì population nhỏ mất variation bởi drift/inbreeding và giảm option cho adaptation. Tuy nhiên conservation quyết định (decision / 결정) vẫn phải cân nhắc demographic urgency, habitat, disease, climate trajectory và bất định (uncertainty / 불확실성) — không có một marker genetic duy nhất thay thế ecological lập luận (reasoning / 추론).
 
 <!-- continuity-2026:mass-balance -->
-
-> **Nối mạch:** **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó** nối từ **Resilience, threshold và hysteresis** sang **33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó
 
@@ -376,8 +308,6 @@ Nếu đầu vào (input / 입력) nitrogen vào hồ lớn hơn đầu ra (outp
 Năng lượng (energy / 에너지) khác matter: năng lượng ánh sáng đi vào, được cố định thành chemical năng lượng (energy / 에너지), truyền qua trophic mạng (network / 네트워크) rồi cuối cùng phần lớn tỏa thành nhiệt. Vì vậy ecosystem cần dòng năng lượng liên tục nhưng có thể tái sử dụng atom qua chu trình sinh địa hóa.
 
 Conservation theo cơ chế phải tìm **tiến trình (process / 프로세스) giới hạn**: mất pollinator, dòng nước bị chặn, nutrient loading quá cao, fire regime thay đổi hay connectivity bị cắt. Chỉ tăng số cá thể mà không phục hồi tiến trình (process / 프로세스) có thể tạo khôi phục (recovery / 복구) ngắn hạn nhưng không phục hồi self-maintaining hệ thống (system / 시스템).
-
-> **Nối mạch:** Bảo toàn vật chất giữ ecosystem accounting nhất quán dù organism liên tục biến đổi matter; cầu nối sang can thiệp và đo lường khép mạch.
 
 ## 33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life
 

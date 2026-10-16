@@ -16,8 +16,6 @@ Ví dụ câu “Cái này anh làm lại giúp em nhé” có thể chỉ là y
 
 Xem thêm: [[../03_human_development_and_person/04_social_and_cultural_psychology]], [[../03_human_development_and_person/15_power_status_hierarchy_and_inequality]].
 
-> **Nối mạch:** Trong **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Attribution lỗi (error / 오류) trong xung đột (conflict / 충돌)** nối từ **Ba lớp của một message** sang **Active listening không phải lặp lại máy móc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Attribution lỗi (error / 오류) trong xung đột (conflict / 충돌)
 
 Khi chính mình trả lời chậm, ta nghĩ “tôi bận”. Khi người khác trả lời chậm, ta dễ nghĩ “họ không tôn trọng mình”. Đây là ví dụ của attribution asymmetry.
@@ -31,8 +29,6 @@ Trong khi một formulation hữu ích hơn hỏi:
 > “hành vi (behavior / 동작) nào xảy ra, trong điều kiện (condition / 조건) nào, và interpretation nào làm xung đột (conflict / 충돌) leo thang?”
 
 Tách hành vi (behavior / 동작) khỏi toàn cục (global / 전역) định danh (identity / 식별자) làm tăng khả năng sửa đổi.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Active listening không phải lặp lại máy móc** nối từ **Attribution lỗi (error / 오류) trong xung đột (conflict / 충돌)** sang **Kiểm tra hợp lệ (validation / 검증) không đồng nghĩa đồng ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Active listening không phải lặp lại máy móc
 
@@ -48,8 +44,6 @@ Một phản hồi tốt thường gồm paraphrase + clarification:
 
 Điều này tốt hơn “Tôi hiểu” nếu thực tế chưa kiểm tra understanding.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Kiểm tra hợp lệ (validation / 검증) không đồng nghĩa đồng ý** nối từ **Active listening không phải lặp lại máy móc** sang **Nonviolent Communication như một cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiểm tra hợp lệ (validation / 검증) không đồng nghĩa đồng ý
 
 **kiểm tra hợp lệ (validation / 검증)** xác nhận rằng emotion hoặc perspective có lô-gic (logic / 논리) trong bối cảnh người kia trải nghiệm. Nó không bắt buộc đồng ý với conclusion.
@@ -64,8 +58,6 @@ mà vẫn tiếp tục:
 
 Distinction này đặc biệt quan trọng trong therapy, management và couple xung đột (conflict / 충돌).
 
-> **Nối mạch:** Trong **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Nonviolent Communication như một cấu trúc (structure / 구조)** nối từ **Kiểm tra hợp lệ (validation / 검증) không đồng nghĩa đồng ý** sang **Demand–withdraw cycle**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nonviolent Communication như một cấu trúc (structure / 구조)
 
 NVC thường được nén thành:
@@ -77,8 +69,6 @@ Observation → Feeling → Need → Request
 Giá trị lớn nhất của cấu trúc (structure / 구조) không phải công thức nói chuyện hoàn hảo, mà là buộc người nói phân biệt **observation** với **evaluation**.
 
 “Bạn đến trễ 20 phút” là observation gần với dữ liệu hơn “Bạn không tôn trọng tôi”. Câu thứ hai đã chứa suy luận (inference / 추론) về motive.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Demand–withdraw cycle** nối từ **Nonviolent Communication như một cấu trúc (structure / 구조)** sang **Repair attempt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Demand–withdraw cycle
 
@@ -95,8 +85,6 @@ Nếu chỉ hỏi ai đúng, vòng lặp (loop / 루프) vẫn còn. Can thiệp
 
 Xem thêm: [[../03_human_development_and_person/07_close_relationships_intimacy_and_family]], [[../03_human_development_and_person/01_attachment_and_relationships]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Repair attempt** nối từ **Demand–withdraw cycle** sang **Arousal và khả năng lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Repair attempt
 
 Quan hệ bền không phải quan hệ không xung đột (conflict / 충돌). Một variable quan trọng là khả năng **repair** sau rupture.
@@ -111,8 +99,6 @@ Repair có thể là:
 
 Một apology tốt không chỉ nói “xin lỗi nếu bạn cảm thấy…”. Nó thường xác định hành vi (behavior / 동작), impact và plan thay đổi.
 
-> **Nối mạch:** Trong **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Arousal và khả năng lập luận (reasoning / 추론)** nối từ **Repair attempt** sang **Xung đột (conflict / 충돌) ở workplace**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Arousal và khả năng lập luận (reasoning / 추론)
 
 Khi physiological arousal quá cao, working bộ nhớ (memory / 메모리) và cognitive flexibility có thể giảm. Tiếp tục “nói cho ra lẽ” trong trạng thái (state / 상태) đó thường tạo thêm lỗi (error / 오류).
@@ -122,8 +108,6 @@ Time-out có ích nếu là **structured pause**, không phải stonewalling:
 > “Tôi đang quá căng để nói tốt. Tôi muốn dừng 30 phút và quay lại lúc 9 giờ.”
 
 Điểm quan trọng là có cam kết quay lại.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Xung đột (conflict / 충돌) ở workplace** nối từ **Arousal và khả năng lập luận (reasoning / 추론)** sang **Phản hồi (feedback / 피드백) hiệu quả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xung đột (conflict / 충돌) ở workplace
 
@@ -137,8 +121,6 @@ Workplace xung đột (conflict / 충돌) có thể đến từ nhiều tầng:
 Không phải xung đột (conflict / 충돌) nào cũng nên “giao tiếp tốt hơn”. Nếu nguyên nhân gốc (root cause / 근본 원인) là incentive trái nhau hoặc tải công việc (workload / 워크로드) bất khả thi, communication huấn luyện (training / 학습) không sửa được hệ thống (system / 시스템).
 
 Xem thêm: [[./00_work_organization_and_leadership]], [[./16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Phản hồi (feedback / 피드백) hiệu quả** nối từ **Xung đột (conflict / 충돌) ở workplace** sang **Power làm thay đổi communication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản hồi (feedback / 피드백) hiệu quả
 
@@ -156,8 +138,6 @@ Ví dụ:
 
 Phản hồi (feedback / 피드백) này observable và actionable hơn “Em thiếu trách nhiệm”.
 
-> **Nối mạch:** Trong **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Power làm thay đổi communication** nối từ **Phản hồi (feedback / 피드백) hiệu quả** sang **Cross-cultural communication**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Power làm thay đổi communication
 
 Trong hierarchy, “bạn cứ nói thật đi” không đủ để tạo openness. Người có ít power phải cân nhắc career rủi ro (risk / 위험), xã hội (social / 사회적) chi phí (cost / 비용) và bất định (uncertainty / 불확실성).
@@ -165,8 +145,6 @@ Trong hierarchy, “bạn cứ nói thật đi” không đủ để tạo openn
 Manager muốn nhận bad news cần thiết kế phản hồi (response / 응답): nếu lần đầu nhà phát triển (developer / 개발자) báo rủi ro (risk / 위험) mà bị blame, nhóm (team / 팀) sẽ học rất nhanh rằng silence an toàn hơn.
 
 Psychological an toàn (safety / 안전) vì vậy là học tập (learning / 학습) lịch sử (history / 이력), không phải slogan.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Cross-cultural communication** nối từ **Power làm thay đổi communication** sang **Negotiation: position và interest**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cross-cultural communication
 
@@ -182,8 +160,6 @@ có thể hỏi:
 
 Xem thêm: [[../03_human_development_and_person/04_social_and_cultural_psychology]], [[../03_human_development_and_person/16_acculturation_migration_and_bicultural_identity]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Negotiation: position và interest** nối từ **Cross-cultural communication** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Negotiation: position và interest
 
 Position là điều một bên nói họ muốn. **Interest** là nhu cầu phía sau.
@@ -191,8 +167,6 @@ Position là điều một bên nói họ muốn. **Interest** là nhu cầu ph�
 Hai nhóm (team / 팀) có thể tranh cãi “deadline phải thứ Sáu” vs “phải thứ Hai”. Nếu interest thật là nhóm (team / 팀) A cần demo thứ Hai còn nhóm (team / 팀) B cần weekend không bị deploy, có thể tìm solution khác như tính năng (feature / 기능) freeze thứ Sáu và môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) thứ Hai.
 
 Tách position khỏi interest mở rộng solution không gian (space / 공간).
-
-> **Nối mạch:** Trong **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Dùng chung (common / 공통) Misconceptions** nối từ **Negotiation: position và interest** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -204,8 +178,6 @@ Tách position khỏi interest mở rộng solution không gian (space / 공간)
 
 **“Nếu tôi có intention tốt thì impact không quan trọng.”** Intention là một phần dữ liệu (data / 데이터); impact cũng là dữ liệu (data / 데이터).
 
-> **Nối mạch:** Ở chặng này của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Trong xung đột (conflict / 충돌), đừng chỉ gỡ lỗi (debug / 디버그) **message**. gỡ lỗi (debug / 디버그) cả:
@@ -215,8 +187,6 @@ state + interpretation + history + power + incentive + feedback loop
 ```
 
 Nhiều vấn đề “communication” thực chất là hệ thống (system / 시스템) bài toán (problem / 문제) được biểu hiện qua conversation.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp liên cá nhân, xung đột và sửa chữa quan hệ**, **Connections** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Connections
 

@@ -57,8 +57,6 @@ Sau khi đọc 34–37, nên quay lại chapter 14: frontier lúc đó sẽ hi�
 - [`32_glossary_and_source_map.md`](32_glossary_and_source_map.md): thuật ngữ + nguồn (source / 소스)/bằng chứng (evidence / 증거) discipline.
 - [`33_places_and_field_reading_guide.md`](33_places_and_field_reading_guide.md): Đền Hùng, Cổ Loa, Hoa Lư, Thăng Long, Vân Đồn, Thành Nhà Hồ, Mỹ Sơn, Hội An, Huế, Mekong, Điện Biên, DMZ, industrial corridors… như học tập (learning / 학습) checkpoints.
 
-> **Nối mạch:** **Cách dùng** chỉ ra cách chọn chapter và route; **Cách đọc mỗi thời kỳ** áp dụng cùng một khung câu hỏi, rồi **Nguyên tắc bằng chứng** quy định claim nào cần nguồn và mốc thời gian.
-
 ## Cách đọc mỗi thời kỳ
 
 Mỗi giai đoạn cố gắng giữ đồng thời nhiều tầng (layer / 계층):
@@ -67,8 +65,6 @@ Mỗi giai đoạn cố gắng giữ đồng thời nhiều tầng (layer / 계�
 
 Regional deep dives thêm một câu hỏi nữa: **đơn vị (unit / 단위) of phân tích (analysis / 분석) đúng là gì?** Một river basin, cổng (port / 포트) mạng (network / 네트워크) hoặc upland corridor có thể hữu ích hơn hiện đại (modern / 현대적) province/national border.
 
-> **Nối mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Cách đọc mỗi thời kỳ** đặt vấn đề; **Nguyên tắc bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **Di tích: không đọc như photo caption** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nguyên tắc bằng chứng (evidence / 증거)
 
 Các chapter cố ý phân biệt **fact tương đối chắc**, **archaeological suy luận (inference / 추론)**, **historical interpretation**, **contested interpretation**, **tradition/legend**, **collective bộ nhớ (memory / 메모리)** và **national narrative**.
@@ -76,8 +72,6 @@ Các chapter cố ý phân biệt **fact tương đối chắc**, **archaeologic
 Một nguồn sơ cấp không tự động đúng hơn nguồn (source / 소스) thứ cấp: chronicle có court độ lệch (bias / 편향); colonial police bản ghi (record / 레코드) có quản trị (governance / 거버넌스) độ lệch (bias / 편향); memoir có bộ nhớ (memory / 메모리) limitation. Archaeology mạnh về material ngữ cảnh (context / 맥락) nhưng institutional meaning vẫn cần suy luận (inference / 추론).
 
 Với issue còn debate, thư viện (library / 라이브러리) nói rõ bất định (uncertainty / 불확실성) thay vì tạo false precision. Bên ngoài (external / 외부) name như Funan/Lâm Ấp hoặc colonial ethnic label cũng không được coi tự động là self-identification bất biến của cục bộ (local / 로컬) society.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Master Kiến thức (knowledge / 지식) Book — Lịch sử Việt Nam**, **Nguyên tắc bằng chứng (evidence / 증거)** đặt vấn đề; **Di tích: không đọc như photo caption** đối chiếu bằng chứng, rồi **Naming và terminology** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Di tích: không đọc như photo caption
 
@@ -93,15 +87,11 @@ date of historical event
 
 Trường dữ liệu (field / 필드) phương thức (method / 메서드) chi tiết nằm ở tệp (file / 파일) 33.
 
-> **Nối mạch:** **Di tích: không đọc như photo caption** đặt giới hạn cho việc suy luận từ hiện vật; **Naming và terminology** chuẩn hóa tên gọi, rồi **Nguồn nền** cung cấp căn cứ để kiểm tra cách gọi đó.
-
 ## Naming và terminology
 
 Tên địa danh dùng historical name theo ngữ cảnh (context / 맥락) rồi ghi chú (note / 노트) hiện đại (modern / 현대적) locator khi cần. Ví dụ Thăng Long/Đông Kinh/Hà Nội và Gia Định/Sài Gòn/Thành phố Hồ Chí Minh không được thay lẫn nhau vô điều kiện.
 
 Important scholarly từ khóa (keyword / 키워드) được giữ/ghi chú (note / 노트) bằng English. Korean term chỉ thêm khi liên kết (connection / 연결) thực sự hữu ích với các bộ Korean docs, ví dụ **civil examination / 과거제** hoặc **Classical Chinese / 한문**.
-
-> **Nối mạch:** Khi tên gọi và phạm vi đã rõ, **Nguồn nền** là điểm quay về để kiểm tra niên đại, địa danh và diễn giải trước khi nối sang chapter kế tiếp.
 
 ## Nguồn nền
 

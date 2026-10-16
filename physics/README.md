@@ -45,8 +45,6 @@ graph TD
 
 Nếu xây lại nền tảng từ đầu, bắt đầu ở `00_foundations` và đi theo phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프). Nếu học một chủ đề cụ thể, có thể vào thẳng chapter và dùng phần **liên kết kiến thức (knowledge connection / 지식 연결)** để quay lại prerequisite hoặc đi tiếp.
 
-> **Nối mạch:** **Quan hệ phụ thuộc tổng quát** đặt physics cạnh electrical owner; **00 — Nền tảng và ngôn ngữ** khóa đại lượng, đơn vị và quy ước trước khi đi sâu.
-
 ## Điểm nối sang Electrical kỹ thuật (engineering / 엔지니어링)
 
 Physics dừng ở việc mô tả các định luật và giới hạn tự nhiên. Khi câu hỏi chuyển sang **chọn topology, thiết kế mạch, quản lý timing/power, đóng vòng điều khiển hoặc biến peripheral thành software đặc tả hợp đồng (contract / 계약)**, hãy đi tiếp sang [Electrical Engineering Knowledge Library](../electrical_engineering/README.md). tuyến (route / 경로) cầu nối (bridge / 브리지) là:
@@ -64,8 +62,6 @@ Maxwell / circuits / semiconductor / signal-noise
 
 Mục lục dưới đây là một tuyến giảng từ ngôn ngữ vật lý tới các domain chuyên sâu. Hãy chọn chapter theo prerequisite của câu hỏi, rồi quay lại knowledge graph khi cần nối các mô hình ở scale khác.
 
-> **Nối mạch:** **00 — Nền tảng** định nghĩa model và measurement; **01 — Cơ học** áp dụng chúng cho motion, force và conservation.
-
 ## 00 — Nền tảng và ngôn ngữ
 
 Nhóm này dựng measurement, vector, đơn vị và conservation trước khi đi vào mô hình chuyên sâu. Hãy dùng nó như vocabulary chung cho mọi chapter phía sau.
@@ -75,8 +71,6 @@ Nhóm này dựng measurement, vector, đơn vị và conservation trước khi 
 - [Ngôn ngữ Toán học tối thiểu để đọc Vật lý](00_foundations/03_mathematical_language.md)
 - [Đối xứng, bảo toàn, xấp xỉ và thang đo](00_foundations/04_symmetry_conservation_scale.md)
 - [PDE, boundary conditions, Green function và tensor](00_foundations/05_pde_boundary_green_tensors.md)
-
-> **Nối mạch:** **01 — Cơ học** làm rõ state và dynamics; **02 — Dao động và sóng** mở cùng invariant sang periodic motion và propagation.
 
 ## 01 — Cơ học
 
@@ -94,16 +88,12 @@ Cơ học bắt đầu từ chuyển động và lực rồi mở rộng sang n�
 - [Poisson bracket, canonical transformation và Hamilton–Jacobi](01_mechanics/10_canonical_transformations_hamilton_jacobi.md)
 - [Hệ quy chiếu phi quán tính, Coriolis và rotating frames](01_mechanics/11_non_inertial_frames_rotating_systems.md)
 
-> **Nối mạch:** **02 — Dao động và sóng** mô tả oscillation và transport of energy; **03 — Môi trường liên tục/transport** đặt chúng vào medium và flux.
-
 ## 02 — Dao động và sóng
 
 Nhóm này giải thích cách năng lượng và thông tin truyền qua dao động, cộng hưởng và môi trường. Nó là cầu nối tự nhiên tới âm thanh, quang học và hệ liên tục.
 - [Dao động, damping, driven systems và resonance](02_oscillations_waves/00_oscillations_resonance.md)
 - [Sóng, wave equation, Fourier và âm thanh](02_oscillations_waves/01_waves_fourier_sound.md)
 - [Coupled oscillators và normal modes](02_oscillations_waves/02_coupled_oscillators_normal_modes.md)
-
-> **Nối mạch:** **03 — Continuum/transport** khóa conservation và flux; **04 — Thermodynamics/Statistical Physics** giải thích entropy, temperature và macrostate.
 
 ## 03 — Môi trường liên tục và transport
 
@@ -113,8 +103,6 @@ Phần này chuyển từ hạt riêng lẻ sang trường, dòng và gradient. 
 - [Khuếch tán, dẫn nhiệt và transport](03_continuum/02_transport_diffusion_heat.md)
 - [Turbulence, rheology và soft matter](03_continuum/03_turbulence_rheology_soft_matter.md)
 - [Continuum mechanics, stress tensor và strain tensor](03_continuum/04_continuum_mechanics_stress_tensor.md)
-
-> **Nối mạch:** **04 — Thermodynamics/Statistical Physics** nối microscopic states với macro laws; **05 — Điện từ học** chuyển sang fields, charge và current.
 
 ## 04 — Nhiệt động lực học và Statistical Physics
 
@@ -127,8 +115,6 @@ Nhiệt động lực học nối vi trạng thái với đại lượng vĩ mô
 - [Critical phenomena, universality và renormalization](04_thermal_statistical/05_critical_phenomena_renormalization.md)
 - [Kinetic theory và Boltzmann equation](04_thermal_statistical/06_kinetic_theory_boltzmann_equation.md)
 - [Linear response và fluctuation–dissipation](04_thermal_statistical/07_linear_response_fluctuation_dissipation.md)
-
-> **Nối mạch:** **05 — Điện từ học** định nghĩa field và wave propagation; **06 — Quang học** dùng chúng để giải thích ánh sáng, imaging và measurement.
 
 ## 05 — Điện từ học
 
@@ -145,8 +131,6 @@ Nhiệt động lực học nối vi trạng thái với đại lượng vĩ mô
 - [Relativistic electrodynamics](05_electromagnetism/09_relativistic_electrodynamics.md)
 - [Boundary-value electrostatics, method of images và multipoles](05_electromagnetism/10_boundary_value_image_multipoles.md)
 
-> **Nối mạch:** **06 — Quang học** cho thấy observer và signal path; **07 — Thuyết tương đối** thay đổi constraint về space, time và frame.
-
 ## 06 — Quang học
 
 Quang học đi từ ray và wave tới giao thoa, nhiễu xạ và hệ imaging. Mỗi approximation chỉ đúng trong một scale, nên cần giữ rõ khi nào dùng geometric hay wave optics.
@@ -156,15 +140,11 @@ Quang học đi từ ray và wave tới giao thoa, nhiễu xạ và hệ imaging
 - [Polarization, dispersion và nonlinear optics](06_optics/03_polarization_dispersion_nonlinear_optics.md)
 - [Fourier optics và imaging systems](06_optics/04_fourier_imaging_instrumentation.md)
 
-> **Nối mạch:** **07 — Relativity** khóa spacetime và invariance; **08 — Quantum Physics** mở một semantics khác cho state, measurement và probability.
-
 ## 07 — Thuyết tương đối
 
 Relativity thay đổi cách hiểu không gian, thời gian và năng lượng khi vận tốc hoặc gravity đáng kể. Hãy bắt đầu từ invariant rồi mới diễn giải các hiệu ứng quan sát được.
 - [Thuyết tương đối hẹp](07_relativity/00_special_relativity.md)
 - [Thuyết tương đối rộng](07_relativity/01_general_relativity.md)
-
-> **Nối mạch:** **08 — Quantum Physics** cung cấp state và operator formalism; **09 — Atomic/Molecular/Nuclear/Particle** áp dụng formalism vào vật chất và tương tác.
 
 ## 08 — Vật lý lượng tử
 
@@ -178,8 +158,6 @@ Quantum Physics mô tả trạng thái, phép đo và xác suất ở scale vi m
 - [Time-dependent quantum dynamics và scattering](08_quantum/06_time_dependent_scattering.md)
 - [Symmetry, generators, commutators và path integral](08_quantum/07_symmetry_operator_path_integral.md)
 
-> **Nối mạch:** **09 — Atomic/Molecular/Nuclear/Particle** nối quantum state với interaction; **10 — Condensed Matter/Semiconductor/Plasma** đưa interaction vào collective systems.
-
 ## 09 — Nguyên tử, phân tử, hạt nhân và hạt cơ bản
 
 Nhóm này áp dụng quantum và field vào cấu trúc vật chất từ nguyên tử tới hạt nhân và particle. Hãy đọc nó như chuỗi scale, không như danh sách hạt rời.
@@ -189,8 +167,6 @@ Nhóm này áp dụng quantum và field vào cấu trúc vật chất từ nguy�
 - [Hạt cơ bản và Standard Model](09_atomic_nuclear_particle/03_particle_standard_model.md)
 - [Vật lý phân tử](09_atomic_nuclear_particle/04_molecular_physics.md)
 - [Quantum fields, gauge symmetry và interactions](09_atomic_nuclear_particle/05_quantum_fields_symmetry_interactions.md)
-
-> **Nối mạch:** **10 — Condensed Matter/Semiconductor/Plasma** giải thích emergent behavior; **11 — Astrophysics/Cosmology** mở scale lên stars, galaxies và universe.
 
 ## 10 — Condensed Matter, bán dẫn, plasma và quantum fluids
 
@@ -203,8 +179,6 @@ Nhóm này áp dụng quantum và field vào cấu trúc vật chất từ nguy�
 - [Bose–Einstein condensation, superfluidity và quantum fluids](10_condensed_matter_devices/05_bec_superfluid_quantum_fluids.md)
 - [Berry phase, Quantum Hall và topology](10_condensed_matter_devices/06_berry_phase_quantum_hall_topology.md)
 
-> **Nối mạch:** **11 — Astrophysics/Cosmology** cung cấp observables ở scale lớn; **12 — Experiment/Signal/Computation/Inference** kiểm tra chúng bằng measurement và model.
-
 ## 11 — Thiên văn vật lý và vũ trụ học
 
 Astrophysics dùng các mô hình Physics để suy luận từ tín hiệu xa về cấu trúc, tiến hóa sao và vũ trụ. Evidence và uncertainty đặc biệt quan trọng vì không thể thí nghiệm trực tiếp trên đối tượng.
@@ -214,8 +188,6 @@ Astrophysics dùng các mô hình Physics để suy luận từ tín hiệu xa v
 - [Vũ trụ sơ khai, dark matter và dark energy](11_astrophysics_cosmology/03_early_universe_dark_components.md)
 - [Gravitational instability và structure formation](11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md)
 
-> **Nối mạch:** **12 — Experiment/Signal/Inference** biến claim thành evidence; **13 — Knowledge graph/navigation/quality audit** biến evidence thành route và coverage state.
-
 ## 12 — Thực nghiệm, tín hiệu, tính toán và inference
 
 Nhóm này dạy cách biến phép đo nhiễu thành kết luận có kiểm định. Nó nối thiết kế thí nghiệm, signal processing, numerical methods và uncertainty quantification.
@@ -223,8 +195,6 @@ Nhóm này dạy cách biến phép đo nhiễu thành kết luận có kiểm �
 - [Signal, noise, sampling, PSD và ADC](12_experimental_computational/01_signals_sampling_noise.md)
 - [Vật lý tính toán và numerical methods](12_experimental_computational/02_computational_physics.md)
 - [Data inference, model fitting và inverse problems](12_experimental_computational/03_data_inference_inverse_problems.md)
-
-> **Nối mạch:** **Knowledge graph/quality audit** xác nhận link và owner; **Quy ước biên soạn** giữ cách diễn đạt và boundary ổn định.
 
 ## 13 — Knowledge graph, navigation và quality audit
 
@@ -234,8 +204,6 @@ Phần cuối giúp kiểm tra dependency, đường đọc và chất lượng 
 - [Coverage Audit](13_connections/02_coverage_audit.md)
 - [Cẩm nang giải quyết bài toán Vật lý](13_connections/03_problem_solving_playbook.md)
 - [Ngộ nhận thường gặp và giới hạn mô hình](13_connections/04_common_misconceptions_and_model_limits.md)
-
-> **Nối mạch:** **Quy ước biên soạn** khép README bằng owner, evidence và route; chi tiết chuyên môn quay về canonical physics chapter.
 
 ## Quy ước biên soạn
 

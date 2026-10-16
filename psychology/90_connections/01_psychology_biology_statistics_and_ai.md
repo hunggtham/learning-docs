@@ -21,8 +21,6 @@ Các explanation này không nhất thiết cạnh tranh. Chúng có thể là c
 
 Sai lầm phổ biến là **reductionism**: nếu tìm thấy neural correlate, người ta kết luận psychological explanation không còn cần thiết. Nhưng biết transistor trạng thái (state / 상태) của CPU không tự động thay thế algorithm-level explanation của program.
 
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Biology** nối từ **Một hiện tượng có nhiều mức (level / 수준) giải thích** sang **Neuroscience không phải máy phát hiện truth cho psychology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychology và Biology
 
 Biology cung cấp ràng buộc (constraint / 제약조건) và cơ chế (mechanism / 메커니즘) cho psychology. Nervous hệ thống (system / 시스템), endocrine hệ thống (system / 시스템), immune hệ thống (system / 시스템) và genetics đều ảnh hưởng hành vi (behavior / 동작).
@@ -33,8 +31,6 @@ Ví dụ temperament có thể ảnh hưởng cách người khác phản ứng 
 
 Xem thêm: [[../01_brain_and_mind/03_evolution_genetics_and_behavior]], [[../01_brain_and_mind/00_nervous_system_and_brain]], [[../04_mental_health/12_developmental_psychopathology_risk_and_resilience]].
 
-> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Neuroscience không phải máy phát hiện truth cho psychology** nối từ **Psychology và Biology** sang **Psychology và Statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Neuroscience không phải máy phát hiện truth cho psychology
 
 Brain imaging rất mạnh nhưng dễ bị overinterpretation. Nếu vùng X active khi người ta làm tác vụ (task / 작업) Y, không thể tự động kết luận activation X “là” Y.
@@ -42,8 +38,6 @@ Brain imaging rất mạnh nhưng dễ bị overinterpretation. Nếu vùng X ac
 Một brain region thường tham gia nhiều hàm (function / 함수). Đây là vấn đề của **reverse suy luận (inference / 추론)**.
 
 Neuroscience hữu ích nhất khi experimental thiết kế (design / 설계) phân biệt được competing cơ chế (mechanism / 메커니즘), không phải khi chỉ thêm hình não màu sắc vào psychological claim.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Statistics** nối từ **Neuroscience không phải máy phát hiện truth cho psychology** sang **Correlation, prediction và causation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Statistics
 
@@ -61,8 +55,6 @@ Mô hình tư duy (mental model / 사고 모델): nếu đo lường (measuremen
 
 Xem thêm: [[../00_foundations/03_measurement_statistics]], [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Correlation, prediction và causation** nối từ **Psychology và Statistics** sang **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Correlation, prediction và causation
 
 Machine học tập (learning / 학습) có thể dự đoán depression score từ digital hành vi (behavior / 동작) nhưng điều đó không chứng minh phone use gây depression.
@@ -77,8 +69,6 @@ Prediction có thể rất tốt mà nhân quả (causal / 인과적) understand
 
 Xem thêm: [[../00_foundations/08_causal_inference_and_psychological_evidence]], [[../00_foundations/07_ecological_momentary_assessment_and_real_world_measurement]].
 
-> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** nối từ **Correlation, prediction và causation** sang **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)
 
 Cognitive psychology từ lâu đã dùng information-processing metaphor. bộ nhớ (memory / 메모리), attention và bài toán (problem / 문제) solving có thể được mô hình hóa qua biểu diễn (representation / 표현), sức chứa (capacity / 용량), tìm kiếm (search / 검색) và điều khiển (control / 제어).
@@ -86,8 +76,6 @@ Cognitive psychology từ lâu đã dùng information-processing metaphor. bộ 
 Nhưng brain không phải máy tính digital theo nghĩa đơn giản. Metaphor hữu ích khi nó tạo testable mô hình (model / 모델), không khi nó biến thành định danh (identity / 식별자) statement “brain = computer”.
 
 Một liên kết (connection / 연결) hữu ích là **bounded resources**. Trong software, hàng đợi (queue / 큐) và bộ nhớ đệm (cache / 캐시) có giới hạn; trong cognition, attention và working bộ nhớ (memory / 메모리) cũng có bottleneck. Tuy nhiên cơ chế (mechanism / 메커니즘) cụ thể khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** nối từ **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** sang **Bayesian lập luận (reasoning / 추론) và perception**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)
 
@@ -105,8 +93,6 @@ Psychology học tập (learning / 학습) lý thuyết (theory / 이론) cũng 
 
 Xem thêm: [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
 
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Bayesian lập luận (reasoning / 추론) và perception** nối từ **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** sang **Psychology và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bayesian lập luận (reasoning / 추론) và perception
 
 Bayesian khung phần mềm (framework / 프레임워크) mô tả cách prior belief được cập nhật bởi bằng chứng (evidence / 증거):
@@ -121,8 +107,6 @@ Perception có thể được mô hình (model / 모델) như suy luận (infere
 
 Xem thêm: [[../01_brain_and_mind/01_sensation_and_perception]], [[../00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 
-> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và AI** nối từ **Bayesian lập luận (reasoning / 추론) và perception** sang **Anthropomorphism**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychology và AI
 
 AI hệ thống (system / 시스템) ngày càng tạo văn bản (text / 텍스트), ảnh (image / 이미지), mã (code / 코드) và recommendation có vẻ mang tính xã hội. Điều này làm psychology trở nên quan trọng ở hai phía:
@@ -134,8 +118,6 @@ Nhưng LLM đầu ra (output / 출력) giống human ngôn ngữ (language / 언
 
 Đây là distinction giữa **functional similarity** và **mechanistic định danh (identity / 식별자)**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Anthropomorphism** nối từ **Psychology và AI** sang **AI như cognitive offloading**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Anthropomorphism
 
 Con người có xu hướng gán intention cho đối tượng (object / 객체) có hành vi (behavior / 동작) phức tạp. Khi chatbot dùng “tôi nghĩ”, “tôi hiểu”, người dùng (user / 사용자) dễ xây xã hội (social / 사회적) mô hình (model / 모델) về hệ thống (system / 시스템).
@@ -143,8 +125,6 @@ Con người có xu hướng gán intention cho đối tượng (object / 객체
 Anthropomorphism có thể giúp tương tác (interaction / 상호작용) dễ hơn nhưng cũng tăng overtrust. thiết kế (design / 설계) cần làm rõ năng lực (capability / 역량), bất định (uncertainty / 불확실성) và ranh giới (boundary / 경계).
 
 Xem thêm: [[../06_applied/02_hci_ai_and_human_decision_support]], [[./02_human_ai_collaboration_trust_and_cognitive_offloading]].
-
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **AI như cognitive offloading** nối từ **Anthropomorphism** sang **Digital phenotyping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI như cognitive offloading
 
@@ -157,8 +137,6 @@ Câu hỏi không nên là “offloading tốt hay xấu?” mà là:
 Nếu mục tiêu học SQL, việc để AI viết truy vấn (query / 쿼리) hoàn chỉnh ngay có thể giảm desirable difficulty. Nếu mục tiêu xử lý một tác vụ (task / 작업) môi trường vận hành (production / 운영 환경) đã hiểu rõ, offloading có thể tăng hiệu quả.
 
 Xem thêm: [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]], [[../06_applied/01_education_learning_and_habit_design]].
-
-> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Digital phenotyping** nối từ **AI như cognitive offloading** sang **Psychology và Economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital phenotyping
 
@@ -173,8 +151,6 @@ Phone/wearable có thể thu sleep proxy, mobility, typing mẫu (pattern / 패�
 
 Một người di chuyển ít có thể depressed, nhưng cũng có thể làm remote công việc (work / 작업) hoặc đang nghỉ phép. Sensor không tự mang meaning.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Economics** nối từ **Digital phenotyping** sang **Psychology và Philosophy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychology và Economics
 
 Behavioral economics dùng psychological insight để nghiên cứu quyết định (decision / 결정) dưới scarcity, bất định (uncertainty / 불확실성) và framing. Concepts như mất mát (loss / 손실) aversion, default, mental accounting và present độ lệch (bias / 편향) cho thấy rational choice mô hình (model / 모델) đôi khi cần bổ sung descriptive psychology.
@@ -183,8 +159,6 @@ Nhưng độ lệch (bias / 편향) danh sách (list / 목록) cũng dễ bị b
 
 Xem thêm: [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Philosophy** nối từ **Psychology và Economics** sang **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Psychology và Philosophy
 
 Psychology đo hành vi (behavior / 동작)/experience; philosophy giúp làm rõ khái niệm như consciousness, free will, personal định danh (identity / 식별자) và moral responsibility.
@@ -192,8 +166,6 @@ Psychology đo hành vi (behavior / 동작)/experience; philosophy giúp làm r�
 Không phải câu hỏi nào cũng được giải quyết chỉ bằng thêm dữ liệu (data / 데이터). Nếu construct chưa rõ nghĩa, đo lường (measurement / 측정) chính xác tới mấy cũng có thể đo sai thing.
 
 Xem thêm: [[../01_brain_and_mind/09_consciousness_theories_and_evidence]].
-
-> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Psychology và Philosophy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)
 
@@ -216,8 +188,6 @@ flowchart TD
 
 Không arrow nào tự động thay thế các arrow khác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 **“Có brain scan là mục tiêu (objective / 목표) hơn questionnaire nên chắc đúng hơn.”** Brain measure cũng có noise, construct-validity bài toán (problem / 문제) và phân tích (analysis / 분석) choice.
@@ -227,8 +197,6 @@ Không arrow nào tự động thay thế các arrow khác.
 **“Psychology không phải hard science nên statistics không quan trọng.”** Chính vì construct khó đo nên statistical lập luận (reasoning / 추론) càng quan trọng.
 
 **“Nếu một hành vi (behavior / 동작) có genetic thành phần (component / 컴포넌트) thì không thay đổi được.”** Heritability không đồng nghĩa immutability.
-
-> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

@@ -24,8 +24,6 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 
 `1억원` và `연 20%` là các fact có mốc thời gian; trước kỳ thi hãy mở file corrections và notice hiện hành. Không dùng bảng này để thay thế thông báo pháp lý.
 
-> **Nối mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** nối từ **Con số nên thuộc** sang **Cơ quan dễ nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ bốn cần phản xạ
 
 ### 선거 4대 원칙
@@ -33,8 +31,6 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 
 ### 4대 사회보험
 `국민건강보험 · 고용보험 · 국민연금 · 산업재해보상보험`
-
-> **Nối mạch:** Ở chặng này của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** đặt tiêu chí; **Cơ quan dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Cặp dễ nhầm** mở rộng hệ quả.
 
 ## Cơ quan dễ nhầm
 
@@ -66,30 +62,26 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 | tranh chấp tiêu dùng | `한국소비자원` | hỗ trợ tư vấn và xử lý khiếu nại |
 | cần trợ giúp pháp lý | `대한법률구조공단` | tư vấn/trợ giúp pháp luật |
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cơ quan dễ nhầm** đặt tiêu chí; **Cặp dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **귀화용 심화 — phản xạ thêm** mở rộng hệ quả.
-
 ## Cặp dễ nhầm
 
-`어린이집 ↔ 유치원`  
-`전세 ↔ 월세`  
-`수시 ↔ 정시`  
+`어린이집 ↔ 유치원`
+`전세 ↔ 월세`
+`수시 ↔ 정시`
 `수사기관 ↔ 공소청 ↔ 법원`
-`공공부조 ↔ 사회보험`  
-`국회 ↔ 정부`  
-`호남 ↔ 영남`  
+`공공부조 ↔ 사회보험`
+`국회 ↔ 정부`
+`호남 ↔ 영남`
 `설날 ↔ 추석`
-
-> **Nối mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **귀화용 심화 — phản xạ thêm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 귀화용 심화 — phản xạ thêm
 
 > **시험 범위:** `귀화용 심화`
 
-`국민 ↔ 외국인 ↔ 영주자`  
-`체류자격 ↔ 영주권 ↔ 국적`  
-`평등권 · 자유권 · 참정권 · 사회권 · 청구권`  
-`납세 · 국방 · 교육 · 근로의 의무`  
-`국가 ↔ 정부`  
+`국민 ↔ 외국인 ↔ 영주자`
+`체류자격 ↔ 영주권 ↔ 국적`
+`평등권 · 자유권 · 참정권 · 사회권 · 청구권`
+`납세 · 국방 · 교육 · 근로의 의무`
+`국가 ↔ 정부`
 `광복 → 정부수립 → 한국전쟁 → 민주화`
 
 Khi gặp câu hỏi 심화, hãy thêm một câu nêu **lý do hoặc giới hạn**: quyền cơ bản không đồng nghĩa quyền vô hạn; 영주권 không đồng nghĩa quốc tịch; 사회보험 không đồng nghĩa trợ cấp công.

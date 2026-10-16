@@ -62,8 +62,6 @@ Tối ưu hóa (optimization / 최적화) chỉ được di chuyển bên trong 
 
 Một điểm (point / 지점) có độ dốc (gradient / 기울기) khác zero vẫn có thể là constrained optimum nếu mọi downhill direction đều vi phạm các ràng buộc (constraints / 제약조건들).
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **1. Feasible set quan trọng ngang mục tiêu (objective / 목표)** đặt câu hỏi cần giải quyết; **2. Equality ràng buộc (constraint / 제약조건) và tangent hình học (geometry / 기하학)** biến câu hỏi đó thành những điều kiện không được phá vỡ khi đi vào thực hành. Từ đây, **3. Lagrangian** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. Equality ràng buộc (constraint / 제약조건) và tangent hình học (geometry / 기하학)
 
 Xét:
@@ -102,8 +100,6 @@ không có tangent thành phần (component / 컴포넌트) và phải nằm tro
 
 Đây là geometric origin của Lagrange multiplier.
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **3. Lagrangian** nối từ **2. Equality ràng buộc (constraint / 제약조건) và tangent hình học (geometry / 기하학)** sang **4. Worked example: fixed perimeter rectangle**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Lagrangian
 
 Với equality:
@@ -129,8 +125,6 @@ h(x)=0.
 ```
 
 Multiplier `\nu` là coefficient needed để combine ràng buộc (constraint / 제약조건) normal với mục tiêu (objective / 목표) độ dốc (gradient / 기울기).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **3. Lagrangian** nêu quy tắc; **4. Worked example: fixed perimeter rectangle** thử quy tắc trong tình huống, rồi **5. Multiplier như sensitivity / shadow price** mở rộng hệ quả.
 
 ## 4. Worked example: fixed perimeter rectangle
 
@@ -179,8 +173,6 @@ Ràng buộc (constraint / 제약조건) gives square.
 
 Theorem/phương thức (method / 메서드) gives candidate; toàn cục (global / 전역) maximum conclusion còn dựa hình học (geometry / 기하학)/concavity/feasible lĩnh vực (domain / 도메인).
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **4. Worked example: fixed perimeter rectangle** nêu quy tắc; **5. Multiplier như sensitivity / shadow price** thử quy tắc trong tình huống, rồi **6. Inequality ràng buộc (constraint / 제약조건) khác equality ở chỗ có thể inactive** mở rộng hệ quả.
-
 ## 5. Multiplier như sensitivity / shadow price
 
 Suppose ràng buộc (constraint / 제약조건):
@@ -207,8 +199,6 @@ Operations research/economics gọi đây là shadow price.
 
 Units phải được kiểm tra: multiplier có đơn vị (unit / 단위) “mục tiêu (objective / 목표) per constraint-unit”.
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **6. Inequality ràng buộc (constraint / 제약조건) khác equality ở chỗ có thể inactive** nối từ **5. Multiplier như sensitivity / shadow price** sang **7. Lagrangian với inequalities**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Inequality ràng buộc (constraint / 제약조건) khác equality ở chỗ có thể inactive
 
 Consider:
@@ -225,8 +215,6 @@ g(x)=0 → constraint active
 ```
 
 Nếu inactive, nó không chặn cục bộ (local / 로컬) movement; multiplier tương ứng nên zero trong KKT cấu trúc (structure / 구조).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **7. Lagrangian với inequalities** nối từ **6. Inequality ràng buộc (constraint / 제약조건) khác equality ở chỗ có thể inactive** sang **8. KKT conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Lagrangian với inequalities
 
@@ -255,8 +243,6 @@ Then inequality multipliers require:
 ```
 
 Sign convention đổi nếu ràng buộc (constraint / 제약조건) được viết direction khác.
-
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **8. KKT conditions** nối từ **7. Lagrangian với inequalities** sang **9. Complementary slackness là active-set lô-gic (logic / 논리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. KKT conditions
 
@@ -303,8 +289,6 @@ Complementary slackness nối constraint đang chặt với multiplier có thể
 \lambda_i^*g_i(x^*)=0.
 ```
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **9. Complementary slackness là active-set lô-gic (logic / 논리)** nối từ **8. KKT conditions** sang **10. Worked example: one-sided bound**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Complementary slackness là active-set lô-gic (logic / 논리)
 
 For each inequality:
@@ -317,8 +301,6 @@ multiplier > 0 → constraint must be active
 This captures which walls actually hỗ trợ (support / 지원) the optimum.
 
 It is one of the most useful conceptual parts of KKT.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **9. Complementary slackness là active-set lô-gic (logic / 논리)** nêu quy tắc; **10. Worked example: one-sided bound** thử quy tắc trong tình huống, rồi **11. ràng buộc (constraint / 제약조건) qualification: vì sao KKT không automatic?** mở rộng hệ quả.
 
 ## 10. Worked example: one-sided bound
 
@@ -362,8 +344,6 @@ so:
 
 Positive multiplier reflects active ràng buộc (constraint / 제약조건) blocking descent toward `x=3`.
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **10. Worked example: one-sided bound** nêu quy tắc; **11. ràng buộc (constraint / 제약조건) qualification: vì sao KKT không automatic?** thử quy tắc trong tình huống, rồi **12. Convexity makes KKT much stronger** mở rộng hệ quả.
-
 ## 11. ràng buộc (constraint / 제약조건) qualification: vì sao KKT không automatic?
 
 KKT necessity requires regularity các giả định (assumptions / 가정들).
@@ -375,8 +355,6 @@ Examples of ràng buộc (constraint / 제약조건) qualifications include LICQ
 Lesson:
 
 > KKT is a theorem with các giả định (assumptions / 가정들), not a universal algebra recipe.
-
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **12. Convexity makes KKT much stronger** nối từ **11. ràng buộc (constraint / 제약조건) qualification: vì sao KKT không automatic?** sang **13. Slater's điều kiện (condition / 조건) intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Convexity makes KKT much stronger
 
@@ -394,8 +372,6 @@ Under suitable regularity, any KKT điểm (point / 지점) is toàn cục (glob
 
 For nonconvex bài toán (problem / 문제), KKT điểm (point / 지점) may be only cục bộ (local / 로컬) candidate or saddle-like constrained stationary điểm (point / 지점).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **13. Slater's điều kiện (condition / 조건) intuition** nối từ **12. Convexity makes KKT much stronger** sang **14. Dual hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Slater's điều kiện (condition / 조건) intuition
 
 For convex inequality bài toán (problem / 문제), existence of a strictly feasible điểm (point / 지점):
@@ -407,8 +383,6 @@ g_i(x)<0
 for all inequalities often provides strong duality via Slater's điều kiện (condition / 조건).
 
 Strict interior feasibility prevents certain ranh giới (boundary / 경계) pathologies.
-
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **14. Dual hàm (function / 함수)** nối từ **13. Slater's điều kiện (condition / 조건) intuition** sang **15. Weak duality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Dual hàm (function / 함수)
 
@@ -428,8 +402,6 @@ Thus dual bài toán (problem / 문제) searches best lower bound:
 \max_{\lambda\ge0,\nu}q(\lambda,\nu).
 ```
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **15. Weak duality** nối từ **14. Dual hàm (function / 함수)** sang **16. Strong duality**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Weak duality
 
 For any primal feasible `x` and dual feasible `(\lambda,\nu)`:
@@ -448,8 +420,6 @@ for minimization.
 
 This bound holds very generally.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **16. Strong duality** nối từ **15. Weak duality** sang **17. Equality ràng buộc (constraint / 제약조건) example via hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Strong duality
 
 Under suitable convexity/regularity:
@@ -461,8 +431,6 @@ dual optimum = primal optimum
 Dual variables then gain strong sensitivity/economic interpretation.
 
 Duality gap zero becomes both theoretical guarantee and numerical stopping tín hiệu (signal / 신호) in algorithms.
-
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **16. Strong duality** nêu quy tắc; **17. Equality ràng buộc (constraint / 제약조건) example via hình học (geometry / 기하학)** thử quy tắc trong tình huống, rồi **18. Projection as constrained tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
 
 ## 17. Equality ràng buộc (constraint / 제약조건) example via hình học (geometry / 기하학)
 
@@ -504,8 +472,6 @@ x=y=1/2.
 
 This is orthogonal projection of origin onto the line.
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **17. Equality ràng buộc (constraint / 제약조건) example via hình học (geometry / 기하학)** nêu quy tắc; **18. Projection as constrained tối ưu hóa (optimization / 최적화)** thử quy tắc trong tình huống, rồi **19. Projected độ dốc (gradient / 기울기) descent** mở rộng hệ quả.
-
 ## 18. Projection as constrained tối ưu hóa (optimization / 최적화)
 
 Projection onto convex set `C`:
@@ -519,8 +485,6 @@ For tuyến tính (linear / 선형) subspace, solution satisfies orthogonality.
 For closed convex set, Euclidean projection is unique.
 
 This links constrained tối ưu hóa (optimization / 최적화) directly with inner-product hình học (geometry / 기하학).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **19. Projected độ dốc (gradient / 기울기) descent** nối từ **18. Projection as constrained tối ưu hóa (optimization / 최적화)** sang **20. Penalty phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Projected độ dốc (gradient / 기울기) descent
 
@@ -540,8 +504,6 @@ gradient step toward lower objective
 
 Useful when projection is cheap.
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **20. Penalty phương thức (method / 메서드)** nối từ **19. Projected độ dốc (gradient / 기울기) descent** sang **21. Barrier phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Penalty phương thức (method / 메서드)
 
 Replace hard ràng buộc (constraint / 제약조건) with penalty:
@@ -556,8 +518,6 @@ But finite penalty does not always exactly enforce hard ràng buộc (constraint
 
 Very large `\rho` can cause poor conditioning.
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **21. Barrier phương thức (method / 메서드)** nối từ **20. Penalty phương thức (method / 메서드)** sang **22. xác suất (probability / 확률) simplex**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Barrier phương thức (method / 메서드)
 
 For inequality `g(x)<0`, logarithmic barrier:
@@ -571,8 +531,6 @@ blows up near ranh giới (boundary / 경계).
 Interior-point methods solve chuỗi (sequence / 시퀀스) of barrier problems as `\mu→0`.
 
 This is fundamentally different from projected methods: stay interior instead of stepping outside then projecting.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **22. xác suất (probability / 확률) simplex** nối từ **21. Barrier phương thức (method / 메서드)** sang **23. Regularization vs các ràng buộc (constraints / 제약조건들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. xác suất (probability / 확률) simplex
 
@@ -598,8 +556,6 @@ parameterizes strictly positive interior points automatically.
 
 Encoding các ràng buộc (constraints / 제약조건들) via parameterization can simplify tối ưu hóa (optimization / 최적화) but may thay đổi (change / 변경) hình học (geometry / 기하학)/conditioning.
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **23. Regularization vs các ràng buộc (constraints / 제약조건들)** nối từ **22. xác suất (probability / 확률) simplex** sang **24. L1 hình học (geometry / 기하학) và sparsity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Regularization vs các ràng buộc (constraints / 제약조건들)
 
 Problems:
@@ -619,8 +575,6 @@ can correspond under suitable convexity and parameter quan hệ (relation / 관�
 
 Penalty and ràng buộc (constraint / 제약조건) are two views of sự đánh đổi (trade-off / 트레이드오프), not always identical implementations.
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **24. L1 hình học (geometry / 기하학) và sparsity** nối từ **23. Regularization vs các ràng buộc (constraints / 제약조건들)** sang **25. Portfolio tối ưu hóa (optimization / 최적화) liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. L1 hình học (geometry / 기하학) và sparsity
 
 Ràng buộc (constraint / 제약조건):
@@ -634,8 +588,6 @@ has diamond-like hình học (geometry / 기하학) with corners aligned to coor
 Quadratic mất mát (loss / 손실) contours touching these corners often produce zero coordinates.
 
 This geometric intuition helps explain why L1 regularization promotes sparsity.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, sau nội dung của **24. L1 hình học (geometry / 기하학) và sparsity**, **25. Portfolio tối ưu hóa (optimization / 최적화) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **26. tài nguyên (resource / 자원) allocation / shadow price** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Portfolio tối ưu hóa (optimization / 최적화) liên kết (connection / 연결)
 
@@ -663,8 +615,6 @@ This combines quadratic mục tiêu (objective / 목표) with equality/inequalit
 
 KKT/duality make the cấu trúc (structure / 구조) transparent.
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **25. Portfolio tối ưu hóa (optimization / 최적화) liên kết (connection / 연결)** đặt vấn đề; **26. tài nguyên (resource / 자원) allocation / shadow price** đối chiếu bằng chứng, rồi **27. Second-order conditions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 26. tài nguyên (resource / 자원) allocation / shadow price
 
 Suppose mục tiêu (objective / 목표) is profit and ràng buộc (constraint / 제약조건) is CPU sức chứa (capacity / 용량).
@@ -672,8 +622,6 @@ Suppose mục tiêu (objective / 목표) is profit and ràng buộc (constraint 
 Multiplier on sức chứa (capacity / 용량) ràng buộc (constraint / 제약조건) estimates marginal improvement if sức chứa (capacity / 용량) increases one đơn vị (unit / 단위).
 
 A high shadow price says tài nguyên (resource / 자원) is binding/valuable; zero multiplier says extra tài nguyên (resource / 자원) is not locally useful under hiện tại (current / 현재) optimum/mô hình (model / 모델).
-
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **26. tài nguyên (resource / 자원) allocation / shadow price** đặt vấn đề; **27. Second-order conditions** đối chiếu bằng chứng, rồi **28. Active-set methods** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. Second-order conditions
 
@@ -685,15 +633,11 @@ Positive curvature on feasible directions supports cục bộ (local / 로컬) m
 
 This is constrained analogue of Hessian tests.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **28. Active-set methods** nối từ **27. Second-order conditions** sang **29. Nonconvex caution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Active-set methods
 
 Algorithms may guess which inequalities are active, solve equality-constrained subproblem, then cập nhật (update / 업데이트) active set.
 
 KKT complementary slackness provides theoretical lô-gic (logic / 논리) behind active-set computation.
-
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **29. Nonconvex caution** nối từ **28. Active-set methods** sang **30. Units and scaling matter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Nonconvex caution
 
@@ -707,15 +651,11 @@ KKT satisfied ≠ global optimum
 
 Toàn cục (global / 전역) guarantees need additional cấu trúc (structure / 구조).
 
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **30. Units and scaling matter** nối từ **29. Nonconvex caution** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Units and scaling matter
 
 If one ràng buộc (constraint / 제약조건) uses dollars ~`10^6` and another normalized xác suất (probability / 확률) ~`1`, poorly scaled bài toán (problem / 문제) can cause numerical difficulty.
 
 Rescaling variables/các ràng buộc (constraints / 제약조건들) may improve conditioning without changing underlying feasible set meaning.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, sau nội dung của **30. Units and scaling matter**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -732,13 +672,9 @@ gradient geometry
 
 Inner products explain projection. tuyến tính (linear / 선형) algebra supplies null/tangent spaces. Finance uses covariance quadratic objectives. AI uses simplex các ràng buộc (constraints / 제약조건들), regularization and projected/proximal methods.
 
-> **Nối mạch:** Trong **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Constrained optimum is a điểm (point / 지점) where all useful downhill directions are blocked by feasible hình học (geometry / 기하학). Multipliers quantify which walls khối (block / 블록) movement and how valuable relaxing those walls would be.
-
-> **Nối mạch:** Ở chặng này của **Tối ưu có ràng buộc, Lagrange multipliers và KKT: hình học (geometry / 기하학) của feasible directions**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

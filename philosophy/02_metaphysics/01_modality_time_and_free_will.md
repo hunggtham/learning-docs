@@ -6,13 +6,9 @@
 
 Modal lập luận (reasoning / 추론) phân biệt điều **có thể**, **thực tế** và **tất yếu**. Một claim có thể đúng trong thế giới hiện tại nhưng không tất yếu; một ràng buộc (constraint / 제약조건) vật lý có thể khiến scenario không khả thi dù lô-gic (logic / 논리) không mâu thuẫn. Khi dùng “có thể” trong tranh luận, phải nói rõ là logical, vật lý (physical / 물리적), epistemic hay normative possibility.
 
-> **Chuyển mạch:** Possibility và necessity mô tả modality; time/change đặt các trạng thái vào thứ tự, rồi free will hỏi trách nhiệm còn có ý nghĩa nào trong những ràng buộc đó.
-
 ## Thời gian (time / 시간) và thay đổi (change / 변경)
 
 Presentism xem chỉ hiện tại tồn tại; eternalism xem các thời điểm như một cấu trúc spacetime; growing-block giữ quá khứ và hiện tại nhưng không tương lai. Physics cung cấp ràng buộc (constraint / 제약조건) về thời gian (time / 시간) thứ tự (ordering / 순서) và relativity, nhưng không tự chọn metaphysical interpretation. Trải nghiệm dòng thời gian của con người cũng không phải đo lường (measurement / 측정) trực tiếp của ontology thời gian.
-
-> **Chuyển mạch:** Ở chặng này của **Modality, thời gian (time / 시간) và Free Will**, **Free will và responsibility** tiếp nhận điểm tựa từ **Thời gian (time / 시간) và thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ sâu (depth / 깊이) pass: free will giữa causality và responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Free will và responsibility
 
@@ -24,8 +20,6 @@ Libertarianism cần một kiểu agency không bị quyết định hoàn toàn
 - moral responsibility khỏi blame vô điều kiện.
 
 Psychology và neuroscience có thể cho biết quyết định (decision / 결정) hình thành ra sao; chúng chưa tự quyết định chuẩn nào đủ để gọi một người responsible.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Modality, thời gian (time / 시간) và Free Will**, **Độ sâu (depth / 깊이) pass: free will giữa causality và responsibility** tiếp nhận điểm tựa từ **Free will và responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Độ sâu (depth / 깊이) pass: free will giữa causality và responsibility
 

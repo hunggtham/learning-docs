@@ -10,8 +10,6 @@ Imperative style mô tả chuỗi (sequence / 시퀀스) commands thay đổi tr
 
 Điểm yếu xuất hiện khi mutable trạng thái (state / 상태) lan rộng: muốn hiểu hiện tại (current / 현재) giá trị (value / 값) phải biết lịch sử (history / 이력) of writes. cục bộ (local / 로컬) mutation có thể rõ và efficient; toàn cục (global / 전역) dùng chung (shared / 공유) mutation khó reason.
 
-> **Nối mạch:** Imperative code mô tả bước và state; object-oriented gom state với behavior, functional ưu tiên pure transformation, còn declarative mô tả kết quả cần đạt thay vì chuỗi thao tác.
-
 ## Object-oriented programming
 
 OOP nhóm trạng thái (state / 상태) + hành vi (behavior / 동작) quanh objects, encapsulation và interfaces. Polymorphism cho caller depend lớp trừu tượng (abstraction / 추상화) thay concrete hiện thực (implementation / 구현).
@@ -19,8 +17,6 @@ OOP nhóm trạng thái (state / 상태) + hành vi (behavior / 동작) quanh ob
 Inheritance là một cơ chế (mechanism / 메커니즘), không phải essence duy nhất. Composition thường giảm coupling khi “has-a” relationship phù hợp hơn “is-a”. Liskov Substitution Principle yêu cầu subtype preserve behavioral expectations, không chỉ phương thức (method / 메서드) signatures.
 
 Lĩnh vực (domain / 도메인) mô hình (model / 모델) tốt không đồng nghĩa tạo lớp (class / 클래스) cho mọi noun. giá trị (value / 값) objects, services, modules và data-oriented structures đều có chỗ.
-
-> **Nối mạch:** **Functional programming** nối từ **Object-oriented programming** sang **Declarative programming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Functional programming
 
@@ -30,29 +26,21 @@ Real programs vẫn cần I/O/trạng thái (state / 상태). Functional các h�
 
 Persistent immutable dữ liệu (data / 데이터) structures dùng structural sharing để tránh full bản sao (copy / 복사).
 
-> **Nối mạch:** **Declarative programming** nối từ **Functional programming** sang **Lô-gic (logic / 논리) programming**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Declarative programming
 
 Declarative style mô tả **what** desired kết quả (result / 결과)/thuộc tính (property / 속성) hơn **how** chuỗi (sequence / 시퀀스) steps. SQL nói rows cần thỏa điều kiện (condition / 조건); truy vấn (query / 쿼리) optimizer chọn scan/chỉ mục (index / 인덱스)/phép nối (join / 조인) plan. CSS mô tả các ràng buộc (constraints / 제약조건들)/rules; bản dựng (build / 빌드) các hệ thống (systems / 시스템들) mô tả dependencies.
 
 Declarative lớp trừu tượng (abstraction / 추상화) mạnh khi engine có thể optimize chiến lược (strategy / 전략), nhưng hiệu năng (performance / 성능) debugging đòi hiểu engine mô hình thực thi (execution model / 실행 모델).
 
-> **Nối mạch:** **Lô-gic (logic / 논리) programming** nối từ **Declarative programming** sang **Event-driven và reactive**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lô-gic (logic / 논리) programming
 
 Lô-gic (logic / 논리) programming biểu diễn facts/rules và truy vấn (query / 쿼리); engine tìm kiếm (search / 검색)/suy luận (inference / 추론) tìm substitutions. Prolog là example kinh điển. Dù ít dùng mainstream backend, ideas unification, các ràng buộc (constraints / 제약조건들) và quy tắc (rule / 규칙) engines xuất hiện trong solvers/static phân tích (analysis / 분석).
-
-> **Nối mạch:** **Event-driven và reactive** nối từ **Lô-gic (logic / 논리) programming** sang **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Event-driven và reactive
 
 Event-driven các hệ thống (systems / 시스템들) react events/callbacks/messages thay central sequential luồng (flow / 흐름). Reactive streams thêm propagation + backpressure concepts. UI, mạng (network / 네트워크) servers và streaming pipelines dùng các mô hình (models / 모델들) này.
 
 Hidden temporal dependencies có thể khó gỡ lỗi (debug / 디버그); tường minh (explicit / 명시적) trạng thái (state / 상태) machines/observable streams giúp cấu trúc (structure / 구조).
-
-> **Nối mạch:** **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** nối từ **Event-driven và reactive** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)
 
@@ -63,13 +51,9 @@ Declarative: specify relations/goals, engine điều khiển (control / 제어) 
 
 Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) bằng SQL declarative hợp hơn manual page vòng lặp (loop / 루프); low-level driver imperative điều khiển (control / 제어) cần thiết; nghiệp vụ (business / 비즈니스) lĩnh vực (domain / 도메인) có thể dùng OOP + functional giá trị (value / 값) transformations.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Paradigms khác nhau chủ yếu ở **trạng thái (state / 상태) nằm đâu, điều khiển (control / 제어) nằm đâu, và contracts được biểu đạt thế nào**. Hãy chọn mô hình (model / 모델) làm invariants và thay đổi (change / 변경) boundaries rõ nhất.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -78,8 +62,6 @@ Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database 
 **“Functional = không có trạng thái (state / 상태).”** trạng thái (state / 상태)/effects vẫn tồn tại nhưng được isolate/mô hình (model / 모델) khác.
 
 **“Declarative mã (code / 코드) không có thuật toán (algorithm / 알고리즘).”** Engine vẫn execute algorithms; declarative tầng (layer / 계층) chuyển thuật toán (algorithm / 알고리즘) choice sang optimizer/thời gian chạy (runtime / 런타임).
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

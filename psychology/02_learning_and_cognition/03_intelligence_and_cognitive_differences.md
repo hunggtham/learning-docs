@@ -16,8 +16,6 @@ Nếu hiệu năng (performance / 성능) on vocabulary, ma trận (matrix / 행
 
 This dùng chung (shared / 공유) cấu trúc (structure / 구조) is empirical; interpretation of what causes it is theoretical.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **2. Positive manifold** nối từ **1. Intelligence là latent construct** sang **3. General factor g**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Positive manifold
 
 **Positive manifold** is tendency for many cognitive tests to correlate positively.
@@ -26,8 +24,6 @@ This is one of the most replicated psychometric observations in intelligence res
 
 It does not mean all abilities are identical. A person can show relative strengths/weaknesses while still contributing to general covariance.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **3. General factor g** nối từ **2. Positive manifold** sang **4. Hierarchical các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. General factor g
 
 Spearman proposed **general intelligence factor (g)** to summarize dùng chung (shared / 공유) variance among cognitive tests.
@@ -35,8 +31,6 @@ Spearman proposed **general intelligence factor (g)** to summarize dùng chung (
 > **Established psychometric finding:** a general factor can often account for substantial covariance.
 >
 > **lý thuyết (theory / 이론) ranh giới (boundary / 경계):** `g` is not automatically one biological cơ chế (mechanism / 메커니즘) or one brain mô-đun (module / 모듈). Different nhân quả (causal / 인과적) architectures can produce a statistical general factor.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **4. Hierarchical các mô hình (models / 모델들)** nối từ **3. General factor g** sang **5. Fluid and crystallized abilities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Hierarchical các mô hình (models / 모델들)
 
@@ -54,8 +48,6 @@ Cattell–Horn–Carroll (CHC) frameworks distinguish broad abilities such as fl
 
 These các mô hình (models / 모델들) are useful for assessment but factor boundaries vary by kiểm thử (test / 테스트) battery and mô hình (model / 모델) các giả định (assumptions / 가정들).
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **5. Fluid and crystallized abilities** nối từ **4. Hierarchical các mô hình (models / 모델들)** sang **6. IQ score**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Fluid and crystallized abilities
 
 **Năng lực linh hoạt (fluid reasoning / Gf)** concerns lập luận (reasoning / 추론) with novel problems.
@@ -63,8 +55,6 @@ These các mô hình (models / 모델들) are useful for assessment but factor b
 **Năng lực kết tinh (crystallized knowledge / Gc)** reflects accumulated kiến thức (knowledge / 지식)/ngôn ngữ (language / 언어) influenced strongly by education and culture.
 
 They correlate but show different developmental trajectories.
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **6. IQ score** nối từ **5. Fluid and crystallized abilities** sang **7. Norms and renorming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. IQ score
 
@@ -84,23 +74,17 @@ latent ability signal
 
 Therefore responsible interpretation includes confidence interval and ngữ cảnh (context / 맥락).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **7. Norms and renorming** nối từ **6. IQ score** sang **8. độ tin cậy (reliability / 신뢰성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Norms and renorming
 
 Kiểm thử (test / 테스트) norms can become outdated as population hiệu năng (performance / 성능) changes. Flynn-effect lịch sử (history / 이력) shows raw score distributions can shift across cohorts.
 
 A score interpreted using obsolete norm can misstate hiện tại (current / 현재) relative standing.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **8. độ tin cậy (reliability / 신뢰성)** nối từ **7. Norms and renorming** sang **9. Validity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. độ tin cậy (reliability / 신뢰성)
 
 Intelligence tests often have high độ tin cậy (reliability / 신뢰성) when professionally standardized, but độ tin cậy (reliability / 신뢰성) is use-specific.
 
 High độ tin cậy (reliability / 신뢰성) does not prove validity for every quyết định (decision / 결정), such as school placement, job selection or diagnosis.
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **9. Validity** nối từ **8. độ tin cậy (reliability / 신뢰성)** sang **10. Intelligence and expertise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Validity
 
@@ -119,8 +103,6 @@ Kết quả (outcome / 결과) also depends:
 - lĩnh vực (domain / 도메인) kiến thức (knowledge / 지식);
 - nhóm (team / 팀)/môi trường (environment / 환경).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **10. Intelligence and expertise** nối từ **9. Validity** sang **11. Intelligence and working bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Intelligence and expertise
 
 General cognitive ability can influence học tập (learning / 학습) speed and novel bài toán (problem / 문제) solving; expertise adds domain-specific kiến thức (knowledge / 지식), lược đồ (schema / 스키마) and mẫu (pattern / 패턴) recognition.
@@ -129,8 +111,6 @@ Cấp cao (senior / 시니어) nhà phát triển (developer / 개발자) may ou
 
 Xem [[06_expertise_creativity_and_problem_solving]].
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **11. Intelligence and working bộ nhớ (memory / 메모리)** nối từ **10. Intelligence and expertise** sang **12. tiến trình (process / 프로세스) Overlap lý thuyết (theory / 이론) and alternative accounts**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Intelligence and working bộ nhớ (memory / 메모리)
 
 Working-memory sức chứa (capacity / 용량) correlates with lập luận (reasoning / 추론), but the constructs are not identical.
@@ -138,8 +118,6 @@ Working-memory sức chứa (capacity / 용량) correlates with lập luận (re
 Some theories treat executive attention/working bộ nhớ (memory / 메모리) as major contributor to g; others emphasize overlapping processes across tasks.
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론) / debated cơ chế (mechanism / 메커니즘):** correlation is robust, nhân quả (causal / 인과적) kiến trúc (architecture / 아키텍처) is not one settled explanation.
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **11. Intelligence and working bộ nhớ (memory / 메모리)** đặt đầu vào cho **12. tiến trình (process / 프로세스) Overlap lý thuyết (theory / 이론) and alternative accounts**, rồi **13. Brain correlates** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. tiến trình (process / 프로세스) Overlap lý thuyết (theory / 이론) and alternative accounts
 
@@ -154,8 +132,6 @@ Same covariance pattern
 ≠ one uniquely proven mechanism
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **12. tiến trình (process / 프로세스) Overlap lý thuyết (theory / 이론) and alternative accounts** đặt đầu vào cho **13. Brain correlates**, rồi **14. Genetics** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 13. Brain correlates
 
 Brain cấu trúc (structure / 구조)/hàm (function / 함수) correlates with cognitive ability across phân tán (distributed / 분산) networks, including frontoparietal các hệ thống (systems / 시스템들) and toàn cục (global / 전역) brain properties.
@@ -163,8 +139,6 @@ Brain cấu trúc (structure / 구조)/hàm (function / 함수) correlates with 
 > **Established:** there are replicable brain–cognition associations.
 >
 > **Limitation:** no single “intelligence center” exists, and correlation does not identify complete nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘).
-
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **14. Genetics** nối từ **13. Brain correlates** sang **15. Heritability changes by age and ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Genetics
 
@@ -176,23 +150,17 @@ Hiện đại (modern / 현대적) reviews describe intelligence as highly polyg
 >
 > **Not established by this fact:** why two xã hội (social / 사회적) groups differ in mean score.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **15. Heritability changes by age and ngữ cảnh (context / 맥락)** nối từ **14. Genetics** sang **16. môi trường (environment / 환경) matters**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Heritability changes by age and ngữ cảnh (context / 맥락)
 
 Heritability estimates can vary across development and environments. Some studies show increasing heritability of general cognitive ability across development, partly through gene–môi trường (environment / 환경) correlation.
 
 This is population statistic, not fixed universal constant.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **16. môi trường (environment / 환경) matters** nối từ **15. Heritability changes by age and ngữ cảnh (context / 맥락)** sang **17. Flynn tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. môi trường (environment / 환경) matters
 
 Cognitive development is affected by education, nutrition, prenatal conditions, toxins, chronic stress, disease, sensory truy cập (access / 접근), sleep and cognitive opportunity.
 
 A trait can be heritable while mean hiệu năng (performance / 성능) is environmentally modifiable.
-
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **17. Flynn tác động (effect / 효과)** nối từ **16. môi trường (environment / 환경) matters** sang **18. Schooling tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Flynn tác động (effect / 효과)
 
@@ -202,15 +170,11 @@ This occurred too quickly to be explained by genetic evolution alone, demonstrat
 
 Mẫu (pattern / 패턴) differs across countries/thời gian (time / 시간) and sometimes plateaus/reverses.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **18. Schooling tác động (effect / 효과)** nối từ **17. Flynn tác động (effect / 효과)** sang **19. Socioeconomic conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Schooling tác động (effect / 효과)
 
 Education and cognitive ability influence each other. More schooling can improve some cognitive-test hiệu năng (performance / 성능); prior ability influences educational attainment.
 
 Nhân quả (causal / 인과적) estimation is difficult because selection and socioeconomic factors matter.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **19. Socioeconomic conditions** nối từ **18. Schooling tác động (effect / 효과)** sang **20. Group differences: nhân quả (causal / 인과적) caution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Socioeconomic conditions
 
@@ -219,8 +183,6 @@ Poverty can influence cognition via nutrition, health, stress, pollution, school
 Socioeconomic status is not one cơ chế (mechanism / 메커니즘); it bundles multiple exposures.
 
 Avoid interpreting score gap as intrinsic group thuộc tính (property / 속성).
-
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **20. Group differences: nhân quả (causal / 인과적) caution** nối từ **19. Socioeconomic conditions** sang **21. đo lường (measurement / 측정) invariance and fairness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Group differences: nhân quả (causal / 인과적) caution
 
@@ -241,8 +203,6 @@ Within-group heritability cannot determine which causes group difference.
 
 This is a nhân quả (causal / 인과적) suy luận (inference / 추론) bài toán (problem / 문제), not a shortcut from twin studies.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **20. Group differences: nhân quả (causal / 인과적) caution** đặt vấn đề; **21. đo lường (measurement / 측정) invariance and fairness** đối chiếu bằng chứng, rồi **22. ngôn ngữ (language / 언어) and culture** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 21. đo lường (measurement / 측정) invariance and fairness
 
 Before comparing group means, ask whether kiểm thử (test / 테스트) functions similarly across groups.
@@ -253,8 +213,6 @@ Even when psychometric invariance is adequate, fairness in use also requires con
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **21. đo lường (measurement / 측정) invariance and fairness** đặt vấn đề; **22. ngôn ngữ (language / 언어) and culture** đối chiếu bằng chứng, rồi **23. Stereotype threat** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 22. ngôn ngữ (language / 언어) and culture
 
 Verbal items can depend strongly on ngôn ngữ (language / 언어) exposure and schooling.
@@ -263,21 +221,15 @@ Verbal items can depend strongly on ngôn ngữ (language / 언어) exposure and
 
 Better term is often reducing construct-irrelevant ngôn ngữ (language / 언어)/cultural demands, not claiming total culture-free assessment.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **23. Stereotype threat** nối từ **22. ngôn ngữ (language / 언어) and culture** sang **24. kiểm thử (test / 테스트) anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Stereotype threat
 
 Xã hội (social / 사회적) định danh (identity / 식별자) threat can influence hiệu năng (performance / 성능) under some conditions.
 
 > **bằng chứng (evidence / 증거) status:** stereotype-threat effects have substantial research lịch sử (history / 이력) but tác động (effect / 효과) sizes and replicability vary by paradigm/population. It should not be used as one universal explanation for every group gap.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **24. kiểm thử (test / 테스트) anxiety** nối từ **23. Stereotype threat** sang **25. Disability and accommodation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. kiểm thử (test / 테스트) anxiety
 
 Anxiety can consume working-memory/attention resources and reduce hiệu năng (performance / 성능). But low score should not automatically be dismissed as “just anxiety”; standardized assessment integrates hành vi (behavior / 동작), lịch sử (history / 이력) and repeated bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **25. Disability and accommodation** nối từ **24. kiểm thử (test / 테스트) anxiety** sang **26. Neurodiversity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Disability and accommodation
 
@@ -287,8 +239,6 @@ Accommodation aims to reduce construct-irrelevant difficulty without changing m�
 
 Fairness sometimes requires different procedures, not identical procedures.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **26. Neurodiversity** nối từ **25. Disability and accommodation** sang **27. Multiple intelligences**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Neurodiversity
 
 ADHD, autism, học tập (learning / 학습) disorders and other neurodevelopmental profiles can create uneven cognitive patterns.
@@ -297,15 +247,11 @@ A single toàn cục (global / 전역) score may hide meaningful strengths/needs
 
 Assessment should interpret profile only when psychometrically justified and clinically relevant, not over-read every subtest difference.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **27. Multiple intelligences** nối từ **26. Neurodiversity** sang **28. Emotional intelligence**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Multiple intelligences
 
 Gardner's multiple-intelligences khung phần mềm (framework / 프레임워크) is culturally influential and useful as ngôn ngữ (language / 언어) for diverse strengths.
 
 > **Historical/educational influence vs psychometric bằng chứng (evidence / 증거):** claim that verbal, musical, interpersonal, bodily etc. are independent intelligences with same psychometric status as g/broad cognitive abilities is not supported at comparable mức (level / 수준).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **28. Emotional intelligence** nối từ **27. Multiple intelligences** sang **29. Creativity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Emotional intelligence
 
@@ -319,8 +265,6 @@ They measure different things.
 
 Claim “EQ matters more than IQ” is meaningless without specifying instrument and kết quả (outcome / 결과).
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **29. Creativity** nối từ **28. Emotional intelligence** sang **30. Wisdom**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Creativity
 
 Creativity is related to intelligence but not reducible to IQ.
@@ -329,15 +273,11 @@ High creative achievement also needs lĩnh vực (domain / 도메인) kiến th�
 
 A cognitive score cannot summarize artistic/scientific creativity completely.
 
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **30. Wisdom** nối từ **29. Creativity** sang **31. Brain huấn luyện (training / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Wisdom
 
 Wisdom includes judgment about bất định (uncertainty / 불확실성), values, xã hội (social / 사회적) consequence and life experience. It is distinct from traditional cognitive-ability testing.
 
 High IQ does not guarantee wise quyết định (decision / 결정) or moral hành vi (behavior / 동작).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **31. Brain huấn luyện (training / 학습)** nối từ **30. Wisdom** sang **32. Cognitive enhancement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Brain huấn luyện (training / 학습)
 
@@ -347,15 +287,11 @@ Huấn luyện (training / 학습) typically improves trained/near tasks more re
 
 Practice can still be useful when mục tiêu (target / 대상) skill itself matters.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **32. Cognitive enhancement** nối từ **31. Brain huấn luyện (training / 학습)** sang **33. Intelligence across lifespan**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 32. Cognitive enhancement
 
 Sleep, education, exercise and health can hỗ trợ (support / 지원) cognitive functioning, but “raise IQ quickly” claims require strong bằng chứng (evidence / 증거).
 
 Effects on kiểm thử (test / 테스트) hiệu năng (performance / 성능) may reflect chiến lược (strategy / 전략)/familiarity rather than general latent ability thay đổi (change / 변경).
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **33. Intelligence across lifespan** nối từ **32. Cognitive enhancement** sang **34. Predictive use in workplace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Intelligence across lifespan
 
@@ -367,8 +303,6 @@ Recent lifespan analyses suggest cấu trúc (structure / 구조)/strength of g 
 
 Xem [[../03_human_development_and_person/11_aging_cognitive_health_and_late_life]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **34. Predictive use in workplace** nối từ **33. Intelligence across lifespan** sang **35. AI and cognitive assessment**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Predictive use in workplace
 
 Cognitive ability can predict huấn luyện (training / 학습)/job hiệu năng (performance / 성능) on average, especially in complex roles.
@@ -376,8 +310,6 @@ Cognitive ability can predict huấn luyện (training / 학습)/job hiệu năn
 But hiring decisions also raise fairness, legal, validity and utility questions.
 
 Use should be job-related, validated and combined appropriately with other predictors rather than treated as “human worth score”.
-
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **35. AI and cognitive assessment** nối từ **34. Predictive use in workplace** sang **36. dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. AI and cognitive assessment
 
@@ -391,8 +323,6 @@ Novel giao diện (interface / 인터페이스) does not solve psychometrics. Th
 - privacy;
 - out-of-sample kiểm tra hợp lệ (validation / 검증);
 - explanation of intended use.
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **36. dùng chung (common / 공통) misconceptions** nối từ **35. AI and cognitive assessment** sang **37. Evidence-status map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. dùng chung (common / 공통) misconceptions
 
@@ -423,8 +353,6 @@ Strong claim unrealistic; culture/ngôn ngữ (language / 언어) effects can be
 ### “Brain huấn luyện (training / 학습) raises general intelligence broadly”
 
 Far-transfer bằng chứng (evidence / 증거) is limited.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **36. dùng chung (common / 공통) misconceptions** đặt vấn đề; **37. Evidence-status map** đối chiếu bằng chứng, rồi **38. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. Evidence-status map
 
@@ -457,8 +385,6 @@ Phần này giữ các giả thuyết và tranh luận còn mở ở đúng tr�
 - how much specific environmental interventions shift broad latent ability;
 - best fairness mô hình (model / 모델) for high-stakes assessment.
 
-> **Nối mạch:** Trong **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, các dấu vết trong **37. Evidence-status map** được đọc cùng nhau ở **38. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 38. mô hình tư duy (mental model / 사고 모델)
 
 Mental model này nối capability quan sát được với task, context, strategy và measurement. Nó giúp tránh coi “intelligence” là một đặc tính đơn nhất không đổi giữa mọi nhiệm vụ.
@@ -475,8 +401,6 @@ Observed cognitive performance
 ```
 
 Psychometric mô hình (model / 모델) summarizes patterns; nhân quả (causal / 인과적) explanation requires additional bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Ở chặng này của **Trí tuệ và khác biệt nhận thức — Intelligence & Cognitive Differences / 지능**, **Kết nối kiến thức** tổng hợp từ **38. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

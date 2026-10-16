@@ -38,8 +38,6 @@ không phải chỉ `x<5`, vì phủ định phải bao phủ **mọi trường 
 
 Đây là một mẫu (pattern / 패턴) quan trọng: khi negate một claim, ta không đoán câu “nghe đối lập”; ta lấy complement lô-gic (logic / 논리) của toàn bộ điều kiện (condition / 조건).
 
-> **Nối mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **2. AND, OR, XOR và cách conditions tạo cấu trúc** nối từ **1. Mệnh đề: đơn vị cơ bản của lập luận (reasoning / 추론)** sang **3. Implication: statement về việc counterexample không được phép tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. AND, OR, XOR và cách conditions tạo cấu trúc
 
 Phép hội (conjunction / 논리곱)
@@ -61,8 +59,6 @@ trong toán học thường là inclusive OR: ít nhất một proposition đún
 XOR (exclusive OR / 배타적 논리합) chỉ đúng khi chính xác một trong hai đúng.
 
 Điểm đáng học không phải bảng truth bảng (table / 테이블) riêng lẻ mà là việc **compound điều kiện (condition / 조건) có thể được xem như một đối tượng (object / 객체) toán học**. Điều này nối trực tiếp sang Boolean algebra, circuit thiết kế (design / 설계), SQL predicates và program guards.
-
-> **Nối mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **2. AND, OR, XOR và cách conditions tạo cấu trúc** nêu quy tắc; **3. Implication: statement về việc counterexample không được phép tồn tại** thử quy tắc trong tình huống, rồi **4. Converse, inverse, contrapositive** mở rộng hệ quả.
 
 ## 3. Implication: statement về việc counterexample không được phép tồn tại
 
@@ -92,8 +88,6 @@ Ví dụ:
 Muốn bác bỏ, cần tìm một số chia hết cho 4 nhưng không chẵn. Không tìm được chỉ bằng vài examples chưa phải proof, nhưng nó cho ta biết **dạng counterexample cần tìm**.
 
 Trong software requirements, “nếu người dùng (user / 사용자) là admin thì có quyền X” không nói rằng chỉ admin mới có quyền X. Suy ngược thành “có quyền X ⇒ admin” là đổi implication thành converse mà không có cơ sở.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **3. Implication: statement về việc counterexample không được phép tồn tại** nêu quy tắc; **4. Converse, inverse, contrapositive** thử quy tắc trong tình huống, rồi **5. Necessary và sufficient conditions** mở rộng hệ quả.
 
 ## 4. Converse, inverse, contrapositive
 
@@ -145,8 +139,6 @@ Converse:
 
 sai vì `6` là counterexample.
 
-> **Nối mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **5. Necessary và sufficient conditions** nối từ **4. Converse, inverse, contrapositive** sang **6. Quantifiers: nơi rất nhiều proof sai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Necessary và sufficient conditions
 
 Nếu
@@ -175,8 +167,6 @@ q → p
 ```
 
 Đây là mẫu (pattern / 패턴) thường xuyên trong set equality, invertibility, characterization theorems và equivalence of thuật toán (algorithm / 알고리즘) conditions.
-
-> **Nối mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **6. Quantifiers: nơi rất nhiều proof sai** nối từ **5. Necessary và sufficient conditions** sang **7. De Morgan: lô-gic (logic / 논리) của complement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Quantifiers: nơi rất nhiều proof sai
 
@@ -232,8 +222,6 @@ thường rất khác nhau. Statement đầu cho phép chọn `y` khác nhau cho
 
 Đây là nguồn (source / 소스) của nhiều nhầm lẫn trong phân tích (analysis / 분석), algorithms và tối ưu hóa (optimization / 최적화) guarantees.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **7. De Morgan: lô-gic (logic / 논리) của complement** nối từ **6. Quantifiers: nơi rất nhiều proof sai** sang **8. Proof không phải một format duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. De Morgan: lô-gic (logic / 논리) của complement
 
 De Morgan cho propositions:
@@ -273,8 +261,6 @@ logic-equivalent với
 ```
 
 nhưng hành vi thời gian chạy (runtime behavior / 런타임 동작) có thể khác nếu expressions có side effects hoặc short-circuit ngữ nghĩa (semantics / 의미론) phức tạp. Đây là ví dụ cho distinction giữa **logical equivalence** và **operational equivalence**.
-
-> **Nối mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **8. Proof không phải một format duy nhất** nối từ **7. De Morgan: lô-gic (logic / 논리) của complement** sang **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Proof không phải một format duy nhất
 
@@ -348,8 +334,6 @@ Non-constructive proof chứng minh đối tượng (object / 객체) phải t�
 
 Mathematics chấp nhận cả hai; khoa học máy tính (computer science / 컴퓨터 과학) thường quan tâm thêm câu hỏi computational: “tồn tại” có đi kèm cách tìm hiệu quả không?
 
-> **Nối mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)** nối từ **8. Proof không phải một format duy nhất** sang **10. Invariants: proof bằng điều không đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)
 
 Quy nạp toán học (mathematical induction / 수학적 귀납법) có hai phần:
@@ -387,8 +371,6 @@ Strong induction cho phép giả sử statement đúng cho mọi values nhỏ h�
 
 Structural induction áp cùng idea cho trees, cú pháp (syntax / 문법) trees, recursive dữ liệu (data / 데이터) structures và formal languages.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **10. Invariants: proof bằng điều không đổi** nối từ **9. Mathematical induction: proof trên recursive cấu trúc (structure / 구조)** sang **11. Counterexample: công cụ mạnh nhất để phá universal claim**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Invariants: proof bằng điều không đổi
 
 Bất biến (invariant / 불변식) là thuộc tính (property / 속성) được giữ qua mỗi transformation hoặc iteration.
@@ -406,8 +388,6 @@ initialization
 Trong algorithms, chọn đúng bất biến (invariant / 불변식) thường khó hơn algebra sau đó. Ví dụ tìm kiếm nhị phân (binary search / 이진 탐색) giữ bất biến (invariant / 불변식) rằng nếu mục tiêu (target / 대상) tồn tại thì nó vẫn nằm trong hiện tại (current / 현재) interval.
 
 Trong physics, conservation laws đóng vai trò tương tự ở mức (level / 수준) mô hình (model / 모델): một quantity không đổi dưới dynamics nhất định.
-
-> **Nối mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **10. Invariants: proof bằng điều không đổi** nêu quy tắc; **11. Counterexample: công cụ mạnh nhất để phá universal claim** thử quy tắc trong tình huống, rồi **12. Proof idea và formal proof** mở rộng hệ quả.
 
 ## 11. Counterexample: công cụ mạnh nhất để phá universal claim
 
@@ -435,8 +415,6 @@ conjecture
 
 Nó giống debugging specification trong software.
 
-> **Nối mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **11. Counterexample: công cụ mạnh nhất để phá universal claim** nêu quy tắc; **12. Proof idea và formal proof** thử quy tắc trong tình huống, rồi **13. Proof, testing và formal xác minh (verification / 확인)** mở rộng hệ quả.
-
 ## 12. Proof idea và formal proof
 
 Một proof tốt thường có hai layers.
@@ -449,8 +427,6 @@ Nếu chỉ có formal symbols mà không có proof idea, người học khó tr
 
 Tài liệu này ưu tiên intuition trước, nhưng formalism xuất hiện sau đó để khóa lập luận (reasoning / 추론) lại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **13. Proof, testing và formal xác minh (verification / 확인)** nối từ **12. Proof idea và formal proof** sang **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Proof, testing và formal xác minh (verification / 확인)
 
 Testing kiểm tra finite examples. Một bộ kiểm thử (test suite / 테스트 스위트) tốt có thể tăng confidence rất nhiều nhưng không chứng minh universal thuộc tính (property / 속성) trên infinite đầu vào (input / 입력) lĩnh vực (domain / 도메인).
@@ -458,8 +434,6 @@ Testing kiểm tra finite examples. Một bộ kiểm thử (test suite / 테스
 Proof có thể chứng minh thuộc tính (property / 속성) của một mô hình (model / 모델) hoặc thuật toán (algorithm / 알고리즘), nhưng không bảo đảm hiện thực (implementation / 구현) thực tế đúng nếu mô hình (model / 모델)/specification không match mã (code / 코드).
 
 Formal xác minh (verification / 확인) cố đưa specification, program ngữ nghĩa (semantics / 의미론) và proof vào một hệ thống (system / 시스템) machine-checkable. Tuy nhiên xác minh (verification / 확인) vẫn phụ thuộc vào tính đúng đắn (correctness / 정확성) của specification và lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
-
-> **Nối mạch:** Trong **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics** nối từ **13. Proof, testing và formal xác minh (verification / 확인)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics
 
@@ -471,13 +445,9 @@ P(A\cap B),\qquad P(A\cup B),\qquad P(A^c).
 
 Bayes lập luận (reasoning / 추론) cũng phụ thuộc vào việc điều kiện (condition / 조건)/sự kiện (event / 이벤트) được định nghĩa chính xác. Nếu events mơ hồ, công thức đúng vẫn cho answer không meaningful.
 
-> **Nối mạch:** Ở chặng này của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **14. liên kết (connection / 연결) với xác suất (probability / 확률) và Statistics** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > lô-gic (logic / 논리) quản lý **đường đi hợp lệ từ các giả định (assumptions / 가정들) đến conclusions**. Proof là một chương trình lập luận (reasoning / 추론): definition tạo objects, suy luận (inference / 추론) rules là operations, bất biến (invariant / 불변식)/contradiction/induction là điều khiển (control / 제어) structures, và theorem là đầu ra (output / 출력). Một proof tốt không chỉ đúng; nó làm lộ cơ chế (mechanism / 메커니즘) khiến statement buộc phải đúng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리) và chứng minh: ngôn ngữ của suy luận đúng**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

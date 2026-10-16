@@ -10,8 +10,6 @@ Cách bền hơn là đọc scenario như một máy trạng thái (state machin
 
 PMP scenario thường không hỏi “công cụ (tool / 도구) nào tồn tại?” mà hỏi “trong trạng thái (state / 상태) này, công cụ (tool / 도구)/tiến trình (process / 프로세스) nào hợp lý tiếp theo?”. Vì vậy thứ tự hành động (action / 동작) và ngữ cảnh (context / 맥락) quan trọng ngang kiến thức (knowledge / 지식).
 
-> **Nối mạch:** **Đọc scenario theo trạng thái (state / 상태), không theo từ khóa (keyword / 키워드)** nối từ **PMP kiểm tra ứng dụng (application / 애플리케이션) nhiều hơn recall** sang **Khung lập luận (reasoning / 추론) tám bước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đọc scenario theo trạng thái (state / 상태), không theo từ khóa (keyword / 키워드)
 
 Từ khóa (keyword / 키워드) matching dễ sai. Thấy “xung đột (conflict / 충돌)” không có nghĩa answer luôn “collaborate”; thấy “thay đổi (change / 변경)” không có nghĩa luôn “submit thay đổi (change / 변경) yêu cầu (request / 요청)”; thấy “rủi ro (risk / 위험)” không có nghĩa luôn “cập nhật (update / 업데이트) rủi ro (risk / 위험) register”.
@@ -21,8 +19,6 @@ Cần xác định trạng thái (state / 상태). rủi ro (risk / 위험) đã
 Từ khóa (keyword / 키워드) chỉ giúp locate concept. trạng thái (state / 상태) mới quyết định hành động (action / 동작).
 
 Một cách đọc tốt là tách **surface** khỏi **lập luận (reasoning / 추론) cốt lõi (core / 핵심)**. Surface có thể là vendor, sprint, construction, AI, stakeholder hoặc dashboard. lập luận (reasoning / 추론) cốt lõi (core / 핵심) thường vẫn quay về một trong vài vấn đề: thông tin (information / 정보) thiếu, authority chưa đúng, threshold bị vượt, giả định (assumption / 가정) bị phá, phản hồi (response / 응답) chưa theo đúng chuỗi (sequence / 시퀀스), hoặc cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) đang đe dọa mục tiêu (objective / 목표) lớn hơn.
-
-> **Nối mạch:** **Khung lập luận (reasoning / 추론) tám bước** nối từ **Đọc scenario theo trạng thái (state / 상태), không theo từ khóa (keyword / 키워드)** sang **Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khung lập luận (reasoning / 추론) tám bước
 
@@ -74,8 +70,6 @@ Nhiều câu hỏi hỏi “what should the dự án (project / 프로젝트) ma
 
 Nếu stem hỏi “should have done”, lập luận (reasoning / 추론) quay lại preventive hành động (action / 동작) trước thất bại (failure / 실패). Nếu hỏi “do next”, không chọn retrospective preventive hành động (action / 동작) trước khi hiện tại (current / 현재) issue được contain.
 
-> **Nối mạch:** **Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng** nối từ **Khung lập luận (reasoning / 추론) tám bước** sang **Phân biệt assess, act và escalate**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng
 
 Khi còn hai option hợp lý, đừng chọn theo câu chữ “nghe PMP hơn”. Hãy đưa chúng qua năm cổng.
@@ -92,8 +86,6 @@ Cổng thứ năm là **hệ thống (system / 시스템) fit**: option có gi�
 
 Nếu một option qua đủ năm cổng còn option kia thất bại (fail / 실패) một cổng quan trọng, quyết định (decision / 결정) thường rõ hơn nhiều.
 
-> **Nối mạch:** **Phân biệt assess, act và escalate** nối từ **Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng** sang **Proactive không đồng nghĩa tự ý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân biệt assess, act và escalate
 
 Ba loại option thường cạnh tranh trong câu hỏi.
@@ -104,15 +96,11 @@ Mẹo “luôn assess trước” sai trong emergency. Mẹo “luôn act proact
 
 Mô hình tư duy (mental model / 사고 모델) là proportional phản hồi (response / 응답).
 
-> **Nối mạch:** **Proactive không đồng nghĩa tự ý** nối từ **Phân biệt assess, act và escalate** sang **Nhóm (team / 팀) xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Proactive không đồng nghĩa tự ý
 
 PMP thường đánh giá cao proactive hành vi (behavior / 동작), nhưng proactive phải nằm trong quản trị (governance / 거버넌스). PM có thể gather thông tin (information / 정보), facilitate, remove impediment và execute approved contingency mà không chờ. Nhưng thay legal yêu cầu (requirement / 요구사항) hoặc approve ngân sách (budget / 예산) ngoài authority không phải proactive; đó là quản trị (governance / 거버넌스) violation.
 
 Tư duy tốt là “chủ động trong ranh giới (boundary / 경계), escalate khi vượt ranh giới (boundary / 경계)”.
-
-> **Nối mạch:** **Nhóm (team / 팀) xung đột (conflict / 충돌)** nối từ **Proactive không đồng nghĩa tự ý** sang **Stakeholder dissatisfaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm (team / 팀) xung đột (conflict / 충돌)
 
@@ -122,15 +110,11 @@ Nếu xung đột (conflict / 충돌) liên quan harassment, an toàn (safety / 
 
 Nếu nguyên nhân gốc (root cause / 근본 원인) là tài nguyên (resource / 자원) xung đột (conflict / 충돌) do organization, coaching hai cá nhân có thể không giải hệ thống (system / 시스템) ràng buộc (constraint / 제약조건).
 
-> **Nối mạch:** **Stakeholder dissatisfaction** nối từ **Nhóm (team / 팀) xung đột (conflict / 충돌)** sang **Rủi ro (risk / 위험) và issue**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Stakeholder dissatisfaction
 
 Khi stakeholder unhappy, xác định expectation gap và bằng chứng (evidence / 증거) trước. “Gửi thêm report” hiếm khi giải concern nếu success criterion khác nhau.
 
 Nếu stakeholder mới xuất hiện hoặc influence đổi, cập nhật (update / 업데이트) engagement chiến lược (strategy / 전략). Nếu yêu cầu (request / 요청) mới ảnh hưởng phạm vi (scope / 범위), chuyển sang thay đổi (change / 변경)/prioritization cơ chế (mechanism / 메커니즘) phù hợp thay vì hứa ngay để làm họ hài lòng.
-
-> **Nối mạch:** **Rủi ro (risk / 위험) và issue** nối từ **Stakeholder dissatisfaction** sang **Thay đổi (change / 변경) yêu cầu (request / 요청)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) và issue
 
@@ -138,23 +122,17 @@ Rủi ro (risk / 위험) chưa xảy ra cần đơn vị sở hữu (owner / 오
 
 Nếu rủi ro (risk / 위험) mới được identify, analyze trước khi random phản hồi (response / 응답). Nếu known rủi ro (risk / 위험) materialize và contingency đã approved, không cần quay lại từ đầu chỉ để “cập nhật (update / 업데이트) register” trước hành động (action / 동작) cần thiết.
 
-> **Nối mạch:** **Thay đổi (change / 변경) yêu cầu (request / 요청)** nối từ **Rủi ro (risk / 위험) và issue** sang **Defect và chất lượng (quality / 품질) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thay đổi (change / 변경) yêu cầu (request / 요청)
 
 Predictive baseline thay đổi (change / 변경) thường cần impact phân tích (analysis / 분석) trước approval và hiện thực (implementation / 구현) sau approval. Adaptive sản phẩm (product / 제품) thay đổi (change / 변경) có thể đi qua backlog prioritization nếu nằm trong guardrail.
 
 Silent hiện thực (implementation / 구현) gần như luôn problematic vì tác động (effect / 효과) lên commitment không visible. Nhưng không phải mọi backlog reorder cần CCB.
 
-> **Nối mạch:** **Defect và chất lượng (quality / 품질) bài toán (problem / 문제)** nối từ **Thay đổi (change / 변경) yêu cầu (request / 요청)** sang **Vendor bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Defect và chất lượng (quality / 품질) bài toán (problem / 문제)
 
 Defect cần phân biệt severity, customer/compliance impact và nguyên nhân gốc (root cause / 근본 원인). Immediate containment có thể đi trước root-cause phân tích (analysis / 분석) khi harm đang xảy ra.
 
 Sau containment, tiến trình (process / 프로세스) improvement quan trọng hơn chỉ sửa từng symptom. Nếu cùng defect lớp (class / 클래스) lặp lại, exam answer chỉ “fix defect” có thể quá hẹp.
-
-> **Nối mạch:** **Vendor bài toán (problem / 문제)** nối từ **Defect và chất lượng (quality / 품질) bài toán (problem / 문제)** sang **Agile/adaptive scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vendor bài toán (problem / 문제)
 
@@ -163,8 +141,6 @@ Khi vendor delay hoặc chất lượng (quality / 품질) kém, rà soát (revi
 “Thêm người” không phải universal solution. Bottleneck có thể là third-party phụ thuộc (dependency / 의존성) hoặc approval.
 
 Nếu option nhắc terminate vendor, claim hoặc penalty, hãy kiểm tra ba lớp trước: entitlement/đặc tả hợp đồng (contract / 계약) right, causation/facts và impact/authority. Punitive hành động (action / 동작) trước bằng chứng (evidence / 증거) thường là distractor mạnh vì nghe decisive nhưng phá quản trị (governance / 거버넌스).
-
-> **Nối mạch:** **Agile/adaptive scenario** nối từ **Vendor bài toán (problem / 문제)** sang **Hybrid scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Agile/adaptive scenario
 
@@ -176,8 +152,6 @@ Velocity không phải KPI để ép nhóm (team / 팀). Retrospective nhằm im
 
 Trong adaptive ngữ cảnh (context / 맥락), “thay đổi (change / 변경) điều khiển (control / 제어)” vẫn tồn tại nhưng điều khiển (control / 제어) đối tượng (object / 객체) khác. sản phẩm (product / 제품) priority có thể thay thường xuyên trong guardrail; ngân sách (budget / 예산) cap, privacy chính sách (policy / 정책), contractual obligation hoặc bản phát hành (release / 릴리스) gate vẫn cần quản trị (governance / 거버넌스) rõ. Vì vậy option “agile nên chấp nhận thay đổi (change / 변경) ngay” cũng máy móc như “mọi thay đổi (change / 변경) phải qua CCB”.
 
-> **Nối mạch:** **Hybrid scenario** nối từ **Agile/adaptive scenario** sang **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và chiến lược (strategy / 전략) thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hybrid scenario
 
 Hybrid question thường xoay quanh giao diện (interface / 인터페이스): adaptive nhóm (team / 팀) gặp fixed đặc tả hợp đồng (contract / 계약), regulatory gate hoặc predictive phụ thuộc (dependency / 의존성).
@@ -185,8 +159,6 @@ Hybrid question thường xoay quanh giao diện (interface / 인터페이스): 
 Không chọn answer “chuyển toàn bộ sang agile” chỉ vì một phần bất định (uncertainty / 불확실성) cao. Hỏi ràng buộc (constraint / 제약조건) nào thực sự cố định và vòng phản hồi (feedback loop / 피드백 루프) nào có thể adaptive.
 
 Đặc biệt chú ý trạng thái (state / 상태) naming. `Done` trong sprint có thể chưa đồng nghĩa vendor accepted, regulator approved hoặc môi trường vận hành (production / 운영 환경) ready. Nếu scenario cho nhiều gate, hãy xác định chính xác trạng thái (state / 상태) của deliverable trước khi chọn hành động (action / 동작).
-
-> **Nối mạch:** **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và chiến lược (strategy / 전략) thay đổi (change / 변경)** nối từ **Hybrid scenario** sang **Compliance và an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và chiến lược (strategy / 전략) thay đổi (change / 변경)
 
@@ -196,23 +168,17 @@ PM thường cần surface bằng chứng (evidence / 증거) và recommendation
 
 Nếu bên ngoài (external / 외부) thay đổi (change / 변경) làm dự án (project / 프로젝트) không còn tạo giá trị (value / 값), câu hỏi không còn đơn thuần là “làm sao giao đúng plan”. Có thể phải compare continue, pivot, phase, pause hoặc terminate theo future giá trị (value / 값) và chuyển tiếp (transition / 전이) impact.
 
-> **Nối mạch:** **Compliance và an toàn (safety / 안전)** nối từ **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và chiến lược (strategy / 전략) thay đổi (change / 변경)** sang **Ethics và transparency**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Compliance và an toàn (safety / 안전)
 
 Mandatory compliance/an toàn (safety / 안전) ranh giới (boundary / 경계) có priority đặc biệt. Không de-scope yêu cầu (requirement / 요구사항) bắt buộc để giữ deadline nếu không có authorized/legal exception cơ chế (mechanism / 메커니즘).
 
 Nếu violation đang gây exposure, containment và proper escalation có thể phải xảy ra trước full phân tích (analysis / 분석). nghiệp vụ (business / 비즈니스) pressure không tự override regulation.
 
-> **Nối mạch:** **Ethics và transparency** nối từ **Compliance và an toàn (safety / 안전)** sang **Formula questions: nhớ giả định (assumption / 가정) trước công thức**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ethics và transparency
 
 Không che forecast xấu, defect hoặc xung đột (conflict / 충돌) of interest để bảo vệ hình ảnh dự án (project / 프로젝트). quyết định (decision / 결정) maker cần material thông tin (information / 정보).
 
 Confidentiality không đồng nghĩa concealment. Share đúng người, đúng channel, đủ bằng chứng (evidence / 증거).
-
-> **Nối mạch:** **Formula questions: nhớ giả định (assumption / 가정) trước công thức** nối từ **Ethics và transparency** sang **Đọc dashboard, sản phẩm tạo ra (artifact / 산출물) và data-based question**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formula questions: nhớ giả định (assumption / 가정) trước công thức
 
@@ -221,8 +187,6 @@ Nếu gặp EVM, CPM, PERT hoặc EMV, hãy viết mental meaning trước arith
 Khi có nhiều EAC formula, clue quan trọng là giả định (assumption / 가정): hiện tại (current / 현재) variance tiếp tục, one-time, hay cả CPI/SPI ảnh hưởng phần còn lại. Arithmetic đứng sau nhân quả (causal / 인과적) story.
 
 Một câu formula có thể được giấu trong scenario. Ví dụ dashboard cho `CPI = 0.82`, `SPI = 1.03` và management hỏi có nên báo “dự án (project / 프로젝트) healthy” hay không. Arithmetic chỉ cho biết chi phí (cost / 비용) efficiency kém baseline còn earned schedule đang hơi ahead theo EVM; quyết định (decision / 결정) vẫn cần phạm vi (scope / 범위), chất lượng (quality / 품질), forecast và cause.
-
-> **Nối mạch:** **Đọc dashboard, sản phẩm tạo ra (artifact / 산출물) và data-based question** nối từ **Formula questions: nhớ giả định (assumption / 가정) trước công thức** sang **Case-study/practicum lập luận (reasoning / 추론): giữ một trạng thái (state / 상태) mô hình (model / 모델) xuyên nhiều câu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc dashboard, sản phẩm tạo ra (artifact / 산출물) và data-based question
 
@@ -243,8 +207,6 @@ Ví dụ dashboard có `SPI = 0.92`, `CPI = 1.04`, defect severity-1 tăng và g
 
 Sản phẩm tạo ra (artifact / 산출물) cũng cần đọc theo purpose. rủi ro (risk / 위험) register trả lời bất định (uncertainty / 불확실성)/phản hồi (response / 응답); issue log trả lời điều kiện (condition / 조건) đã xảy ra; thay đổi (change / 변경) log trả lời quản trị (governance / 거버넌스) trạng thái (state / 상태); RTM trả lời traceability; quyết định (decision / 결정) log trả lời rationale/giả định (assumption / 가정). Nếu câu hỏi đưa sản phẩm tạo ra (artifact / 산출물) nhưng option yêu cầu cập nhật (update / 업데이트) một sản phẩm tạo ra (artifact / 산출물) khác, hãy hỏi cập nhật (update / 업데이트) đó có làm quyết định (decision / 결정) tốt hơn ngay lúc này không hay chỉ là administrative hành động (action / 동작).
 
-> **Nối mạch:** **Đọc dashboard, sản phẩm tạo ra (artifact / 산출물) và data-based question** nêu quy tắc; **Case-study/practicum lập luận (reasoning / 추론): giữ một trạng thái (state / 상태) mô hình (model / 모델) xuyên nhiều câu** thử quy tắc trong tình huống, rồi **Loại distractor thường gặp** mở rộng hệ quả.
-
 ## Case-study/practicum lập luận (reasoning / 추론): giữ một trạng thái (state / 상태) mô hình (model / 모델) xuyên nhiều câu
 
 Case-study item khác independent question ở chỗ nhiều câu có thể dùng chung ngữ cảnh (context / 맥락), dữ liệu (data / 데이터) hoặc sản phẩm tạo ra (artifact / 산출물). Sai lầm lớn là reset mô hình tư duy (mental model / 사고 모델) ở mỗi câu và quên các fact đã establish trước đó.
@@ -255,8 +217,6 @@ Nếu sản phẩm tạo ra (artifact / 산출물) mới mâu thuẫn narrative 
 
 Trường hợp (case / 사례) study cũng thường kiểm tra propagation. Một vendor delay có thể làm schedule slip, kích hoạt đặc tả hợp đồng (contract / 계약) right, tăng chi phí (cost / 비용), đẩy UAT vào regulatory cửa sổ (window / 윈도우) khác và thay stakeholder expectation. Đừng cố giữ câu hỏi trong một kiến thức (knowledge / 지식) area duy nhất.
 
-> **Nối mạch:** **Case-study/practicum lập luận (reasoning / 추론): giữ một trạng thái (state / 상태) mô hình (model / 모델) xuyên nhiều câu** nêu quy tắc; **Loại distractor thường gặp** thử quy tắc trong tình huống, rồi **Không thêm fact không có trong scenario** mở rộng hệ quả.
-
 ## Loại distractor thường gặp
 
 Một distractor có thể đúng nhưng quá muộn, như cập nhật (update / 업데이트) lesson learned trước khi contain sự cố (incident / 인시던트). Một distractor đúng nhưng vượt authority, như PM tự approve major ngân sách (budget / 예산) thay đổi (change / 변경). Một distractor xử lý symptom, như tăng overtime khi nguyên nhân gốc (root cause / 근본 원인) là phụ thuộc (dependency / 의존성). Một distractor quá punitive khi chưa có facts, như terminate vendor ngay. Một distractor quá passive, như “monitor” rủi ro (risk / 위험) đã materialize.
@@ -265,15 +225,11 @@ Ngoài ra có distractor **administratively correct but decision-useless**: cậ
 
 Đọc option theo hành động (action / 동작) thứ tự (ordering / 순서), authority, bằng chứng (evidence / 증거) và hệ thống (system / 시스템) tác động (effect / 효과) thường giúp loại chúng mà không cần nhớ phrase template.
 
-> **Nối mạch:** **Không thêm fact không có trong scenario** nối từ **Loại distractor thường gặp** sang **Sáu mini-scenario để luyện lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Không thêm fact không có trong scenario
 
 Đừng tự giả định sponsor hostile, nhóm (team / 팀) incompetent hay đặc tả hợp đồng (contract / 계약) fixed-price nếu đề không nói. Hidden giả định (assumption / 가정) có thể làm option sai trở nên hợp lý.
 
 Dùng thông tin được cung cấp và project-management principle đủ để suy luận. Nếu hai answer chỉ khác vì một fact không nêu, xem lại wording như first/next, authority hoặc vòng đời (lifecycle / 생명주기).
-
-> **Nối mạch:** **Sáu mini-scenario để luyện lập luận (reasoning / 추론)** nối từ **Không thêm fact không có trong scenario** sang **Thời gian (time / 시간) management cho exam 2026**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sáu mini-scenario để luyện lập luận (reasoning / 추론)
 
@@ -313,8 +269,6 @@ Hệ thống (system / 시스템) go-live, acceptance hoàn tất, ngân sách (
 
 Benefits đơn vị sở hữu (owner / 오너)/sản phẩm (product / 제품)/operations cần investigate adoption drivers theo benefits plan. Nếu corrective initiative vượt dự án (project / 프로젝트) closure ranh giới (boundary / 경계), quản trị (governance / 거버넌스) có thể authorize new công việc (work / 작업). đầu ra (output / 출력) acceptance và benefit realization là hai trạng thái (state / 상태) khác nhau.
 
-> **Nối mạch:** **Thời gian (time / 시간) management cho exam 2026** nối từ **Sáu mini-scenario để luyện lập luận (reasoning / 추론)** sang **Cách luyện practice question đúng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thời gian (time / 시간) management cho exam 2026
 
 Theo ECO July 2026 hiện hành, PMP có 180 câu trong 240 phút; 170 câu được chấm và 10 câu là pretest không tính điểm. Exam có hai break 10 phút. ECO hiện mô tả break đầu sau case-study section và break thứ hai khoảng giữa phần independent questions; sau khi rà soát (review / 검토) và bắt đầu break, bạn không quay lại section trước.
@@ -322,8 +276,6 @@ Theo ECO July 2026 hiện hành, PMP có 180 câu trong 240 phút; 170 câu đư
 Average thô là 80 giây/câu, nhưng không nên cố giữ từng câu đúng 80 giây. Case-study/sản phẩm tạo ra (artifact / 산출물) item có thể cần nhiều ngữ cảnh (context / 맥락) hơn trong khi một số independent question ngắn hơn. Dùng thời gian (time / 시간) ngân sách (budget / 예산) theo section/khối (block / 블록), đánh dấu câu gây tắc và bảo vệ thời gian cho phần còn lại.
 
 Câu dài scenario nên đọc question stem để biết đang tìm “first”, “next”, “best” hay “should have done”, sau đó quay lại bằng chứng (evidence / 증거) trong scenario. Với sản phẩm tạo ra (artifact / 산출물)/dữ liệu (data / 데이터) question, đọc quyết định (decision / 결정) ask trước rồi mới scan dashboard. Đừng dành quá nhiều phút để chứng minh một câu ambiguous nếu có thể mark và quay lại trong cùng section.
-
-> **Nối mạch:** **Cách luyện practice question đúng cách** nối từ **Thời gian (time / 시간) management cho exam 2026** sang **Cách tự tạo scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cách luyện practice question đúng cách
 
@@ -333,8 +285,6 @@ Nếu sai vì không biết term, rà soát (review / 검토) glossary. Nếu sa
 
 Lỗi (error / 오류) log nên phân loại lập luận (reasoning / 추론) thất bại (failure / 실패) để practice có vòng phản hồi (feedback loop / 피드백 루프). Mục tiêu là giảm một **lớp (class / 클래스) of lỗi (error / 오류)**, không chỉ nhớ đáp án của một câu.
 
-> **Nối mạch:** **Cách tự tạo scenario** nối từ **Cách luyện practice question đúng cách** sang **Cách học chapter theo exam vòng lặp (loop / 루프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cách tự tạo scenario
 
 Lấy một trường hợp (case / 사례) cơ bản rồi đổi một biến. xung đột (conflict / 충돌) thông thường → harassment. Deadline mục tiêu (target / 대상) → legal deadline. rủi ro (risk / 위험) chưa xảy ra → sự kiện (event / 이벤트) đã xảy ra. Predictive → adaptive. PM có authority → vượt tolerance. Average chỉ số (metric / 지표) tốt → tail segment xấu. Vendor delay → vendor delay kèm contractual entitlement dispute.
@@ -342,8 +292,6 @@ Lấy một trường hợp (case / 사례) cơ bản rồi đổi một biến.
 Nếu answer của bạn thay đổi hợp lý theo một biến, mô hình tư duy (mental model / 사고 모델) đang hoạt động. Nếu answer không bao giờ đổi, có thể bạn đang dùng slogan.
 
 Một bài tập mạnh hơn là giữ stem nhưng thay sản phẩm tạo ra (artifact / 산출물). Ví dụ cùng một dự án (project / 프로젝트), dashboard A cho schedule slip nhỏ nhưng chất lượng (quality / 품질) ổn; dashboard B cho schedule đúng nhưng severity-1 defect tăng. Nếu hành động (action / 동작) không đổi, bạn có thể đang bỏ qua bằng chứng (evidence / 증거).
-
-> **Nối mạch:** **Cách học chapter theo exam vòng lặp (loop / 루프)** nối từ **Cách tự tạo scenario** sang **Final mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cách học chapter theo exam vòng lặp (loop / 루프)
 
@@ -362,8 +310,6 @@ mental model
 ```
 
 Khi tỷ lệ đúng tăng nhưng lỗi (error / 오류) log vẫn cho thấy cùng một lập luận (reasoning / 추론) thất bại (failure / 실패), đừng vội tăng số câu. Hãy sửa cơ chế (mechanism / 메커니즘) trước. Ngược lại, nếu concept hiểu tốt nhưng tốc độ chậm, practice nên tập trung recognition của trạng thái (state / 상태)/authority/chuỗi (sequence / 시퀀스) dưới thời gian (time / 시간) pressure.
-
-> **Nối mạch:** Final mental model tổng hợp kết quả từ **Cách học chapter theo exam vòng lặp**, rồi khép mạch bằng cách quay lại owner và prerequisite trong README.
 
 ## Final mô hình tư duy (mental model / 사고 모델)
 

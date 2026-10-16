@@ -18,8 +18,6 @@ Một tế bào sống liên tục lấy chất từ môi trường, biến đ�
 
 Khi học một thành phần, hãy đặt thêm bốn câu hỏi: nó nhận đầu vào (input / 입력) gì, biến đổi cái gì, tạo đầu ra (output / 출력) gì, và đầu ra (output / 출력) đó ảnh hưởng ngược lại hệ thống ra sao. Cách nghĩ này sẽ quay lại khi học receptor trong truyền tín hiệu (signaling), kidney trong cân bằng nội môi (homeostasis), vật săn mồi–con mồi (predator–prey) trong ecology và mạng lưới điều hòa gen (gene-regulatory network) trong phát triển (development).
 
-> **Nối mạch:** Sinh học bắt đầu từ quá trình thay vì vật thể; quan sát ghi nhận dữ liệu, cơ chế giải thích cách dữ liệu sinh ra, còn model cho phép suy luận ở quy mô không thể quan sát trực tiếp.
-
 ## 2. Quan sát, giải thích và cơ chế không phải cùng một thứ
 
 Khoa học thường bắt đầu bằng một **hiện tượng (phenomenon / 현상)**. Sau khi chạy nhanh, bạn thở gấp hơn. Đây là điều quan sát được. Nhưng “thở gấp” chưa phải lời giải thích.
@@ -50,8 +48,6 @@ Vì vậy, experiment thường cần **nhóm đối chứng (control group / �
 
 Điều khiển (control / 제어) không phải thủ tục hành chính. Nó là cách tách tín hiệu nhân quả (causal signal) khỏi noise.
 
-> **Nối mạch:** **2. Quan sát, giải thích và cơ chế không phải cùng một thứ** xác định đầu vào; **3. mô hình (model / 모델): công cụ để suy luận, không phải bản sao thực tại** giải thích vận hành; **4. quy mô (scale / 규모): cùng một sự sống nhưng nhiều tầng kích thước** kiểm tra hệ quả.
-
 ## 3. mô hình (model / 모델): công cụ để suy luận, không phải bản sao thực tại
 
 Một hệ sinh học thật thường quá phức tạp để giữ toàn bộ trong đầu. Vì vậy khoa học xây **mô hình (model / 모델)**. mô hình (model / 모델) có thể là hình vẽ, phương trình, sơ đồ nhân quả (causal diagram), mạng lưới hoặc simulation.
@@ -69,8 +65,6 @@ Trong sinh thái học (ecology) ta sẽ gặp:
 Mô hình này nói tốc độ tăng quần thể tỷ lệ với kích thước quần thể hiện tại. Nó hữu ích để hiểu tăng trưởng theo hàm mũ (exponential growth), nhưng không có nghĩa quần thể thật có tài nguyên vô hạn. Khi giả định (assumption / 가정) đó không còn hợp lý, ta cần mô hình (model / 모델) khác như tăng trưởng logistic (logistic growth).
 
 Mỗi khi gặp phương trình, hãy hỏi: biến đại diện cho điều gì, relationship nào đang được giả định, mô hình (model / 모델) bỏ qua điều gì, và khi nào giả định (assumption / 가정) có thể vỡ.
-
-> **Nối mạch:** Model giúp suy luận nhưng luôn có domain; scale tiếp theo đổi biến quan sát và constraint, nên “hiệu quả” phải được đánh giá theo tầng tổ chức.
 
 ## 4. quy mô (scale / 규모): cùng một sự sống nhưng nhiều tầng kích thước
 
@@ -97,8 +91,6 @@ Thuộc tính (property / 속성) mới ở cấp tổ chức cao hơn được 
 
 Một thay đổi có thể đi từ dưới lên. Mutation một nucleotide có thể đổi axit amin (amino acid), làm protein đổi folding, ảnh hưởng cell hàm (function / 함수) và cuối cùng thay đổi phenotype. Nhưng tác động cũng đi từ trên xuống theo nghĩa ngữ cảnh (context / 맥락): hormone toàn cơ thể thay đổi biểu hiện gen (gene expression) trong tế bào; nhiệt độ môi trường thay đổi physiology; áp lực sinh thái (ecological pressure) làm allele nào đó tăng tần số qua nhiều thế hệ.
 
-> **Nối mạch:** **5. quy mô (scale / 규모) còn thay đổi cả định luật “hiệu quả” của hệ** nối từ **4. quy mô (scale / 규모): cùng một sự sống nhưng nhiều tầng kích thước** sang **6. cấu trúc (structure / 구조)–chức năng (function): hình dạng tạo điều kiện và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. quy mô (scale / 규모) còn thay đổi cả định luật “hiệu quả” của hệ
 
 Một lý do sinh vật nhỏ và lớn không thể chỉ là phiên bản phóng to của nhau là **tỉ lệ diện tích bề mặt/thể tích (surface-area-to-volume ratio / 표면적-부피비)**.
@@ -113,8 +105,6 @@ Khi kích thước tăng, diện tích bề mặt trên mỗi đơn vị thể t
 
 Math ở đây không phải phụ kiện. Nó giải thích vì sao kiến trúc (architecture / 아키텍처) sinh học thay đổi theo quy mô (scale / 규모).
 
-> **Nối mạch:** **5. quy mô (scale / 규모) còn thay đổi cả định luật “hiệu quả” của hệ** đặt tiêu chí; **6. cấu trúc (structure / 구조)–chức năng (function): hình dạng tạo điều kiện và giới hạn** dùng nó để kiểm tra ranh giới, rồi **7. Ba dòng xuyên suốt Sinh học: vật chất, năng lượng, thông tin** mở rộng cơ chế.
-
 ## 6. cấu trúc (structure / 구조)–chức năng (function): hình dạng tạo điều kiện và giới hạn
 
 Một trong những câu hỏi mạnh nhất trong Sinh học là: **cấu trúc này khiến chức năng nào khả thi?** Đây là quan hệ cấu trúc–chức năng (structure–function relationship / 구조-기능 관계).
@@ -124,8 +114,6 @@ Protein (protein) enzyme có trung tâm hoạt động (active site) với hình
 Cấu trúc (structure / 구조) luôn đi kèm **sự đánh đổi (trade-off / 트레이드오프)**. Một màng càng dễ thấm thì exchange càng nhanh nhưng điều khiển (control / 제어) càng khó. Xương dày hơn có thể chịu lực tốt nhưng nặng hơn. Hemoglobin giữ oxygen quá chặt thì khó nhả cho mô.
 
 Vì vậy adaptation tiến hóa thường không tạo “thiết kế hoàn hảo”. Nó tạo lời giải đủ tốt dưới những ràng buộc (constraint / 제약조건) cụ thể.
-
-> **Nối mạch:** **6. cấu trúc (structure / 구조)–chức năng (function): hình dạng tạo điều kiện và giới hạn** đặt tiêu chí; **7. Ba dòng xuyên suốt Sinh học: vật chất, năng lượng, thông tin** dùng nó để kiểm tra ranh giới, rồi **8. phản hồi (feedback / 피드백): tại sao hệ sống không chạy mất kiểm soát?** mở rộng cơ chế.
 
 ## 7. Ba dòng xuyên suốt Sinh học: vật chất, năng lượng, thông tin
 
@@ -149,8 +137,6 @@ DNA lưu thông tin di truyền; RNA và protein triển khai thông tin; recept
 
 “thông tin (information / 정보)” trong Sinh học không phải khái niệm thần bí. Nó luôn cần vật mang tin, cơ chế mã hóa, cơ chế đọc và bối cảnh (context) giải mã. DNA chuỗi (sequence / 시퀀스) chỉ có tác dụng vì tế bào có bộ máy đọc chuỗi (sequence / 시퀀스) thành RNA/protein.
 
-> **Nối mạch:** **8. phản hồi (feedback / 피드백): tại sao hệ sống không chạy mất kiểm soát?** nối từ **7. Ba dòng xuyên suốt Sinh học: vật chất, năng lượng, thông tin** sang **9. Variation và xác suất (probability / 확률): Sinh học hiếm khi tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. phản hồi (feedback / 피드백): tại sao hệ sống không chạy mất kiểm soát?
 
 Hệ sống cần regulation. Nếu một tiến trình (process / 프로세스) chỉ tăng mãi, hệ sẽ sụp đổ. Vì vậy Sinh học chứa rất nhiều **phản hồi (phản hồi / 피드백)**.
@@ -171,8 +157,6 @@ D --> A
 
 Mô hình tư duy này sẽ tái xuất ở hệ nội tiết (endocrine system), osmoregulation, chu kỳ tế bào (cell cycle), điều hòa gen (gene regulation) và ecosystem stability.
 
-> **Nối mạch:** **9. Variation và xác suất (probability / 확률): Sinh học hiếm khi tuyệt đối** nối từ **8. phản hồi (feedback / 피드백): tại sao hệ sống không chạy mất kiểm soát?** sang **10. Tốc độ (rate), độ dốc (gradient / 기울기) và mạng lưới (network) — ba kiểu relationship sẽ xuất hiện liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Variation và xác suất (probability / 확률): Sinh học hiếm khi tuyệt đối
 
 Sinh vật giống nhau nhưng không hoàn toàn giống nhau. **Biến dị (variation / 변이)** đến từ đột biến (mutation), tái tổ hợp (recombination), môi trường (environment / 환경), lịch sử phát triển (developmental history) và stochastic tiến trình (process / 프로세스). Vì vậy nhiều phát biểu Sinh học mô tả phân phối (distribution / 분포) chứ không mô tả một giá trị cố định.
@@ -180,8 +164,6 @@ Sinh vật giống nhau nhưng không hoàn toàn giống nhau. **Biến dị (v
 Khi nói allele có xác suất 50% được truyền, điều đó không có nghĩa cứ hai đứa con thì đúng một đứa nhận allele. xác suất (probability / 확률) mô tả mẫu hình (pattern) khi lặp nhiều lần; từng kết quả (outcome / 결과) riêng lẻ vẫn không chắc chắn.
 
 Điều tương tự xảy ra trong medicine. Một yếu tố nguy cơ (risk factor) tăng xác suất (probability / 확률) bệnh không có nghĩa mọi người có factor đó đều bệnh. Đọc Sinh học tốt đòi hỏi phân biệt **deterministic relationship** với **probabilistic relationship**.
-
-> **Nối mạch:** **10. Tốc độ (rate), độ dốc (gradient / 기울기) và mạng lưới (network) — ba kiểu relationship sẽ xuất hiện liên tục** nối từ **9. Variation và xác suất (probability / 확률): Sinh học hiếm khi tuyệt đối** sang **11. Các hiểu lầm phổ biến (common misconceptions)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Tốc độ (rate), độ dốc (gradient / 기울기) và mạng lưới (network) — ba kiểu relationship sẽ xuất hiện liên tục
 
@@ -195,8 +177,6 @@ Ngoài ba dòng vật chất–năng lượng–thông tin, có ba motif toán h
 
 Nhận ra motif giúp chuyển kiến thức từ chapter này sang chapter khác thay vì học lại từ đầu.
 
-> **Nối mạch:** **11. Các hiểu lầm phổ biến (common misconceptions)** nối từ **10. Tốc độ (rate), độ dốc (gradient / 기울기) và mạng lưới (network) — ba kiểu relationship sẽ xuất hiện liên tục** sang **12. Một ví dụ xuyên quy mô (scale / 규모): tại sao bạn thở nhanh khi chạy?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Các hiểu lầm phổ biến (common misconceptions)
 
 Một hiểu lầm phổ biến là nghĩ “Sinh học chỉ mô tả”. Thực tế hiện đại (modern / 현대적) biology dùng chemistry, vật lý (physics), toán học (mathematics), statistics và computation để xây nhân quả (causal / 인과적) mô hình (model / 모델) và prediction.
@@ -207,8 +187,6 @@ Hiểu lầm thứ ba là nghĩ adaptation tồn tại vì sinh vật “cần�
 
 Hiểu lầm thứ tư là nghĩ cân bằng nội môi giữ mọi thứ hoàn toàn cố định. Thực tế biological variable thường dao động quanh một vùng phù hợp; điểm đặt (set point) cũng có thể thay đổi theo bối cảnh.
 
-> **Nối mạch:** **11. Các hiểu lầm phổ biến (common misconceptions)** nêu quy tắc; **12. Một ví dụ xuyên quy mô (scale / 규모): tại sao bạn thở nhanh khi chạy?** thử quy tắc trong tình huống cụ thể, rồi **13. Từ cách tư duy sang câu hỏi “sự sống là gì?”** mở rộng hệ quả.
-
 ## 12. Một ví dụ xuyên quy mô (scale / 규모): tại sao bạn thở nhanh khi chạy?
 
 Ta có thể dùng toàn bộ khung phần mềm (framework / 프레임워크) của chapter để phân tích một hiện tượng quen thuộc.
@@ -216,8 +194,6 @@ Ta có thể dùng toàn bộ khung phần mềm (framework / 프레임워크) c
 Ở quy mô phân tử (molecular scale), ATP bị thủy phân để muscle protein tạo lực. Ở cellular quy mô (scale / 규모), mitochondria tăng oxidation fuel để tái tạo ATP. Ở tissue quy mô (scale / 규모), muscle tạo nhiều CO₂ và heat hơn. Ở organ quy mô (scale / 규모), lung và heart phải tăng exchange/vận chuyển (transport / 전송). Ở điều khiển (control / 제어) quy mô (scale / 규모), chemoreceptor phát hiện thay đổi CO₂/pH và hệ thần kinh (nervous system) điều chỉnh ventilation. Ở quy mô sinh vật (organism scale), hành vi (behavior / 동작) “thở nhanh” xuất hiện.
 
 Không có một tầng duy nhất là “lời giải đúng”. Lời giải đầy đủ là chuỗi nhân quả (causal / 인과적) đi xuyên các tầng.
-
-> **Nối mạch:** **12. Một ví dụ xuyên quy mô (scale / 규모): tại sao bạn thở nhanh khi chạy?** nêu quy tắc; **13. Từ cách tư duy sang câu hỏi “sự sống là gì?”** thử quy tắc trong tình huống cụ thể để khép mạch giải thích.
 
 ## 13. Từ cách tư duy sang câu hỏi “sự sống là gì?”
 

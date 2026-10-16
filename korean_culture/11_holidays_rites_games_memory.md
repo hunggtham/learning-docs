@@ -21,8 +21,6 @@ ngày trên lịch
 
 Lịch không chỉ cho biết “hôm nay là ngày nào”; nó còn điều phối hành vi xã hội.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Âm lịch và dương lịch cùng tồn tại** nối từ **Lịch biến thời gian thành văn hoá** sang **설날: Tết âm lịch và tái khẳng định quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Âm lịch và dương lịch cùng tồn tại
 
 Hành chính hằng ngày chủ yếu dùng dương lịch Gregorian, nhưng nhiều lễ truyền thống vẫn dựa vào **âm lịch (lunar calendar / 음력)**. Vì vậy trong cùng một gia đình có thể tồn tại song song hai hệ lịch.
@@ -30,8 +28,6 @@ Hành chính hằng ngày chủ yếu dùng dương lịch Gregorian, nhưng nhi
 Sinh nhật `생일` cũng có biến thể. Nhiều người hiện dùng ngày dương lịch, nhưng một số thế hệ hoặc gia đình vẫn nhắc `음력 생일`, tức sinh nhật theo âm lịch. Điều này tạo ra một hiện tượng thú vị: một sự kiện định danh cá nhân có thể phải chuyển đổi lịch mỗi năm.
 
 Trong hệ thống máy tính, điều này gần giống việc cùng một mốc thời gian được biểu diễn theo nhiều múi giờ hoặc quy ước lịch khác nhau. Sự kiện không đổi nhưng cách biểu diễn thay đổi.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **설날: Tết âm lịch và tái khẳng định quan hệ** nối từ **Âm lịch và dương lịch cùng tồn tại** sang **덕담: lời chúc như một kịch bản giao tiếp xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 설날: Tết âm lịch và tái khẳng định quan hệ
 
@@ -41,8 +37,6 @@ Trong hệ thống máy tính, điều này gần giống việc cùng một m�
 
 `떡국` là canh bánh gạo, thường gắn với hình ảnh “thêm một tuổi”. Trong quá khứ, cách tính tuổi truyền thống của Hàn Quốc và thời điểm năm mới có liên hệ văn hoá phức tạp; hiện nay không nên đồng nhất cách tính tuổi hành chính với ngôn ngữ nghi lễ truyền thống.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **덕담: lời chúc như một kịch bản giao tiếp xã hội** nối từ **설날: Tết âm lịch và tái khẳng định quan hệ** sang **세뱃돈: chuyển giao nguồn lực giữa các thế hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 덕담: lời chúc như một kịch bản giao tiếp xã hội
 
 `덕담` là lời chúc tốt lành đầu năm. Nội dung có thể liên quan sức khoẻ, học tập, công việc, hôn nhân hoặc hạnh phúc gia đình.
@@ -51,15 +45,11 @@ Lời chúc có chức năng xã hội mạnh vì nó tạo một khuôn mẫu �
 
 Đây là ví dụ cho thấy chuẩn mực có thể thay đổi nhanh hơn công thức ngôn ngữ. Kịch bản cũ vẫn tồn tại, nhưng ý nghĩa của nó được thương lượng lại giữa các thế hệ.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **덕담: lời chúc như một kịch bản giao tiếp xã hội** đặt vấn đề; **세뱃돈: chuyển giao nguồn lực giữa các thế hệ** đối chiếu bằng chứng, rồi **귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 세뱃돈: chuyển giao nguồn lực giữa các thế hệ
 
 `세뱃돈` thường được hiểu là tiền may mắn dành cho trẻ em, nhưng ở mức khái quát hơn nó là một dạng **chuyển giao nguồn lực giữa các thế hệ (intergenerational resource transfer)** đi kèm nghi lễ.
 
 Một phong bao tiền không chỉ có giá trị tiền tệ. Thời điểm, người trao, lời chúc và nghi thức lạy khiến nó khác với một lần chuyển khoản ngân hàng thông thường. Có thể nói nghi lễ đã “gắn siêu dữ liệu (metadata / 메타데이터)” vào tiền.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **세뱃돈: chuyển giao nguồn lực giữa các thế hệ** đặt vấn đề; **귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ** đối chiếu bằng chứng, rồi **추석: mùa thu, tổ tiên và quê nhà** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ
 
@@ -76,15 +66,11 @@ cùng hệ thống đường bộ
 
 Vì vậy đặt vé, khởi hành sớm và theo dõi giao thông cũng trở thành một phần rất thực tế của “văn hoá ngày lễ”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **추석: mùa thu, tổ tiên và quê nhà** nối từ **귀성·귀경: hai làn di chuyển ngược nhau trong dịp lễ** sang **송편: món ăn như mốc neo ký ức theo mùa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 추석: mùa thu, tổ tiên và quê nhà
 
 **Chuseok (추석)** diễn ra vào rằm tháng 8 âm lịch, gắn với mùa thu hoạch, tổ tiên và đoàn tụ gia đình. `송편`, viếng mộ `성묘` và nghi lễ `차례` là những hình ảnh quen thuộc, nhưng mức độ thực hiện khác nhau theo từng gia đình.
 
 Trong xã hội đô thị, “về quê” tạo ra những đợt di chuyển lớn. Khái niệm quê hương `고향` vì vậy không chỉ là một toạ độ địa lý mà còn là một nút ký ức của quan hệ thân tộc. Với thế hệ sinh và lớn lên hoàn toàn ở Seoul, ý nghĩa của `고향` có thể yếu hơn hoặc chuyển thành quê của cha mẹ.
-
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **송편: món ăn như mốc neo ký ức theo mùa** nối từ **추석: mùa thu, tổ tiên và quê nhà** sang **벌초와 성묘: cảnh quan, tổ tiên và lao động bảo trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 송편: món ăn như mốc neo ký ức theo mùa
 
@@ -94,8 +80,6 @@ Một món ăn lặp lại đúng thời điểm mỗi năm có thể trở thà
 
 Vì vậy thức ăn có thể trở thành một phần của hệ thống ký ức gắn với lịch.
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **벌초와 성묘: cảnh quan, tổ tiên và lao động bảo trì** nối từ **송편: món ăn như mốc neo ký ức theo mùa** sang **차례 và 제사: không nên đồng nhất mọi nghi lễ tổ tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 벌초와 성묘: cảnh quan, tổ tiên và lao động bảo trì
 
 `성묘` là thăm mộ tổ tiên; `벌초` là dọn hoặc cắt cỏ quanh mộ, thường được nhắc tới trước Chuseok trong một số gia đình.
@@ -104,8 +88,6 @@ Những thực hành này cho thấy ký ức về tổ tiên không chỉ tồn
 
 Khi con cháu sống xa, dịch vụ thuê ngoài hoặc những hình thức tưởng niệm đơn giản hơn có thể tăng. Đây là ví dụ về việc chức năng văn hoá được giữ lại trong khi mô hình lao động thay đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **차례 và 제사: không nên đồng nhất mọi nghi lễ tổ tiên** nối từ **벌초와 성묘: cảnh quan, tổ tiên và lao động bảo trì** sang **명절증후군: ngày lễ cũng tạo ra chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 차례 và 제사: không nên đồng nhất mọi nghi lễ tổ tiên
 
 `차례` thường chỉ nghi lễ tưởng nhớ tổ tiên vào các dịp lớn như Seollal hoặc Chuseok, trong khi `제사` có phạm vi rộng hơn và thường bao gồm nghi lễ vào ngày mất. Trong ngôn ngữ đời thường, cách dùng có thể linh hoạt.
@@ -113,8 +95,6 @@ Khi con cháu sống xa, dịch vụ thuê ngoài hoặc những hình thức t�
 Điều quan trọng là nghi thức đang thay đổi. Bàn lễ có thể đơn giản hơn, việc phân chia công việc theo giới được thương lượng lại, và một số gia đình chuyển sang buổi tưởng niệm thay vì thực hiện đầy đủ nghi lễ hình thức.
 
 Không tồn tại một “bàn cúng chuẩn quốc gia” áp dụng cho mọi gia đình. Nhiều quy tắc lan truyền trên Internet thực chất là quy ước của từng vùng, từng họ hoặc là kết quả của quá trình chuẩn hoá về sau.
-
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **명절증후군: ngày lễ cũng tạo ra chi phí** nối từ **차례 và 제사: không nên đồng nhất mọi nghi lễ tổ tiên** sang **Lao động ngày lễ và giới: ai tạo ra “không khí lễ”?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 명절증후군: ngày lễ cũng tạo ra chi phí
 
@@ -130,15 +110,11 @@ lao động + chi phí + áp lực xã hội
 
 Văn hoá không chỉ tạo ý nghĩa đẹp; nó cũng phân phối khối lượng công việc và chi phí giữa những người tham gia.
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Lao động ngày lễ và giới: ai tạo ra “không khí lễ”?** nối từ **명절증후군: ngày lễ cũng tạo ra chi phí** sang **선물세트: ngành bán lẻ đóng gói nghi lễ thành sản phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lao động ngày lễ và giới: ai tạo ra “không khí lễ”?
 
 Một bữa ăn ngày lễ không tự xuất hiện. Mua sắm, nấu ăn, dọn dẹp, phục vụ và rửa bát đều là lao động. Trong lịch sử, ở một số gia đình, phần lớn lao động nghi lễ trong nhà có thể rơi nhiều hơn vào phụ nữ hoặc con dâu.
 
 Khi chuẩn mực giới thay đổi, gia đình thương lượng lại cách phân chia việc: mua đồ chế biến sẵn, ăn ở nhà hàng, chia đều công việc hoặc bỏ bớt một số nghi lễ. Như vậy văn hoá ngày lễ có thể thay đổi từ bên trong gia đình mà không cần “truyền thống biến mất”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **선물세트: ngành bán lẻ đóng gói nghi lễ thành sản phẩm** nối từ **Lao động ngày lễ và giới: ai tạo ra “không khí lễ”?** sang **단오: lễ hội theo mùa và bản sắc địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 선물세트: ngành bán lẻ đóng gói nghi lễ thành sản phẩm
 
@@ -148,23 +124,17 @@ Bán lẻ ở đây thực hiện một việc đáng chú ý: **chuẩn hoá s�
 
 Tuy nhiên, món quà càng được chuẩn hoá thì mức cá nhân hoá càng giảm. Vì vậy bao bì cao cấp, thương hiệu và thông điệp riêng được dùng để tạo lại sự khác biệt.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **단오: lễ hội theo mùa và bản sắc địa phương** nối từ **선물세트: ngành bán lẻ đóng gói nghi lễ thành sản phẩm** sang **정월대보름: rằm tháng Giêng âm lịch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 단오: lễ hội theo mùa và bản sắc địa phương
 
 **Dano (단오)** là lễ truyền thống vào ngày 5 tháng 5 âm lịch, từng gắn với nghi lễ theo mùa, trò chơi và hoạt động cộng đồng. **Gangneung Danoje (강릉단오제)** là ví dụ nổi tiếng về một lễ hội địa phương được bảo tồn như di sản.
 
 Lễ hội này cho thấy văn hoá quốc gia luôn chứa những hệ thống địa phương. Một sự kiện tại Gangneung vừa thuộc di sản Hàn Quốc, vừa mang bản sắc vùng cụ thể.
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **정월대보름: rằm tháng Giêng âm lịch** nối từ **단오: lễ hội theo mùa và bản sắc địa phương** sang **부럼, 오곡밥 và hệ thống biểu tượng qua thực phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 정월대보름: rằm tháng Giêng âm lịch
 
 **Jeongwol Daeboreum (정월대보름)** là rằm tháng Giêng âm lịch, gắn với nhiều tập quán về thực phẩm, lửa và sinh hoạt cộng đồng. Nghi lễ theo âm lịch phản ánh thời kỳ xã hội phụ thuộc mạnh vào nông nghiệp và nhịp mùa.
 
 Khi đồng hồ công nghiệp thay thế phần lớn nhịp thời gian nông nghiệp, lễ hội có thể mất một phần chức năng thực dụng nhưng vẫn giữ chức năng biểu tượng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **부럼, 오곡밥 và hệ thống biểu tượng qua thực phẩm** nối từ **정월대보름: rằm tháng Giêng âm lịch** sang **어린이날, 어버이날, 스승의날: lịch hiện đại của các quan hệ xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부럼, 오곡밥 và hệ thống biểu tượng qua thực phẩm
 
@@ -178,8 +148,6 @@ thiếu hụt theo mùa / mối quan tâm về sức khoẻ
 ```
 
 Qua thời gian, ý nghĩa thực dụng và ý nghĩa biểu tượng có thể hòa vào nhau.
-
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **어린이날, 어버이날, 스승의날: lịch hiện đại của các quan hệ xã hội** nối từ **부럼, 오곡밥 và hệ thống biểu tượng qua thực phẩm** sang **생일 và 미역국: lịch cá nhân gặp ký ức thực phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 어린이날, 어버이날, 스승의날: lịch hiện đại của các quan hệ xã hội
 
@@ -196,8 +164,6 @@ lễ âm lịch truyền thống
 + sự kiện thương mại
 ```
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **생일 và 미역국: lịch cá nhân gặp ký ức thực phẩm** nối từ **어린이날, 어버이날, 스승의날: lịch hiện đại của các quan hệ xã hội** sang **빼빼로데이: nghi lễ thương mại hiện đại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 생일 và 미역국: lịch cá nhân gặp ký ức thực phẩm
 
 Sinh nhật `생일` ở Hàn Quốc thường gắn với `미역국`. Món canh rong biển cũng liên quan đến thực phẩm sau sinh trong đời sống truyền thống, vì vậy bữa ăn sinh nhật nối ký ức về việc sinh ra với sự chăm sóc của người mẹ.
@@ -205,8 +171,6 @@ Sinh nhật `생일` ở Hàn Quốc thường gắn với `미역국`. Món can
 Một món ăn do đó có thể nối hai lĩnh vực: vòng đời gia đình và lịch cá nhân hằng năm.
 
 Đọc thêm tại [`29_childhood_parenting_care_institutions.md`](29_childhood_parenting_care_institutions.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **빼빼로데이: nghi lễ thương mại hiện đại** nối từ **생일 và 미역국: lịch cá nhân gặp ký ức thực phẩm** sang **윷놀이: trò chơi dân gian và mô hình xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 빼빼로데이: nghi lễ thương mại hiện đại
 
@@ -222,8 +186,6 @@ ngày dễ nhận biết
 
 Khi đủ nhiều người cùng biết một ngày, nó trở thành điểm phối hợp xã hội dù không có chiều sâu tôn giáo hoặc lịch sử như Seollal.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **윷놀이: trò chơi dân gian và mô hình xác suất** nối từ **빼빼로데이: nghi lễ thương mại hiện đại** sang **윷놀이 như một trò chơi xã hội, không chỉ là xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 윷놀이: trò chơi dân gian và mô hình xác suất
 
 **Yutnori (윷놀이)** dùng bốn que `윷` để tạo các kết quả như `도`, `개`, `걸`, `윷`, `모`, sau đó di chuyển quân trên bàn chơi. Đây là ví dụ thú vị để nối văn hoá với xác suất.
@@ -231,8 +193,6 @@ Khi đủ nhiều người cùng biết một ngày, nó trở thành điểm ph
 Nếu giả sử bốn que độc lập và hai mặt có xác suất bằng nhau, phân bố kết quả sẽ liên quan đến hệ số nhị thức (binomial coefficient). Tuy nhiên que yut thật không đối xứng hoàn toàn và quy tắc địa phương có thể khác, vì vậy xác suất thực nghiệm có thể khác mô hình lý tưởng.
 
 Bài học theo tư duy từ nguyên lý đầu tiên (first-principles thinking) là: mô hình xác suất luôn bắt đầu từ giả định. Nếu vật thể không công bằng thì không thể đặt `p=0.5` chỉ vì thuận tiện.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **윷놀이 như một trò chơi xã hội, không chỉ là xác suất** nối từ **윷놀이: trò chơi dân gian và mô hình xác suất** sang **씨름: thể thao, cơ thể và cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 윷놀이 như một trò chơi xã hội, không chỉ là xác suất
 
@@ -247,8 +207,6 @@ may rủi
 
 Đây là lý do một trò chơi dân gian có thể tồn tại lâu: luật đủ đơn giản để cả gia đình tham gia, nhưng tương tác xã hội tạo giá trị chơi lại.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **씨름: thể thao, cơ thể và cơ học** nối từ **윷놀이 như một trò chơi xã hội, không chỉ là xác suất** sang **연날리기, 제기차기, 팽이치기 và tri thức cơ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 씨름: thể thao, cơ thể và cơ học
 
 **Ssireum (씨름)** là môn vật truyền thống, trong đó người thi đấu nắm dây `샅바`. Cơ học của ssireum liên quan trực tiếp đến trọng tâm (center of mass), mô-men xoắn (torque), ma sát (friction) và lợi thế đòn bẩy (leverage).
@@ -261,15 +219,11 @@ Mô-men xoắn `τ` phụ thuộc lực `F`, khoảng cách đòn bẩy `r` và 
 
 Trong các chương trình ngày lễ hoặc lễ hội địa phương, ssireum còn là một dạng di sản truyền qua truyền thông: môn chơi không chỉ tồn tại ở sân làng mà còn qua truyền hình và thi đấu có tổ chức.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **연날리기, 제기차기, 팽이치기 và tri thức cơ thể** nối từ **씨름: thể thao, cơ thể và cơ học** sang **Khi trò chơi truyền thống trở thành hiện vật trưng bày**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 연날리기, 제기차기, 팽이치기 và tri thức cơ thể
 
 Thả diều `연날리기`, đá jegi `제기차기`, quay con quay `팽이치기` và nhiều trò chơi bàn cờ từng là hoạt động theo mùa. Chúng rèn khả năng phối hợp, căn thời điểm và kỹ năng cơ thể mà không nhất thiết cần hướng dẫn chính quy.
 
 Trong xã hội hiện đại, một phần các hoạt động này chuyển vào lễ hội trường học, làng dân gian hoặc chương trình ngày lễ. Khi một thực hành rời khỏi đời sống hằng ngày để trở thành “sự kiện văn hoá”, cách truyền dạy cũng thay đổi.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Khi trò chơi truyền thống trở thành hiện vật trưng bày** nối từ **연날리기, 제기차기, 팽이치기 và tri thức cơ thể** sang **기념일 và ký ức quốc gia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi trò chơi truyền thống trở thành hiện vật trưng bày
 
@@ -285,8 +239,6 @@ Trạng thái cuối không có nghĩa truyền thống đã “chết”. Tuy n
 
 Bảo tồn tốt phải giữ được **tri thức tham gia (participation knowledge)** chứ không chỉ giữ trang phục và đồ vật.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **기념일 và ký ức quốc gia** nối từ **Khi trò chơi truyền thống trở thành hiện vật trưng bày** sang **Tưởng niệm như “cơ sở dữ liệu” của xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 기념일 và ký ức quốc gia
 
 Ngoài các lễ theo âm lịch, Hàn Quốc hiện đại còn có nhiều ngày kỷ niệm quốc gia gắn với sự kiện lịch sử và ký ức nhà nước. Vì vậy lịch cũng là một kiến trúc của ký ức (memory architecture).
@@ -295,15 +247,11 @@ Ngoài các lễ theo âm lịch, Hàn Quốc hiện đại còn có nhiều ng�
 
 Với những sự kiện lịch sử hoặc chính trị có nhiều diễn giải, nên dùng thư viện [`../korean_history/README.md`](../korean_history/README.md) để xem niên đại và cách viết sử chi tiết hơn thay vì học lịch sử qua khẩu hiệu ngày lễ.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **기념일 và ký ức quốc gia** đặt vấn đề; **Tưởng niệm như “cơ sở dữ liệu” của xã hội** đối chiếu bằng chứng, rồi **Nghi lễ qua truyền thông** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Tưởng niệm như “cơ sở dữ liệu” của xã hội
 
 Việc một xã hội chọn sự kiện nào để tưởng niệm có thể hình dung giống việc chọn bản ghi nào cần lưu lâu dài. Không thể giữ mọi sự kiện với cùng mức độ nổi bật; nghi lễ, bảo tàng và ngày kỷ niệm đóng vai trò như hệ thống lập chỉ mục giúp xã hội truy hồi ký ức chung.
 
 Tuy nhiên, mọi chỉ mục đều có góc nhìn. Vì vậy hiểu biết lịch sử đòi hỏi so sánh nguồn và nhận ra rằng ký ức không đồng nhất với bản thân lịch sử.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Tưởng niệm như “cơ sở dữ liệu” của xã hội** đặt vấn đề; **Nghi lễ qua truyền thông** đối chiếu bằng chứng, rồi **Giản lược nghi lễ: truyền thống có thể co lại mà không biến mất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nghi lễ qua truyền thông
 
@@ -312,8 +260,6 @@ Ngày lễ hiện đại còn được trải nghiệm qua chương trình truy�
 Điều này tạo ra một **nghi lễ bậc hai (second-order ritual)**: không chỉ thực hiện ngày lễ, mà còn xem và nghe toàn xã hội nói về ngày lễ qua truyền thông.
 
 Một người không về quê vẫn có thể cảm thấy “đây là Chuseok” vì giao diện, nội dung và nhịp sinh hoạt xung quanh đều đổi chủ đề.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Giản lược nghi lễ: truyền thống có thể co lại mà không biến mất** nối từ **Nghi lễ qua truyền thông** sang **Gia đình đa dạng: nghi lễ phải thích nghi với cấu trúc hộ mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giản lược nghi lễ: truyền thống có thể co lại mà không biến mất
 
@@ -329,8 +275,6 @@ Một gia đình có thể giữ lõi “tưởng nhớ tổ tiên và gặp nha
 
 Câu hỏi quan trọng là ai quyết định phần nào là “lõi”. Ông bà, cha mẹ và con cái có thể trả lời khác nhau, nên giản lược thường là một quá trình thương lượng liên thế hệ chứ không phải thay đổi kỹ thuật thuần túy.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Gia đình đa dạng: nghi lễ phải thích nghi với cấu trúc hộ mới** nối từ **Giản lược nghi lễ: truyền thống có thể co lại mà không biến mất** sang **Gia đình phân tán và tham gia từ xa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gia đình đa dạng: nghi lễ phải thích nghi với cấu trúc hộ mới
 
 Gia đình hiện đại có thể là hộ một người, cặp đôi không con, gia đình tái hôn, gia đình đa văn hoá, người sống xa quê hoặc thành viên có tôn giáo khác nhau. Khi cấu trúc gia đình đổi, nghi lễ dựa trên giả định “đại gia đình cùng ở gần và cùng chia sẻ một hệ niềm tin” sẽ gặp ma sát.
@@ -338,8 +282,6 @@ Gia đình hiện đại có thể là hộ một người, cặp đôi không c
 Một gia đình đa văn hoá có thể thêm món ăn của quê hương khác, dùng hai ngôn ngữ khi chúc Tết hoặc chia thời gian giữa hai bên gia đình. Một thành viên theo tôn giáo khác có thể tham gia phần tưởng niệm nhưng không thực hiện một số cử chỉ mang ý nghĩa thờ phụng đối với họ.
 
 Đây không phải bằng chứng rằng nghi lễ “không còn nguyên bản”. Nó cho thấy nghi lễ là **giao thức có thể mở rộng (extensible protocol)**: nếu muốn tồn tại qua nhiều cấu trúc gia đình, nó phải có chỗ cho biến thể.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Gia đình phân tán và tham gia từ xa** nối từ **Gia đình đa dạng: nghi lễ phải thích nghi với cấu trúc hộ mới** sang **Thương mại hoá: thị trường không chỉ “làm hỏng” truyền thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gia đình phân tán và tham gia từ xa
 
@@ -355,8 +297,6 @@ hiện diện quan hệ
 
 Công nghệ không thay thế hoàn toàn việc ngồi chung bàn, nhưng có thể giảm cảm giác bị loại khỏi sự kiện. Với gia đình xuyên quốc gia, khả năng đồng bộ qua múi giờ trở thành một phần mới của logistics ngày lễ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Thương mại hoá: thị trường không chỉ “làm hỏng” truyền thống** nối từ **Gia đình phân tán và tham gia từ xa** sang **Quà tặng và tính có đi có lại: món quà tạo một quan hệ kéo dài**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thương mại hoá: thị trường không chỉ “làm hỏng” truyền thống
 
 Nhà hàng bán set Chuseok, công ty giao `선물세트`, khu du lịch tổ chức trải nghiệm hanbok hoặc làng dân gian biểu diễn trò chơi truyền thống. Những hoạt động này thường bị phê phán là thương mại hoá.
@@ -370,8 +310,6 @@ cung cấp thu nhập, địa điểm và người học để thực hành ti�
 ```
 
 Vì vậy câu hỏi tốt hơn “thương mại hoá có xấu không?” là: doanh thu quay lại cho ai, tri thức cốt lõi có tiếp tục được truyền không, cư dân địa phương có quyền định nghĩa thực hành không, và khách hàng chỉ mua hình ảnh hay thực sự được học bối cảnh?
-
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Quà tặng và tính có đi có lại: món quà tạo một quan hệ kéo dài** nối từ **Thương mại hoá: thị trường không chỉ “làm hỏng” truyền thống** sang **Khả năng tiếp cận nghi lễ: trẻ nhỏ, người cao tuổi và người khuyết tật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quà tặng và tính có đi có lại: món quà tạo một quan hệ kéo dài
 
@@ -389,8 +327,6 @@ khả năng tạo nghĩa vụ tương lai
 
 Hiểu cả hai mặt giúp giải thích vì sao có người rất thích nghi lễ quà tặng còn người khác cảm thấy mệt mỏi.
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Khả năng tiếp cận nghi lễ: trẻ nhỏ, người cao tuổi và người khuyết tật** nối từ **Quà tặng và tính có đi có lại: món quà tạo một quan hệ kéo dài** sang **Khi đồng bộ quá mạnh tạo điểm nghẽn hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng tiếp cận nghi lễ: trẻ nhỏ, người cao tuổi và người khuyết tật
 
 Nghi lễ thường giả định người tham gia có thể ngồi sàn, cúi lạy, di chuyển xa và đứng lâu. Khi xã hội già hoá, những giả định này không còn phù hợp với mọi người.
@@ -398,8 +334,6 @@ Nghi lễ thường giả định người tham gia có thể ngồi sàn, cúi 
 Một gia đình có thể điều chỉnh bằng ghế, rút ngắn thời gian, chọn nhà hàng, dùng địa điểm có thang máy hoặc thay động tác cúi lạy bằng hình thức chào khác. Đây là ví dụ **thiết kế bao trùm (inclusive design)** trong văn hoá.
 
 Nếu nghi lễ chỉ được xem là “đúng” khi mọi người thực hiện cùng một động tác cơ thể, người có giới hạn vận động dễ bị đẩy ra ngoài. Nếu mục tiêu là gắn kết, giao thức nên có khả năng thích nghi với cơ thể khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Khi đồng bộ quá mạnh tạo điểm nghẽn hệ thống** nối từ **Khả năng tiếp cận nghi lễ: trẻ nhỏ, người cao tuổi và người khuyết tật** sang **Nghi lễ và khả năng chống chịu khi có gián đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi đồng bộ quá mạnh tạo điểm nghẽn hệ thống
 
@@ -417,8 +351,6 @@ cùng nghỉ
 
 Đây là **làm phẳng đỉnh nhu cầu (peak smoothing)** ở cấp hộ gia đình. Văn hoá không chỉ tạo đỉnh; con người cũng học cách né đỉnh để giảm chi phí.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Nghi lễ và khả năng chống chịu khi có gián đoạn** nối từ **Khi đồng bộ quá mạnh tạo điểm nghẽn hệ thống** sang **Đo mức độ tham gia: “có làm hay không” là quá thô**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nghi lễ và khả năng chống chịu khi có gián đoạn
 
 Dịch bệnh, thiên tai, bệnh trong gia đình hoặc công việc khẩn cấp có thể làm nghi lễ không diễn ra theo kế hoạch. Một hệ nghi lễ có khả năng chống chịu không phụ thuộc hoàn toàn vào một hình thức duy nhất.
@@ -426,8 +358,6 @@ Dịch bệnh, thiên tai, bệnh trong gia đình hoặc công việc khẩn c�
 Ví dụ, chức năng “tưởng nhớ” có thể được giữ bằng buổi gặp nhỏ hơn, viếng mộ vào ngày khác, gọi video hoặc nghi thức gia đình riêng. Khi điều kiện bình thường trở lại, một phần thực hành cũ có thể quay lại.
 
 Điều này cho thấy **độ bền của văn hoá** không nằm ở việc không bao giờ thay đổi, mà ở khả năng giữ mục đích cốt lõi qua nhiều điều kiện thực hiện.
-
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Đo mức độ tham gia: “có làm hay không” là quá thô** nối từ **Nghi lễ và khả năng chống chịu khi có gián đoạn** sang **Liên hệ kiến thức: lễ hội như đồng bộ hoá phân tán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đo mức độ tham gia: “có làm hay không” là quá thô
 
@@ -446,8 +376,6 @@ có tham gia không
 
 Đây là bài học về **cường độ thực hành (practice intensity)**. Khi nghiên cứu sự thay đổi văn hoá, chỉ nhìn tỷ lệ “có/không” có thể bỏ qua việc thực hành đang được rút gọn hoặc tái định nghĩa.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Liên hệ kiến thức: lễ hội như đồng bộ hoá phân tán** nối từ **Đo mức độ tham gia: “có làm hay không” là quá thô** sang **Liên hệ kiến thức: nghi lễ như một giao thức có phiên bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ kiến thức: lễ hội như đồng bộ hoá phân tán
 
 Trong hệ thống phân tán (distributed systems), đồng bộ đồng hồ giúp các nút phối hợp. Xã hội không có một máy chủ thời gian duy nhất quyết định ý nghĩa, nhưng lịch tạo ra một tín hiệu chung.
@@ -463,8 +391,6 @@ ngày lễ tới
 
 Một lễ hội trở nên mạnh khi nhiều hệ thống con cùng phản ứng với nó.
 
-> **Nối mạch:** Trong **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Liên hệ kiến thức: nghi lễ như một giao thức có phiên bản** nối từ **Liên hệ kiến thức: lễ hội như đồng bộ hoá phân tán** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ kiến thức: nghi lễ như một giao thức có phiên bản
 
 Có thể hình dung một nghi lễ như phần mềm có nhiều phiên bản. Gia đình A giữ trình tự dài; gia đình B dùng phiên bản rút gọn; gia đình C thay một phần vì tôn giáo hoặc khoảng cách. Chúng không nhất thiết là ba nghi lễ hoàn toàn khác nếu vẫn chia sẻ mục đích và một số ký hiệu cốt lõi.
@@ -477,13 +403,9 @@ lõi tương đối ổn định
 
 Mô hình này giúp tránh hai cực: hoặc cho rằng mọi biến thể đều “sai”, hoặc cho rằng bất kỳ thứ gì cũng giống nhau. Cần xác định lớp nào đang được giữ và lớp nào đã đổi.
 
-> **Nối mạch:** Ở chặng này của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: nghi lễ như một giao thức có phiên bản** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Lễ hội và nghi lễ là **công nghệ đồng bộ hoá xã hội có khả năng thay phiên bản**. Chúng khiến gia đình, giao thông, thị trường thực phẩm, truyền thông và mạng lưới quan hệ cùng đổi trạng thái trong một khoảng thời gian. Khi xã hội thay đổi, giao thức có thể giản lược, lai hoá hoặc số hoá; điều quan trọng là xem chức năng, chi phí và ý nghĩa nào được giữ lại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lễ Tết, nghi lễ, trò chơi và ký ức tập thể**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Những hiểu lầm phổ biến
 

@@ -10,8 +10,6 @@ Mỗi bước tinh sạch tiêu tốn dung môi, năng lượng, thời gian, hi
 
 Vì vậy một tuyến tổng hợp tốt thường là tuyến **không tạo ra tạp chất khó loại ngay từ đầu**, thay vì chấp nhận phản ứng kém chọn lọc rồi thêm nhiều bước làm sạch.
 
-> **Nối mạch:** Purity là yêu cầu theo mục đích, còn separation luôn đánh đổi recovery, time và solvent; filtration là bước đầu khi khác biệt kích thước/pha đủ lớn.
-
 ## “Tinh khiết” phụ thuộc mục đích
 
 Độ tinh khiết không phải khái niệm tuyệt đối.
@@ -19,8 +17,6 @@ Vì vậy một tuyến tổng hợp tốt thường là tuyến **không tạo 
 Một thuốc thử có thể đủ sạch cho tổng hợp thông thường nhưng không phù hợp phân tích vết, không đạt yêu cầu dược phẩm hoặc quá bẩn cho chế tạo bán dẫn.
 
 Cần định nghĩa trước hồ sơ tạp chất chấp nhận được và bằng chứng phân tích nào chứng minh yêu cầu đó.
-
-> **Nối mạch:** Mục tiêu độ tinh khiết quyết định tạp chất nào cần loại; **Lọc** khai thác chênh lệch kích thước hoặc pha giữa rắn–lưu chất, còn lọc trọng lực là lựa chọn ít lực cắt khi ưu tiên xử lý ổn định hơn tốc độ.
 
 ## Lọc
 
@@ -30,15 +26,11 @@ Cơ chế có thể gồm sàng kích thước, hình thành bánh lọc, giữ 
 
 Cách chọn phụ thuộc mục tiêu là thu chất rắn hay làm trong phần chất lỏng.
 
-> **Nối mạch:** Lọc có thể nhằm thu dịch trong hoặc thu chất rắn; lọc trọng lực dùng áp suất thủy tĩnh và giữ dung dịch nóng, còn lọc chân không đổi nguy cơ nguội và mất dung môi lấy tốc độ thu tinh thể.
-
 ## Lọc trọng lực
 
 Lọc trọng lực phù hợp khi cần loại tạp rắn khỏi dung dịch nóng, ưu tiên thu dịch lọc hoặc khi hút chân không làm dung dịch nguội quá nhanh.
 
 Giấy lọc xếp nếp tăng diện tích hiệu dụng và tốc độ chảy.
-
-> **Nối mạch:** Lọc chân không tạo chênh áp để thu tinh thể nhanh hơn; khả năng giữ hạt vẫn phụ thuộc kích thước lỗ danh nghĩa, tải chất rắn và bánh lọc hình thành trong quá trình lọc.
 
 ## Lọc chân không
 
@@ -48,8 +40,6 @@ Cách này thường phù hợp để thu tinh thể sản phẩm.
 
 Bánh tinh thể có thể được rửa bằng lượng nhỏ dung môi lạnh để loại tạp tan, đồng thời hạn chế hòa tan lại sản phẩm.
 
-> **Nối mạch:** Kích thước lỗ và độ thấm của bánh lọc quyết định lưu lượng lẫn khả năng giữ hạt; khi hạt quá mịn hoặc bánh bị nén chặt, **Ly tâm** cung cấp trường lực khác để tách pha.
-
 ## Kích thước lỗ lọc và bánh lọc
 
 Khả năng giữ hạt không chỉ phụ thuộc kích thước lỗ danh nghĩa của giấy lọc.
@@ -57,8 +47,6 @@ Khả năng giữ hạt không chỉ phụ thuộc kích thước lỗ danh ngh�
 Khi chất rắn tích lũy, chính bánh lọc trở thành một lớp lọc mịn hơn.
 
 Hạt cực nhỏ có thể đi qua ban đầu hoặc làm tắc lớp lọc.
-
-> **Nối mạch:** When a fine cake blocks filtration, centrifugation accelerates sedimentation through RCF; it separates particles or phases, while recrystallization changes the chemical purity of dissolved material through solubility.
 
 ## Ly tâm
 
@@ -68,13 +56,9 @@ Khả năng tách phụ thuộc kích thước hạt, chênh lệch khối lư�
 
 Ly tâm không “tinh sạch hóa học” các chất đang hòa tan; nó chủ yếu tách pha và hạt.
 
-> **Nối mạch:** Centrifugation exploits density and particle size without removing dissolved impurities; recrystallization instead exploits a hot–cold solubility contrast, whose recovery depends on solvent volume.
-
 ## Kết tinh lại — tinh sạch nhờ độ tan phụ thuộc nhiệt độ
 
 Dung môi kết tinh lại lý tưởng nên hòa tan sản phẩm tốt khi nóng nhưng kém khi lạnh, đồng thời giữ tạp chất ở trạng thái luôn tan hoặc luôn không tan, không phản ứng với sản phẩm và có điểm sôi thuận tiện.
-
-> **Nối mạch:** Recrystallization needs a solvent that distinguishes hot from cold solubility; using too much loses product, too little traps impurity, so hot filtration must remove insoluble matter before crystals form.
 
 ## Vì sao chỉ nên dùng lượng dung môi nóng vừa đủ
 
@@ -84,15 +68,11 @@ Dùng quá ít làm mẫu không tan hoàn toàn và có thể giữ tạp chấ
 
 Kết tinh lại luôn là đánh đổi giữa độ tinh khiết và hiệu suất thu hồi.
 
-> **Nối mạch:** Solvent volume sets the recovery–purity trade-off; hot filtration protects the supersaturated solution from premature blockage, after which nucleation and crystal growth determine the final solid.
-
 ## Lọc nóng
 
 Nếu còn tạp chất không tan, lọc khi dung dịch vẫn nóng giúp tránh sản phẩm kết tinh sớm trong phễu.
 
 Giữ dụng cụ đủ ấm có thể giảm mất sản phẩm do kết tinh trước thời điểm mong muốn.
-
-> **Nối mạch:** Hot filtration removes insoluble matter before cooling; nucleation rate and crystal growth then determine whether the recovered solid is large enough to wash without trapping excess impurity.
 
 ## Tạo mầm và tăng trưởng tinh thể
 
@@ -102,8 +82,6 @@ Làm lạnh chậm thường tạo ít tâm hơn và tinh thể lớn hơn.
 
 Một số dung dịch rất tinh khiết có thể siêu lạnh; tạo xước bề mặt hoặc thêm mầm tinh thể có thể khởi động quá trình kết tinh.
 
-> **Nối mạch:** Cooling rate controls crystal size and impurity occlusion; the mother liquor retains uncrystallized product and soluble impurities, so its composition explains the recovery–purity trade-off.
-
 ## Dịch mẹ
 
 Dung dịch còn lại sau kết tinh chứa sản phẩm chưa kết tinh cùng tạp chất tan.
@@ -112,8 +90,6 @@ Thu đợt tinh thể thứ hai có thể tăng hiệu suất nhưng độ tinh 
 
 Nếu độ tinh khiết quan trọng, nên giữ riêng các đợt tinh thể để đánh giá độc lập.
 
-> **Nối mạch:** The mother liquor records what the crystallization left behind; a melting-point range tests the recovered solid for impurity depression and broadening before a different partition-based separation is chosen.
-
 ## Điểm nóng chảy như bằng chứng độ tinh khiết
 
 Một hợp chất tinh thể khá tinh khiết thường có khoảng nóng chảy hẹp gần giá trị dự kiến.
@@ -121,8 +97,6 @@ Một hợp chất tinh thể khá tinh khiết thường có khoảng nóng ch�
 Tạp chất thường làm điểm nóng chảy giảm và khoảng chuyển pha rộng hơn.
 
 Tuy nhiên điểm nóng chảy một mình không đủ chứng minh danh tính hay độ tinh khiết tuyệt đối.
-
-> **Nối mạch:** Melting point is a useful purity signal but not a complete identity proof; liquid–liquid extraction next exploits how the same solute partitions between immiscible phases.
 
 ## Chiết lỏng–lỏng
 
@@ -133,8 +107,6 @@ Nếu chất tồn tại cùng dạng hóa học ở hai pha:
 \[
 K_D=\frac{C_{org}}{C_{aq}}
 \]
-
-> **Nối mạch:** Liquid–liquid extraction sets a distribution ratio between immiscible phases; the residual fraction formula turns that equilibrium into a recovery prediction after one or repeated contacts.
 
 ## Phần còn lại sau một lần chiết
 
@@ -153,8 +125,6 @@ q_n=q^n
 \]
 
 Công thức này giải thích vì sao nhiều lần chiết nhỏ thường hiệu quả hơn một lần chiết lớn khi tổng lượng dung môi bằng nhau.
-
-> **Nối mạch:** The residual fraction shows why several small extractions can outperform one large contact; the numerical example makes that recovery trade-off explicit before chemical ionization changes the partition.
 
 ## Ví dụ
 
@@ -182,8 +152,6 @@ q^2=\frac19\approx0.111
 
 chỉ còn khoảng 11,1%.
 
-> **Nối mạch:** The example quantifies solvent-volume allocation; acid–base extraction adds pH-dependent ionization, so the neutral/charged fraction—not just the intrinsic partition constant—controls where the solute goes.
-
 ## Chiết acid–cơ sở (base / 기반)
 
 Ion hóa làm thay đổi rất mạnh khả năng phân bố.
@@ -191,8 +159,6 @@ Ion hóa làm thay đổi rất mạnh khả năng phân bố.
 Một carboxylic acid trung hòa có thể ưu tiên pha hữu cơ; khi bị khử proton thành carboxylate ion, nó thường chuyển mạnh sang pha nước.
 
 Điều này cho phép tách chọn lọc acid, cơ sở (base / 기반) và chất trung hòa bằng cách điều khiển pH.
-
-> **Nối mạch:** pH changes the charged fraction and therefore the effective distribution ratio; the next section separates that equilibrium quantity from the practical phase-handling problem of emulsions.
 
 ## Hệ số phân bố và tỉ số phân bố
 
@@ -202,8 +168,6 @@ Với chất có thể ion hóa, tổng nồng độ ở mọi dạng hóa học
 
 Vì vậy hiệu quả chiết có thể được điều chỉnh bằng hóa học acid–cơ sở (base / 기반).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Nhũ tương** nối từ **Hệ số phân bố và tỉ số phân bố** sang **Làm khô pha hữu cơ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhũ tương
 
 Lắc quá mạnh, có surfactant hoặc hạt mịn có thể tạo nhũ tương làm hai pha tách rất chậm.
@@ -212,8 +176,6 @@ Tùy hệ, có thể xử lý bằng thời gian, đảo nhẹ, thay lực ion h
 
 “Lắc mạnh hơn” không phải lúc nào cũng làm chiết tốt hơn.
 
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Làm khô pha hữu cơ** nối từ **Nhũ tương** sang **Chưng cất — phân tách bằng cân bằng hơi–lỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Làm khô pha hữu cơ
 
 Muối khan như `MgSO4` hoặc `Na2SO4` có thể giữ lượng nước vết còn hòa tan hoặc phân tán trong pha hữu cơ.
@@ -221,8 +183,6 @@ Muối khan như `MgSO4` hoặc `Na2SO4` có thể giữ lượng nước vết 
 Chất làm khô chỉ xử lý nước vết, không thay thế bước tách pha nước chính.
 
 Sau đó chất làm khô được loại bằng lọc hoặc gạn tùy quy trình.
-
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Chưng cất — phân tách bằng cân bằng hơi–lỏng** nối từ **Làm khô pha hữu cơ** sang **Chưng cất đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chưng cất — phân tách bằng cân bằng hơi–lỏng
 
@@ -236,15 +196,11 @@ y_i=\frac{x_iP_i^*}{P_{total}}
 
 Pha hơi giàu cấu tử dễ bay hơi hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Chưng cất đơn giản** nối từ **Chưng cất — phân tách bằng cân bằng hơi–lỏng** sang **Chưng cất phân đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chưng cất đơn giản
 
 Phù hợp để loại dung môi, tách các cấu tử có chênh lệch điểm sôi lớn hoặc tách chất lỏng dễ bay hơi khỏi chất tan không bay hơi.
 
 Một lần hóa hơi–ngưng tụ chỉ tạo mức làm giàu giới hạn.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Chưng cất phân đoạn** nối từ **Chưng cất đơn giản** sang **Tỉ số hồi lưu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chưng cất phân đoạn
 
@@ -254,15 +210,11 @@ Số đĩa lý thuyết càng lớn thì khả năng tách càng tốt, nhưng c
 
 Hồi lưu đưa một phần condensate trở lại cột để tăng tiếp xúc và tiến gần cân bằng hơn.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Tỉ số hồi lưu** nối từ **Chưng cất phân đoạn** sang **Azeotrope**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tỉ số hồi lưu
 
 Tăng hồi lưu thường cải thiện phân tách nhưng làm thông lượng sản phẩm giảm và tiêu thụ năng lượng tăng.
 
 Chưng cất công nghiệp vì vậy là bài toán tối ưu giữa độ tinh khiết, kích thước thiết bị và năng lượng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Azeotrope** nối từ **Tỉ số hồi lưu** sang **Chưng cất chân không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Azeotrope
 
@@ -276,8 +228,6 @@ nên chưng cất thông thường ở áp suất cố định không thể vư�
 
 Để phá giới hạn có thể cần thay áp suất, thêm entrainer, dùng sieve phân tử hoặc đổi sang nguyên lý phân tách khác.
 
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Chưng cất chân không** nối từ **Azeotrope** sang **Chưng cất hơi nước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chưng cất chân không
 
 Giảm áp suất làm nhiệt độ sôi giảm.
@@ -286,15 +236,11 @@ Giảm áp suất làm nhiệt độ sôi giảm.
 
 Chân không cũng làm cân bằng hơi–lỏng và yêu cầu an toàn thiết bị thay đổi.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Chưng cất hơi nước** nối từ **Chưng cất chân không** sang **Thăng hoa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chưng cất hơi nước
 
 Với một số hợp chất hữu cơ không trộn với nước nhưng có độ bay hơi phù hợp, hai pha có thể đồng chưng cất ở nhiệt độ thấp hơn điểm sôi riêng của từng cấu tử.
 
 Kỹ thuật này từng được dùng rộng rãi cho tinh dầu và hợp chất nhạy nhiệt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Thăng hoa** nối từ **Chưng cất hơi nước** sang **Sắc ký — lặp lại phân bố khác nhau qua nhiều giai đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thăng hoa
 
@@ -304,15 +250,11 @@ Gia nhiệt dưới điều kiện áp suất phù hợp cho phép chất rắn 
 
 Cách này hữu ích khi sản phẩm thăng hoa còn tạp chất không thăng hoa.
 
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Sắc ký — lặp lại phân bố khác nhau qua nhiều giai đoạn** nối từ **Thăng hoa** sang **Pha thường và pha đảo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sắc ký — lặp lại phân bố khác nhau qua nhiều giai đoạn
 
 Sắc ký đã được trình bày sâu trong phần Hóa phân tích. Ở góc nhìn điều chế, trọng tâm là tải mẫu, thu hồi sản phẩm và cân bằng giữa độ tinh khiết với lượng dung môi.
 
 Các phương pháp gồm cột flash, HPLC điều chế, trao đổi ion, loại trừ kích thước và sắc ký ái lực.
-
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Pha thường và pha đảo** nối từ **Sắc ký — lặp lại phân bố khác nhau qua nhiều giai đoạn** sang **TLC như công cụ tối ưu nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha thường và pha đảo
 
@@ -321,8 +263,6 @@ Sắc ký pha thường dùng pha tĩnh phân cực và pha động kém phân c
 Pha đảo dùng pha tĩnh không phân cực và pha động phân cực hơn.
 
 Vì vậy lô-gic (logic / 논리) lưu giữ bị đảo giữa hai hệ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **TLC như công cụ tối ưu nhanh** nối từ **Pha thường và pha đảo** sang **Quá tải cột**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLC như công cụ tối ưu nhanh
 
@@ -336,8 +276,6 @@ R_f=\frac{\văn bản (text / 텍스트){khoảng cách chất phân tích đi �
 
 Dung môi tốt cho cột không nhất thiết làm sản phẩm có `Rf` lớn nhất; điều quan trọng hơn là tạo khoảng cách đủ rõ giữa sản phẩm và tạp chất.
 
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Quá tải cột** nối từ **TLC như công cụ tối ưu nhanh** sang **Sắc ký loại trừ kích thước**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quá tải cột
 
 Nạp quá nhiều mẫu làm dải bị rộng và chồng lấp.
@@ -346,15 +284,11 @@ Nạp quá nhiều mẫu làm dải bị rộng và chồng lấp.
 
 Trong tinh sạch điều chế thường phải đánh đổi tốc độ với độ tinh khiết.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Sắc ký loại trừ kích thước** nối từ **Quá tải cột** sang **Sắc ký trao đổi ion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sắc ký loại trừ kích thước
 
 Hạt gel xốp làm phân tử nhỏ đi vào lỗ và di chuyển lâu hơn, trong khi phân tử lớn bị loại khỏi lỗ và ra trước.
 
 Lý tưởng, cơ chế dựa vào kích thước thủy động chứ không phải hấp phụ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Sắc ký trao đổi ion** nối từ **Sắc ký loại trừ kích thước** sang **Sắc ký ái lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sắc ký trao đổi ion
 
@@ -364,15 +298,11 @@ Có thể rửa giải bằng thay nồng độ muối hoặc pH.
 
 Phương pháp rất hữu ích với protein và ion.
 
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Sắc ký ái lực** nối từ **Sắc ký trao đổi ion** sang **Thẩm tích**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sắc ký ái lực
 
 Dựa trên tương tác liên kết đặc hiệu, ví dụ His-tag phối trí với `Ni2+`.
 
 Độ chọn lọc có thể rất cao nhưng chi phí ligand và liên kết không đặc hiệu vẫn cần được xét.
-
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Thẩm tích** nối từ **Sắc ký ái lực** sang **Siêu lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thẩm tích
 
@@ -382,8 +312,6 @@ Thẩm tích tự nó không làm đại phân tử cô đặc mạnh; nó chủ
 
 Thay dung dịch bên ngoài nhiều lần làm quá trình loại chất nhỏ hiệu quả hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Siêu lọc** nối từ **Thẩm tích** sang **Thẩm thấu ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Siêu lọc
 
 Màng dẫn động bằng áp suất giữ đại phân tử hoặc hạt lớn hơn ngưỡng danh định.
@@ -391,8 +319,6 @@ Màng dẫn động bằng áp suất giữ đại phân tử hoặc hạt lớn
 Phương pháp dùng để cô đặc và đổi đệm.
 
 Ngưỡng khối lượng phân tử danh nghĩa không phải kích thước lỗ tuyệt đối; hình dạng phân tử cũng ảnh hưởng khả năng đi qua.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Thẩm thấu ngược** nối từ **Siêu lọc** sang **Kết tủa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thẩm thấu ngược
 
@@ -402,23 +328,17 @@ Phương pháp dùng cho khử muối và sản xuất nước siêu tinh khiế
 
 Nhu cầu năng lượng tăng theo áp suất thẩm thấu và mức thu hồi nước mục tiêu.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Kết tủa** nối từ **Thẩm thấu ngược** sang **Kết tủa chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kết tủa
 
 Thay pH, dung môi, lực ion hoặc nhiệt độ có thể làm sản phẩm hay tạp chất kết tủa chọn lọc.
 
 Protein có thể bị “salting out” bằng ammonium sulfate; ion kim loại có thể kết tủa dưới dạng hydroxide, sulfide hoặc carbonate tùy hệ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Kết tủa chọn lọc** nối từ **Kết tủa** sang **Lô-gic (logic / 논리) tinh sạch protein**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kết tủa chọn lọc
 
 Nếu hai muối có \(K_{sp}\) khác nhau đáng kể, thêm thuốc thử có kiểm soát có thể làm một chất kết tủa trước.
 
 Tuy nhiên tạo phức, hoạt độ và động học tạo mầm đều ảnh hưởng khả năng tách thực tế.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Lô-gic (logic / 논리) tinh sạch protein** nối từ **Kết tủa chọn lọc** sang **Khử muối mẫu sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lô-gic (logic / 논리) tinh sạch protein
 
@@ -434,23 +354,17 @@ phá tế bào
 
 Mỗi bước loại một nhóm tạp khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Khử muối mẫu sinh học** nối từ **Lô-gic (logic / 논리) tinh sạch protein** sang **Làm khô sản phẩm tinh sạch**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khử muối mẫu sinh học
 
 Ion nhỏ hoặc dung môi có thể được loại khỏi đại phân tử bằng thẩm tích, cột desalting hoặc diafiltration.
 
 Lựa chọn phụ thuộc thể tích, tốc độ và độ ổn định của mẫu.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Làm khô sản phẩm tinh sạch** nối từ **Khử muối mẫu sinh học** sang **Đông khô**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Làm khô sản phẩm tinh sạch
 
 Có thể dùng làm khô không khí/chân không, bình hút ẩm, cô quay hoặc đông khô.
 
 Nước và dung môi còn lại ảnh hưởng khối lượng, độ bền và độ tinh khiết phân tích.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Đông khô** nối từ **Làm khô sản phẩm tinh sạch** sang **Đánh đổi giữa độ tinh khiết và thu hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đông khô
 
@@ -461,8 +375,6 @@ Nước và dung môi còn lại ảnh hưởng khối lượng, độ bền và
 3. loại phần nước liên kết còn lại trong giai đoạn sấy thứ cấp.
 
 Phương pháp phù hợp với nhiều sản phẩm sinh học nhạy nhiệt.
-
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Đánh đổi giữa độ tinh khiết và thu hồi** nối từ **Đông khô** sang **Cân bằng khối lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đánh đổi giữa độ tinh khiết và thu hồi
 
@@ -482,8 +394,6 @@ Nếu năm bước đều thu hồi 90%:
 
 Do đó tinh sạch quá mức không cần thiết có thể làm hiệu suất toàn chuỗi giảm mạnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Cân bằng khối lượng** nối từ **Đánh đổi giữa độ tinh khiết và thu hồi** sang **Phân tách trực giao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng khối lượng
 
 Cần theo dõi lượng sản phẩm qua từng bước:
@@ -493,8 +403,6 @@ Cần theo dõi lượng sản phẩm qua từng bước:
 ```
 
 Cân bằng khối lượng cho thấy bước nào làm quy trình kém hiệu quả.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Phân tách trực giao** nối từ **Cân bằng khối lượng** sang **Xác minh độ tinh khiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tách trực giao
 
@@ -510,8 +418,6 @@ chiết dựa trên ion hóa
 
 Mỗi chiều loại một nhóm tạp khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Xác minh độ tinh khiết** nối từ **Phân tách trực giao** sang **Danh tính và độ tinh khiết không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác minh độ tinh khiết
 
 Không một phương pháp phân tích đơn lẻ chứng minh được “độ tinh khiết tuyệt đối”.
@@ -520,8 +426,6 @@ Bằng chứng có thể kết hợp NMR, HPLC/GC, MS, điểm nóng chảy, ph�
 
 Cần chọn kỹ thuật nhạy với chính các tạp chất có khả năng xuất hiện.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Danh tính và độ tinh khiết không giống nhau** nối từ **Xác minh độ tinh khiết** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Danh tính và độ tinh khiết không giống nhau
 
 Khối phổ đúng khối lượng hỗ trợ danh tính nhưng có thể bỏ sót tạp không ion hóa tốt.
@@ -529,8 +433,6 @@ Khối phổ đúng khối lượng hỗ trợ danh tính nhưng có thể bỏ 
 Một phổ NMR hợp lý có thể không thấy tạp vết dưới giới hạn phát hiện.
 
 “Có tín hiệu đúng” không đồng nghĩa “mẫu tinh khiết”.
-
-> **Nối mạch:** Trong **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Những hiểu lầm thường gặp** nối từ **Danh tính và độ tinh khiết không giống nhau** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -549,8 +451,6 @@ Không. Thành phần được quyết định bởi cân bằng hơi–lỏng v
 ### “Chất lỏng trong suốt nghĩa là tinh khiết”
 
 Không. Ngoại quan hầu như không phải bằng chứng hóa học đủ mạnh.
-
-> **Nối mạch:** Ở chặng này của **Phân tách và tinh sạch — khuếch đại khác biệt về cân bằng và vận chuyển**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -24,8 +24,6 @@ Nguyên nhân nằm ở phân bố electron cục bộ. Một nhóm chức có t
 
 Vì vậy nhóm chức nên được hiểu như một **mô-đun điện tử (electronic module)** gắn lên khung phân tử.
 
-> **Nối mạch:** Nhóm chức là mô-đun điện tử, nên khi gặp nhóm mới hãy hỏi polarity, resonance, phản ứng đặc trưng và điều kiện; alkane làm baseline ít phân cực để so sánh.
-
 ## Bốn câu hỏi khi gặp một nhóm chức mới
 
 Thay vì chỉ học tên, hãy hỏi:
@@ -38,8 +36,6 @@ Thay vì chỉ học tên, hãy hỏi:
 ```
 
 Bốn câu hỏi này đủ để tái dựng rất nhiều cơ chế hữu cơ cơ bản.
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ankan — nền hydrocarbon ít phân cực** nối từ **Bốn câu hỏi khi gặp một nhóm chức mới** sang **Anken — liên kết pi như vùng giàu electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ankan — nền hydrocarbon ít phân cực
 
@@ -56,8 +52,6 @@ Khả năng phản ứng của ankan thường xuất hiện qua:
 - hoạt hóa C–H trong hóa học hiện đại.
 
 “Tương đối trơ” không nghĩa “không phản ứng”; nó nghĩa nhiều con đường phản ứng thông thường có hàng rào hoạt hóa cao.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, sau nội dung của **Ankan — nền hydrocarbon ít phân cực**, **Anken — liên kết pi như vùng giàu electron** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ankin — hai hệ pi và carbon sp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Anken — liên kết pi như vùng giàu electron
 
@@ -82,8 +76,6 @@ Từ đó xuất hiện các họ phản ứng:
 
 Hình học của anken cũng tạo đồng phân `E/Z` vì liên kết pi cản trở quay tự do.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ankin — hai hệ pi và carbon sp** nối từ **Anken — liên kết pi như vùng giàu electron** sang **Vòng thơm — phi định xứ thay đổi lô-gic (logic / 논리) phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ankin — hai hệ pi và carbon sp
 
 **Ankin (alkyne)** có liên kết ba C≡C gồm một sigma và hai pi vuông góc nhau.
@@ -97,8 +89,6 @@ RC\equiv CH \rightarrow RC\equiv C^- + H^+
 \]
 
 ion acetylide có thể đóng vai trò tác nhân ái nhân carbon để tạo liên kết C–C.
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Vòng thơm — phi định xứ thay đổi lô-gic (logic / 논리) phản ứng** nối từ **Ankin — hai hệ pi và carbon sp** sang **Dẫn xuất halogen của alkyl**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vòng thơm — phi định xứ thay đổi lô-gic (logic / 논리) phản ứng
 
@@ -114,8 +104,6 @@ Aromaticity không chỉ ảnh hưởng khả năng phản ứng. Vòng thơm c�
 - xuất hiện phổ biến trong dược chất, vật liệu hữu cơ và biomolecule.
 
 Xem sâu hơn: [Hóa học thơm](./05_aromatic_chemistry.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Dẫn xuất halogen của alkyl** nối từ **Vòng thơm — phi định xứ thay đổi lô-gic (logic / 논리) phản ứng** sang **Alcohol — oxygen vừa cho electron vừa mang proton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dẫn xuất halogen của alkyl
 
@@ -138,8 +126,6 @@ Liên kết C–X thường bị phân cực về phía halogen, làm carbon man
 
 Khả năng nhóm rời không chỉ phụ thuộc độ phân cực liên kết. C–F rất phân cực nhưng fluoride thường là nhóm rời kém trong nhiều phản ứng thế vì liên kết C–F mạnh và F⁻ có đặc tính solvat hóa mạnh.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Alcohol — oxygen vừa cho electron vừa mang proton** nối từ **Dẫn xuất halogen của alkyl** sang **Phenol khác alcohol thông thường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Alcohol — oxygen vừa cho electron vừa mang proton
 
 **Alcohol (ancol, alcohol)** có nhóm:
@@ -161,8 +147,6 @@ Alcohol có thể:
 
 Nhóm `–OH` tự nó thường là nhóm rời kém. Proton hóa hoặc biến đổi thành sulfonate có thể làm khả năng rời tăng mạnh.
 
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Phenol khác alcohol thông thường** nối từ **Alcohol — oxygen vừa cho electron vừa mang proton** sang **Ether và epoxide**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phenol khác alcohol thông thường
 
 **Phenol (phenol)** có `–OH` gắn trực tiếp vào vòng thơm.
@@ -179,8 +163,6 @@ Mặt khác, cặp electron trên oxygen có thể cho vào hệ pi của vòng,
 
 Một nhóm chức vì vậy có thể đồng thời ảnh hưởng acid–cơ sở (base / 기반) và reactivity của phần khung lân cận.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ether và epoxide** nối từ **Phenol khác alcohol thông thường** sang **Amin — cặp electron trên nitrogen tạo tính cơ sở (base / 기반) và ái nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ether và epoxide
 
 **Ether (ete, ether)**:
@@ -196,8 +178,6 @@ Nhiều ether được dùng làm dung môi vì kết hợp độ phân cực v�
 **Epoxide (epoxide)** là ether vòng ba cạnh. Góc liên kết bị ép khỏi hình học thuận lợi, tạo ứng suất vòng cao. Vì vậy epoxide dễ bị mở vòng bởi tác nhân ái nhân.
 
 Tính chọn lọc vị trí khi mở epoxide phụ thuộc điều kiện acid hoặc cơ sở (base / 기반) vì trạng thái chuyển tiếp khác nhau.
-
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Amin — cặp electron trên nitrogen tạo tính cơ sở (base / 기반) và ái nhân** nối từ **Ether và epoxide** sang **Ammonium bậc bốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amin — cặp electron trên nitrogen tạo tính cơ sở (base / 기반) và ái nhân
 
@@ -219,8 +199,6 @@ Amin no thường cơ sở (base / 기반) mạnh hơn aniline vì cặp electro
 
 Nitrogen trong amide còn kém cơ sở (base / 기반) hơn nữa vì cặp electron tham gia cộng hưởng với carbonyl.
 
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ammonium bậc bốn** nối từ **Amin — cặp electron trên nitrogen tạo tính cơ sở (base / 기반) và ái nhân** sang **Thiol và sulfur — nguyên tử lớn làm hóa học thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ammonium bậc bốn
 
 **Ion ammonium bậc bốn (quaternary ammonium ion)** có bốn liên kết với nitrogen và điện tích dương thường trực.
@@ -233,8 +211,6 @@ Các hợp chất này quan trọng trong:
 - xúc tác chuyển pha;
 - chất sát khuẩn;
 - vật liệu trao đổi ion.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Thiol và sulfur — nguyên tử lớn làm hóa học thay đổi** nối từ **Ammonium bậc bốn** sang **Carbonyl — tâm phân cực trung tâm của hóa hữu cơ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiol và sulfur — nguyên tử lớn làm hóa học thay đổi
 
@@ -262,8 +238,6 @@ sulfide → sulfoxide → sulfone
 
 với tính chất điện tử và phản ứng rất khác nhau.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Carbonyl — tâm phân cực trung tâm của hóa hữu cơ** nối từ **Thiol và sulfur — nguyên tử lớn làm hóa học thay đổi** sang **Aldehyde và ketone**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Carbonyl — tâm phân cực trung tâm của hóa hữu cơ
 
 Liên kết C=O phân cực mạnh vì oxygen âm điện hơn carbon:
@@ -277,8 +251,6 @@ C: nghèo electron tương đối
 
 Do đó carbonyl carbon là tâm ái điện quan trọng.
 
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Aldehyde và ketone** nối từ **Carbonyl — tâm phân cực trung tâm của hóa hữu cơ** sang **Acid carboxylic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Aldehyde và ketone
 
 **Aldehyde (andehit, aldehyde)** và **ketone (xeton, ketone)** thường tham gia **cộng ái nhân (nucleophilic addition)**.
@@ -289,8 +261,6 @@ Aldehyde thường phản ứng mạnh hơn ketone vì:
 
 - cản trở lập thể thấp hơn;
 - ít nhóm alkyl cho electron hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Acid carboxylic** nối từ **Aldehyde và ketone** sang **Dẫn xuất acid carboxylic và phản ứng thế acyl**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acid carboxylic
 
@@ -305,8 +275,6 @@ acid hơn alcohol nhiều vì cơ sở (base / 기반) liên hợp carboxylate p
 Nhóm hút electron ổn định carboxylate và tăng độ acid; hiệu ứng cảm ứng giảm dần theo khoảng cách.
 
 Acid carboxylic cũng là điểm trung tâm của nhiều phản ứng chuyển acyl.
-
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Dẫn xuất acid carboxylic và phản ứng thế acyl** nối từ **Acid carboxylic** sang **Ester**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dẫn xuất acid carboxylic và phản ứng thế acyl
 
@@ -331,8 +299,6 @@ Mô hình phản ứng chung là **thế acyl ái nhân (nucleophilic acyl subst
 
 Khả năng phản ứng phụ thuộc cả độ ái điện của carbonyl và độ tốt của nhóm rời.
 
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ester** nối từ **Dẫn xuất acid carboxylic và phản ứng thế acyl** sang **Amide — cộng hưởng làm thay đổi mạnh tính chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ester
 
 **Ester (este, ester)** có cộng hưởng từ oxygen alkoxy vào carbonyl, làm carbonyl kém ái điện hơn acid chloride hoặc anhydride.
@@ -345,8 +311,6 @@ Các biến đổi quan trọng gồm:
 - phản ứng với tác nhân ái nhân carbon phù hợp.
 
 Ester xuất hiện phổ biến trong lipid, hương liệu, polymer và dược phẩm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Amide — cộng hưởng làm thay đổi mạnh tính chất** nối từ **Ester** sang **Nitrile**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amide — cộng hưởng làm thay đổi mạnh tính chất
 
@@ -366,8 +330,6 @@ Hệ quả:
 
 Liên kết peptide trong protein chính là amide, nên cộng hưởng này là nền hóa học của cấu trúc protein.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nitrile** nối từ **Amide — cộng hưởng làm thay đổi mạnh tính chất** sang **Nhóm nitro**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nitrile
 
 **Nitrile (nitrile)**:
@@ -384,8 +346,6 @@ Các biến đổi thường gặp gồm:
 - khử thành amin;
 - tham gia phản ứng tạo liên kết C–C trong một số hệ.
 
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nhóm nitro** nối từ **Nitrile** sang **Nhóm sulfonyl và sulfonate**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhóm nitro
 
 **Nhóm nitro (nitro group)** có tính hút electron mạnh và điện tích được phân bố bởi cộng hưởng.
@@ -395,8 +355,6 @@ Trên vòng thơm, nitro:
 - làm giảm hoạt tính đối với thế ái điện thơm;
 - ổn định trung gian anion trong một số phản ứng thế ái nhân thơm;
 - thay đổi mạnh phổ và tính chất redox.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nhóm sulfonyl và sulfonate** nối từ **Nhóm nitro** sang **Tác nhân carbon cơ kim**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm sulfonyl và sulfonate
 
@@ -412,8 +370,6 @@ alcohol có –OH rời kém
 → phản ứng thế/loại diễn ra dễ hơn
 ```
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Tác nhân carbon cơ kim** nối từ **Nhóm sulfonyl và sulfonate** sang **Nhóm chức và acid–cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tác nhân carbon cơ kim
 
 Thuốc thử Grignard và hợp chất organolithium có liên kết C–kim loại phân cực mạnh:
@@ -428,8 +384,6 @@ Carbon mang tính carbanion tương đối và hành xử như cơ sở (base / 
 Chúng rất hữu ích để tạo liên kết C–C, đặc biệt với carbonyl.
 
 Nhược điểm là phản ứng nhanh với nước, alcohol và nhiều nguồn proton, nên điều kiện khan thường cần thiết.
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nhóm chức và acid–cơ sở (base / 기반)** nối từ **Tác nhân carbon cơ kim** sang **Bậc oxy hóa của carbon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm chức và acid–cơ sở (base / 기반)
 
@@ -449,8 +403,6 @@ Không nên biến bảng này thành thứ tự tuyệt đối. Nhóm thế, du
 
 Xem lại: [pH và độ mạnh acid](../08_acids_bases/01_ph_and_acid_strength.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Bậc oxy hóa của carbon** nối từ **Nhóm chức và acid–cơ sở (base / 기반)** sang **Nhóm chức và phổ học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bậc oxy hóa của carbon
 
 Một cách nhìn rất hữu ích là theo dõi số liên kết của carbon với nguyên tử âm điện.
@@ -469,8 +421,6 @@ ankan
 
 Cách nhìn này thống nhất nhiều phản ứng hữu cơ và chuyển hóa sinh học.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nhóm chức và phổ học** nối từ **Bậc oxy hóa của carbon** sang **Chuyển đổi nhóm chức như một mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhóm chức và phổ học
 
 Nhóm chức tạo dấu vết trong phép đo cấu trúc.
@@ -486,8 +436,6 @@ Ví dụ:
 Không nên nhận dạng cấu trúc chỉ từ một peak. Phổ học mạnh nhất khi nhiều bằng chứng độc lập được kết hợp.
 
 Xem thêm: [Phổ học](../12_analytical_chemistry/03_spectroscopy.md) và [Khối phổ](../12_analytical_chemistry/05_mass_spectrometry.md).
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Chuyển đổi nhóm chức như một mạng** nối từ **Nhóm chức và phổ học** sang **Nhóm bảo vệ và cái giá của sự kiểm soát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển đổi nhóm chức như một mạng
 
@@ -505,8 +453,6 @@ halogenua alkyl ↔ alcohol ↔ anken
 ```
 
 Thuốc thử và chất xúc tác quyết định cạnh nào trong mạng có thể đi được với độ chọn lọc chấp nhận được.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Nhóm bảo vệ và cái giá của sự kiểm soát** nối từ **Chuyển đổi nhóm chức như một mạng** sang **Tính chọn lọc hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm bảo vệ và cái giá của sự kiểm soát
 
@@ -531,8 +477,6 @@ Tuy nhiên nhóm bảo vệ có sự đánh đổi (trade-off / 트레이드오�
 
 Do đó tổng hợp hiện đại thường cố tránh bảo vệ nếu có thể đạt chemoselectivity trực tiếp.
 
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Tính chọn lọc hóa học** nối từ **Nhóm bảo vệ và cái giá của sự kiểm soát** sang **Ví dụ suy luận: vì sao amide bền hơn ester?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính chọn lọc hóa học
 
 **Tính chọn lọc hóa học (chemoselectivity)** là khả năng một thuốc thử phản ứng ưu tiên với một nhóm chức khi nhiều nhóm có mặt.
@@ -550,8 +494,6 @@ Nguồn gốc của selectivity có thể là:
 Ví dụ `NaBH4` thường khử aldehyde/ketone dễ hơn ester. `LiAlH4` mạnh hơn nên tác động được lên nhiều dẫn xuất carbonyl hơn.
 
 “Sức mạnh thuốc thử” không phải mục tiêu duy nhất; chọn lọc thường quan trọng hơn trong phân tử phức tạp.
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Tính chọn lọc hóa học** nêu quy tắc; **Ví dụ suy luận: vì sao amide bền hơn ester?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao epoxide dễ mở vòng?** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao amide bền hơn ester?
 
@@ -572,8 +514,6 @@ Vì vậy amide thường bền động học hơn ester đối với nhiều t�
 
 Đây là lý do liên kết peptide đủ bền để protein tồn tại lâu trong nước, nhưng enzyme protease vẫn có thể xúc tác thủy phân bằng cách hạ hàng rào hoạt hóa.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ví dụ suy luận: vì sao amide bền hơn ester?** nêu quy tắc; **Ví dụ suy luận: vì sao epoxide dễ mở vòng?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao epoxide dễ mở vòng?
 
 Ether mạch hở tương đối trơ, nhưng epoxide phản ứng mạnh hơn.
@@ -589,8 +529,6 @@ phá cấu trúc vòng bị ép
 ```
 
 Vì vậy hình học phân tử có thể làm cùng một nhóm chức thay đổi reactivity rất mạnh.
-
-> **Nối mạch:** Trong **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Ví dụ suy luận: vì sao epoxide dễ mở vòng?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -613,8 +551,6 @@ Không chỉ vậy. Độ ổn định của tiểu phần sau khi rời, solvat
 ### “Danh pháp IUPAC cho biết nhóm nào phản ứng mạnh nhất”
 
 Không. Thứ tự ưu tiên trong đặt tên không phải thang reactivity.
-
-> **Nối mạch:** Ở chặng này của **Nhóm chức — các mô-đun điện tử của hóa học hữu cơ**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

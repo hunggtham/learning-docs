@@ -10,15 +10,11 @@ Một nhị phân (binary / 이진) có thể không đổi bit nào nhưng ecos
 
 Software aging phần lớn là mismatch giữa hệ thống (system / 시스템) các giả định (assumptions / 가정들) và evolving môi trường (environment / 환경).
 
-> **Nối mạch:** **Corrective, adaptive, perfective, preventive maintenance** nối từ **Software không hao mòn vật lý nhưng môi trường thay đổi** sang **Technical debt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Corrective, adaptive, perfective, preventive maintenance
 
 Corrective sửa bugs. Adaptive thích nghi nền tảng (platform / 플랫폼)/môi trường (environment / 환경). Perfective cải thiện functionality/hiệu năng (performance / 성능). Preventive giảm future rủi ro (risk / 위험) như refactor hoặc phụ thuộc (dependency / 의존성) cleanup.
 
 Thực tế categories overlap nhưng giúp thấy maintenance không đồng nghĩa bug fixing.
-
-> **Nối mạch:** **Technical debt** nối từ **Corrective, adaptive, perfective, preventive maintenance** sang **Thay đổi (change / 변경) amplification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Technical debt
 
@@ -28,15 +24,11 @@ Debt không luôn xấu. Intentional debt có thể rational khi deadline/giá t
 
 Gọi mọi mã (code / 코드) xấu là debt làm mất meaning; một accidental thiết kế (design / 설계) flaw không phải quyết định (decision / 결정) sự đánh đổi (trade-off / 트레이드오프) có chủ đích.
 
-> **Nối mạch:** **Thay đổi (change / 변경) amplification** nối từ **Technical debt** sang **Refactoring**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thay đổi (change / 변경) amplification
 
 Nếu một nghiệp vụ (business / 비즈니스) thay đổi (change / 변경) yêu cầu sửa 17 modules, 8 schemas và 5 deploy pipelines, kiến trúc (architecture / 아키텍처) có high thay đổi (change / 변경) amplification.
 
 Metrics như lead thời gian (time / 시간), thay đổi (change / 변경) thất bại (failure / 실패) tỷ lệ (rate / 비율) và mã (code / 코드) quyền sở hữu (ownership / 소유권) patterns có thể phản ánh maintainability tốt hơn subjective “clean mã (code / 코드)”.
-
-> **Nối mạch:** **Refactoring** nối từ **Thay đổi (change / 변경) amplification** sang **Legacy các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Refactoring
 
@@ -44,15 +36,11 @@ Refactoring thay nội bộ (internal / 내부) cấu trúc (structure / 구조)
 
 Refactor lớn kiểu rewrite toàn hệ thống có rủi ro (risk / 위험) cao; incremental strangler mẫu (pattern / 패턴) có thể migrate năng lực (capability / 역량) dần.
 
-> **Nối mạch:** **Legacy các hệ thống (systems / 시스템들)** nối từ **Refactoring** sang **Phụ thuộc (dependency / 의존성) evolution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Legacy các hệ thống (systems / 시스템들)
 
 Legacy không chỉ nghĩa “cũ”. Một hệ thống (system / 시스템) trở thành legacy khi kiến thức (knowledge / 지식)/tests/contracts thiếu đến mức thay đổi (change / 변경) rất rủi ro.
 
 Chiến lược đầu tiên thường là tạo characterization tests, khả năng quan sát (observability / 관측 가능성) và ánh xạ (mapping / 매핑) dependencies trước khi “modernize”.
-
-> **Nối mạch:** **Phụ thuộc (dependency / 의존성) evolution** nối từ **Legacy các hệ thống (systems / 시스템들)** sang **Dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) như irreversible trạng thái (state / 상태) thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phụ thuộc (dependency / 의존성) evolution
 
@@ -60,15 +48,11 @@ Thư viện (library / 라이브러리) upgrade có breaking changes, bảo mậ
 
 Healthy hệ thống (system / 시스템) có automated tính tương thích (compatibility / 호환성) tests và regular upgrade cadence để tránh mega-jumps.
 
-> **Nối mạch:** **Phụ thuộc (dependency / 의존성) evolution** đặt vấn đề; **Dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) như irreversible trạng thái (state / 상태) thay đổi (change / 변경)** kiểm tra bằng chứng, rồi **Kiến thức (knowledge / 지식) debt** mở rộng hệ quả.
-
 ## Dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) như irreversible trạng thái (state / 상태) thay đổi (change / 변경)
 
 Mã (code / 코드) có thể checkout old lần ghi nhận (commit / 커밋); môi trường vận hành (production / 운영 환경) dữ liệu (data / 데이터) đã migrate không dễ quay lại. Vì vậy lược đồ (schema / 스키마)/dữ liệu (data / 데이터) evolution cần backups, reversible transformations khi possible và kiểm tra hợp lệ (validation / 검증).
 
 Dữ liệu (data / 데이터) is often the most durable part of hệ thống (system / 시스템) kiến trúc (architecture / 아키텍처).
-
-> **Nối mạch:** **Dữ liệu (data / 데이터) di chuyển (migration / 마이그레이션) như irreversible trạng thái (state / 상태) thay đổi (change / 변경)** đặt vấn đề; **Kiến thức (knowledge / 지식) debt** kiểm tra bằng chứng, rồi **Sunsetting** mở rộng hệ quả.
 
 ## Kiến thức (knowledge / 지식) debt
 
@@ -76,15 +60,11 @@ Nếu chỉ một engineer hiểu trọng yếu (critical / 중요) subsystem, b
 
 Kiến thức (knowledge / 지식) debt gây outage khôi phục (recovery / 복구) chậm dù mã (code / 코드) “clean”.
 
-> **Nối mạch:** **Sunsetting** nối từ **Kiến thức (knowledge / 지식) debt** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sunsetting
 
 Tính năng (feature / 기능)/dịch vụ (service / 서비스) không còn giá trị (value / 값) vẫn có maintenance/bảo mật (security / 보안) chi phí (cost / 비용). Decommissioning cần phụ thuộc (dependency / 의존성) discovery, traffic observation, dữ liệu (data / 데이터) retention và stakeholder communication.
 
 Delete mã (code / 코드) an toàn là một kỹ thuật (engineering / 엔지니어링) năng lực (capability / 역량).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Sunsetting** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -94,13 +74,9 @@ Delete mã (code / 코드) an toàn là một kỹ thuật (engineering / 엔지
 
 **“Legacy = ngôn ngữ cũ.”** hiện đại (modern / 현대적) ngăn xếp (stack / 스택) không có tests/quyền sở hữu (ownership / 소유권) cũng có thể trở thành legacy nhanh.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Maintainability là option giá trị (value / 값): kiến trúc (architecture / 아키텍처)/mã (code / 코드)/tiến trình (process / 프로세스) tốt giữ chi phí của future unknown changes thấp và khôi phục (recovery / 복구) đường dẫn (path / 경로) rõ.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

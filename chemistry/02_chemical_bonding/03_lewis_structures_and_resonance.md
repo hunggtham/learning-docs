@@ -125,15 +125,11 @@ BF_3+NH_3\rightarrow F_3B\leftarrow NH_3
 
 Ngoại lệ octet ở đây trực tiếp giải thích reactivity.
 
-> **Nối mạch:** Trong **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Species có số electron lẻ** nối từ **Hệ thiếu electron** sang **Hệ siêu hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Species có số electron lẻ
 
 \(NO\) có tổng electron valence lẻ nên không thể ghép tất cả thành pairs.
 
 Các **gốc tự do (radicals / 라디칼)** thường có electron độc thân và có chemistry rất khác closed-shell molecules.
-
-> **Nối mạch:** Ở chặng này của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Hệ siêu hóa trị** nối từ **Species có số electron lẻ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ siêu hóa trị
 
@@ -401,8 +397,6 @@ Không phải giải thích mặc định hiện đại cho main-group hypervale
 ### “Lewis cấu trúc (structure / 구조) giải thích từ tính và màu”
 
 Thường không. Cần MO/electronic-state các mô hình (models / 모델들).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc Lewis và cộng hưởng — hạch toán electron trước khi đi sâu vào lượng tử**, **Mô hình tư duy** tổng hợp từ **Hệ siêu hóa trị** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

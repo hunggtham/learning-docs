@@ -417,8 +417,6 @@ Không. Nhiều mechanisms có thể tạo cùng tỷ lệ (rate / 비율) law h
 
 Không. Detection phụ thuộc thời gian tồn tại (lifetime / 수명), concentration và thời gian (time / 시간) resolution.
 
-> **Nối mạch:** Trong **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**, **Mô hình tư duy** tổng hợp từ **Molecularity khác reaction thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
-
 ## Mô hình tư duy
 
 Phương trình tổng giống **Đặc tả API (API contract / API 계약)** nói hệ nhận gì và trả gì. Cơ chế giống **hiện thực (implementation / 구현) bên trong** gồm nhiều trạng thái, nhánh và vòng lặp. Kinetics, isotope labeling, spectroscopy và computation là những cách quan sát hiện thực (implementation / 구현) gián tiếp.

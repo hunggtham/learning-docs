@@ -20,8 +20,6 @@ Xem [`24_regional_clusters_and_industrial_geography.md`](./24_regional_clusters_
 
 # Phần I — Đóng tàu (Shipbuilding / 조선)
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Đóng tàu là kinh doanh dự án, không phải kinh doanh tồn kho thông thường** tiếp nhận điểm tựa từ **Vì sao Hàn Quốc xây được các cụm công nghiệp nặng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng backlog quan trọng hơn quy mô backlog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Đóng tàu là kinh doanh dự án, không phải kinh doanh tồn kho thông thường
 
 Nhà đóng tàu thường ký hợp đồng trước rồi thiết kế, mua sắm, xây dựng và giao tàu trong nhiều năm.
@@ -52,8 +50,6 @@ Backlog\ đầu\ kỳ
 - Hủy\ đơn
 \]
 
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Chất lượng backlog quan trọng hơn quy mô backlog** tiếp nhận điểm tựa từ **Đóng tàu là kinh doanh dự án, không phải kinh doanh tồn kho thông thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mỗi loại tàu có kinh tế khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chất lượng backlog quan trọng hơn quy mô backlog
 
 Một công ty có backlog tương đương 4 năm doanh thu nghe rất tốt. Nhưng nếu phần lớn hợp đồng được ký ở đáy chu kỳ với giá thấp rồi giá thép và lao động tăng, biên lợi nhuận có thể rất yếu.
@@ -62,8 +58,6 @@ Ngược lại, đơn hàng LNG hoặc tàu giá trị cao ký khi thị trườ
 
 Vì vậy cần đọc backlog cùng giá hợp đồng, loại tàu, năm giao, giá thép–thiết bị, tỷ giá và tiến độ thanh toán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Mỗi loại tàu có kinh tế khác nhau** tiếp nhận điểm tựa từ **Chất lượng backlog quan trọng hơn quy mô backlog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế toán hợp đồng dài hạn và rủi ro ước tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mỗi loại tàu có kinh tế khác nhau
 
 Tàu bộ chứa (container / 컨테이너), tanker, LNG carrier, công trình ngoài khơi và tàu quân sự không phải cùng một sản phẩm.
@@ -71,8 +65,6 @@ Tàu bộ chứa (container / 컨테이너), tanker, LNG carrier, công trình n
 LNG carrier yêu cầu hệ chứa lạnh, kỹ thuật phức tạp và chứng nhận nhà cung cấp cao hơn tàu hàng khối lượng lớn. Các xưởng Hàn Quốc thường cạnh tranh tốt ở tàu giá trị cao, nơi **độ phức tạp kỹ thuật + độ tin cậy giao hàng** tạo rào cản lớn hơn chi phí lao động đơn thuần.
 
 Vì vậy cơ cấu sản phẩm quyết định biên lợi nhuận.
-
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Kế toán hợp đồng dài hạn và rủi ro ước tính** tiếp nhận điểm tựa từ **Mỗi loại tàu có kinh tế khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thu tiền có thể khác thời điểm ghi nhận doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kế toán hợp đồng dài hạn và rủi ro ước tính
 
@@ -92,15 +84,11 @@ Nếu tổng chi phí dự kiến tăng, biên lợi nhuận dự án phải đi
 
 Đây là lý do tài sản/nợ hợp đồng và dự phòng rất quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Thu tiền có thể khác thời điểm ghi nhận doanh thu** tiếp nhận điểm tựa từ **Kế toán hợp đồng dài hạn và rủi ro ước tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu kỳ giá đóng mới và kỷ luật công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Thu tiền có thể khác thời điểm ghi nhận doanh thu
 
 Hợp đồng tàu thường dùng tiền ứng trước và thanh toán theo mốc. Doanh thu kế toán và tiền mặt có thể không đến cùng lúc.
 
 Một xưởng có thể báo doanh thu tăng nhưng dòng tiền yếu nếu lịch thanh toán bất lợi. Vì vậy phân tích vốn lưu động vẫn rất quan trọng dù backlog lớn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Chu kỳ giá đóng mới và kỷ luật công suất** tiếp nhận điểm tựa từ **Thu tiền có thể khác thời điểm ghi nhận doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức tiếp xúc tỷ giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chu kỳ giá đóng mới và kỷ luật công suất
 
@@ -118,15 +106,11 @@ Thị trường cước
 → Công suất đội tàu toàn cầu
 ```
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Mức tiếp xúc tỷ giá** tiếp nhận điểm tựa từ **Chu kỳ giá đóng mới và kỷ luật công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định môi trường như động lực nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mức tiếp xúc tỷ giá
 
 Nhiều hợp đồng tàu được định giá USD trong khi lao động và nhiều chi phí nội địa là KRW. KRW yếu có thể có lợi nhưng các xưởng thường phòng hộ lượng lớn và một phần thiết bị nhập khẩu làm giảm lợi ích.
 
 Không nên dùng công thức đơn giản “KRW yếu = tốt”; phải xem tỷ lệ phòng hộ và thời điểm dòng tiền.
-
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Quy định môi trường như động lực nhu cầu** tiếp nhận điểm tựa từ **Mức tiếp xúc tỷ giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thép là kinh doanh chênh lệch giá đầu vào–đầu ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy định môi trường như động lực nhu cầu
 
@@ -137,8 +121,6 @@ Nhưng quy định không đảm bảo đơn hàng tăng vô hạn. Chủ tàu v
 Chuyển đổi xanh vì vậy thay đổi cơ cấu sản phẩm và chu kỳ thay thế hơn là làm mọi nhu cầu đóng tàu tăng cơ học.
 
 # Phần II — Thép (Steel / 철강)
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Thép là kinh doanh chênh lệch giá đầu vào–đầu ra** tiếp nhận điểm tựa từ **Quy định môi trường như động lực nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế lò cao và utilization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thép là kinh doanh chênh lệch giá đầu vào–đầu ra
 
@@ -160,8 +142,6 @@ Thực tế còn có cơ cấu sản phẩm, vận chuyển, phế liệu, hợp
 
 Nếu quặng, than hoặc năng lượng tăng nhanh hơn, biên có thể bị nén.
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Kinh tế lò cao và utilization** tiếp nhận điểm tựa từ **Thép là kinh doanh chênh lệch giá đầu vào–đầu ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngành hạ nguồn quyết định cơ cấu thép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Kinh tế lò cao và utilization
 
 Lò cao tích hợp là tài sản chi phí cố định cao và được thiết kế để chạy tương đối ổn định ở utilization cao.
@@ -172,15 +152,11 @@ Dừng và khởi động lò cũng tốn kém, nên nhà sản xuất đôi khi
 
 Đây là **đòn bẩy hoạt động (operating leverage)** điển hình của công nghiệp nặng.
 
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Kinh tế lò cao và utilization** nêu điều cần giải thích; **Ngành hạ nguồn quyết định cơ cấu thép** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thép hàng hóa và thép cao cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Ngành hạ nguồn quyết định cơ cấu thép
 
 Ô tô cần thép tấm; xây dựng dùng rebar và thép kết cấu; đóng tàu dùng plate; thiết bị gia dụng dùng sản phẩm chuyên dụng.
 
 Một nhà sản xuất thép có thể đồng thời chịu nhiều chu kỳ khác nhau theo từng sản phẩm. Vì vậy “nhu cầu thép” phải được phân rã theo ngành hạ nguồn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Ngành hạ nguồn quyết định cơ cấu thép** nêu điều cần giải thích; **Thép hàng hóa và thép cao cấp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Công suất Trung Quốc và giá khu vực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thép hàng hóa và thép cao cấp
 
@@ -190,8 +166,6 @@ Nâng cơ cấu sản phẩm lên phân khúc cao cấp là một cách thoát c
 
 Đây là lô-gic (logic / 논리) rộng hơn của chiến lược Hàn Quốc: **chuyển từ cạnh tranh sản lượng sang năng lực khác biệt hóa**.
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Công suất Trung Quốc và giá khu vực** tiếp nhận điểm tựa từ **Thép hàng hóa và thép cao cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi hóa dầu: nguyên liệu → hóa chất cơ bản → sản phẩm dẫn xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Công suất Trung Quốc và giá khu vực
 
 Quy mô thép khổng lồ của Trung Quốc ảnh hưởng giá châu Á ngay cả khi nhu cầu nội địa Hàn Quốc ổn định.
@@ -199,8 +173,6 @@ Quy mô thép khổng lồ của Trung Quốc ảnh hưởng giá châu Á ngay 
 Nếu xuất khẩu thép Trung Quốc tăng do nhu cầu trong nước yếu, giá khu vực có thể chịu áp lực. Vì vậy kinh tế thép Hàn Quốc phụ thuộc không chỉ xây dựng–ô tô trong nước mà cả utilization Trung Quốc và biện pháp thương mại.
 
 # Phần III — Hóa dầu (Petrochemicals / 석유화학)
-
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Công suất Trung Quốc và giá khu vực** xác định đầu vào; **Chuỗi hóa dầu: nguyên liệu → hóa chất cơ bản → sản phẩm dẫn xuất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chênh lệch giá quan trọng hơn giá sản phẩm đơn lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Chuỗi hóa dầu: nguyên liệu → hóa chất cơ bản → sản phẩm dẫn xuất
 
@@ -220,8 +192,6 @@ Bao bì / ô tô / điện tử / xây dựng
 
 Mức tiếp xúc của doanh nghiệp phụ thuộc nó nằm ở đâu trong chuỗi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Chuỗi hóa dầu: nguyên liệu → hóa chất cơ bản → sản phẩm dẫn xuất** xác định đầu vào; **Chênh lệch giá quan trọng hơn giá sản phẩm đơn lẻ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bảo trì định kỳ và utilization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chênh lệch giá quan trọng hơn giá sản phẩm đơn lẻ
 
 Giá sản phẩm hóa chất có thể tăng nhưng nếu nguyên liệu tăng nhanh hơn, lợi nhuận vẫn xấu đi.
@@ -236,15 +206,11 @@ Giá\ sản\ phẩm
 
 Vì vậy nhà phân tích thường theo dõi chênh lệch như ethylene–naphtha thay vì chỉ giá ethylene.
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Bảo trì định kỳ và utilization** tiếp nhận điểm tựa từ **Chênh lệch giá quan trọng hơn giá sản phẩm đơn lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dư cung chu kỳ và dư cung cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bảo trì định kỳ và utilization
 
 Cracker và nhà máy định kỳ dừng để **bảo trì lớn (turnaround / 정기보수)**. Điều này làm sản lượng và chi phí quý thay đổi nhưng không nhất thiết là yếu kém cấu trúc.
 
 Cần phân biệt bảo trì theo kế hoạch với utilization thấp do thiếu nhu cầu.
-
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Dư cung chu kỳ và dư cung cấu trúc** tiếp nhận điểm tựa từ **Bảo trì định kỳ và utilization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa chất chuyên dụng có kinh tế khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dư cung chu kỳ và dư cung cấu trúc
 
@@ -254,8 +220,6 @@ Cần phân biệt bảo trì theo kế hoạch với utilization thấp do thi�
 
 Mở rộng công suất hóa dầu Trung Quốc có thể gây áp lực cấu trúc lên các nhà sản xuất hàng hóa Hàn Quốc. Nếu đường cung của toàn ngành thay đổi vĩnh viễn, luận điểm “chờ chu kỳ phục hồi” có thể sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Hóa chất chuyên dụng có kinh tế khác** tiếp nhận điểm tựa từ **Dư cung chu kỳ và dư cung cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết bị nhạy với chu kỳ CAPEX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hóa chất chuyên dụng có kinh tế khác
 
 Sản phẩm specialty có thể gắn với chứng nhận khách hàng, công thức/IP và hiểu biết ứng dụng. Điều này tạo chi phí chuyển đổi và quyền định giá cao hơn ethylene hoặc polymer hàng hóa.
@@ -264,8 +228,6 @@ Vì vậy “công ty hóa chất” là nhãn quá rộng; phải tách tỷ tr
 
 # Phần IV — Máy móc nặng và thiết bị công nghiệp
 
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Thiết bị nhạy với chu kỳ CAPEX** tiếp nhận điểm tựa từ **Hóa chất chuyên dụng có kinh tế khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Installed cơ sở (base / 기반) tạo kinh tế dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Thiết bị nhạy với chu kỳ CAPEX
 
 Máy móc nặng, robot công nghiệp, turbine, máy xây dựng và thiết bị nhà máy được mua từ ngân sách CAPEX của doanh nghiệp khác.
@@ -273,8 +235,6 @@ Máy móc nặng, robot công nghiệp, turbine, máy xây dựng và thiết b�
 Đơn hàng thiết bị có thể di chuyển trước sản lượng kinh tế cuối vì khách hàng đặt máy khi dự kiến mở rộng công suất. Vì vậy doanh nghiệp thiết bị đôi khi là **ngành dẫn chu kỳ (leading-cycle business)**.
 
 Tuy nhiên, chất lượng backlog, dịch vụ hậu mãi và tập trung khách hàng vẫn quyết định chất lượng lợi nhuận.
-
-> **Chuyển mạch:** Ở chặng này của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Installed cơ sở (base / 기반) tạo kinh tế dịch vụ** tiếp nhận điểm tựa từ **Thiết bị nhạy với chu kỳ CAPEX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài sản hợp đồng, khoản phải thu và tiền ứng trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Installed cơ sở (base / 기반) tạo kinh tế dịch vụ
 
@@ -295,8 +255,6 @@ Cùng 100 tấn tồn kho
 Lợi nhuận kế toán có thể thậm chí ghi nhận lợi ích tồn kho, trong khi dòng tiền hoạt động xấu đi vì tiền bị khóa.
 
 Vì vậy chỉ đọc báo cáo kết quả kinh doanh rất dễ gây hiểu lầm.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Tài sản hợp đồng, khoản phải thu và tiền ứng trước** tiếp nhận điểm tựa từ **Installed cơ sở (base / 기반) tạo kinh tế dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro tài sản mắc kẹt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tài sản hợp đồng, khoản phải thu và tiền ứng trước
 
@@ -327,8 +285,6 @@ CAPEX / chi phí ngắn hạn ↑
 đổi lại
 tuân thủ / khả năng tiếp cận thị trường / cơ hội premium dài hạn
 ```
-
-> **Chuyển mạch:** Trong **Đóng tàu, thép, hóa chất và công nghiệp nặng Hàn Quốc (Heavy Industry / 조선·철강·화학·중공업)**, **Rủi ro tài sản mắc kẹt** tiếp nhận điểm tựa từ **Tài sản hợp đồng, khoản phải thu và tiền ứng trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Rủi ro tài sản mắc kẹt
 

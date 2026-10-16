@@ -14,8 +14,6 @@ Hai khái niệm thường đi cùng nhau nhưng không giống nhau. Duyệt c�
 
 Muốn hiểu một recursive thuật toán, đừng đọc bằng cách mô phỏng từng khung ngăn xếp ngay từ đầu. Hãy xác định đặc tả hợp đồng (contract / 계약) của hàm trước.
 
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **hợp đồng đệ quy** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Recursion và quy nạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## hợp đồng đệ quy
 
 Giả sử hàm:
@@ -48,8 +46,6 @@ height(null) = 0
 
 Progress measure là kích thước cây con/độ sâu giảm khi đi xuống nút con.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **Recursion và quy nạp** tiếp nhận điểm tựa từ **hợp đồng đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ngăn xếp lời gọi thực sự giữ gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Recursion và quy nạp
 
 Recursion tính đúng đắn thường mirror mathematical quy nạp.
@@ -71,8 +67,6 @@ show current combine logic tạo answer đúng
 
 Đây là lý do quy nạp là công cụ chứng minh tự nhiên cho recursive các thuật toán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **ngăn xếp lời gọi thực sự giữ gì?** tiếp nhận điểm tựa từ **Recursion và quy nạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tail recursion không phải lúc nào cũng tối ưu được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## ngăn xếp lời gọi thực sự giữ gì?
 
 Mỗi lời gọi hàm đang hoạt động cần lưu trạng thái để tiếp tục sau khi lời gọi đệ quy trả về: tham số, biến cục bộ, địa chỉ trả về và siêu dữ liệu (metadata / 메타데이터) của môi trường chạy.
@@ -90,8 +84,6 @@ Lời gọi (call / 호출) `factorial(5)` phải giữ các pending multiplicat
 
 Độ sâu recursion là `O(n)`, nên bộ nhớ ngăn xếp (stack / 스택) cũng `O(n)` dù arithmetic công việc (work / 작업) chỉ `O(n)`.
 
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Tail recursion không phải lúc nào cũng tối ưu được** tiếp nhận điểm tựa từ **ngăn xếp lời gọi thực sự giữ gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cây traversal: recursion khớp shape dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tail recursion không phải lúc nào cũng tối ưu được
 
 Tail-hàm đệ quy có lời gọi đệ quy là thao tác cuối cùng. Một số languages/môi trường chạy có thể tối ưu thành vòng lặp (loop / 루프), nhưng không nên giả định điều đó portable.
@@ -99,8 +91,6 @@ Tail-hàm đệ quy có lời gọi đệ quy là thao tác cuối cùng. Một 
 Java không đảm bảo tối ưu lời gọi đuôi. JavaScript specification/môi trường chạy hành vi cũng không nên được dựa vào như một tối ưu hóa (optimization / 최적화) phổ biến. C trình biên dịch có thể optimize trong một số trường hợp (case / 사례) nhưng không phải ngữ nghĩa (semantic / 의미적) bảo đảm chung.
 
 Nếu độ sâu có thể rất lớn, tường minh (explicit / 명시적) vòng lặp (loop / 루프)/ngăn xếp (stack / 스택) thường an toàn hơn.
-
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **Tail recursion không phải lúc nào cũng tối ưu được** nêu điều cần giải thích; **cây traversal: recursion khớp shape dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **cây đệ quy và độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## cây traversal: recursion khớp shape dữ liệu
 
@@ -124,8 +114,6 @@ void inorder(Node x) {
 
 Ở đây recursion không phải trick; cách biểu diễn (representation / 표현) của dữ liệu (data / 데이터) đã recursive.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **cây traversal: recursion khớp shape dữ liệu** nêu điều cần giải thích; **cây đệ quy và độ phức tạp (complexity / 복잡도)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **quay lui là DFS trên implicit đồ thị trạng thái/cây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## cây đệ quy và độ phức tạp (complexity / 복잡도)
 
 Một hàm đệ quy không thể phân tích chỉ bằng độ sâu. Phải xem hệ số phân nhánh và công việc (work / 작업) mỗi nút.
@@ -139,8 +127,6 @@ fib(n) = fib(n-1) + fib(n-2)
 tạo cây đệ quy có rất nhiều lặp lại các trạng thái. độ phức tạp (complexity / 복잡도) exponential không phải vì recursion bản thân chậm, mà vì cùng subproblem được recompute nhiều lần.
 
 Memoization biến trạng thái cây thành trạng thái DAG bằng cách reuse các kết quả.
-
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **quay lui là DFS trên implicit đồ thị trạng thái/cây** tiếp nhận điểm tựa từ **cây đệ quy và độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Choose → Constrain → Explore → Undo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## quay lui là DFS trên implicit đồ thị trạng thái/cây
 
@@ -180,8 +166,6 @@ function permutations(nums) {
 
 trạng thái cây không được materialize; ngăn xếp đệ quy chính là đường đi hiện tại.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **Choose → Constrain → Explore → Undo** tiếp nhận điểm tựa từ **quay lui là DFS trên implicit đồ thị trạng thái/cây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subsets: hệ số phân nhánh 2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Choose → Constrain → Explore → Undo
 
 Một template mạnh:
@@ -206,8 +190,6 @@ copy-on-recursion   -> đơn giản correctness, tốn memory/time
 persistent state    -> structural sharing, implementation phức tạp hơn
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **Subsets: hệ số phân nhánh 2** tiếp nhận điểm tựa từ **Choose → Constrain → Explore → Undo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Permutations và factorial growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Subsets: hệ số phân nhánh 2
 
 Mỗi phần tử có hai choices: lấy hoặc không lấy.
@@ -231,8 +213,6 @@ Có `2^n` subsets, nên thuật toán đầu ra tất cả subsets không thể 
 
 Đây là khác biệt quan trọng giữa sự kém hiệu quả của thuật toán và cận dưới do kích thước đầu ra.
 
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Permutations và factorial growth** tiếp nhận điểm tựa từ **Subsets: hệ số phân nhánh 2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pruning: loại cả cây con** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Permutations và factorial growth
 
 Với `n` distinct items, số permutations là:
@@ -244,8 +224,6 @@ n!
 Dù pruning/check cực nhanh, nếu phải đầu ra tất cả permutations thì độ phức tạp (complexity / 복잡도) ít nhất proportional `n!`.
 
 quay lui không “làm exponential thành polynomial”. Nó giúp không gian tìm kiếm (search / 검색) được biểu diễn gọn và cho phép prune branches không cần thiết.
-
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **Pruning: loại cả cây con** tiếp nhận điểm tựa từ **Permutations và factorial growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bitmask quay lui** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Pruning: loại cả cây con
 
@@ -265,8 +243,6 @@ Check từ `O(n)` xuống gần `O(1)`.
 
 Tốc độ tìm kiếm không chỉ phụ thuộc vào số nhánh mà còn phụ thuộc chi phí xác minh mỗi nhánh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **Bitmask quay lui** tiếp nhận điểm tựa từ **Pruning: loại cả cây con** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **phần tử trùng điều khiển (control / 제어) phải gắn với trạng thái ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bitmask quay lui
 
 Nếu `n` nhỏ, các ràng buộc có thể encode bằng bitmask.
@@ -282,8 +258,6 @@ anti diagonals
 và compute available positions bằng bit các thao tác. Điều này giảm constant factor rất mạnh và tránh set/băm (hash / 해시) cấp phát.
 
 Nhưng bitmask không thay đổi trường hợp xấu nhất combinatorial nature; nó chỉ làm trạng thái chuyển tiếp (transition / 전이) rẻ hơn.
-
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **phần tử trùng điều khiển (control / 제어) phải gắn với trạng thái ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **Bitmask quay lui** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **quay lui cho Combination Sum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## phần tử trùng điều khiển (control / 제어) phải gắn với trạng thái ngữ nghĩa (semantics / 의미론)
 
@@ -301,8 +275,6 @@ quy tắc chống phần tử trùng phải derive từ câu hỏi:
 
 > Hai branches này có đại diện cùng quyết định (decision / 결정) tại trạng thái hiện tại hay không?
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **quay lui cho Combination Sum** tiếp nhận điểm tựa từ **phần tử trùng điều khiển (control / 제어) phải gắn với trạng thái ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **N-Queens: trạng thái-space lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## quay lui cho Combination Sum
 
 Nếu các ứng viên positive và có đích còn lại `remain`, ta có pruning monotonic:
@@ -316,8 +288,6 @@ nếu các ứng viên sorted.
 Nếu các giá trị có negative numbers, lập luận (reasoning / 추론) này vỡ. Một branch đang overshoot có thể quay lại bằng số âm.
 
 Đây là ví dụ các giả định quyết định validity của pruning.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **N-Queens: trạng thái-space lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **quay lui cho Combination Sum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sudoku và ràng buộc propagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## N-Queens: trạng thái-space lập luận (reasoning / 추론)
 
@@ -335,8 +305,6 @@ Không nhất thiết giữ full board nếu chỉ cần count các lời giải
 
 Bài toán (problem / 문제) mô hình hóa tốt có thể quan trọng hơn micro-optimization trong DFS.
 
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Sudoku và ràng buộc propagation** tiếp nhận điểm tựa từ **N-Queens: trạng thái-space lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **thứ tự phân nhánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Sudoku và ràng buộc propagation
 
 Sudoku solver naive thử digits 1..9 cho mọi rỗng cell. Tốt hơn là maintain ứng viên set của từng cell hoặc các mặt nạ hàng/cột/khối.
@@ -346,8 +314,6 @@ Một heuristic mạnh là chọn cell có **Minimum Remaining các giá trị (
 Tại sao? Nếu branch sắp thất bại (fail / 실패), ta muốn thất bại (fail / 실패) sớm để prune cây con lớn.
 
 Đây gọi là **fail-first principle** trong ràng buộc satisfaction.
-
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **thứ tự phân nhánh** tiếp nhận điểm tựa từ **Sudoku và ràng buộc propagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **quay lui và memoization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## thứ tự phân nhánh
 
@@ -362,8 +328,6 @@ candidate có score tốt trước nếu branch-and-bound
 ```
 
 Nếu cần enumerate toàn bộ các lời giải, thứ tự (ordering / 순서) chỉ thay chuỗi (sequence / 시퀀스) đầu ra, không giảm số hợp lệ các nút lá; pruning vẫn có thể giảm không hợp lệ các trạng thái.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **quay lui và memoization** tiếp nhận điểm tựa từ **thứ tự phân nhánh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **quay lui khác quy hoạch động (dynamic programming) thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## quay lui và memoization
 
@@ -387,8 +351,6 @@ Nếu bạn thấy cây đệ quy có nhiều calls với cùng parameters hoặ
 
 Nếu không, trạng thái có thể memoize.
 
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **quay lui khác quy hoạch động (dynamic programming) thế nào?** tiếp nhận điểm tựa từ **quay lui và memoization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **nhánh và cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## quay lui khác quy hoạch động (dynamic programming) thế nào?
 
 quay lui thường explore choices để tìm feasible/lời giải tối ưu và dựa mạnh vào pruning.
@@ -398,8 +360,6 @@ DP xác định các lớp tương đương của histories thành các trạng 
 Một bài toán có thể dùng cả hai: quay lui để khám phá không gian cấu trúc, còn ghi nhớ (memoization) để hợp nhất các trạng thái lặp lại.
 
 Không nên phân loại bằng cú pháp (syntax / 문법) “có recursion hay không”. Top-down DP cũng recursive.
-
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **nhánh và cận** tiếp nhận điểm tựa từ **quay lui khác quy hoạch động (dynamic programming) thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alpha-Beta như chuyên biệt pruning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## nhánh và cận
 
@@ -416,15 +376,11 @@ backtracking      -> prune impossible branches
 branch-and-bound  -> prune branches không thể beat incumbent
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **Alpha-Beta như chuyên biệt pruning** tiếp nhận điểm tựa từ **nhánh và cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thay recursion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Alpha-Beta như chuyên biệt pruning
 
 Trong minimax game cây, alpha-beta pruning loại branches không thể ảnh hưởng final quyết định (decision / 결정) do hiện tại lower/các cận trên.
 
 Nó là một ví dụ domain-specific của general idea: nếu partial thông tin đã chứng minh các hậu duệ không thể thay answer, skip whole cây con.
-
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thay recursion** tiếp nhận điểm tựa từ **Alpha-Beta như chuyên biệt pruning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **C: quyền sở hữu (ownership / 소유권) và có thể thay đổi trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thay recursion
 
@@ -442,8 +398,6 @@ Cú pháp đệ quy tự động lưu bộ đếm lệnh và biến cục bộ t
 
 Đây là lý do iterative quay lui đôi khi phức tạp hơn iterative DFS đơn giản.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, sau nội dung của **Tường minh (explicit / 명시적) ngăn xếp (stack / 스택) thay recursion**, **C: quyền sở hữu (ownership / 소유권) và có thể thay đổi trạng thái** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Java: collections và bản sao (copy / 복사) chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## C: quyền sở hữu (ownership / 소유권) và có thể thay đổi trạng thái
 
 Trong C, hàm đệ quy cần rõ ai sở hữu các bộ đệm. Nếu mỗi lời gọi đệ quy `malloc` một trạng thái bản sao (copy / 복사), overhead lớn và dễ leak khi early return.
@@ -459,8 +413,6 @@ used[candidate] = false;
 
 Nếu recursion có multiple exit các đường đi, cleanup phải nhất quán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **Java: collections và bản sao (copy / 복사) chi phí** tiếp nhận điểm tựa từ **C: quyền sở hữu (ownership / 소유권) và có thể thay đổi trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JavaScript: đối tượng sự thay đổi dữ liệu và recursion limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Java: collections và bản sao (copy / 복사) chi phí
 
 Trong Java, mẫu:
@@ -472,8 +424,6 @@ ans.add(new ArrayList<>(path));
 ở nút lá là bắt buộc nếu `path` tiếp tục mutate. Nếu thêm chính `path`, mọi các tham chiếu trong `ans` có thể cùng trỏ tới đối tượng đang bị thay đổi.
 
 Đây là một bug bí danh bộ nhớ phổ biến.
-
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Java: collections và bản sao (copy / 복사) chi phí** đã nêu tiêu chí phân biệt, còn **JavaScript: đối tượng sự thay đổi dữ liệu và recursion limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ phức tạp (complexity / 복잡도) của quay lui** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## JavaScript: đối tượng sự thay đổi dữ liệu và recursion limit
 
@@ -487,8 +437,6 @@ cho snapshot.
 
 Deep recursive tìm kiếm (search / 검색) còn có call-stack limit phụ thuộc engine. Với đầu vào độ sâu không kiểm soát, tường minh (explicit / 명시적) ngăn xếp (stack / 스택) hoặc iterative thiết kế (design / 설계) an toàn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **JavaScript: đối tượng sự thay đổi dữ liệu và recursion limit** đã nêu tiêu chí phân biệt, còn **Độ phức tạp (complexity / 복잡도) của quay lui** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **không gian tìm kiếm vs không gian lời giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ phức tạp (complexity / 복잡도) của quay lui
 
 Một cách estimate tốt hơn chỉ nói “exponential” là:
@@ -501,15 +449,11 @@ Pruning giảm đã thăm các trạng thái. Better ràng buộc cách biểu d
 
 Đây là decomposition thực dụng khi optimize solver.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **không gian tìm kiếm vs không gian lời giải** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도) của quay lui** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ biến mistakes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## không gian tìm kiếm vs không gian lời giải
 
 Không gian ứng viên có thể lớn hơn rất nhiều số hợp lệ các lời giải. Một good quay lui mô hình cố generate ít không hợp lệ trạng thái nhất có thể.
 
 Ví dụ generate all `n^n` board configurations rồi kiểm N-Queens là vô lý; enforce one queen per row ngay từ mô hình trạng thái giảm không gian tìm kiếm trước cả pruning.
-
-> **Chuyển mạch:** Trong **Recursion và quay lui (backtracking)**, **Phổ biến mistakes** tiếp nhận điểm tựa từ **không gian tìm kiếm vs không gian lời giải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kiểm thử quay lui** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Phổ biến mistakes
 
@@ -529,8 +473,6 @@ Ví dụ generate all `n^n` board configurations rồi kiểm N-Queens là vô l
 
 **Assume recursion luôn an toàn.** Deep đầu vào có thể ngăn xếp (stack / 스택) tràn số.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion và quay lui (backtracking)**, **kiểm thử quay lui** tiếp nhận điểm tựa từ **Phổ biến mistakes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## kiểm thử quay lui
 
 Với `n` nhỏ, so sánh đầu ra count với known combinatorial các giá trị:
@@ -545,8 +487,6 @@ Kiểm mỗi đầu ra thỏa các ràng buộc và không phần tử trùng n�
 Một kỹ thuật mạnh là dùng brute-force generator đơn giản làm oracle cho small `n`, rồi so sánh optimized pruning phiên bản (version / 버전).
 
 Ngoài final answers, có thể assert trạng thái restored sau mỗi lời gọi đệ quy trong gỡ lỗi xây dựng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion và quay lui (backtracking)**, **Mô hình tư duy mở rộng** gom các mảnh từ **kiểm thử quay lui** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy mở rộng
 

@@ -6,14 +6,14 @@ Transformer kiến trúc (architecture / 아키텍처) là general cơ chế (me
 
 ## Encoder-Only NLP
 
-Encoder self-attention thường bidirectional. Mỗi đơn vị từ (token / 토큰) có thể attend left/right ngữ cảnh (context / 맥락).
+Encoder self-attention thường bidirectional. Mỗi token (토큰) có thể attend left/right ngữ cảnh (context / 맥락).
 
 BERT-style pretraining dùng Masked ngôn ngữ (language / 언어) Modeling (MLM): chọn một số tokens, corrupt/mask, predict originals.
 
 Biểu diễn (representation / 표현) tốt cho:
 
 - văn bản (text / 텍스트) classification;
-- đơn vị từ (token / 토큰) classification/NER;
+- token (토큰) classification/NER;
 - extractive QA;
 - sentence-pair scoring;
 - embeddings sau task-specific huấn luyện (training / 학습).
@@ -105,7 +105,7 @@ Metrics should reconstruct word/thực thể (entity / 엔터티) spans correctl
 
 ## Extractive Question Answering
 
-Given `[question ; context]`, encoder outputs đơn vị từ (token / 토큰) states. Two heads predict start/end positions:
+Given `[question ; context]`, encoder outputs token (토큰) states. Two heads predict start/end positions:
 
 \[
 P(start=i),\qquad P(end=j)
@@ -131,7 +131,7 @@ For relevance/paraphrase:
 [CLS] query [SEP] document
 ```
 
-joint self-attention lets every đơn vị từ (token / 토큰) pair interact, giving accurate scoring but O(number of candidate pairs) suy luận (inference / 추론) chi phí (cost / 비용).
+joint self-attention lets every token (토큰) pair interact, giving accurate scoring but O(number of candidate pairs) suy luận (inference / 추론) chi phí (cost / 비용).
 
 Bi-encoder vs cross-encoder sự đánh đổi (trade-off / 트레이드오프) becomes central retrieval kiến trúc (architecture / 아키텍처).
 
@@ -188,7 +188,7 @@ But lĩnh vực (domain / 도메인) pretraining needs chất lượng (quality 
 
 ## Multilingual Transformer
 
-Dùng chung (shared / 공유) tokenizer + parameters across languages enables transfer. High-resource languages may dominate sức chứa (capacity / 용량); scripts/đơn vị từ (token / 토큰) efficiency and corpus balance matter.
+Dùng chung (shared / 공유) tokenizer + parameters across languages enables transfer. High-resource languages may dominate sức chứa (capacity / 용량); scripts/token (토큰) efficiency and corpus balance matter.
 
 Cross-lingual transfer works because dùng chung (shared / 공유) representations align statistical structures, but hiệu năng (performance / 성능) uneven. Evaluate each ngôn ngữ (language / 언어), especially Korean/Vietnamese mục tiêu (target / 대상) use.
 

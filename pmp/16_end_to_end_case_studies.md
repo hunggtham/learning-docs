@@ -58,8 +58,6 @@ Closure chỉ xảy ra khi operations có quyền sở hữu (ownership / 소유
 
 Mọi construction tác vụ (task / 작업) có thể “green” nhưng failover rehearsal thất bại vì ứng dụng (application / 애플리케이션) phụ thuộc (dependency / 의존성) chưa được map. Đây là ví dụ cục bộ (local / 로컬) completion không bằng hệ thống (system / 시스템) readiness.
 
-> **Nối mạch:** **Trường hợp (case / 사례) A — Predictive: mở trung tâm dữ liệu dự phòng** nêu quy tắc; **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn
 
 ### Ngữ cảnh (context / 맥락)
@@ -114,8 +112,6 @@ Nếu initiative chứng minh product-market tín hiệu (signal / 신호), temp
 
 Nhóm (team / 팀) chạy sprint, daily và retrospective nhưng founder khóa roadmap sáu tháng và mọi yêu cầu (request / 요청) đều “must-have”. phản hồi (feedback / 피드백) không thay quyết định (decision / 결정); hệ thống (system / 시스템) chỉ có ceremony, không có adaptation.
 
-> **Nối mạch:** **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** nêu quy tắc; **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor
 
 ### Ngữ cảnh (context / 맥락)
@@ -164,8 +160,6 @@ Operations cần dashboard, alert, vendor escalation, manual fallback, privacy s
 
 Nếu nhóm (team / 팀) vừa giữ full upfront specification, vừa có sprint ceremony, vừa phải submit mọi backlog reorder cho CCB, overhead tăng mà phản hồi (feedback / 피드백) không nhanh hơn. Hybrid tốt chọn cơ chế (mechanism / 메커니즘) theo ràng buộc (constraint / 제약조건); hybrid xấu cộng tất cả ceremony.
 
-> **Nối mạch:** **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** nêu quy tắc; **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ
 
 ### Ngữ cảnh (context / 맥락)
@@ -212,8 +206,6 @@ Một khôi phục (recovery / 복구) proposal tốt có option: phased rollout
 
 “Red dự án (project / 프로젝트)” thường bị cứu bằng kế hoạch đẹp hơn mà không sửa thông tin (information / 정보) chất lượng (quality / 품질), quản trị (governance / 거버넌스) hoặc phạm vi (scope / 범위) coupling. Khi sensor vẫn sai, khôi phục (recovery / 복구) plan cũng chỉ là fiction mới.
 
-> **Nối mạch:** **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** nêu quy tắc; **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** mở rộng hệ quả.
-
 ## Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)
 
 ### Ngữ cảnh (context / 맥락)
@@ -255,8 +247,6 @@ Pilot giảm handling 28%, serious lỗi (error / 오류) dưới threshold ở 
 ### Benefits realization
 
 Sau rollout cần đo actual handling thời gian (time / 시간), assessor adoption, override tỷ lệ (rate / 비율), complaint, lỗi (error / 오류), vendor spend và sự cố (incident / 인시던트). Pilot success không chứng minh môi trường vận hành (production / 운영 환경) benefit nếu hành vi (behavior / 동작) thay đổi ở quy mô (scale / 규모).
-
-> **Nối mạch:** Case E cho thấy AI-assisted claims processing phải nối sustainability với governance; **Case F** thử cùng logic khi nhiều initiative tranh một change capacity. **Cross-case synthesis** rút ra invariant và variable làm quyết định đổi.
 
 ## Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)
 
@@ -308,8 +298,6 @@ PMO thất bại khi trở thành reporting bureaucracy mà không cải thiện
 
 Trường hợp (case / 사례) này nối [Governance & Business Environment](./09_governance_compliance_and_business_environment.md), [Stakeholders](./03_stakeholders_communication_and_knowledge.md), [Schedule & Flow](./05_schedule_estimation_and_flow.md), [Risk](./08_risk_uncertainty_issues_and_decisions.md) và [Measurement](./11_measurement_status_closure_and_continuous_improvement.md).
 
-> **Nối mạch:** **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** nêu quy tắc; **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** thử quy tắc trong tình huống, rồi **Cross-case synthesis: bottleneck di chuyển** mở rộng hệ quả.
-
 ## Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi
 
 Trường hợp (case / 사례) khác nhau về lĩnh vực (domain / 도메인) nhưng có một số bất biến (invariant / 불변식). Thứ nhất, mục tiêu (objective / 목표) phải được giữ tách khỏi solution. DR site tồn tại để tạo resilience, mobile sản phẩm (product / 제품) để tạo customer/nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과), AI để giảm handling mà không tăng harm. Khi solution trở thành mục tiêu (objective / 목표), cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) bắt đầu.
@@ -324,8 +312,6 @@ Nhưng nhiều variable làm next hành động (action / 동작) đổi mạnh.
 
 Mô hình tư duy (mental model / 사고 모델) tốt giữ bất biến (invariant / 불변식) nhưng thay hành động (action / 동작) theo variable. Đây là cách tránh slogan kiểu “luôn assess trước”, “luôn nhóm (team / 팀) first” hoặc “luôn follow thay đổi (change / 변경) điều khiển (control / 제어)”.
 
-> **Nối mạch:** **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** nêu quy tắc; **Cross-case synthesis: bottleneck di chuyển** thử quy tắc trong tình huống, rồi **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** mở rộng hệ quả.
-
 ## Cross-case synthesis: bottleneck di chuyển
 
 Một dự án (project / 프로젝트) không có một bottleneck cố định suốt vòng đời (lifecycle / 생명주기). trường hợp (case / 사례) A có thể bắt đầu với permit/procurement bottleneck rồi chuyển sang tích hợp (integration / 통합)/testing. trường hợp (case / 사례) B có thể từ học tập (learning / 학습) bottleneck chuyển sang kỹ thuật (engineering / 엔지니어링) thông lượng (throughput / 처리량) rồi adoption. trường hợp (case / 사례) C có thể từ vendor API sang UAT cửa sổ (window / 윈도우) rồi operational readiness.
@@ -333,8 +319,6 @@ Một dự án (project / 프로젝트) không có một bottleneck cố định
 Khi nhóm (team / 팀) tiếp tục optimize bottleneck cũ, effort mất leverage. Thêm nhà phát triển (developer / 개발자) khi approval hàng đợi (queue / 큐) là ràng buộc (constraint / 제약조건) không giúp. Tăng huấn luyện (training / 학습) khi permission chưa mở không giúp. Tăng kiểm thử (test / 테스트) khi yêu cầu (requirement / 요구사항) ambiguity tiếp tục tạo defect chỉ xử lý symptom.
 
 Vì vậy mỗi status cycle nên hỏi: ràng buộc (constraint / 제약조건) hiện tại của hệ thống (system / 시스템) là gì, bằng chứng (evidence / 증거) nào chứng minh, và nếu ràng buộc (constraint / 제약조건) được giải thì ràng buộc (constraint / 제약조건) kế tiếp có khả năng ở đâu?
-
-> **Nối mạch:** **Cross-case synthesis: bottleneck di chuyển** nêu quy tắc; **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** thử quy tắc trong tình huống, rồi **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển
 
@@ -344,15 +328,11 @@ Trường hợp (case / 사례) E minh họa rõ: ban đầu bất định (unce
 
 Rủi ro (risk / 위험) management tốt theo chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ giữ register lịch sử (history / 이력).
 
-> **Nối mạch:** **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** nêu quy tắc; **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** thử quy tắc trong tình huống, rồi **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** mở rộng hệ quả.
-
 ## Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)
 
 Trường hợp (case / 사례) A: facility complete nhưng failover unusable. trường hợp (case / 사례) B: velocity cao nhưng retention không đổi. trường hợp (case / 사례) C: sprint complete nhưng UAT chưa accepted. trường hợp (case / 사례) D: mô-đun (module / 모듈) on schedule nhưng program nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) không viable. trường hợp (case / 사례) F: từng dự án (project / 프로젝트) green nhưng dùng chung (shared / 공유) sức chứa (capacity / 용량) impossible.
 
 Đây là mẫu (pattern / 패턴) quan trọng nhất của hệ thống (system / 시스템) thinking: chỉ số (metric / 지표)/cục bộ (local / 로컬) deliverable chỉ là proxy. Mỗi thời gian (time / 시간) bạn thấy một cục bộ (local / 로컬) success, hỏi downstream kết quả (outcome / 결과) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건) có còn healthy không.
-
-> **Nối mạch:** **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** nêu quy tắc; **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** thử quy tắc trong tình huống, rồi **Cách dùng trường hợp (case / 사례) study để tự luyện** mở rộng hệ quả.
 
 ## Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)
 
@@ -361,8 +341,6 @@ Một quyết định (decision / 결정) đúng vẫn có thể kết quả (ou
 Rà soát (review / 검토) sau kết quả (outcome / 결과) phải hỏi thông tin (information / 정보) available lúc quyết định (decision / 결정), giả định (assumption / 가정), authority, option và threshold—not hindsight “đã thất bại thì quyết định (decision / 결정) sai”. Ngược lại, may mắn không chứng minh tiến trình (process / 프로세스) tốt.
 
 Trường hợp (case / 사례) study nên được dùng để luyện chất lượng (quality / 품질) của lập luận (reasoning / 추론), không đo khả năng đoán kết quả.
-
-> **Nối mạch:** **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** nêu quy tắc; **Cách dùng trường hợp (case / 사례) study để tự luyện** thử quy tắc trong tình huống, rồi **Coverage của các trường hợp (case / 사례)** mở rộng hệ quả.
 
 ## Cách dùng trường hợp (case / 사례) study để tự luyện
 
@@ -412,15 +390,11 @@ Tự tạo hai ending: một ending tốt sau quyết định (decision / 결정
 
 Bài tập này chống hindsight độ lệch (bias / 편향) và giúp lập luận (reasoning / 추론) giống dự án (project / 프로젝트) manager hơn người kể chuyện sau sự kiện.
 
-> **Nối mạch:** **Cách dùng trường hợp (case / 사례) study để tự luyện** nêu quy tắc; **Coverage của các trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **Một micro-case về contractual claim** mở rộng hệ quả.
-
 ## Coverage của các trường hợp (case / 사례)
 
 Trường hợp (case / 사례) A chủ yếu ép bạn nối predictive planning, procurement, compliance, schedule, chất lượng (quality / 품질) và closure. trường hợp (case / 사례) B nối adaptive học tập (learning / 학습), sản phẩm (product / 제품) giá trị (value / 값), luồng (flow / 흐름), chỉ số (metric / 지표) và quản trị (governance / 거버넌스). trường hợp (case / 사례) C tập trung hybrid giao diện (interface / 인터페이스), vendor, privacy, AI chất lượng (quality / 품질) và operational chuyển tiếp (transition / 전이). trường hợp (case / 사례) D luyện khôi phục (recovery / 복구), sunk chi phí (cost / 비용), rebaseline, thông tin (information / 정보) chất lượng (quality / 품질) và vendor xung đột (conflict / 충돌). trường hợp (case / 사례) E nối AI quản trị (governance / 거버넌스), human oversight, sustainability và benefit đo lường (measurement / 측정). trường hợp (case / 사례) F đưa lập luận (reasoning / 추론) lên program/portfolio mức (level / 수준) với dùng chung (shared / 공유) phụ thuộc (dependency / 의존성), PMO, sức chứa (capacity / 용량) và thay đổi (change / 변경) saturation.
 
 Không trường hợp (case / 사례) nào chỉ thuộc một chapter. Đó chính là mục đích của tầng (layer / 계층) consolidation này.
-
-> **Nối mạch:** **Coverage của các trường hợp (case / 사례)** nêu quy tắc; **Một micro-case về contractual claim** thử quy tắc trong tình huống, rồi **Cross-domain liên kết (connection / 연결)** mở rộng hệ quả.
 
 ## Một micro-case về contractual claim
 
@@ -430,8 +404,6 @@ Không nên nhảy thẳng sang “approve claim” hoặc “reject claim”. T
 
 Micro-case này giúp nối đặc tả hợp đồng (contract / 계약) mechanics trong [07](./07_quality_resources_and_procurement.md) với schedule bằng chứng (evidence / 증거) trong [05](./05_schedule_estimation_and_flow.md) và quản trị (governance / 거버넌스) trong [09](./09_governance_compliance_and_business_environment.md).
 
-> **Nối mạch:** **Một micro-case về contractual claim** nêu quy tắc; **Cross-domain liên kết (connection / 연결)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Cross-domain liên kết (connection / 연결)
 
 Software-specific yêu cầu (requirement / 요구사항), kiểm thử (test / 테스트) và môi trường vận hành (production / 운영 환경) mechanics nên đọc tiếp ở [Software Engineering](../computer_science/09_software_engineering/README.md). PMP giữ focus ở hệ thống (system / 시스템) of decisions quanh delivery chứ không duplicate hiện thực (implementation / 구현) detail.
@@ -439,8 +411,6 @@ Software-specific yêu cầu (requirement / 요구사항), kiểm thử (test / 
 AI hiện thực (implementation / 구현) detail không được duplicate trong PMP; chapter [AI, sustainability và bối cảnh dự án hiện đại](./12_ai_sustainability_and_modern_project_context.md) chỉ giữ quản trị (governance / 거버넌스)/giá trị (value / 값)/rủi ro (risk / 위험) ranh giới (boundary / 경계) cần cho dự án (project / 프로젝트) lập luận (reasoning / 추론).
 
 Finance chuyên sâu như corporate valuation/portfolio lý thuyết (theory / 이론) tiếp tục thuộc [Investing Knowledge Library](../investing/README.md); PMP chỉ lấy phần cần cho dự án (project / 프로젝트)/portfolio quyết định (decision / 결정).
-
-> **Nối mạch:** **Cross-domain liên kết** gom các ràng buộc và trade-off của từng miền; **Mô hình tư duy** biến chúng thành tiêu chí chọn predictive, adaptive hoặc hybrid trong case end-to-end.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

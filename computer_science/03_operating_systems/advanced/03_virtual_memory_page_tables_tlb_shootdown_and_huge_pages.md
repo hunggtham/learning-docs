@@ -10,15 +10,11 @@ Hai tiến trình có thể sử dụng cùng một địa chỉ ảo nhưng án
 
 `mmap`, mở rộng vùng nhớ động (heap / 힙), thư viện dùng chung và ánh xạ tệp (file / 파일) đều là các cách xây dựng không gian địa chỉ. Nhiều ánh xạ ban đầu chỉ tạo siêu dữ liệu; trang vật lý có thể chưa được cấp cho tới khi lần truy cập đầu tiên gây lỗi trang.
 
-> **Nối mạch:** Address space là contract giữa process và OS; multi-level page tables map it, TLB caches the mapping, còn page faults và huge pages đổi chi phí translation với memory footprint.
-
 ## Bảng trang nhiều cấp
 
 Một bảng trang phẳng cho không gian địa chỉ lớn sẽ lãng phí rất nhiều bộ nhớ. **Bảng trang nhiều cấp (multi-level page table)** chỉ tạo các nhánh thực sự cần thiết. Đổi lại, dịch địa chỉ phải đi qua nhiều cấp và cần TLB để tránh lặp lại quá trình duyệt bảng trang liên tục.
 
 Kernel phải quản lý vòng đời của các trang chứa bảng trang, thay đổi quyền và đồng bộ khi nhiều luồng của cùng một tiến trình chạy trên nhiều lõi.
-
-> **Nối mạch:** **Lỗi trang nhỏ và lỗi trang lớn** nối từ **Bảng trang nhiều cấp** sang **Sao chép khi ghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi trang nhỏ và lỗi trang lớn
 
@@ -26,15 +22,11 @@ Kernel phải quản lý vòng đời của các trang chứa bảng trang, thay
 
 Lỗi trang không tự động có nghĩa là hệ thống có lỗi. Phân trang theo nhu cầu (demand paging) cố ý dùng page fault như một cơ chế điều khiển. Điều cần quan tâm là tần suất và chi phí của nó trong ngữ cảnh tải thực tế.
 
-> **Nối mạch:** **Sao chép khi ghi** nối từ **Lỗi trang nhỏ và lỗi trang lớn** sang **TLB shootdown từ góc nhìn hệ điều hành**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sao chép khi ghi
 
 Sau `fork`, tiến trình cha và con có thể tạm thời dùng chung các trang vật lý ở chế độ chỉ đọc. Khi một bên ghi, lỗi ghi khiến kernel sao chép trang. **Sao chép khi ghi (copy-on-write — COW)** tránh phải sao chép toàn bộ không gian địa chỉ ngay lập tức.
 
 COW hiệu quả khi phần lớn trang không bị sửa. Nếu tiến trình con ghi gần như toàn bộ vùng nhớ, các bản sao trì hoãn vẫn phải được tạo và có thể gây đột biến độ trễ hoặc mức sử dụng bộ nhớ.
-
-> **Nối mạch:** **TLB shootdown từ góc nhìn hệ điều hành** nối từ **Sao chép khi ghi** sang **Trang lớn và THP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLB shootdown từ góc nhìn hệ điều hành
 
@@ -42,23 +34,17 @@ Khi kernel bỏ ánh xạ một trang hoặc giảm quyền truy cập, CPU khá
 
 Đây là kết nối trực tiếp với [TLB và ảo hóa ở tầng kiến trúc](../../02_computer_architecture/advanced/05_tlb_page_walkers_huge_pages_and_virtualization.md).
 
-> **Nối mạch:** **Trang lớn và THP** nối từ **TLB shootdown từ góc nhìn hệ điều hành** sang **Cấp phát vượt mức và OOM**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trang lớn và THP
 
 Trang lớn tăng phạm vi bao phủ của TLB nhưng làm cấp phát bộ nhớ vật lý khó hơn. **Transparent Huge Pages (THP)** trên Linux cố tự động hợp nhất các trang nhỏ, nhưng quá trình dồn bộ nhớ có thể gây đột biến độ trễ. Cơ sở dữ liệu đôi khi chọn trang lớn tường minh để kiểm soát hành vi tốt hơn.
 
 Không có chính sách đúng cho mọi tải. Phân mảnh bộ nhớ, độ nhạy với độ trễ và kiểu truy cập quyết định sự đánh đổi.
 
-> **Nối mạch:** **Cấp phát vượt mức và OOM** nối từ **Trang lớn và THP** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấp phát vượt mức và OOM
 
 Hệ điều hành có thể cho tiến trình đặt trước không gian bộ nhớ ảo lớn hơn lượng RAM vật lý hiện có, với giả định không phải mọi vùng đặt trước đều được sử dụng thật. Khi giả định này sai và cơ chế thu hồi không đủ, hệ thống có thể rơi vào áp lực bộ nhớ hoặc xử lý hết bộ nhớ (Out Of memory — OOM).
 
 Vì vậy câu “ứng dụng đã cấp phát X GB” có thể mang nhiều nghĩa khác nhau: vùng địa chỉ ảo đặt trước, bộ nhớ ẩn danh đã cam kết, tập trang đang cư trú trong RAM hoặc tập dữ liệu thực sự được dùng thường xuyên.
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Cấp phát vượt mức và OOM**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

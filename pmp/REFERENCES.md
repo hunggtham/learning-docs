@@ -8,8 +8,6 @@ Các thông tin certification/exam có thể thay đổi. Những chi tiết hi�
 
 Thư viện (library / 라이브러리) cố ý tách `exam fact` khỏi `project-management mental model`. Những thứ như weighting, thời lượng hay eligibility có thể thay đổi theo chính sách (policy / 정책); các mô hình tư duy (mental model / 사고 모델) như giá trị (value / 값), bất định (uncertainty / 불확실성), quản trị (governance / 거버넌스), phản hồi (feedback / 피드백) hay quyết định (decision / 결정) rights bền hơn và không nên bị học như siêu dữ liệu (metadata / 메타데이터) của một exam phiên bản (version / 버전).
 
-> **Nối mạch:** Phạm vi và thời điểm kiểm chứng xác định claim cần được cập nhật; **Nguồn chuẩn chính** đối chiếu claim với bản phát hành và bằng chứng. **Nguồn nội bộ repository** sau đó chỉ owner nơi claim được dạy.
-
 ## Nguồn chuẩn chính
 
 ### PMP Certification Exam Content Outline — July 2026
@@ -76,8 +74,6 @@ https://www.pmi.org/certifications/project-management-pmp/pmp-exam-prep
 
 PMI lưu ý PMP exam không được xây từ một cuốn sách duy nhất; tham chiếu (reference / 참조) danh sách (list / 목록) là các nguồn được question writers trích dẫn thường xuyên. Điều này là lý do thư viện kiến thức (knowledge library / 지식 라이브러리) tổ chức theo conceptual phụ thuộc (dependency / 의존성) và ECO thay vì cố “chép PMBOK thành syllabus”.
 
-> **Nối mạch:** Nguồn chuẩn chính cung cấp phiên bản và phạm vi; nguồn nội bộ repository ánh xạ claim về owner và cấu trúc bài học. **Nguyên tắc sử dụng nguồn** quy định cách giữ hai lớp này nhất quán.
-
 ## Nguồn (source / 소스) nội bộ repository
 
 `./raw/` và `./workflow-output/` là provenance đã tồn tại trước thư viện kiến thức (knowledge library / 지식 라이브러리) này. Chúng được giữ nguyên, không coi là nguồn chuẩn cho thông tin exam 2026 nếu nội dung cũ hơn.
@@ -90,8 +86,6 @@ Các chuẩn gốc (canonical / 정본) cross-domain docs được tái sử d�
 - `../computer_science/09_software_engineering/04_maintenance_evolution_and_technical_debt.md`
 
 Finance sâu hơn về valuation, markets và portfolio investing thuộc `../investing/`; PMP chỉ giữ mức financial lập luận (reasoning / 추론) cần cho dự án (project / 프로젝트)/investment quyết định (decision / 결정).
-
-> **Nối mạch:** Nguồn nội bộ repository chỉ ra tài liệu thuộc owner; Nguyên tắc sử dụng nguồn kiểm tra phiên bản, phạm vi và mức bằng chứng trước khi đưa claim vào bài học.
 
 ## Nguyên tắc sử dụng nguồn
 

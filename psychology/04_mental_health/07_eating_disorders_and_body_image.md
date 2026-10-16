@@ -12,15 +12,11 @@ Một người có rối loạn ăn uống có thể ở nhiều mức cân nặ
 
 Điều này rất quan trọng vì stereotype “phải rất gầy mới là eating disorder” có thể làm chậm phát hiện và điều trị.
 
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **2. Hình ảnh cơ thể là một hệ thống nhiều thành phần** nối từ **1. Kích thước cơ thể không phải chẩn đoán** sang **3. Anorexia nervosa: restriction và hậu quả sinh học có thể tự duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Hình ảnh cơ thể là một hệ thống nhiều thành phần
 
 **Hình ảnh cơ thể (body image)** gồm cách một người cảm nhận cơ thể, cách họ nghĩ người khác đánh giá mình, mức độ self-worth phụ thuộc vào cân nặng/hình dáng, hành vi kiểm tra hoặc né tránh, và cảm xúc như xấu hổ, ghê sợ hoặc lo âu.
 
 Một người có thể biết bằng lý trí rằng đánh giá của mình quá cực đoan nhưng trải nghiệm chủ quan vẫn rất mạnh. Vì vậy đây không chỉ là vấn đề “thiếu thông tin đúng”.
-
-> **Nối mạch:** Ở chặng này của **Rối loạn ăn uống và hình ảnh cơ thể**, **3. Anorexia nervosa: restriction và hậu quả sinh học có thể tự duy trì** nối từ **2. Hình ảnh cơ thể là một hệ thống nhiều thành phần** sang **4. Bulimia nervosa và vòng restriction–binge–compensation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Anorexia nervosa: restriction và hậu quả sinh học có thể tự duy trì
 
@@ -36,8 +32,6 @@ hạn chế ăn
 ```
 
 Đây là ví dụ điển hình của vòng phản hồi sinh học–tâm lý.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn ăn uống và hình ảnh cơ thể**, **4. Bulimia nervosa và vòng restriction–binge–compensation** nối từ **3. Anorexia nervosa: restriction và hậu quả sinh học có thể tự duy trì** sang **5. Binge-eating disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Bulimia nervosa và vòng restriction–binge–compensation
 
@@ -59,23 +53,17 @@ hạn chế mới
 
 Vì vậy điều trị không chỉ nhắm “ngừng binge” mà còn cần phá vòng restriction–binge–compensation.
 
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **5. Binge-eating disorder** nối từ **4. Bulimia nervosa và vòng restriction–binge–compensation** sang **6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body ảnh (image / 이미지)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Binge-eating disorder
 
 **Rối loạn ăn vô độ (binge-eating disorder)** gồm các đợt ăn lượng lớn kèm cảm giác mất kiểm soát nhưng không có hành vi bù trừ thường xuyên như bulimia.
 
 Không nên diễn giải đây là “thiếu ý chí”. Lịch sử hạn chế ăn, stress, điều hòa cảm xúc, học tập phần thưởng và bối cảnh môi trường có thể cùng tham gia.
 
-> **Nối mạch:** Ở chặng này của **Rối loạn ăn uống và hình ảnh cơ thể**, **6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body ảnh (image / 이미지)** nối từ **5. Binge-eating disorder** sang **7. Shape/weight overvaluation và self-worth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body ảnh (image / 이미지)
 
 **Rối loạn tránh né/hạn chế tiếp nhận thức ăn (Avoidant/Restrictive Food Intake Disorder — ARFID)** có thể liên quan nhạy cảm cảm giác, sợ hậu quả khó chịu khi ăn hoặc ít hứng thú với ăn uống, không nhất thiết do lo ngại cân nặng/hình dáng.
 
 Điều này giúp tránh một misconception quan trọng: không phải mọi eating disorder đều được duy trì bởi dissatisfaction với ngoại hình.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn ăn uống và hình ảnh cơ thể**, **7. Shape/weight overvaluation và self-worth** nối từ **6. ARFID cho thấy eating disorder không phải lúc nào cũng xoay quanh body ảnh (image / 이미지)** sang **8. Body checking và avoidance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Shape/weight overvaluation và self-worth
 
@@ -93,8 +81,6 @@ kiểm soát mạnh hơn
 
 Nếu giá trị bản thân bị “neo” vào một dimension khó kiểm soát hoàn toàn, hệ thống dễ trở nên mong manh và ám ảnh.
 
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **8. Body checking và avoidance** nối từ **7. Shape/weight overvaluation và self-worth** sang **9. xã hội (social / 사회적) comparison, digital ngữ cảnh (context / 맥락) và thuật toán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Body checking và avoidance
 
 **Kiểm tra cơ thể (body checking)** có thể gồm cân nhiều lần, soi gương lặp lại, đo hoặc bóp một phần cơ thể, hỏi reassurance liên tục.
@@ -102,8 +88,6 @@ Nếu giá trị bản thân bị “neo” vào một dimension khó kiểm so�
 **Né tránh cơ thể (body avoidance)** có thể gồm tránh gương, tránh ảnh, tránh quần áo nhất định hoặc tránh tình huống xã hội.
 
 Cả checking lẫn avoidance đều có thể ngăn kỳ vọng được cập nhật bằng trải nghiệm mới, nên chúng vừa là triệu chứng vừa là cơ chế duy trì.
-
-> **Nối mạch:** Ở chặng này của **Rối loạn ăn uống và hình ảnh cơ thể**, **9. xã hội (social / 사회적) comparison, digital ngữ cảnh (context / 맥락) và thuật toán** nối từ **8. Body checking và avoidance** sang **10. Weight stigma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. xã hội (social / 사회적) comparison, digital ngữ cảnh (context / 맥락) và thuật toán
 
@@ -113,15 +97,11 @@ Không nên nói “xã hội (social / 사회적) media gây eating disorder”
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn ăn uống và hình ảnh cơ thể**, **10. Weight stigma** nối từ **9. xã hội (social / 사회적) comparison, digital ngữ cảnh (context / 맥락) và thuật toán** sang **11. Belief rigidity và insight**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Weight stigma
 
 Kỳ thị cân nặng có thể làm tăng xấu hổ, phân biệt đối xử và né tránh chăm sóc y tế. Nó cũng làm assessment sai nếu clinician quy mọi triệu chứng cho cân nặng.
 
 Tôn trọng người bệnh và đánh giá nguy cơ y khoa không mâu thuẫn nhau.
-
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **11. Belief rigidity và insight** nối từ **10. Weight stigma** sang **12. Nguy cơ y khoa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Belief rigidity và insight
 
@@ -129,15 +109,11 @@ Tôn trọng người bệnh và đánh giá nguy cơ y khoa không mâu thuẫn
 
 > **Giới hạn bằng chứng:** belief rigidity là một hướng nghiên cứu hữu ích, nhưng mức độ, cơ chế và quan hệ với insight thay đổi giữa người và giữa chẩn đoán.
 
-> **Nối mạch:** Ở chặng này của **Rối loạn ăn uống và hình ảnh cơ thể**, **12. Nguy cơ y khoa** nối từ **11. Belief rigidity và insight** sang **13. Điều trị: không có một giao thức (protocol / 프로토콜) duy nhất cho mọi diagnosis**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Nguy cơ y khoa
 
 Rối loạn ăn uống có thể ảnh hưởng tim mạch, điện giải, nội tiết, xương, tiêu hóa và nhận thức. Vì vậy chăm sóc thường cần phối hợp giữa mental-health professional, bác sĩ và hỗ trợ dinh dưỡng phù hợp.
 
 Không nên tự áp dụng meal plan hoặc exposure lâm sàng khi có dấu hiệu mất ổn định y khoa.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn ăn uống và hình ảnh cơ thể**, **13. Điều trị: không có một giao thức (protocol / 프로토콜) duy nhất cho mọi diagnosis** nối từ **12. Nguy cơ y khoa** sang **14. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Điều trị: không có một giao thức (protocol / 프로토콜) duy nhất cho mọi diagnosis
 
@@ -152,8 +128,6 @@ chẩn đoán + tuổi + nguy cơ y khoa + mechanism duy trì
 
 Treatment efficacy cho một nhóm không đồng nghĩa mọi cơ chế (mechanism / 메커니즘) lý thuyết (theory / 이론) phía sau đã được chứng minh hoàn toàn.
 
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **13. Điều trị: không có một giao thức (protocol / 프로토콜) duy nhất cho mọi diagnosis** đặt vấn đề; **14. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **15. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 14. Ranh giới bằng chứng
 
 **Bằng chứng tương đối vững:** eating disorders là rối loạn đa yếu tố; body kích thước (size / 크기) không đủ để chẩn đoán; restriction/binge/compensation có thể tạo vòng duy trì mạnh; medical rủi ro (risk / 위험) cần được đánh giá độc lập với ngoại hình.
@@ -164,8 +138,6 @@ Treatment efficacy cho một nhóm không đồng nghĩa mọi cơ chế (mechan
 
 **Không được nói:** eating disorder = vanity, “chỉ cần ăn bình thường”, hoặc xã hội (social / 사회적) media là nguyên nhân duy nhất.
 
-> **Nối mạch:** Ở chặng này của **Rối loạn ăn uống và hình ảnh cơ thể**, **14. Ranh giới bằng chứng** đặt vấn đề; **15. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 15. Những hiểu lầm phổ biến
 
 **“Nhìn gầy mới là eating disorder.”** Sai.
@@ -175,8 +147,6 @@ Treatment efficacy cho một nhóm không đồng nghĩa mọi cơ chế (mechan
 **“Eating disorder là vì quá quan tâm ngoại hình.”** Sai; đây là psychopathology phức tạp.
 
 **“Body positivity tự nó chữa được eating disorder.”** Một thái độ hỗ trợ có thể có giá trị nhưng không thay thế treatment có bằng chứng (evidence / 증거) khi disorder hiện diện.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn ăn uống và hình ảnh cơ thể**, **Mô hình tư duy** tổng hợp từ **15. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -191,8 +161,6 @@ sinh học + restriction/reward + fear
 ```
 
 > Rối loạn ăn uống nên được hiểu như một hệ thống tương tác, không phải một lỗi đạo đức hay một vấn đề ngoại hình đơn giản.
-
-> **Nối mạch:** Trong **Rối loạn ăn uống và hình ảnh cơ thể**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

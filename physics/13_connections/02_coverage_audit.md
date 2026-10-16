@@ -14,8 +14,6 @@ physics/
 
 Không có các bản `_updated`, `_final`, `_version2` hay tệp (file / 파일) duplicate theo naming mẫu (pattern / 패턴) trong chuẩn gốc (canonical / 정본) cây (tree / 트리).
 
-> **Nối mạch:** Trong **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **Tiêu chuẩn chapter đủ sâu** nối từ **Trạng thái hiện tại** sang **00 — Foundations và đo lường (measurement / 측정): mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tiêu chuẩn chapter đủ sâu
 
 Một chapter cốt lõi (core / 핵심) nên có phần lớn các lớp sau:
@@ -37,15 +35,11 @@ Với chapter cầu nối (bridge / 브리지), cần chỉ ra rõ cấu trúc t
 
 # Coverage theo lĩnh vực (domain / 도메인)
 
-> **Nối mạch:** Ở chặng này của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **Tiêu chuẩn chapter đủ sâu** đặt vấn đề; **00 — Foundations và đo lường (measurement / 측정): mạnh** đối chiếu bằng chứng, rồi **01 — Mechanics: mạnh** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 00 — Foundations và đo lường (measurement / 측정): mạnh
 
 Vật lý (physical / 물리적) thinking, đo lường (measurement / 측정)/bất định (uncertainty / 불확실성), véc-tơ (vector / 벡터)/frame, mathematical ngôn ngữ (language / 언어), symmetry/scaling và PDE/Green/tensor tạo prerequisite cho toàn thư viện (library / 라이브러리). First-principles workflow đã bao gồm hệ thống (system / 시스템) ranh giới (boundary / 경계), degrees of freedom, quy mô (scale / 규모) phân tích (analysis / 분석), controlled approximation, dimensional checks, forward/inverse bài toán (problem / 문제), falsifiability và mô hình (model / 모델) discrepancy.
 
 **Trạng thái:** không còn lỗ cốt lõi (core / 핵심) lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **00 — Foundations và đo lường (measurement / 측정): mạnh** đặt vấn đề; **01 — Mechanics: mạnh** đối chiếu bằng chứng, rồi **02 — Oscillations và waves: mạnh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 01 — Mechanics: mạnh
 
@@ -65,15 +59,11 @@ Coverage gồm force modelling, free-body lập luận (reasoning / 추론), cô
 
 **Trạng thái:** strong undergraduate cốt lõi (core / 핵심) + advanced cầu nối (bridge / 브리지).
 
-> **Nối mạch:** Trong **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **02 — Oscillations và waves: mạnh** nối từ **01 — Mechanics: mạnh** sang **03 — Continuum, fluids và vận chuyển (transport / 전송): mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 02 — Oscillations và waves: mạnh
 
 SHM, damping, driven phản hồi (response / 응답), resonance, wave equation, standing waves, Fourier, sound, dispersion và normal modes đều có. ranh giới (boundary / 경계) conditions và dispersion limits đã được làm rõ.
 
 **Trạng thái:** strong cốt lõi (core / 핵심)/cầu nối (bridge / 브리지).
-
-> **Nối mạch:** Ở chặng này của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **03 — Continuum, fluids và vận chuyển (transport / 전송): mạnh** nối từ **02 — Oscillations và waves: mạnh** sang **04 — Thermodynamics và Statistical Physics: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 03 — Continuum, fluids và vận chuyển (transport / 전송): mạnh
 
@@ -81,15 +71,11 @@ Hydrostatics, buoyancy, continuity, Bernoulli, viscosity, Reynolds, Poiseuille, 
 
 **Trạng thái:** strong cốt lõi (core / 핵심)/cầu nối (bridge / 브리지).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **04 — Thermodynamics và Statistical Physics: mạnh** nối từ **03 — Continuum, fluids và vận chuyển (transport / 전송): mạnh** sang **05 — Electricity, circuits, magnetism và electromagnetism: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 04 — Thermodynamics và Statistical Physics: mạnh
 
 Thermodynamics, entropy, phase transitions, ensembles, Boltzmann equation, stochastic nonequilibrium, trọng yếu (critical / 중요) phenomena/RG và tuyến tính (linear / 선형) phản hồi (response / 응답)/FDT tạo chuỗi micro ↔ macro ↔ fluctuations ↔ phản hồi (response / 응답).
 
 **Trạng thái:** strong undergraduate + selected graduate cầu nối (bridge / 브리지).
-
-> **Nối mạch:** Trong **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **05 — Electricity, circuits, magnetism và electromagnetism: mạnh** nối từ **04 — Thermodynamics và Statistical Physics: mạnh** sang **06 — Optics: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 05 — Electricity, circuits, magnetism và electromagnetism: mạnh
 
@@ -99,23 +85,17 @@ Transmission-line chapter đã có telegrapher derivation, characteristic impeda
 
 **Trạng thái:** strong calculus-based university coverage.
 
-> **Nối mạch:** Ở chặng này của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **06 — Optics: mạnh** nối từ **05 — Electricity, circuits, magnetism và electromagnetism: mạnh** sang **07 — Relativity: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 06 — Optics: mạnh
 
 Geometric optics, wave optics, photon/laser/coherence, polarization/dispersion/nonlinear optics và Fourier imaging đều có. Wave-optics và laser chapters đã có derivation giao thoa/nhiễu xạ, coherence, PSF/OTF, Einstein coefficients, tỷ lệ (rate / 비율) equations, cavity threshold, linewidth/Q và chế độ (mode / 모드) locking.
 
 **Trạng thái:** strong cốt lõi (core / 핵심)/cầu nối (bridge / 브리지).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **07 — Relativity: mạnh** nối từ **06 — Optics: mạnh** sang **08 — Quantum Physics: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 07 — Relativity: mạnh
 
 Special relativity có bất biến (invariant / 불변식) interval, Lorentz transformation, proper thời gian (time / 시간), four-vector, four-momentum và relativistic dynamics. General relativity có equivalence principle, chỉ số (metric / 지표), geodesic, curvature, geodesic deviation, weak-field limit, Einstein equation, Schwarzschild, lensing, Shapiro delay, gravitational waves và Friedmann cầu nối (bridge / 브리지).
 
 **Trạng thái:** strong SR + solid GR cầu nối (bridge / 브리지).
-
-> **Nối mạch:** Trong **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **08 — Quantum Physics: mạnh** nối từ **07 — Relativity: mạnh** sang **09 — Atomic, molecular, nuclear và particle: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 08 — Quantum Physics: mạnh
 
@@ -125,15 +105,11 @@ Mô hình (model / 모델) các hệ thống (systems / 시스템들) và spin c
 
 **Trạng thái:** strong undergraduate + selected advanced cầu nối (bridge / 브리지).
 
-> **Nối mạch:** Ở chặng này của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **09 — Atomic, molecular, nuclear và particle: mạnh** nối từ **08 — Quantum Physics: mạnh** sang **10 — Condensed matter, materials, electronics và plasma: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 09 — Atomic, molecular, nuclear và particle: mạnh
 
 Atomic cấu trúc (structure / 구조)/spectroscopy, molecular modes, nuclear các mô hình (models / 모델들)/decay/reactions, radiation detection và tiêu chuẩn (standard / 표준) mô hình (model / 모델) đều có. Detector chapter đã có dead thời gian (time / 시간), pile-up, năng lượng (energy / 에너지) resolution, efficiency, phản hồi (response / 응답) hàm (function / 함수), background và calibration.
 
 **Trạng thái:** strong cầu nối (bridge / 브리지); không mở full graduate QFT/nuclear-many-body trong phạm vi (scope / 범위) này.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **10 — Condensed matter, materials, electronics và plasma: mạnh** nối từ **09 — Atomic, molecular, nuclear và particle: mạnh** sang **11 — Astrophysics và cosmology: mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10 — Condensed matter, materials, electronics và plasma: mạnh
 
@@ -141,15 +117,11 @@ Band lý thuyết (theory / 이론), reciprocal lattice, Brillouin zone, DOS, ef
 
 **Trạng thái:** strong cốt lõi (core / 핵심)/cầu nối (bridge / 브리지).
 
-> **Nối mạch:** Trong **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **11 — Astrophysics và cosmology: mạnh** nối từ **10 — Condensed matter, materials, electronics và plasma: mạnh** sang **12 — Experiment, signals, computation và suy luận (inference / 추론): mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11 — Astrophysics và cosmology: mạnh
 
 Stellar cấu trúc (structure / 구조)/evolution, compact objects, galaxies/cosmology, observational astrophysics/radiative transfer, early universe/dark components và gravitational cấu trúc (structure / 구조) formation đều có. Cosmology cốt lõi (core / 핵심) đã có FLRW/Friedmann, trọng yếu (critical / 중요) density, density parameters, distance measures, CMB/BAO, cấu trúc (structure / 구조) growth, dark-energy parameterization và parameter suy luận (inference / 추론).
 
 **Trạng thái:** strong cầu nối (bridge / 브리지) between lý thuyết (theory / 이론) and observation.
-
-> **Nối mạch:** Ở chặng này của **Kiểm tra (audit / 감사) phạm vi, độ sâu và chất lượng của Thư viện Vật lý**, **12 — Experiment, signals, computation và suy luận (inference / 추론): mạnh** nối từ **11 — Astrophysics và cosmology: mạnh** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 12 — Experiment, signals, computation và suy luận (inference / 추론): mạnh
 

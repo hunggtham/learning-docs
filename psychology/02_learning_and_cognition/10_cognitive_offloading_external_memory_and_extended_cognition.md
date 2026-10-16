@@ -10,15 +10,11 @@ Dùng công cụ không tự động làm con người “lười suy nghĩ”. 
 
 Vấn đề không phải có dùng công cụ (tool / 도구) hay không, mà là **phần nào nên giữ trong đầu, phần nào nên externalize, và khi nào dependence bắt đầu tạo fragility**.
 
-> **Nối mạch:** Trong **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Intention offloading** nối từ **Offloading không phải shortcut xấu** sang **Metacognition quyết định khi nào offload**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Intention offloading
 
 Một dạng phổ biến là **giảm tải ý định (intention offloading)**: đặt reminder để nhớ phải làm việc gì trong tương lai. Thay vì liên tục rehearsal “6 giờ phải gọi điện”, ta đặt alarm và giải phóng attention.
 
 Điều này liên quan [[12_temporal_cognition_prospective_memory_and_time]]. bên ngoài (external / 외부) reminder đặc biệt có giá trị khi interruption cao hoặc chi phí (cost / 비용) của quên lớn.
-
-> **Nối mạch:** Ở chặng này của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Metacognition quyết định khi nào offload** nối từ **Intention offloading** sang **Hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Metacognition quyết định khi nào offload
 
@@ -28,8 +24,6 @@ Người overconfident có thể không đặt reminder dù tác vụ (task / �
 
 Nghiên cứu gần đây cho thấy prediction kèm phản hồi (feedback / 피드백) có thể cải thiện **hiệu chỉnh siêu nhận thức (metacognitive calibration)** và giúp lựa chọn reminder tối ưu hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal** nối từ **Metacognition quyết định khi nào offload** sang **Saving-enhanced bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal
 
 Đây là distinction quan trọng. Nếu goal là hoàn thành tác vụ (task / 작업) an toàn và nhanh, offloading thường có lợi. Nếu goal là xây nội bộ (internal / 내부) skill, outsource quá sớm có thể giảm retrieval và generation cần cho học tập (learning / 학습).
@@ -38,15 +32,11 @@ Ví dụ khi học SQL, dùng AI generate truy vấn (query / 쿼리) giúp ship
 
 Vì vậy cùng một công cụ (tool / 도구) có thể tốt cho **môi trường vận hành (production / 운영 환경) chế độ (mode / 모드)** nhưng cần dùng khác trong **học tập (learning / 학습) chế độ (mode / 모드)**.
 
-> **Nối mạch:** Trong **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Saving-enhanced bộ nhớ (memory / 메모리)** nối từ **Hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal** sang **Transactive bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Saving-enhanced bộ nhớ (memory / 메모리)
 
 Khi biết thông tin (information / 정보) đã được lưu an toàn bên ngoài, con người có thể giảm effort ghi nhớ chi tiết đó và tập trung vào thông tin (information / 정보) khác. Đây không nhất thiết là bộ nhớ (memory / 메모리) thất bại (failure / 실패); nó có thể là allocation hợp lý.
 
 Trong kiến thức (knowledge / 지식) công việc (work / 작업), ta thường nhớ **where to find** thay vì **chính xác (exact / 정확한) content**. Điều này tạo dạng transactive bộ nhớ (memory / 메모리) giữa người, tài liệu và công cụ (tool / 도구).
-
-> **Nối mạch:** Ở chặng này của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Transactive bộ nhớ (memory / 메모리)** nối từ **Saving-enhanced bộ nhớ (memory / 메모리)** sang **Extended cognition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transactive bộ nhớ (memory / 메모리)
 
@@ -54,15 +44,11 @@ Trong kiến thức (knowledge / 지식) công việc (work / 작업), ta thư�
 
 Nếu quyền sở hữu (ownership / 소유권) mơ hồ hoặc tài liệu outdated, transactive hệ thống (system / 시스템) thất bại dù từng cá nhân rất giỏi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Extended cognition** nối từ **Transactive bộ nhớ (memory / 메모리)** sang **AI như cognitive công cụ (tool / 도구)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Extended cognition
 
 Lý thuyết **nhận thức mở rộng (extended cognition)** đặt câu hỏi liệu một số công cụ (tool / 도구) ổn định có thể được xem như phần chức năng của cognitive hệ thống (system / 시스템) hay không. Một notebook được dùng thường xuyên, đáng tin và truy cập nhanh có thể đóng vai trò tương tự một phần bộ nhớ (memory / 메모리) hỗ trợ (support / 지원).
 
 Đây là philosophical khung phần mềm (framework / 프레임워크), không có nghĩa smartphone literally trở thành neuron. Giá trị của concept nằm ở việc phân tích cognition như brain–body–môi trường (environment / 환경) hệ thống (system / 시스템).
-
-> **Nối mạch:** Trong **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **AI như cognitive công cụ (tool / 도구)** nối từ **Extended cognition** sang **Deskilling và reskilling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI như cognitive công cụ (tool / 도구)
 
@@ -72,15 +58,11 @@ Rủi ro mới là **nợ kiểm chứng (verification debt)**: càng outsource 
 
 Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Nối mạch:** Ở chặng này của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Deskilling và reskilling** nối từ **AI như cognitive công cụ (tool / 도구)** sang **Cognitive forcing hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Deskilling và reskilling
 
 Automation có thể làm một skill ít được thực hành và dần suy giảm. Nhưng công cụ (tool / 도구) cũng có thể tạo skill mới: prompt decomposition, xác minh (verification / 확인), orchestration, mô hình (model / 모델) comparison hoặc hệ thống (system / 시스템) thiết kế (design / 설계).
 
 Vì vậy câu hỏi không nên chỉ là “AI làm con người kém đi không?”, mà là **skill nào đang bị giảm practice và skill nào đang trở nên có giá trị hơn?**
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Cognitive forcing hàm (function / 함수)** nối từ **Deskilling và reskilling** sang **Checklist và bên ngoài (external / 외부) bộ nhớ (memory / 메모리) trong hệ thống phức tạp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cognitive forcing hàm (function / 함수)
 
@@ -88,15 +70,11 @@ Một **cơ chế buộc nhận thức (cognitive forcing function)** là thiế
 
 Cách này giữ lợi ích của công cụ (tool / 도구) nhưng giảm automation độ lệch (bias / 편향).
 
-> **Nối mạch:** Trong **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Checklist và bên ngoài (external / 외부) bộ nhớ (memory / 메모리) trong hệ thống phức tạp** nối từ **Cognitive forcing hàm (function / 함수)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Checklist và bên ngoài (external / 외부) bộ nhớ (memory / 메모리) trong hệ thống phức tạp
 
 Checklist mạnh khi tác vụ (task / 작업) có trọng yếu (critical / 중요) step dễ quên, procedure tương đối ổn định và thất bại (failure / 실패) chi phí (cost / 비용) cao. Checklist yếu khi biến thành bureaucratic ritual hoặc quá dài đến mức không ai thật sự xử lý.
 
 Một checklist tốt không cố externalize toàn bộ expertise; nó bảo vệ vài bước có leverage lớn.
-
-> **Nối mạch:** Ở chặng này của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Những hiểu lầm phổ biến** nối từ **Checklist và bên ngoài (external / 외부) bộ nhớ (memory / 메모리) trong hệ thống phức tạp** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -107,8 +85,6 @@ Một checklist tốt không cố externalize toàn bộ expertise; nó bảo v�
 **“Không dùng bên ngoài (external / 외부) aid mới là trí nhớ tốt.”** Trong real-world hệ thống (system / 시스템), độ tin cậy (reliability / 신뢰성) thường quan trọng hơn biểu diễn sức nhớ cá nhân.
 
 **“AI chỉ là một bên ngoài (external / 외부) bộ nhớ (memory / 메모리).”** AI còn generate và transform thông tin (information / 정보), nên reliance bài toán (problem / 문제) phức tạp hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -129,13 +105,9 @@ năng lực nội tại
 
 > Cognitive offloading tốt không phải outsource càng nhiều càng tốt, mà phân phối cognition giữa người và công cụ (tool / 도구) theo mục tiêu của hệ thống.
 
-> **Nối mạch:** Trong **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đọc nền** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Kết nối kiến thức
 
 Xem [[01_memory]], [[04_cognitive_biases_and_metacognition]], [[09_learning_transfer_forgetting_and_durable_knowledge]], [[12_temporal_cognition_prospective_memory_and_time]], [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
-
-> **Nối mạch:** Ở chặng này của **Giảm tải nhận thức, trí nhớ bên ngoài và nhận thức mở rộng — Cognitive Offloading & bên ngoài (external / 외부) bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** đặt vấn đề; **Nguồn đọc nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn đọc nền
 

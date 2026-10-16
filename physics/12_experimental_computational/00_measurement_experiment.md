@@ -8,8 +8,6 @@ Vật lý là khoa học thực nghiệm. Một mô hình (model / 모델) có t
 
 Vật lý tính toán (computational physics / 계산물리학) bổ sung cho quá trình này bằng các phương pháp số (numerical methods). Ta dùng chúng khi phương trình quá phức tạp để giải chính xác bằng giải tích, hoặc khi cần suy ra tham số của mô hình từ dữ liệu thực nghiệm.
 
-> **Nối mạch:** Trong **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Một lý thuyết phải đối chiếu được với quan sát** đặt tiêu chí; **Chuỗi đo lường** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Hiệu chuẩn** mở rộng hệ quả.
-
 ## Chuỗi đo lường
 
 Một phép đo hiếm khi đọc trực tiếp đại lượng cần biết. Với cảm biến nhiệt độ, chuỗi đo có thể được hình dung như sau:
@@ -25,8 +23,6 @@ nhiệt độ
 ```
 
 Mỗi bước có một hàm truyền (transfer function), mức nhiễu (noise), độ phi tuyến và khả năng tạo sai lệch (bias). Vì vậy khi phần mềm hiển thị `23.7 °C`, con số đó là kết quả cuối của cả một chuỗi vật lý–điện tử–tính toán, chứ không phải giá trị được lấy trực tiếp từ tự nhiên.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Chuỗi đo lường** đặt vấn đề; **Hiệu chuẩn** đối chiếu bằng chứng, rồi **Sai số ngẫu nhiên và sai số hệ thống** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiệu chuẩn
 
@@ -48,8 +44,6 @@ và ta cần xác định hoặc khớp hàm ngược để suy ra `T` từ `V`.
 
 Hiệu chuẩn không loại bỏ hoàn toàn độ bất định. Bản thân giá trị chuẩn, phép khớp và độ ổn định của thiết bị đều có độ bất định, nên chúng phải được truyền tới kết quả cuối.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Sai số ngẫu nhiên và sai số hệ thống** nối từ **Hiệu chuẩn** sang **Lan truyền độ bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sai số ngẫu nhiên và sai số hệ thống
 
 Sai số ngẫu nhiên (random error) làm các lần đo dao động quanh một giá trị. Nếu các phép đo độc lập, có cùng phân bố và độ lệch chuẩn `\sigma`, độ bất định của giá trị trung bình thường giảm gần theo
@@ -61,8 +55,6 @@ Sai số ngẫu nhiên (random error) làm các lần đo dao động quanh mộ
 Tuy nhiên quy luật này không tự động đúng khi dữ liệu có tương quan theo thời gian, trôi chậm hoặc nhiễu có cấu trúc.
 
 Sai số hệ thống (systematic error) khác về bản chất. Nếu nhiệt kế luôn lệch `+0.5 °C`, đo một triệu lần có thể làm giá trị trung bình rất ổn định nhưng vẫn sai khoảng `0.5 °C`. Vì vậy cần phân biệt **độ chụm (precision)**, tức mức độ các phép đo lặp lại gần nhau, với **độ đúng (accuracy)**, tức mức độ kết quả gần giá trị thực hoặc giá trị tham chiếu.
-
-> **Nối mạch:** Trong **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Lan truyền độ bất định** nối từ **Sai số ngẫu nhiên và sai số hệ thống** sang **Chữ số có nghĩa không thay thế phân tích độ bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lan truyền độ bất định
 
@@ -81,8 +73,6 @@ và các độ bất định đủ nhỏ, với các biến gần độc lập, 
 
 Nếu các biến có tương quan, phải bổ sung các hạng hiệp phương sai (covariance). Công thức cho thấy đạo hàm không chỉ mô tả tốc độ biến thiên; nó còn đo độ nhạy của kết quả đối với độ bất định của từng đầu vào.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Chữ số có nghĩa không thay thế phân tích độ bất định** nối từ **Lan truyền độ bất định** sang **Khớp dữ liệu không phải là chứng minh lý thuyết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chữ số có nghĩa không thay thế phân tích độ bất định
 
 Quy tắc chữ số có nghĩa (significant figures) chỉ là quy ước trình bày. Một kết quả như
@@ -92,8 +82,6 @@ L=(12.43\pm0.02)\,cm
 ```
 
 mang nhiều thông tin hơn việc viết rất nhiều chữ số thập phân mà không giải thích độ tin cậy. Khi độ chính xác quan trọng, cần nêu cách đo, độ bất định và điều kiện thực nghiệm chứ không chỉ làm tròn số.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Chữ số có nghĩa không thay thế phân tích độ bất định** đặt vấn đề; **Khớp dữ liệu không phải là chứng minh lý thuyết** đối chiếu bằng chứng, rồi **Kiểm định giả thuyết và mức ý nghĩa** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Khớp dữ liệu không phải là chứng minh lý thuyết
 
@@ -113,23 +101,17 @@ Một phép khớp tốt cho thấy dữ liệu tương thích với mô hình d
 
 Phần dư (residual) rất quan trọng. Nếu phần dư có cấu trúc thay vì phân bố ngẫu nhiên, mô hình có thể đang bỏ sót một cơ chế vật lý, một xu hướng phi tuyến hoặc một sai lệch của thiết bị.
 
-> **Nối mạch:** Trong **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Khớp dữ liệu không phải là chứng minh lý thuyết** đặt vấn đề; **Kiểm định giả thuyết và mức ý nghĩa** đối chiếu bằng chứng, rồi **Kiểm chứng mô hình và mô phỏng** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Kiểm định giả thuyết và mức ý nghĩa
 
 Kiểm định giả thuyết (hypothesis testing) đánh giá mức độ dữ liệu không tương thích với một giả thuyết nền. Trong vật lý hạt, ngưỡng “5 sigma” là một quy ước rất nghiêm ngặt nhằm hạn chế phát hiện giả trong bối cảnh có nhiều phép tìm kiếm và nhiều nguồn sai số hệ thống. Nó không có nghĩa đơn giản rằng giả thuyết mới “đúng với xác suất 99.999...%”.
 
 Cách tiếp cận tần suất (frequentist) và Bayes (Bayesian) trả lời những câu hỏi xác suất khác nhau. Khi đọc kết quả thống kê, cần biết mô hình xác suất, hàm hợp lý (likelihood), giả định và phân bố tiên nghiệm (prior) nếu có.
 
-> **Nối mạch:** Ở chặng này của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Kiểm chứng mô hình và mô phỏng** nối từ **Kiểm định giả thuyết và mức ý nghĩa** sang **Ước lượng Fermi và bậc độ lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiểm chứng mô hình và mô phỏng
 
 Trước khi tin một kết quả số, nên kiểm tra nhiều lớp độc lập: thứ nguyên có đúng không, nghiệm có trở về trường hợp giải tích đã biết không, kết quả có hội tụ khi giảm bước lưới hoặc bước thời gian không, các định luật bảo toàn có được giữ trong phạm vi mong đợi không, và bậc độ lớn có hợp lý không.
 
 Nếu mô phỏng quỹ đạo Trái Đất trong bài toán hai vật thể bảo toàn mà năng lượng giảm hàng chục phần trăm sau mỗi vòng, không nên vội diễn giải đó là một hiệu ứng vật lý mới. Khả năng đầu tiên cần kiểm tra là bộ tích phân số (numerical integrator), bước thời gian và cách cài đặt phương trình.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Ước lượng Fermi và bậc độ lớn** nối từ **Kiểm chứng mô hình và mô phỏng** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ước lượng Fermi và bậc độ lớn
 
@@ -141,13 +123,9 @@ D\sim N\times f_s\times \text{bytes/sample}\times t.
 
 Mục tiêu không phải có con số chính xác ngay từ đầu mà là biết thang giá trị hợp lý. Một ước lượng tốt có thể phát hiện kết quả sai `10^3` hay `10^6` lần trước khi các phép tính chi tiết che mất trực giác.
 
-> **Nối mạch:** Trong **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Ước lượng Fermi và bậc độ lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Thí nghiệm không trả về “sự thật trực tiếp”. Nó trả về tín hiệu đã đi qua thiết bị, hiệu chuẩn, nhiễu và quy trình xử lý. Suy luận khoa học phải tách được đáp ứng của thiết bị, độ bất định và giả định của mô hình trước khi biến tín hiệu thành một kết luận vật lý.
-
-> **Nối mạch:** Ở chặng này của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -162,8 +140,6 @@ Không. Ngoài lỗi lập trình còn có sai số mô hình, sai số rời r�
 ### “Học máy có thể thay thế mọi mô hình vật lý”
 
 Học máy (machine learning) có thể xấp xỉ quan hệ rất phức tạp, nhưng khả năng ngoại suy, bảo toàn đại lượng, giải thích nhân quả và phạm vi dữ liệu huấn luyện vẫn là các giới hạn quan trọng. Các phương pháp kết hợp vật lý và dữ liệu thường hữu ích khi hai nguồn thông tin bổ sung cho nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý thực nghiệm: hiệu chuẩn, độ bất định, khớp dữ liệu và suy luận**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

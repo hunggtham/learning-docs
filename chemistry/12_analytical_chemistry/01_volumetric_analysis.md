@@ -63,8 +63,6 @@ Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện 
 
 Từ khối lượng chất chuẩn sơ cấp, số mol được xác định trực tiếp.
 
-> **Nối mạch:** Chất chuẩn sơ cấp xác lập nồng độ đáng tin; dung dịch chuẩn thứ cấp phải được chuẩn hóa, sau đó điểm tương đương được diễn giải theo stoichiometry và acid–base chứ không mặc định pH bằng 7.
-
 ## Dung dịch chuẩn thứ cấp
 
 Nhiều dung dịch như NaOH hoặc một số chất oxy hóa không thể có nồng độ chính xác chỉ từ thao tác cân–pha vì hút nước, hấp thụ \(CO_2\), phân hủy hoặc thay đổi theo thời gian.
@@ -112,8 +110,6 @@ pH\approx pK_a
 \]
 
 Đây là lý do đường chuẩn độ không chỉ cho nồng độ; nó còn có thể chứa thông tin về \(pK_a\).
-
-> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **pH tại điểm tương đương không luôn bằng 7** nối từ **Dung dịch chuẩn thứ cấp** sang **Điện thế và độ dốc đường chuẩn độ redox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## pH tại điểm tương đương không luôn bằng 7
 
@@ -172,8 +168,6 @@ cho thấy một mol permanganate nhận 5 mol electron trong môi trường aci
 
 Nếu analyte nhường một electron mỗi mol, tỉ lệ hóa lượng trực tiếp theo số electron cân bằng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Điện thế và độ dốc đường chuẩn độ redox** nối từ **pH tại điểm tương đương không luôn bằng 7** sang **Permanganate tự chỉ thị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện thế và độ dốc đường chuẩn độ redox
 
 Phương trình Nernst nối thế điện cực với tỉ số dạng oxy hóa/khử:
@@ -185,8 +179,6 @@ E=E^\circ-\frac{RT}{nF}\ln Q
 Gần điểm tương đương, thành phần redox thay đổi nhanh và điện thế có thể nhảy mạnh.
 
 Điểm endpoint có thể nhận bằng chỉ thị redox, tự chỉ thị hoặc điện cực.
-
-> **Nối mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Permanganate tự chỉ thị** nối từ **Điện thế và độ dốc đường chuẩn độ redox** sang **Độ cứng nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Permanganate tự chỉ thị
 
@@ -226,8 +218,6 @@ với \(\alpha_{Y^{4-}}\) là phần EDTA ở dạng có khả năng liên kết
 
 Đây là lý do buffer không chỉ “giữ pH”; nó trực tiếp thay đổi độ mạnh hiệu dụng của phản ứng chuẩn độ.
 
-> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Độ cứng nước** nối từ **Permanganate tự chỉ thị** sang **Phương pháp Mohr**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ cứng nước
 
 Ca²⁺ và Mg²⁺ có thể được chuẩn độ bằng EDTA. Điều kiện pH và chỉ thị kim loại được chọn để tạo endpoint đủ rõ.
@@ -246,15 +236,11 @@ trước điểm tương đương, \(Ag^+\) thêm vào bị tiêu thụ tạo k�
 
 Hình dạng đường chuẩn độ liên quan \(K_{sp}\), nồng độ và các phản ứng phụ như tạo phức.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Phương pháp Mohr** nối từ **Độ cứng nước** sang **Volhard và chuẩn độ ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương pháp Mohr
 
 Chromate được dùng làm chỉ thị; sau khi phần lớn chloride đã kết tủa, dư Ag⁺ bắt đầu tạo \(Ag_2CrO_4\) có màu.
 
 pH phải được kiểm soát vì chromate, dichromate và các kết tủa bạc khác phụ thuộc môi trường.
-
-> **Nối mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** nối từ **Phương pháp Mohr** sang **Khi nào đọc buret không còn là nguồn chi phối?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Volhard và chuẩn độ ngược
 
@@ -326,8 +312,6 @@ C_A=f(C_B,V_B,V_A,\ldots)
 \]
 
 thì độ không đảm bảo phải được truyền từ các biến đầu vào theo mô hình đo.
-
-> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** đặt vấn đề; **Khi nào đọc buret không còn là nguồn chi phối?** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Khi nào đọc buret không còn là nguồn chi phối?
 

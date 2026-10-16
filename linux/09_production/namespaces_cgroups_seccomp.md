@@ -60,8 +60,6 @@ mnt -> mnt:[4026531999]
 
 Hai processes có không gian tên (namespace / 네임스페이스) inode identifier giống nhau thường đang chia sẻ không gian tên (namespace / 네임스페이스) tương ứng.
 
-> **Nối mạch:** Trong **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Mount không gian tên (namespace / 네임스페이스)** nối từ **Không gian tên (namespace / 네임스페이스): thay đổi góc nhìn** sang **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mount không gian tên (namespace / 네임스페이스)
 
 Mount không gian tên (namespace / 네임스페이스) cho mỗi nhóm tiến trình (process / 프로세스) có mount bảng (table / 테이블) riêng.
@@ -79,8 +77,6 @@ mà không giống mount cây (tree / 트리) của host.
 Do đó khi bộ chứa (container / 컨테이너) báo tệp (file / 파일) không tồn tại, phải hỏi **đường dẫn trong không gian tên (namespace / 네임스페이스) nào**.
 
 Một tệp (file / 파일) tồn tại trên host `/opt/data/file` không có nghĩa bộ chứa (container / 컨테이너) thấy nó nếu chưa bind mount/volume.
-
-> **Nối mạch:** Ở chặng này của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)** nối từ **Mount không gian tên (namespace / 네임스페이스)** sang **UTS không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)
 
@@ -109,8 +105,6 @@ sudo ip netns del lab
 
 Đây là cách thấy bộ chứa (container / 컨테이너) networking không phải “phép thuật Docker”; Docker chỉ tự động hóa các primitives này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **UTS không gian tên (namespace / 네임스페이스)** nối từ **Mạng (network / 네트워크) không gian tên (namespace / 네임스페이스)** sang **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## UTS không gian tên (namespace / 네임스페이스)
 
 UTS không gian tên (namespace / 네임스페이스) tách hostname/domain-name view.
@@ -125,8 +119,6 @@ hostname
 
 trong bộ chứa (container / 컨테이너) có thể khác host.
 
-> **Nối mạch:** Trong **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** nối từ **UTS không gian tên (namespace / 네임스페이스)** sang **Không gian tên (namespace / 네임스페이스) không phải tài nguyên (resource / 자원) limit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)
 
 Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) cho phép remap UID/GID.
@@ -134,8 +126,6 @@ Người dùng (user / 사용자) không gian tên (namespace / 네임스페이�
 Một tiến trình (process / 프로세스) có thể là UID 0 **bên trong không gian tên (namespace / 네임스페이스)** nhưng ánh xạ tới UID không đặc quyền trên host.
 
 Điều này giảm rủi ro so với bộ chứa (container / 컨테이너) gốc (root / 루트) ánh xạ trực tiếp host gốc (root / 루트), nhưng ngữ nghĩa (semantics / 의미론) permission với bind mounts trở nên phức tạp hơn.
-
-> **Nối mạch:** Ở chặng này của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** đặt tiêu chí; **Không gian tên (namespace / 네임스페이스) không phải tài nguyên (resource / 자원) limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Bộ nhớ (memory / 메모리) cgroup** mở rộng hệ quả.
 
 ## Không gian tên (namespace / 네임스페이스) không phải tài nguyên (resource / 자원) limit
 
@@ -159,8 +149,6 @@ stat -fc %T /sys/fs/cgroup
 ```
 
 Trên cgroup v2 thường thấy kiểu (type / 타입) `cgroup2fs`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Không gian tên (namespace / 네임스페이스) không phải tài nguyên (resource / 자원) limit** đặt tiêu chí; **Bộ nhớ (memory / 메모리) cgroup** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Host bộ nhớ (memory / 메모리) còn nhiều nhưng bộ chứa (container / 컨테이너) vẫn OOM** mở rộng hệ quả.
 
 ## Bộ nhớ (memory / 메모리) cgroup
 
@@ -192,8 +180,6 @@ Tìm cgroup của PID:
 cat /proc/<PID>/cgroup
 ```
 
-> **Nối mạch:** Trong **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Host bộ nhớ (memory / 메모리) còn nhiều nhưng bộ chứa (container / 컨테이너) vẫn OOM** nối từ **Bộ nhớ (memory / 메모리) cgroup** sang **CPU cgroup**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Host bộ nhớ (memory / 메모리) còn nhiều nhưng bộ chứa (container / 컨테이너) vẫn OOM
 
 Nếu `memory.max` là 1 GiB và tiến trình (process / 프로세스) vượt giới hạn, cgroup có thể OOM-kill tải công việc (workload / 워크로드) dù:
@@ -206,8 +192,6 @@ trên host vẫn còn hàng chục GiB.
 
 Đây là một trong những lỗi gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너) phổ biến nhất.
 
-> **Nối mạch:** Ở chặng này của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **CPU cgroup** nối từ **Host bộ nhớ (memory / 메모리) còn nhiều nhưng bộ chứa (container / 컨테이너) vẫn OOM** sang **CPU throttling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CPU cgroup
 
 Cgroup có thể kiểm soát CPU quota/weight.
@@ -217,8 +201,6 @@ Một bộ chứa (container / 컨테이너) được gán “1 CPU” không nh
 Nếu Java đọc `Runtime.getRuntime().availableProcessors()`, hành vi (behavior / 동작) còn phụ thuộc JVM phiên bản (version / 버전) và bộ chứa (container / 컨테이너) awareness.
 
 Luồng thực thi (thread / 스레드) pool sizing dựa CPU count vì vậy phải xem thời gian chạy (runtime / 런타임)/bộ chứa (container / 컨테이너) limit thật.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **CPU throttling** nối từ **CPU cgroup** sang **I/O cgroup**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU throttling
 
@@ -232,8 +214,6 @@ Triệu chứng:
 - cgroup quota đã dùng hết trong period.
 
 Đây là counterexample quan trọng cho cách nhìn host-level metrics đơn thuần.
-
-> **Nối mạch:** Trong **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **I/O cgroup** nối từ **CPU throttling** sang **Vì sao bộ chứa (container / 컨테이너) không nên chạy --privileged?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## I/O cgroup
 
@@ -263,8 +243,6 @@ grep '^Cap' /proc/<PID>/status
 
 Công cụ (tool / 도구) như `capsh` hoặc `getpcaps` có thể diễn giải dễ hơn nếu được cài.
 
-> **Nối mạch:** Ở chặng này của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Vì sao bộ chứa (container / 컨테이너) không nên chạy --privileged?** nối từ **I/O cgroup** sang **Ranh giới bảo mật (security boundary / 보안 경계) là composition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao bộ chứa (container / 컨테이너) không nên chạy `--privileged`?
 
 `--privileged` thường cấp capabilities rất rộng và thiết bị (device / 장치) truy cập (access / 접근) lớn hơn, làm nhiều isolation ranh giới (boundary / 경계) yếu đi.
@@ -289,8 +267,6 @@ cgroup    → dùng bao nhiêu
 capability→ có đặc quyền nào
 seccomp   → gọi syscall nào
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Vì sao bộ chứa (container / 컨테이너) không nên chạy --privileged?** đặt tiêu chí; **Ranh giới bảo mật (security boundary / 보안 경계) là composition** dùng tiêu chí đó để kiểm tra ranh giới, rồi **systemctl status và cgroup** mở rộng hệ quả.
 
 ## Ranh giới bảo mật (security boundary / 보안 경계) là composition
 
@@ -332,8 +308,6 @@ TasksMax=512
 
 Dịch vụ (service / 서비스) Linux truyền thống và bộ chứa (container / 컨테이너) cùng dùng kernel primitives nền tảng.
 
-> **Nối mạch:** Trong **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Ranh giới bảo mật (security boundary / 보안 경계) là composition** đặt tiêu chí; **systemctl status và cgroup** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vì sao docker exec dễ dùng hơn?** mở rộng hệ quả.
-
 ## `systemctl status` và cgroup
 
 `systemctl status` thường hiển thị `CGroup:` và tiến trình (process / 프로세스) cây (tree / 트리) của dịch vụ (service / 서비스).
@@ -363,8 +337,6 @@ sudo nsenter -t <PID> -m -n -p sh
 ```
 
 Cần rất thận trọng vì bạn đang thay đổi góc nhìn thời gian chạy (runtime / 런타임), và shell với privilege cao có thể tác động môi trường vận hành (production / 운영 환경) tải công việc (workload / 워크로드).
-
-> **Nối mạch:** Ở chặng này của **Không gian tên (namespace / 네임스페이스), cgroup, năng lực (capability / 역량) và seccomp**, **Vì sao docker exec dễ dùng hơn?** nối từ **systemctl status và cgroup** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Vì sao `docker exec` dễ dùng hơn?
 

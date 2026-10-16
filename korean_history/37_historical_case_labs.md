@@ -8,8 +8,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 Đừng dùng các tình huống như sáu câu chuyện đại diện cho toàn bộ lịch sử. Chúng là điểm vào để luyện một thói quen: không giải thích sự kiện bằng một nguyên nhân duy nhất và không tách cung điện, cánh đồng, bến cảng, nhà máy khỏi nhau. Sau mỗi lab, hãy quay lại chapter chính được liên kết để mở rộng phần bị lược bỏ.
 
-> **Chuyển mạch:** Case lab nối mốc với đời sống qua place, institution, actor và evidence; **Gyeongju** cho thấy kinh đô sống nhờ network, còn **Ganghwa** kiểm tra resilience của state trong khủng hoảng. Hai lab mở cùng một cách đọc nhưng đặt nó vào hai loại địa hình và quyền lực khác nhau.
-
 ## Lab 1 — Gyeongju, thế kỷ VII–VIII: một kinh đô được nuôi bằng mạng lưới
 
 **Cảnh mở đầu.** Ở Gyeongju, lăng mộ lớn, nền cung điện Wolseong, chùa và đồ tùy táng nằm trong cùng một cảnh quan. Người xem dễ tưởng đây chỉ là “di tích của Tân La”. Câu hỏi tốt hơn là: một trung tâm ở phía đông nam bán đảo đã huy động được lương thực, nhân lực, kim loại và nghi lễ như thế nào để mở rộng quyền lực?
@@ -21,8 +19,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 **Điểm nhìn tại chỗ.** Ở Daereungwon, hãy nhìn kích thước và vị trí lăng mộ như bằng chứng về lao động và phân tầng, rồi sang Wolji để hỏi ai có thể dự tiệc trong không gian cung đình. Không thể suy ra mọi chi tiết đời sống từ một ngôi mộ; cần đối chiếu khảo cổ, văn bản và mạng lưới địa lý.
 
 **Bàn giao.** Khi nguồn lực của Silla được vật chất hóa ở Gyeongju, câu hỏi tiếp theo là vùng phía bắc bán đảo được tổ chức ra sao sau khi Cao Câu Ly sụp đổ. Chuyển sang [`04_unified_silla_and_balhae.md`](04_unified_silla_and_balhae.md) để đọc đồng thời Tân La và Bột Hải (발해 / Balhae), thay vì coi “thống nhất” là một đường biên đơn giản.
-
-> **Chuyển mạch:** Gyeongju dùng lăng mộ, cung điện và mạng vận chuyển để đọc năng lực huy động; Ganghwa dùng đảo, bản khắc và dân bị trưng dụng để đọc giới hạn của sức chịu đựng. **Lab 3 — Hanseong** chuyển cùng phương pháp sang hạ tầng chữ viết và câu hỏi ai được tiếp cận thông tin.
 
 ## Lab 2 — Ganghwa, thế kỷ XIII: đảo, bản khắc và sức chịu đựng của nhà nước
 
@@ -38,8 +34,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Câu hỏi về ai được bảo vệ và ai trả giá dẫn tới chương `07`, nơi chính quyền quân nhân (military rule / 무신정권) và thế giới Mông Cổ làm lộ giới hạn của một nhà nước quý tộc.
 
-> **Chuyển mạch:** Ganghwa cho thấy nhà nước có thể bảo vệ trung tâm nhưng chuyển chi phí chiến tranh ra đất liền; Hanseong cho thấy công nghệ chữ viết có thể giảm chi phí thông tin nhưng không tự xóa bất bình đẳng. **Lab 4 — Seodaemun và ga Seoul** tiếp tục hỏi hạ tầng hiện đại phục vụ ai dưới quyền lực thuộc địa.
-
 ## Lab 3 — Hanseong, thế kỷ XV: chữ viết đi qua căn bếp và công sở
 
 **Cảnh mở đầu.** Năm **1443**, vua Thế Tông (세종대왕 / King Sejong the Great) hoàn thành Hunminjeongeum; năm **1446** văn bản được công bố. Nếu chỉ nhớ “vua tạo ra Hangul”, ta bỏ qua câu hỏi Hangul giải quyết vấn đề thông tin nào trong xã hội Joseon.
@@ -53,8 +47,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 **Điểm nhìn tại chỗ.** Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace), Jiphyeonjeon và Bảo tàng Hangul nên được đọc cùng nhau: một nơi cho thấy quyền lực cung đình, một nơi gợi mạng lưới học giả, một nơi cho thấy vật liệu và cách chữ được dùng. Đừng biến di tích thành phông nền cho tiểu sử vua.
 
 **Bàn giao.** Khi chữ viết mở rộng khả năng truyền đạt nhưng không tự động tạo bình đẳng, hãy chuyển sang [`10_joseon_society_status_family_economy.md`](10_joseon_society_status_family_economy.md) để theo dõi địa vị (status / 신분), gia đình và kinh tế đã lọc quyền tiếp cận đó như thế nào.
-
-> **Chuyển mạch:** Hanseong cho thấy chữ viết giảm chi phí thông tin nhưng vẫn bị lọc bởi địa vị; **Lab 4 — Seodaemun và ga Seoul** đặt hạ tầng hiện đại vào quan hệ thuộc địa, rồi **Lab 5 — Busan** theo dõi cách chiến tranh tái phân bổ người, hàng và giấy tờ.
 
 ## Lab 4 — Seodaemun và ga Seoul, 1919–1945: hiện đại hóa dưới quyền lực thuộc địa
 
@@ -70,8 +62,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Năm **1945** không xóa đường ray, sổ đất, người di cư hay tranh chấp cộng tác. Chuyển sang [`16_liberation_division_state_formation_1945_1950.md`](16_liberation_division_state_formation_1945_1950.md) để đọc giải phóng như một khủng hoảng chuyển tiếp nhà nước.
 
-> **Chuyển mạch:** Seodaemun và ga Seoul cho thấy hạ tầng vừa mở khả năng di chuyển vừa phục vụ cưỡng chế; **Busan** cho thấy cảng, viện trợ và thị trường sinh tồn trong chiến tranh. **Lab 6 — Ulsan và Gwangju** chuyển câu hỏi sang tăng trưởng công nghiệp, cưỡng chế và quyền lên tiếng.
-
 ## Lab 5 — Busan, 1950–1953: chiến tranh là một nền kinh tế sinh tồn
 
 **Cảnh mở đầu.** Trong những tháng đầu chiến tranh, Busan vừa là nơi trú ẩn, thủ đô tạm thời, cảng tiếp tế và thị trường của người tị nạn. Bản đồ chiến tuyến không cho thấy tiền thuê nhà, khẩu phần, lớp học tạm hay gia đình bị tách.
@@ -86,8 +76,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 
 **Bàn giao.** Khi chiến tranh để lại người tị nạn, hạ tầng hỏng và nhà nước an ninh hóa, hãy đọc [`18_postwar_reconstruction_and_first_republic.md`](18_postwar_reconstruction_and_first_republic.md) như bài toán phân bổ vốn và quyền lực, không phải chương “bắt đầu lại từ số không”.
 
-> **Chuyển mạch:** Busan cho thấy chiến tranh đi qua cảng, viện trợ, chỗ ở và giấy tờ; **Lab 6 — Ulsan và Gwangju** cho thấy nhà máy và xuất khẩu tạo năng lực nhưng không tự tạo quyền chính trị. Phần **khung phản tư** sau lab tổng hợp evidence, actors và trade-offs thay vì biến lịch sử thành bài kiểm tra.
-
 ## Lab 6 — Ulsan và Gwangju, 1961–1987: tăng trưởng, cưỡng chế và quyền lên tiếng
 
 **Cảnh mở đầu.** Ulsan có cảng, nhà máy đóng tàu, hóa dầu và khu nhà công nhân; Gwangju có ký ức về đàn áp và phong trào dân chủ. Hai địa điểm không phải hai câu chuyện tách biệt: cùng một mô hình phát triển đặt câu hỏi về ai hưởng lợi, ai chịu rủi ro và ai được quyết định.
@@ -101,8 +89,6 @@ Các chapter `02–23` giải thích tiến trình theo thứ tự thời gian; 
 **Điểm nhìn tại chỗ.** Ulsan Industrial Complex cho thấy chính sách đã biến thành cảng, đường, nhà máy và khu ở; May 18th National Cemetery và Gwangju archives cho thấy ký ức dân sự có thể làm thay đổi cách một quốc gia kể về tăng trưởng. Di tích công nghiệp và địa điểm tưởng niệm cần được đọc cùng nhau.
 
 **Bàn giao.** Sau 1987, câu hỏi không còn chỉ là “ai nắm quyền” mà là dân chủ có thể hấp thụ toàn cầu hóa, khủng hoảng tài chính và bất bình đẳng tài sản ra sao. Chuyển sang [`21_democratic_consolidation_globalization_1987_1997.md`](21_democratic_consolidation_globalization_1987_1997.md) và [`22_imf_crisis_digitalization_hallyu_1997_2010s.md`](22_imf_crisis_digitalization_hallyu_1997_2010s.md).
-
-> **Chuyển mạch:** Lab 6 nối industrial growth, coercion và voice trong hai địa điểm; **khung phản tư** sau lab tổng hợp evidence, actors và trade-offs để quay lại chapter chính, không tách lịch sử thành một bài kiểm tra.
 
 ## Khung phản tư sau mỗi lab
 

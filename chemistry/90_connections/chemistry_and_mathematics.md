@@ -12,8 +12,6 @@ Hóa lượng, nồng độ và định luật khí dựa mạnh vào tỉ lệ,
 
 Phương trình hóa học cân bằng cũng có thể được viết thành hệ ràng buộc tuyến tính dựa trên bảo toàn nguyên tố. Khi số chất tăng, bài toán cân bằng có thể được giải như bài toán tìm véc-tơ (vector / 벡터) trong không gian nghiệm của ma trận thành phần.
 
-> **Nối mạch:** Algebra và dimensional analysis kiểm tra cấu trúc phương trình; logarithm nén scale như pH/pKa, còn calculus mô tả tốc độ biến đổi và kinetics.
-
 ## Logarithm
 
 `pH`, `pKa`, hằng số cân bằng và nhiều đại lượng hóa học trải qua nhiều bậc độ lớn nên logarithm là công cụ tự nhiên để nén thang giá trị.
@@ -30,8 +28,6 @@ Logarithm biến phép nhân thành phép cộng. Vì hằng số cân bằng c�
 
 Đây là ví dụ đẹp cho việc toán học không chỉ làm tính toán thuận tiện hơn mà còn làm lộ cấu trúc của Hóa học.
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Giải tích** nối từ **Logarithm** sang **Phương trình vi phân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Giải tích
 
 Tốc độ phản ứng là đạo hàm theo thời gian:
@@ -43,8 +39,6 @@ tỷ lệ (rate / 비율)=-\frac{d[A]}{dt}
 Phương trình tốc độ tích phân là nghiệm của phương trình vi phân với điều kiện đầu.
 
 Nhiệt động lực học cũng dùng đạo hàm để định nghĩa nhiệt dung, thế hóa học và nhiều đại lượng đáp ứng. Khi gặp một đạo hàm trong Hóa học, nên đọc nó như câu hỏi: “đại lượng này thay đổi nhạy tới mức nào khi ta thay đổi một biến khác?”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương trình vi phân** nối từ **Giải tích** sang **Đại số tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình vi phân
 
@@ -58,8 +52,6 @@ Hóa học khí quyển, cháy và chuyển hóa sinh học có thể chứa hà
 
 Khi các tốc độ khác nhau qua nhiều thang thời gian, hệ trở thành **hệ cứng (stiff system)** và cần bộ giải số phù hợp.
 
-> **Nối mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Đại số tuyến tính** nối từ **Phương trình vi phân** sang **Xác suất và thống kê**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đại số tuyến tính
 
 Cân bằng phương trình hóa học có thể xem như bài toán không gian nghiệm của ma trận.
@@ -72,8 +64,6 @@ A\mathbf v=\lambda\mathbf v
 
 Phân tích phổ, hóa lượng đa biến và xử lý dữ liệu cũng dùng mạnh các công cụ như phân rã ma trận, bình phương tối thiểu và phân tích thành phần chính.
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Xác suất và thống kê** nối từ **Đại số tuyến tính** sang **Tối ưu hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác suất và thống kê
 
 Cơ học lượng tử có bản chất xác suất; cơ học thống kê mô tả phân bố của số lượng lớn vi trạng thái; hóa phân tích cần ước lượng sai số và độ không đảm bảo; động học ở quy mô nhỏ có thể được mô tả bằng quá trình ngẫu nhiên.
@@ -81,8 +71,6 @@ Cơ học lượng tử có bản chất xác suất; cơ học thống kê mô 
 Ở cấp một phân tử đơn, thời điểm phản ứng có thể dao động mạnh. Ở cấp quần thể lớn, phương trình tốc độ liên tục lại mô tả rất tốt giá trị trung bình.
 
 Đây là mối liên hệ giữa mô hình ngẫu nhiên vi mô và hành vi gần như xác định ở cấp vĩ mô.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Tối ưu hóa** nối từ **Xác suất và thống kê** sang **Phương pháp số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tối ưu hóa
 
@@ -92,8 +80,6 @@ Thiết kế quy trình phải tối ưu nhiều mục tiêu như hiệu suất,
 
 Trong mọi trường hợp, việc đặt đúng hàm mục tiêu và ràng buộc quan trọng không kém thuật toán tối ưu.
 
-> **Nối mạch:** Trong **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Phương pháp số** nối từ **Tối ưu hóa** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương pháp số
 
 Phần lớn bài toán hóa học thực tế không có nghiệm giải tích đóng.
@@ -101,8 +87,6 @@ Phần lớn bài toán hóa học thực tế không có nghiệm giải tích 
 Tìm nghiệm số được dùng cho cân bằng phi tuyến; tích phân số được dùng cho động học và vận chuyển; Monte Carlo lấy mẫu cấu hình; động lực học phân tử tích phân phương trình chuyển động; phương pháp phần tử hữu hạn hoặc sai phân hữu hạn giải các bài toán khuếch tán và truyền nhiệt.
 
 Vì vậy năng lực tính toán số ngày càng trở thành một phần tự nhiên của Hóa học hiện đại.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Toán học — toán học là ngôn ngữ của quan hệ hóa học**, **Mô hình tư duy** tổng hợp từ **Phương pháp số** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

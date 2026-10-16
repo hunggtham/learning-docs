@@ -41,9 +41,9 @@ Positional embeddings thêm spatial thứ tự (order / 순서). Có thể learn
 
 Vị trí giúp attention phân biệt các patch có nội dung giống nhau nhưng nằm ở nơi khác; `[CLS]` sau đó cung cấp một điểm gom thông tin cho classification.
 
-## CLS đơn vị từ (token / 토큰)
+## CLS token (토큰)
 
-Original ViT thêm learnable `[CLS]` đơn vị từ (token / 토큰) vào chuỗi (sequence / 시퀀스). Sau encoder, biểu diễn (representation / 표현) của đơn vị từ (token / 토큰) này dùng cho classification.
+Original ViT thêm learnable `[CLS]` token (토큰) vào chuỗi (sequence / 시퀀스). Sau encoder, biểu diễn (representation / 표현) của token (토큰) này dùng cho classification.
 
 Alternatives dùng toàn cục (global / 전역) average pooling trên patch features.
 
@@ -168,7 +168,7 @@ Attention map có thể giúp quan sát tương tác giữa patch, nhưng việc
 
 ## Attention Maps
 
-Visualizing attention weights can show đơn vị từ (token / 토큰) tương tác (interaction / 상호작용) but should not be treated as chính xác (exact / 정확한) nhân quả (causal / 인과적) explanation. Multiple heads/layers and residual pathways contribute.
+Visualizing attention weights can show token (토큰) tương tác (interaction / 상호작용) but should not be treated as chính xác (exact / 정확한) nhân quả (causal / 인과적) explanation. Multiple heads/layers and residual pathways contribute.
 
 Kích thước patch vì thế là một lựa chọn triển khai: patch nhỏ giữ chi tiết hơn nhưng làm số token và chi phí tăng.
 
@@ -196,7 +196,7 @@ Khi patch đã trở thành token, cùng một giao diện có thể nối encod
 
 ## Vision Transformer và Multimodal AI
 
-Once ảnh (image / 이미지) becomes chuỗi (sequence / 시퀀스) of embeddings, kiến trúc (architecture / 아키텍처) aligns naturally with văn bản (text / 텍스트) đơn vị từ (token / 토큰) processing. Multimodal các mô hình (models / 모델들) can:
+Once ảnh (image / 이미지) becomes chuỗi (sequence / 시퀀스) of embeddings, kiến trúc (architecture / 아키텍처) aligns naturally with văn bản (text / 텍스트) token (토큰) processing. Multimodal các mô hình (models / 모델들) can:
 
 - encode ảnh (image / 이미지) separately then dự án (project / 프로젝트) into LLM không gian (space / 공간);
 - concatenate visual tokens with văn bản (text / 텍스트) tokens;

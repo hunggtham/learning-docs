@@ -30,8 +30,6 @@ Nó thường được inject vào ngữ cảnh (context / 맥락) cửa sổ (w
 
 Ngữ cảnh (context / 맥락) cửa sổ (window / 윈도우) không phải durable bộ nhớ (memory / 메모리). Khi ngữ cảnh (context / 맥락) bị truncate, thông tin biến mất nếu không persisted.
 
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Episodic bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Working bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Episodic bộ nhớ (memory / 메모리)
 
 Episodic bộ nhớ (memory / 메모리) lưu “đã xảy ra gì”. Ví dụ:
@@ -43,8 +41,6 @@ Episodic bộ nhớ (memory / 메모리) lưu “đã xảy ra gì”. Ví dụ:
 Nó hữu ích cho học tập (learning / 학습) from previous attempts, kiểm tra (audit / 감사) và personalization.
 
 Nhưng raw sự kiện (event / 이벤트) log có thể rất lớn, nên retrieval/summarization chính sách (policy / 정책) cần chọn episode relevant.
-
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Ngữ nghĩa (semantic / 의미적) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Episodic bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Procedural bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ngữ nghĩa (semantic / 의미적) bộ nhớ (memory / 메모리)
 
@@ -58,8 +54,6 @@ API X rate limit is 100 requests/minute
 
 Fact nên có provenance/phiên bản (version / 버전)/thời gian (time / 시간) validity nếu có thể. kiến thức (knowledge / 지식) stale là một bộ nhớ (memory / 메모리) dạng thất bại (failure mode / 실패 모드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Procedural bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) ghi (write / 쓰기) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Procedural bộ nhớ (memory / 메모리)
 
 Procedural bộ nhớ (memory / 메모리) mô tả “cách làm”. Có thể là:
@@ -71,8 +65,6 @@ Procedural bộ nhớ (memory / 메모리) mô tả “cách làm”. Có thể 
 - reusable checklist.
 
 Trong enterprise tác nhân (agent / 에이전트), procedural kiến thức (knowledge / 지식) thường nên ở tường minh (explicit / 명시적) docs/workflows thay vì chỉ “ẩn” trong prompt.
-
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Bộ nhớ (memory / 메모리) ghi (write / 쓰기) chính sách (policy / 정책)** tiếp nhận điểm tựa từ **Procedural bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) Retrieval chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nhớ (memory / 메모리) ghi (write / 쓰기) chính sách (policy / 정책)
 
@@ -88,8 +80,6 @@ Bộ nhớ (memory / 메모리) ghi (write / 쓰기) cần hỏi:
 
 Nếu mô hình (model / 모델) tự lưu mọi câu người dùng (user / 사용자) nói thành permanent fact, bộ nhớ (memory / 메모리) nhanh chóng ô nhiễm.
 
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Bộ nhớ (memory / 메모리) Retrieval chính sách (policy / 정책)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) ghi (write / 쓰기) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bộ nhớ (memory / 메모리) Retrieval chính sách (policy / 정책)
 
 Khi cần ngữ cảnh (context / 맥락), retrieve dựa trên:
@@ -104,8 +94,6 @@ permission
 ```
 
 Véc-tơ (vector / 벡터) similarity chỉ giải quyết relevance theo embedding không gian (space / 공간), không tự giải quyết freshness hoặc authorization.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) Retrieval chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Summarization bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)
 
@@ -127,8 +115,6 @@ access level
 
 Không nên cross-user retrieval ngoài permission phạm vi (scope / 범위).
 
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Summarization bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forgetting là tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Summarization bộ nhớ (memory / 메모리)
 
 Long lịch sử (history / 이력) có thể được compress thành summary. Nhưng summary là lossy transformation.
@@ -141,8 +127,6 @@ raw events → model summary → future agent treats summary as truth
 
 Nếu summary sai, lỗi (error / 오류) persistent. Vì vậy trọng yếu (critical / 중요) facts nên lưu structured records hoặc link provenance.
 
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Forgetting là tính năng (feature / 기능)** tiếp nhận điểm tựa từ **Summarization bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giải quyết xung đột (conflict resolution / 충돌 해결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Forgetting là tính năng (feature / 기능)
 
 Bộ nhớ (memory / 메모리) không nên grow forever. Forgetting/expiration giúp:
@@ -154,8 +138,6 @@ Bộ nhớ (memory / 메모리) không nên grow forever. Forgetting/expiration 
 
 TTL có thể khác nhau theo bộ nhớ (memory / 메모리) kiểu (type / 타입).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Giải quyết xung đột (conflict resolution / 충돌 해결)** tiếp nhận điểm tựa từ **Forgetting là tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) và cơ sở dữ liệu (database / 데이터베이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Giải quyết xung đột (conflict resolution / 충돌 해결)
 
 Bộ nhớ (memory / 메모리) có thể mâu thuẫn:
@@ -166,8 +148,6 @@ new: customer timezone = Asia/Seoul
 ```
 
 Hệ thống (system / 시스템) cần phiên bản (version / 버전)/thời gian (time / 시간) ngữ nghĩa (semantics / 의미론). Không nên đơn giản retrieve cả hai rồi mong LLM tự đoán.
-
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Giải quyết xung đột (conflict resolution / 충돌 해결)** nêu điều cần giải thích; **Bộ nhớ (memory / 메모리) và cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bộ nhớ (memory / 메모리) và RAG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bộ nhớ (memory / 메모리) và cơ sở dữ liệu (database / 데이터베이스)
 
@@ -182,13 +162,9 @@ large artifacts  → object/document store
 event history    → log/event store
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Bộ nhớ (memory / 메모리) và cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **Bộ nhớ (memory / 메모리) và RAG** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Người dùng (user / 사용자) bộ nhớ (memory / 메모리) vs tác vụ (task / 작업) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bộ nhớ (memory / 메모리) và RAG
 
 RAG thường retrieve bên ngoài (external / 외부) kiến thức (knowledge / 지식) documents. tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리) retrieve tác vụ (task / 작업)/người dùng (user / 사용자)/hệ thống (system / 시스템) lịch sử (history / 이력). cơ chế (mechanism / 메커니즘) có thể giống nhau, ngữ nghĩa (semantics / 의미론) khác nhau.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Người dùng (user / 사용자) bộ nhớ (memory / 메모리) vs tác vụ (task / 작업) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) và RAG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) Poisoning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Người dùng (user / 사용자) bộ nhớ (memory / 메모리) vs tác vụ (task / 작업) bộ nhớ (memory / 메모리)
 
@@ -203,15 +179,11 @@ System memory→ policies/runbooks
 
 Phạm vi (scope / 범위) ranh giới (boundary / 경계) là ranh giới bảo mật (security boundary / 보안 경계).
 
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Bộ nhớ (memory / 메모리) Poisoning** tiếp nhận điểm tựa từ **Người dùng (user / 사용자) bộ nhớ (memory / 메모리) vs tác vụ (task / 작업) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Example: coding tác nhân (agent / 에이전트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bộ nhớ (memory / 메모리) Poisoning
 
 Nếu attacker khiến malicious content được lưu lâu dài, future tasks có thể bị ảnh hưởng. Đây là persistence phiên bản (version / 버전) của prompt injection.
 
 Ghi (write / 쓰기) đường dẫn (path / 경로) cần kiểm tra hợp lệ (validation / 검증)/trust mức (level / 수준); retrieval đường dẫn (path / 경로) cần treat bộ nhớ (memory / 메모리) as dữ liệu (data / 데이터), không authority tuyệt đối.
-
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Bộ nhớ (memory / 메모리) Poisoning** cho ta quy tắc; **Example: coding tác nhân (agent / 에이전트)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Bộ nhớ (memory / 메모리) chất lượng (quality / 품질) Metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Example: coding tác nhân (agent / 에이전트)
 
@@ -227,8 +199,6 @@ artifact: actual diff/commit
 
 Actual codebase vẫn là nguồn chuẩn (source of truth / 정본); bộ nhớ (memory / 메모리) chỉ hỗ trợ điều hướng (navigation / 내비게이션)/lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Example: coding tác nhân (agent / 에이전트)** cho ta quy tắc; **Bộ nhớ (memory / 메모리) chất lượng (quality / 품질) Metrics** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bộ nhớ (memory / 메모리) chất lượng (quality / 품질) Metrics
 
 Có thể đánh giá:
@@ -242,15 +212,11 @@ Có thể đánh giá:
 
 “tác nhân (agent / 에이전트) nhớ nhiều” không phải chỉ số (metric / 지표) tốt.
 
-> **Chuyển mạch:** Trong **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Bộ nhớ (memory / 메모리) chất lượng (quality / 품질) Metrics** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > **bộ nhớ (memory / 메모리) là managed bên ngoài (external / 외부) trạng thái (state / 상태), không phải một transcript vô hạn.**
 
 Good bộ nhớ (memory / 메모리) kiến trúc (architecture / 아키텍처) quyết định cái gì cần lưu, ở đâu, bao lâu, ai được đọc và khi nào retrieve.
-
-> **Chuyển mạch:** Ở chặng này của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -265,8 +231,6 @@ Long ngữ cảnh (context / 맥락) vẫn finite, costly và không giải quy�
 ### “bộ nhớ (memory / 메모리) càng nhiều tác nhân (agent / 에이전트) càng thông minh”
 
 Noise, stale facts và xung đột (conflict / 충돌) có thể làm hiệu năng (performance / 성능) tệ hơn.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tác nhân (agent / 에이전트) bộ nhớ (memory / 메모리)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

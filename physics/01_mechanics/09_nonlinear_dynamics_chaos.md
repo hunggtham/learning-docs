@@ -27,8 +27,6 @@ Hệ tuyến tính có nguyên lý chồng chập. Hệ phi tuyến nói chung k
 - mẫu (pattern / 패턴) formation;
 - hỗn loạn tất định.
 
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Hệ động lực và không gian trạng thái** nối từ **Tuyến tính là xấp xỉ hữu ích, không phải luật phổ quát** sang **Điểm cố định và tuyến tính hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hệ động lực và không gian trạng thái
 
 Một hệ autonomous có thể viết
@@ -45,8 +43,6 @@ Mỗi điều kiện ban đầu xác định một quỹ đạo trong không gia
 - trạng thái nào ổn định;
 - ranh giới (boundary / 경계) giữa các basin ở đâu;
 - cấu trúc thay đổi thế nào khi `\mu` đổi.
-
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Điểm cố định và tuyến tính hóa** nối từ **Hệ động lực và không gian trạng thái** sang **Ví dụ một chiều: phương trình logistic liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điểm cố định và tuyến tính hóa
 
@@ -83,8 +79,6 @@ Các trị riêng `\lambda_i` của `J` quyết định độ ổn định cục
 - trị riêng có phần ảo: xuất hiện quay hoặc dao động cục bộ.
 
 Đây là cầu nối trực tiếp giữa đại số tuyến tính và ổn định động lực học.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Điểm cố định và tuyến tính hóa** nêu quy tắc; **Ví dụ một chiều: phương trình logistic liên tục** thử quy tắc trong tình huống, rồi **Phân nhánh: khi cấu trúc nghiệm thay đổi** mở rộng hệ quả.
 
 ## Ví dụ một chiều: phương trình logistic liên tục
 
@@ -124,8 +118,6 @@ nên `x=K` ổn định.
 
 Một phép tính đạo hàm đơn giản đã cho cấu trúc ổn định mà chưa cần giải nghiệm đầy đủ.
 
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Ví dụ một chiều: phương trình logistic liên tục** nêu quy tắc; **Phân nhánh: khi cấu trúc nghiệm thay đổi** thử quy tắc trong tình huống, rồi **Saddle-node và threshold** mở rộng hệ quả.
-
 ## Phân nhánh: khi cấu trúc nghiệm thay đổi
 
 Phân nhánh (bifurcation / 분기) xảy ra khi thay đổi tham số làm số lượng hoặc độ ổn định của nghiệm thay đổi định tính.
@@ -154,8 +146,6 @@ xuất hiện.
 
 Đây là mô hình tối giản của phá vỡ đối xứng tự phát: phương trình đối xứng dưới `x\to-x`, nhưng hệ chọn một trong hai nhánh ổn định.
 
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Saddle-node và threshold** nối từ **Phân nhánh: khi cấu trúc nghiệm thay đổi** sang **Hopf bifurcation và dao động tự duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Saddle-node và threshold
 
 Một normal form khác là
@@ -174,8 +164,6 @@ Khi `\mu\to0`, chúng gặp nhau rồi biến mất.
 
 Cấu trúc saddle-node xuất hiện trong switching, buckling, laser threshold và nhiều hệ có hiện tượng “đột ngột không còn trạng thái cân bằng cũ”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Hopf bifurcation và dao động tự duy trì** nối từ **Saddle-node và threshold** sang **Không gian pha và attractor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hopf bifurcation và dao động tự duy trì
 
 Trong hệ ít nhất hai chiều, một trạng thái cố định có thể mất ổn định khi cặp trị riêng phức đi qua trục ảo.
@@ -190,8 +178,6 @@ Các ví dụ bao gồm:
 - một số instability khí động.
 
 Điểm này phân biệt dao động tự sinh với dao động cưỡng bức của một hệ tuyến tính.
-
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Không gian pha và attractor** nối từ **Hopf bifurcation và dao động tự duy trì** sang **Lyapunov exponent và độ nhạy điều kiện ban đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Không gian pha và attractor
 
@@ -209,8 +195,6 @@ Attractor không phải một lực hút vật lý. Nó là tập trạng thái 
 Basin of attraction là tập các điều kiện ban đầu dẫn tới cùng attractor.
 
 Trong hệ đa ổn định, ranh giới (boundary / 경계) giữa các basin quyết định hệ cuối cùng rơi vào trạng thái nào.
-
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Lyapunov exponent và độ nhạy điều kiện ban đầu** nối từ **Không gian pha và attractor** sang **Hỗn loạn không đồng nghĩa với ngẫu nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lyapunov exponent và độ nhạy điều kiện ban đầu
 
@@ -235,8 +219,6 @@ trong đó `\Delta_{tol}` là sai số tối đa chấp nhận được.
 
 Hệ có thể hoàn toàn tất định nhưng vẫn không thể dự báo chi tiết tùy ý xa trong tương lai.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Hỗn loạn không đồng nghĩa với ngẫu nhiên** nối từ **Lyapunov exponent và độ nhạy điều kiện ban đầu** sang **Logistic map**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hỗn loạn không đồng nghĩa với ngẫu nhiên
 
 Hệ hỗn loạn có thể tuân phương trình deterministic không chứa noise.
@@ -249,8 +231,6 @@ Ngẫu nhiên thống kê và chaos là hai khái niệm khác nhau:
 Trong hệ thực, cả hai có thể cùng tồn tại.
 
 Dự báo thời tiết là ví dụ: phương trình khí quyển gần deterministic trong mô hình continuum, nhưng bất định (uncertainty / 불확실성) ban đầu, mô hình (model / 모델) lỗi (error / 오류) và chaos giới hạn forecast horizon.
-
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Logistic map** nối từ **Hỗn loạn không đồng nghĩa với ngẫu nhiên** sang **Poincaré section**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Logistic map
 
@@ -275,8 +255,6 @@ fixed point
 
 Logistic map cho thấy độ phức tạp không nhất thiết cần hàng triệu thành phần; phản hồi (feedback / 피드백) phi tuyến đơn giản đã đủ tạo bifurcation và chaos.
 
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Poincaré section** nối từ **Logistic map** sang **Con lắc cưỡng bức tắt dần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Poincaré section
 
 Với hệ liên tục tuần hoàn theo thời gian, theo dõi quỹ đạo đầy đủ có thể khó.
@@ -288,8 +266,6 @@ Ta có thể lấy mẫu hệ mỗi chu kỳ của lực cưỡng bức. Poincar
 - chaos có thể cho tập fractal phức tạp.
 
 Đây là kỹ thuật giảm chiều rất mạnh để nhìn cấu trúc động lực.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Con lắc cưỡng bức tắt dần** nối từ **Poincaré section** sang **Bảo toàn và chaos Hamilton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Con lắc cưỡng bức tắt dần
 
@@ -312,8 +288,6 @@ Tùy `A,\omega,\gamma`, hệ có thể khóa vào dao động tuần hoàn, peri
 
 Nếu thay `\sin\theta` bằng `\theta`, ta mất nhiều hành vi phi tuyến quan trọng. Đây là ví dụ rõ rằng tuyến tính hóa có miền hiệu lực hữu hạn.
 
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Bảo toàn và chaos Hamilton** nối từ **Con lắc cưỡng bức tắt dần** sang **Mô phỏng số của hệ hỗn loạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bảo toàn và chaos Hamilton
 
 Một hệ Hamilton kín vẫn có thể chaotic dù không có attractor tiêu tán.
@@ -321,8 +295,6 @@ Một hệ Hamilton kín vẫn có thể chaotic dù không có attractor tiêu 
 Trong phase không gian (space / 공간), quỹ đạo có thể chứa vùng regular xen kẽ vùng chaotic. KAM lý thuyết (theory / 이론) mô tả cách một số torus của hệ tích phân được sống sót dưới nhiễu loạn nhỏ, còn các resonance có thể tạo vận chuyển (transport / 전송) phức tạp.
 
 Vì vậy chaos không đồng nghĩa với tiêu tán hoặc strange attractor; đó chỉ là một trường hợp phổ biến trong hệ dissipative.
-
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Mô phỏng số của hệ hỗn loạn** nối từ **Bảo toàn và chaos Hamilton** sang **Liên hệ với điều khiển (control / 제어) và kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô phỏng số của hệ hỗn loạn
 
@@ -337,8 +309,6 @@ Do đó kiểm tra hợp lệ (validation / 검증) cho chaos không nên chỉ 
 - Lyapunov exponent;
 - attractor hình học (geometry / 기하학);
 - bất biến (invariant / 불변식) hoặc conservation law khi phù hợp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Liên hệ với điều khiển (control / 제어) và kỹ thuật (engineering / 엔지니어링)** nối từ **Mô phỏng số của hệ hỗn loạn** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với điều khiển (control / 제어) và kỹ thuật (engineering / 엔지니어링)
 
@@ -355,8 +325,6 @@ Vì vậy tuyến tính (linear / 선형) controller tốt trong một vùng kh�
 
 Trong robotics, power electronics và flight dynamics, phase portrait, Lyapunov hàm (function / 함수) và bifurcation phân tích (analysis / 분석) giúp đánh giá điều mà eigenvalue cục bộ không nói hết.
 
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Liên hệ với điều khiển (control / 제어) và kỹ thuật (engineering / 엔지니어링)** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Miền áp dụng và giới hạn
 
 Tuyến tính (linear / 선형) stability chỉ cho thông tin gần fixed điểm (point / 지점). Nó không quyết định đầy đủ toàn cục (global / 전역) hành vi (behavior / 동작).
@@ -364,8 +332,6 @@ Tuyến tính (linear / 선형) stability chỉ cho thông tin gần fixed đi�
 Một Lyapunov exponent dương là dấu hiệu mạnh của chaos nhưng việc ước lượng từ dữ liệu hữu hạn cần cẩn thận với noise và sampling.
 
 Fractal-looking plot cũng không tự chứng minh chaos; cần kiểm tra động lực và sensitivity có định lượng.
-
-> **Nối mạch:** Ở chặng này của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -380,8 +346,6 @@ nonlinear equations
 → Lyapunov growth
 → predictability horizon
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học phi tuyến, độ ổn định và hỗn loạn**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -400,8 +364,6 @@ Không. Linearization chỉ là kết luận cục bộ quanh operating điểm 
 ### “Hai mô phỏng chaotic tách nhau nghĩa một solver chắc chắn sai”
 
 Không. Cần đánh giá convergence hữu hạn thời gian và đại lượng thống kê thay vì đòi trajectory dài hạn trùng tuyệt đối.
-
-> **Nối mạch:** Trong **Động lực học phi tuyến, độ ổn định và hỗn loạn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

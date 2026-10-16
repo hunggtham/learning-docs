@@ -10,8 +10,6 @@ Trước khi chọn column, viết một câu: “mỗi row đại diện cho ..
 
 Ví dụ một thứ tự (order / 순서) có 3 item và 2 payment attempt. phép nối (join / 조인) trực tiếp ba bảng tạo 6 row; `SUM(order_amount)` sẽ sai dù SQL hợp lệ. Cách an toàn là aggregate mỗi nguồn về grain cần thiết trước khi phép nối (join / 조인), hoặc dùng bảng cầu nối (bridge / 브리지) có bất biến (invariant / 불변식) rõ ràng.
 
-> **Chuyển mạch:** **Grain trước schema** xác định một dòng đại diện cho gì; **Identity và deduplication** giữ định danh ổn định, rồi **Event/state/snapshot** mô tả thay đổi theo thời gian.
-
 ## 2. định danh (identity / 식별자) và deduplication
 
 `id` của nguồn (source / 소스) không luôn là định danh (identity / 식별자) của nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트). Một thử lại (retry / 재시도) có thể tạo cùng `event_id`, một hệ thống migrate có thể đổi key, hoặc hai nguồn cùng đại diện một customer. mô hình (model / 모델) phải phân biệt:
@@ -23,8 +21,6 @@ Ví dụ một thứ tự (order / 순서) có 3 item và 2 payment attempt. ph�
 
 Deduplication không nên dùng “row mới nhất” một cách mù quáng. quy tắc (rule / 규칙) phải nêu rõ tie-breaker, cửa sổ nhận diện duplicate và xử lý khi hai payload cùng key nhưng khác nội dung.
 
-> **Chuyển mạch:** Khi identity đã được canonical hóa, **Event/state/snapshot** giải thích lịch sử; **Deterministic transformation** biến lịch sử đó thành output có thể tái tạo.
-
 ## 3. sự kiện (event / 이벤트), trạng thái (state / 상태) và snapshot
 
 Sự kiện (event / 이벤트) trả lời “điều gì đã xảy ra”; trạng thái (state / 상태) trả lời “hiện tại đang là gì”; snapshot trả lời “tại thời điểm T hệ thống quan sát điều gì”. Không thể thay thế chúng cho nhau:
@@ -35,15 +31,11 @@ event log → state projection → periodic snapshot
 
 Sự kiện (event / 이벤트) log giúp replay nhưng có thể đắt để truy vấn (query / 쿼리). trạng thái (state / 상태) projection phục vụ lookup nhanh nhưng mất lịch sử (history / 이력) nếu không lưu phiên bản (version / 버전). Snapshot thuận tiện cho point-in-time reporting nhưng phải định nghĩa completeness và late correction.
 
-> **Chuyển mạch:** **Deterministic transformation** khóa input và logic; **Slowly changing history** lưu kết quả theo thời gian mà vẫn truy được nguyên nhân thay đổi.
-
 ## 4. Transformation deterministic
 
 Transformation tốt nhận đầu vào (input / 입력) phiên bản (version / 버전) rõ ràng và tạo đầu ra (output / 출력) có thể tái tạo. Tránh đọc clock hiện tại, random giá trị (value / 값) hoặc bên ngoài (external / 외부) API không phiên bản (version / 버전) trong phép biến đổi recomputable. Nếu cần enrichment bên ngoài, lưu lại tham chiếu (reference / 참조)/phiên bản (version / 버전) của enrichment để backfill không tạo kết quả khác chỉ vì thời gian chạy khác.
 
 Idempotent mô hình (model / 모델) thường dùng `MERGE` theo nghiệp vụ (business / 비즈니스)/sự kiện (event / 이벤트) key, overwrite theo partition, hoặc tạo đầu ra (output / 출력) phiên bản (version / 버전) mới rồi publish pointer. `INSERT` nối tiếp không đủ an toàn cho replay nếu không có uniqueness bất biến (invariant / 불변식).
-
-> **Chuyển mạch:** **Slowly changing history** cho biết cần giữ phiên bản nào; **Transformation boundary** xác định điểm bàn giao giữa raw, modeled và serving owner.
 
 ## 5. Slowly changing lịch sử (history / 이력)
 
@@ -55,13 +47,9 @@ Với dimension thay đổi theo thời gian, phải chọn ngữ nghĩa (semant
 
 Không có lựa chọn “đúng tuyệt đối”. kiểu (type / 타입) 1 đơn giản nhưng không trả lời được câu hỏi lịch sử. kiểu (type / 타입) 2 dễ truy vấn (query / 쿼리) hơn sự kiện (event / 이벤트) log nhưng cần xử lý late correction, overlap và cùng thời điểm hiệu lực.
 
-> **Chuyển mạch:** Ở chặng này của **05 — dữ liệu (data / 데이터) modeling và transformation**, **5. Slowly changing lịch sử (history / 이력)** đã nêu tiêu chí phân biệt, còn **6. Transformation ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Checklist rà soát (review / 검토) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Transformation ranh giới (boundary / 경계)
 
 Raw tầng (layer / 계층) giữ bằng chứng (evidence / 증거) gần nguồn (source / 소스); modeled tầng (layer / 계층) chuẩn hóa grain, key và ngữ nghĩa (semantics / 의미론); serving tầng (layer / 계층) tối ưu cho bên tiêu thụ (consumer / 소비자). Đừng làm sạch đến mức mất payload gốc trước khi xác định retention/kiểm tra (audit / 감사) yêu cầu (requirement / 요구사항). Ngược lại, đừng đẩy mọi lô-gic (logic / 논리) vào serving khiến mỗi dashboard tự định nghĩa chỉ số (metric / 지표) khác nhau.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — dữ liệu (data / 데이터) modeling và transformation**, **6. Transformation ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **7. Checklist rà soát (review / 검토) mô hình (model / 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Snapshot fact và temporal phép nối (join / 조인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 7. Checklist rà soát (review / 검토) mô hình (model / 모델)
 
@@ -75,8 +63,6 @@ Raw tầng (layer / 계층) giữ bằng chứng (evidence / 증거) gần ngu�
 
 Đọc tiếp: [06 — Distributed processing](../06_distributed_processing/README.md), [08 — Orchestration và backfill](../08_orchestration_and_backfill/README.md), [10 — Serving và semantic layer](../10_serving_semantic_layer/README.md).
 
-> **Chuyển mạch:** **Model review checklist** kiểm tra grain và temporal key; **Snapshot fact và temporal join** áp dụng chúng, rồi **Null/unknown/deleted** phân biệt các trạng thái dữ liệu.
-
 ## 8. Snapshot fact và temporal phép nối (join / 조인)
 
 Một fact sự kiện (event / 이벤트) thường có `occurred_at`, `captured_at` và `loaded_at`. Khi dựng snapshot ngày D, filter theo `occurred_at` chưa đủ: sự kiện (event / 이벤트) có thể được capture sau khi snapshot đã publish. Cần chọn một trong hai ngữ nghĩa (semantics / 의미론):
@@ -88,15 +74,11 @@ Hai ngữ nghĩa (semantics / 의미론) cho hai câu hỏi khác nhau. Không �
 
 Temporal phép nối (join / 조인) giữa fact và dimension phải chọn phiên bản (version / 버전) thỏa `valid_from <= event_time < valid_to`. Nếu dimension có hai phiên bản (version / 버전) cùng effective thời gian (time / 시간), cần tie-breaker deterministic. phép nối (join / 조인) với row `is_current = true` là shortcut nguy hiểm cho lịch sử.
 
-> **Chuyển mạch:** **Null/unknown/deleted** làm rõ semantics của absence; **Transformation test matrix** kiểm tra từng semantics qua input, output và edge case.
-
 ## 9. Null, unknown và deleted
 
 `NULL` có thể nghĩa là unknown, not-applicable, chưa nhận được hoặc đã bị redact. Nếu gom tất cả vào một giá trị, aggregate và chất lượng (quality / 품질) check sẽ sai. Nên dùng ngữ nghĩa (semantic / 의미적) enum/flags khi lĩnh vực (domain / 도메인) cần phân biệt.
 
 Delete cũng có nhiều nghĩa: thực thể (entity / 엔터티) bị xóa thật, bản ghi (record / 레코드) bị retract, privacy deletion, hoặc nguồn (source / 소스) chỉ không còn trả row. mô hình (model / 모델) phải biết tombstone nào là nghiệp vụ (business / 비즈니스) sự kiện (event / 이벤트) và tombstone nào là lưu trữ (storage / 저장소) cleanup.
-
-> **Chuyển mạch:** **Transformation test matrix** khép README bằng deterministic evidence, temporal boundary và owner; chi tiết pipeline quay về canonical data chapter.
 
 ## 10. Transformation kiểm thử (test / 테스트) ma trận (matrix / 행렬)
 

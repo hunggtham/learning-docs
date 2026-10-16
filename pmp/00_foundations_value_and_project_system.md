@@ -10,8 +10,6 @@ Vận hành (operations / 운영) tối ưu một hệ thống đang tồn tại
 
 Ranh giới (boundary / 경계) này quan trọng vì tiêu chí thành công khác nhau. Operations ưu tiên ổn định, thông lượng (throughput / 처리량) và độ tin cậy (reliability / 신뢰성). dự án (project / 프로젝트) phải đồng thời quản lý học tập (learning / 학습), thay đổi (change / 변경), temporary coordination và chuyển tiếp (transition / 전이) sang trạng thái bền vững.
 
-> **Nối mạch:** **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** tổng hợp kết quả từ **Vì sao cần một mô hình tư duy (mental model / 사고 모델) trước khi học tiến trình (process / 프로세스)**; **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** mở rộng cơ chế.
-
 ## Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ
 
 Một dự án (project / 프로젝트) luôn bắt đầu từ một gap giữa trạng thái hiện tại (current state / 현재 상태) và desired future trạng thái (state / 상태). Gap có thể là bài toán (problem / 문제) cần sửa, opportunity muốn khai thác, regulation bắt buộc đáp ứng hoặc strategic năng lực (capability / 역량) cần xây.
@@ -19,8 +17,6 @@ Một dự án (project / 프로젝트) luôn bắt đầu từ một gap giữa
 Mô hình tư duy (mental model / 사고 모델) này quan trọng vì dự án (project / 프로젝트) không nên bắt đầu từ solution. “Triển khai AI chatbot” không phải bài toán (problem / 문제) statement. bài toán (problem / 문제) có thể là hỗ trợ (support / 지원) chi phí (cost / 비용) tăng, phản hồi (response / 응답) thời gian (time / 시간) quá chậm hoặc nhân viên thiếu kiến thức (knowledge / 지식). Nếu solution được chọn trước khi hiểu gap, nhóm (team / 팀) dễ tối ưu technology thay vì kết quả (outcome / 결과).
 
 Một dự án (project / 프로젝트) tốt bắt đầu bằng câu hỏi: điều gì trong hiện tại (current / 현재) hệ thống (system / 시스템) không đáp ứng mục tiêu (objective / 목표), và bằng chứng (evidence / 증거) nào cho thấy future trạng thái (state / 상태) tốt hơn?
-
-> **Nối mạch:** **Dự án (project / 프로젝트) tồn tại vì trạng thái hiện tại chưa đủ** xác định đầu vào; **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** giải thích vận hành; **Option không gian (space / 공간) và premature commitment** kiểm tra hệ quả.
 
 ## Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)
 
@@ -30,17 +26,13 @@ Nếu dự án (project / 프로젝트) định nghĩa bài toán (problem / 문
 
 Bài toán (problem / 문제) framing tốt vì vậy có hai đầu ra (output / 출력): một nhân quả (causal / 인과적) hypothesis đủ để chọn intervention và một danh sách giả định (assumption / 가정) cần được kiểm chứng. dự án (project / 프로젝트) không cần biết toàn bộ truth trước khi bắt đầu, nhưng phải biết mình đang giả định điều gì.
 
-> **Nối mạch:** **Bài toán (problem / 문제) framing phải phân biệt symptom, cơ chế (mechanism / 메커니즘) và ràng buộc (constraint / 제약조건)** xác định đầu vào; **Option không gian (space / 공간) và premature commitment** giải thích vận hành; **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** kiểm tra hệ quả.
-
 ## Option không gian (space / 공간) và premature commitment
 
-Mỗi khi organization lần ghi nhận (commit / 커밋) vào một solution, đặc tả hợp đồng (contract / 계약), kiến trúc (architecture / 아키텍처) hoặc supplier, một phần option không gian (space / 공간) biến mất. Commitment không xấu; dự án (project / 프로젝트) không thể tiến nếu mọi option luôn mở. Vấn đề là lần ghi nhận (commit / 커밋) quá sớm khi thông tin (information / 정보) còn yếu.
+Mỗi khi organization cam kết (commitment / 커밋) vào một solution, đặc tả hợp đồng (contract / 계약), kiến trúc (architecture / 아키텍처) hoặc supplier, một phần option không gian (space / 공간) biến mất. Commitment không xấu; dự án (project / 프로젝트) không thể tiến nếu mọi option luôn mở. Vấn đề là cam kết (commitment / 커밋) quá sớm khi thông tin (information / 정보) còn yếu.
 
 Discovery, prototype, proof of concept hoặc pilot có thể được hiểu như cơ chế mua thông tin (information / 정보) trước khi đóng option. Nếu một kiểm thử (test / 테스트) hai tuần có thể loại bỏ một kiến trúc (architecture / 아키텍처) trị giá sáu tháng hiện thực (implementation / 구현), học tập (learning / 학습) đó có economic giá trị (value / 값).
 
-Mô hình tư duy (mental model / 사고 모델) hữu ích là: giữ option mở khi bất định (uncertainty / 불확실성) còn material và chi phí (cost / 비용) giữ option tương đối thấp; lần ghi nhận (commit / 커밋) khi additional thông tin (information / 정보) không còn đủ giá trị để biện minh cho delay. Đây là cầu nối giữa foundations, vòng đời (lifecycle / 생명주기)/tailoring và rủi ro (risk / 위험)/quyết định (decision / 결정) ở các chapter sau.
-
-> **Nối mạch:** **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** nối từ **Option không gian (space / 공간) và premature commitment** sang **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)**, vì cơ chế trước tạo đầu vào cho bước sau.
+Mô hình tư duy (mental model / 사고 모델) hữu ích là: giữ option mở khi bất định (uncertainty / 불확실성) còn material và chi phí (cost / 비용) giữ option tương đối thấp; cam kết (commitment / 커밋) khi additional thông tin (information / 정보) không còn đủ giá trị để biện minh cho delay. Đây là cầu nối giữa foundations, vòng đời (lifecycle / 생명주기)/tailoring và rủi ro (risk / 위험)/quyết định (decision / 결정) ở các chapter sau.
 
 ## Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)
 
@@ -56,8 +48,6 @@ resources → work → outputs → adoption/use → outcomes → benefits/value
 
 Dự án (project / 프로젝트) manager không kiểm soát hoàn toàn toàn bộ chuỗi, nhưng phải đảm bảo giả định giữa các mắt xích được nhìn thấy. Nếu giá trị (value / 값) phụ thuộc vào adoption mà không ai quản lý đào tạo hoặc thay đổi quy trình, dự án (project / 프로젝트) có thể “xanh” trên dashboard nhưng thất bại ở nghiệp vụ (business / 비즈니스) mức (level / 수준).
 
-> **Nối mạch:** **Đầu ra (output / 출력) không phải kết quả (outcome / 결과), kết quả (outcome / 결과) không tự động tạo giá trị (value / 값)** xác định đầu vào; **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** giải thích vận hành; **Benefit attribution và counterfactual** kiểm tra hệ quả.
-
 ## Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)
 
 Chuỗi đầu ra (output / 출력) → kết quả (outcome / 결과) → giá trị (value / 값) chứa nhiều giả định (assumption / 가정). Nếu xây portal self-service, ta đang giả định người dùng (user / 사용자) biết portal tồn tại, có thể đăng nhập, thấy đủ tiện lợi để đổi hành vi (behavior / 동작) và tiến trình (process / 프로세스) nội bộ xử lý yêu cầu (request / 요청) đúng thời gian.
@@ -65,8 +55,6 @@ Chuỗi đầu ra (output / 출력) → kết quả (outcome / 결과) → giá 
 Benefits map làm các giả định (assumption / 가정) này tường minh (explicit / 명시적). Điều này giúp rủi ro (risk / 위험) management rộng hơn technical delivery. Một dự án (project / 프로젝트) có mã (code / 코드) hoàn hảo vẫn thất bại nếu adoption giả định (assumption / 가정) sai.
 
 Một giả định (assumption / 가정) quan trọng cần đơn vị sở hữu (owner / 오너), bằng chứng (evidence / 증거) và trigger rà soát (review / 검토), không nên nằm ẩn trong nghiệp vụ (business / 비즈니스) trường hợp (case / 사례).
-
-> **Nối mạch:** **Benefits map và giả định (assumption / 가정) chuỗi (chain / 사슬)** xác định đầu vào; **Benefit attribution và counterfactual** giải thích vận hành; **Giá trị (value / 값) không phân bố đều giữa stakeholder** kiểm tra hệ quả.
 
 ## Benefit attribution và counterfactual
 
@@ -76,8 +64,6 @@ Counterfactual lập luận (reasoning / 추론) hỏi: nếu dự án (project 
 
 Điều này quan trọng vì organization dễ “claim” benefit cho dự án (project / 프로젝트) thành công và đổ thất bại (failure / 실패) cho bên ngoài (external / 외부) môi trường (environment / 환경). Benefit đo lường (measurement / 측정) có giá trị khi cùng một lô-gic (logic / 논리) nhân quả (causal / 인과적) được dùng cho cả upside lẫn downside.
 
-> **Nối mạch:** **Giá trị (value / 값) không phân bố đều giữa stakeholder** nối từ **Benefit attribution và counterfactual** sang **Success criteria cần nhiều tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Giá trị (value / 값) không phân bố đều giữa stakeholder
 
 Một dự án (project / 프로젝트) có thể tạo net giá trị (value / 값) cho organization nhưng chuyển chi phí (cost / 비용) hoặc rủi ro (risk / 위험) sang một stakeholder khác. Automation có thể giảm processing chi phí (cost / 비용) nhưng tăng tải công việc (workload / 워크로드) kiểm tra cho operations. Một tính năng (feature / 기능) bảo mật có thể giảm fraud nhưng tăng friction cho customer. Outsourcing có thể giảm chi phí (cost / 비용) nội bộ nhưng tạo vendor concentration rủi ro (risk / 위험).
@@ -85,8 +71,6 @@ Một dự án (project / 프로젝트) có thể tạo net giá trị (value / 
 Vì vậy giá trị (value / 값) không chỉ là một scalar duy nhất. Cần hỏi ai nhận benefit, ai chịu chi phí (cost / 비용), ai gánh rủi ro (risk / 위험) và ai có authority quyết sự đánh đổi (trade-off / 트레이드오프). Đây là nơi stakeholder management, ethics và sustainability nối trực tiếp với nghiệp vụ (business / 비즈니스) trường hợp (case / 사례).
 
 Nếu total benefit cao nhưng harm tập trung vào một nhóm không có tiếng nói, “net positive” không tự động biến quyết định (decision / 결정) thành hợp lý. Mandatory legal, an toàn (safety / 안전) hoặc fairness ranh giới (boundary / 경계) có thể giới hạn cách organization đánh đổi benefit.
-
-> **Nối mạch:** **Success criteria cần nhiều tầng** nối từ **Giá trị (value / 값) không phân bố đều giữa stakeholder** sang **Ràng buộc (constraint / 제약조건) không phải mục tiêu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Success criteria cần nhiều tầng
 
@@ -98,8 +82,6 @@ Một dự án (project / 프로젝트) có thể giao trễ nhưng tạo giá t
 
 Success criteria còn cần thời gian (time / 시간) horizon. Một di chuyển (migration / 마이그레이션) có thể thành công ngày cutover nhưng thất bại ba tháng sau nếu hỗ trợ (support / 지원) chi phí (cost / 비용) tăng mạnh. Một AI pilot có chỉ số (metric / 지표) đẹp trong 1.000 trường hợp (case / 사례) nhưng drift ở môi trường vận hành (production / 운영 환경). Vì vậy “success at handover” và “benefit realized sustainably” là hai câu hỏi khác nhau.
 
-> **Nối mạch:** **Ràng buộc (constraint / 제약조건) không phải mục tiêu** nối từ **Success criteria cần nhiều tầng** sang **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ràng buộc (constraint / 제약조건) không phải mục tiêu
 
 Phạm vi (scope / 범위), schedule và chi phí (cost / 비용) thường được gọi chung là các ràng buộc (constraint / 제약조건) kinh điển. Chúng giới hạn solution không gian (space / 공간) nhưng không nên bị nhầm với purpose. Nếu một thay đổi nhỏ về phạm vi (scope / 범위) tạo gấp đôi nghiệp vụ (business / 비즈니스) giá trị (value / 값) với chi phí chấp nhận được, tư duy máy móc “không được thay baseline” có thể làm hỏng dự án. Ngược lại, thay phạm vi (scope / 범위) tùy tiện mà không hiểu impact cũng làm mất khả năng kiểm soát.
@@ -107,8 +89,6 @@ Phạm vi (scope / 범위), schedule và chi phí (cost / 비용) thường đư
 Điều cần bảo vệ là sự nhất quán giữa mục tiêu (objective / 목표), ràng buộc (constraint / 제약조건), rủi ro (risk / 위험) appetite và giá trị (value / 값). Baseline tồn tại để tạo một tham chiếu (reference / 참조) điểm (point / 지점) cho lập luận (reasoning / 추론), không phải để ngăn học tập (learning / 학습).
 
 Ràng buộc (constraint / 제약조건) cũng không có cùng độ cứng. Legal deadline khác mục tiêu (target / 대상) date; an toàn (safety / 안전) yêu cầu (requirement / 요구사항) khác optional tính năng (feature / 기능); ngân sách (budget / 예산) cap khác chi phí (cost / 비용) forecast. dự án (project / 프로젝트) manager phải hiểu nguồn (source / 소스) và negotiability của mỗi ràng buộc (constraint / 제약조건).
-
-> **Nối mạch:** **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** nối từ **Ràng buộc (constraint / 제약조건) không phải mục tiêu** sang **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém
 
@@ -118,8 +98,6 @@ Quản lý dự án không loại bỏ sự đánh đổi (trade-off / 트레이
 
 Sự đánh đổi (trade-off / 트레이드오프) cũng có second-order tác động (effect / 효과). Cắt testing để giữ deadline có thể không chỉ tăng defect rủi ro (risk / 위험); nó còn làm operations thiếu confidence, kéo dài hypercare và khiến vendor dispute về acceptance. Một cục bộ (local / 로컬) saving có thể tạo hệ thống (system / 시스템) chi phí (cost / 비용) lớn hơn ở downstream.
 
-> **Nối mạch:** **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** nối từ **Sự đánh đổi (trade-off / 트레이드오프) là bản chất, không phải dấu hiệu quản lý kém** sang **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời
 
 Một dự án gồm nhiều vòng phản hồi (feedback / 피드백): stakeholder cung cấp nhu cầu, nhóm (team / 팀) tạo increment/deliverable, bằng chứng (evidence / 증거) được thu thập, rủi ro (risk / 위험) và giả định (assumption / 가정) được cập nhật, rồi kế hoạch thay đổi. Vì thế dự án (project / 프로젝트) management có thể được nhìn như một hệ thống ra quyết định dưới bất định.
@@ -127,8 +105,6 @@ Một dự án gồm nhiều vòng phản hồi (feedback / 피드백): stakehol
 Một hệ thống tốt cần ít nhất bốn thứ. Thứ nhất là dùng chung (shared / 공유) direction để biết “tại sao”. Thứ hai là quyết định (decision / 결정) rights để biết “ai có quyền quyết”. Thứ ba là vòng phản hồi (feedback loop / 피드백 루프) để phát hiện deviation và học tập (learning / 학습). Thứ tư là escalation đường dẫn (path / 경로) để xử lý tình huống vượt authority hoặc tolerance.
 
 Nếu thiếu direction, nhóm (team / 팀) bận rộn nhưng cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화). Nếu thiếu quyết định (decision / 결정) rights, việc nhỏ cũng bị chờ. Nếu thiếu phản hồi (feedback / 피드백), sai lệch chỉ lộ ra cuối dự án. Nếu thiếu escalation, blocker sống quá lâu và biến thành crisis.
-
-> **Nối mạch:** **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** nối từ **Dự án (project / 프로젝트) như một hệ thống quyết định tạm thời** sang **Sensor, actuator và độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)
 
@@ -142,15 +118,11 @@ Nếu mục tiêu (target / 대상) không rõ, điều khiển (control / 제�
 
 Predictive và adaptive delivery khác nhau chủ yếu ở cadence, placement của phản hồi (feedback / 피드백) và mức commitment, nhưng cả hai đều cần vòng điều khiển (control loop / 제어 루프).
 
-> **Nối mạch:** **Sensor, actuator và độ trễ (latency / 지연 시간)** nối từ **Dự án (project / 프로젝트) như điều khiển (control / 제어) hệ thống (system / 시스템)** sang **Quyết định (decision / 결정) rights và escalation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sensor, actuator và độ trễ (latency / 지연 시간)
 
 Control-system analogy sâu hơn khi tách ba phần. Sensor là cơ chế (mechanism / 메커니즘) tạo bằng chứng (evidence / 증거): kiểm thử (test / 테스트), chỉ số (metric / 지표), stakeholder phản hồi (feedback / 피드백), kiểm tra (audit / 감사), forecast. Actuator là khả năng thay đổi hệ thống (system / 시스템): reprioritize backlog, reallocate tài nguyên (resource / 자원), thay đổi (change / 변경) vendor, cập nhật (update / 업데이트) baseline hoặc escalate. độ trễ (latency / 지연 시간) là thời gian từ khi trạng thái (state / 상태) xấu xuất hiện tới khi bằng chứng (evidence / 증거) tới người có quyền và hành động (action / 동작) xảy ra.
 
 Một dự án (project / 프로젝트) có dashboard tốt nhưng không có authority điều chỉnh chỉ có sensor mà thiếu actuator. Một dự án (project / 프로젝트) có sponsor mạnh nhưng report trễ ba tuần có actuator nhưng sensor độ trễ (latency / 지연 시간) quá cao. độ tin cậy (reliability / 신뢰성) của vòng điều khiển (control loop / 제어 루프) phụ thuộc cả ba, không chỉ số lượng report.
-
-> **Nối mạch:** **Quyết định (decision / 결정) rights và escalation** nối từ **Sensor, actuator và độ trễ (latency / 지연 시간)** sang **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) rights và escalation
 
@@ -158,23 +130,17 @@ Một hệ thống (system / 시스템) tốt không đưa mọi quyết định
 
 Escalation không phải thất bại (failure / 실패) của PM. Nó là cơ chế (mechanism / 메커니즘) khi quyết định (decision / 결정) vượt authority hoặc cross-boundary. thất bại (failure / 실패) là escalate quá sớm mọi việc hoặc giữ issue quá lâu chỉ để chứng minh mình “tự xử lý được”.
 
-> **Nối mạch:** **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** nối từ **Quyết định (decision / 결정) rights và escalation** sang **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)
 
 Dự án (project / 프로젝트) manager thiết kế coordination và tích hợp (integration / 통합), nhưng authority phân tán. chủ sản phẩm (product owner / 제품 책임자) quyết priority trong sản phẩm (product / 제품) ngữ cảnh (context / 맥락); architect có technical authority; compliance có điều khiển (control / 제어) ranh giới (boundary / 경계); sponsor quyết strategic sự đánh đổi (trade-off / 트레이드오프); functional manager có tài nguyên (resource / 자원) authority.
 
 PMP mindset trưởng thành là biết ai nên quyết, thông tin (information / 정보) nào họ cần và khi nào quyết định (decision / 결정) phải xảy ra.
 
-> **Nối mạch:** **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** nối từ **Dự án (project / 프로젝트) manager không phải người làm mọi quyết định (decision / 결정)** sang **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)
 
 Chiến lược (strategy / 전략) định hướng organization muốn đi đâu. Portfolio lựa chọn investment nào đáng làm để thực thi chiến lược (strategy / 전략). Program phối hợp nhiều initiative liên quan. dự án (project / 프로젝트) tạo một thay đổi (change / 변경) cụ thể.
 
 Nếu dự án (project / 프로젝트) không còn align chiến lược (strategy / 전략), “hoàn thành plan” có thể không còn giá trị. Đây là lý do nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) và nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) phải được reassess khi ngữ cảnh (context / 맥락) thay đổi.
-
-> **Nối mạch:** **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** nối từ **Chiến lược (strategy / 전략), portfolio và dự án (project / 프로젝트)** sang **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)
 
@@ -184,8 +150,6 @@ Sự khác biệt cốt lõi nằm ở câu hỏi quản trị. dự án (projec
 
 Một sản phẩm (product / 제품) có thể sống qua nhiều dự án (project / 프로젝트); một dự án (project / 프로젝트) có thể tạo năng lực (capability / 역량) cho nhiều sản phẩm (product / 제품). ranh giới (boundary / 경계) không phải lúc nào cũng clean, vì vậy quản trị (governance / 거버넌스) cần nói rõ temporary dự án (project / 프로젝트) kết thúc ở đâu và long-lived quyền sở hữu (ownership / 소유권) bắt đầu ở đâu.
 
-> **Nối mạch:** **Dự án (project / 프로젝트), program, portfolio và sản phẩm (product / 제품)** nêu quy tắc; **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** thử quy tắc trong tình huống, rồi **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** mở rộng hệ quả.
-
 ## Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization
 
 Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) giải thích vì sao investment có lý: bài toán (problem / 문제)/opportunity, expected benefit, chi phí (cost / 비용), rủi ro (risk / 위험) và alternatives. dự án (project / 프로젝트) charter (hiến chương dự án / 프로젝트 헌장) chính thức hóa dự án (project / 프로젝트) và trao authority cho dự án (project / 프로젝트) manager trong ranh giới (boundary / 경계) đã thống nhất. Hai sản phẩm tạo ra (artifact / 산출물) này liên quan nhưng không thay thế nhau: nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) biện minh investment; charter thiết lập quyền hạn và direction ở cấp dự án (project / 프로젝트).
@@ -193,8 +157,6 @@ Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) giải t
 Một charter tốt không cần dài. Nó phải đủ để tránh một dự án “đã bắt đầu làm” nhưng chưa ai đồng ý rõ mục tiêu (objective / 목표), sponsor, success criteria hoặc authority.
 
 Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) nên sống đủ lâu để bị challenge. Nếu thị trường (market / 시장), regulation hoặc technology làm giả định (assumption / 가정) thay đổi lớn, quản trị (governance / 거버넌스) cần hỏi investment còn đáng tiếp tục không.
-
-> **Nối mạch:** **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례), charter và authorization** nêu quy tắc; **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** thử quy tắc trong tình huống, rồi **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** mở rộng hệ quả.
 
 ## Continue, pivot hay stop là quyết định (decision / 결정) bình thường
 
@@ -204,8 +166,6 @@ Stop criteria đặc biệt quan trọng với dự án (project / 프로젝트)
 
 Stop không nhất thiết nghĩa dự án (project / 프로젝트) management thất bại. Một discovery dự án (project / 프로젝트) có thể thành công nếu chứng minh sớm rằng hypothesis không viable và tránh hàng năm investment sai. giá trị (value / 값) của học tập (learning / 학습) đôi khi nằm ở việc biết điều gì không nên làm.
 
-> **Nối mạch:** **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** nối từ **Continue, pivot hay stop là quyết định (decision / 결정) bình thường** sang **Chuyển tiếp (transition / 전이) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)
 
 Dự án (project / 프로젝트) tạo ra một temporary xã hội (social / 사회적) hệ thống (system / 시스템): người từ nhiều hàm (function / 함수) được ghép lại để tạo thay đổi (change / 변경). Temporary cấu trúc (structure / 구조) cho phép focus nhưng cũng tạo giao dịch (transaction / 트랜잭션) chi phí (cost / 비용): onboarding, meeting, reporting, cross-functional negotiation, công cụ (tool / 도구) truy cập (access / 접근) và handoff.
@@ -213,8 +173,6 @@ Dự án (project / 프로젝트) tạo ra một temporary xã hội (social / �
 Khi dự án (project / 프로젝트) kéo dài quá lâu hoặc số workstream quá nhiều, coordination chi phí (cost / 비용) có thể tăng nhanh hơn delivery sức chứa (capacity / 용량). Thêm người không chỉ tăng tài nguyên (resource / 자원); nó tăng communication đường dẫn (path / 경로) và tích hợp (integration / 통합) need.
 
 Đây là lý do nhóm (team / 팀) topology, giao diện (interface / 인터페이스) rõ và sản phẩm tạo ra (artifact / 산출물) tốt có economic giá trị (value / 값): chúng giảm giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) của temporary organization.
-
-> **Nối mạch:** **Chuyển tiếp (transition / 전이) debt** nối từ **Temporary organization và giao dịch (transaction / 트랜잭션) chi phí (cost / 비용)** sang **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển tiếp (transition / 전이) debt
 
@@ -224,8 +182,6 @@ Chuyển tiếp (transition / 전이) debt giống technical debt ở chỗ đ�
 
 Chuyển tiếp (transition / 전이) cần đơn vị sở hữu (owner / 오너) bên operations, sản phẩm (product / 제품) hoặc nghiệp vụ (business / 비즈니스). Closure vì vậy phải được nghĩ từ đầu, không phải cuối dự án (project / 프로젝트) mới hỏi “ai vận hành?”.
 
-> **Nối mạch:** **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** nối từ **Chuyển tiếp (transition / 전이) debt** sang **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn
 
 Dự án (project / 프로젝트) phức tạp có thể do số stakeholder, phụ thuộc (dependency / 의존성), technology bất định (uncertainty / 불확실성), regulatory coupling hoặc organizational politics, không chỉ ngân sách (budget / 예산)/headcount.
@@ -233,8 +189,6 @@ Dự án (project / 프로젝트) phức tạp có thể do số stakeholder, ph
 Complex hệ thống (system / 시스템) tạo emergent hành vi (behavior / 동작): một thay đổi (change / 변경) nhỏ có thể lan qua nhiều ranh giới (boundary / 경계). Điều này làm hệ thống (system / 시스템) thinking quan trọng hơn việc tối ưu từng kiến thức (knowledge / 지식) area riêng lẻ.
 
 Khi độ phức tạp (complexity / 복잡도) cao, decomposition vẫn cần nhưng phải giữ tích hợp (integration / 통합) view. Chia dự án (project / 프로젝트) thành 20 workstream không loại bỏ phụ thuộc (dependency / 의존성) giữa chúng.
-
-> **Nối mạch:** **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** nối từ **Độ phức tạp (complexity / 복잡도) không chỉ là dự án (project / 프로젝트) lớn** sang **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)
 
@@ -244,8 +198,6 @@ Ngược lại, một improvement có thể tạo virtuous vòng lặp (loop / �
 
 Hệ thống (system / 시스템) thinking hỏi không chỉ “hành động (action / 동작) này giải issue hiện tại không?” mà còn “hành vi (behavior / 동작) nào nó khuyến khích và vòng phản hồi (feedback loop / 피드백 루프) nào nó tạo?”.
 
-> **Nối mạch:** **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** nối từ **Vòng phản hồi (feedback loop / 피드백 루프) và second-order tác động (effect / 효과)** sang **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bất định (uncertainty / 불확실성) và học tập (learning / 학습)
 
 Bất định không phải thất bại (failure / 실패) của planning. Nó là trạng thái tự nhiên khi làm điều mới.
@@ -254,8 +206,6 @@ Good planning nói rõ cái gì đã biết, cái gì estimate, giả định (a
 
 Dự án (project / 프로젝트) maturity không phải dự đoán đúng mọi thứ từ đầu mà là phát hiện deviation sớm và điều chỉnh có kỷ luật.
 
-> **Nối mạch:** **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** nối từ **Bất định (uncertainty / 불확실성) và học tập (learning / 학습)** sang **Ví dụ lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)
 
 Dự án (project / 프로젝트) manager phụ thuộc vào truthful thông tin (information / 정보). Nếu nhóm (team / 팀) che defect, vendor giấu delay hoặc PM làm forecast đẹp để tránh pressure, điều khiển (control / 제어) hệ thống (system / 시스템) mất sensor.
@@ -263,8 +213,6 @@ Dự án (project / 프로젝트) manager phụ thuộc vào truthful thông tin
 Ethics vì vậy không phải chapter phụ. Truthfulness, fairness và professional responsibility ảnh hưởng trực tiếp tới quyết định (decision / 결정) chất lượng (quality / 품질) và quản trị (governance / 거버넌스).
 
 Ethics cũng là ranh giới (boundary / 경계) của giá trị (value / 값) tối ưu hóa (optimization / 최적화). Một option tạo ROI cao nhưng cần che material rủi ro (risk / 위험), vi phạm consent hoặc chuyển harm không hợp lý sang nhóm yếu thế không trở thành lựa chọn tốt chỉ vì financial chỉ số (metric / 지표) đẹp.
-
-> **Nối mạch:** **Ethics là nền của thông tin (information / 정보) chất lượng (quality / 품질)** nêu quy tắc; **Ví dụ lập luận (reasoning / 추론)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ lập luận (reasoning / 추론)
 
@@ -276,7 +224,41 @@ Giả sử pilot cho thấy ticket giảm nhưng customer complaint tăng vì c�
 
 Một bước lập luận (reasoning / 추론) sâu hơn là hỏi counterfactual: complaint có tăng vì chatbot hay vì campaign tạo volume bất thường? Nếu mô hình (model / 모델) chỉ tốt ở nhóm low-risk truy vấn (query / 쿼리), limited rollout có tạo giá trị (value / 값) tốt hơn nhị phân (binary / 이진) go/no-go không? Nếu human rà soát (review / 검토) làm chi phí (cost / 비용) quay về gần baseline, nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) còn đứng vững không? dự án (project / 프로젝트) manager không tự quyết mọi câu hỏi này, nhưng phải đưa đúng bằng chứng (evidence / 증거) tới đúng quyết định (decision / 결정) đơn vị sở hữu (owner / 오너).
 
-> **Nối mạch:** **Ví dụ lập luận (reasoning / 추론)** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống cụ thể để khép mạch giải thích.
+## Cạm bẫy thi cử PMP & Tình huống thực chiến (Scenario Pitfalls & Practice Questions)
+
+### Tình huống 1: Nhầm lẫn giữa Sản phẩm đầu ra (Output) và Giá trị kinh doanh (Value/Outcome)
+**Bối cảnh:** Một dự án phần mềm nội bộ vừa bàn giao hệ thống CRM đúng tiến độ và đúng ngân sách được phê duyệt (SPI = 1.0, CPI = 1.0). Tuy nhiên, sau 2 tháng vận hành, bộ phận bán hàng vẫn tiếp tục sử dụng bảng tính Excel thủ công và tỷ lệ áp dụng hệ thống mới chỉ đạt dưới 15%, khiến mục tiêu tăng trưởng doanh thu dự kiến không đạt. Giám đốc dự án (PM) nên làm gì đầu tiên?
+
+1. Đề xuất ban giám đốc ban hành chỉ thị kỷ luật bắt buộc toàn bộ nhân viên kinh doanh phải nhập liệu vào hệ thống mới.
+2. Thông báo với Project Sponsor rằng dự án đã kết thúc thành công vì các sản phẩm bàn giao (deliverables) đã được nghiệm thu đầy đủ theo đúng hợp đồng.
+3. Phối hợp với đại diện bộ phận bán hàng và Business Analyst để phân tích nguyên nhân gốc rễ (root cause) cản trở việc tiếp nhận và xây dựng kế hoạch chuyển giao giá trị (Change Management & Value Enablement).
+4. Khởi động một Change Request để yêu cầu thêm ngân sách đào tạo lại toàn bộ đội ngũ bán hàng.
+
+> **Đáp án đúng:** **3**
+>
+> **Phân tích bẫy PMP (Distractor Analysis):**
+> - **Lựa chọn 3 là hành động tốt nhất của PM:** Theo chuẩn PMBOK 7 (Value Delivery System), một dự án chỉ thực sự thành công khi chuyển hóa được đầu ra kỹ thuật (Output) thành lợi ích kinh doanh thực tế (Business Value). Khi tỷ lệ áp dụng thấp, PM phải chủ động tìm hiểu rào cản gốc rễ (giao diện khó dùng, thiếu tích hợp quy trình, hay thiếu động lực) trước khi hành động.
+> - **Lựa chọn 1 sai:** Áp đặt mệnh lệnh hành chính đi ngược lại nguyên lý Servant Leadership và quản trị sự thay đổi (Change Management).
+> - **Lựa chọn 2 sai:** Đây là bẫy tư duy truyền thống lỗi thời ("chỉ quan tâm đến deliverables"). PM hiện đại chịu trách nhiệm thúc đẩy việc hiện thực hóa giá trị (Value Realization).
+> - **Lựa chọn 4 sai:** Đề xuất ngân sách đào tạo khi chưa rõ nguyên nhân gốc rễ là một hành động vội vàng và chưa có cơ sở dữ liệu.
+
+---
+
+### Tình huống 2: Tối ưu hóa cục bộ làm phá vỡ hệ thống tổng thể (System Boundary Optimization)
+**Bối cảnh:** Nhóm phát triển kỹ thuật trong một dự án thương mại điện tử tự ý quyết định thay đổi kiến trúc cơ sở dữ liệu sang một công nghệ NoSQL mới để tối ưu tốc độ xử lý truy vấn lên gấp 3 lần. Nhóm cho rằng vì cải tiến này giúp tăng hiệu năng mà không tốn thêm chi phí nên không cần thông báo cho PM. Khi hệ thống chuẩn bị tích hợp, bộ phận Tuân thủ (Compliance & Audit) thông báo công nghệ này chưa được kiểm duyệt theo chuẩn bảo mật tài chính PCI-DSS của doanh nghiệp. PM nên xử lý thế nào?
+
+1. Yêu cầu bộ phận Tuân thủ cấp quyền ngoại lệ khẩn cấp vì tốc độ truy vấn của hệ thống đã được cải thiện vượt trội.
+2. Gặp nhóm kỹ thuật để giải thích về tác động toàn hệ thống (System Thinking), đình chỉ việc triển khai công nghệ mới và kích hoạt quy trình đánh giá tác động tích hợp (Integrated Change Control) cùng bộ phận Compliance.
+3. Kỷ luật trưởng nhóm kỹ thuật vì vi phạm quy trình phát triển và hoàn nguyên mã nguồn về phiên bản cũ ngay lập tức.
+4. Chuyển giao toàn bộ vấn đề cho Project Sponsor để ban lãnh đạo tự quyết định giữa hiệu năng và tính tuân thủ.
+
+> **Đáp án đúng:** **2**
+>
+> **Phân tích bẫy PMP (Distractor Analysis):**
+> - **Lựa chọn 2 là chuẩn mực:** PM giải quyết vấn đề bằng cách nâng cao nhận thức về tính toàn vẹn hệ thống (System Thinking - tối ưu một phần tử cục bộ có thể phá hủy ranh giới pháp lý/bảo mật của toàn tổ chức), đồng thời đưa sự việc vào quy trình kiểm soát thay đổi tích hợp để các bên liên quan cùng đánh giá bằng chứng và rủi ro.
+> - **Lựa chọn 1 sai:** PM không bao giờ được phép thỏa hiệp hoặc hạ thấp tiêu chuẩn tuân thủ pháp lý (Compliance/Safety) để đổi lấy hiệu năng kỹ thuật.
+> - **Lựa chọn 3 sai:** Phản ứng trừng phạt làm suy giảm tâm lý an toàn (Psychological Safety) của nhóm; việc hoàn nguyên cần dựa trên phân tích tác động chính thức.
+> - **Lựa chọn 4 sai:** Đẩy việc lên Sponsor (Escalate) khi chưa phân tích và chuẩn bị các phương án khả thi là biểu hiện trốn tránh trách nhiệm của PM.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

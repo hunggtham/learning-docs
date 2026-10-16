@@ -21,8 +21,6 @@ hiện tượng
 
 Không nhảy từ một dấu hiệu đơn lẻ tới một nhãn chẩn đoán. Xem [[01_assessment_and_diagnosis]].
 
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **2. Triệu chứng dương tính** nối từ **1. Triệu chứng không đồng nghĩa chẩn đoán** sang **3. Triệu chứng âm tính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Triệu chứng dương tính
 
 Từ **dương tính (positive symptoms)** ở đây nghĩa là một hiện tượng được “thêm vào” so với hoạt động thông thường, không phải “tích cực”.
@@ -33,23 +31,17 @@ Từ **dương tính (positive symptoms)** ở đây nghĩa là một hiện tư
 
 **Tư duy hoặc lời nói vô tổ chức (disorganized thought/speech)** có thể biểu hiện bằng liên tưởng khó theo dõi, chuyển ý rời rạc hoặc tổ chức diễn đạt kém mạch lạc.
 
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **3. Triệu chứng âm tính** nối từ **2. Triệu chứng dương tính** sang **4. Khó khăn nhận thức và chức năng đời sống**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Triệu chứng âm tính
 
 **Triệu chứng âm tính (negative symptoms)** mô tả sự giảm của những chức năng vốn thường có, chẳng hạn giảm biểu cảm, giảm lượng lời nói, giảm động lực, giảm khả năng mong đợi hoặc trải nghiệm niềm vui và giảm tham gia xã hội.
 
 Những biểu hiện này dễ bị nhầm với trầm cảm, tác dụng phụ của thuốc, thiếu ngủ, rút lui vì kỳ thị hoặc môi trường thiếu cơ hội. Vì vậy đánh giá không nên dừng ở checklist mà phải hỏi cơ chế nào đang duy trì suy giảm chức năng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **4. Khó khăn nhận thức và chức năng đời sống** nối từ **3. Triệu chứng âm tính** sang **5. Mô hình gán ý nghĩa bất thường**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Khó khăn nhận thức và chức năng đời sống
 
 Một số người có khó khăn về chú ý, trí nhớ làm việc, tốc độ xử lý, lập kế hoạch và nhận thức xã hội. Các khó khăn này có thể ảnh hưởng học tập, công việc và sống độc lập ngay cả khi ảo giác hoặc hoang tưởng đã giảm.
 
 Điều trị chỉ nhắm triệu chứng dương tính vì vậy có thể bỏ sót một phần lớn gánh nặng chức năng. Xem [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/02_thinking_language_and_decision]] và [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]].
-
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **5. Mô hình gán ý nghĩa bất thường** nối từ **4. Khó khăn nhận thức và chức năng đời sống** sang **6. Xử lý dự đoán và cập nhật niềm tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Mô hình gán ý nghĩa bất thường
 
@@ -59,8 +51,6 @@ Cơ chế học tập liên quan dopamine thường được dùng để giải 
 
 > **Lý thuyết hiện đại:** mô hình gán ý nghĩa bất thường có hỗ trợ thực nghiệm, nhưng không giải thích toàn bộ phổ tâm thần phân liệt và không phải dấu ấn sinh học chẩn đoán ở cấp cá nhân.
 
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **6. Xử lý dự đoán và cập nhật niềm tin** nối từ **5. Mô hình gán ý nghĩa bất thường** sang **7. Mô hình dễ tổn thương–stress**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Xử lý dự đoán và cập nhật niềm tin
 
 Tri giác không phải camera ghi thế giới một cách thụ động. Não kết hợp tín hiệu cảm giác với kỳ vọng có sẵn. Một số lý thuyết loạn thần đề xuất rằng vấn đề nằm ở cách hệ thống gán độ tin cậy cho kỳ vọng trước đó và tín hiệu cảm giác mới.
@@ -68,8 +58,6 @@ Tri giác không phải camera ghi thế giới một cách thụ động. Não 
 Khung này hữu ích để nối tri giác, bất định và cập nhật niềm tin, nhưng vẫn là lý thuyết đang được kiểm tra. Không nên rút gọn thành câu “loạn thần chỉ là lỗi dự đoán”.
 
 Xem [[../01_brain_and_mind/01_sensation_and_perception]] và [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **7. Mô hình dễ tổn thương–stress** nối từ **6. Xử lý dự đoán và cập nhật niềm tin** sang **8. Diễn tiến phát triển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Mô hình dễ tổn thương–stress
 
@@ -87,15 +75,11 @@ xác suất và mức độ nghiêm trọng của triệu chứng
 
 Khung này không nói stress “gây tâm thần phân liệt” theo một đường nhân quả đơn giản. Nó nhấn mạnh tương tác giữa nhiều yếu tố và ngưỡng biểu hiện. Xem [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]].
 
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **8. Diễn tiến phát triển** nối từ **7. Mô hình dễ tổn thương–stress** sang **9. Loạn thần liên quan chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Diễn tiến phát triển
 
 Các tình trạng thuộc phổ tâm thần phân liệt nên được hiểu theo quỹ đạo thay vì ảnh chụp tại một thời điểm. Cần xem chức năng trước khi khởi phát, thay đổi theo phát triển, suy giảm học tập/công việc, rút lui xã hội, mẫu các đợt, mức hồi phục và đáp ứng điều trị.
 
 Điều này nối với [[12_developmental_psychopathology_risk_and_resilience]].
-
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **9. Loạn thần liên quan chất** nối từ **8. Diễn tiến phát triển** sang **10. Loạn thần liên quan rối loạn khí sắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Loạn thần liên quan chất
 
@@ -105,23 +89,17 @@ Cannabis có hàm lượng THC cao, chất kích thích và một số chất kh
 
 Đánh giá cần hỏi kỹ việc sử dụng chất vì nó ảnh hưởng cả chẩn đoán phân biệt lẫn kế hoạch điều trị.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **10. Loạn thần liên quan rối loạn khí sắc** nối từ **9. Loạn thần liên quan chất** sang **11. Can thiệp sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Loạn thần liên quan rối loạn khí sắc
 
 Triệu chứng loạn thần có thể xuất hiện trong trầm cảm nặng hoặc rối loạn lưỡng cực. Quan hệ về thời gian giữa triệu chứng loạn thần và giai đoạn khí sắc là thông tin quan trọng cho chẩn đoán phân biệt.
 
 Xem [[12_depressive_disorders_and_anhedonia]] và [[13_bipolar_spectrum_and_mood_regulation]].
 
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **11. Can thiệp sớm** nối từ **10. Loạn thần liên quan rối loạn khí sắc** sang **12. Điều trị cần nhiều tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Can thiệp sớm
 
 **Thời gian loạn thần chưa được điều trị (duration of untreated psychosis — DUP)** mô tả khoảng thời gian từ khi loạn thần rõ ràng xuất hiện tới khi nhận được điều trị phù hợp. Dịch vụ can thiệp sớm cố giảm trì hoãn và hỗ trợ đồng thời triệu chứng, gia đình, học tập/công việc và khả năng sống trong cộng đồng.
 
 Mục tiêu không phải bệnh lý hóa mọi trải nghiệm khác thường. Mối quan tâm lâm sàng tăng khi trải nghiệm đi kèm đau khổ, suy giảm chức năng hoặc nguy cơ an toàn.
-
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **12. Điều trị cần nhiều tầng** nối từ **11. Can thiệp sớm** sang **13. Môi trường xã hội, kỳ thị và khả năng hồi phục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Điều trị cần nhiều tầng
 
@@ -131,15 +109,11 @@ Chăm sóc toàn diện có thể gồm quản lý thuốc, giáo dục tâm lý
 
 Xem [[../05_intervention/02_biological_and_community_treatment]] và [[../05_intervention/00_psychotherapy_and_change]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **13. Môi trường xã hội, kỳ thị và khả năng hồi phục** nối từ **12. Điều trị cần nhiều tầng** sang **14. Giao tiếp với trải nghiệm loạn thần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Môi trường xã hội, kỳ thị và khả năng hồi phục
 
 Kỳ thị có thể làm giảm cơ hội nhà ở, việc làm và kết nối xã hội; những mất mát này lại làm hồi phục khó hơn. Một mô hình chỉ nói “bệnh của não” nhưng bỏ hệ quả xã hội là chưa đủ. Ngược lại, chỉ nói “xã hội gây ra loạn thần” cũng bỏ qua mức dễ tổn thương sinh học và phát triển.
 
 Giải thích đa tầng là cần thiết.
-
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **14. Giao tiếp với trải nghiệm loạn thần** nối từ **13. Môi trường xã hội, kỳ thị và khả năng hồi phục** sang **15. Nguy cơ bạo lực: tránh định kiến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Giao tiếp với trải nghiệm loạn thần
 
@@ -153,23 +127,17 @@ Xác nhận cảm xúc khác với xác nhận nội dung niềm tin.
 
 Tranh luận cưỡng ép thường làm liên minh điều trị xấu hơn. Giao tiếp lâm sàng nên tập trung vào mức đau khổ, an toàn, chức năng và các cách giải thích thay thế mà không làm người bệnh xấu hổ.
 
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **15. Nguy cơ bạo lực: tránh định kiến** nối từ **14. Giao tiếp với trải nghiệm loạn thần** sang **16. Hồi phục là khái niệm đa chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Nguy cơ bạo lực: tránh định kiến
 
 Loạn thần không đồng nghĩa bạo lực. Nguy cơ cần được đánh giá riêng theo triệu chứng hiện tại, tiền sử, sử dụng chất, bối cảnh và hệ thống hỗ trợ.
 
 Định kiến “người loạn thần luôn nguy hiểm” làm tăng kỳ thị và có thể giảm hành vi tìm trợ giúp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **16. Hồi phục là khái niệm đa chiều** nối từ **15. Nguy cơ bạo lực: tránh định kiến** sang **17. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Hồi phục là khái niệm đa chiều
 
 Hồi phục có thể bao gồm giảm triệu chứng, sống độc lập hơn, có quan hệ có ý nghĩa, học tập/làm việc, giữ tự chủ và bản sắc, giảm tái phát và quản lý được triệu chứng còn sót.
 
 Một người vẫn có trải nghiệm khác thường thỉnh thoảng nhưng chức năng sống cải thiện rõ vẫn có thể đang hồi phục tốt. Không nên lấy “không còn bất kỳ triệu chứng nào” làm thước đo duy nhất.
-
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **16. Hồi phục là khái niệm đa chiều** đặt vấn đề; **17. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **18. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Ranh giới bằng chứng
 
@@ -181,8 +149,6 @@ Một người vẫn có trải nghiệm khác thường thỉnh thoảng nhưng
 
 **Không được nói:** dopamine là nguyên nhân duy nhất, có ảo giác đồng nghĩa tâm thần phân liệt, hoặc tìm thấy tương quan não bộ đồng nghĩa đã giải thích đầy đủ bệnh.
 
-> **Nối mạch:** Ở chặng này của **Loạn thần và phổ tâm thần phân liệt**, **17. Ranh giới bằng chứng** đặt vấn đề; **18. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **19. Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. Những hiểu lầm phổ biến
 
 **“Tâm thần phân liệt là đa nhân cách.”** Sai; đây là các khái niệm khác nhau.
@@ -192,8 +158,6 @@ Một người vẫn có trải nghiệm khác thường thỉnh thoảng nhưng
 **“Loạn thần nghĩa là không thể hồi phục.”** Sai; diễn tiến rất đa dạng.
 
 **“Nếu có nền tảng sinh học thì psychotherapy hay môi trường không quan trọng.”** Sai; sinh học, học tập, nhận thức và xã hội tương tác với nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Loạn thần và phổ tâm thần phân liệt**, **19. Mô hình tư duy** tổng hợp từ **18. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Mô hình tư duy
 
@@ -212,8 +176,6 @@ diễn tiến lâm sàng + chức năng
 ```
 
 > Loạn thần nên được hiểu như một họ hiện tượng xuất hiện từ tương tác giữa não, nhận thức, phát triển và môi trường, không phải một mô hình “một lỗi duy nhất”.
-
-> **Nối mạch:** Trong **Loạn thần và phổ tâm thần phân liệt**, **Kết nối kiến thức** tổng hợp từ **19. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

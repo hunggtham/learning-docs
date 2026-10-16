@@ -38,8 +38,6 @@ Tức khối lượng hấp dẫn tiếp tục tăng ngoài vùng chứa phần 
 
 Vật chất tối (dark matter / 암흑물질) là tên cho thành phần đó trong mô hình chuẩn hiện nay. Bản chất vi mô chưa được xác định chắc chắn.
 
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Từ thiên hà đến bằng chứng vật chất tối** đặt vấn đề; **Nguyên lý vũ trụ học** đối chiếu bằng chứng, rồi **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nguyên lý vũ trụ học
 
 Ở quy mô đủ lớn, mô hình chuẩn giả định vũ trụ gần đồng nhất (homogeneous) và đẳng hướng (isotropic) theo nghĩa thống kê.
@@ -47,8 +45,6 @@ Vật chất tối (dark matter / 암흑물질) là tên cho thành phần đó 
 Hai giả định này không nói vũ trụ đồng đều ở mọi quy mô (scale / 규모). Thiên hà, cluster và void rõ ràng tạo cấu trúc. Ý nghĩa là sau khi average trên quy mô (scale / 규모) đủ lớn, không có vị trí hoặc hướng đặc biệt nổi bật trong phân bố vật chất.
 
 Với các giả định đó, spacetime được mô tả bởi chỉ số (metric / 지표) Friedmann–Lemaître–Robertson–Walker (FLRW).
-
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** nối từ **Nguyên lý vũ trụ học** sang **Redshift vũ trụ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy mô (scale / 규모) factor và tọa độ đồng chuyển
 
@@ -82,8 +78,6 @@ v\approx H_0d.
 
 Đây là quan hệ Hubble–Lemaître gần đúng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Redshift vũ trụ học** nối từ **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** sang **Phương trình Friedmann**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Redshift vũ trụ học
 
 Ánh sáng phát tại quy mô (scale / 규모) factor `a_{emit}` và quan sát tại `a_{obs}` có
@@ -110,8 +104,6 @@ Cosmological redshift không nên bị giản lược hoàn toàn thành Doppler
 
 Ở redshift rất nhỏ, Doppler intuition và Hubble law có thể gần tương đương về số, nhưng ở `z` lớn phải dùng cosmological mô hình (model / 모델) đầy đủ.
 
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình Friedmann** nối từ **Redshift vũ trụ học** sang **Phương trình liên tục vũ trụ học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương trình Friedmann
 
 Với FLRW spacetime, Einstein equation dẫn tới
@@ -136,8 +128,6 @@ Phương trình gia tốc là
 ```
 
 Pressure vì vậy tham gia trực tiếp vào gravity trong GR.
-
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình liên tục vũ trụ học** nối từ **Phương trình Friedmann** sang **Mật độ tới hạn và các tham số Ω**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình liên tục vũ trụ học
 
@@ -188,8 +178,6 @@ thì
 
 Radiation giảm nhanh hơn matter vì ngoài dilution theo volume `a^3`, photon còn redshift mất năng lượng thêm một factor `a`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Mật độ tới hạn và các tham số Ω** nối từ **Phương trình liên tục vũ trụ học** sang **Vì sao Big Bang không phải vụ nổ từ một điểm?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mật độ tới hạn và các tham số `Ω`
 
 Định nghĩa trọng yếu (critical / 중요) density tại thời điểm `t`:
@@ -223,8 +211,6 @@ Phương trình Friedmann có thể viết
 
 `\Omega=1` không có nghĩa “vũ trụ chứa đúng một đơn vị vật chất”; nó là tỉ số với trọng yếu (critical / 중요) density.
 
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vì sao Big Bang không phải vụ nổ từ một điểm?** nối từ **Mật độ tới hạn và các tham số Ω** sang **Lookback thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao Big Bang không phải vụ nổ từ một điểm?
 
 Big Bang mô hình (model / 모델) mô tả một trạng thái quá khứ nóng và đặc hơn khi quy mô (scale / 규모) factor nhỏ.
@@ -232,8 +218,6 @@ Big Bang mô hình (model / 모델) mô tả một trạng thái quá khứ nón
 Nó không mô tả vật chất nổ từ một tâm vào không gian trống có sẵn. Trong FLRW cosmology, expansion là evolution của chỉ số (metric / 지표) giữa các comoving points.
 
 Nếu không gian (space / 공간) đồng nhất, mọi comoving observer đều thấy các nguồn xa recede theo Hubble luồng (flow / 흐름); không có một center đặc biệt nằm trong không gian ba chiều.
-
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Lookback thời gian (time / 시간)** nối từ **Vì sao Big Bang không phải vụ nổ từ một điểm?** sang **Comoving distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lookback thời gian (time / 시간)
 
@@ -255,8 +239,6 @@ t_L(z)
 
 Ta không thể đổi redshift thành “bao nhiêu năm trước” nếu không có mô hình `H(z)`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Comoving distance** nối từ **Lookback thời gian (time / 시간)** sang **Luminosity distance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Comoving distance
 
 Trong vũ trụ phẳng, line-of-sight comoving distance là
@@ -267,8 +249,6 @@ D_C(z)
 ```
 
 Đây là một trong các distance measures cơ bản.
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Luminosity distance** nối từ **Comoving distance** sang **Angular-diameter distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luminosity distance
 
@@ -288,8 +268,6 @@ với `D_M` là transverse comoving distance.
 
 Factor `(1+z)` xuất hiện do photon năng lượng (energy / 에너지) redshift và arrival tỷ lệ (rate / 비율) bị thời gian (time / 시간) dilation.
 
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Angular-diameter distance** nối từ **Luminosity distance** sang **Supernova Ia và lịch sử giãn nở**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Angular-diameter distance
 
 Nếu vật có vật lý (physical / 물리적) transverse kích thước (size / 크기) `\ell` và angular kích thước (size / 크기) `\theta`, định nghĩa
@@ -308,8 +286,6 @@ nếu photon number được bảo toàn và ánh sáng truyền trên null geod
 
 Điểm thú vị là `D_A` không tăng đơn điệu với redshift trong cosmology chuẩn; vật ở rất xa có thể bắt đầu có angular kích thước (size / 크기) lớn hơn khi `z` tăng thêm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Supernova Ia và lịch sử giãn nở** nối từ **Angular-diameter distance** sang **CMB**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Supernova Ia và lịch sử giãn nở
 
 Kiểu (type / 타입) Ia supernovae có thể chuẩn hóa luminosity từ light curve và spectral properties. Từ observed flux suy ra luminosity distance; từ spectrum suy ra redshift.
@@ -323,8 +299,6 @@ D_L(z)
 sau đó được so với các cosmological các mô hình (models / 모델들).
 
 Dữ liệu cuối thế kỷ XX chỉ ra expansion gần hiện tại đang accelerating trong khung phần mềm (framework / 프레임워크) GR + FLRW, dẫn tới thành phần dark-energy-like trong mô hình chuẩn.
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **CMB** nối từ **Supernova Ia và lịch sử giãn nở** sang **BAO như thước chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CMB
 
@@ -344,8 +318,6 @@ mô tả variance của anisotropy theo angular quy mô (scale / 규모).
 
 Acoustic peaks phản ánh oscillations của photon–baryon plasma trước recombination và cung cấp các ràng buộc (constraints / 제약조건들) mạnh lên `\Omega_b`, `\Omega_m`, curvature và nhiều parameters khác.
 
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **BAO như thước chuẩn** nối từ **CMB** sang **Vật chất tối và cấu trúc (structure / 구조) growth**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## BAO như thước chuẩn
 
 Baryon Acoustic Oscillations (BAO) là dấu vết của cùng acoustic physics trong phân bố matter muộn hơn.
@@ -363,8 +335,6 @@ H(z).
 ```
 
 BAO là ví dụ rõ của cách một hiện tượng plasma sớm trở thành ruler cho late-time cosmology.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vật chất tối và cấu trúc (structure / 구조) growth** nối từ **BAO như thước chuẩn** sang **Năng lượng tối và equation of trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật chất tối và cấu trúc (structure / 구조) growth
 
@@ -388,8 +358,6 @@ Trong tuyến tính (linear / 선형) regime ở matter-dominated universe đơn
 Dark năng lượng (energy / 에너지) dominance về sau làm cấu trúc (structure / 구조) growth chậm lại.
 
 Chi tiết được học sâu hơn trong chapter gravitational instability/cấu trúc (structure / 구조) formation.
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Năng lượng tối và equation of trạng thái (state / 상태)** nối từ **Vật chất tối và cấu trúc (structure / 구조) growth** sang **Hubble tension là gì về mặt phương pháp?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tối và equation of trạng thái (state / 상태)
 
@@ -415,8 +383,6 @@ Nếu `w<-1/3`, thành phần đó có thể tạo accelerated expansion nếu �
 
 Hiện `\Lambda`CDM với `w=-1` là baseline mô hình (model / 모델) rất thành công, nhưng bản chất microscopic của vacuum năng lượng (energy / 에너지) và cosmological constant bài toán (problem / 문제) vẫn mở.
 
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Hubble tension là gì về mặt phương pháp?** nối từ **Năng lượng tối và equation of trạng thái (state / 상태)** sang **Parameter suy luận (inference / 추론) trong cosmology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hubble tension là gì về mặt phương pháp?
 
 Các phương pháp “cục bộ (local / 로컬) distance ladder” và suy luận (inference / 추론) từ early-universe dữ liệu (data / 데이터) trong `\Lambda`CDM có thể cho giá trị `H_0` khác nhau ở mức đáng chú ý.
@@ -424,8 +390,6 @@ Các phương pháp “cục bộ (local / 로컬) distance ladder” và suy lu
 Đây là ví dụ tốt cho khoa học thực nghiệm: trước khi kết luận có new physics, phải kiểm tra calibration, population effects, covariance, mô hình (model / 모델) các giả định (assumptions / 가정들) và hidden systematics.
 
 Một tension thống kê không tự động là bằng chứng vật lý mới; nó là tín hiệu cần kiểm tra (audit / 감사) cả dữ liệu (data / 데이터) lẫn mô hình (model / 모델).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Parameter suy luận (inference / 추론) trong cosmology** nối từ **Hubble tension là gì về mặt phương pháp?** sang **Selection effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parameter suy luận (inference / 추론) trong cosmology
 
@@ -447,15 +411,11 @@ Parameters có thể degeneracy: hai tổ hợp khác nhau tạo observables g�
 
 Covariance giữa dữ liệu (data / 데이터) points phải được giữ trong likelihood; nếu xem các điểm tương quan như độc lập, bất định (uncertainty / 불확실성) sẽ bị đánh giá quá nhỏ.
 
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Selection effects** nối từ **Parameter suy luận (inference / 추론) trong cosmology** sang **Gravitational lensing như probe cosmology**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Selection effects
 
 Telescope có flux limit nên dễ phát hiện nguồn (source / 소스) sáng hơn nguồn (source / 소스) yếu. Survey hình học (geometry / 기하학), observing cadence và mục tiêu (target / 대상) selection tạo selection hàm (function / 함수).
 
 Một population quan sát được không nhất thiết đại diện trực tiếp population thật. Đây là lý do cosmology và astrophysics phải mô hình hóa completeness và selection độ lệch (bias / 편향).
-
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Gravitational lensing như probe cosmology** nối từ **Selection effects** sang **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gravitational lensing như probe cosmology
 
@@ -465,8 +425,6 @@ Cosmic shear phụ thuộc integrated matter phân phối (distribution / 분포
 
 Strong lensing thời gian (time / 시간) delays có thể dùng như một distance probe nếu lens mass mô hình (model / 모델) được kiểm soát đủ tốt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** nối từ **Gravitational lensing như probe cosmology** sang **Multi-messenger astronomy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren
 
 Gravitational-wave waveform cho phép suy luminosity distance trực tiếp từ amplitude/chirp cấu trúc (structure / 구조) mà không cần cosmic distance ladder truyền thống.
@@ -474,8 +432,6 @@ Gravitational-wave waveform cho phép suy luminosity distance trực tiếp từ
 Nếu có redshift từ electromagnetic counterpart hoặc statistical host association, nguồn (source / 소스) trở thành tiêu chuẩn (standard / 표준) siren để ràng buộc (constraint / 제약조건) expansion lịch sử (history / 이력).
 
 Đây là một ví dụ multi-messenger nơi GR, nuclear physics, detector calibration và cosmology nối trực tiếp nhau.
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Multi-messenger astronomy** nối từ **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** sang **Điều kiện áp dụng của mô hình FLRW**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-messenger astronomy
 
@@ -485,8 +441,6 @@ Mỗi messenger chịu tương tác (interaction / 상호작용) khác nhau và 
 
 GW170817 nối neutron-star dynamics, gravitational waves, gamma-ray burst, kilonova và heavy-element nucleosynthesis trong cùng một sự kiện (event / 이벤트).
 
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Điều kiện áp dụng của mô hình FLRW** nối từ **Multi-messenger astronomy** sang **Những gì ΛCDM giải thích và không giải thích**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điều kiện áp dụng của mô hình FLRW
 
 FLRW mô tả universe đã coarse-grain ở quy mô (scale / 규모) lớn. Nó không mô tả chi tiết cục bộ (local / 로컬) spacetime gần black hole hay bên trong galaxy.
@@ -495,8 +449,6 @@ Trong cục bộ (local / 로컬) bound hệ thống (system / 시스템), expan
 
 Homogeneity/isotropy là statistical approximations cần được kiểm tra bằng survey observations.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** nối từ **Điều kiện áp dụng của mô hình FLRW** sang **Ví dụ: redshift z=1 có nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Những gì `ΛCDM` giải thích và không giải thích
 
 `ΛCDM` mô tả rất tốt nhiều observations với một số ít parameters: CMB, BAO, supernova expansion lịch sử (history / 이력) và large-scale cấu trúc (structure / 구조) ở mức rộng.
@@ -504,8 +456,6 @@ Homogeneity/isotropy là statistical approximations cần được kiểm tra b�
 Nhưng mô hình không xác định microscopic định danh (identity / 식별자) của dark matter; không giải quyết sâu cosmological constant bài toán (problem / 문제); không phải quantum gravity lý thuyết (theory / 이론); và có thể có tensions giữa datasets hoặc small-scale modeling cần nghiên cứu tiếp.
 
 Một mô hình thành công không có nghĩa mọi câu hỏi nền tảng đã đóng.
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** nêu quy tắc; **Ví dụ: redshift z=1 có nghĩa gì?** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: redshift `z=1` có nghĩa gì?
 
@@ -533,8 +483,6 @@ Photon quan sát có bước sóng gấp đôi lúc phát.
 
 Nhưng không thể từ riêng `z=1` kết luận “nguồn cách đúng X tỷ năm ánh sáng”. Comoving distance, luminosity distance, angular-diameter distance và lookback thời gian (time / 시간) là các đại lượng khác nhau và cần `H(z)` để tính.
 
-> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Ví dụ: redshift z=1 có nghĩa gì?** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Vũ trụ học không chỉ là “những vật rất xa”. Nó là bài toán động lực học của **quy mô (scale / 규모) factor và hình học (geometry / 기하학) của spacetime**, kết hợp với một bài toán suy luận thống kê từ ánh sáng và các messenger khác.
@@ -546,8 +494,6 @@ observable được đo là gì?
 cosmological distance/model nào nối observable với parameter?
 assumption và covariance nào được dùng trong inference?
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -566,8 +512,6 @@ Không. Gravitational bằng chứng (evidence / 증거) cho một thành phần
 ### “Một giá trị `H_0` là observable trực tiếp không phụ thuộc mô hình”
 
 Không hoàn toàn. Các phương pháp khác nhau dùng calibration và mô hình (model / 모델) các giả định (assumptions / 가정들) khác nhau; suy luận (inference / 추론) phải ghi rõ population, covariance và cosmological khung phần mềm (framework / 프레임워크).
-
-> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

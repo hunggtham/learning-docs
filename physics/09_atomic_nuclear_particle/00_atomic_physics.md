@@ -8,8 +8,6 @@ Mô hình hành tinh của nguyên tử có giá trị lịch sử nhưng không
 
 Các mức năng lượng rời rạc, orbital, spin và quy tắc chọn đều xuất hiện từ cấu trúc lượng tử của Hamiltonian và đối xứng của hệ.
 
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Nguyên tử hydro** nối từ **Nguyên tử không phải “hệ Mặt Trời tí hon”** sang **Vì sao nguyên tử có kích thước hữu hạn?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên tử hydro
 
 Hydro gồm một proton và một electron tương tác qua thế Coulomb:
@@ -33,8 +31,6 @@ E_n=-\frac{13.6\,eV}{n^2},
 với `n=1,2,...`.
 
 Chính xác hơn, hệ số `13.6 eV` đã chứa khối lượng rút gọn thay vì xem proton hoàn toàn bất động.
-
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Vì sao nguyên tử có kích thước hữu hạn?** nối từ **Nguyên tử hydro** sang **Hàm sóng hydro và các số lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao nguyên tử có kích thước hữu hạn?
 
@@ -64,8 +60,6 @@ a_0=\frac{4\pi\varepsilon_0\hbar^2}{\mu e^2}.
 
 Do đó nguyên tử ổn định không phải vì electron “quay đủ nhanh để không rơi vào hạt nhân”. Nó ổn định vì trạng thái cơ bản của bài toán lượng tử có năng lượng hữu hạn và kích thước hữu hạn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Hàm sóng hydro và các số lượng tử** nối từ **Vì sao nguyên tử có kích thước hữu hạn?** sang **Nút của hàm sóng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàm sóng hydro và các số lượng tử
 
 Do thế Coulomb đối xứng cầu, nghiệm tách thành phần bán kính và góc:
@@ -86,15 +80,11 @@ Các orbital `s,p,d,f` tương ứng `l=0,1,2,3`.
 
 Hình dạng orbital là cấu trúc không gian của hàm sóng, không phải đường đi của electron.
 
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Nút của hàm sóng** nối từ **Hàm sóng hydro và các số lượng tử** sang **Xác suất theo bán kính**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nút của hàm sóng
 
 Các nút là nơi hàm sóng bằng không. Với hydro, số nút tổng liên hệ với `n`, còn nút góc liên hệ với `l`.
 
 Nút xuất hiện do tính chất sóng và điều kiện biên. Electron không bị một “lực đẩy” ra khỏi mặt nút; xác suất đơn giản bằng không tại đó trong trạng thái đang xét.
-
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Xác suất theo bán kính** nối từ **Nút của hàm sóng** sang **Phổ hydro và công thức Rydberg**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác suất theo bán kính
 
@@ -105,8 +95,6 @@ P(r)dr=4\pi r^2|R_{nl}(r)|^2dr
 ```
 
 cho trạng thái `s` thích hợp. Hệ số `r^2` đến từ thể tích hình học tăng theo bán kính.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Phổ hydro và công thức Rydberg** nối từ **Xác suất theo bán kính** sang **Nguyên tử nhiều electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ hydro và công thức Rydberg
 
@@ -125,8 +113,6 @@ Do `E_n\propto-1/n^2`, ta thu được công thức Rydberg:
 
 Các dãy phổ như Lyman, Balmer và Paschen tương ứng với những `n_f` khác nhau.
 
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Nguyên tử nhiều electron** nối từ **Phổ hydro và công thức Rydberg** sang **Che chắn và điện tích hạt nhân hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyên tử nhiều electron
 
 Khi có nhiều electron, Hamiltonian chứa cả tương tác electron–electron:
@@ -140,15 +126,11 @@ Hạng `1/r_{ij}` làm bài toán không còn tách thành các bài một elect
 
 Vì vậy ta thường dùng xấp xỉ trường trung bình, Hartree–Fock hoặc các phương pháp số nhiều hạt.
 
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Che chắn và điện tích hạt nhân hiệu dụng** nối từ **Nguyên tử nhiều electron** sang **Nguyên lý Pauli và bảng tuần hoàn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Che chắn và điện tích hạt nhân hiệu dụng
 
 Electron lớp trong che chắn một phần điện tích hạt nhân đối với electron lớp ngoài. Electron ở orbital xuyên sâu gần hạt nhân nhiều hơn có thể cảm nhận điện tích hiệu dụng lớn hơn.
 
 Sự khác nhau về độ xuyên sâu làm năng lượng `s,p,d,f` trong nguyên tử nhiều electron không còn suy biến đơn giản theo `n` như hydro.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Nguyên lý Pauli và bảng tuần hoàn** nối từ **Che chắn và điện tích hạt nhân hiệu dụng** sang **Mômen động lượng toàn phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên lý Pauli và bảng tuần hoàn
 
@@ -157,8 +139,6 @@ Electron là fermion nên hàm sóng toàn phần phải phản đối xứng kh
 Kết hợp Pauli, năng lượng orbital, tương tác Coulomb và trao đổi giải thích cấu trúc lớp vỏ và tính tuần hoàn hóa học.
 
 Quy tắc Hund không phải một định luật tách biệt khỏi lượng tử; nó là mô tả gần đúng cho cách hệ giảm năng lượng trong nhiều cấu hình electron cạnh tranh.
-
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Mômen động lượng toàn phần** nối từ **Nguyên lý Pauli và bảng tuần hoàn** sang **Cấu trúc tinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen động lượng toàn phần
 
@@ -172,8 +152,6 @@ Với nhiều electron, ta có thể ghép các `l_i` thành `L`, các `s_i` th�
 
 Ở nguyên tử nặng, tương tác spin–orbit mạnh hơn và sơ đồ `jj` có thể phù hợp hơn.
 
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Cấu trúc tinh tế** nối từ **Mômen động lượng toàn phần** sang **Cấu trúc siêu tinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu trúc tinh tế
 
 Mức hydro lý tưởng chỉ phụ thuộc `n`, nhưng tương đối tính và tương tác spin–orbit tạo cấu trúc tinh tế (fine structure).
@@ -186,8 +164,6 @@ H_{SO}\propto \vec L\cdot\vec S.
 
 Nó làm mức năng lượng phụ thuộc `j`, từ đó tách các vạch phổ vốn trùng nhau trong mô hình phi tương đối tính đơn giản.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Cấu trúc siêu tinh tế** nối từ **Cấu trúc tinh tế** sang **Zeeman và Stark**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu trúc siêu tinh tế
 
 Spin hạt nhân và mômen từ hạt nhân tương tác với electron, tạo cấu trúc siêu tinh tế (hyperfine structure).
@@ -195,8 +171,6 @@ Spin hạt nhân và mômen từ hạt nhân tương tác với electron, tạo 
 Chuyển mức hyperfine nổi tiếng của hydro trung hòa tạo photon bước sóng khoảng `21 cm`. Vạch này là công cụ cực kỳ quan trọng trong thiên văn vô tuyến để lập bản đồ hydro trong thiên hà.
 
 Đây là một cầu nối trực tiếp từ vật lý nguyên tử sang thiên văn quan sát.
-
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Zeeman và Stark** nối từ **Cấu trúc siêu tinh tế** sang **Từ phần tử ma trận tới quy tắc chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Zeeman và Stark
 
@@ -209,8 +183,6 @@ Trong từ trường ngoài, mức năng lượng tách do tương tác mômen t
 Đây là hiệu ứng Zeeman.
 
 Trong điện trường ngoài, mức năng lượng dịch hoặc tách do hiệu ứng Stark. Cả hai hiệu ứng cung cấp cách đo trường điện/từ và kiểm tra cấu trúc lượng tử của nguyên tử.
-
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Từ phần tử ma trận tới quy tắc chọn** nối từ **Zeeman và Stark** sang **Parity và quy tắc chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ phần tử ma trận tới quy tắc chọn
 
@@ -240,8 +212,6 @@ Với spin trong xấp xỉ không relativistic đơn giản,
 
 Các quy tắc này không phải “mệnh lệnh tuyệt đối”. Chúng nói rằng một cơ chế cụ thể có phần tử ma trận bằng không. Chuyển mức có thể vẫn xảy ra qua lưỡng cực từ, tứ cực điện hoặc các cơ chế bậc cao hơn nhưng yếu hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Parity và quy tắc chọn** nối từ **Từ phần tử ma trận tới quy tắc chọn** sang **Cường độ vạch phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Parity và quy tắc chọn
 
 Đối xứng chẵn–lẻ (parity) của trạng thái là công cụ mạnh để biết phần tử ma trận có bằng không hay không.
@@ -249,8 +219,6 @@ Các quy tắc này không phải “mệnh lệnh tuyệt đối”. Chúng nó
 Toán tử vị trí `\vec r` có parity lẻ. Vì vậy chuyển mức lưỡng cực điện cần trạng thái đầu và cuối có parity khác nhau.
 
 Cách nhìn bằng đối xứng giúp hiểu quy tắc chọn sâu hơn việc ghi nhớ `\Delta l=\pm1`.
-
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Cường độ vạch phổ** nối từ **Parity và quy tắc chọn** sang **Độ rộng tự nhiên và thời gian sống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cường độ vạch phổ
 
@@ -263,8 +231,6 @@ Vị trí vạch cho chênh lệch năng lượng, nhưng cường độ còn ph
 - điều kiện nhiệt động hoặc pumping của hệ.
 
 Khái niệm oscillator strength nén độ mạnh của chuyển mức thành một đại lượng tiện dùng trong quang phổ học.
-
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Độ rộng tự nhiên và thời gian sống** nối từ **Cường độ vạch phổ** sang **Phân bố Boltzmann và cường độ phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ rộng tự nhiên và thời gian sống
 
@@ -284,8 +250,6 @@ Ngoài ra còn có:
 
 Quan sát một vạch phổ vì vậy luôn là phép chập của nhiều cơ chế vật lý và đáp ứng thiết bị.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Phân bố Boltzmann và cường độ phổ** nối từ **Độ rộng tự nhiên và thời gian sống** sang **Ví dụ suy luận từ một vạch phổ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân bố Boltzmann và cường độ phổ
 
 Ở cân bằng nhiệt, tỉ số số hạt giữa hai mức gần
@@ -299,8 +263,6 @@ Quan sát một vạch phổ vì vậy luôn là phép chập của nhiều cơ 
 Do đó phổ không chỉ cho cấu trúc nguyên tử mà còn có thể cho nhiệt độ và trạng thái kích thích của môi trường.
 
 Trong plasma và thiên văn, phải kết hợp thêm cân bằng ion hóa và các quá trình không cân bằng.
-
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Phân bố Boltzmann và cường độ phổ** nêu quy tắc; **Ví dụ suy luận từ một vạch phổ** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ suy luận từ một vạch phổ
 
@@ -320,8 +282,6 @@ Nếu vạch đồng thời rộng hơn dự kiến từ thiết bị, độ r�
 
 Một vạch phổ vì thế không chỉ “cho biết nguyên tố nào”; nó có thể mang đồng thời thông tin về thành phần, vận tốc, nhiệt độ, mật độ và trường từ.
 
-> **Nối mạch:** Ở chặng này của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Ví dụ suy luận từ một vạch phổ** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Cấu trúc nguyên tử là bài toán trị riêng của một Hamiltonian có đối xứng. Phổ là cách quan sát **chênh lệch giữa các trị riêng**, còn cường độ chuyển mức cho biết cách toán tử tương tác nối các trạng thái đó.
@@ -334,8 +294,6 @@ Hamiltonian
 → phần tử ma trận
 → photon quan sát được
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -354,8 +312,6 @@ Không. Nó thường chỉ bị cấm đối với cơ chế bậc thấp đang
 ### “Độ rộng vạch chỉ do thiết bị kém”
 
 Không. Nó còn chứa thông tin về thời gian tồn tại (lifetime / 수명), nhiệt độ, va chạm và động lực học môi trường.
-
-> **Nối mạch:** Trong **Vật lý nguyên tử: hydro, số lượng tử, cấu trúc tinh tế và quang phổ học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

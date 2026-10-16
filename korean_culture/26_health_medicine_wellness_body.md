@@ -14,15 +14,11 @@ Bài học quan trọng là:
 
 Số lượt khám còn phụ thuộc bảo hiểm, mật độ phòng khám, lịch làm việc, kỳ vọng của bệnh nhân và cấu trúc chuyển tuyến.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **의원·병원·종합병원: các cấp cơ sở không giống nhau** nối từ **병원: khả năng tiếp cận làm thay đổi ngưỡng đi khám** sang **접수–대기–진료–수납–약국: hành trình bệnh nhân quen thuộc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 의원·병원·종합병원: các cấp cơ sở không giống nhau
 
 Trong lời nói hằng ngày người ta hay gọi chung `병원`, nhưng hệ thống có nhiều loại. `의원` thường là phòng khám quy mô nhỏ; `병원`, `종합병원`, bệnh viện đại học có chức năng và năng lực khác nhau. Không phải triệu chứng nào cũng cần bệnh viện lớn.
 
 Thực hành “đi thẳng bác sĩ chuyên khoa” có thể khác hệ thống **điều phối ban đầu (gatekeeping)** ở quốc gia nơi bác sĩ gia đình quản lý nhiều bước hơn.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **접수–대기–진료–수납–약국: hành trình bệnh nhân quen thuộc** nối từ **의원·병원·종합병원: các cấp cơ sở không giống nhau** sang **처방전 và 약국: tiếp cận thuốc có ranh giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 접수–대기–진료–수납–약국: hành trình bệnh nhân quen thuộc
 
@@ -40,15 +36,11 @@ Một lần khám thường có luồng:
 
 Không phải trường hợp nào cũng đi đủ các bước, nhưng luồng này giải thích vì sao nhà thuốc gần phòng khám/bệnh viện rất phổ biến.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **처방전 và 약국: tiếp cận thuốc có ranh giới** nối từ **접수–대기–진료–수납–약국: hành trình bệnh nhân quen thuộc** sang **건강보험: chia sẻ rủi ro biến y tế thành thiết chế xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 처방전 và 약국: tiếp cận thuốc có ranh giới
 
 Thuốc kê đơn thường cần `처방전`; nhà thuốc `약국` chịu trách nhiệm cấp phát và hướng dẫn dùng thuốc. Thuốc không kê đơn và thuốc kê đơn không giống nhau.
 
 Người nước ngoài dễ nhầm thương hiệu với hoạt chất vì bao bì tiếng Hàn. Năng lực hiểu thông tin sức khoẻ tốt là hỏi về `성분`, liều lượng, tương tác và hoạt chất trùng lặp thay vì chỉ nhớ màu hộp.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **건강보험: chia sẻ rủi ro biến y tế thành thiết chế xã hội** nối từ **처방전 và 약국: tiếp cận thuốc có ranh giới** sang **본인부담: có bảo hiểm không có nghĩa “miễn phí”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 건강보험: chia sẻ rủi ro biến y tế thành thiết chế xã hội
 
@@ -62,15 +54,11 @@ E[C]=pC
 
 Nhưng hệ thống thực phải xử lý phân bố tuổi, bệnh mạn tính, cơ chế chi trả cho cơ sở y tế và **rủi ro đạo đức (moral hazard)**. Hệ quả văn hoá là tiếp cận y tế được nhúng vào một thiết chế xã hội, không chỉ là giao dịch tiền mặt tại thời điểm đau ốm.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **본인부담: có bảo hiểm không có nghĩa “miễn phí”** nối từ **건강보험: chia sẻ rủi ro biến y tế thành thiết chế xã hội** sang **건강검진: sàng lọc khác điều trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 본인부담: có bảo hiểm không có nghĩa “miễn phí”
 
 Bảo hiểm y tế giảm một phần chi phí nhưng bệnh nhân vẫn có khoản tự trả tuỳ dịch vụ và bối cảnh. Vì vậy “có bảo hiểm” không đồng nghĩa giá bằng 0.
 
 Chia sẻ chi phí cũng ảnh hưởng hành vi. Nếu giá cảm nhận thấp, mức sử dụng có thể tăng; nếu quá cao, người cần chăm sóc có thể trì hoãn. Chính sách luôn phải cân bằng tiếp cận với tính bền vững.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **건강검진: sàng lọc khác điều trị** nối từ **본인부담: có bảo hiểm không có nghĩa “miễn phí”** sang **직장 건강검진: công sở biến phòng bệnh thành thói quen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 건강검진: sàng lọc khác điều trị
 
@@ -84,15 +72,11 @@ P(D|+) = \frac{P(+|D)P(D)}{P(+)}
 
 Vì vậy kết quả xét nghiệm cần được diễn giải, không nên biến khám định kỳ thành tư duy “càng xét nghiệm nhiều càng tốt”. Chẩn đoán quá mức và xét nghiệm tiếp theo không cần thiết cũng là khái niệm thật trong y học dự phòng.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **직장 건강검진: công sở biến phòng bệnh thành thói quen** nối từ **건강검진: sàng lọc khác điều trị** sang **치과: nha khoa và bảo trì phòng ngừa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 직장 건강검진: công sở biến phòng bệnh thành thói quen
 
 Khi doanh nghiệp và hệ thống bảo hiểm kết nối sàng lọc vào vòng đời việc làm, người vốn không chủ động đi kiểm tra vẫn tham gia. Thiết chế làm giảm chi phí giao dịch.
 
 Đây là nguyên tắc thiết kế hành vi: phòng bệnh tăng khi hệ thống chủ động lên lịch, thay vì chỉ yêu cầu kỷ luật cá nhân.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **치과: nha khoa và bảo trì phòng ngừa** nối từ **직장 건강검진: công sở biến phòng bệnh thành thói quen** sang **안과 và văn hoá thị giác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 치과: nha khoa và bảo trì phòng ngừa
 
@@ -100,15 +84,11 @@ Phòng nha `치과` là phần quen thuộc của y tế hằng ngày. Cạo vô
 
 Hành vi nha khoa cho thấy vấn đề trì hoãn lợi ích: đánh răng/dùng chỉ nha khoa hôm nay tạo lợi ích tương lai nên phần thưởng tức thời thấp. Nhắc lịch, khám định kỳ và bảo hiểm giúp giảm **thiên lệch hiện tại (present bias)**.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **안과 và văn hoá thị giác** nối từ **치과: nha khoa và bảo trì phòng ngừa** sang **피부과 và làm đẹp: y khoa và thẩm mỹ giao nhau nhưng không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 안과 và văn hoá thị giác
 
 Cận thị, kính áp tròng, màn hình và kính áp tròng thẩm mỹ làm chăm sóc mắt vừa là y khoa vừa là lối sống. `안경`, `렌즈`, khám mắt và thảo luận LASIK/LASEK khá dễ thấy trong đô thị.
 
 Một thủ thuật phổ biến không có nghĩa phù hợp với mọi người; khả năng chỉ định và rủi ro cần được chuyên môn đánh giá.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **피부과 và làm đẹp: y khoa và thẩm mỹ giao nhau nhưng không giống nhau** nối từ **안과 và văn hoá thị giác** sang **한의학: y học Hàn truyền thống trong hệ thống hiện đại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 피부과 và làm đẹp: y khoa và thẩm mỹ giao nhau nhưng không giống nhau
 
@@ -122,8 +102,6 @@ mục tiêu thẩm mỹ → thay đổi ngoại hình theo sở thích
 ```
 
 Hai mục tiêu có thể giao nhau nhưng cách nói về bằng chứng và rủi ro vẫn cần tách.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **한의학: y học Hàn truyền thống trong hệ thống hiện đại** nối từ **피부과 và làm đẹp: y khoa và thẩm mỹ giao nhau nhưng không giống nhau** sang **침·뜸: can thiệp và kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 한의학: y học Hàn truyền thống trong hệ thống hiện đại
 
@@ -139,8 +117,6 @@ Tính chính danh văn hoá và hiệu quả khoa học là hai câu hỏi khác
 - tác dụng bất lợi;
 - chi phí cơ hội.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **침·뜸: can thiệp và kỳ vọng** nối từ **한의학: y học Hàn truyền thống trong hệ thống hiện đại** sang **보약·건강기능식품: thị trường của sự bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 침·뜸: can thiệp và kỳ vọng
 
 `침` và `뜸` là các điều trị tác động trực tiếp lên cơ thể. Khi bệnh nhân cảm thấy dễ chịu hơn, trải nghiệm đó là thật đối với họ; nhưng việc quy nguyên nhân vẫn cần bằng chứng.
@@ -152,8 +128,6 @@ Ba câu hỏi phải tách:
 3. rủi ro/chi phí so với lựa chọn khác thế nào?
 
 Đây là khung chung để đọc cả sản phẩm chăm sóc sức khoẻ hiện đại.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **보약·건강기능식품: thị trường của sự bất định** nối từ **침·뜸: can thiệp và kỳ vọng** sang **홍삼: kỳ vọng sinh học + giá trị quà tặng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 보약·건강기능식품: thị trường của sự bất định
 
@@ -172,8 +146,6 @@ tương tác?
 
 “Có nghiên cứu” không đồng nghĩa có lợi ích đáng kể với mọi người.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **홍삼: kỳ vọng sinh học + giá trị quà tặng** nối từ **보약·건강기능식품: thị trường của sự bất định** sang **약을 빨리 먹다: kỳ vọng giảm triệu chứng nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 홍삼: kỳ vọng sinh học + giá trị quà tặng
 
 `홍삼` vừa là sản phẩm sức khoẻ vừa là quà cao cấp. Giá trị xã hội có thể lớn độc lập với hiệu quả dược lý: tặng cha mẹ/người lớn tuổi phát tín hiệu quan tâm.
@@ -186,23 +158,17 @@ giá trị sinh học + giá trị quan hệ
 
 Nếu chỉ hỏi hoạt chất, ta bỏ chức năng văn hoá; nếu chỉ tin uy tín văn hoá, ta bỏ câu hỏi về bằng chứng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **약을 빨리 먹다: kỳ vọng giảm triệu chứng nhanh** nối từ **홍삼: kỳ vọng sinh học + giá trị quà tặng** sang **주사 và truyền tĩnh mạch: độ dễ thấy không bằng tính cần thiết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 약을 빨리 먹다: kỳ vọng giảm triệu chứng nhanh
 
 Một số bệnh nhân quen nhận thuốc cho triệu chứng nhẹ, nhưng cách kê đơn thay theo bác sĩ, chẩn đoán và hướng dẫn chuyên môn. Không nên khái quát rằng “Hàn Quốc dùng thuốc mạnh”.
 
 Hiểu văn hoá y tế chính xác hơn khi hỏi kỳ vọng của bệnh nhân về tốc độ, cách bác sĩ giao tiếp và khả năng tiếp cận dịch vụ.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **주사 và truyền tĩnh mạch: độ dễ thấy không bằng tính cần thiết** nối từ **약을 빨리 먹다: kỳ vọng giảm triệu chứng nhanh** sang **정신건강: từ kỳ thị tới vốn từ rộng hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 주사 và truyền tĩnh mạch: độ dễ thấy không bằng tính cần thiết
 
 Tiêm/truyền có thể được cảm nhận như điều trị “mạnh/nhanh” trong một số bối cảnh. Nhưng đường dùng thuốc không tự làm điều trị tốt hơn. Truyền tĩnh mạch có chỉ định riêng và rủi ro/chi phí riêng.
 
 Kỳ vọng “truyền là khoẻ nhanh” cần được tách khỏi bằng chứng cho từng trường hợp.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **정신건강: từ kỳ thị tới vốn từ rộng hơn** nối từ **주사 và truyền tĩnh mạch: độ dễ thấy không bằng tính cần thiết** sang **상담: tư vấn tâm lý và chăm sóc y khoa khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 정신건강: từ kỳ thị tới vốn từ rộng hơn
 
@@ -212,19 +178,15 @@ Nhưng kỳ thị không biến mất đồng đều. Một số người vẫn 
 
 Cần tách:
 
-`stress` ≠ rối loạn lâm sàng,  
-`burnout` ≠ mọi trạng thái mệt,  
+`stress` ≠ rối loạn lâm sàng,
+`burnout` ≠ mọi trạng thái mệt,
 điều trị sức khoẻ tinh thần ≠ yếu đuối.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **상담: tư vấn tâm lý và chăm sóc y khoa khác nhau** nối từ **정신건강: từ kỳ thị tới vốn từ rộng hơn** sang **번아웃 và 과로: văn hoá công việc đi vào sức khoẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 상담: tư vấn tâm lý và chăm sóc y khoa khác nhau
 
 `상담` có thể dùng rất rộng, từ tư vấn viên trường học đến tư vấn tâm lý. `정신건강의학과` là chuyên khoa y khoa có thể chẩn đoán và kê thuốc.
 
 Không phải mọi khó chịu tâm lý đều cần thuốc, và không phải triệu chứng nặng nào cũng giải quyết được bằng tự chăm sóc. Hiểu hệ thống giúp biết con đường nào phù hợp hơn.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **번아웃 và 과로: văn hoá công việc đi vào sức khoẻ** nối từ **상담: tư vấn tâm lý và chăm sóc y khoa khác nhau** sang **수면: giấc ngủ trở thành thị trường chăm sóc sức khoẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 번아웃 và 과로: văn hoá công việc đi vào sức khoẻ
 
@@ -242,15 +204,11 @@ làm việc / đi lại dài
 
 Điều này nối trực tiếp chương công sở [`06_workplace_organization_hoesik.md`](06_workplace_organization_hoesik.md).
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **수면: giấc ngủ trở thành thị trường chăm sóc sức khoẻ** nối từ **번아웃 và 과로: văn hoá công việc đi vào sức khoẻ** sang **거북목·목디스크 và cơ thể trước màn hình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 수면: giấc ngủ trở thành thị trường chăm sóc sức khoẻ
 
 Theo dõi giấc ngủ, gối, đệm, thực phẩm bổ sung và ứng dụng biến giấc ngủ thành một phần của **tự định lượng (quantified self)**. Đo lường có thể hữu ích nhưng ước lượng từ thiết bị đeo không giống nghiên cứu giấc ngủ lâm sàng.
 
 Nếu người dùng ám ảnh điểm số, chỉ số có thể nghịch lý làm tăng lo âu. Định luật Goodhart cũng áp dụng cho chăm sóc sức khoẻ: tối ưu điểm số không đồng nghĩa tối ưu sinh lý hoàn hảo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **거북목·목디스크 và cơ thể trước màn hình** nối từ **수면: giấc ngủ trở thành thị trường chăm sóc sức khoẻ** sang **헬스·필라테스·요가: vận động như hệ sinh thái dịch vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 거북목·목디스크 và cơ thể trước màn hình
 
@@ -258,15 +216,11 @@ Nhân viên văn phòng thường nói `거북목`, cứng cổ/vai và mỏi m�
 
 Không phải mọi cơn đau có một nguyên nhân duy nhất từ tư thế; công thái học, mức vận động, căng thẳng, giấc ngủ và bệnh lý đều có thể quan trọng. “Sửa tư thế là chữa mọi thứ” là đơn giản hoá.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **헬스·필라테스·요가: vận động như hệ sinh thái dịch vụ** nối từ **거북목·목디스크 và cơ thể trước màn hình** sang **등산: địa lý làm hành vi phòng bệnh dễ hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 헬스·필라테스·요가: vận động như hệ sinh thái dịch vụ
 
 Gym, Pilates, yoga và PT tạo thị trường vận động. Lịch lớp và người hướng dẫn làm giảm ma sát lập kế hoạch; cam kết xã hội giúp tăng khả năng duy trì.
 
 Chọn loại vận động không cần xếp hạng “môn nào tốt nhất”; lợi ích phụ thuộc mục tiêu, mức tuân thủ, cường độ và chống chỉ định.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **등산: địa lý làm hành vi phòng bệnh dễ hơn** nối từ **헬스·필라테스·요가: vận động như hệ sinh thái dịch vụ** sang **찜질방·사우나: thư giãn và điều hoà thân nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 등산: địa lý làm hành vi phòng bệnh dễ hơn
 
@@ -280,23 +234,17 @@ Xác suất hành vi thường tăng khi ma sát giảm:
 → dễ tham gia tự phát hơn
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **찜질방·사우나: thư giãn và điều hoà thân nhiệt** nối từ **등산: địa lý làm hành vi phòng bệnh dễ hơn** sang **목욕: sạch sẽ, riêng tư và sự quen thuộc với cơ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 찜질방·사우나: thư giãn và điều hoà thân nhiệt
 
 Nhiệt làm tăng lưu lượng máu ở da và tiết mồ hôi. Người dùng có thể cảm thấy thư giãn, nhưng tuyên bố rộng kiểu “thải độc” cần thận trọng. Gan, thận và các đường chuyển hoá giữ vai trò chính trong xử lý nhiều chất; mồ hôi không phải kênh thải mọi độc tố.
 
 Trải nghiệm văn hoá có giá trị mà không cần cách giải thích giả khoa học.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **목욕: sạch sẽ, riêng tư và sự quen thuộc với cơ thể** nối từ **찜질방·사우나: thư giãn và điều hoà thân nhiệt** sang **미세먼지: dữ liệu môi trường trở thành hành vi hằng ngày**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 목욕: sạch sẽ, riêng tư và sự quen thuộc với cơ thể
 
 Nhà tắm công cộng tách không gian theo giới và có giao thức khoả thân riêng. Ý nghĩa phụ thuộc khu vực; cùng mức độ lộ cơ thể ngoài bối cảnh có ý nghĩa hoàn toàn khác.
 
 Việc cơ thể lộ ra trong nhà tắm không có nghĩa xã hội “thoáng về cơ thể” ở mọi không gian. Chuẩn mực theo bối cảnh mới là biến chính.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **목욕: sạch sẽ, riêng tư và sự quen thuộc với cơ thể** đặt vấn đề; **미세먼지: dữ liệu môi trường trở thành hành vi hằng ngày** đối chiếu bằng chứng, rồi **황사 và 미세먼지** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 미세먼지: dữ liệu môi trường trở thành hành vi hằng ngày
 
@@ -311,15 +259,11 @@ cảm biến / báo cáo
 → nhu cầu máy lọc
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **미세먼지: dữ liệu môi trường trở thành hành vi hằng ngày** đặt vấn đề; **황사 và 미세먼지** đối chiếu bằng chứng, rồi **폭염 và 한파: thích nghi khí hậu cũng là văn hoá sức khoẻ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 황사 và 미세먼지
 
 `황사` là hiện tượng bụi có nguồn và quá trình khác `미세먼지`; trong lời nói hằng ngày đôi khi bị trộn vì cả hai đều làm chất lượng không khí xấu.
 
 Hiểu môi trường cần phân biệt nhóm để không biến mọi lớp mờ trong không khí thành cùng một nguyên nhân.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **폭염 và 한파: thích nghi khí hậu cũng là văn hoá sức khoẻ** nối từ **황사 và 미세먼지** sang **고령화 và y tế chăm sóc dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 폭염 và 한파: thích nghi khí hậu cũng là văn hoá sức khoẻ
 
@@ -327,23 +271,17 @@ Nắng nóng, mùa hè ẩm và mùa đông lạnh ảnh hưởng uống nước
 
 Chương [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md) đi sâu nhịp khí hậu.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **고령화 và y tế chăm sóc dài hạn** nối từ **폭염 và 한파: thích nghi khí hậu cũng là văn hoá sức khoẻ** sang **간병: lao động chăm sóc không phải “phần phụ” của y học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 고령화 và y tế chăm sóc dài hạn
 
 Già hoá làm bệnh mạn tính, đa thuốc, phục hồi chức năng và chăm sóc dài hạn trở nên trung tâm. Hệ thống y tế phải chuyển một phần từ xử lý bệnh cấp tính sang quản lý dài hạn.
 
 Gia đình cũng đổi vai trò: từ tự chăm hoàn toàn sang phối hợp bệnh viện, bảo hiểm, cơ sở dưỡng lão và dịch vụ chăm sóc tại nhà.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **간병: lao động chăm sóc không phải “phần phụ” của y học** nối từ **고령화 và y tế chăm sóc dài hạn** sang **장애와 접근성: khuyết tật không chỉ nằm trong cơ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 간병: lao động chăm sóc không phải “phần phụ” của y học
 
 `간병` và chăm sóc gồm ăn uống, di chuyển, vệ sinh, giám sát và hỗ trợ cảm xúc. Đây là lĩnh vực tốn lao động và khó tự động hoá hoàn toàn.
 
 Khi dân số già và gia đình nhỏ, lao động chăm sóc trở thành điểm nghẽn xã hội. Văn hoá sức khoẻ phải tính cả gánh nặng người chăm sóc, không chỉ tương tác bác sĩ–bệnh nhân.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **장애와 접근성: khuyết tật không chỉ nằm trong cơ thể** nối từ **간병: lao động chăm sóc không phải “phần phụ” của y học** sang **완화의료·호스피스: mục tiêu chăm sóc thay đổi khi chữa khỏi không còn là mục tiêu duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 장애와 접근성: khuyết tật không chỉ nằm trong cơ thể
 
@@ -372,8 +310,6 @@ số → đặt lịch, kiosk, ứng dụng, xác thực
 xã hội → được giao tiếp tôn trọng và không bị kỳ thị
 ```
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **완화의료·호스피스: mục tiêu chăm sóc thay đổi khi chữa khỏi không còn là mục tiêu duy nhất** nối từ **장애와 접근성: khuyết tật không chỉ nằm trong cơ thể** sang **연명의료 và việc nói trước về mong muốn cuối đời**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 완화의료·호스피스: mục tiêu chăm sóc thay đổi khi chữa khỏi không còn là mục tiêu duy nhất
 
 **Chăm sóc giảm nhẹ (완화의료 / palliative care)** tập trung giảm đau, khó chịu, căng thẳng và hỗ trợ chất lượng sống cho người mắc bệnh nghiêm trọng. **Hospice (호스피스)** thường liên quan giai đoạn cuối đời hơn, nhưng hai khái niệm không nên bị đồng nhất hoàn toàn.
@@ -390,8 +326,6 @@ kiểm soát triệu chứng
 
 Đây không phải lời khuyên điều trị cho cá nhân; quyết định cụ thể phải dựa trên đội ngũ y tế, pháp luật hiện hành và mong muốn của người bệnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **연명의료 và việc nói trước về mong muốn cuối đời** nối từ **완화의료·호스피스: mục tiêu chăm sóc thay đổi khi chữa khỏi không còn là mục tiêu duy nhất** sang **사별과 애도: chăm sóc không kết thúc ở thời điểm tử vong**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 연명의료 và việc nói trước về mong muốn cuối đời
 
 Các quyết định về điều trị duy trì sự sống dễ trở nên khó khăn nếu gia đình chỉ bắt đầu thảo luận khi bệnh nhân không còn khả năng giao tiếp. Vì vậy khái niệm **lập kế hoạch chăm sóc trước (advance care planning)** có giá trị như một cơ chế giảm bất định.
@@ -399,8 +333,6 @@ Các quyết định về điều trị duy trì sự sống dễ trở nên kh�
 Câu hỏi cốt lõi không phải “gia đình yêu người bệnh đến đâu” mà là: người bệnh muốn ưu tiên điều gì, ai có thẩm quyền quyết định, thông tin y khoa đã được hiểu chưa và lựa chọn pháp lý nào áp dụng trong trường hợp đó.
 
 Trong văn hoá gia đình coi trách nhiệm chăm sóc là giá trị lớn, việc lựa chọn giảm can thiệp có thể tạo cảm giác tội lỗi nếu bị hiểu sai thành “từ bỏ”. Do đó giao tiếp rõ giữa bệnh nhân, gia đình và đội ngũ y tế là một phần của chăm sóc chứ không phải chuyện phụ.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **사별과 애도: chăm sóc không kết thúc ở thời điểm tử vong** nối từ **연명의료 và việc nói trước về mong muốn cuối đời** sang **건강정보와 유튜브: dư thừa thông tin tạo vấn đề mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 사별과 애도: chăm sóc không kết thúc ở thời điểm tử vong
 
@@ -419,8 +351,6 @@ bệnh nặng
 
 Điều này nối trực tiếp chương gia đình và tang lễ [`04_family_kinship_gender_life_cycle.md`](04_family_kinship_gender_life_cycle.md).
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **건강정보와 유튜브: dư thừa thông tin tạo vấn đề mới** nối từ **사별과 애도: chăm sóc không kết thúc ở thời điểm tử vong** sang **의료 리뷰: chất lượng dịch vụ và chất lượng lâm sàng không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 건강정보와 유튜브: dư thừa thông tin tạo vấn đề mới
 
 Trước đây bệnh nhân thiếu thông tin; hiện nay vấn đề có thể là quá nhiều nội dung với chất lượng khác nhau. Thuật toán thưởng sự chú ý chứ không thưởng độ chính xác.
@@ -436,15 +366,11 @@ Khi đọc tuyên bố sức khoẻ trực tuyến, cần hỏi:
 
 **Năng lực số (digital literacy)** là một phần của năng lực sức khoẻ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **의료 리뷰: chất lượng dịch vụ và chất lượng lâm sàng không giống nhau** nối từ **건강정보와 유튜브: dư thừa thông tin tạo vấn đề mới** sang **Du lịch y tế và hình ảnh K-health toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 의료 리뷰: chất lượng dịch vụ và chất lượng lâm sàng không giống nhau
 
 Đánh giá của bệnh nhân có thể phản ánh thời gian chờ, thái độ, cách giải thích và độ sạch cơ sở. Nhưng đánh giá khó đo chất lượng quyết định lâm sàng vì bệnh nhân không nhìn thấy tình huống đối chứng.
 
 Một bác sĩ không kê kháng sinh không cần thiết có thể bị cảm nhận là “không cho thuốc”, trong khi quyết định y khoa lại phù hợp. Hài lòng dịch vụ và tính đúng của điều trị không đồng nhất.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Du lịch y tế và hình ảnh K-health toàn cầu** nối từ **의료 리뷰: chất lượng dịch vụ và chất lượng lâm sàng không giống nhau** sang **건강문해력: hiểu thông tin sức khoẻ không phải chỉ biết đọc chữ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Du lịch y tế và hình ảnh K-health toàn cầu
 
@@ -453,8 +379,6 @@ Da liễu, thủ thuật thẩm mỹ và khám sức khoẻ thu hút khách nư�
 Nhưng tiếp thị quốc tế không thay thế giấy phép, đồng thuận đầy đủ và bằng chứng chuyên môn.
 
 # Năng lực sức khoẻ và tính liên tục của chăm sóc
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **건강문해력: hiểu thông tin sức khoẻ không phải chỉ biết đọc chữ** nối từ **Du lịch y tế và hình ảnh K-health toàn cầu** sang **Xác nhận bằng cách yêu cầu người bệnh diễn đạt lại (teach-back)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 건강문해력: hiểu thông tin sức khoẻ không phải chỉ biết đọc chữ
 
@@ -471,8 +395,6 @@ tìm được thông tin
 
 Hệ thống y tế tốt không đẩy toàn bộ trách nhiệm sang bệnh nhân. Thiết kế biểu mẫu, ngôn ngữ đơn giản, nhắc lại thông tin và xác nhận người bệnh đã hiểu đều có thể giảm lỗi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Xác nhận bằng cách yêu cầu người bệnh diễn đạt lại (teach-back)** nối từ **건강문해력: hiểu thông tin sức khoẻ không phải chỉ biết đọc chữ** sang **Ra quyết định chung (shared decision-making): không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác nhận bằng cách yêu cầu người bệnh diễn đạt lại (teach-back)
 
 Một cách giao tiếp hữu ích là yêu cầu bệnh nhân diễn đạt lại kế hoạch bằng lời của mình. Mục tiêu không phải kiểm tra trí nhớ mà kiểm tra chất lượng truyền thông.
@@ -485,8 +407,6 @@ bác sĩ giải thích
 ```
 
 Điều này giống giao tiếp vòng kín trong công việc: thông tin chỉ hoàn tất khi bên nhận đã giải mã đúng, không phải khi bên gửi đã nói xong.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Ra quyết định chung (shared decision-making): không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”** nối từ **Xác nhận bằng cách yêu cầu người bệnh diễn đạt lại (teach-back)** sang **상대위험 và 절대위험: cách trình bày rủi ro có thể đổi cảm nhận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ra quyết định chung (shared decision-making): không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”
 
@@ -502,8 +422,6 @@ bằng chứng chuyên môn
 ```
 
 Tôn trọng chuyên môn không có nghĩa người bệnh không được hỏi; tự chủ bệnh nhân cũng không có nghĩa phải tự giải quyết mọi bất định mà không có hỗ trợ chuyên môn.
-
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **상대위험 và 절대위험: cách trình bày rủi ro có thể đổi cảm nhận** nối từ **Ra quyết định chung (shared decision-making): không chỉ là “bác sĩ chọn” hoặc “bệnh nhân tự chọn”** sang **진료연속성: bệnh mạn tính cần chuỗi chăm sóc chứ không phải các lần khám rời rạc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 상대위험 và 절대위험: cách trình bày rủi ro có thể đổi cảm nhận
 
@@ -521,8 +439,6 @@ rủi ro tuyệt đối giảm: 1 điểm phần trăm
 
 Hai con số đều đúng nhưng trả lời câu hỏi khác nhau. Năng lực sức khoẻ tốt cần hỏi cả **rủi ro tương đối (relative risk)** và **rủi ro tuyệt đối (absolute risk)** khi phù hợp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **상대위험 và 절대위험: cách trình bày rủi ro có thể đổi cảm nhận** đặt đầu vào cho **진료연속성: bệnh mạn tính cần chuỗi chăm sóc chứ không phải các lần khám rời rạc**, rồi **의뢰·회송: chuyển tuyến tốt cần cả chiều đi và chiều về** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 진료연속성: bệnh mạn tính cần chuỗi chăm sóc chứ không phải các lần khám rời rạc
 
 **Tính liên tục của chăm sóc (continuity of care)** quan trọng với tăng huyết áp, đái tháo đường, bệnh tim, sức khoẻ tinh thần và nhiều bệnh mạn tính. Một lần khám riêng lẻ có thể đúng, nhưng nếu mỗi lần ở một cơ sở khác và thông tin không nối được, kế hoạch dài hạn có thể bị đứt.
@@ -536,8 +452,6 @@ liên tục quan hệ → người bệnh có nơi quen để trao đổi theo t
 ```
 
 Không phải ai cũng cần một bác sĩ duy nhất cho mọi vấn đề, nhưng hệ thống phải tránh để người bệnh trở thành người duy nhất giữ toàn bộ trạng thái của mình.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **진료연속성: bệnh mạn tính cần chuỗi chăm sóc chứ không phải các lần khám rời rạc** đặt đầu vào cho **의뢰·회송: chuyển tuyến tốt cần cả chiều đi và chiều về**, rồi **복약조정: danh sách thuốc là một hệ thống trạng thái** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 의뢰·회송: chuyển tuyến tốt cần cả chiều đi và chiều về
 
@@ -556,8 +470,6 @@ cơ sở A
 
 Nếu vòng thông tin không khép kín, xét nghiệm có thể lặp, thuốc có thể xung đột và trách nhiệm theo dõi trở nên mơ hồ.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **복약조정: danh sách thuốc là một hệ thống trạng thái** nối từ **의뢰·회송: chuyển tuyến tốt cần cả chiều đi và chiều về** sang **퇴원: xuất viện là điểm chuyển giao rủi ro cao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 복약조정: danh sách thuốc là một hệ thống trạng thái
 
 Người cao tuổi hoặc người có nhiều bệnh có thể dùng thuốc từ nhiều khoa. **Đối chiếu thuốc (medication reconciliation)** là việc kiểm tra người bệnh thực sự đang dùng gì, liều nào, ai kê và có trùng hoặc tương tác không.
@@ -574,8 +486,6 @@ thuốc cũ
 
 Đây là ví dụ rõ về quản lý trạng thái trong y tế: lỗi có thể xuất hiện không phải vì từng bác sĩ “sai”, mà vì thông tin giữa các nút không đồng bộ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **퇴원: xuất viện là điểm chuyển giao rủi ro cao** nối từ **복약조정: danh sách thuốc là một hệ thống trạng thái** sang **환자안전: lỗi y tế thường là lỗi hệ thống nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 퇴원: xuất viện là điểm chuyển giao rủi ro cao
 
 Khi rời bệnh viện, môi trường chuyển từ nơi có nhân viên theo dõi liên tục sang nhà. Người bệnh và gia đình phải hiểu:
@@ -590,8 +500,6 @@ ai là đầu mối liên hệ
 ```
 
 Nếu hướng dẫn xuất viện dài nhưng khó hiểu, thông tin tồn tại trên giấy mà không trở thành hành động. Vì vậy chất lượng chuyển tiếp phụ thuộc cả nội dung lẫn khả năng hiểu.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **환자안전: lỗi y tế thường là lỗi hệ thống nhiều lớp** nối từ **퇴원: xuất viện là điểm chuyển giao rủi ro cao** sang **외국인 환자: ngôn ngữ và hệ thống hành chính có thể trở thành rủi ro lâm sàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 환자안전: lỗi y tế thường là lỗi hệ thống nhiều lớp
 
@@ -609,8 +517,6 @@ lỗi nhỏ ở lớp 1
 
 Vì vậy cải tiến an toàn thường tập trung vào thiết kế quy trình chứ không chỉ yêu cầu cá nhân “chú ý hơn”.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **외국인 환자: ngôn ngữ và hệ thống hành chính có thể trở thành rủi ro lâm sàng** nối từ **환자안전: lỗi y tế thường là lỗi hệ thống nhiều lớp** sang **만성질환 관리: quản lý bệnh mạn tính là công việc lặp lại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 외국인 환자: ngôn ngữ và hệ thống hành chính có thể trở thành rủi ro lâm sàng
 
 Với người nước ngoài, khó khăn không chỉ là dịch tên bệnh. Cách mô tả triệu chứng, tiền sử, dị ứng, thuốc đang dùng và mức độ đau có thể bị mất nghĩa khi chuyển ngôn ngữ.
@@ -626,8 +532,6 @@ dịch hội thoại thông thường
 ```
 
 Sai nghĩa ở y tế có thể ảnh hưởng an toàn, nên những tình huống quan trọng cần ưu tiên cách giao tiếp rõ và xác nhận lại thay vì chỉ dựa vào đoán ngữ cảnh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **만성질환 관리: quản lý bệnh mạn tính là công việc lặp lại** nối từ **외국인 환자: ngôn ngữ và hệ thống hành chính có thể trở thành rủi ro lâm sàng** sang **Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 만성질환 관리: quản lý bệnh mạn tính là công việc lặp lại
 
@@ -645,8 +549,6 @@ Khó khăn lớn không chỉ là biết “phải làm gì”, mà là duy trì
 
 Vì vậy tuân thủ điều trị không nên bị giải thích đơn giản bằng “ý chí”. Thiết kế lịch, nhắc thuốc, đơn giản hoá phác đồ và hỗ trợ gia đình có thể thay đổi kết quả.
 
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp** nối từ **만성질환 관리: quản lý bệnh mạn tính là công việc lặp lại** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp
 
 Một quyết định sức khoẻ có thể đọc qua sáu lớp:
@@ -662,13 +564,9 @@ Văn hoá: triệu chứng, chăm sóc và quyết định được hiểu/giao 
 
 Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khác, ví dụ dùng “truyền thống lâu đời” để chứng minh hiệu quả, hoặc dùng “nghiên cứu cho thấy có tác dụng” để suy rằng mọi người bắt buộc phải thích can thiệp đó.
 
-> **Nối mạch:** Ở chặng này của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ kiến thức: y tế như hệ thống quyết định nhiều lớp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Văn hoá sức khoẻ Hàn Quốc là đầu ra của **cơ thể + bảo hiểm/khả năng tiếp cận + mạng cơ sở y tế + môi trường vật lý/số + tính liên tục thông tin + kỳ vọng gia đình + thị trường tiêu dùng + thông tin số**. Đừng chỉ hỏi “đi đâu chữa bệnh?”. Hãy hỏi thông tin có đi cùng người bệnh không, ai đang giữ kế hoạch dài hạn, người bệnh có hiểu lựa chọn và rủi ro không, và điểm chuyển giao nào dễ làm trạng thái bị mất.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Hiểu lầm phổ biến (common misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn tham khảo định hướng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiểu lầm phổ biến (common misconceptions)
 
@@ -693,8 +591,6 @@ Sai lầm xảy ra khi dùng một lớp trả lời câu hỏi của lớp khá
 “Đi nhiều chuyên khoa nghĩa là chăm sóc chắc chắn tốt hơn” bỏ qua nguy cơ mất tính liên tục, trùng xét nghiệm và xung đột thuốc.
 
 “Tuân thủ điều trị chỉ phụ thuộc ý chí bệnh nhân” bỏ qua lịch sống, chi phí, độ phức tạp của phác đồ và chất lượng hỗ trợ.
-
-> **Nối mạch:** Trong **Y tế, chăm sóc cơ thể và văn hoá sức khoẻ**, **Hiểu lầm phổ biến (common misconceptions)** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

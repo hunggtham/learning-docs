@@ -15,15 +15,11 @@ multi writer  → conflict resolution → converge/compensate
 
 Giải quyết xung đột (conflict resolution / 충돌 해결) có thể là last-write-wins, phiên bản (version / 버전) véc-tơ (vector / 벡터), field-level merge hoặc lĩnh vực (domain / 도메인) command. Clock wall-time không đủ đáng tin nếu clock skew có thể đảo thứ tự sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** **Topology và authority** xác định nơi dữ liệu được ghi và ai có quyền; **Replication lag** đo độ trễ của quyết định đó, trước khi **RPO/RTO và failover** chọn cách chịu lỗi.
-
 ## 2. Replication lag
 
 Lag có thể đo theo nguồn (source / 소스) position, sự kiện (event / 이벤트) thời gian (time / 시간) hoặc lần ghi nhận (commit / 커밋) timestamp. Read-after-write guarantee cần biết yêu cầu (request / 요청) đọc ở region nào và replica đã bắt kịp position nào. Dashboard đọc cục bộ (local / 로컬) replica có thể stale dù replication job không báo lỗi.
 
 SLO nên tách p50/p99 lag, maximum staleness và khôi phục (recovery / 복구) catch-up thời gian (time / 시간). Average lag che giấu một partition/tenant bị kẹt.
-
-> **Chuyển mạch:** Khi lag đã được lượng hóa, **RPO/RTO và failover** biến nó thành recovery contract; **Residency và purpose limitation** tiếp tục kiểm tra recovery có hợp lệ với nơi và mục đích dùng dữ liệu không.
 
 ## 3. RPO/RTO và failover
 
@@ -31,21 +27,15 @@ RPO trả lời mất tối đa bao nhiêu dữ liệu; RTO trả lời phục h
 
 Runbook cần fencing primary cũ để tránh split-brain. Sau failover, ghi tiếp vào đâu, replay khoảng nào, và merge/correction đầu ra (output / 출력) thế nào phải được định nghĩa trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **3. RPO/RTO và failover** đã nêu tiêu chí phân biệt, còn **4. Residency và purpose limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Residency và purpose limitation
 
 Dữ liệu (data / 데이터) residency có thể yêu cầu raw PII ở một quốc gia nhưng aggregate đã anonymize được phục vụ toàn cầu. Replication chính sách (policy / 정책) phải gắn với trường dữ liệu (field / 필드) classification và purpose, không chỉ cơ sở dữ liệu (database / 데이터베이스) name.
 
 Siêu dữ liệu (metadata / 메타데이터), logs, backups, caches và hỗ trợ (support / 지원) exports cũng có thể chứa dữ liệu nhạy cảm. “Không replicate bảng (table / 테이블)” chưa đủ nếu CDC log hoặc khả năng quan sát (observability / 관측 가능성) payload vẫn vượt region ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **14 — Multi-region, replication và dữ liệu (data / 데이터) residency**, **4. Residency và purpose limitation** đã nêu tiêu chí phân biệt, còn **5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 5. bằng chứng (evidence / 증거) và kiểm thử (test / 테스트)
 
 Bằng chứng (evidence / 증거) gồm replication position, lag histogram, failover timestamp, fenced writer, đầu ra (output / 출력) reconciliation và residency kiểm tra (audit / 감사). kiểm thử (test / 테스트) định kỳ phải mô phỏng region mất mạng, stale replica, duplicate replay và clock skew.
-
-> **Chuyển mạch:** **Evidence và test** xác nhận topology, lag và recovery bằng số đo; **Trade-off** dùng số đo đó để cân latency, cost, residency và availability.
 
 ## 6. sự đánh đổi (trade-off / 트레이드오프)
 

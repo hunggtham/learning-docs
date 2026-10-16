@@ -27,8 +27,6 @@ Bất biến lô-gic (logic / 논리):
 
 Đây là lý do hàng đợi (queue / 큐) phù hợp với yêu cầu (request / 요청) arrival thứ tự (order / 순서), sự kiện (event / 이벤트) processing, producer–bên tiêu thụ (consumer / 소비자) chuỗi xử lý (pipeline / 파이프라인) và BFS.
 
-> **Nối mạch:** **Vì sao BFS cần FIFO?** nối từ **Hàng đợi (queue / 큐) và nguyên tắc FIFO** sang **Hàng đợi (queue / 큐) API cũng là một đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao BFS cần FIFO?
 
 Trong đồ thị (graph / 그래프) không trọng số, mỗi cạnh tăng độ dài đường đi thêm đúng 1. Khi BFS lấy một nút (node / 노드) có distance `d`, các nút (node / 노드) đã được discover trước nó có distance không lớn hơn `d`; các neighbor mới được thêm với distance `d+1`.
@@ -38,8 +36,6 @@ FIFO bảo đảm frontier được xử lý theo lớp khoảng cách không gi
 Nếu thay hàng đợi (queue / 큐) bằng ngăn xếp (stack / 스택), ta có DFS và mất shortest-path guarantee theo số cạnh. Nếu thay bằng min-heap theo weight, ta chuyển sang một chính sách (policy / 정책) gần Dijkstra.
 
 Do đó cấu trúc frontier không phải chi tiết hiện thực (implementation / 구현); nó là một phần của proof.
-
-> **Nối mạch:** **Hàng đợi (queue / 큐) API cũng là một đặc tả hợp đồng (contract / 계약)** nối từ **Vì sao BFS cần FIFO?** sang **Vì sao shift mảng là thiết kế hàng đợi (queue / 큐) kém?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàng đợi (queue / 큐) API cũng là một đặc tả hợp đồng (contract / 계약)
 
@@ -64,8 +60,6 @@ bool queue_pop(Queue *q, Item *out);
 ```
 
 thay vì dùng magic sentinel có thể trùng dữ liệu thật.
-
-> **Nối mạch:** **Vì sao shift mảng là thiết kế hàng đợi (queue / 큐) kém?** nối từ **Hàng đợi (queue / 큐) API cũng là một đặc tả hợp đồng (contract / 계약)** sang **Ring buffer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao shift mảng là thiết kế hàng đợi (queue / 큐) kém?
 
@@ -98,8 +92,6 @@ class Queue {
 ```
 
 Head-index tránh shift mỗi thao tác (operation / 연산), nhưng cần compaction nếu thời gian chạy (runtime / 런타임) vẫn giữ references cũ trong backing array quá lâu.
-
-> **Nối mạch:** **Ring buffer** nối từ **Vì sao shift mảng là thiết kế hàng đợi (queue / 큐) kém?** sang **Nhiều convention của ring buffer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ring buffer
 
@@ -138,8 +130,6 @@ phần tử logic thứ i nằm tại (head + i) mod cap
 
 Dùng `size` giúp phân biệt rõ trạng thái rỗng và đầy khi `head == tail`.
 
-> **Nối mạch:** **Nhiều convention của ring buffer** nối từ **Ring buffer** sang **Sức chứa (capacity / 용량) là lũy thừa của hai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiều convention của ring buffer
 
 Có ít nhất ba cách phổ biến:
@@ -160,8 +150,6 @@ tail trỏ phần tử cuối hay slot trống kế tiếp?
 full được nhận biết bằng gì?
 ```
 
-> **Nối mạch:** **Sức chứa (capacity / 용량) là lũy thừa của hai** nối từ **Nhiều convention của ring buffer** sang **Bounded hàng đợi (queue / 큐) và overload chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sức chứa (capacity / 용량) là lũy thừa của hai
 
 Nếu `capacity = 2^k`, phép wrap có thể dùng:
@@ -175,8 +163,6 @@ thay modulo.
 Nhưng tối ưu này chỉ đúng nếu bất biến (invariant / 불변식) “sức chứa (capacity / 용량) luôn là lũy thừa của hai” được giữ qua mọi resize.
 
 Đây là mẫu chung: tối ưu hóa (optimization / 최적화) bit-level thường tạo thêm một bất biến (invariant / 불변식) cấu trúc.
-
-> **Nối mạch:** **Bounded hàng đợi (queue / 큐) và overload chính sách (policy / 정책)** nối từ **Sức chứa (capacity / 용량) là lũy thừa của hai** sang **Hàng đợi (queue / 큐) không chữa được thông lượng (throughput / 처리량) deficit dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bounded hàng đợi (queue / 큐) và overload chính sách (policy / 정책)
 
@@ -194,8 +180,6 @@ scale consumer
 
 Đây không còn là chuyện bộ chứa (container / 컨테이너) thuần túy; nó trở thành chính sách (policy / 정책) về độ tin cậy (reliability / 신뢰성) và backpressure.
 
-> **Nối mạch:** **Hàng đợi (queue / 큐) không chữa được thông lượng (throughput / 처리량) deficit dài hạn** nối từ **Bounded hàng đợi (queue / 큐) và overload chính sách (policy / 정책)** sang **Little's Law**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi (queue / 큐) không chữa được thông lượng (throughput / 처리량) deficit dài hạn
 
 Giả sử tốc độ đến trung bình là `λ` và tốc độ xử lý trung bình là `μ`.
@@ -211,8 +195,6 @@ thì hàng đợi (queue / 큐) có xu hướng dài ra. hàng đợi (queue / �
 Mô hình tư duy:
 
 > hàng đợi (queue / 큐) hấp thụ burst ngắn hạn; nó không tạo thêm năng lực xử lý dài hạn.
-
-> **Nối mạch:** **Little's Law** nối từ **Hàng đợi (queue / 큐) không chữa được thông lượng (throughput / 처리량) deficit dài hạn** sang **Hàng đợi (queue / 큐) và batching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Little's Law
 
@@ -234,8 +216,6 @@ Nếu thông lượng (throughput / 처리량) không đổi mà hàng đợi (q
 
 Tăng sức chứa (capacity / 용량) không tự giảm độ trễ (latency / 지연 시간); nó chỉ cho phép nhiều item chờ hơn.
 
-> **Nối mạch:** **Hàng đợi (queue / 큐) và batching** nối từ **Little's Law** sang **Deque**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi (queue / 큐) và batching
 
 Một bên tiêu thụ (consumer / 소비자) có thể xử lý từng item hoặc gom batch.
@@ -250,8 +230,6 @@ batch nhỏ -> latency tốt hơn, overhead trên mỗi item cao hơn
 ```
 
 Hàng đợi (queue / 큐) là nơi chính sách (policy / 정책) batching thường được thực hiện.
-
-> **Nối mạch:** **Deque** nối từ **Hàng đợi (queue / 큐) và batching** sang **Deque bằng ring buffer động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deque
 
@@ -268,8 +246,6 @@ peekBack
 
 Deque có thể dùng như ngăn xếp (stack / 스택) hoặc hàng đợi (queue / 큐), nhưng sức mạnh thật xuất hiện khi thuật toán cần hai đầu với vai trò khác nhau.
 
-> **Nối mạch:** **Deque bằng ring buffer động** nối từ **Deque** sang **Monotonic deque**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Deque bằng ring buffer động
 
 Một array deque thường dùng ring buffer có thể resize.
@@ -283,8 +259,6 @@ Về lô-gic (logic / 논리), chuỗi (sequence / 시퀀스) là liên tục. V
 Resize phải bản sao (copy / 복사) theo **thứ tự lô-gic (logic / 논리)**, không phải đơn giản bản sao (copy / 복사) vùng nhớ từ chỉ mục (index / 인덱스) 0 tới cuối.
 
 Đây là một ví dụ biểu diễn (representation / 표현) vật lý khác với thứ tự lớp trừu tượng (abstraction / 추상화).
-
-> **Nối mạch:** **Monotonic deque** nối từ **Deque bằng ring buffer động** sang **Dominance trong monotonic deque**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Monotonic deque
 
@@ -329,8 +303,6 @@ Mỗi chỉ mục (index / 인덱스) vào deque một lần và ra tối đa m�
 
 Inner `while` không làm thuật toán `O(n²)` vì tổng số pop bị chặn tuyến tính.
 
-> **Nối mạch:** **Dominance trong monotonic deque** nối từ **Monotonic deque** sang **0–1 BFS**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dominance trong monotonic deque
 
 Monotonic deque chỉ giữ các candidate chưa bị **chi phối (dominated)**.
@@ -352,8 +324,6 @@ Do đó `j` có thể bị loại vĩnh viễn.
 
 Đây là một ví dụ rất rõ của trạng thái (state / 상태) pruning bằng dominance.
 
-> **Nối mạch:** **0–1 BFS** nối từ **Dominance trong monotonic deque** sang **Priority hàng đợi (queue / 큐) là ADT, vùng nhớ động (heap / 힙) chỉ là hiện thực (implementation / 구현) phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 0–1 BFS
 
 Nếu edge weight chỉ là `0` hoặc `1`, ta không cần full Priority hàng đợi (queue / 큐).
@@ -374,8 +344,6 @@ O(V+E)
 trong biểu diễn (representation / 표현) adjacency danh sách (list / 목록).
 
 0–1 BFS cho thấy selection chính sách (policy / 정책) có thể được chuyên biệt khi miền priority bị giới hạn.
-
-> **Nối mạch:** **Priority hàng đợi (queue / 큐) là ADT, vùng nhớ động (heap / 힙) chỉ là hiện thực (implementation / 구현) phổ biến** nối từ **0–1 BFS** sang **Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) và shape bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Priority hàng đợi (queue / 큐) là ADT, vùng nhớ động (heap / 힙) chỉ là hiện thực (implementation / 구현) phổ biến
 
@@ -401,8 +369,6 @@ specialized calendar/event structure
 
 Không nên đồng nhất Priority hàng đợi (queue / 큐) với nhị phân (binary / 이진) vùng nhớ động (heap / 힙).
 
-> **Nối mạch:** **Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) và shape bất biến (invariant / 불변식)** nối từ **Priority hàng đợi (queue / 큐) là ADT, vùng nhớ động (heap / 힙) chỉ là hiện thực (implementation / 구현) phổ biến** sang **Bản dựng (build / 빌드) vùng nhớ động (heap / 힙) là O(n), không phải O(n log n)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) và shape bất biến (invariant / 불변식)
 
 Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) thường dùng mảng. Với zero-based chỉ mục (index / 인덱스):
@@ -424,8 +390,6 @@ Insert giữ shape bằng cách thêm cuối, rồi sift-up sửa thứ tự (or
 
 Một mutation chỉ phá thứ tự (order / 순서) trên một đường, nên không cần xây lại toàn vùng nhớ động (heap / 힙).
 
-> **Nối mạch:** **Bản dựng (build / 빌드) vùng nhớ động (heap / 힙) là O(n), không phải O(n log n)** nối từ **Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) và shape bất biến (invariant / 불변식)** sang **Priority hàng đợi (queue / 큐) và tie-breaking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bản dựng (build / 빌드) vùng nhớ động (heap / 힙) là O(n), không phải O(n log n)
 
 Nếu insert từng phần tử một, tổng có thể `O(n log n)`.
@@ -435,8 +399,6 @@ Nhưng bottom-up heapify gọi sift-down từ các nội bộ (internal / 내부
 Trực giác: phần lớn nút (node / 노드) nằm gần lá và chỉ có thể đi xuống rất ít bước. Chỉ rất ít nút (node / 노드) ở gần gốc (root / 루트) có chiều cao lớn.
 
 Đây là ví dụ cần phân tích tổng chi phí (cost / 비용) theo độ cao của nút (node / 노드) thay vì nhân “n nút (node / 노드) × log n” một cách thô.
-
-> **Nối mạch:** **Priority hàng đợi (queue / 큐) và tie-breaking** nối từ **Bản dựng (build / 빌드) vùng nhớ động (heap / 힙) là O(n), không phải O(n log n)** sang **Mutable priority là một bẫy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Priority hàng đợi (queue / 큐) và tie-breaking
 
@@ -453,8 +415,6 @@ Ví dụ scheduler:
 Nếu hai item có cùng priority nhưng nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론) yêu cầu FIFO, cần chuỗi (sequence / 시퀀스) number để làm tie-breaker.
 
 Vùng nhớ vùng nhớ động (heap / 힙) bản thân không cam kết stable thứ tự (order / 순서) giữa các key bằng nhau.
-
-> **Nối mạch:** **Priority hàng đợi (queue / 큐) và tie-breaking** đặt tiêu chí; **Mutable priority là một bẫy** dùng nó để kiểm tra ranh giới, rồi **Lazy deletion trong Dijkstra** mở rộng hệ quả.
 
 ## Mutable priority là một bẫy
 
@@ -477,8 +437,6 @@ chèn state mới và bỏ stale state khi pop
 ```
 
 Dijkstra trong thư viện chuẩn thường dùng lựa chọn thứ ba vì `PriorityQueue` không cung cấp decrease-key trực tiếp.
-
-> **Nối mạch:** **Mutable priority là một bẫy** đặt tiêu chí; **Lazy deletion trong Dijkstra** dùng nó để kiểm tra ranh giới, rồi **Indexed vùng nhớ động (heap / 힙)** mở rộng hệ quả.
 
 ## Lazy deletion trong Dijkstra
 
@@ -504,8 +462,6 @@ heap có thể lớn hơn
 nhiều stale entry hơn
 ```
 
-> **Nối mạch:** **Indexed vùng nhớ động (heap / 힙)** nối từ **Lazy deletion trong Dijkstra** sang **d-ary vùng nhớ động (heap / 힙)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Indexed vùng nhớ động (heap / 힙)
 
 Nếu cần `decreaseKey` thật sự, có thể lưu:
@@ -525,8 +481,6 @@ position[heap[i]] == i
 
 Indexed vùng nhớ động (heap / 힙) giảm duplicate entry nhưng hiện thực (implementation / 구현) phức tạp hơn đáng kể.
 
-> **Nối mạch:** **d-ary vùng nhớ động (heap / 힙)** nối từ **Indexed vùng nhớ động (heap / 힙)** sang **Bucket hàng đợi (queue / 큐)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## d-ary vùng nhớ động (heap / 힙)
 
 Nhị phân (binary / 이진) vùng nhớ động (heap / 힙) có 2 child mỗi nút (node / 노드). **d-ary vùng nhớ động (heap / 힙)** có `d` child.
@@ -543,8 +497,6 @@ Sự đánh đổi (trade-off / 트레이드오프) này có thể hữu ích kh
 
 Không có `d` tối ưu chung cho mọi hệ thống.
 
-> **Nối mạch:** **Bucket hàng đợi (queue / 큐)** nối từ **d-ary vùng nhớ động (heap / 힙)** sang **Dial's thuật toán (algorithm / 알고리즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bucket hàng đợi (queue / 큐)
 
 Nếu priority là integer trong miền nhỏ, có thể dùng array các bucket thay vì vùng nhớ động (heap / 힙).
@@ -559,8 +511,6 @@ Nếu miền priority nhỏ hoặc hiện tại (current / 현재) minimum tăng
 
 Đây là tư duy giống Counting Sort: khai thác miền khóa hẹp để bỏ comparison cây (tree / 트리) tổng quát.
 
-> **Nối mạch:** **Dial's thuật toán (algorithm / 알고리즘)** nối từ **Bucket hàng đợi (queue / 큐)** sang **Radix vùng nhớ động (heap / 힙)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dial's thuật toán (algorithm / 알고리즘)
 
 Với shortest đường dẫn (path / 경로) có non-negative integer weights bị chặn nhỏ, có thể dùng bucket theo distance modulo/phạm vi (range / 범위) thay vì vùng nhớ động (heap / 힙) tổng quát.
@@ -571,8 +521,6 @@ Bài học:
 
 > Khi priority có thêm cấu trúc (structure / 구조), Priority hàng đợi (queue / 큐) tổng quát có thể chưa phải lựa chọn tốt nhất.
 
-> **Nối mạch:** **Radix vùng nhớ động (heap / 힙)** nối từ **Dial's thuật toán (algorithm / 알고리즘)** sang **Priority hàng đợi (queue / 큐) trong sự kiện (event / 이벤트) simulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Radix vùng nhớ động (heap / 힙)
 
 Radix vùng nhớ động (heap / 힙) khai thác priority integer không giảm theo các lần extract-min và nhóm key theo bit-length của khoảng cách tới last extracted key.
@@ -580,8 +528,6 @@ Radix vùng nhớ động (heap / 힙) khai thác priority integer không giảm
 Nó là ví dụ nâng cao cho việc dùng biểu diễn (representation / 표현) bit của priority để giảm chi phí so với comparison vùng nhớ động (heap / 힙) trong một số shortest-path tải công việc (workload / 워크로드).
 
 Không cần dùng thường xuyên, nhưng đáng hiểu để thấy “vùng nhớ động (heap / 힙)” không phải giới hạn cuối của Priority hàng đợi (queue / 큐).
-
-> **Nối mạch:** **Priority hàng đợi (queue / 큐) trong sự kiện (event / 이벤트) simulation** nối từ **Radix vùng nhớ động (heap / 힙)** sang **Scheduler và starvation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Priority hàng đợi (queue / 큐) trong sự kiện (event / 이벤트) simulation
 
@@ -597,8 +543,6 @@ Lấy sự kiện (event / 이벤트) sớm nhất, chạy nó, rồi có thể 
 
 Nếu cùng timestamp, chuỗi (sequence / 시퀀스) number có thể bảo đảm deterministic thứ tự (order / 순서).
 
-> **Nối mạch:** **Scheduler và starvation** nối từ **Priority hàng đợi (queue / 큐) trong sự kiện (event / 이벤트) simulation** sang **Multi-level hàng đợi (queue / 큐)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Scheduler và starvation
 
 Nếu luôn ưu tiên tác vụ (task / 작업) priority cao, tác vụ (task / 작업) thấp có thể không bao giờ được chạy nếu dòng tác vụ (task / 작업) cao liên tục tới. Đây là **starvation**.
@@ -606,8 +550,6 @@ Nếu luôn ưu tiên tác vụ (task / 작업) priority cao, tác vụ (task / 
 Một scheduler thực tế có thể dùng **aging**: priority hiệu dụng của tác vụ (task / 작업) tăng theo thời gian chờ.
 
 Điều này cho thấy priority chính sách (policy / 정책) không chỉ ảnh hưởng hiệu năng (performance / 성능) mà còn fairness.
-
-> **Nối mạch:** **Multi-level hàng đợi (queue / 큐)** nối từ **Scheduler và starvation** sang **Work-stealing deque**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-level hàng đợi (queue / 큐)
 
@@ -622,8 +564,6 @@ background queue
 Scheduler chọn giữa các hàng đợi (queue / 큐) theo chính sách (policy / 정책) riêng.
 
 Đây là composition: mỗi hàng đợi (queue / 큐) bên trong có FIFO, còn hệ thống tổng thể có selection chính sách (policy / 정책) hai tầng.
-
-> **Nối mạch:** **Work-stealing deque** nối từ **Multi-level hàng đợi (queue / 큐)** sang **SPSC, MPSC, MPMC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Work-stealing deque
 
@@ -640,8 +580,6 @@ Mục tiêu là giảm contention ở dùng chung (common / 공통) trường h�
 
 Tính đúng đắn (correctness / 정확성) concurrent của work-stealing deque phức tạp hơn deque single-thread rất nhiều vì phải xử lý atomicity và bộ nhớ (memory / 메모리) thứ tự (ordering / 순서).
 
-> **Nối mạch:** **SPSC, MPSC, MPMC** nối từ **Work-stealing deque** sang **Lock-free không có nghĩa wait-free**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## SPSC, MPSC, MPMC
 
 Concurrent hàng đợi (queue / 큐) thường được phân loại theo số producer/bên tiêu thụ (consumer / 소비자):
@@ -657,8 +595,6 @@ SPSC ring buffer có thể rất đơn giản vì producer và bên tiêu thụ 
 
 Không nên dùng độ phức tạp (complexity / 복잡도) của hàng đợi (queue / 큐) single-thread để suy ra chi phí concurrent hàng đợi (queue / 큐).
 
-> **Nối mạch:** **Lock-free không có nghĩa wait-free** nối từ **SPSC, MPSC, MPMC** sang **Bộ nhớ (memory / 메모리) reclamation trong concurrent hàng đợi (queue / 큐)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lock-free không có nghĩa wait-free
 
 **Lock-free** thường bảo đảm toàn hệ thống có tiến triển: trong hữu hạn bước, một luồng thực thi (thread / 스레드) nào đó hoàn thành thao tác (operation / 연산).
@@ -668,8 +604,6 @@ Không nên dùng độ phức tạp (complexity / 복잡도) của hàng đợi
 Một lock-free hàng đợi (queue / 큐) vẫn có thể khiến một luồng thực thi (thread / 스레드) cụ thể thử lại (retry / 재시도) nhiều lần dưới contention.
 
 Đây là các guarantee về progress, khác với Big-O tuần tự.
-
-> **Nối mạch:** **Bộ nhớ (memory / 메모리) reclamation trong concurrent hàng đợi (queue / 큐)** nối từ **Lock-free không có nghĩa wait-free** sang **Hàng đợi (queue / 큐) và bộ nhớ (memory / 메모리) retention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) reclamation trong concurrent hàng đợi (queue / 큐)
 
@@ -685,8 +619,6 @@ reference counting trong một số thiết kế
 
 Điều này cho thấy thời gian tồn tại (lifetime / 수명) management là một phần của tính đúng đắn (correctness / 정확성) concurrent.
 
-> **Nối mạch:** **Hàng đợi (queue / 큐) và bộ nhớ (memory / 메모리) retention** nối từ **Bộ nhớ (memory / 메모리) reclamation trong concurrent hàng đợi (queue / 큐)** sang **Khi hàng đợi (queue / 큐) quá dài: độ trễ (latency / 지연 시간) phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hàng đợi (queue / 큐) và bộ nhớ (memory / 메모리) retention
 
 Trong Java/JavaScript, hàng đợi (queue / 큐) tự cài đặt bằng array + head chỉ mục (index / 인덱스) có thể giữ tham chiếu (reference / 참조) tới các item đã dequeue nếu không đặt slot cũ về `null`/`undefined` hoặc compact tùy biểu diễn (representation / 표현).
@@ -694,8 +626,6 @@ Trong Java/JavaScript, hàng đợi (queue / 큐) tự cài đặt bằng array 
 Về lô-gic (logic / 논리) item đã ra khỏi hàng đợi (queue / 큐), nhưng GC vẫn thấy tham chiếu (reference / 참조) từ backing array.
 
 Do đó logical kích thước (size / 크기) và reachable bộ nhớ (memory / 메모리) không luôn giống nhau.
-
-> **Nối mạch:** **Khi hàng đợi (queue / 큐) quá dài: độ trễ (latency / 지연 시간) phân phối (distribution / 분포)** nối từ **Hàng đợi (queue / 큐) và bộ nhớ (memory / 메모리) retention** sang **Chọn cấu trúc theo selection chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi hàng đợi (queue / 큐) quá dài: độ trễ (latency / 지연 시간) phân phối (distribution / 분포)
 
@@ -713,8 +643,6 @@ arrival burstiness
 
 Hàng đợi (queue / 큐) là một cấu trúc dữ liệu nhưng cũng là một điểm đo sức khỏe hệ thống.
 
-> **Nối mạch:** **Chọn cấu trúc theo selection chính sách (policy / 정책)** nối từ **Khi hàng đợi (queue / 큐) quá dài: độ trễ (latency / 지연 시간) phân phối (distribution / 분포)** sang **Kiểm thử hàng đợi (queue / 큐) và deque**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chọn cấu trúc theo selection chính sách (policy / 정책)
 
 Có thể nhìn nhiều thuật toán dưới một khung:
@@ -729,8 +657,6 @@ Bucket Queue   -> chọn theo lớp priority rời rạc
 ```
 
 Khi đổi chính sách (policy / 정책) của frontier, ta thường đổi cả ngữ nghĩa (semantics / 의미론) của thuật toán.
-
-> **Nối mạch:** **Kiểm thử hàng đợi (queue / 큐) và deque** nối từ **Chọn cấu trúc theo selection chính sách (policy / 정책)** sang **Kiểm thử Priority hàng đợi (queue / 큐)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm thử hàng đợi (queue / 큐) và deque
 
@@ -754,8 +680,6 @@ mixed operations so với reference deque
 
 Random differential kiểm thử (test / 테스트) rất hiệu quả cho ring-buffer bugs.
 
-> **Nối mạch:** **Kiểm thử Priority hàng đợi (queue / 큐)** nối từ **Kiểm thử hàng đợi (queue / 큐) và deque** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiểm thử Priority hàng đợi (queue / 큐)
 
 Có thể push random values rồi pop hết và kiểm tra đầu ra (output / 출력) đã sorted theo comparator.
@@ -770,8 +694,6 @@ size và active set nhất quán
 
 Với lazy deletion, cần kiểm thử (test / 테스트) nhiều stale entries và bảo đảm stale trạng thái (state / 상태) không được dùng để relax tiếp.
 
-> **Nối mạch:** **Những hiểu lầm phổ biến** nối từ **Kiểm thử Priority hàng đợi (queue / 큐)** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Những hiểu lầm phổ biến
 
 “hàng đợi (queue / 큐) chỉ là mảng có push/shift” — `shift` lặp lại có thể rất đắt.
@@ -785,8 +707,6 @@ Với lazy deletion, cần kiểm thử (test / 테스트) nhiều stale entries
 “Inner while trong monotonic deque làm O(n²)” — sai vì mỗi chỉ mục (index / 인덱스) bị loại tối đa một lần.
 
 “Concurrent hàng đợi (queue / 큐) chỉ cần thêm khóa (lock / 잠금) vào enqueue/dequeue” — chưa đủ để nói về thông lượng (throughput / 처리량), fairness, blocking ngữ nghĩa (semantics / 의미론) và iteration đặc tả hợp đồng (contract / 계약).
-
-> **Nối mạch:** **Hàng đợi (queue / 큐), Deque và hàng đợi ưu tiên**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

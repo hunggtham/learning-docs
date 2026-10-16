@@ -42,8 +42,6 @@ sau `n` doublings:
 
 Đây là cấu trúc (structure / 구조) phía sau compound interest, population các mô hình (models / 모델들), nhị phân (binary / 이진) trees và many divide/multiply processes.
 
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **2. Vì sao exponent laws tồn tại?** nối từ **1. Từ repeated addition đến repeated multiplication** sang **3. Tại sao exponent 0 bằng 1?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Vì sao exponent laws tồn tại?
 
 Với positive integers:
@@ -68,8 +66,6 @@ vì ta lặp một sản phẩm (product / 제품) có `m` factors tổng cộng
 
 Các exponent laws không nên được học như bảng rules; chúng đến từ counting multiplicative factors.
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **3. Tại sao exponent 0 bằng 1?** nối từ **2. Vì sao exponent laws tồn tại?** sang **4. Negative exponents là inverse scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Tại sao exponent 0 bằng 1?
 
 Ta muốn law
@@ -93,8 +89,6 @@ b^0=1,\qquad b\ne0.
 ```
 
 Đây là consistency extension: definition của exponent được mở rộng để giữ algebraic cấu trúc (structure / 구조).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **4. Negative exponents là inverse scaling** nối từ **3. Tại sao exponent 0 bằng 1?** sang **5. Fractional exponents và roots**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Negative exponents là inverse scaling
 
@@ -126,8 +120,6 @@ Ví dụ:
 
 Scientific notation dựa trực tiếp trên idea này.
 
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **5. Fractional exponents và roots** nối từ **4. Negative exponents là inverse scaling** sang **6. Exponential hàm (function / 함수) khác polynomial growth như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Fractional exponents và roots
 
 Ta muốn
@@ -154,8 +146,6 @@ Với real numbers, lĩnh vực (domain / 도메인) cần cẩn thận: even g�
 
 Fractional exponents vì vậy nối number các hệ thống (systems / 시스템들) với exponent laws.
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **6. Exponential hàm (function / 함수) khác polynomial growth như thế nào?** nối từ **5. Fractional exponents và roots** sang **7. Logarithm là inverse của exponential**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Exponential hàm (function / 함수) khác polynomial growth như thế nào?
 
 So sánh
@@ -181,8 +171,6 @@ Ví dụ:
 ```
 
 Không có micro-optimization thông thường nào cứu được việc enumerate tất cả `2^100` possibilities.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **7. Logarithm là inverse của exponential** nối từ **6. Exponential hàm (function / 함수) khác polynomial growth như thế nào?** sang **8. Vì sao log biến sản phẩm (product / 제품) thành sum?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Logarithm là inverse của exponential
 
@@ -211,8 +199,6 @@ Ví dụ:
 ```
 
 vì ba doublings đưa 1 thành 8.
-
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **8. Vì sao log biến sản phẩm (product / 제품) thành sum?** nối từ **7. Logarithm là inverse của exponential** sang **9. thay đổi (change / 변경) of cơ sở (base / 기반): vì sao cơ sở (base / 기반) chỉ thay quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Vì sao log biến sản phẩm (product / 제품) thành sum?
 
@@ -254,8 +240,6 @@ Tương tự:
 \log_b(x^k)=k\log_bx.
 ```
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **9. thay đổi (change / 변경) of cơ sở (base / 기반): vì sao cơ sở (base / 기반) chỉ thay quy mô (scale / 규모)** nối từ **8. Vì sao log biến sản phẩm (product / 제품) thành sum?** sang **10. cơ sở (base / 기반) e xuất hiện từ continuous thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. thay đổi (change / 변경) of cơ sở (base / 기반): vì sao cơ sở (base / 기반) chỉ thay quy mô (scale / 규모)
 
 Từ
@@ -290,8 +274,6 @@ và
 
 cùng asymptotic thứ tự (order / 순서).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **10. cơ sở (base / 기반) e xuất hiện từ continuous thay đổi (change / 변경)** nối từ **9. thay đổi (change / 변경) of cơ sở (base / 기반): vì sao cơ sở (base / 기반) chỉ thay quy mô (scale / 규모)** sang **11. Compound growth và solving time-to-target**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. cơ sở (base / 기반) `e` xuất hiện từ continuous thay đổi (change / 변경)
 
 Natural exponential
@@ -319,8 +301,6 @@ A(t)=A_0e^{kt}.
 ```
 
 Do đó `e` không chỉ là một constant lạ. Nó là cơ sở (base / 기반) tự nhiên khi multiplicative thay đổi (change / 변경) xảy ra continuously.
-
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **11. Compound growth và solving time-to-target** nối từ **10. cơ sở (base / 기반) e xuất hiện từ continuous thay đổi (change / 변경)** sang **12. Half-life và exponential decay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Compound growth và solving time-to-target
 
@@ -366,8 +346,6 @@ n=\frac{\ln2}{\ln1.08}\approx9.0.
 
 Đây là nguồn gốc định lượng của quy tắc (rule / 규칙) of 72 approximation.
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **12. Half-life và exponential decay** nối từ **11. Compound growth và solving time-to-target** sang **13. O(log n) đến từ repeated shrinking**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Half-life và exponential decay
 
 Nếu quantity giảm theo
@@ -390,8 +368,6 @@ T_{1/2}=\frac{\ln2}{k}.
 
 Cùng algebra áp dụng cho radioactive decay, pharmacokinetics, capacitor discharge và nhiều relaxation processes.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **13. O(log n) đến từ repeated shrinking** nối từ **12. Half-life và exponential decay** sang **14. Log scales trong đo lường (measurement / 측정)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. `O(log n)` đến từ repeated shrinking
 
 Nếu mỗi step giảm bài toán (problem / 문제) kích thước (size / 크기) bởi factor `b>1`:
@@ -413,8 +389,6 @@ k\approx\log_b n.
 ```
 
 Tìm kiếm nhị phân (binary search / 이진 탐색) là example điển hình. `O(log n)` không có nghĩa mã (code / 코드) phải gọi một `log()` hàm (function / 함수); logarithm xuất hiện từ **number of multiplicative reductions**.
-
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **13. O(log n) đến từ repeated shrinking** đặt vấn đề; **14. Log scales trong đo lường (measurement / 측정)** đối chiếu bằng chứng, rồi **15. thông tin (information / 정보) lý thuyết (theory / 이론): surprise là logarithmic** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Log scales trong đo lường (measurement / 측정)
 
@@ -442,8 +416,6 @@ Concentration tăng factor 10 làm pH giảm 1.
 
 Log scales rất hữu ích, nhưng interpretation phải giữ quan hệ (relation / 관계) với original multiplicative quy mô (scale / 규모).
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **14. Log scales trong đo lường (measurement / 측정)** đặt vấn đề; **15. thông tin (information / 정보) lý thuyết (theory / 이론): surprise là logarithmic** đối chiếu bằng chứng, rồi **16. Numerical computing: tại sao dùng log-probability?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 15. thông tin (information / 정보) lý thuyết (theory / 이론): surprise là logarithmic
 
 Thông tin (information / 정보) content thường được viết
@@ -466,8 +438,6 @@ I(A,B)=I(A)+I(B).
 
 Logarithm là hàm (function / 함수) tự nhiên vì nó biến multiplicative xác suất (probability / 확률) cấu trúc (structure / 구조) thành additive thông tin (information / 정보).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **16. Numerical computing: tại sao dùng log-probability?** nối từ **15. thông tin (information / 정보) lý thuyết (theory / 이론): surprise là logarithmic** sang **17. dùng chung (common / 공통) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Numerical computing: tại sao dùng log-probability?
 
 Trong statistics/AI, likelihood của many independent observations thường là sản phẩm (product / 제품):
@@ -485,8 +455,6 @@ Sản phẩm (product / 제품) của nhiều số nhỏ có thể underflow flo
 Ta vừa biến sản phẩm (product / 제품) thành sum, vừa cải thiện numerical hành vi (behavior / 동작).
 
 Đây là example rõ của algebraic định danh (identity / 식별자) trở thành kỹ thuật (engineering / 엔지니어링) technique.
-
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **17. dùng chung (common / 공통) thất bại (failure / 실패) modes** nối từ **16. Numerical computing: tại sao dùng log-probability?** sang **Applications và connections**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -514,8 +482,6 @@ không phải luôn `x`. Square gốc (root / 루트) convention trả nonnegati
 
 Một hệ thống (system / 시스템) có finite resources thường không thể grow exponential mãi. Logistic các mô hình (models / 모델들) hoặc saturation mechanisms có thể cần thiết.
 
-> **Nối mạch:** Ở chặng này của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **Applications và connections** nối từ **17. dùng chung (common / 공통) thất bại (failure / 실패) modes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Applications và connections
 
 **Khoa học máy tính (computer science / 컴퓨터 과학):** tìm kiếm nhị phân (binary search / 이진 탐색), cây (tree / 트리) height, exponential trạng thái (state / 상태) spaces, logarithmic dữ liệu (data / 데이터) structures.
@@ -526,13 +492,9 @@ Một hệ thống (system / 시스템) có finite resources thường không th
 
 **Finance:** compound returns, discounting, continuously compounded rates, time-to-target calculations.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Applications và connections** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Powers describe multiplicative accumulation. Roots undo a known power. Logarithms measure multiplicative độ sâu (depth / 깊이). Whenever a hệ thống (system / 시스템) changes by ratios, factors, repeated halving/doubling or compounding, exponentials and logarithms are the natural ngôn ngữ (language / 언어).
-
-> **Nối mạch:** Trong **Lũy thừa, căn và logarithm: multiplicative cấu trúc (structure / 구조) và inverse scales**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

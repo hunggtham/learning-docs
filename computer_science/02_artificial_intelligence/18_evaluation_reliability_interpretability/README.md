@@ -19,8 +19,6 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 07_reliability_engineering.md
 ```
 
-> **Chuyển mạch:** Reading order đi từ task/metric đến uncertainty, calibration, interpretability và red teaming; dependency map biến thứ tự đó thành prerequisite, còn mental model nối metric với failure mode.
-
 ## Phụ thuộc (dependency / 의존성) map
 
 Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các khái niệm. Hãy đọc theo mũi tên để biết phần nào là prerequisite, phần nào là ứng dụng và khi nào cần quay lại nền tảng.
@@ -40,8 +38,6 @@ flowchart TD
     RT --> REL
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Distinctions cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -55,8 +51,6 @@ Define contract
 → adversarially search failures
 → engineer bounded failure and recovery
 ```
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Distinctions cần giữ** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cross-links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Distinctions cần giữ
 
@@ -74,8 +68,6 @@ Red Teaming          ≠ One-Time Jailbreak Test
 HTTP Availability    ≠ Task Reliability
 Fallback             ≠ Always Safer
 ```
-
-> **Chuyển mạch:** **Distinctions cần giữ** tách accuracy, reliability và interpretability; **Cross-links** đưa từng distinction về owner của metric, phương pháp đánh giá và giới hạn diễn giải.
 
 ## Cross-links
 

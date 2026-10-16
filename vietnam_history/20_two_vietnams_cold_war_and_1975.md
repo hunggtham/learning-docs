@@ -10,8 +10,6 @@ Câu hỏi trung tâm của chapter là: **vì sao temporary regrouping hardened
 
 Hiện đại (modern / 현대적) scholarship emphasizes that xung đột (conflict / 충돌) này có nhiều tầng (layer / 계층) cùng lúc: struggle over national reunification, civil war, revolutionary war, anticommunist state-building và toàn cục (global / 전역) Cold War intervention. Không tầng (layer / 계층) nào một mình giải thích toàn bộ.
 
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Hai state-building dự án (project / 프로젝트) sau Geneva** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Population movement làm division thành lived experience**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hai state-building dự án (project / 프로젝트) sau Geneva
 
 Ở north, **Democratic Republic of Vietnam (DRV)** consolidated a socialist revolutionary trạng thái (state / 상태) headquartered in Hanoi.
@@ -20,8 +18,6 @@ Hiện đại (modern / 현대적) scholarship emphasizes that xung đột (conf
 
 Both governments claimed national legitimacy beyond the territory they controlled. Vì vậy division was not treated by either as an ideal permanent settlement.
 
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Population movement làm division thành lived experience** nối từ **Hai state-building dự án (project / 프로젝트) sau Geneva** sang **North Vietnam: socialist transformation and trạng thái (state / 상태) penetration**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Population movement làm division thành lived experience
 
 Trong 300-day regrouping period, hundreds of thousands moved between zones, with a particularly large luồng (flow / 흐름) from north to south including many Catholics, anti-communists and others concerned about life under DRV quy tắc (rule / 규칙).
@@ -29,8 +25,6 @@ Trong 300-day regrouping period, hundreds of thousands moved between zones, with
 Movement changed demography, land demand, church/community networks and politics in southern Vietnam.
 
 Di chuyển (migration / 마이그레이션) is not a footnote. When population chooses or is pressured to move, border becomes xã hội (social / 사회적) reality.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **North Vietnam: socialist transformation and trạng thái (state / 상태) penetration** nối từ **Population movement làm division thành lived experience** sang **South Vietnam: nation-building under insecurity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## North Vietnam: socialist transformation and trạng thái (state / 상태) penetration
 
@@ -42,8 +36,6 @@ Later agricultural collectivization reorganized môi trường vận hành (prod
 
 For this thư viện (library / 라이브러리), key cơ chế (mechanism / 메커니즘) is **trạng thái (state / 상태) penetration**: household, village and môi trường vận hành (production / 운영 환경) increasingly linked to party-state organizations, planning and mobilization.
 
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **South Vietnam: nation-building under insecurity** nối từ **North Vietnam: socialist transformation and trạng thái (state / 상태) penetration** sang **Why nationwide elections did not occur in 1956**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## South Vietnam: nation-building under insecurity
 
 Ngô Đình Diệm's government sought to consolidate authority against sects, rival political networks, remaining French influence and communist underground organization.
@@ -52,8 +44,6 @@ State-building involved army reorganization, bureaucracy, refugee resettlement a
 
 Supporters viewed centralization as necessary for survival; critics saw it as exclusionary and coercive. Both perspectives must be connected to documented institutional practices rather than reduced to labels.
 
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Why nationwide elections did not occur in 1956** nối từ **South Vietnam: nation-building under insecurity** sang **Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Why nationwide elections did not occur in 1956
 
 The Geneva political declaration envisaged 1956 elections, but legal/political commitment was contested because the southern Trạng thái (state / 상태) of Vietnam and United States had not signed the Final Declaration in the same manner as parties to the armistice khung phần mềm (framework / 프레임워크).
@@ -61,8 +51,6 @@ The Geneva political declaration envisaged 1956 elections, but legal/political c
 South Vietnamese leadership rejected elections under conditions it argued could not be free in the north; DRV insisted reunification/elections were part of Geneva political khung phần mềm (framework / 프레임워크).
 
 The kết quả (result / 결과) was not peaceful reunification. Separate trạng thái (state / 상태) institutions deepened and mutual distrust rose.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)** nối từ **Why nationwide elections did not occur in 1956** sang **United States involvement escalates**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)
 
@@ -80,8 +68,6 @@ local political/social grievances
 expanding insurgency
 ```
 
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **United States involvement escalates** nối từ **Insurgency in the South: cục bộ (local / 로컬) roots + northern chiến lược (strategy / 전략)** sang **1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## United States involvement escalates
 
 US involvement grew from financial/military hỗ trợ (support / 지원) and advisers in the 1950s to much larger direct military commitment in the 1960s.
@@ -89,8 +75,6 @@ US involvement grew from financial/military hỗ trợ (support / 지원) and ad
 Cold War doctrine, fear of communist expansion, alliance credibility and South Vietnamese trạng thái (state / 상태) survival all shaped US decisions.
 
 Escalation was gradual and path-dependent: each commitment changed chi phí (cost / 비용) of withdrawing and expectation of partners/opponents.
-
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware** nối từ **United States involvement escalates** sang **1965: large-scale US ground war and North Vietnamese regular forces**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware
 
@@ -100,8 +84,6 @@ Subsequent governments in South Vietnam experienced repeated political turnover 
 
 Lesson: bên ngoài (external / 외부) aid cannot substitute for domestic coalition management. Army kích thước (size / 크기) and equipment are only one dimension of trạng thái (state / 상태) sức chứa (capacity / 용량).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1965: large-scale US ground war and North Vietnamese regular forces** nối từ **1963 crisis: trạng thái (state / 상태) legitimacy matters as much as military hardware** sang **Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1965: large-scale US ground war and North Vietnamese regular forces
 
 From 1965, United States deployed large ground forces and conducted sustained air campaigns. North Vietnam increased infiltration and triển khai (deployment / 배포) of regular forces to the south while continuing hỗ trợ (support / 지원) for NLF/People's Liberation Armed Forces.
@@ -109,8 +91,6 @@ From 1965, United States deployed large ground forces and conducted sustained ai
 War now operated at multiple scales: village-level insurgency, conventional battles, air war over North Vietnam, Ho Chi Minh trail/logistics through Laos/Cambodia, and international diplomacy.
 
 The theater cannot be understood inside hiện đại (modern / 현대적) Vietnam borders alone.
-
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road** nối từ **1965: large-scale US ground war and North Vietnamese regular forces** sang **War economy and destruction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road
 
@@ -128,8 +108,6 @@ forces in south remain connected to north
 
 Again, logistics converts political intention into military năng lực (capability / 역량).
 
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **War economy and destruction** nối từ **Ho Chi Minh trail: logistics hệ thống (system / 시스템), not one road** sang **1968 Tet Offensive: military, political and media outcomes differ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## War economy and destruction
 
 War transformed both economies. South Vietnam received massive foreign aid and military spending, accelerating urbanization and dịch vụ (service / 서비스) sectors while also creating phụ thuộc (dependency / 의존성) and inflationary/distortion risks.
@@ -139,8 +117,6 @@ North Vietnam mobilized population and môi trường vận hành (production / 
 Rural communities across xung đột (conflict / 충돌) zones faced displacement, crop destruction, insecurity and forced/strategic relocation.
 
 GDP-style aggregate alone cannot describe wartime welfare.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1968 Tet Offensive: military, political and media outcomes differ** nối từ **War economy and destruction** sang **The war was internationalized far beyond US–Vietnam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1968 Tet Offensive: military, political and media outcomes differ
 
@@ -154,8 +130,6 @@ battlefield outcome ≠ strategic political effect
 
 A campaign can lose tactically while changing negotiation/công khai (public / 공개) opinion môi trường (environment / 환경)—or vice versa.
 
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **The war was internationalized far beyond US–Vietnam** nối từ **1968 Tet Offensive: military, political and media outcomes differ** sang **Vietnamization and changing force cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## The war was internationalized far beyond US–Vietnam
 
 China and Soviet Union supplied major aid to North Vietnam while managing their own Sino-Soviet rivalry. South Korea, Australia, New Zealand, Thailand, Philippines and others contributed forces/hỗ trợ (support / 지원) on US/RVN side in different forms. Laos and Cambodia were deeply affected by cross-border war.
@@ -164,23 +138,17 @@ Thus “Vietnam War” is geographically convenient but analytically incomplete.
 
 Recent Cambridge scholarship explicitly treats it as toàn cục (global / 전역) Cold War, civil war and national liberation xung đột (conflict / 충돌) simultaneously.
 
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Vietnamization and changing force cấu trúc (structure / 구조)** nối từ **The war was internationalized far beyond US–Vietnam** sang **1973 Paris Peace Accords: US withdrawal does not equal war termination**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vietnamization and changing force cấu trúc (structure / 구조)
 
 Under US President Richard Nixon, chính sách (policy / 정책) shifted toward **Vietnamization**: expanding responsibility of Republic of Vietnam Armed Forces while reducing US ground troop presence, alongside continued air power and aid.
 
 This changed burden phân phối (distribution / 분포) but did not end fighting. Xung đột (conflict / 충돌) expanded dramatically in Cambodia/Laos contexts and remained connected to US–China–Soviet diplomacy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1973 Paris Peace Accords: US withdrawal does not equal war termination** nối từ **Vietnamization and changing force cấu trúc (structure / 구조)** sang **1975: rapid conventional collapse**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1973 Paris Peace Accords: US withdrawal does not equal war termination
 
 Paris Peace Accords in **January 1973** produced a ceasefire khung phần mềm (framework / 프레임워크) and withdrawal of US combat forces, while leaving Vietnamese armed actors in place and unresolved political competition in the South.
 
 Fighting continued. This is another example where diplomatic agreement changes hệ thống (system / 시스템) các ràng buộc (constraints / 제약조건들) without automatically solving underlying sovereignty dispute.
-
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1975: rapid conventional collapse** nối từ **1973 Paris Peace Accords: US withdrawal does not equal war termination** sang **1975 vs 1976: military end và formal trạng thái (state / 상태) reunification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1975: rapid conventional collapse
 
@@ -190,15 +158,11 @@ Saigon fell to communist-led forces on **30 April 1975**.
 
 The date is a clear military-political endpoint for the war, but naming varies by bộ nhớ (memory / 메모리) community: “Liberation of the South/Reunification” in official Vietnamese trạng thái (state / 상태) narrative; “Fall of Saigon” in much international and overseas Vietnamese usage. The sự kiện (event / 이벤트) is the same; labels encode different historical bộ nhớ (memory / 메모리) and political experience.
 
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **1975 vs 1976: military end và formal trạng thái (state / 상태) reunification** nối từ **1975: rapid conventional collapse** sang **Human chi phí (cost / 비용) and displacement**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1975 vs 1976: military end và formal trạng thái (state / 상태) reunification
 
 1975 ended the Republic of Vietnam and major war. Formal institutional reunification followed in **1976** with establishment of the Socialist Republic of Vietnam.
 
 Keeping these dates separate avoids a dùng chung (common / 공통) compression lỗi (error / 오류).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Human chi phí (cost / 비용) and displacement** nối từ **1975 vs 1976: military end và formal trạng thái (state / 상태) reunification** sang **War bộ nhớ (memory / 메모리): one sự kiện (event / 이벤트), multiple bộ nhớ (memory / 메모리) các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Human chi phí (cost / 비용) and displacement
 
@@ -208,15 +172,11 @@ Chính xác (exact / 정확한) aggregate casualty totals vary by nguồn (sourc
 
 Human lịch sử (history / 이력) should not disappear under military chronology.
 
-> **Nối mạch:** Trong **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **War bộ nhớ (memory / 메모리): one sự kiện (event / 이벤트), multiple bộ nhớ (memory / 메모리) các hệ thống (systems / 시스템들)** nối từ **Human chi phí (cost / 비용) and displacement** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## War bộ nhớ (memory / 메모리): one sự kiện (event / 이벤트), multiple bộ nhớ (memory / 메모리) các hệ thống (systems / 시스템들)
 
 Sites such as **Dinh Độc Lập/Reunification Palace**, **Địa đạo Củ Chi**, **Khe Sanh**, **Quảng Trị**, **Hỏa Lò**, war cemeteries and overseas memorials encode different aspects of xung đột (conflict / 충돌).
 
 A museum is not neutral raw bằng chứng (evidence / 증거); exhibition thiết kế (design / 설계) reflects institutional bộ nhớ (memory / 메모리). That does not make museums useless. It means visitor should separate sản phẩm tạo ra (artifact / 산출물), documented sự kiện (event / 이벤트), curatorial interpretation and commemorative message.
-
-> **Nối mạch:** Ở chặng này của **1954–1975: hai nhà nước, civil xung đột (conflict / 충돌) và Toàn cục (global / 전역) Cold War**, **Recap và bàn giao** nối từ **War bộ nhớ (memory / 메모리): one sự kiện (event / 이벤트), multiple bộ nhớ (memory / 메모리) các hệ thống (systems / 시스템들)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

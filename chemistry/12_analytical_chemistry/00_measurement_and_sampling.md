@@ -61,8 +61,6 @@ Thiết bị có thể đo lặp với RSD 0,5%, nhưng nếu vật liệu khôn
 
 Đất, quặng, thực phẩm, bột dược phẩm, dòng nước thải và nguyên liệu công nghiệp đều có thể biến thiên mạnh theo không gian hoặc thời gian.
 
-> **Nối mạch:** Đại lượng cần đo phải được định nghĩa trước; quần thể và mẫu quyết định dữ liệu đại diện đến đâu, rồi lấy mẫu ngẫu nhiên giảm bias trước khi định lượng.
-
 ## Quần thể và mẫu
 
 **Quần thể (population)** là toàn bộ hệ mà ta muốn suy luận.
@@ -88,21 +86,15 @@ Không có “một mẫu đại diện” độc lập với câu hỏi và c�
 
 # Mẫu ngẫu nhiên, phân tầng và mẫu tổ hợp
 
-> **Nối mạch:** Ở chặng này của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu ngẫu nhiên** nối từ **Quần thể và mẫu** sang **Lấy mẫu phân tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lấy mẫu ngẫu nhiên
 
 Chọn đơn vị sao cho mỗi phần của quần thể có cơ hội được lấy hợp lý. Cách này giảm thiên lệch do người lấy mẫu chọn điểm thuận tiện.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu phân tầng** nối từ **Lấy mẫu ngẫu nhiên** sang **Mẫu tổ hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lấy mẫu phân tầng
 
 Nếu biết hệ có các vùng khác nhau — ví dụ độ sâu, khu sản xuất hoặc loại đất — có thể chia thành tầng rồi lấy trong từng tầng.
 
 Điều này thường hiệu quả hơn ngẫu nhiên hoàn toàn khi biến thiên giữa các tầng lớn.
-
-> **Nối mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Mẫu tổ hợp** nối từ **Lấy mẫu phân tầng** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mẫu tổ hợp
 

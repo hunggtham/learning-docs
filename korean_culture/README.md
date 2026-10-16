@@ -28,8 +28,6 @@ lịch sử / sinh thái
 
 Cách tiếp cận này giúp tránh **định kiến khái quát (stereotype)** và cho phép người đọc cập nhật **mô hình tư duy (mental model / 사고 모델)** khi gặp người, công ty, thế hệ hoặc vùng miền khác với ví dụ trong sách.
 
-> **Nối mạch:** **Mục tiêu của bộ sách** xác định người học và phạm vi văn hóa; **Quy ước ngôn ngữ Việt–Hàn–Anh** đặt vocabulary contract, rồi **Mức độ bao phủ hiện tại** ghi evidence.
-
 ## Quy ước ngôn ngữ Việt–Hàn–Anh
 
 Tiếng Việt là ngôn ngữ giải thích chính. Thuật ngữ tiếng Anh chỉ đóng vai trò bổ sung nghĩa hoặc hỗ trợ tra cứu. Ví dụ nên viết `cơ chế (mechanism)`, `ràng buộc (constraint)`, `phản hồi (feedback)` thay vì chèn trực tiếp từ tiếng Anh vào giữa câu tiếng Việt.
@@ -39,8 +37,6 @@ Nếu một ý đang được diễn đạt bằng cả câu hoặc cụm dài t
 Tên người, địa điểm, triều đại, sự kiện, công trình và văn bản quan trọng được ghi lần đầu theo mẫu **Tên tiếng Việt (한국어 원문 / English name)**. Ví dụ: **Cung Cảnh Phúc (경복궁 / Gyeongbokgung Palace)**, **Cao Ly (고려 / Goryeo)** và **Đại vương Thế Tông (세종대왕 / King Sejong the Great)**.
 
 Xem bảng quy tắc và tên chuẩn tại [`28_naming_translation_conventions.md`](28_naming_translation_conventions.md). Tên hiện đại không có cách Việt hoá tự nhiên sẽ giữ cách phiên âm La-tinh (romanization) để dễ nhận diện và tra cứu.
-
-> **Nối mạch:** **Mức độ bao phủ hiện tại** cho biết chapter nào đã có owner và nguồn; **Kiểm toán mức độ bao phủ** chuyển gap thành ưu tiên cập nhật có thể kiểm chứng.
 
 ## Mức độ bao phủ hiện tại
 
@@ -89,8 +85,6 @@ Các chương nền tảng cũng được viết theo hướng “đọc để h
 - [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md) mở rộng hành trình bệnh nhân, bảo hiểm, sàng lọc, y học truyền thống, sức khoẻ tinh thần, health literacy, continuity of care, lao động chăm sóc và sức khoẻ môi trường;
 - [`27_internet_communities_messaging_slang_memes.md`](27_internet_communities_messaging_slang_memes.md) mở rộng lịch sử cổng thông tin, sai lệch mẫu của cộng đồng, KakaoTalk, ảnh chụp màn hình, vòng đời tiếng lóng, kinh tế người sáng tạo, quyền riêng tư và vấn đề niềm tin do AI/deepfake.
 
-> **Nối mạch:** **Kiểm toán mức độ bao phủ** xác định phần thiếu và owner tương ứng; **Cách đọc theo mục tiêu** dùng kết quả đó để chọn route cho từng nhu cầu học.
-
 ## Kiểm toán mức độ bao phủ và hướng nâng cấp tiếp theo
 
 [`coverage_audit.md`](coverage_audit.md) kiểm tra toàn bộ `01`–`33` theo **11 lớp**: khái niệm, nguyên nhân, cơ chế, biến thiên, thay đổi, ranh giới, thất bại, chuyển tiếp, đo lường, đánh đổi và liên kết.
@@ -107,8 +101,6 @@ kiểm toán trùng lặp
 ```
 
 [`16_connections_mental_models_misconceptions.md`](16_connections_mental_models_misconceptions.md) hiện đóng vai trò đồ thị kiến thức xuyên chương; [`17_glossary_and_reference_map.md`](17_glossary_and_reference_map.md) là bảng tra Việt–Hàn–Anh và bản đồ nguồn; [`coverage_audit.md`](coverage_audit.md) là lớp kiểm soát chất lượng.
-
-> **Nối mạch:** **Cách đọc theo mục tiêu** tách route văn hóa nền khỏi route KIIP; **KIIP — 한국사회 이해** chỉ tiếp nhận phần topic thuộc owner exam-oriented.
 
 ## Cách đọc theo mục tiêu
 
@@ -202,13 +194,9 @@ Hallyu được đọc như chuỗi giá trị gồm IP, lao động sáng tạo
 
 Lộ trình 6 đặc biệt quan trọng nếu mục tiêu không chỉ là “biết Korean culture” mà là có thể gặp một hiện tượng mới rồi tự hỏi đúng câu hỏi, kiểm tra bằng chứng và tránh định kiến.
 
-> **Nối mạch:** **KIIP — 한국사회 이해** áp dụng route vào topic phục vụ kỳ thi; **Nguyên tắc xuyên suốt** giữ cách giải thích tiếng Việt và boundary với Master Book.
-
 ## KIIP — 한국사회 이해 시험 대비
 
 Thư mục [`kiip/`](kiip/README.md) là **bộ ghi chú (note / 노트) duy nhất về nội dung thi KIIP bên trong Korean Culture**. Nó không chia theo mức (level / 수준) và không quyết định cấu trúc hoặc độ sâu của Master kiến thức (knowledge / 지식) Book. Khi phát triển bộ `korean_culture/`, ưu tiên của các chương chính vẫn là hiểu bản chất văn hoá và **cơ chế xã hội (social mechanism)**, không tối ưu theo dạng đề KIIP.
-
-> **Nối mạch:** **Nguyên tắc xuyên suốt** khép README bằng owner, evidence và cách quay lại chapter; nội dung exam-specific không lấn sang cultural canonical docs.
 
 ## Nguyên tắc xuyên suốt
 

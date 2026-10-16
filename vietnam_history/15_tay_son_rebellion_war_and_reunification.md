@@ -10,8 +10,6 @@
 
 Câu hỏi trung tâm: **vì sao một uprising xuất phát từ vùng Tây Sơn có thể phá hủy cả Nguyễn lẫn Trịnh thứ tự (order / 순서), rồi vẫn không tạo được một stable dynasty lâu dài?**
 
-> **Nối mạch:** Trong **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **1771 là beginning coordinate, không phải explanation** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Bình Định và geography của uprising**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1771 là beginning coordinate, không phải explanation
 
 Phong trào Tây Sơn thường được tính từ **1771**, gắn với ba anh em Nguyễn Nhạc, Nguyễn Huệ và Nguyễn Lữ ở vùng Tây Sơn thuộc Bình Định hiện nay.
@@ -20,15 +18,11 @@ Nhưng saying “nông dân bất mãn nên nổi dậy” vẫn chưa đủ. Ta
 
 Một rebellion muốn quy mô (scale / 규모) phải có recruitment mạng (network / 네트워크), food, weapon, cục bộ (local / 로컬) alliance, thông tin (information / 정보) và legitimacy story. Tây Sơn phát triển được vì nó đứng tại junction giữa upland/coastal routes, commercial zones và vùng agricultural môi trường vận hành (production / 운영 환경). Nó có thể kết nối grievances của nhiều group khác nhau thay vì chỉ một village.
 
-> **Nối mạch:** Ở chặng này của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Bình Định và geography của uprising** nối từ **1771 là beginning coordinate, không phải explanation** sang **Tax, official abuse và fiscal crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bình Định và geography của uprising
 
 Bình Định không phải peripheral backwater. Khu vực này nằm trong historical landscape từng là Cham heartland, có routes lên Tây Nguyên và xuống coast, kết nối trade cùng agricultural zone.
 
 Một movement ở đây có thể tiếp cận mountain resources, lowland settlement và maritime tuyến (route / 경로). Geography không “sinh ra” Tây Sơn, nhưng nó giúp giải thích vì sao movement có mobility và tài nguyên (resource / 자원) truy cập (access / 접근) tốt hơn một rebellion hoàn toàn bị khóa trong một cục bộ (local / 로컬) basin.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Tax, official abuse và fiscal crisis** nối từ **Bình Định và geography của uprising** sang **Rice là military variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tax, official abuse và fiscal crisis
 
@@ -47,8 +41,6 @@ rebellion recruitment cheaper
 ```
 
 Đây là cơ chế (mechanism / 메커니즘) tổng quát; từng locality có intensity khác nhau.
-
-> **Nối mạch:** Trong **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Rice là military variable** nối từ **Tax, official abuse và fiscal crisis** sang **Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rice là military variable
 
@@ -72,15 +64,11 @@ military collapse / unrest
 
 Đây là một ví dụ điển hình cho liên kết (connection / 연결) Economy ↔ War.
 
-> **Nối mạch:** Ở chặng này của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)** nối từ **Rice là military variable** sang **1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)
 
 Tây Sơn nhanh chóng mở rộng và tấn công Nguyễn authority. Đến cuối thập niên 1770, phần lớn Nguyễn ruling family bị đánh bại; **Nguyễn Ánh** trở thành survivor quan trọng và về sau tổ chức resistance dài hạn.
 
 Không nên biến xung đột (conflict / 충돌) thành duel cá nhân Nguyễn Huệ vs Nguyễn Ánh quá sớm. Ở giai đoạn này, movement Tây Sơn có nhiều centre và nội bộ (internal / 내부) division; Nguyễn resistance cũng dựa vào regional allies, merchant tài nguyên (resource / 자원) và bên ngoài (external / 외부) hỗ trợ (support / 지원).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention** nối từ **Tây Sơn đánh Nguyễn: collapse của một regional trạng thái (state / 상태)** sang **1786: Tây Sơn vượt ranh giới (boundary / 경계) Trịnh–Nguyễn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention
 
@@ -90,8 +78,6 @@ Nếu chỉ nhớ “trận đánh lớn”, ta bỏ qua geography. Mekong distr
 
 Khu vực Tiền Giang ngày nay là checkpoint tốt để đặt battle trên river map.
 
-> **Nối mạch:** Trong **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **1785 Rạch Gầm–Xoài Mút: river warfare và Siam intervention** đặt tiêu chí; **1786: Tây Sơn vượt ranh giới (boundary / 경계) Trịnh–Nguyễn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Lê Chiêu Thống, Qing intervention và 1789** mở rộng hệ quả.
-
 ## 1786: Tây Sơn vượt ranh giới (boundary / 경계) Trịnh–Nguyễn
 
 Nguyễn Huệ tiến ra bắc năm **1786**, đánh đổ Trịnh power. Đây là một moment rất lớn vì cấu trúc (structure / 구조) tồn tại hơn một thế kỷ sụp nhanh.
@@ -99,8 +85,6 @@ Nguyễn Huệ tiến ra bắc năm **1786**, đánh đổ Trịnh power. Đây 
 Nhưng removal của Trịnh không tự động giải quyết vấn đề legitimacy. Nhà Lê vẫn có symbolic giá trị (value / 값); northern elites có mạng (network / 네트워크) riêng; Tây Sơn leadership cũng không hoàn toàn unified về mục tiêu.
 
 Một regime có thể thắng battlefield nhanh hơn tốc độ nó xây administrative trust.
-
-> **Nối mạch:** Ở chặng này của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **1786: Tây Sơn vượt ranh giới (boundary / 경계) Trịnh–Nguyễn** đặt tiêu chí; **Lê Chiêu Thống, Qing intervention và 1789** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tây Sơn có phải “peasant revolution” không?** mở rộng hệ quả.
 
 ## Lê Chiêu Thống, Qing intervention và 1789
 
@@ -114,8 +98,6 @@ Hai là diplomacy: sau victory, Quang Trung không tiếp tục permanent war v�
 
 Ba là bộ nhớ (memory / 메모리): Đống Đa về sau trở thành major national bộ nhớ (memory / 메모리) site; ritual và công khai (public / 공개) lịch sử (history / 이력) ở đây là later tầng (layer / 계층) cần phân biệt với vật lý (physical / 물리적) battlefield reconstruction.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Tây Sơn có phải “peasant revolution” không?** nối từ **Lê Chiêu Thống, Qing intervention và 1789** sang **Reform và giới hạn của Quang Trung**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tây Sơn có phải “peasant revolution” không?
 
 Label này từng rất phổ biến. Nó nắm được một phần truth: movement mobilized lower-status groups và khai thác xã hội (social / 사회적) grievance. Nhưng nếu dùng quá cứng, label che mất merchant, upland, ethnic, military và elite alliances.
@@ -124,8 +106,6 @@ Tây Sơn biến đổi khi quy mô (scale / 규모) tăng. Một movement có t
 
 Vì vậy nên hỏi: **coalition thay đổi ra sao khi rebellion trở thành government?**
 
-> **Nối mạch:** Trong **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Tây Sơn có phải “peasant revolution” không?** đặt tiêu chí; **Reform và giới hạn của Quang Trung** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vì sao Tây Sơn không stabilize được?** mở rộng hệ quả.
-
 ## Reform và giới hạn của Quang Trung
 
 Quang Trung thường được gắn với military talent và một số reform ambitions về administration, education, writing và economy. Nhưng reign của ông rất ngắn; ông mất năm **1792**.
@@ -133,8 +113,6 @@ Quang Trung thường được gắn với military talent và một số reform
 Do đó cần phân biệt **chính sách (policy / 정책) intention** với **institutional consolidation**. Một reform announced không đồng nghĩa đã đủ thời gian (time / 시간) để penetrate village, tax hệ thống (system / 시스템) và bureaucracy.
 
 Cái chết sớm của Quang Trung làm succession bài toán (problem / 문제) trở nên đặc biệt nghiêm trọng.
-
-> **Nối mạch:** Ở chặng này của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Reform và giới hạn của Quang Trung** đặt tiêu chí; **Vì sao Tây Sơn không stabilize được?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Nguyễn Ánh: survival, mạng (network / 네트워크) và long game** mở rộng hệ quả.
 
 ## Vì sao Tây Sơn không stabilize được?
 
@@ -158,8 +136,6 @@ more war
 
 Một movement có thể rất effective trong high-mobility warfare nhưng yếu hơn trong stable record-keeping, succession và routine administration.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Nguyễn Ánh: survival, mạng (network / 네트워크) và long game** nối từ **Vì sao Tây Sơn không stabilize được?** sang **Quy Nhơn, Phú Xuân, Gia Định: ba nút (node / 노드) để hiểu cả xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyễn Ánh: survival, mạng (network / 네트워크) và long game
 
 Nguyễn Ánh không thắng chỉ vì Tây Sơn “tự yếu”. Ông xây lại tài nguyên (resource / 자원) cơ sở (base / 기반) ở south, tạo military-administrative mạng (network / 네트워크), khai thác Mekong rice supply, phát triển naval năng lực (capability / 역량) và tìm technical/bên ngoài (external / 외부) assistance ở nhiều thời điểm.
@@ -167,8 +143,6 @@ Nguyễn Ánh không thắng chỉ vì Tây Sơn “tự yếu”. Ông xây l�
 Điều quan trọng là **institutional persistence**. Qua nhiều defeat, Nguyễn side vẫn duy trì được cốt lõi (core / 핵심) mạng (network / 네트워크) đủ để regenerate force.
 
 Khi Tây Sơn fragmentation tăng sau 1792, balance dần chuyển. Năm **1802**, Nguyễn Ánh chiếm Thăng Long, lên ngôi Gia Long và thống nhất political điều khiển (control / 제어) dưới triều Nguyễn.
-
-> **Nối mạch:** Trong **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Quy Nhơn, Phú Xuân, Gia Định: ba nút (node / 노드) để hiểu cả xung đột (conflict / 충돌)** nối từ **Nguyễn Ánh: survival, mạng (network / 네트워크) và long game** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy Nhơn, Phú Xuân, Gia Định: ba nút (node / 노드) để hiểu cả xung đột (conflict / 충돌)
 
@@ -183,8 +157,6 @@ Phú Xuân = central political/military hinge
 ```
 
 Điều khiển (control / 제어) nút (node / 노드) quyết định khả năng tiếp tục war.
-
-> **Nối mạch:** Ở chặng này của **Tây Sơn: rebellion, rice, war và cuộc khủng hoảng của trật tự cũ**, **Recap và bàn giao** nối từ **Quy Nhơn, Phú Xuân, Gia Định: ba nút (node / 노드) để hiểu cả xung đột (conflict / 충돌)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

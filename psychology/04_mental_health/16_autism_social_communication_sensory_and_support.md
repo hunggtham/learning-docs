@@ -12,8 +12,6 @@ Autism là một **rối loạn phát triển thần kinh (neurodevelopmental co
 
 Hai người cùng chẩn đoán có thể có điểm mạnh và khó khăn rất khác nhau. Vì vậy một nhãn chẩn đoán không thay thế mô tả chức năng cụ thể.
 
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **2. Góc nhìn phát triển** nối từ **1. “Phổ” không phải một đường thẳng** sang **3. Giao tiếp và tương tác xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Góc nhìn phát triển
 
 Autism bắt đầu từ quá trình phát triển, dù một người có thể chỉ được nhận diện muộn khi yêu cầu xã hội hoặc nghề nghiệp tăng lên, hoặc khi chiến lược bù trừ không còn đủ.
@@ -21,8 +19,6 @@ Autism bắt đầu từ quá trình phát triển, dù một người có thể
 Đánh giá cần xem lịch sử phát triển khi có thể, đồng thời xem chức năng hiện tại, các tình trạng đồng mắc và môi trường sống.
 
 Không nên suy luận rằng “không được chẩn đoán từ nhỏ = không thể autism”. Nhưng cũng không nên chỉ dựa vào mô tả hiện tại của người trưởng thành mà bỏ qua bằng chứng phát triển.
-
-> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** nối từ **2. Góc nhìn phát triển** sang **4. Double Empathy bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Giao tiếp và tương tác xã hội
 
@@ -32,8 +28,6 @@ Tuy nhiên khó khăn xã hội không nên bị diễn giải mặc định là
 
 Xem [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** đặt đầu vào cho **4. Double Empathy bài toán (problem / 문제)**, rồi **5. Xử lý cảm giác** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 4. Double Empathy bài toán (problem / 문제)
 
 **Vấn đề đồng cảm hai chiều (Double Empathy Problem)** đề xuất rằng hiểu lầm giữa người autistic và non-autistic có thể xuất hiện theo cả hai hướng vì phong cách giao tiếp và kỳ vọng khác nhau.
@@ -41,8 +35,6 @@ Xem [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mi
 > **Lý thuyết hiện đại có ảnh hưởng:** khung này hữu ích để sửa cách nhìn một chiều “mọi lỗi giao tiếp nằm trong người autistic”, nhưng không được dùng để phủ nhận mọi khó khăn nhận thức xã hội ở autism.
 
 Cách đọc cân bằng là xem đứt gãy giao tiếp như tương tác giữa hồ sơ cá nhân và người/bối cảnh đối diện.
-
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **4. Double Empathy bài toán (problem / 문제)** đặt đầu vào cho **5. Xử lý cảm giác**, rồi **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Xử lý cảm giác
 
@@ -52,15 +44,11 @@ Nếu văn phòng mở tạo quá tải cảm giác, việc né tránh có thể
 
 Xem [[../01_brain_and_mind/01_sensation_and_perception]] và [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]].
 
-> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** nối từ **5. Xử lý cảm giác** sang **7. Masking và camouflaging**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Hành vi lặp lại, sở thích tập trung và tính dự đoán
 
 Lặp lại, routine và sở thích tập trung có thể phục vụ nhiều chức năng: điều chỉnh cảm xúc/cảm giác, tăng tính dự đoán, tạo niềm vui, phát triển kỹ năng hoặc giảm stress.
 
 Không nên mặc định mọi hành vi lặp lại là thứ phải loại bỏ. Câu hỏi tốt hơn là hành vi đó đang gây hại/suy giảm hay đang giúp tự điều chỉnh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **7. Masking và camouflaging** nối từ **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** sang **8. Chức năng thích nghi khác IQ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Masking và camouflaging
 
@@ -70,23 +58,17 @@ Biểu hiện bên ngoài có thể trông “ổn” trong khi chi phí bên tr
 
 > **Giới hạn bằng chứng:** camouflaging đang được nghiên cứu nhiều hơn, nhưng cách đo, khả năng khái quát theo giới/văn hóa và quan hệ nhân quả với sức khỏe tâm thần vẫn cần thận trọng.
 
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **8. Chức năng thích nghi khác IQ** nối từ **7. Masking và camouflaging** sang **9. Tình trạng đồng mắc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Chức năng thích nghi khác IQ
 
 Một người có IQ cao vẫn có thể gặp khó khăn đáng kể trong lập kế hoạch, sinh hoạt hằng ngày, việc làm hoặc điều chỉnh cảm giác. Vì vậy nhu cầu hỗ trợ không thể suy ra chỉ từ khả năng trí tuệ.
 
 Điều này nối trực tiếp với distinction giữa **năng lực (capacity)** và **chức năng thực tế (adaptive functioning)**.
 
-> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **9. Tình trạng đồng mắc** nối từ **8. Chức năng thích nghi khác IQ** sang **10. Neurodiversity và suy giảm chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Tình trạng đồng mắc
 
 Người autistic có thể đồng thời có ADHD, lo âu, trầm cảm, rối loạn giấc ngủ, động kinh, khó khăn học tập/trí tuệ hoặc vấn đề phối hợp vận động.
 
 Điều trị tình trạng đồng mắc cần thích nghi với hồ sơ giao tiếp và cảm giác khi phù hợp. Không nên quy mọi distress cho autism nếu có một tình trạng khác đang cần đánh giá riêng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **10. Neurodiversity và suy giảm chức năng** nối từ **9. Tình trạng đồng mắc** sang **11. Mục tiêu hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Neurodiversity và suy giảm chức năng
 
@@ -100,8 +82,6 @@ không loại trừ
 suy giảm chức năng + nhu cầu hỗ trợ
 ```
 
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **11. Mục tiêu hỗ trợ** nối từ **10. Neurodiversity và suy giảm chức năng** sang **12. Học tập và công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Mục tiêu hỗ trợ
 
 Mục tiêu không phải mặc định làm người autistic “trông giống neurotypical”. Đích phù hợp hơn là tăng chức năng, tự chủ, khả năng giao tiếp, giảm distress và cải thiện độ phù hợp giữa người với môi trường.
@@ -109,8 +89,6 @@ Mục tiêu không phải mặc định làm người autistic “trông giống
 Hỗ trợ có thể gồm giao tiếp rõ ràng, điều chỉnh cảm giác, cấu trúc dự đoán được, hỗ trợ học tập/việc làm, can thiệp kỹ năng xã hội khi người đó thấy cần, hỗ trợ gia đình và điều trị tình trạng tâm thần đồng mắc.
 
 Thuốc không được dùng như cách “điều trị autism nói chung”; chỉ định thuốc cần gắn với triệu chứng hoặc tình trạng cụ thể.
-
-> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **12. Học tập và công việc** nối từ **11. Mục tiêu hỗ trợ** sang **13. Gia đình và hệ thống hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Học tập và công việc
 
@@ -127,13 +105,9 @@ Thiết kế hòa nhập thường hữu ích hơn lời khuyên kiểu “hãy 
 
 Xem [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/03_interpersonal_communication_and_conflict]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** nối từ **12. Học tập và công việc** sang **14. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Gia đình và hệ thống hỗ trợ
 
 Gia đình có thể rất quan trọng nhưng quyền tự chủ của người autistic trưởng thành vẫn cần được tôn trọng. Chăm sóc cần xem đồng thời gánh nặng người chăm sóc, an toàn, nhu cầu giao tiếp và ưu tiên của chính người autistic.
-
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** đặt vấn đề; **14. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **15. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Ranh giới bằng chứng
 
@@ -145,8 +119,6 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 
 **Không được nói:** autism do parenting, người autistic “không có empathy”, hoặc một điểm số online đủ để tự xác nhận chẩn đoán.
 
-> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **14. Ranh giới bằng chứng** đặt vấn đề; **15. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 15. Những hiểu lầm phổ biến
 
 **“Autism là thiếu empathy.”** Quá đơn giản.
@@ -156,8 +128,6 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 **“Nếu nói tốt và đi làm được thì không autism.”** Sai; hồ sơ thích nghi, xã hội và cảm giác vẫn có thể tạo chi phí rất lớn.
 
 **“Neurodiversity nghĩa là không bao giờ cần điều trị.”** Sai.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Mô hình tư duy** tổng hợp từ **15. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -174,8 +144,6 @@ chức năng + nhu cầu hỗ trợ
 ```
 
 > Autism nên được hiểu như một hồ sơ phát triển tương tác với môi trường, không phải một “khuyết điểm duy nhất” nằm trong một kỹ năng.
-
-> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

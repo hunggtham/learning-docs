@@ -19,8 +19,6 @@ Systemd là `PID 1` trên nhiều bản phân phối Linux hiện đại. Nó qu
 
 Do đó `systemctl restart app` chỉ là một giao diện nhỏ của toàn bộ hệ thống.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Systemd không chỉ là một công cụ restart dịch vụ (service / 서비스)** đặt đầu vào cho **Đơn vị (unit / 단위) đồ thị (graph / 그래프) thay cho chuỗi script tuần tự**, rồi **Quan hệ thứ tự (ordering / 순서) khác yêu cầu (requirement / 요구사항)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Đơn vị (unit / 단위) đồ thị (graph / 그래프) thay cho chuỗi script tuần tự
 
 Mô hình cũ dễ hình dung như:
@@ -44,8 +42,6 @@ secret.mount ────┘
 
 Các đơn vị (unit / 단위) độc lập có thể khởi động song song.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Đơn vị (unit / 단위) đồ thị (graph / 그래프) thay cho chuỗi script tuần tự** đặt đầu vào cho **Quan hệ thứ tự (ordering / 순서) khác yêu cầu (requirement / 요구사항)**, rồi **Before=** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Quan hệ thứ tự (ordering / 순서) khác yêu cầu (requirement / 요구사항)
 
 Đây là điểm gây nhầm rất nhiều.
@@ -64,8 +60,6 @@ After=network.target
 
 không tự động đảm bảo `network.target` được kéo vào, và càng không đảm bảo DNS hay API bên ngoài đã healthy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Before=** nối từ **Quan hệ thứ tự (ordering / 순서) khác yêu cầu (requirement / 요구사항)** sang **Requires= và thất bại (failure / 실패) propagation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `Before=`
 
 `Before=A` là quan hệ thứ tự (ordering / 순서) ngược với `After=A`.
@@ -79,8 +73,6 @@ systemctl list-dependencies app.service
 systemctl list-dependencies --reverse app.service
 ```
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Requires= và thất bại (failure / 실패) propagation** nối từ **Before=** sang **Wants= khi nào phù hợp?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `Requires=` và thất bại (failure / 실패) propagation
 
 Nếu A `Requires=B`, thất bại (failure / 실패) của B có thể ảnh hưởng A tùy tình huống activation/vòng đời (lifecycle / 생명주기).
@@ -89,15 +81,11 @@ Nhưng phụ thuộc (dependency / 의존성) ngữ nghĩa (semantics / 의미�
 
 Một cơ sở dữ liệu (database / 데이터베이스) dịch vụ (service / 서비스) “active” chưa chắc đã sẵn sàng trả truy vấn (query / 쿼리).
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Wants= khi nào phù hợp?** nối từ **Requires= và thất bại (failure / 실패) propagation** sang **BindsTo=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `Wants=` khi nào phù hợp?
 
 `Wants=` phù hợp với phụ thuộc (dependency / 의존성) mong muốn nhưng không nên làm đơn vị (unit / 단위) chính thất bại (fail / 실패) nếu phụ thuộc (dependency / 의존성) phụ không lên được.
 
 Ví dụ khả năng quan sát (observability / 관측 가능성) sidecar hoặc optional bộ nhớ đệm (cache / 캐시) có thể phù hợp tùy kiến trúc (architecture / 아키텍처).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **BindsTo=** nối từ **Wants= khi nào phù hợp?** sang **PartOf=**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `BindsTo=`
 
@@ -105,15 +93,11 @@ Ví dụ khả năng quan sát (observability / 관측 가능성) sidecar hoặc
 
 Không nên dùng tràn lan; vòng đời (lifecycle / 생명주기) coupling quá mạnh có thể tạo cascading thất bại (failure / 실패).
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **PartOf=** nối từ **BindsTo=** sang **Conflicts=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `PartOf=`
 
 `PartOf=` hữu ích khi muốn restart/stop một parent-like đơn vị (unit / 단위) kéo theo đơn vị (unit / 단위) khác.
 
 Ví dụ một nhóm dịch vụ (service / 서비스) có thể được tổ chức để restart cùng nhau.
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Conflicts=** nối từ **PartOf=** sang **Mục tiêu (target / 대상) đơn vị (unit / 단위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `Conflicts=`
 
@@ -122,8 +106,6 @@ Một số đơn vị (unit / 단위) không thể active đồng thời.
 `Conflicts=` biểu diễn quan hệ loại trừ.
 
 Ví dụ hai hiện thực (implementation / 구현) cạnh tranh cùng một tài nguyên (resource / 자원) có thể được cấu hình để không cùng chạy.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Mục tiêu (target / 대상) đơn vị (unit / 단위)** nối từ **Conflicts=** sang **Activation giao dịch (transaction / 트랜잭션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mục tiêu (target / 대상) đơn vị (unit / 단위)
 
@@ -137,8 +119,6 @@ systemctl list-dependencies multi-user.target
 
 Mục tiêu (target / 대상) gần với “mốc trạng thái hệ thống” hơn là dịch vụ (service / 서비스).
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Activation giao dịch (transaction / 트랜잭션)** nối từ **Mục tiêu (target / 대상) đơn vị (unit / 단위)** sang **Socket activation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Activation giao dịch (transaction / 트랜잭션)
 
 Khi yêu cầu:
@@ -150,8 +130,6 @@ systemctl start app.service
 systemd không đơn giản gọi `ExecStart`. Nó xây một giao dịch (transaction / 트랜잭션) gồm các đơn vị (unit / 단위) được kéo vào bởi phụ thuộc (dependency / 의존성), kiểm tra thứ tự (ordering / 순서), job conflicts và sau đó thực thi theo đồ thị (graph / 그래프).
 
 Đây là lý do một đơn vị (unit / 단위) tệp (file / 파일) nhỏ có thể kéo theo rất nhiều operations.
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Socket activation** nối từ **Activation giao dịch (transaction / 트랜잭션)** sang **Timer activation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socket activation
 
@@ -177,8 +155,6 @@ Lợi ích:
 
 Nhưng ứng dụng (application / 애플리케이션) phải hỗ trợ socket activation ngữ nghĩa (semantics / 의미론).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Timer activation** nối từ **Socket activation** sang **Đường dẫn (path / 경로) activation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Timer activation
 
 Timer đơn vị (unit / 단위) tách lịch khỏi nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스).
@@ -195,15 +171,11 @@ Timer kích hoạt dịch vụ (service / 서비스) đơn vị (unit / 단위) 
 
 Điều này giúp job có logging, định danh (identity / 식별자), tài nguyên (resource / 자원) limit và sandbox giống dịch vụ (service / 서비스) bình thường.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Timer activation** đặt đầu vào cho **Đường dẫn (path / 경로) activation**, rồi **Dịch vụ (service / 서비스) Type=** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Đường dẫn (path / 경로) activation
 
 Systemd còn có `.path` đơn vị (unit / 단위) để kích hoạt dịch vụ (service / 서비스) khi đường dẫn (path / 경로)/tệp (file / 파일) thay đổi theo một số điều kiện.
 
 Đây là event-driven alternative cho polling vòng lặp (loop / 루프) trong một số use trường hợp (case / 사례).
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Đường dẫn (path / 경로) activation** đặt đầu vào cho **Dịch vụ (service / 서비스) Type=**, rồi **Type=notify và readiness tốt hơn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dịch vụ (service / 서비스) `Type=`
 
@@ -220,8 +192,6 @@ Một số kiểu phổ biến:
 
 Chọn sai `Type=` có thể làm systemd nghĩ dịch vụ (service / 서비스) healthy quá sớm hoặc theo dõi sai tiến trình (process / 프로세스).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Type=notify và readiness tốt hơn** nối từ **Dịch vụ (service / 서비스) Type=** sang **Main PID**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `Type=notify` và readiness tốt hơn
 
 Nếu ứng dụng (application / 애플리케이션) hỗ trợ `sd_notify`, nó có thể báo:
@@ -234,8 +204,6 @@ chỉ sau khi đã hoàn tất initialization.
 
 Điều này chính xác hơn `sleep 10` hoặc đoán readiness từ tiến trình (process / 프로세스) existence.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Main PID** nối từ **Type=notify và readiness tốt hơn** sang **Vì sao shell wrapper nên dùng exec trong một số tình huống?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Main PID
 
 Systemd phải biết tiến trình (process / 프로세스) nào là main tiến trình (process / 프로세스) để theo dõi vòng đời (lifecycle / 생명주기).
@@ -245,8 +213,6 @@ systemctl show app -p MainPID
 ```
 
 Nếu daemon double-fork hoặc wrapper shell không dùng `exec`, systemd có thể theo dõi tiến trình (process / 프로세스) không như mong muốn.
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Main PID** nêu quy tắc; **Vì sao shell wrapper nên dùng exec trong một số tình huống?** thử quy tắc trong tình huống, rồi **ExecStartPre= và ExecStartPost=** mở rộng hệ quả.
 
 ## Vì sao shell wrapper nên dùng `exec` trong một số tình huống?
 
@@ -269,8 +235,6 @@ shell được thay bằng Java tiến trình (process / 프로세스). tín hi�
 
 Không phải mọi script đều cần `exec`, nhưng cần hiểu tiến trình (process / 프로세스) cây (tree / 트리).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Vì sao shell wrapper nên dùng exec trong một số tình huống?** nêu quy tắc; **ExecStartPre= và ExecStartPost=** thử quy tắc trong tình huống, rồi **ExecCondition=** mở rộng hệ quả.
-
 ## `ExecStartPre=` và `ExecStartPost=`
 
 Có thể dùng để thực hiện bước trước/sau start:
@@ -283,15 +247,11 @@ ExecStartPost=/usr/local/bin/register-service.sh
 
 Không nên biến đơn vị (unit / 단위) tệp (file / 파일) thành một triển khai (deployment / 배포) script dài. Những bước có transactional lô-gic (logic / 논리) phức tạp thường nên nằm ngoài dịch vụ (service / 서비스) startup.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **ExecCondition=** nối từ **ExecStartPre= và ExecStartPost=** sang **Môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `ExecCondition=`
 
 `ExecCondition=` cho phép kiểm tra điều kiện trước start với ngữ nghĩa (semantics / 의미론) riêng.
 
 Nó hữu ích để tránh start đơn vị (unit / 단위) khi precondition không đúng mà không coi mọi trường hợp là thất bại (failure / 실패).
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Môi trường (environment / 환경)** nối từ **ExecCondition=** sang **Working directory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môi trường (environment / 환경)
 
@@ -306,8 +266,6 @@ EnvironmentFile=/etc/app/app.env
 
 Nhưng secret management cần cẩn thận: môi trường (environment / 환경) có thể lộ qua debugging, dump hoặc quyền đọc tiến trình (process / 프로세스) trạng thái (state / 상태) tùy hệ thống.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Working directory** nối từ **Môi trường (environment / 환경)** sang **User= và Group=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Working directory
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -319,8 +277,6 @@ WorkingDirectory=/opt/app
 Nếu ứng dụng dùng relative đường dẫn (path / 경로) mà không khai báo working directory, dịch vụ (service / 서비스) có thể tìm tệp (file / 파일) sai chỗ.
 
 Tốt hơn nữa là ứng dụng (application / 애플리케이션) dùng absolute/configured paths cho dữ liệu quan trọng.
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **User= và Group=** nối từ **Working directory** sang **Supplementary groups**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `User=` và `Group=`
 
@@ -335,8 +291,6 @@ Systemd thiết lập credentials trước khi exec tiến trình (process / 프
 
 Đây là lý do command chạy bằng gốc (root / 루트) trong SSH có thể thành công nhưng dịch vụ (service / 서비스) người dùng (user / 사용자) lại bị permission denied.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Supplementary groups** nối từ **User= và Group=** sang **UMask=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Supplementary groups
 
 Có thể dùng:
@@ -349,8 +303,6 @@ khi dịch vụ (service / 서비스) cần thêm group truy cập (access / 접
 
 Không nên thêm tiến trình (process / 프로세스) vào quá nhiều group vì mở rộng privilege surface.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **UMask=** nối từ **Supplementary groups** sang **Tài nguyên (resource / 자원) limits kiểu POSIX**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `UMask=`
 
 Systemd có thể đặt `UMask=` riêng cho dịch vụ (service / 서비스).
@@ -362,8 +314,6 @@ UMask=0027
 ```
 
 Nếu app tạo log/cấu hình (config / 설정) với permission khác khi chạy tay và khi chạy dịch vụ (service / 서비스), đây là một điểm cần kiểm tra.
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **UMask=** đặt tiêu chí; **Tài nguyên (resource / 자원) limits kiểu POSIX** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Cgroup tài nguyên (resource / 자원) điều khiển (control / 제어)** mở rộng hệ quả.
 
 ## Tài nguyên (resource / 자원) limits kiểu POSIX
 
@@ -384,8 +334,6 @@ cat /proc/<PID>/limits
 
 Đừng chỉ nhìn đơn vị (unit / 단위) tệp (file / 파일); cần verify tiến trình (process / 프로세스) thực tế nhận giá trị gì.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Tài nguyên (resource / 자원) limits kiểu POSIX** đặt tiêu chí; **Cgroup tài nguyên (resource / 자원) điều khiển (control / 제어)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **MemoryMax=** mở rộng hệ quả.
-
 ## Cgroup tài nguyên (resource / 자원) điều khiển (control / 제어)
 
 Systemd tổ chức services vào cgroups.
@@ -401,8 +349,6 @@ TasksMax=4096
 
 `CPUQuota=200%` thường tương đương tối đa khoảng hai logical CPUs worth of CPU thời gian (time / 시간) trong period phù hợp, không phải “được gắn riêng 2 CPU vật lý”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Cgroup tài nguyên (resource / 자원) điều khiển (control / 제어)** đặt vấn đề; **MemoryMax=** đối chiếu bằng chứng, rồi **MemoryHigh=** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `MemoryMax=`
 
 Nếu dịch vụ (service / 서비스) vượt `MemoryMax`, cgroup OOM có thể xảy ra dù host còn RAM.
@@ -415,23 +361,17 @@ systemctl show app -p MemoryCurrent -p MemoryMax
 
 hoặc cgroup files tương ứng.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **MemoryHigh=** nối từ **MemoryMax=** sang **TasksMax=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `MemoryHigh=`
 
 `MemoryHigh` tạo pressure/throttling trước hard kill ở `MemoryMax`.
 
 Nó hữu ích để tạo soft ranh giới (boundary / 경계) nhưng có thể làm độ trễ (latency / 지연 시간) tăng khi reclaim.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **TasksMax=** nối từ **MemoryHigh=** sang **Restart chính sách (policy / 정책) sâu hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `TasksMax=`
 
 Giới hạn số tasks/threads trong cgroup.
 
 Java app tạo quá nhiều threads có thể chạm limit dù `ulimit -u` nhìn còn cao.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Restart chính sách (policy / 정책) sâu hơn** nối từ **TasksMax=** sang **Exit status nào được coi là success?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Restart chính sách (policy / 정책) sâu hơn
 
@@ -454,8 +394,6 @@ StartLimitBurst=5
 
 Nếu dịch vụ (service / 서비스) thất bại (fail / 실패) ngay lập tức và `Restart=always`, restart storm có thể gây log storm hoặc tải phụ thuộc (dependency / 의존성).
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Exit status nào được coi là success?** nối từ **Restart chính sách (policy / 정책) sâu hơn** sang **Hết thời gian chờ (timeout / 타임아웃) khi start/stop**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Exit status nào được coi là success?
 
 Có thể điều chỉnh:
@@ -467,8 +405,6 @@ SuccessExitStatus=143
 nhưng chỉ nên làm khi hiểu ứng dụng (application / 애플리케이션) tín hiệu (signal / 신호)/exit ngữ nghĩa (semantics / 의미론).
 
 Ví dụ JVM nhận SIGTERM không nhất thiết luôn trả 143 tùy wrapper/thời gian chạy (runtime / 런타임).
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Hết thời gian chờ (timeout / 타임아웃) khi start/stop** nối từ **Exit status nào được coi là success?** sang **Kill chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hết thời gian chờ (timeout / 타임아웃) khi start/stop
 
@@ -483,8 +419,6 @@ Nếu shutdown cần drain traffic lâu hơn hết thời gian chờ (timeout / 
 
 Đây là lý do graceful shutdown của Spring/Kubernetes/systemd phải được thiết kế đồng bộ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Kill chế độ (mode / 모드)** nối từ **Hết thời gian chờ (timeout / 타임아웃) khi start/stop** sang **Watchdog**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kill chế độ (mode / 모드)
 
 Systemd có `KillMode=` để quyết định tín hiệu (signal / 신호) gửi cho tiến trình (process / 프로세스) nào trong cgroup.
@@ -493,8 +427,6 @@ Systemd có `KillMode=` để quyết định tín hiệu (signal / 신호) gử
 
 Nếu chọn sai, child tiến trình (process / 프로세스) có thể bị orphan hoặc sống sau khi dịch vụ (service / 서비스) tưởng đã stop.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Watchdog** nối từ **Kill chế độ (mode / 모드)** sang **Sandboxing với systemd**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Watchdog
 
 Một dịch vụ (service / 서비스) hỗ trợ watchdog có thể gửi heartbeat cho systemd.
@@ -502,8 +434,6 @@ Một dịch vụ (service / 서비스) hỗ trợ watchdog có thể gửi hear
 Nếu heartbeat dừng, systemd coi dịch vụ (service / 서비스) unhealthy và có thể restart.
 
 Watchdog khác health endpoint: nó đo việc tiến trình (process / 프로세스) còn phản hồi theo giao thức (protocol / 프로토콜) với dịch vụ (service / 서비스) manager.
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Sandboxing với systemd** nối từ **Watchdog** sang **NoNewPrivileges=**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sandboxing với systemd
 
@@ -521,15 +451,11 @@ CapabilityBoundingSet=
 
 Không nên bật toàn bộ rồi hy vọng ứng dụng (application / 애플리케이션) vẫn chạy. Mỗi directive thay đổi thực thi (execution / 실행) môi trường (environment / 환경) và cần kiểm thử (test / 테스트).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **NoNewPrivileges=** nối từ **Sandboxing với systemd** sang **ProtectSystem=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `NoNewPrivileges=`
 
 Khi bật, tiến trình (process / 프로세스) và descendants không thể đạt thêm privilege qua `execve()` theo một số cơ chế như setuid/capabilities.
 
 Đây là điều khiển (control / 제어) quan trọng để giảm privilege escalation.
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **ProtectSystem=** nối từ **NoNewPrivileges=** sang **PrivateTmp=**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `ProtectSystem=`
 
@@ -537,23 +463,17 @@ Có thể làm nhiều phần filesystem read-only trong không gian tên (names
 
 Ứng dụng cần ghi (write / 쓰기) đường dẫn (path / 경로) phải được mở riêng bằng directives như `ReadWritePaths=`.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **PrivateTmp=** nối từ **ProtectSystem=** sang **PrivateDevices=**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `PrivateTmp=`
 
 Dịch vụ (service / 서비스) nhận `/tmp` và `/var/tmp` riêng trong mount không gian tên (namespace / 네임스페이스).
 
 Nếu hai dịch vụ (service / 서비스) trước đây trao đổi tệp (file / 파일) qua `/tmp`, bật `PrivateTmp` có thể phá tích hợp (integration / 통합) đó.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **PrivateDevices=** nối từ **PrivateTmp=** sang **Năng lực (capability / 역량) bounding**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `PrivateDevices=`
 
 Giảm truy cập (access / 접근) tới thiết bị (device / 장치) nodes.
 
 Phù hợp nhiều daemon không cần hardware truy cập (access / 접근) trực tiếp.
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Năng lực (capability / 역량) bounding** nối từ **PrivateDevices=** sang **DynamicUser=**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lực (capability / 역량) bounding
 
@@ -566,15 +486,11 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 Điều này cho phép app bind low cổng (port / 포트) mà không giữ toàn bộ gốc (root / 루트) privilege trong một số mô hình.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **DynamicUser=** nối từ **Năng lực (capability / 역량) bounding** sang **systemd-analyze security**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `DynamicUser=`
 
 Systemd có thể tạo người dùng (user / 사용자) thời gian chạy (runtime / 런타임) tạm thời cho dịch vụ (service / 서비스).
 
 Hữu ích với daemon không cần persistent UID, nhưng cần hiểu quyền sở hữu (ownership / 소유권) của persistent files trước khi dùng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **systemd-analyze security** nối từ **DynamicUser=** sang **Drop-in override**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `systemd-analyze security`
 
@@ -585,8 +501,6 @@ systemd-analyze security app.service
 ```
 
 Điểm số không phải chân lý. công cụ (tool / 도구) chỉ đánh giá theo một tập heuristic; bảo mật (security / 보안) thật còn phụ thuộc ứng dụng (application / 애플리케이션) và threat mô hình (model / 모델).
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Drop-in override** nối từ **systemd-analyze security** sang **daemon-reload khác restart**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drop-in override
 
@@ -606,8 +520,6 @@ Kiểm tra merged cấu hình (config / 설정):
 systemctl cat app.service
 ```
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **daemon-reload khác restart** nối từ **Drop-in override** sang **Mask**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `daemon-reload` khác restart
 
 Sau khi sửa đơn vị (unit / 단위) definition:
@@ -622,8 +534,6 @@ Nhưng tiến trình (process / 프로세스) đang chạy chưa tự thay đổ
 
 Sau đó tùy thay đổi có thể cần restart/reload dịch vụ (service / 서비스).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Mask** nối từ **daemon-reload khác restart** sang **Transient đơn vị (unit / 단위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mask
 
 Trước khi chạy hoặc đọc ví dụ dưới đây, hãy xác định câu hỏi vận hành mà nó trả lời, dữ liệu nào sẽ quan sát được và giới hạn của kết quả. Lệnh chỉ có ý nghĩa khi gắn với một giả thuyết về state của hệ thống.
@@ -636,8 +546,6 @@ mask thường tạo liên kết tới `/dev/null` để ngăn đơn vị (unit 
 
 `disable` chỉ bỏ enablement relationship; `mask` mạnh hơn.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Transient đơn vị (unit / 단위)** nối từ **Mask** sang **Phạm vi (scope / 범위) đơn vị (unit / 단위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Transient đơn vị (unit / 단위)
 
 Có thể chạy command tạm dưới systemd:
@@ -648,15 +556,11 @@ systemd-run --unit=test-job --property=MemoryMax=1G /usr/local/bin/job.sh
 
 Đây là cách hay để áp tài nguyên (resource / 자원) điều khiển (control / 제어) cho tác vụ (task / 작업) không cần tạo đơn vị (unit / 단위) tệp (file / 파일) cố định.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Phạm vi (scope / 범위) đơn vị (unit / 단위)** nối từ **Transient đơn vị (unit / 단위)** sang **Journal siêu dữ liệu (metadata / 메타데이터) theo đơn vị (unit / 단위)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phạm vi (scope / 범위) đơn vị (unit / 단위)
 
 Interactive tiến trình (process / 프로세스) có thể được group trong `.scope` đơn vị (unit / 단위).
 
 Desktop session/bộ chứa (container / 컨테이너) manager thường tận dụng phạm vi (scope / 범위)/dịch vụ (service / 서비스) hierarchy để tổ chức cgroups.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Phạm vi (scope / 범위) đơn vị (unit / 단위)** đặt vấn đề; **Journal siêu dữ liệu (metadata / 메타데이터) theo đơn vị (unit / 단위)** đối chiếu bằng chứng, rồi **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): dịch vụ (service / 서비스) “active” nhưng chưa ready** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Journal siêu dữ liệu (metadata / 메타데이터) theo đơn vị (unit / 단위)
 
@@ -669,8 +573,6 @@ journalctl -u app.service
 ```
 
 lọc theo siêu dữ liệu (metadata / 메타데이터), không chỉ grep văn bản (text / 텍스트).
-
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Journal siêu dữ liệu (metadata / 메타데이터) theo đơn vị (unit / 단위)** nêu quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): dịch vụ (service / 서비스) “active” nhưng chưa ready** thử quy tắc trong tình huống, rồi **Một trường hợp (case / 사례): dịch vụ (service / 서비스) restart vòng lặp (loop / 루프) làm disk đầy** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): dịch vụ (service / 서비스) “active” nhưng chưa ready
 
@@ -686,8 +588,6 @@ Giải pháp có thể là:
 - `Type=notify` nếu hỗ trợ;
 - orchestration readiness probe;
 - phụ thuộc (dependency / 의존성) bên tiêu thụ (consumer / 소비자) có thử lại (retry / 재시도)/backoff.
-
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): dịch vụ (service / 서비스) “active” nhưng chưa ready** nêu quy tắc; **Một trường hợp (case / 사례): dịch vụ (service / 서비스) restart vòng lặp (loop / 루프) làm disk đầy** thử quy tắc trong tình huống, rồi **Một trường hợp (case / 사례): chạy tay được nhưng dịch vụ (service / 서비스) không chạy** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례): dịch vụ (service / 서비스) restart vòng lặp (loop / 루프) làm disk đầy
 
@@ -711,8 +611,6 @@ systemctl show app -p NRestarts
 ```
 
 Sau đó fix nguyên nhân gốc (root cause / 근본 원인) và restart chính sách (policy / 정책)/tỷ lệ (rate / 비율) limit phù hợp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Một trường hợp (case / 사례): dịch vụ (service / 서비스) restart vòng lặp (loop / 루프) làm disk đầy** nêu quy tắc; **Một trường hợp (case / 사례): chạy tay được nhưng dịch vụ (service / 서비스) không chạy** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례): chạy tay được nhưng dịch vụ (service / 서비스) không chạy
 
@@ -738,8 +636,6 @@ Các khác biệt thường nằm ở:
 - tài nguyên (resource / 자원) limits;
 - sandboxing directives.
 
-> **Nối mạch:** Trong **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Một trường hợp (case / 사례): chạy tay được nhưng dịch vụ (service / 서비스) không chạy** nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả.
-
 ## Mô hình tư duy
 
 Hãy nhìn systemd theo bốn lớp:
@@ -756,8 +652,6 @@ resource + security policy
 
 `systemctl` chỉ là máy khách (client / 클라이언트) điều khiển bốn lớp này.
 
-> **Nối mạch:** Ở chặng này của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“After=mạng (network / 네트워크).mục tiêu (target / 대상) nghĩa mạng đã dùng được.”** Không; đó chỉ là thứ tự (ordering / 순서) tương đối với một mục tiêu (target / 대상).
@@ -771,8 +665,6 @@ resource + security policy
 **“Bật mọi hardening directive luôn tốt.”** Có thể phá ứng dụng (application / 애플리케이션); cần threat mô hình (model / 모델) và kiểm thử (test / 테스트).
 
 **“disable ngăn dịch vụ (service / 서비스) start hoàn toàn.”** `mask` mới là cơ chế mạnh hơn cho mục tiêu đó.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Systemd sâu hơn: đơn vị (unit / 단위) đồ thị (graph / 그래프), phụ thuộc (dependency / 의존성), tài nguyên (resource / 자원) điều khiển (control / 제어) và sandboxing**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

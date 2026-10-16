@@ -34,13 +34,9 @@ Hạ tầng (infrastructure / 인프라), education và health có thể tạo x
 
 Biên giới mới có thể nối các nhóm hoặc chia một mạng cũ. Refugee luồng (flow / 흐름), land restitution, ngôn ngữ (language / 언어) chính sách (policy / 정책) và citizenship law định hình nation-building nhiều thập kỷ. Women và grassroots organizers tham gia đấu tranh nhưng thường bị loại khỏi elite post-independence settlement.
 
-> **Nối mạch:** State-building sau độc lập cần tách chủ quyền pháp lý khỏi năng lực hành chính, biên giới và kinh tế. **Bằng chứng, giới hạn và cầu nối** kiểm tra các mặt đó trước depth pass.
-
 ## Bằng chứng, giới hạn và cầu nối
 
 Constitution, parliamentary debate, census, commodity price, refugee dữ liệu (data / 데이터), memoir và cục bộ (local / 로컬) oral lịch sử (history / 이력) giúp phân biệt elite narrative với trạng thái (state / 상태) formation thực tế. Counterfactual: nếu biên giới được đàm phán lại theo economic/ecological mạng (network / 네트워크), xung đột (conflict / 충돌) chưa chắc biến mất vì citizenship và land vẫn cần institution; nhưng refugee đường dẫn (path / 경로) và fiscal cơ sở (base / 기반) có thể khác. Cầu nối sang 16 là **trạng thái (state / 상태), firm và household cùng bước vào toàn cục (global / 전역) giá trị (value / 값)/finance/di chuyển (migration / 마이그레이션) mạng (network / 네트워크)**.
-
-> **Nối mạch:** Bằng chứng nối tuyên bố độc lập với năng lực nhà nước, biên giới và kinh tế; **Độ sâu pass** kiểm tra giới hạn của sovereignty sau khi quyền cai trị đổi chủ.
 
 ## Độ sâu (depth / 깊이) pass: độc lập chính trị và giới hạn của sovereignty
 

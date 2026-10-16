@@ -32,8 +32,6 @@ là phương trình sóng.
 
 Chúng đều chứa toán tử Laplace nhưng có cấu trúc thời gian khác nhau. Vì vậy chúng mô tả hành vi vật lý khác nhau: khuếch tán làm các chênh lệch không gian dần được san bằng, còn phương trình sóng cho phép nhiễu động lan truyền với tốc độ hữu hạn trong mô hình lý tưởng.
 
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Phương trình không đủ để chọn nghiệm vật lý** nối từ **Vì sao phương trình vi phân thường chưa đủ?** sang **Tách biến và phổ chế độ (mode / 모드) tự nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương trình không đủ để chọn nghiệm vật lý
 
 Một PDE thường có vô số nghiệm toán học. Phương trình chỉ quy định quan hệ cục bộ giữa trường và các đạo hàm của nó. Nghiệm vật lý cụ thể còn phụ thuộc vào hình học miền, cách hệ được chuẩn bị và cách trường tương tác với biên.
@@ -74,8 +72,6 @@ Trong điện tĩnh, vật dẫn được giữ ở điện thế cố định g
 
 Điểm quan trọng là: **điều kiện biên không phải chi tiết phụ của bài toán**. Cùng một PDE nhưng điều kiện biên khác có thể mô tả các hệ vật lý hoàn toàn khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Tách biến và phổ chế độ (mode / 모드) tự nhiên** nối từ **Phương trình không đủ để chọn nghiệm vật lý** sang **Fourier biến đạo hàm thành phép nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tách biến và phổ chế độ (mode / 모드) tự nhiên
 
 Khi hình học và điều kiện biên đủ đơn giản, ta có thể thử nghiệm dạng tích
@@ -101,8 +97,6 @@ k_n=\frac{n\pi}{L}.
 ```
 
 Các số sóng cho phép là rời rạc vì phương trình sóng phải đồng thời thỏa hai điều kiện biên. Do đó, chỉ nhìn thấy một phổ rời rạc chưa đủ để kết luận hệ có bản chất lượng tử.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Fourier biến đạo hàm thành phép nhân** nối từ **Tách biến và phổ chế độ (mode / 모드) tự nhiên** sang **Biến đổi Laplace và bài toán quá độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fourier biến đạo hàm thành phép nhân
 
@@ -143,8 +137,6 @@ Chế độ (mode / 모드) có `k` lớn tương ứng với cấu trúc không
 
 Biến đổi Fourier vì vậy không chỉ là kỹ thuật xử lý tín hiệu. Nó chọn một cơ sở trong đó các toán tử vi phân bất biến tịnh tiến trở nên đặc biệt đơn giản.
 
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Biến đổi Laplace và bài toán quá độ** nối từ **Fourier biến đạo hàm thành phép nhân** sang **Hàm Green: xây nghiệm từ đáp ứng của nguồn điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Biến đổi Laplace và bài toán quá độ
 
 Biến đổi Laplace được định nghĩa bởi
@@ -156,8 +148,6 @@ F(s)=\int_0^\infty f(t)e^{-st}dt.
 Nó đặc biệt hữu ích cho hệ tuyến tính có điều kiện ban đầu. Đạo hàm theo thời gian biến thành biểu thức đại số kèm các hạng chứa giá trị ban đầu.
 
 Mạch RC/RLC, hệ điều khiển và quá trình khuếch tán quá độ đều có thể được giải hiệu quả trong không gian Laplace. Cấu trúc này cũng liên hệ trực tiếp với hàm truyền (transfer function) trong kỹ thuật điều khiển.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Biến đổi Laplace và bài toán quá độ** đặt vấn đề; **Hàm Green: xây nghiệm từ đáp ứng của nguồn điểm** đối chiếu bằng chứng, rồi **Laplacian và hình học** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hàm Green: xây nghiệm từ đáp ứng của nguồn điểm
 
@@ -187,8 +177,6 @@ u(x)=\int G(x,x')f(x')dx'.
 
 Hàm Green không chỉ phụ thuộc toán tử `L`. Nó còn phụ thuộc miền hình học và điều kiện biên. Vì vậy “hàm Green của Laplacian” không phải duy nhất nếu ta chưa nói rõ bài toán sống trong không gian nào và biên được xử lý ra sao.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Hàm Green: xây nghiệm từ đáp ứng của nguồn điểm** đặt vấn đề; **Laplacian và hình học** đối chiếu bằng chứng, rồi **Tensor và quy luật biến đổi** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Laplacian và hình học
 
 Laplacian của trường vô hướng là
@@ -201,8 +189,6 @@ Nó đo cách giá trị tại một điểm khác với cấu trúc lân cận 
 
 Công thức cụ thể của Laplacian phụ thuộc hệ tọa độ. Trong tọa độ cầu, nó chứa các hạng bán kính và góc. Không thể lấy công thức Descartes rồi thay tùy ý `x,y,z` bằng `r,\theta,\phi`.
 
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Tensor và quy luật biến đổi** nối từ **Laplacian và hình học** sang **Quy ước tổng Einstein**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tensor và quy luật biến đổi
 
 Một vô hướng không đổi khi ta quay hệ tọa độ. Thành phần của vectơ biến đổi với một ma trận quay. Với tensor hạng hai,
@@ -214,8 +200,6 @@ T'_{ij}=R_{ik}R_{j\ell}T_{k\ell}.
 Tensor ứng suất, tensor quán tính, tensor điện môi và chỉ số (metric / 지표) không-thời gian đều là các ví dụ quan trọng.
 
 Điểm cốt lõi là tensor là một đối tượng hình học có quy luật biến đổi xác định sao cho quan hệ vật lý không phụ thuộc việc ta chọn trục tọa độ nào. Một ma trận chỉ là bảng thành phần của tensor sau khi đã chọn cơ sở.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Quy ước tổng Einstein** nối từ **Tensor và quy luật biến đổi** sang **Jacobian và đổi tọa độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy ước tổng Einstein
 
@@ -241,8 +225,6 @@ v'_i=R_{ij}v_j.
 
 Ký hiệu này làm các biểu thức tensor ngắn hơn và giúp đối xứng của phương trình nổi rõ, đặc biệt trong cơ học liên tục, điện từ học và thuyết tương đối.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Jacobian và đổi tọa độ** nối từ **Quy ước tổng Einstein** sang **Hàm delta Dirac**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Jacobian và đổi tọa độ
 
 Khi đổi biến trong tích phân, phần tử thể tích phải thay theo định thức Jacobian:
@@ -258,8 +240,6 @@ dV=r^2\sin\theta\,dr\,d\theta\,d\phi.
 ```
 
 Hệ số `r^2\sin\theta` không phải quy ước tùy ý. Nó đo mức độ một phần tử tọa độ nhỏ bị kéo giãn thành thể tích vật lý trong ánh xạ tọa độ cầu.
-
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Hàm delta Dirac** nối từ **Jacobian và đổi tọa độ** sang **Vô thứ nguyên hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm delta Dirac
 
@@ -277,8 +257,6 @@ Mật độ điện tích của một điện tích điểm có thể viết
 
 Hàm delta cho phép biểu diễn nguồn định xứ bên trong một phương trình trường liên tục. Nó là công cụ nối mô hình “hạt điểm” với mô tả trường.
 
-> **Nối mạch:** Ở chặng này của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Vô thứ nguyên hóa** nối từ **Hàm delta Dirac** sang **Dạng mạnh, dạng yếu và phương pháp phần tử hữu hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vô thứ nguyên hóa
 
 Ta có thể đổi thang biến
@@ -292,8 +270,6 @@ x=Lx',\qquad t=\tau t'
 Các số như Reynolds, Mach hay Péclet cho biết tỉ lệ giữa các cơ chế vật lý cạnh tranh. Sau vô thứ nguyên hóa, một số hạng có thể đi kèm hệ số rất nhỏ hoặc rất lớn, từ đó cho biết cơ chế nào có thể bỏ qua trong một chế độ cụ thể.
 
 Vô thứ nguyên hóa không chỉ làm con số “đẹp” hơn. Nó giúp tìm chế độ chi phối, xây mô hình tương tự và so sánh hai hệ có kích thước tuyệt đối khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Dạng mạnh, dạng yếu và phương pháp phần tử hữu hạn** nối từ **Vô thứ nguyên hóa** sang **Kiểm tra đơn vị và điều kiện áp dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dạng mạnh, dạng yếu và phương pháp phần tử hữu hạn
 
@@ -316,15 +292,11 @@ một dạng yếu điển hình có cấu trúc
 
 Phương pháp phần tử hữu hạn (finite element method, FEM) xấp xỉ `u` bằng một không gian hàm hữu hạn chiều rồi giải dạng yếu. Đây là cầu nối trực tiếp giữa giải tích biến phân, PDE và mô phỏng kỹ thuật kết cấu, nhiệt, điện từ hay chất lưu.
 
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Kiểm tra đơn vị và điều kiện áp dụng** nối từ **Dạng mạnh, dạng yếu và phương pháp phần tử hữu hạn** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kiểm tra đơn vị và điều kiện áp dụng
 
 Các toán tử vi phân mang thứ nguyên. Nếu `x` có đơn vị mét thì `\partial/\partial x` có thứ nguyên `1/m`, còn `\nabla^2` có thứ nguyên `1/m^2`. Vì vậy mọi PDE vật lý phải cân bằng thứ nguyên giữa hai vế.
 
 Khi chọn phương pháp giải, cũng cần kiểm tra giả định. Tách biến đòi hỏi hình học và điều kiện biên tương thích. Biến đổi Fourier thuận lợi nhất khi hệ có tính bất biến tịnh tiến hoặc miền đủ đơn giản. Hàm Green yêu cầu toán tử tuyến tính nếu muốn dùng nguyên lý chồng chập trực tiếp. FEM không tự động đảm bảo nghiệm đúng nếu lưới quá thô hoặc điều kiện biên sai.
-
-> **Nối mạch:** Ở chặng này của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Kiểm tra đơn vị và điều kiện áp dụng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -340,8 +312,6 @@ xác định trường cần tìm
 → chọn cơ sở hoặc phương pháp số phù hợp
 → kiểm tra đơn vị, hội tụ và giới hạn vật lý
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -360,8 +330,6 @@ Chuỗi Fourier thích hợp với nhiều bài toán tuần hoàn hoặc miền
 ### “Dùng FEM thì luôn thu được nghiệm đúng”
 
 Không. Kết quả còn phụ thuộc mô hình vật lý, điều kiện biên, loại phần tử, độ mịn lưới, độ ổn định số và kiểm tra hội tụ.
-
-> **Nối mạch:** Trong **Phương pháp Toán cho Vật lý: PDE, điều kiện biên, hàm Green và tensor**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

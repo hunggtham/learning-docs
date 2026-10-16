@@ -43,8 +43,6 @@ I=3\text{ bits}.
 
 Rare sự kiện (event / 이벤트) tạo surprise lớn hơn khi xảy ra.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **2. Vì sao logarithm xuất hiện?** nối từ **1. xác suất (probability / 확률) không phải thông tin (information / 정보)** sang **3. Entropy là expected surprise**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Vì sao logarithm xuất hiện?
 
 Với independent events:
@@ -62,8 +60,6 @@ I(A,B)=I(A)+I(B).
 Logarithm biến multiplication thành addition.
 
 Cơ sở (base / 기반) 2 cho đơn vị (unit / 단위) bits; cơ sở (base / 기반) `e` cho nats.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **3. Entropy là expected surprise** nối từ **2. Vì sao logarithm xuất hiện?** sang **4. Entropy khác variance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Entropy là expected surprise
 
@@ -89,8 +85,6 @@ H(X)\approx0.469\text{ bits}.
 
 Kết quả (outcome / 결과) predictable hơn nên entropy thấp hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **4. Entropy khác variance** nối từ **3. Entropy là expected surprise** sang **5. Compression: predictability thành shorter biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Entropy khác variance
 
 Variance:
@@ -106,8 +100,6 @@ Entropy phụ thuộc probabilities.
 Hai distributions có thể cùng entropy nhưng variance rất khác, hoặc ngược lại.
 
 Không nên coi entropy là “một kiểu variance”.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **5. Compression: predictability thành shorter biểu diễn (representation / 표현)** nối từ **4. Entropy khác variance** sang **6. Prefix codes và Kraft inequality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Compression: predictability thành shorter biểu diễn (representation / 표현)
 
@@ -125,8 +117,6 @@ Entropy cho lower-bound-like quantity cho expected lossless mã (code / 코드) 
 Huffman coding tạo prefix mã (code / 코드) gần optimal theo symbol frequencies.
 
 Arithmetic coding encode entire chuỗi (sequence / 시퀀스) theo xác suất (probability / 확률) intervals và có thể approach entropy closer.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **6. Prefix codes và Kraft inequality** nối từ **5. Compression: predictability thành shorter biểu diễn (representation / 표현)** sang **7. Joint entropy và chuỗi (chain / 사슬) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Prefix codes và Kraft inequality
 
@@ -147,8 +137,6 @@ short codeword = leaf gần root
 Chọn leaf sớm khối (block / 블록) toàn bộ descendants, nên short codes consume more code-tree sức chứa (capacity / 용량).
 
 Combinatorics và cây (tree / 트리) cấu trúc (structure / 구조) gặp thông tin (information / 정보) lý thuyết (theory / 이론) ở đây.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **6. Prefix codes và Kraft inequality** đặt đầu vào cho **7. Joint entropy và chuỗi (chain / 사슬) quy tắc (rule / 규칙)**, rồi **8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Joint entropy và chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
@@ -176,8 +164,6 @@ H(X,Y)=H(X)+H(Y|X).
 
 Đây là bất định (uncertainty / 불확실성) accounting.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **7. Joint entropy và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** đặt đầu vào cho **8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?**, rồi **9. dữ liệu (data / 데이터) processing inequality** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?
 
 Mutual information đo lượng bất định về X được giảm khi quan sát Y. Nó không yêu cầu quan hệ tuyến tính, nhưng vẫn phụ thuộc cách mô hình hóa phân phối và dữ liệu.
@@ -202,8 +188,6 @@ Khác correlation, mutual thông tin (information / 정보) có thể detect non
 
 Nhưng estimate MI từ finite high-dimensional dữ liệu (data / 데이터) không trivial.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **8. Mutual thông tin (information / 정보): biết Y giảm bất định (uncertainty / 불확실성) về X bao nhiêu?** đặt vấn đề; **9. dữ liệu (data / 데이터) processing inequality** đối chiếu bằng chứng, rồi **10. Cross-entropy là expected log mất mát (loss / 손실)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 9. dữ liệu (data / 데이터) processing inequality
 
 Nếu:
@@ -224,8 +208,6 @@ Mô hình tư duy (mental model / 사고 모델):
 
 Đây là important principle trong tính năng (feature / 기능) extraction và biểu diễn (representation / 표현) học tập (learning / 학습).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **9. dữ liệu (data / 데이터) processing inequality** đặt vấn đề; **10. Cross-entropy là expected log mất mát (loss / 손실)** đối chiếu bằng chứng, rồi **11. KL divergence là extra coding/log-loss chi phí (cost / 비용)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 10. Cross-entropy là expected log mất mát (loss / 손실)
 
 Nếu true phân phối (distribution / 분포) `p` và mô hình (model / 모델) predicts `q`:
@@ -241,8 +223,6 @@ L=-\log q(y_{true}).
 ```
 
 Confident wrong predictions bị phạt mạnh vì `-log q` tăng lớn khi `q→0`.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **11. KL divergence là extra coding/log-loss chi phí (cost / 비용)** nối từ **10. Cross-entropy là expected log mất mát (loss / 손실)** sang **12. Maximum likelihood và cross-entropy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. KL divergence là extra coding/log-loss chi phí (cost / 비용)
 
@@ -270,8 +250,6 @@ không satisfy triangle inequality
 
 nên không phải ordinary chỉ số (metric / 지표).
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **12. Maximum likelihood và cross-entropy** nối từ **11. KL divergence là extra coding/log-loss chi phí (cost / 비용)** sang **13. Entropy và calibration khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Maximum likelihood và cross-entropy
 
 Dataset iid:
@@ -296,8 +274,6 @@ với categorical đầu ra (output / 출력) chính là empirical cross-entropy
 
 Hàm mất mát (loss function / 손실 함수) vì vậy xuất phát từ probabilistic mô hình (model / 모델), không phải arbitrary choice.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **13. Entropy và calibration khác nhau** nối từ **12. Maximum likelihood và cross-entropy** sang **14. Expected mất mát (loss / 손실): xác suất (probability / 확률) chưa đủ cho hành động (action / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Entropy và calibration khác nhau
 
 Mô hình (model / 모델) có low-entropy prediction có thể rất confident.
@@ -312,8 +288,6 @@ roughly 80% có đúng không?
 ```
 
 Entropy đo bất định (uncertainty / 불확실성) của prediction phân phối (distribution / 분포); calibration đo alignment xác suất (probability / 확률) với empirical frequency.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **14. Expected mất mát (loss / 손실): xác suất (probability / 확률) chưa đủ cho hành động (action / 동작)** nối từ **13. Entropy và calibration khác nhau** sang **15. Proper scoring rules**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Expected mất mát (loss / 손실): xác suất (probability / 확률) chưa đủ cho hành động (action / 동작)
 
@@ -349,15 +323,11 @@ Quyết định (decision / 결정) lý thuyết (theory / 이론) answer:
 nên làm gì với uncertainty đó?
 ```
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **15. Proper scoring rules** nối từ **14. Expected mất mát (loss / 손실): xác suất (probability / 확률) chưa đủ cho hành động (action / 동작)** sang **16. thông tin (information / 정보) gain trong trees**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Proper scoring rules
 
 Log mất mát (loss / 손실) và Brier score là examples of **proper scoring rules**: expected score incentivizes reporting true probabilities under suitable các giả định (assumptions / 가정들).
 
 Điều này quan trọng vì classification accuracy alone không reward calibrated probabilistic forecasts.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **16. thông tin (information / 정보) gain trong trees** nối từ **15. Proper scoring rules** sang **17. Entropy tỷ lệ (rate / 비율) cho sequences**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. thông tin (information / 정보) gain trong trees
 
@@ -373,8 +343,6 @@ Tức split hữu ích nếu biết branch làm label phân phối (distribution
 
 Nhưng greedy cây (tree / 트리) splits không guarantee globally optimal cây (tree / 트리).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **17. Entropy tỷ lệ (rate / 비율) cho sequences** nối từ **16. thông tin (information / 정보) gain trong trees** sang **18. Channel sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Entropy tỷ lệ (rate / 비율) cho sequences
 
 Nếu dữ liệu (data / 데이터) có temporal dependence, per-symbol entropy không đủ.
@@ -384,8 +352,6 @@ Entropy tỷ lệ (rate / 비율) roughly đo new bất định (uncertainty / �
 Predictable chuỗi (sequence / 시퀀스) có entropy tỷ lệ (rate / 비율) thấp dù marginal symbol phân phối (distribution / 분포) có thể nhìn balanced.
 
 Compression algorithms exploit repeated/conditional cấu trúc (structure / 구조), không chỉ one-symbol frequency.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **18. Channel sức chứa (capacity / 용량)** nối từ **17. Entropy tỷ lệ (rate / 비율) cho sequences** sang **19. Redundancy có thể tăng độ tin cậy (reliability / 신뢰성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Channel sức chứa (capacity / 용량)
 
@@ -404,8 +370,6 @@ bits/use, với `H_2` nhị phân (binary / 이진) entropy.
 Nếu `p=0`, sức chứa (capacity / 용량) 1 bit/use.
 Nếu `p=1/2`, đầu ra (output / 출력) independent nguồn (source / 소스) nên sức chứa (capacity / 용량) 0.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **19. Redundancy có thể tăng độ tin cậy (reliability / 신뢰성)** nối từ **18. Channel sức chứa (capacity / 용량)** sang **20. Entropy trong thermodynamics và ML**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Redundancy có thể tăng độ tin cậy (reliability / 신뢰성)
 
 Compression remove redundancy để save bits.
@@ -418,8 +382,6 @@ Hai goals ngược hướng nhưng cùng information-theoretic khung phần mề
 source coding → represent efficiently
 channel coding → transmit reliably
 ```
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **20. Entropy trong thermodynamics và ML** nối từ **19. Redundancy có thể tăng độ tin cậy (reliability / 신뢰성)** sang **21. Rare sự kiện (event / 이벤트) không đồng nghĩa important sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Entropy trong thermodynamics và ML
 
@@ -434,8 +396,6 @@ uncertainty measures
 ```
 
 Always check definition and phân phối (distribution / 분포).
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **21. Rare sự kiện (event / 이벤트) không đồng nghĩa important sự kiện (event / 이벤트)** nối từ **20. Entropy trong thermodynamics và ML** sang **22. dùng chung (common / 공통) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Rare sự kiện (event / 이벤트) không đồng nghĩa important sự kiện (event / 이벤트)
 
@@ -454,8 +414,6 @@ rare catastrophic safety failure
 same xác suất (probability / 확률) lớp (class / 클래스) có very different quyết định (decision / 결정) significance.
 
 Thông tin (information / 정보) và utility phải tách.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **22. dùng chung (common / 공통) thất bại (failure / 실패) modes** nối từ **21. Rare sự kiện (event / 이벤트) không đồng nghĩa important sự kiện (event / 이벤트)** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -479,8 +437,6 @@ Finite-sample độ lệch (bias / 편향) có thể lớn.
 
 Entropy depends on chosen random variable/biểu diễn (representation / 표현).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** nối từ **22. dùng chung (common / 공통) thất bại (failure / 실패) modes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
 Phần kết nối nối entropy, mutual information và KL với machine learning, compression, privacy và decision theory. Hãy phân biệt đo thông tin với tối ưu loss trong từng context.
@@ -496,8 +452,6 @@ Statistics → calibration
 Decision theory → expected loss
 Communication → capacity / error correction
 ```
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — bất định (uncertainty / 불확실성), thông tin (information / 정보) và Entropy: từ xác suất (probability / 확률) đến quyết định (decision / 결정)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

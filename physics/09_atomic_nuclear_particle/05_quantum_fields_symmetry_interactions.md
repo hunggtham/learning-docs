@@ -20,8 +20,6 @@ Lý thuyết trường lượng tử (Quantum Field Theory, QFT / 양자장론) 
 
 Electron là excitation của trường electron; photon là excitation của trường điện từ.
 
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Từ dao động tử điều hòa tới chế độ (mode / 모드) của trường** nối từ **Vì sao cơ học lượng tử với số hạt cố định chưa đủ?** sang **Trường cổ điển trước khi lượng tử hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ dao động tử điều hòa tới chế độ (mode / 모드) của trường
 
 Một trường tự do cổ điển có thể được khai triển thành các chế độ (mode / 모드) chuẩn. Mỗi chế độ (mode / 모드) về mặt toán học gần giống một dao động tử điều hòa.
@@ -43,8 +41,6 @@ làm tăng hoặc giảm số lượng tử của một chế độ (mode / 모�
 Trong QFT, mỗi chế độ (mode / 모드) theo số sóng, phân cực hoặc số lượng tử khác có các toán tử tương tự. “Tạo một photon” nghĩa là tăng occupation number của một chế độ (mode / 모드) trường điện từ.
 
 Đây là cầu nối tự nhiên từ dao động tử lượng tử sang trạng thái nhiều hạt.
-
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Trường cổ điển trước khi lượng tử hóa** nối từ **Từ dao động tử điều hòa tới chế độ (mode / 모드) của trường** sang **Lượng tử hóa các chế độ (mode / 모드) trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trường cổ điển trước khi lượng tử hóa
 
@@ -75,8 +71,6 @@ cho phương trình Klein–Gordon.
 
 Điểm quan trọng là trước khi nói về “hạt”, QFT bắt đầu bằng trường như biến động lực học phân bố trên không-thời gian.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Lượng tử hóa các chế độ (mode / 모드) trường** nối từ **Trường cổ điển trước khi lượng tử hóa** sang **Fock không gian (space / 공간) và số hạt biến đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lượng tử hóa các chế độ (mode / 모드) trường
 
 Trong một hộp hữu hạn, trường tự do có thể khai triển Fourier thành nhiều chế độ (mode / 모드). Sau lượng tử hóa, Hamiltonian có cấu trúc
@@ -95,8 +89,6 @@ Toán tử `a^\dagger_{\mathbf k}` tạo một lượng tử trong chế độ (
 Khái niệm hạt vì vậy nổi lên từ chế độ (mode / 모드) lượng tử hóa của trường.
 
 Với trường boson, một chế độ (mode / 모드) có thể có nhiều lượng tử. Với trường fermion, quan hệ phản giao hoán dẫn đến nguyên lý Pauli và giới hạn occupation phù hợp.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Fock không gian (space / 공간) và số hạt biến đổi** nối từ **Lượng tử hóa các chế độ (mode / 모드) trường** sang **Chân không lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fock không gian (space / 공간) và số hạt biến đổi
 
@@ -127,8 +119,6 @@ là toán tử số hạt.
 
 Cấu trúc này cho phép mô tả phát xạ photon, hấp thụ, phân rã và tạo cặp trong cùng một formalism.
 
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Chân không lượng tử** nối từ **Fock không gian (space / 공간) và số hạt biến đổi** sang **Propagator**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chân không lượng tử
 
 Trạng thái chân không `|0\rangle` là trạng thái không có lượng tử hạt tự do được phát hiện trong cơ sở đang xét, nhưng nó không phải “hư vô cổ điển”.
@@ -138,8 +128,6 @@ Các hàm tương quan của trường trong chân không vẫn có cấu trúc 
 Tuy nhiên, câu phổ biến “hạt ảo liên tục bật ra rồi biến mất khỏi chân không” dễ gây hiểu nhầm. Hạt ảo thường là thành phần của khai triển nhiễu loạn và Feynman diagram, không phải hạt on-shell có thể quan sát trực tiếp bằng detector.
 
 Các hiệu ứng chân không như Lamb shift hay Casimir cần được mô tả qua trường, tương quan, điều kiện biên và tương tác cụ thể.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Propagator** nối từ **Chân không lượng tử** sang **Tương tác (interaction / 상호작용) picture và khai triển nhiễu loạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Propagator
 
@@ -159,8 +147,6 @@ Với trường vô hướng, trong không gian động lượng ta gặp cấu 
 ```
 
 Đường bên trong Feynman diagram biểu diễn factor propagator trong một biểu thức tích phân. Nó không phải quỹ đạo camera ghi lại một hạt thật bay giữa hai vertex.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Tương tác (interaction / 상호작용) picture và khai triển nhiễu loạn** nối từ **Propagator** sang **Từ Lagrangian đến đại lượng đo được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác (interaction / 상호작용) picture và khai triển nhiễu loạn
 
@@ -189,8 +175,6 @@ Wick theorem tổ chức các tích toán tử thành contraction; Feynman diagr
 
 Diagram là công cụ bookkeeping của biên độ, không phải ảnh chụp literal của quá trình vi mô.
 
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Từ Lagrangian đến đại lượng đo được** nối từ **Tương tác (interaction / 상호작용) picture và khai triển nhiễu loạn** sang **Vì sao vòng lặp (loop / 루프) có thể phân kỳ?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ Lagrangian đến đại lượng đo được
 
 Chuỗi suy luận điển hình là
@@ -209,8 +193,6 @@ Các định luật bảo toàn giới hạn phase không gian (space / 공간) 
 
 Trong giới hạn không tương đối tính, cấu trúc này nối trở lại định luật vàng Fermi và lý thuyết tán xạ lượng tử.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Vì sao vòng lặp (loop / 루프) có thể phân kỳ?** nối từ **Từ Lagrangian đến đại lượng đo được** sang **Running coupling và hàm beta**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao vòng lặp (loop / 루프) có thể phân kỳ?
 
 Lý thuyết trường liên tục cho phép tích phân qua động lượng nội bộ tùy lớn. Một số vòng lặp (loop / 루프) integral vì vậy phân kỳ nếu tính trực tiếp.
@@ -220,8 +202,6 @@ Regularization tạm thời đưa vào một cách kiểm soát miền tích ph�
 Renormalization sau đó biểu diễn kết quả bằng các tham số được xác định từ phép đo tại một thang năng lượng.
 
 Cách nhìn hiện đại không phải “trừ vô cực tùy ý”. Tham số bare không phải đại lượng đo trực tiếp; coupling hiệu dụng phụ thuộc độ phân giải hoặc thang năng lượng.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Running coupling và hàm beta** nối từ **Vì sao vòng lặp (loop / 루프) có thể phân kỳ?** sang **Đối xứng gauge và tương tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Running coupling và hàm beta
 
@@ -239,8 +219,6 @@ Trong QED, coupling điện từ tăng chậm ở năng lượng cao do vacuum p
 Trong QCD, coupling mạnh giảm ở năng lượng cao: đây là tự do tiệm cận (asymptotic freedom).
 
 Ý tưởng RG này có họ hàng sâu với nhóm tái chuẩn hóa trong hiện tượng tới hạn của cơ học thống kê.
-
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Đối xứng gauge và tương tác** nối từ **Running coupling và hàm beta** sang **Gauge symmetry là redundancy hay symmetry vật lý?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đối xứng gauge và tương tác
 
@@ -274,8 +252,6 @@ Trong Mô hình Chuẩn:
 
 Các nhóm không Abel như `SU(2)` và `SU(3)` cho phép gauge boson tự mang charge tương ứng và tự tương tác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Gauge symmetry là redundancy hay symmetry vật lý?** nối từ **Đối xứng gauge và tương tác** sang **Phá vỡ đối xứng tự phát**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gauge symmetry là redundancy hay symmetry vật lý?
 
 Gauge transformation thường nên được hiểu như sự dư thừa trong cách biểu diễn, không phải thao tác vật lý tạo một trạng thái quan sát được mới.
@@ -283,8 +259,6 @@ Gauge transformation thường nên được hiểu như sự dư thừa trong c
 Đại lượng đo được phải gauge-invariant hoặc được xây sao cho dự đoán không phụ thuộc lựa chọn gauge.
 
 Tuy nhiên, chính cấu trúc gauge lại quyết định tương tác, số bậc tự do và các định luật bảo toàn quan trọng.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Phá vỡ đối xứng tự phát** nối từ **Gauge symmetry là redundancy hay symmetry vật lý?** sang **QCD, color và confinement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phá vỡ đối xứng tự phát
 
@@ -296,8 +270,6 @@ Trong gauge lý thuyết (theory / 이론), cơ chế Higgs tổ chức lại c�
 
 Không nên nói đơn giản “Higgs cho mọi vật khối lượng”. Phần lớn khối lượng proton và neutron đến từ năng lượng động lực học QCD và liên kết, không phải chỉ từ tổng khối lượng bare của quark.
 
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **QCD, color và confinement** nối từ **Phá vỡ đối xứng tự phát** sang **Effective trường dữ liệu (field / 필드) lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## QCD, color và confinement
 
 QCD mô tả quark và gluon với color charge.
@@ -307,8 +279,6 @@ QCD mô tả quark và gluon với color charge.
 Ở năng lượng thấp hoặc khoảng cách lớn, confinement khiến quark cô lập không xuất hiện như hạt tự do.
 
 Khi kéo hai quark xa nhau, năng lượng trong trường màu tăng và cuối cùng thuận lợi hơn để tạo hadron mới thay vì giải phóng một quark đơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **QCD, color và confinement** đặt vấn đề; **Effective trường dữ liệu (field / 필드) lý thuyết (theory / 이론)** đối chiếu bằng chứng, rồi **Vì sao hạt truyền nặng tạo tương tác tiếp xúc?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Effective trường dữ liệu (field / 필드) lý thuyết (theory / 이론)
 
@@ -336,8 +306,6 @@ các toán tử bậc cao bị suy giảm bởi lũy thừa `E/\Lambda`.
 Do đó độ chính xác của mô hình được tổ chức có hệ thống mà không cần biết đầy đủ lý thuyết ở thang rất cao.
 
 Lý thuyết Fermi của phân rã beta là ví dụ lịch sử của EFT năng lượng thấp trước mô tả boson `W` của điện yếu.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Effective trường dữ liệu (field / 필드) lý thuyết (theory / 이론)** đặt vấn đề; **Vì sao hạt truyền nặng tạo tương tác tiếp xúc?** đối chiếu bằng chứng, rồi **QFT trong vật chất ngưng tụ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao hạt truyền nặng tạo tương tác tiếp xúc?
 
@@ -368,8 +336,6 @@ Hạng dẫn đầu gần như không phụ thuộc động lượng và trông 
 
 Đây là nguồn gốc toán học trực tiếp của nhiều tương tác hiệu dụng.
 
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **QFT trong vật chất ngưng tụ** nối từ **Vì sao hạt truyền nặng tạo tương tác tiếp xúc?** sang **Năng lượng chân không và vấn đề hằng số vũ trụ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## QFT trong vật chất ngưng tụ
 
 Ngôn ngữ trường không chỉ dành cho máy gia tốc.
@@ -387,8 +353,6 @@ Các excitation nổi lên có thể thỏa phương trình giống hạt tươn
 
 Điều này minh họa sức mạnh của lý thuyết hiệu dụng: cùng cấu trúc toán học có thể xuất hiện ở nhiều hệ khác bản chất vi mô.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Năng lượng chân không và vấn đề hằng số vũ trụ** nối từ **QFT trong vật chất ngưng tụ** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng chân không và vấn đề hằng số vũ trụ
 
 Mỗi chế độ (mode / 모드) boson có hạng zero-point
@@ -405,8 +369,6 @@ Khi có hấp dẫn, mật độ năng lượng tuyệt đối ghép với khôn
 
 Do đó câu “chân không có năng lượng vô hạn” là quá đơn giản; phải phân biệt regularization, đại lượng tái chuẩn hóa và coupling với hấp dẫn.
 
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Năng lượng chân không và vấn đề hằng số vũ trụ** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Miền áp dụng và giới hạn
 
 QFT chuẩn giả sử nền không-thời gian và cấu trúc nhân quả thích hợp. Trong trường hấp dẫn lượng tử mạnh, formalism trường trên không-thời gian cổ điển có thể không còn đủ.
@@ -414,8 +376,6 @@ QFT chuẩn giả sử nền không-thời gian và cấu trúc nhân quả thí
 Khai triển nhiễu loạn chỉ hiệu quả khi coupling hoặc tham số khai triển đủ nhỏ. QCD năng lượng thấp thường cần lattice QCD hoặc kỹ thuật phi nhiễu loạn.
 
 EFT luôn đi kèm miền hiệu lực. Khi năng lượng tiến gần `\Lambda`, các toán tử bị bỏ qua không còn nhỏ và cần mô hình sâu hơn.
-
-> **Nối mạch:** Ở chặng này của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -433,8 +393,6 @@ local fields
 ```
 
 Renormalization tổ chức sự phụ thuộc theo thang; EFT nói rõ ta cần giữ bậc tự do nào ở độ phân giải đang xét.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -457,8 +415,6 @@ Không. Một phần cốt lõi là coupling và tham số hiệu dụng phụ t
 ### “Gauge symmetry tạo một trạng thái vật lý khác khi ta đổi gauge”
 
 Không. Gauge choice thường là redundancy biểu diễn; dự đoán vật lý phải độc lập lựa chọn đó.
-
-> **Nối mạch:** Trong **Trường lượng tử, đối xứng gauge và tương tác: nền tảng khái niệm của QFT**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

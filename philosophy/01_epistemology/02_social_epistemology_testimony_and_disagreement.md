@@ -14,13 +14,9 @@ Phần lớn kiến thức (knowledge / 지식) của một người đến từ
 
 Không cần chứng minh từng nguồn từ zero. Nhưng “nhiều người nói giống nhau” chỉ tăng confidence nếu họ độc lập; nếu cùng bản sao (copy / 복사) một nguồn lỗi thì đó là một bằng chứng (evidence / 증거) stream, không phải nhiều xác nhận.
 
-> **Chuyển mạch:** Testimony đáng tin phụ thuộc speaker, process và defeaters; peer disagreement tiếp theo cập nhật confidence, còn epistemic injustice hỏi ai bị loại khỏi việc tạo/nhận tri thức.
-
 ## Disagreement giữa peer
 
 Khi hai người có bằng chứng (evidence / 증거) và năng lực tương đương bất đồng, disagreement là bằng chứng (evidence / 증거) bậc hai: nó báo rằng bất định (uncertainty / 불확실성) của ta có thể cao hơn tưởng tượng. Các phản ứng hợp lý gồm hạ confidence, tìm premise gây khác biệt và kiểm tra ta đang overweight experience nào. Không phải disagreement nào cũng symmetric: expertise, truy cập (access / 접근) to dữ liệu (data / 데이터) và nhánh học (track / 트랙) bản ghi (record / 레코드) vẫn quan trọng.
-
-> **Chuyển mạch:** Ở chặng này của **Xã hội (social / 사회적) Epistemology: Testimony, Trust và Disagreement**, **Epistemic injustice** tiếp nhận điểm tựa từ **Disagreement giữa peer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Epistemic injustice
 

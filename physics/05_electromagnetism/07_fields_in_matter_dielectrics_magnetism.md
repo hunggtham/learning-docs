@@ -8,8 +8,6 @@ Khi viết Coulomb định luật (law) hoặc Maxwell các phương trình (equ
 
 Đây là lý do xuất hiện các khái niệm **phân cực điện (Polarization / 분극)**, **điện môi (Dielectric / 유전체)**, **từ hóa (Magnetization / 자화)** và các auxiliary các trường (fields) `D`, `H`. Chúng không phải những trường (field) hoàn toàn mới độc lập với `E` và `B`; chúng là cách tổ chức đáp ứng của vật chất để bài toán vĩ mô dễ đọc hơn.
 
-> **Nối mạch:** Trong **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **phân cực: điện trường làm gì bên trong vật chất?** nối từ **Vì sao điện từ học trong vacuum chưa đủ?** sang **Điện môi tuyến tính và permittivity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## phân cực: điện trường làm gì bên trong vật chất?
 
 Xét một nguyên tử trung hòa. Nếu không có bên ngoài (external / 외부) trường, center của positive hạt nhân (nuclear) điện tích và electron cloud có thể trùng nhau theo đối xứng (symmetry). Khi đặt điện trường (electric field) `\vec E`, electron cloud và hạt nhân bị kéo theo hai hướng ngược nhau. Nếu độ dịch chuyển (displacement) nhỏ, nguyên tử có electric dipole mômen (moment) cảm ứng.
@@ -39,8 +37,6 @@ còn trên bề mặt (surface) có
 ```
 
 Các công thức này nói rằng bound điện tích xuất hiện nơi phân cực “bắt đầu, kết thúc hoặc thay đổi mật độ”. mô hình tư duy (mental model / 사고 모델) này gần với divergence của một thông lượng (flux) trường: nếu các dipole các vectơ (vectors) xếp đều trong bulk thì positive end của dipole này gần cancel negative end của dipole kế bên; điện tích còn lộ ra rõ nhất ở ranh giới (boundary / 경계) hoặc vùng `P` thay đổi.
-
-> **Nối mạch:** Ở chặng này của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Điện môi tuyến tính và permittivity** nối từ **phân cực: điện trường làm gì bên trong vật chất?** sang **Tại sao tụ điện tăng điện dung (capacitance) khi chèn điện môi?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện môi tuyến tính và permittivity
 
@@ -79,8 +75,6 @@ Gauss định luật vĩ mô được viết
 
 với `\rho_f` là tự do điện tích mật độ (density). Đây là bookkeeping rất hữu ích: bound điện tích đã được hấp thụ vào `P` và `D`, còn nguồn tường minh (explicit / 명시적) trong phương trình là tự do điện tích.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Tại sao tụ điện tăng điện dung (capacitance) khi chèn điện môi?** nối từ **Điện môi tuyến tính và permittivity** sang **Năng lượng điện trường trong điện môi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tại sao tụ điện tăng điện dung (capacitance) khi chèn điện môi?
 
 Với parallel-plate capacitor lý tưởng diện tích `A`, separation `d`, vacuum điện dung là
@@ -105,8 +99,6 @@ C=\frac{\varepsilon A}{d}=\varepsilon_r C_0.
 
 Trong electronics, đây là physics cốt lõi của capacitor, oxide cổng (gate oxide) trong MOSFET và high-`k` dielectrics. Khi transistor thu nhỏ, muốn gate điều khiển (control / 제어) mạnh mà dòng rò (leakage) không quá lớn, các vật liệu (materials) có permittivity cao cho phép tăng hiệu dụng (effective) điện dung mà không bắt buộc oxide vật lý (physical / 물리적) thickness nhỏ tương ứng.
 
-> **Nối mạch:** Trong **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Năng lượng điện trường trong điện môi** nối từ **Tại sao tụ điện tăng điện dung (capacitance) khi chèn điện môi?** sang **tần số dependence và điện môi tổn hao (loss)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng điện trường trong điện môi
 
 Với tuyến tính môi trường (medium), năng lượng (energy / 에너지) mật độ thường được viết
@@ -116,8 +108,6 @@ u_E=\frac12\vec E\cdot\vec D.
 ```
 
 Cần cẩn thận: trong dispersive hoặc phi tuyến (nonlinear) media, cách phân chia năng lượng giữa trường và vật liệu bậc tự do (degrees of freedom) phức tạp hơn. Công thức trên là mô hình (model / 모델) hữu ích trong miền tuyến tính, quasi-tĩnh (static) phù hợp.
-
-> **Nối mạch:** Ở chặng này của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **tần số dependence và điện môi tổn hao (loss)** nối từ **Năng lượng điện trường trong điện môi** sang **Ferroelectric: phân cực có thể tự tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## tần số dependence và điện môi tổn hao (loss)
 
@@ -129,15 +119,11 @@ phân cực không phản ứng tức thời ở mọi tần số. điện tử 
 
 Phần thực (real) liên hệ stored đáp ứng, phần imaginary liên hệ dissipation/mất mát (loss / 손실). Đây là lý do điện môi tổn hao quan trọng trong RF, microwave PCB, antenna substrate và high-tốc độ (speed) tín hiệu (signal / 신호) integrity. Một vật liệu “cách điện tốt ở DC” chưa chắc là môi trường ít tổn hao ở GHz.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Ferroelectric: phân cực có thể tự tồn tại** nối từ **tần số dependence và điện môi tổn hao (loss)** sang **Magnetization: đáp ứng từ của vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ferroelectric: phân cực có thể tự tồn tại
 
 Một số các vật liệu có spontaneous phân cực ngay cả khi bên ngoài trường bằng không (zero). Ferroelectric các vật liệu (강유전체) có hysteresis giữa `P` và `E`; lĩnh vực (domain / 도메인) phân cực có thể được đảo bằng trường. Chúng được dùng trong các cảm biến (sensors), actuators, high-permittivity capacitors và một số nonvolatile memories.
 
 liên hệ (connection) sâu ở đây là **chuyển pha (phase transition) + đối xứng breaking**: trên một nhiệt độ đặc trưng, tinh thể có thể có đối xứng cao; dưới chuyển mức (transition), hệ (system) chọn một phân cực direction, làm đối xứng giảm và tạo thứ tự (order / 순서) tham số (parameter) khác không.
-
-> **Nối mạch:** Trong **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Magnetization: đáp ứng từ của vật chất** nối từ **Ferroelectric: phân cực có thể tự tồn tại** sang **nghịch từ (Diamagnetism), thuận từ (paramagnetism) và sắt từ (ferromagnetism)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Magnetization: đáp ứng từ của vật chất
 
@@ -169,8 +155,6 @@ Ta đưa vào auxiliary từ trường (magnetic field)
 
 Ampère–Maxwell định luật vĩ mô khi đó có thể viết sao cho nguồn tường minh (explicit / 명시적) là tự do dòng điện.
 
-> **Nối mạch:** Ở chặng này của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **nghịch từ (Diamagnetism), thuận từ (paramagnetism) và sắt từ (ferromagnetism)** nối từ **Magnetization: đáp ứng từ của vật chất** sang **B–H curve và hysteresis**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## nghịch từ (Diamagnetism), thuận từ (paramagnetism) và sắt từ (ferromagnetism)
 
 **nghịch từ (반자성)** là đáp ứng tạo magnetic mômen ngược trường applied. Về cơ học lượng tử (quantum mechanics), đây không chỉ là “electron vòng lặp (loop / 루프) chống lại trường” theo cổ điển (classical) picture; orbital các trạng thái (states) thay đổi dưới vectơ thế (potential) và induced currents tạo susceptibility âm nhỏ.
@@ -181,15 +165,11 @@ Ampère–Maxwell định luật vĩ mô khi đó có thể viết sao cho ngu�
 
 Vì vậy câu “magnet là do tất cả electron quay cùng chiều” là quá thô và có thể sai. từ tính (Magnetism) của chất rắn (solid) là many-body lượng tử phenomenon gắn cấu trúc vùng năng lượng (band structure), trao đổi, tinh thể dị hướng và domains.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **B–H curve và hysteresis** nối từ **nghịch từ (Diamagnetism), thuận từ (paramagnetism) và sắt từ (ferromagnetism)** sang **các điều kiện biên (boundary conditions) và mặt phân cách (interface)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## B–H curve và hysteresis
 
 Trong ferromagnet, quan hệ giữa `B` và `H` không tuyến tính đơn giản. Khi cycle applied trường, hệ có hysteresis vòng lặp (loop / 루프). Remanence cho biết magnetization còn lại khi bên ngoài trường trở về không; coercive trường cho biết trường ngược cần để xóa/đảo magnetization.
 
 Soft magnetic các vật liệu có coercivity thấp, phù hợp transformer cores vì dễ đảo magnetization với low tổn hao. Hard magnetic các vật liệu có coercivity cao, phù hợp vĩnh viễn magnets. Đây là ví dụ rất rõ rằng “cùng là magnetic vật liệu” nhưng desired tính chất vật lý (physical property) phụ thuộc ứng dụng (application / 애플리케이션).
-
-> **Nối mạch:** Trong **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **B–H curve và hysteresis** đặt tiêu chí; **các điều kiện biên (boundary conditions) và mặt phân cách (interface)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## các điều kiện biên (boundary conditions) và mặt phân cách (interface)
 
@@ -207,15 +187,11 @@ Nếu không có tự do bề mặt dòng điện,
 
 Các điều kiện này là nền cho capacitor hình học (geometry / 기하학), điện môi ống dẫn sóng (waveguide), quang học (optical) refraction và điện từ (electromagnetic) mô phỏng (simulation). hữu hạn (Finite)-element solvers trong kỹ thuật (engineering / 엔지니어링) thực chất đang giải PDE + constitutive relations + các điều kiện biên trên hình học phức tạp.
 
-> **Nối mạch:** Ở chặng này của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **các điều kiện biên (boundary conditions) và mặt phân cách (interface)** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > `E` và `B` mô tả trường điện từ (electromagnetic field) vật lý. `P` và `M` mô tả cách vật chất phản ứng ở thang vĩ mô. `D` và `H` là cách tổ chức các nguồn “tự do” và đáp ứng “bound” để Maxwell các phương trình dễ giải hơn trong các vật liệu.
 
 Khi nhìn một capacitor, MOSFET gate, ferrite lõi (core) hay magnetic bộ nhớ (memory / 메모리), đừng nghĩ vật liệu chỉ là “thứ đặt vào giữa trường”. vật liệu là một dynamical collection của điện tích và magnetic moments; chính đáp ứng tập thể (collective) của chúng thay đổi quan hệ giữa nguồn và trường.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -230,8 +206,6 @@ Không. `D` là auxiliary trường được định nghĩa từ `E` và phân c
 ### “sắt từ chỉ là cổ điển dipoles tự xếp hàng”
 
 cổ điển dipole tương tác một mình không đủ giải thích thang và độ ổn định (stability) của ferromagnetic thứ tự (order / 순서). trao đổi tương tác và thống kê lượng tử (quantum statistics) là phần cốt lõi.
-
-> **Nối mạch:** Trong **Điện từ trường trong vật chất: điện môi (dielectric), phân cực (polarization), magnetization và vật liệu từ**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -10,8 +10,6 @@ Câu hỏi trung tâm của chapter là: **vì sao reform có thể cần thiế
 
 Đây là period rất tốt để thấy reform chính sách (policy / 정책) không thể tách khỏi power cơ sở (base / 기반).
 
-> **Nối mạch:** Trong **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Cuối Trần: crisis không chỉ là “vua yếu”** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Hồ Quý Ly: reformer không nên bị đọc chỉ qua moral story “cướp ngôi”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cuối Trần: crisis không chỉ là “vua yếu”
 
 Thế kỷ XIV có nhiều overlapping problems: court succession, concentration of land, fiscal pressure, monetary issues, natural disasters, war với Champa và regional power shifts. Khi tài nguyên (resource / 자원) extraction không còn match military and administrative demand, trạng thái (state / 상태) bị stress.
@@ -32,8 +30,6 @@ reform threatens existing interests
 
 Hồ Quý Ly bước vào đúng đoạn cuối của chuỗi (chain / 사슬) này.
 
-> **Nối mạch:** Ở chặng này của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Hồ Quý Ly: reformer không nên bị đọc chỉ qua moral story “cướp ngôi”** nối từ **Cuối Trần: crisis không chỉ là “vua yếu”** sang **1397 Thành Nhà Hồ: kiến trúc (architecture / 아키텍처) là bằng chứng (evidence / 증거) của mobilization sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hồ Quý Ly: reformer không nên bị đọc chỉ qua moral story “cướp ngôi”
 
 Hồ Quý Ly nắm power ngày càng lớn cuối Trần và năm **1400** lập nhà Hồ. Reforms thường gắn với limits on large landholding, changes in taxation, education/examination, administrative reorganization và introduction of paper money.
@@ -41,8 +37,6 @@ Hồ Quý Ly nắm power ngày càng lớn cuối Trần và năm **1400** lập
 Mỗi reform nhằm solve một ràng buộc (constraint / 제약조건) khác nhau. Land reform tìm cách giảm elite concentration; monetary reform muốn tăng điều khiển (control / 제어) over exchange; educational reform shift curriculum và recruitment; administrative changes cố centralize trạng thái (state / 상태).
 
 Nhưng chính sách (policy / 정책) thiết kế (design / 설계) không equal hiện thực (implementation / 구현). Paper currency chẳng hạn cần trust, enforcement và thị trường (market / 시장) acceptance. Nếu trạng thái (state / 상태) ép replacement khi people không tin redeemability hoặc mạng (network / 네트워크) chưa dùng quen, giao dịch (transaction / 트랜잭션) chi phí (cost / 비용) có thể tăng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Hồ Quý Ly: reformer không nên bị đọc chỉ qua moral story “cướp ngôi”** đặt vấn đề; **1397 Thành Nhà Hồ: kiến trúc (architecture / 아키텍처) là bằng chứng (evidence / 증거) của mobilization sức chứa (capacity / 용량)** đối chiếu bằng chứng, rồi **Tại sao chuyển capital về Thanh Hóa?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 1397 Thành Nhà Hồ: kiến trúc (architecture / 아키텍처) là bằng chứng (evidence / 증거) của mobilization sức chứa (capacity / 용량)
 
@@ -52,15 +46,11 @@ Site này rất valuable vì kiến trúc (architecture / 아키텍처) làm vis
 
 Nhưng strong construction sức chứa (capacity / 용량) không tự động bằng strong legitimacy. Một trạng thái (state / 상태) có thể move stone rất giỏi nhưng vẫn không create durable coalition.
 
-> **Nối mạch:** Trong **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **1397 Thành Nhà Hồ: kiến trúc (architecture / 아키텍처) là bằng chứng (evidence / 증거) của mobilization sức chứa (capacity / 용량)** đặt vấn đề; **Tại sao chuyển capital về Thanh Hóa?** đối chiếu bằng chứng, rồi **1406–1407: Ming intervention biến nội bộ (internal / 내부) legitimacy crisis thành conquest** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Tại sao chuyển capital về Thanh Hóa?
 
 Move khỏi Thăng Long phản ánh bảo mật (security / 보안) và political geography. Thanh Hóa là power cơ sở (base / 기반) quan trọng của Hồ Quý Ly, gần regions có military hỗ trợ (support / 지원) và xa hơn northern invasion routes.
 
 Nhưng relocation cũng tạo chi phí (cost / 비용): moving court, ritual center và administrative mạng (network / 네트워크) có thể alienate Red River elites. Capital thay đổi (change / 변경) luôn là redistribution of truy cập (access / 접근) to power.
-
-> **Nối mạch:** Ở chặng này của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **1406–1407: Ming intervention biến nội bộ (internal / 내부) legitimacy crisis thành conquest** nối từ **Tại sao chuyển capital về Thanh Hóa?** sang **Minh occupation: direct quy tắc (rule / 규칙) cần thông tin (information / 정보), extraction và cultural administration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1406–1407: Ming intervention biến nội bộ (internal / 내부) legitimacy crisis thành conquest
 
@@ -70,8 +60,6 @@ Ming court can thiệp dưới claim khôi phục nhà Trần; campaign **1406�
 
 James Anderson nhấn mạnh liên kết (connection / 연결) giữa Hồ reforms, regional rivalry và Ming phản hồi (response / 응답). Điều này không có nghĩa conquest “tất yếu”; nó cho thấy nội bộ (internal / 내부) division làm bên ngoài (external / 외부) intervention cheaper.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Minh occupation: direct quy tắc (rule / 규칙) cần thông tin (information / 정보), extraction và cultural administration** nối từ **1406–1407: Ming intervention biến nội bộ (internal / 내부) legitimacy crisis thành conquest** sang **Resistance trước Lam Sơn: vì sao nhiều movement thất bại?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Minh occupation: direct quy tắc (rule / 규칙) cần thông tin (information / 정보), extraction và cultural administration
 
 Từ **1407** tới **1427**, Ming established administrative hệ thống (system / 시스템), tax and tài nguyên (resource / 자원) extraction, military garrisons và attempts to integrate region institutionally. Skilled people, books, artifacts và resources bị đưa north trong nhiều contexts; cục bộ (local / 로컬) society chịu heavy disruption.
@@ -80,15 +68,11 @@ Nhưng occupation cũng dựa vào collaborators, cục bộ (local / 로컬) of
 
 Điều này tạo vulnerability: nếu cục bộ (local / 로컬) cooperation collapses và garrisons become isolated, occupation chi phí (cost / 비용) rises rapidly.
 
-> **Nối mạch:** Trong **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Resistance trước Lam Sơn: vì sao nhiều movement thất bại?** nối từ **Minh occupation: direct quy tắc (rule / 규칙) cần thông tin (information / 정보), extraction và cultural administration** sang **1418 Lam Sơn: advantage của peripheral cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Resistance trước Lam Sơn: vì sao nhiều movement thất bại?
 
 Ngay sau conquest có multiple revolts, trong đó các movements gắn với Trần restoration. Nhiều movement có symbolic legitimacy nhưng thiếu durable tài nguyên (resource / 자원) cơ sở (base / 기반), coordination hoặc safe territorial cốt lõi (core / 핵심).
 
 Đây là reminder rằng legitimacy alone không thắng war. Resistance cần food, recruits, intelligence, leadership succession và không gian (space / 공간) để survive defeat.
-
-> **Nối mạch:** Ở chặng này của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **1418 Lam Sơn: advantage của peripheral cơ sở (base / 기반)** nối từ **Resistance trước Lam Sơn: vì sao nhiều movement thất bại?** sang **Nguyễn Trãi và thông tin (information / 정보) war**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1418 Lam Sơn: advantage của peripheral cơ sở (base / 기반)
 
@@ -98,8 +82,6 @@ Lam Sơn không thắng vì tuyến tính (linear / 선형) expansion từ day o
 
 Thanh Hóa cũng quan trọng vì nó nằm ngoài immediate cốt lõi (core / 핵심) của Red River occupation nhưng đủ gần để dự án (project / 프로젝트) northward khi sức chứa (capacity / 용량) tăng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Nguyễn Trãi và thông tin (information / 정보) war** nối từ **1418 Lam Sơn: advantage của peripheral cơ sở (base / 기반)** sang **Từ guerrilla survival sang conventional campaign**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nguyễn Trãi và thông tin (information / 정보) war
 
 Campaign Lam Sơn không chỉ là battlefield. **Nguyễn Trãi** nổi bật trong diplomacy, proclamations và persuasion aimed at enemy garrisons and cục bộ (local / 로컬) populations.
@@ -107,8 +89,6 @@ Campaign Lam Sơn không chỉ là battlefield. **Nguyễn Trãi** nổi bật t
 Một insurgency muốn become trạng thái (state / 상태) phải thay đổi (change / 변경) perception: từ “rebel group” thành expected future ruler. Letters, surrender terms và moral-political ngôn ngữ (language / 언어) giúp reduce chi phí (cost / 비용) of conquest by encouraging defection.
 
 Đây là **thông tin (information / 정보) chiến lược (strategy / 전략)**: nếu một city surrender without siege, movement save soldiers and food.
-
-> **Nối mạch:** Trong **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Từ guerrilla survival sang conventional campaign** nối từ **Nguyễn Trãi và thông tin (information / 정보) war** sang **1427–1428: negotiated withdrawal quan trọng như battlefield victory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ guerrilla survival sang conventional campaign
 
@@ -128,8 +108,6 @@ can besiege / intercept imperial relief forces
 
 Đến **1427**, battles như Chi Lăng–Xương Giang đánh bại major Ming relief effort. Ming garrisons mất realistic prospect được cứu.
 
-> **Nối mạch:** Ở chặng này của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **1427–1428: negotiated withdrawal quan trọng như battlefield victory** nối từ **Từ guerrilla survival sang conventional campaign** sang **Lam Kinh: bộ nhớ (memory / 메모리) site của coalition Thanh Hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1427–1428: negotiated withdrawal quan trọng như battlefield victory
 
 Sau military collapse, Ming forces rút; **1428**, Lê Lợi lên ngôi, mở triều Lê.
@@ -138,15 +116,11 @@ Sau military collapse, Ming forces rút; **1428**, Lê Lợi lên ngôi, mở tr
 
 Sau đó Đại Việt vẫn duy trì tributary-diplomatic relations với Ming. Independence và diplomatic hierarchy có thể coexist, giống mẫu (pattern / 패턴) đã thấy thời Tống.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Lam Kinh: bộ nhớ (memory / 메모리) site của coalition Thanh Hóa** nối từ **1427–1428: negotiated withdrawal quan trọng như battlefield victory** sang **Thành Nhà Hồ và Lam Kinh đứng gần nhau nhưng kể hai trạng thái (state / 상태) strategies khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lam Kinh: bộ nhớ (memory / 메모리) site của coalition Thanh Hóa
 
 **Lam Kinh** ở Thanh Hóa là checkpoint quan trọng để hiểu origin cơ sở (base / 기반) của Lê dynasty. Site không chỉ là mausoleum complex; nó nhắc rằng post-Ming ruling elite có strong regional roots ngoài Thăng Long.
 
 Khi đi Lam Kinh, hãy liên hệ palace/tomb landscape với câu hỏi: vì sao một movement từ peripheral region có thể take over cốt lõi (core / 핵심) delta? Answer nằm ở war mobilization + coalition building, không phải geography alone.
-
-> **Nối mạch:** Trong **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Thành Nhà Hồ và Lam Kinh đứng gần nhau nhưng kể hai trạng thái (state / 상태) strategies khác nhau** nối từ **Lam Kinh: bộ nhớ (memory / 메모리) site của coalition Thanh Hóa** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thành Nhà Hồ và Lam Kinh đứng gần nhau nhưng kể hai trạng thái (state / 상태) strategies khác nhau
 
@@ -155,8 +129,6 @@ Cả hai đều ở Thanh Hóa, nhưng meanings khác.
 **Thành Nhà Hồ** = top-down reforming court cố tạo centralized trạng thái (state / 상태) nhanh. **Lam Sơn/Lam Kinh** = regional coalition phát triển qua prolonged resistance rồi reconstruct trạng thái (state / 상태).
 
 Đặt hai site cạnh nhau giúp thấy cùng một regional cơ sở (base / 기반) có thể produce different political projects tùy mạng (network / 네트워크), legitimacy và timing.
-
-> **Nối mạch:** Ở chặng này của **Nhà Hồ → Minh thuộc → Lam Sơn: reform, conquest và reconstruction**, **Recap và bàn giao** nối từ **Thành Nhà Hồ và Lam Kinh đứng gần nhau nhưng kể hai trạng thái (state / 상태) strategies khác nhau** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

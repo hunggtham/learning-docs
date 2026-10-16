@@ -71,7 +71,7 @@ Thứ tự có thể làm thay đổi cách mô hình diễn giải nhãn; phầ
 
 ## Label ngữ nghĩa (semantics / 의미론)
 
-Nếu labels là arbitrary strings như `A`, `B`, `C`, few-shot examples giúp mô hình (model / 모델) map ngữ nghĩa (semantic / 의미적) lớp (class / 클래스) sang label đơn vị từ (token / 토큰).
+Nếu labels là arbitrary strings như `A`, `B`, `C`, few-shot examples giúp mô hình (model / 모델) map ngữ nghĩa (semantic / 의미적) lớp (class / 클래스) sang label token (토큰).
 
 Nếu example labels sai, mô hình (model / 모델) có thể follow demonstration thay vì nội bộ (internal / 내부) prior.
 

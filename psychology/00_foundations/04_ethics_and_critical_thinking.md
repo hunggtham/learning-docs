@@ -14,15 +14,11 @@ Xem [[../EVIDENCE_STATUS_GUIDE]], [[02_research_methods]] và [[06_open_science_
 
 Một biểu mẫu dài nhưng khó hiểu không bảo đảm có đồng thuận thật. Chất lượng đồng thuận phụ thuộc ngôn ngữ, khả năng hiểu, chênh lệch quyền lực và việc từ chối có thực sự khả thi hay không. Trong quan hệ thầy–trò, bác sĩ–bệnh nhân hoặc quản lý–nhân viên, quyền lực có thể làm một lời “đồng ý” kém tự do hơn vẻ ngoài.
 
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **2. Trẻ em và nhóm dễ bị tổn thương** nối từ **1. Đồng thuận có hiểu biết không phải một chữ ký** sang **3. Đánh lừa và giải thích sau nghiên cứu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Trẻ em và nhóm dễ bị tổn thương
 
 Một số người tham gia cần bảo vệ bổ sung vì khả năng từ chối hoặc đánh giá rủi ro có thể bị hạn chế. Trẻ em thường cần sự đồng ý của người giám hộ và sự đồng thuận phù hợp với độ tuổi của chính trẻ. Người đang trong khủng hoảng, người suy giảm nhận thức, người bị giam giữ hoặc người phụ thuộc kinh tế vào nhà nghiên cứu có thể cần quy trình bảo vệ mạnh hơn.
 
 Nguyên tắc quan trọng là **không nhầm dễ tiếp cận với dễ khai thác**. Một nhóm dễ tuyển không có nghĩa nhóm đó nên gánh phần lớn rủi ro nghiên cứu.
-
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **3. Đánh lừa và giải thích sau nghiên cứu** nối từ **2. Trẻ em và nhóm dễ bị tổn thương** sang **4. Quyền riêng tư, bảo mật và ẩn danh là ba việc khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Đánh lừa và giải thích sau nghiên cứu
 
@@ -30,15 +26,11 @@ Một số nghiên cứu dùng **đánh lừa (deception)** để tránh ngườ
 
 Đánh lừa không phải giấy phép để gây distress tùy ý. Giá trị khoa học, tính cần thiết và khả năng sửa hiểu lầm sau nghiên cứu phải được cân nhắc cùng nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **4. Quyền riêng tư, bảo mật và ẩn danh là ba việc khác nhau** nối từ **3. Đánh lừa và giải thích sau nghiên cứu** sang **5. Dấu vết số và dữ liệu thứ cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Quyền riêng tư, bảo mật và ẩn danh là ba việc khác nhau
 
 **Quyền riêng tư (privacy)** liên quan quyền kiểm soát việc người khác tiếp cận thông tin hoặc hành vi của mình. **Bảo mật (confidentiality)** là nghĩa vụ bảo vệ thông tin mà nhà nghiên cứu đã nhận. **Ẩn danh (anonymity)** mạnh hơn: dữ liệu không thể hợp lý được nối trở lại một cá nhân.
 
 Trong nghiên cứu số, khái niệm ẩn danh khó hơn nhiều. Vị trí, thời gian, mô thức gõ phím, lịch sử duyệt web hoặc mạng quan hệ có thể tái nhận dạng một người khi ghép nhiều nguồn dữ liệu. Vì vậy “đã xóa tên” không đồng nghĩa “không còn rủi ro riêng tư”.
-
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **4. Quyền riêng tư, bảo mật và ẩn danh là ba việc khác nhau** đặt vấn đề; **5. Dấu vết số và dữ liệu thứ cấp** đối chiếu bằng chứng, rồi **6. AI làm tăng vấn đề riêng tư và suy luận nhạy cảm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Dấu vết số và dữ liệu thứ cấp
 
@@ -46,15 +38,11 @@ Dữ liệu mạng xã hội, nhật ký thiết bị, cảm biến đeo, camera
 
 Một câu hỏi tốt không chỉ là “dữ liệu này có công khai không?” mà còn là “người tạo dữ liệu có kỳ vọng hợp lý rằng nội dung này sẽ được dùng để suy luận sức khỏe tâm thần, tính cách hoặc rủi ro cá nhân hay không?”.
 
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **5. Dấu vết số và dữ liệu thứ cấp** đặt vấn đề; **6. AI làm tăng vấn đề riêng tư và suy luận nhạy cảm** đối chiếu bằng chứng, rồi **7. Nguyên tắc giảm thiểu dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. AI làm tăng vấn đề riêng tư và suy luận nhạy cảm
 
 Hệ thống AI có thể suy luận đặc điểm mà người dùng chưa từng khai báo, ví dụ khuynh hướng cảm xúc, khả năng nhận thức hoặc nguy cơ sức khỏe từ dấu vết hành vi. Khả năng suy luận không bảo đảm **độ giá trị (validity)** của suy luận và càng không tự tạo quyền sử dụng nó.
 
 Trong nghiên cứu và thực hành, AI còn tạo thêm các rủi ro về dữ liệu huấn luyện, rò rỉ thông tin, thiên lệch, nội dung bịa đặt và việc con người quá tin đầu ra trôi chảy. Vì vậy AI cần được xem như công cụ có **giám sát của con người**, không phải nguồn thẩm quyền tự động.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **6. AI làm tăng vấn đề riêng tư và suy luận nhạy cảm** đặt vấn đề; **7. Nguyên tắc giảm thiểu dữ liệu** đối chiếu bằng chứng, rồi **8. Lợi ích, tổn hại và phân bổ rủi ro** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Nguyên tắc giảm thiểu dữ liệu
 
@@ -62,15 +50,11 @@ Một thiết kế tốt chỉ thu những dữ liệu cần cho câu hỏi nghi
 
 Cùng lô-gic (logic / 논리) đó, cần xác định thời gian lưu, quyền truy cập, cách mã hóa và quy trình xóa. Đạo đức dữ liệu không kết thúc khi tệp (file / 파일) được tải lên máy chủ (server / 서버).
 
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **7. Nguyên tắc giảm thiểu dữ liệu** đặt vấn đề; **8. Lợi ích, tổn hại và phân bổ rủi ro** đối chiếu bằng chứng, rồi **9. Công bằng trong đo lường (measurement / 측정) và interpretation** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 8. Lợi ích, tổn hại và phân bổ rủi ro
 
 **Làm điều có lợi (beneficence)** và **không gây hại (nonmaleficence)** không có nghĩa nghiên cứu phải bằng không rủi ro. Chúng yêu cầu lợi ích kỳ vọng phải hợp lý so với rủi ro và rủi ro không bị dồn bất công vào nhóm ít quyền lực.
 
 Một intervention có thể cải thiện kết quả (outcome / 결과) trung bình nhưng gây hại cho subgroup. Vì vậy chỉ báo cáo mean tác động (effect / 효과) là chưa đủ nếu triển khai ảnh hưởng thật tới con người.
-
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **8. Lợi ích, tổn hại và phân bổ rủi ro** đặt vấn đề; **9. Công bằng trong đo lường (measurement / 측정) và interpretation** đối chiếu bằng chứng, rồi **10. Tái vật hóa khái niệm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Công bằng trong đo lường (measurement / 측정) và interpretation
 
@@ -80,15 +64,11 @@ Một kiểm thử (test / 테스트) có thể đáng tin trong population A nh
 
 Xem [[05_psychometrics_and_test_interpretation]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **9. Công bằng trong đo lường (measurement / 측정) và interpretation** đặt vấn đề; **10. Tái vật hóa khái niệm** đối chiếu bằng chứng, rồi **11. Tư duy phản biện không phải hoài nghi mọi thứ** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 10. Tái vật hóa khái niệm
 
 **Tái vật hóa (reification)** xảy ra khi một construct trừu tượng bị coi như một vật thể độc lập. Ví dụ, nói “người này tránh xã hội vì họ có xã hội (social / 사회적) anxiety, và ta biết họ có xã hội (social / 사회적) anxiety vì họ tránh xã hội” chỉ lặp lại label nếu không bổ sung cơ chế (mechanism / 메커니즘).
 
 Diagnosis, intelligence score, attachment style hay personality trait là công cụ mô tả và dự đoán, không phải bản chất đạo đức của một người.
-
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **11. Tư duy phản biện không phải hoài nghi mọi thứ** nối từ **10. Tái vật hóa khái niệm** sang **12. Từ finding tới recommendation là một bước riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Tư duy phản biện không phải hoài nghi mọi thứ
 
@@ -98,15 +78,11 @@ Khi đọc nghiên cứu, cần phân biệt ít nhất bốn câu hỏi: nghiê
 
 Một p-value nhỏ không tự trả lời bốn câu hỏi này.
 
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **12. Từ finding tới recommendation là một bước riêng** nối từ **11. Tư duy phản biện không phải hoài nghi mọi thứ** sang **13. Tính toàn vẹn nghiên cứu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Từ finding tới recommendation là một bước riêng
 
 Một **phát hiện thực nghiệm (empirical finding)** mô tả dữ liệu; một **diễn giải lý thuyết (theoretical interpretation)** giải thích tại sao; một **khuyến nghị thực hành (practical recommendation)** quyết định nên làm gì. Ba tầng này không nên nhập làm một.
 
 Ví dụ, nếu nhóm dùng một ứng dụng nhiều hơn có điểm wellbeing thấp hơn, ta chưa thể nhảy ngay sang “hãy xóa ứng dụng”. Có thể tồn tại reverse causality, confounding, khác biệt mẫu (pattern / 패턴) sử dụng hoặc tác động (effect / 효과) nhỏ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **13. Tính toàn vẹn nghiên cứu** nối từ **12. Từ finding tới recommendation là một bước riêng** sang **14. Publication độ lệch (bias / 편향) và khuyến khích hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Tính toàn vẹn nghiên cứu
 
@@ -114,23 +90,17 @@ Fabrication và falsification là vi phạm rõ ràng, nhưng nhiều vấn đ�
 
 Preregistration, registered reports, chia sẻ mã (code / 코드)/material khi phù hợp và replication giúp tăng khả năng kiểm tra. Nhưng transparency không tự cứu một thiết kế (design / 설계) kém; open bad science vẫn là bad science.
 
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **14. Publication độ lệch (bias / 편향) và khuyến khích hệ thống** nối từ **13. Tính toàn vẹn nghiên cứu** sang **15. Đạo đức trong workplace và behavioral thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Publication độ lệch (bias / 편향) và khuyến khích hệ thống
 
 Hệ thống học thuật có thể thưởng kết quả mới lạ, rõ ràng và dương tính hơn kết quả null hoặc phức tạp. Điều này tạo **thiên lệch công bố (publication bias)** và “tệp (file / 파일) drawer”.
 
 Đây không nhất thiết là lỗi đạo đức cá nhân của một researcher; nó cũng là vấn đề incentive. Vì vậy cải thiện science cần thay đổi cả practice cá nhân và cấu trúc (structure / 구조) xuất bản.
 
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **15. Đạo đức trong workplace và behavioral thiết kế (design / 설계)** nối từ **14. Publication độ lệch (bias / 편향) và khuyến khích hệ thống** sang **16. Khi hệ thống AI tham gia quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Đạo đức trong workplace và behavioral thiết kế (design / 설계)
 
 Một can thiệp hành vi có thể tăng conversion hoặc productivity nhưng vẫn giảm autonomy, tăng surveillance hoặc chuyển chi phí sang người yếu thế hơn. “Hiệu quả” không đủ để kết luận “nên dùng”.
 
 Dark mẫu (pattern / 패턴), excessive monitoring, emotion suy luận (inference / 추론) và personality scoring trong tuyển dụng cần được đánh giá cả validity, proportionality, consent và khả năng contest quyết định (decision / 결정).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **16. Khi hệ thống AI tham gia quyết định** nối từ **15. Đạo đức trong workplace và behavioral thiết kế (design / 설계)** sang **17. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Khi hệ thống AI tham gia quyết định
 
@@ -139,8 +109,6 @@ Nếu AI hỗ trợ screening, triage, hiring hoặc clinical documentation, tr�
 Một hệ thống có accuracy cao trung bình vẫn có thể tạo harm nếu lỗi (error / 오류) tập trung ở subgroup hoặc nếu quyết định (decision / 결정) threshold không phù hợp mục tiêu thực tế.
 
 Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
-
-> **Nối mạch:** Trong **Đạo đức và tư duy phản biện trong tâm lý học**, **17. Mô hình tư duy** tổng hợp từ **16. Khi hệ thống AI tham gia quyết định** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **18. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Mô hình tư duy
 
@@ -164,8 +132,6 @@ Diễn giải
 
 Đạo đức không nằm ở cuối chuỗi xử lý (pipeline / 파이프라인). Nó đi xuyên toàn bộ chuỗi xử lý (pipeline / 파이프라인).
 
-> **Nối mạch:** Ở chặng này của **Đạo đức và tư duy phản biện trong tâm lý học**, **18. Những hiểu lầm phổ biến** tổng hợp từ **17. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 18. Những hiểu lầm phổ biến
 
 **“Có consent form là đủ.”** Không. Đồng thuận phải có thông tin, hiểu biết và tính tự nguyện thực tế.
@@ -177,8 +143,6 @@ Diễn giải
 **“Nếu một study đúng thì có thể áp dụng ngay.”** Không. Translation sang chính sách (policy / 정책) hoặc practice cần thêm bằng chứng về hiệu quả, harm, population và hiện thực (implementation / 구현).
 
 **“trọng yếu (critical / 중요) thinking là không tin ai.”** Không. Mục tiêu là calibration: tin nhiều hay ít tùy chất lượng bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đạo đức và tư duy phản biện trong tâm lý học**, **Kết nối kiến thức** nối từ **18. Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

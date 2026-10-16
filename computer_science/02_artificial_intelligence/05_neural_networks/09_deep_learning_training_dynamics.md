@@ -34,8 +34,6 @@ distributed synchronization
 
 Mỗi thành phần (component / 컴포넌트) có thể thay dynamics.
 
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Mất mát (loss / 손실) curve nói gì và không nói gì?** tiếp nhận điểm tựa từ **Huấn luyện (training / 학습) vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học tập (learning / 학습) tỷ lệ (rate / 비율) Warmup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mất mát (loss / 손실) curve nói gì và không nói gì?
 
 Huấn luyện (training / 학습) mất mát (loss / 손실) giảm nghĩa optimizer đang improve mục tiêu (objective / 목표) trên observed batches. Nó không đảm bảo:
@@ -56,8 +54,6 @@ Mất mát (loss / 손실) curve shape hữu ích:
 - huấn luyện (training / 학습) ↓ kiểm tra hợp lệ (validation / 검증) ↑ → overfitting/shift;
 - sudden spikes → bad batch, overflow, unstable optimizer trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Học tập (learning / 학습) tỷ lệ (rate / 비율) Warmup** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) curve nói gì và không nói gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Update-to-Weight Ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Học tập (learning / 학습) tỷ lệ (rate / 비율) Warmup
 
 Early parameters random; LayerNorm/residual/optimizer moments chưa stable. Large LR ngay từ step 1 có thể destabilize.
@@ -72,8 +68,6 @@ sau đó decay.
 
 Transformer huấn luyện (training / 학습) đặc biệt sensitive với warmup/batch/initialization tương tác (interaction / 상호작용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Update-to-Weight Ratio** tiếp nhận điểm tựa từ **Học tập (learning / 학습) tỷ lệ (rate / 비율) Warmup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) Norm Tracking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Update-to-Weight Ratio
 
 Không chỉ độ dốc (gradient / 기울기) norm; cập nhật (update / 업데이트) magnitude so parameter magnitude hữu ích:
@@ -86,8 +80,6 @@ Ratio quá lớn có thể destroy learned cấu trúc (structure / 구조); qu�
 
 Fine-tuning pretrained mô hình (model / 모델) thường cần cập nhật (update / 업데이트) nhỏ hơn pretraining from scratch.
 
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Độ dốc (gradient / 기울기) Norm Tracking** tiếp nhận điểm tựa từ **Update-to-Weight Ratio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Activation Statistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) Norm Tracking
 
 Toàn cục (global / 전역)/per-layer độ dốc (gradient / 기울기) norm cho biết tín hiệu (signal / 신호) phân phối (distribution / 분포).
@@ -97,8 +89,6 @@ Nếu early layers norm ~0 còn late layers lớn → vanishing/blocked gradient
 Nếu một tầng (layer / 계층) huge norm → instability/nguồn (source / 소스) quy mô (scale / 규모) issue.
 
 Độ dốc (gradient / 기울기) clipping logs nên nhánh học (track / 트랙) fraction of steps clipped; nếu 90% steps bị clip, threshold/LR/nguyên nhân gốc (root cause / 근본 원인) cần inspect.
-
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Activation Statistics** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) Norm Tracking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) thứ tự (order / 순서) và Shuffling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Activation Statistics
 
@@ -112,8 +102,6 @@ Exploding activation: std tăng nhanh qua độ sâu (depth / 깊이).
 
 Norm layers mask một phần symptom nhưng không eliminate all instability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Activation Statistics** nêu điều cần giải thích; **Dữ liệu (data / 데이터) thứ tự (order / 순서) và Shuffling** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Curriculum học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dữ liệu (data / 데이터) thứ tự (order / 순서) và Shuffling
 
 SGD assumes batches representative enough. Nếu dữ liệu (data / 데이터) sorted by label/thời gian (time / 시간)/lĩnh vực (domain / 도메인), consecutive gradients biased và huấn luyện (training / 학습) oscillate/drift.
@@ -122,15 +110,11 @@ Shuffle improves IID approximation, nhưng thời gian (time / 시간)/online h�
 
 Large phân tán (distributed / 분산) huấn luyện (training / 학습) cần deterministic sharding để avoid duplicate/missing samples.
 
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Dữ liệu (data / 데이터) thứ tự (order / 순서) và Shuffling** nêu điều cần giải thích; **Curriculum học tập (learning / 학습)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sampling phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Curriculum học tập (learning / 학습)
 
 Huấn luyện (training / 학습) examples theo easier→harder thứ tự (order / 순서) có thể improve tối ưu hóa (optimization / 최적화) trong some tasks. Nhưng defining difficulty đúng không trivial.
 
 LLM instruction tuning sometimes mixes dữ liệu (data / 데이터) sources/qualities with schedules. dữ liệu (data / 데이터) curriculum becomes tối ưu hóa (optimization / 최적화) parameter.
-
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Sampling phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Curriculum học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp (class / 클래스) Imbalance Dynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sampling phân phối (distribution / 분포)
 
@@ -140,8 +124,6 @@ Nếu nguồn (source / 소스) A 90% dữ liệu (data / 데이터), mục tiê
 
 Large foundation-model huấn luyện (training / 학습) thường carefully thiết kế (design / 설계) dữ liệu (data / 데이터) mixture weights.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Lớp (class / 클래스) Imbalance Dynamics** tiếp nhận điểm tựa từ **Sampling phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Catastrophic Forgetting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Lớp (class / 클래스) Imbalance Dynamics
 
 Rare lớp (class / 클래스) contributes few độ dốc (gradient / 기울기) updates. mô hình (model / 모델) may learn majority hành vi (behavior / 동작) early and never recover well.
@@ -149,8 +131,6 @@ Rare lớp (class / 클래스) contributes few độ dốc (gradient / 기울기
 Lớp (class / 클래스) weighting, balanced sampling, focal mất mát (loss / 손실) hoặc two-stage approaches thay đổi (change / 변경) độ dốc (gradient / 기울기) phân phối (distribution / 분포).
 
 Monitor per-class metrics, not just mất mát (loss / 손실).
-
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Catastrophic Forgetting** tiếp nhận điểm tựa từ **Lớp (class / 클래스) Imbalance Dynamics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fine-Tuning vs tính năng (feature / 기능) Extraction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Catastrophic Forgetting
 
@@ -167,8 +147,6 @@ Mitigations:
 
 This is a training-dynamics issue across sequential distributions.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Fine-Tuning vs tính năng (feature / 기능) Extraction** tiếp nhận điểm tựa từ **Catastrophic Forgetting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Layer-Wise học tập (learning / 학습) Rates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Fine-Tuning vs tính năng (feature / 기능) Extraction
 
 Frozen encoder + new head preserves pretrained biểu diễn (representation / 표현) but may underadapt.
@@ -176,8 +154,6 @@ Frozen encoder + new head preserves pretrained biểu diễn (representation / �
 Full fine-tuning gives flexibility but higher compute/forgetting/overfit rủi ro (risk / 위험).
 
 Gradual unfreezing or layer-wise học tập (learning / 학습) rates create middle ground.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Layer-Wise học tập (learning / 학습) Rates** tiếp nhận điểm tựa từ **Fine-Tuning vs tính năng (feature / 기능) Extraction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mất mát (loss / 손실) quy mô (scale / 규모) across Objectives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Layer-Wise học tập (learning / 학습) Rates
 
@@ -193,8 +169,6 @@ new task head            → larger LR
 
 Not universal but useful concept: parameters have different adaptation needs.
 
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Mất mát (loss / 손실) quy mô (scale / 규모) across Objectives** tiếp nhận điểm tựa từ **Layer-Wise học tập (learning / 학습) Rates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) xung đột (conflict / 충돌) in Multi-Task học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mất mát (loss / 손실) quy mô (scale / 규모) across Objectives
 
 Multi-task mất mát (loss / 손실):
@@ -209,8 +183,6 @@ One tác vụ (task / 작업) may dominate dùng chung (shared / 공유) biểu 
 
 Methods can dynamically balance tasks by bất định (uncertainty / 불확실성), độ dốc (gradient / 기울기) norms or xung đột (conflict / 충돌) handling.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Độ dốc (gradient / 기울기) xung đột (conflict / 충돌) in Multi-Task học tập (learning / 학습)** tiếp nhận điểm tựa từ **Mất mát (loss / 손실) quy mô (scale / 규모) across Objectives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sharp mất mát (loss / 손실) Spikes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Độ dốc (gradient / 기울기) xung đột (conflict / 충돌) in Multi-Task học tập (learning / 학습)
 
 Two tác vụ (task / 작업) gradients may điểm (point / 지점) opposing directions:
@@ -222,8 +194,6 @@ g_1^Tg_2<0
 Dùng chung (shared / 공유) cập nhật (update / 업데이트) helps one tác vụ (task / 작업), hurts other. This is biểu diễn (representation / 표현)/mục tiêu (objective / 목표) sự đánh đổi (trade-off / 트레이드오프), not optimizer bug.
 
 Understanding độ dốc (gradient / 기울기) hình học (geometry / 기하학) helps thiết kế (design / 설계) tác vụ (task / 작업) weights or separate adapters.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Sharp mất mát (loss / 손실) Spikes** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) xung đột (conflict / 충돌) in Multi-Task học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checkpointing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sharp mất mát (loss / 손실) Spikes
 
@@ -238,8 +208,6 @@ Operational phản hồi (response / 응답):
 - consider clipping/lower LR/dữ liệu (data / 데이터) cleaning.
 
 Blind restart without diagnosis wastes compute.
-
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Checkpointing** tiếp nhận điểm tựa từ **Sharp mất mát (loss / 손실) Spikes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exponential Moving Average of Weights** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Checkpointing
 
@@ -257,8 +225,6 @@ training step / config
 
 Tải (load / 로드) only weights with fresh optimizer is **fine-tuning/restart-like**, not chính xác (exact / 정확한) resume.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Exponential Moving Average of Weights** tiếp nhận điểm tựa từ **Checkpointing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra hợp lệ (validation / 검증) Frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Exponential Moving Average of Weights
 
 Maintain:
@@ -271,8 +237,6 @@ EMA weights smooth trajectory and often improve evaluation in vision/generative 
 
 Stochastic Weight Averaging similarly average checkpoints/weights in later huấn luyện (training / 학습) to seek wider solution region.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Kiểm tra hợp lệ (validation / 검증) Frequency** tiếp nhận điểm tựa từ **Exponential Moving Average of Weights** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Kiểm tra hợp lệ (validation / 검증) Frequency
 
 Validate too often → overhead; too rarely → miss overfitting/divergence and waste compute.
@@ -280,8 +244,6 @@ Validate too often → overhead; too rarely → miss overfitting/divergence and 
 Frequency should tie to dataset kích thước (size / 크기), huấn luyện (training / 학습) chi phí (cost / 비용) và expected thay đổi (change / 변경) tỷ lệ (rate / 비율).
 
 For massive pretraining, proxy metrics and periodic full eval suites coexist.
-
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Reproducibility** tiếp nhận điểm tựa từ **Kiểm tra hợp lệ (validation / 검증) Frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tán (distributed / 분산) huấn luyện (training / 학습) Dynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Reproducibility
 
@@ -298,8 +260,6 @@ Scientific/môi trường vận hành (production / 운영 환경) reproducibili
 
 Log all configs and mã (code / 코드)/dữ liệu (data / 데이터) versions.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Phân tán (distributed / 분산) huấn luyện (training / 학습) Dynamics** tiếp nhận điểm tựa từ **Reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling Laws Preview** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Phân tán (distributed / 분산) huấn luyện (training / 학습) Dynamics
 
 Dữ liệu (data / 데이터) parallelism averages gradients across workers. Effective toàn cục (global / 전역) batch:
@@ -314,15 +274,11 @@ Communication precision/thứ tự (order / 순서) may affect numerical kết q
 
 Large-scale tối ưu hóa (optimization / 최적화) is thuật toán (algorithm / 알고리즘) + hệ thống phân tán (distributed system / 분산 시스템) jointly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Scaling Laws Preview** tiếp nhận điểm tựa từ **Phân tán (distributed / 분산) huấn luyện (training / 학습) Dynamics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A systematic debugging thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Scaling Laws Preview
 
 As mô hình (model / 모델)/dữ liệu (data / 데이터)/compute quy mô (scale / 규모), mất mát (loss / 손실) often follows approximate power-law relationships over regimes. This informs tài nguyên (resource / 자원) allocation but does not guarantee downstream năng lực (capability / 역량)/an toàn (safety / 안전).
 
 Scaling laws will be detailed in LLM chapter.
-
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **A systematic debugging thứ tự (order / 순서)** tiếp nhận điểm tựa từ **Scaling Laws Preview** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## A systematic debugging thứ tự (order / 순서)
 
@@ -341,15 +297,11 @@ Khi huấn luyện (training / 학습) thất bại (fail / 실패), đừng nga
 
 **Overfit a tiny batch** là diagnostic cực mạnh: mô hình (model / 모델) đủ expressive nên phải memorize vài examples. Nếu không, chuỗi xử lý (pipeline / 파이프라인)/huấn luyện (training / 학습) bug.
 
-> **Chuyển mạch:** Ở chặng này của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **A systematic debugging thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > huấn luyện (training / 학습) là một dynamical hệ thống (system / 시스템) trong parameter không gian (space / 공간), được điều khiển bởi dữ liệu (data / 데이터) chuỗi (sequence / 시퀀스), mục tiêu (objective / 목표), optimizer, schedule, numerical precision và kiến trúc (architecture / 아키텍처).
 
 Không chỉ final hyperparameters mà cả trajectory quan trọng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -368,8 +320,6 @@ Chính xác (exact / 정확한) resume cần optimizer/scheduler/RNG/dữ liệu
 ### “huấn luyện (training / 학습) instability luôn do học tập (learning / 학습) tỷ lệ (rate / 비율)”
 
 LR dùng chung (common / 공통) cause nhưng dữ liệu (data / 데이터) anomalies, precision, normalization, initialization, độ dốc (gradient / 기울기) explosion cũng có thể.
-
-> **Chuyển mạch:** Trong **Deep học tập (learning / 학습) huấn luyện (training / 학습) Dynamics: hiểu quá trình mô hình (model / 모델) thực sự học**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

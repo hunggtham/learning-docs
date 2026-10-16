@@ -14,8 +14,6 @@ Nên phân biệt:
 
 Cùng một deadline có thể là challenge với một người và threat với người khác vì skill, lịch sử (history / 이력), hỗ trợ (support / 지원) và consequence khác nhau.
 
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Acute stress và chronic stress** nối từ **Stressor, stress phản hồi (response / 응답) và appraisal** sang **Allostasis và allostatic tải (load / 로드)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Acute stress và chronic stress
 
 **Stress cấp tính (acute stress)** có thể tăng arousal và ưu tiên phản ứng nhanh. Trong một số tác vụ (task / 작업) đơn giản, mức arousal vừa phải hỗ trợ hiệu năng (performance / 성능).
@@ -23,8 +21,6 @@ Cùng một deadline có thể là challenge với một người và threat v�
 **Stress mạn tính (chronic stress)** khác ở chỗ hệ thống phải duy trì activation hoặc lặp lại activation quá thường xuyên. Điều này có thể ảnh hưởng sleep, mood, attention, immune hàm (function / 함수) và hành vi (behavior / 동작) health.
 
 Xem [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]].
-
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Allostasis và allostatic tải (load / 로드)** nối từ **Acute stress và chronic stress** sang **Điều khiển (control / 제어) và predictability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Allostasis và allostatic tải (load / 로드)
 
@@ -34,8 +30,6 @@ Nhưng điều chỉnh liên tục có chi phí (cost / 비용). **Tải thích 
 
 Stress vì thế không chỉ phụ thuộc cường độ của một sự kiện (event / 이벤트) mà còn phụ thuộc duration, predictability, controllability và khôi phục (recovery / 복구).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Điều khiển (control / 제어) và predictability** nối từ **Allostasis và allostatic tải (load / 로드)** sang **Coping: thay đổi vấn đề hay thay đổi phản hồi (response / 응답)?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điều khiển (control / 제어) và predictability
 
 Hai stressor có cùng “độ khó” nhưng khác mức kiểm soát có thể tạo trải nghiệm rất khác.
@@ -44,8 +38,6 @@ Nếu tải công việc (workload / 워크로드) cao nhưng priority rõ và c
 
 Predictability cũng quan trọng. Notification ngẫu nhiên và interrupt không chắc chắn có thể duy trì vigilance mạnh hơn một khối (block / 블록) công việc khó nhưng có ranh giới rõ.
 
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Coping: thay đổi vấn đề hay thay đổi phản hồi (response / 응답)?** nối từ **Điều khiển (control / 제어) và predictability** sang **Avoidance: giảm stress ngắn hạn, tăng chi phí (cost / 비용) dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Coping: thay đổi vấn đề hay thay đổi phản hồi (response / 응답)?
 
 **Ứng phó tập trung vào vấn đề (problem-focused coping)** cố thay đổi stressor: thương lượng deadline, tìm thông tin, chia tác vụ (task / 작업), sửa tiến trình (process / 프로세스).
@@ -53,8 +45,6 @@ Predictability cũng quan trọng. Notification ngẫu nhiên và interrupt khô
 **Ứng phó tập trung vào cảm xúc (emotion-focused coping)** cố điều chỉnh distress: hỗ trợ (support / 지원), reappraisal, acceptance, relaxation.
 
 Không có loại nào luôn tốt hơn. Nếu stressor có thể kiểm soát, hành động (action / 동작) thường hữu ích. Nếu sự kiện (event / 이벤트) không thể thay đổi — ví dụ grief hoặc diagnosis — cố “giải quyết vấn đề” có thể chuyển thành rumination; acceptance và hỗ trợ (support / 지원) quan trọng hơn.
-
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Avoidance: giảm stress ngắn hạn, tăng chi phí (cost / 비용) dài hạn** nối từ **Coping: thay đổi vấn đề hay thay đổi phản hồi (response / 응답)?** sang **Rumination khác bài toán (problem / 문제) solving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Avoidance: giảm stress ngắn hạn, tăng chi phí (cost / 비용) dài hạn
 
@@ -65,8 +55,6 @@ Vấn đề là threat mô hình (model / 모델) không được cập nhật. 
 Đây là lý do avoidance là một cơ chế (mechanism / 메커니즘) xuyên nhiều vấn đề như procrastination, anxiety và xung đột (conflict / 충돌).
 
 Xem [[../02_learning_and_cognition/00_learning_and_conditioning]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Rumination khác bài toán (problem / 문제) solving** nối từ **Avoidance: giảm stress ngắn hạn, tăng chi phí (cost / 비용) dài hạn** sang **Emotion regulation là can thiệp ở nhiều điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rumination khác bài toán (problem / 문제) solving
 
@@ -87,8 +75,6 @@ thông tin nào còn thiếu?
 
 Suy nghĩ lâu không đồng nghĩa suy nghĩ hiệu quả.
 
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Emotion regulation là can thiệp ở nhiều điểm** nối từ **Rumination khác bài toán (problem / 문제) solving** sang **Reappraisal**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Emotion regulation là can thiệp ở nhiều điểm
 
 James Gross mô tả quá trình điều chỉnh cảm xúc bằng nhiều điểm can thiệp:
@@ -101,8 +87,6 @@ James Gross mô tả quá trình điều chỉnh cảm xúc bằng nhiều đi�
 
 Điểm quan trọng là self-control không phải chỉ “kìm ở phút cuối”. Thay đổi môi trường (environment / 환경) trước khi temptation mạnh thường ít tốn effort hơn inhibition liên tục.
 
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Reappraisal** nối từ **Emotion regulation là can thiệp ở nhiều điểm** sang **Suppression**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reappraisal
 
 **Tái đánh giá nhận thức (cognitive reappraisal)** thay đổi ý nghĩa của sự kiện (event / 이벤트) mà không phủ nhận fact.
@@ -113,8 +97,6 @@ Ví dụ:
 
 Reappraisal tốt không phải positive thinking giả. Nếu tải công việc (workload / 워크로드) thực sự không bền vững, đổi cách nghĩ mà không đổi hệ thống (system / 시스템) sẽ không đủ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Suppression** nối từ **Reappraisal** sang **Acceptance và cognitive defusion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Suppression
 
 **Ức chế biểu hiện (expressive suppression)** cố che biểu hiện sau khi cảm xúc đã xuất hiện. Nó đôi khi cần thiết trong professional ngữ cảnh (context / 맥락), nhưng dùng thường xuyên có thể tăng cognitive tải (load / 로드) và làm communication nghèo hơn.
@@ -122,8 +104,6 @@ Reappraisal tốt không phải positive thinking giả. Nếu tải công việ
 Điều này khác với **thought suppression** — cố ép một thought không xuất hiện. Thought suppression có thể tạo monitoring liên tục và đôi khi làm thought trở nên nổi bật hơn.
 
 Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
-
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Acceptance và cognitive defusion** nối từ **Suppression** sang **Mindfulness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acceptance và cognitive defusion
 
@@ -135,23 +115,17 @@ Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 Content chưa chắc thay đổi ngay, nhưng quyền điều khiển hành vi (behavior / 동작) của thought có thể giảm.
 
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Mindfulness** nối từ **Acceptance và cognitive defusion** sang **Emotion granularity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mindfulness
 
 Mindfulness thường được định nghĩa bằng attention tới trải nghiệm hiện tại với thái độ ít phán xét hơn. Nó có thể hỗ trợ nhận biết cue và giảm automatic reaction.
 
 Nhưng mindfulness không phải cognitive enhancer toàn diện, cũng không thay thế sleep, medical care hoặc treatment phù hợp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Emotion granularity** nối từ **Mindfulness** sang **Co-regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Emotion granularity
 
 Phân biệt chính xác frustration, guilt, shame, boredom, loneliness và fear có thể giúp chọn phản hồi (response / 응답) phù hợp.
 
 Nếu chỉ label `stress`, ta có thể bỏ qua rằng một phần là fatigue, một phần là bất định (uncertainty / 불확실성) và một phần là xung đột (conflict / 충돌).
-
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Co-regulation** nối từ **Emotion granularity** sang **Ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Co-regulation
 
@@ -161,8 +135,6 @@ Con người không tự điều chỉnh hoàn toàn một mình. Tone giọng, 
 
 Điều này không đồng nghĩa phụ thuộc; healthy regulation thường kết hợp nội bộ (internal / 내부) skill và relational hỗ trợ (support / 지원).
 
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Co-regulation** đặt tiêu chí; **Ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Burnout và stress tổ chức** mở rộng hệ quả.
-
 ## Ranh giới (boundary / 경계)
 
 Ranh giới (boundary / 경계) không phải công cụ kiểm soát người khác. Một ranh giới (boundary / 경계) tốt mô tả hành vi (behavior / 동작) mình sẽ làm để bảo vệ giới hạn.
@@ -171,8 +143,6 @@ Ranh giới (boundary / 경계) không phải công cụ kiểm soát người k
 
 `Sau 8 giờ tôi tắt notification và sẽ trả lời ngày mai` là ranh giới (boundary / 경계) hành vi (behavior / 동작) rõ hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Ranh giới (boundary / 경계)** đặt tiêu chí; **Burnout và stress tổ chức** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Khôi phục (recovery / 복구)** mở rộng hệ quả.
-
 ## Burnout và stress tổ chức
 
 Nếu stress đến từ tải công việc (workload / 워크로드), role ambiguity, unfairness hoặc lack of khôi phục (recovery / 복구), chỉ dạy breathing exercise có thể vô tình biến vấn đề hệ thống thành trách nhiệm cá nhân.
@@ -180,8 +150,6 @@ Nếu stress đến từ tải công việc (workload / 워크로드), role ambi
 Workplace intervention nên nhìn cả demand và tài nguyên (resource / 자원).
 
 Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Khôi phục (recovery / 복구)** nối từ **Burnout và stress tổ chức** sang **Lapse khác relapse**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khôi phục (recovery / 복구)
 
@@ -197,8 +165,6 @@ Một số cơ chế quan trọng:
 
 Scrolling hàng giờ có thể là break nhưng không nhất thiết là khôi phục (recovery / 복구) nếu vẫn duy trì stimulation, comparison hoặc sleep delay.
 
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Lapse khác relapse** nối từ **Khôi phục (recovery / 복구)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lapse khác relapse
 
 Trong self-regulation, một lần lệch kế hoạch là **lapse**, không tự động là **relapse**.
@@ -206,8 +172,6 @@ Trong self-regulation, một lần lệch kế hoạch là **lapse**, không t�
 Một chỉ số (metric / 지표) hữu ích là **khôi phục (recovery / 복구) độ trễ (latency / 지연 시간)**: mất bao lâu để quay lại hành vi (behavior / 동작) mong muốn sau lapse?
 
 Mô hình tư duy (mental model / 사고 모델) này tốt hơn perfectionism vì mục tiêu không phải “không bao giờ sai”, mà là hệ thống phục hồi nhanh.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Những hiểu lầm phổ biến** nối từ **Lapse khác relapse** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -218,8 +182,6 @@ Mô hình tư duy (mental model / 사고 모델) này tốt hơn perfectionism v
 **“Nếu biết kỹ thuật CBT/ACT thì lúc nào cũng dùng được.”** Kỹ năng cần practice và trạng thái (state / 상태) quá cao có thể làm truy cập (access / 접근) khó hơn.
 
 **“Burnout là do cá nhân yếu.”** Demand, điều khiển (control / 제어), fairness, hỗ trợ (support / 지원) và organizational thiết kế (design / 설계) rất quan trọng.
-
-> **Nối mạch:** Trong **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -240,8 +202,6 @@ updated prediction cho lần sau
 ```
 
 > Căng thẳng là quá trình điều chỉnh, không chỉ là cảm giác. Coping hiệu quả đòi hỏi xác định phần nào cần thay đổi ở môi trường, phần nào cần thay đổi trong cách phản ứng và khi nào cần phục hồi thay vì tiếp tục cố.
-
-> **Nối mạch:** Ở chặng này của **Căng thẳng, ứng phó và điều chỉnh cảm xúc — Stress, Coping & Emotion Regulation / 스트레스·대처·정서조절**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

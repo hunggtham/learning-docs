@@ -20,8 +20,6 @@ a=\phi(z)
 
 Nếu `φ` là định danh (identity / 식별자), đơn vị (unit / 단위) chỉ là tuyến tính (linear / 선형) regression thành phần (component / 컴포넌트). Nếu sigmoid, có logistic hành vi (behavior / 동작). Nếu ReLU, đầu ra (output / 출력) zero cho negative preactivation và tuyến tính (linear / 선형) cho positive.
 
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, **Perceptron lịch sử** tiếp nhận điểm tựa từ **Artificial neuron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tầng (layer / 계층) dưới dạng ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Perceptron lịch sử
 
 Perceptron nhị phân (binary / 이진) dùng threshold/sign activation:
@@ -41,8 +39,6 @@ cho labels `y∈{-1,+1}` trong simplified form.
 Perceptron Convergence Theorem nói nếu dữ liệu (data / 데이터) linearly separable, thuật toán (algorithm / 알고리즘) hội tụ sau hữu hạn mistakes.
 
 Nhưng XOR không linearly separable, nên single perceptron không solve được. Limitation này thúc đẩy multi-layer networks.
-
-> **Chuyển mạch:** Ở chặng này của **Neuron, Perceptron và Multi-Layer Perceptron**, **Tầng (layer / 계층) dưới dạng ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Perceptron lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-Layer Perceptron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tầng (layer / 계층) dưới dạng ma trận (matrix / 행렬)
 
@@ -66,8 +62,6 @@ Sau activation:
 
 Mỗi row của `W` là weight véc-tơ (vector / 벡터) của một đơn vị (unit / 단위). GPU có thể tính hàng nghìn units song song bằng phép nhân ma trận (matrix multiplication / 행렬 곱셈).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neuron, Perceptron và Multi-Layer Perceptron**, **Multi-Layer Perceptron** tiếp nhận điểm tựa từ **Tầng (layer / 계층) dưới dạng ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hidden units đang học gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Multi-Layer Perceptron
 
 MLP ngăn xếp (stack / 스택) fully-connected layers:
@@ -86,8 +80,6 @@ h^{(2)}=\phi(W^{(2)}h^{(1)}+b^{(2)})
 
 Hidden layers không có mục tiêu (target / 대상) trực tiếp. Chúng được shaped bởi final mất mát (loss / 손실) thông qua backpropagation.
 
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, **Hidden units đang học gì?** tiếp nhận điểm tựa từ **Multi-Layer Perceptron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra (output / 출력) tầng (layer / 계층) phụ thuộc tác vụ (task / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hidden units đang học gì?
 
 Không nên assume mỗi hidden đơn vị (unit / 단위) tương ứng một concept rõ như “mắt mèo”. biểu diễn (representation / 표현) thường phân tán (distributed / 분산).
@@ -95,8 +87,6 @@ Không nên assume mỗi hidden đơn vị (unit / 단위) tương ứng một c
 Một hidden véc-tơ (vector / 벡터) `h` có thể encode multiple factors qua directions/subspaces. tầng (layer / 계층) sau combine chúng thành higher-order features.
 
 Interpretability cần empirical phân tích (analysis / 분석), không thể suy meaning chỉ từ đơn vị (unit / 단위) chỉ mục (index / 인덱스).
-
-> **Chuyển mạch:** Ở chặng này của **Neuron, Perceptron và Multi-Layer Perceptron**, **Đầu ra (output / 출력) tầng (layer / 계층) phụ thuộc tác vụ (task / 작업)** tiếp nhận điểm tựa từ **Hidden units đang học gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch dimension** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Đầu ra (output / 출력) tầng (layer / 계층) phụ thuộc tác vụ (task / 작업)
 
@@ -113,8 +103,6 @@ Regression có thể dùng tuyến tính (linear / 선형) đầu ra (output / �
 Multi-label classification thường dùng independent sigmoid per label, không softmax, vì labels không mutually exclusive.
 
 Đầu ra (output / 출력) activation/mất mát (loss / 손실) phải match probabilistic cấu trúc (structure / 구조) của mục tiêu (target / 대상).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neuron, Perceptron và Multi-Layer Perceptron**, **Batch dimension** tiếp nhận điểm tựa từ **Đầu ra (output / 출력) tầng (layer / 계층) phụ thuộc tác vụ (task / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch dimension
 
@@ -134,8 +122,6 @@ Broadcast độ lệch (bias / 편향) trên `B` samples.
 
 Tensor-shape lập luận (reasoning / 추론) là skill trọng yếu (critical / 중요) khi implement neural networks.
 
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, **Parameter count** tiếp nhận điểm tựa từ **Batch dimension** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MLP cho tabular dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Parameter count
 
 Fully connected tầng (layer / 계층) từ `d_in` tới `d_out` có:
@@ -150,8 +136,6 @@ Nếu ảnh (image / 이미지) 224×224×3 flatten trực tiếp (~150k feature
 
 Kiến trúc (architecture / 아키텍처) phản ánh structural các giả định (assumptions / 가정들) của modality.
 
-> **Chuyển mạch:** Ở chặng này của **Neuron, Perceptron và Multi-Layer Perceptron**, **Parameter count** nêu điều cần giải thích; **MLP cho tabular dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quyết định (decision / 결정) regions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## MLP cho tabular dữ liệu (data / 데이터)
 
 MLP có thể dùng tabular dữ liệu (data / 데이터), nhưng độ dốc (gradient / 기울기) Boosted Trees thường rất competitive khi dữ liệu (data / 데이터) kích thước (size / 크기) vừa và heterogeneous. Neural các mô hình (models / 모델들) có lợi khi:
@@ -164,15 +148,11 @@ MLP có thể dùng tabular dữ liệu (data / 데이터), nhưng độ dốc (
 
 Không nên chọn MLP chỉ vì “deep học tập (learning / 학습) hiện đại hơn”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neuron, Perceptron và Multi-Layer Perceptron**, **MLP cho tabular dữ liệu (data / 데이터)** nêu điều cần giải thích; **Quyết định (decision / 결정) regions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ lệch (bias / 편향) term là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quyết định (decision / 결정) regions
 
 ReLU MLP tạo piecewise-linear hàm (function / 함수). Mỗi mẫu (pattern / 패턴) ReLU active/inactive xác định một cục bộ (local / 로컬) tuyến tính (linear / 선형) region.
 
 Độ sâu (depth / 깊이) có thể tạo rất nhiều regions, cho quyết định (decision / 결정) ranh giới (boundary / 경계) phức tạp dù mỗi thành phần nguyên thủy (primitive / 기본 요소) thao tác (operation / 연산) đơn giản.
-
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, **Độ lệch (bias / 편향) term là gì?** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) regions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dense liên kết (connection / 연결) và sparsity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Độ lệch (bias / 편향) term là gì?
 
@@ -180,15 +160,11 @@ ReLU MLP tạo piecewise-linear hàm (function / 함수). Mỗi mẫu (pattern /
 
 Không có độ lệch (bias / 편향), mọi hyperplane `Wx=0` đi qua origin, hạn chế expressivity.
 
-> **Chuyển mạch:** Ở chặng này của **Neuron, Perceptron và Multi-Layer Perceptron**, sau nội dung của **Độ lệch (bias / 편향) term là gì?**, **Dense liên kết (connection / 연결) và sparsity** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Perceptron vs Logistic Neuron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dense liên kết (connection / 연결) và sparsity
 
 Tiêu chuẩn (standard / 표준) MLP fully connected: mỗi đầu ra (output / 출력) đơn vị (unit / 단위) nhận toàn bộ previous hidden véc-tơ (vector / 벡터). Nhưng architectures khác có sparse/cục bộ (local / 로컬)/recurrent/attention connections.
 
 Neural mạng (network / 네트워크) không đồng nghĩa fully connected mạng (network / 네트워크).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neuron, Perceptron và Multi-Layer Perceptron**, **Perceptron vs Logistic Neuron** tiếp nhận điểm tựa từ **Dense liên kết (connection / 연결) và sparsity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Example: XOR bằng hidden biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Perceptron vs Logistic Neuron
 
@@ -197,8 +173,6 @@ Perceptron hard threshold không differentiable tại ranh giới (boundary / �
 Sigmoid/ReLU/GELU cung cấp differentiable hoặc almost-everywhere differentiable hành vi (behavior / 동작) phù hợp gradient-based huấn luyện (training / 학습).
 
 Hiện đại (modern / 현대적) mạng (network / 네트워크) vì vậy không train bằng classic perceptron quy tắc (rule / 규칙) trong đa số cases.
-
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, **Perceptron vs Logistic Neuron** cho ta quy tắc; **Example: XOR bằng hidden biểu diễn (representation / 표현)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Example: XOR bằng hidden biểu diễn (representation / 표현)
 
@@ -217,8 +191,6 @@ XOR
 
 Không cần hand-code chính xác (exact / 정확한) logical features; huấn luyện (training / 학습) có thể discover useful intermediate features.
 
-> **Chuyển mạch:** Ở chặng này của **Neuron, Perceptron và Multi-Layer Perceptron**, **Example: XOR bằng hidden biểu diễn (representation / 표현)** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -230,8 +202,6 @@ MLP    = repeated representation transformation
 ```
 
 Hidden layers không phải “các bước lập luận (reasoning / 추론)” theo nghĩa symbolic; chúng là learned numerical transformations.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neuron, Perceptron và Multi-Layer Perceptron**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -250,8 +220,6 @@ Perceptron là historical linear-threshold learner. hiện đại (modern / 현�
 ### “MLP đủ universal nên không cần CNN/Transformer”
 
 Theoretical expressivity không thay efficiency/inductive độ lệch (bias / 편향). Specialized architectures learn relevant cấu trúc (structure / 구조) hiệu quả hơn.
-
-> **Chuyển mạch:** Trong **Neuron, Perceptron và Multi-Layer Perceptron**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

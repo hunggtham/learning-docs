@@ -8,8 +8,6 @@ Bộ chứa (container / 컨테이너) không loại bỏ hệ điều hành; n�
 
 Chapter này không viết lại Operating các hệ thống (systems / 시스템들). Mục tiêu là nối các lớp trừu tượng (abstraction / 추상화) Linux quan trọng với công việc vận hành. Nền sâu hơn về kernel/syscall xem [canonical OS foundation](../../computer_science/basic/03_operating_systems/00_kernel_syscalls_and_os_abstractions.md), tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드) xem [processes, threads và scheduling](../../computer_science/basic/03_operating_systems/01_processes_threads_and_scheduling.md), filesystem/I/O xem [filesystems, storage và I/O](../../computer_science/basic/03_operating_systems/04_filesystems_storage_and_io.md).
 
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **1. Vì sao DevOps phải hiểu Linux dù đang dùng bộ chứa (container / 컨테이너)** xác định đầu vào; **2. tiến trình (process / 프로세스) là đơn vị đầu tiên để suy luận** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. dịch vụ (service / 서비스) manager và supervision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. tiến trình (process / 프로세스) là đơn vị đầu tiên để suy luận
 
 Một dịch vụ (service / 서비스) đang chạy không phải “một ứng dụng” theo nghĩa trừu tượng. Ở mức OS, nó là một hoặc nhiều tiến trình (process / 프로세스) có PID, address không gian (space / 공간), open tệp (file / 파일) descriptor, credential, môi trường (environment / 환경), hiện tại (current / 현재) working directory và set tài nguyên (resource / 자원) limit. Mọi câu hỏi vận hành nên dần quy về các trạng thái (state / 상태) có thể quan sát này.
@@ -27,8 +25,6 @@ ss -lntp
 
 Lệnh không phải đáp án; mỗi lệnh kiểm tra một giả thuyết. `systemctl` kiểm tra supervisor trạng thái (state / 상태), `journalctl` kiểm tra vòng đời (lifecycle / 생명주기) bằng chứng (evidence / 증거), `ps` kiểm tra tiến trình (process / 프로세스) existence, `ss` kiểm tra socket/listener.
 
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **2. tiến trình (process / 프로세스) là đơn vị đầu tiên để suy luận** xác định đầu vào; **3. dịch vụ (service / 서비스) manager và supervision** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. tín hiệu (signal / 신호) và graceful shutdown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 3. dịch vụ (service / 서비스) manager và supervision
 
 Một tiến trình (process / 프로세스) môi trường vận hành (production / 운영 환경) cần vòng đời (lifecycle / 생명주기) manager. `systemd` hoặc bộ chứa (container / 컨테이너) orchestrator làm nhiều hơn “start chương trình”: chúng định nghĩa khi nào restart, môi trường (environment / 환경) nào được inject, phụ thuộc (dependency / 의존성) nào phải có, log đi đâu và tín hiệu (signal / 신호) nào được gửi khi shutdown.
@@ -37,8 +33,6 @@ Nếu ứng dụng (application / 애플리케이션) tự fork, daemonize và g
 
 Điều cần hiểu là parent/child quyền sở hữu (ownership / 소유권). Nếu supervisor nghĩ tiến trình (process / 프로세스) đã chết trong khi child vẫn còn, có thể xuất hiện orphan hoặc duplicated dịch vụ (service / 서비스). Nếu tiến trình (process / 프로세스) PID 1 trong bộ chứa (container / 컨테이너) không forward/reap tín hiệu (signal / 신호) đúng, graceful shutdown và zombie handling có thể hỏng. Đây là lý do “tiến trình (process / 프로세스) mô hình (model / 모델)” quan trọng hơn câu lệnh start.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **4. tín hiệu (signal / 신호) và graceful shutdown** tiếp nhận điểm tựa từ **3. dịch vụ (service / 서비스) manager và supervision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tệp (file / 파일) descriptor và socket là tài nguyên hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. tín hiệu (signal / 신호) và graceful shutdown
 
 Khi deploy phiên bản mới, orchestrator thường không “tắt điện” ngay. Nó yêu cầu tải công việc (workload / 워크로드) dừng bằng tín hiệu (signal / 신호), cho một khoảng grace period, rồi mới force kill nếu tiến trình (process / 프로세스) không thoát. ứng dụng (application / 애플리케이션) môi trường vận hành (production / 운영 환경) phải coi shutdown là một giao thức (protocol / 프로토콜).
@@ -46,8 +40,6 @@ Khi deploy phiên bản mới, orchestrator thường không “tắt điện”
 Một chuỗi (sequence / 시퀀스) tốt thường là: ngừng nhận yêu cầu (request / 요청) mới, cho bộ cân bằng tải (load balancer / 로드 밸런서)/endpoints cập nhật, hoàn tất hoặc hủy yêu cầu (request / 요청) đang xử lý theo deadline, flush trạng thái (state / 상태)/log cần thiết, đóng liên kết (connection / 연결) pool và thoát. Nếu ứng dụng (application / 애플리케이션) bắt tín hiệu (signal / 신호) nhưng mất 90 giây trong khi grace period là 30 giây, cuối cùng vẫn bị kill giữa giao dịch (transaction / 트랜잭션).
 
 Điểm cấp cao (senior / 시니어) cần nhớ: “graceful” phải được chứng minh bằng traffic hành vi (behavior / 동작) chứ không phải chỉ có shutdown hook trong mã (code / 코드).
-
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **5. tệp (file / 파일) descriptor và socket là tài nguyên hữu hạn** tiếp nhận điểm tựa từ **4. tín hiệu (signal / 신호) và graceful shutdown** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. bộ nhớ (memory / 메모리): RSS không phải toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. tệp (file / 파일) descriptor và socket là tài nguyên hữu hạn
 
@@ -64,8 +56,6 @@ lsof -p <pid>
 
 `/proc` là nguồn bằng chứng (evidence / 증거) mạnh vì nó cho thấy kernel đang nhìn tiến trình (process / 프로세스) như thế nào.
 
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **6. bộ nhớ (memory / 메모리): RSS không phải toàn bộ câu chuyện** tiếp nhận điểm tựa từ **5. tệp (file / 파일) descriptor và socket là tài nguyên hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. CPU usage khác CPU entitlement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. bộ nhớ (memory / 메모리): RSS không phải toàn bộ câu chuyện
 
 Môi trường vận hành (production / 운영 환경) thường hiển thị một số “bộ nhớ (memory / 메모리) usage”, nhưng số đó có thể đại diện RSS, working set, cgroup usage hoặc chỉ số (metric / 지표) thời gian chạy (runtime / 런타임). Page bộ nhớ đệm (cache / 캐시), mapped tệp (file / 파일), vùng nhớ động (heap / 힙) và bản địa (native / 네이티브) allocation có ngữ nghĩa (semantics / 의미론) khác nhau.
@@ -74,15 +64,11 @@ Một dịch vụ (service / 서비스) có thể bị OOM dù host còn bộ nh
 
 Về vận hành, hãy tách ba câu hỏi: ứng dụng (application / 애플리케이션) đang giữ bộ nhớ (memory / 메모리) nào; bộ chứa (container / 컨테이너)/cgroup đang bị giới hạn thế nào; host/nút (node / 노드) đang chịu pressure ra sao. Nếu chỉ nhìn một dashboard ứng dụng (application / 애플리케이션) vùng nhớ động (heap / 힙), bạn có thể bỏ sót bản địa (native / 네이티브) bộ nhớ (memory / 메모리) hoặc kernel pressure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **7. CPU usage khác CPU entitlement** tiếp nhận điểm tựa từ **6. bộ nhớ (memory / 메모리): RSS không phải toàn bộ câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Filesystem và “disk full”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. CPU usage khác CPU entitlement
 
 `100% CPU` chỉ có nghĩa khi biết đơn vị đo. Trên host nhiều cốt lõi (core / 핵심), một tiến trình (process / 프로세스) một-thread có thể dùng đầy một cốt lõi (core / 핵심) nhưng chỉ chiếm phần nhỏ tổng host. Trong bộ chứa (container / 컨테이너), CPU yêu cầu (request / 요청)/limit có thể thêm một tầng entitlement. Khi tải công việc (workload / 워크로드) bị CFS throttling, độ trễ (latency / 지연 시간) có thể tăng dù nút (node / 노드) chưa “100% CPU”.
 
 Do đó lập luận (reasoning / 추론) đúng là: demand bao nhiêu, allocation/limit bao nhiêu, scheduler cho chạy thực tế bao nhiêu, hàng đợi (queue / 큐)/run thời gian (time / 시간) tăng ra sao. Nền scheduler xem [scheduler internals](../../computer_science/03_operating_systems/advanced/01_scheduler_run_queues_fairness_and_latency.md).
-
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **8. Filesystem và “disk full”** tiếp nhận điểm tựa từ **7. CPU usage khác CPU entitlement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. bằng chứng (evidence / 증거) ladder cho Linux sự cố (incident / 인시던트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Filesystem và “disk full”
 
@@ -90,21 +76,15 @@ Do đó lập luận (reasoning / 추론) đúng là: demand bao nhiêu, allocat
 
 Một tình huống điển hình là log tệp (file / 파일) lớn bị `rm`, nhưng tiến trình (process / 프로세스) vẫn giữ FD. Tên tệp (file / 파일) biến mất khỏi directory nhưng khối (block / 블록) chưa được giải phóng cho tới khi FD đóng. `lsof +L1` có thể lộ trường hợp này. Đây là ví dụ rõ cho việc mô hình tư duy (mental model / 사고 모델) filesystem quan trọng hơn thao tác xóa tệp (file / 파일).
 
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **8. Filesystem và “disk full”** nêu điều cần giải thích; **9. bằng chứng (evidence / 증거) ladder cho Linux sự cố (incident / 인시던트)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. môi trường vận hành (production / 운영 환경) bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. bằng chứng (evidence / 증거) ladder cho Linux sự cố (incident / 인시던트)
 
 Khi một tải công việc (workload / 워크로드) lỗi, nên đi từ bằng chứng (evidence / 증거) ít phá hoại đến sâu hơn. Trước hết xác định symptom và thời gian (time / 시간) cửa sổ (window / 윈도우). Sau đó kiểm tra tiến trình (process / 프로세스)/dịch vụ (service / 서비스) trạng thái (state / 상태), logs/events, listener/socket, tài nguyên (resource / 자원) pressure, phụ thuộc (dependency / 의존성) connectivity. Chỉ khi các lớp này không đủ mới đi sâu vào `/proc`, syscall tracing, packet capture hoặc kernel bằng chứng (evidence / 증거).
 
 Đừng restart quá sớm nếu chưa thu bằng chứng (evidence / 증거) tối thiểu. Restart có thể phục hồi dịch vụ (service / 서비스) nhưng đồng thời xóa trạng thái (state / 상태) quý giá để tìm nguyên nhân gốc (root cause / 근본 원인). Trong sự cố (incident / 인시던트) có người dùng (user / 사용자) impact lớn, khôi phục (recovery / 복구) vẫn ưu tiên; nhưng nên có quy ước ai capture bằng chứng (evidence / 증거) nào trước khi restart khi thời gian cho phép.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **9. bằng chứng (evidence / 증거) ladder cho Linux sự cố (incident / 인시던트)** nêu điều cần giải thích; **10. môi trường vận hành (production / 운영 환경) bất biến (invariant / 불변식)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. tải (load / 로드) average không đồng nghĩa CPU utilization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. môi trường vận hành (production / 운영 환경) bất biến (invariant / 불변식)
 
 Một dịch vụ (service / 서비스) vận hành tốt cần có vòng đời (lifecycle / 생명주기) rõ ràng: tiến trình (process / 프로세스) foreground, supervisor quyền sở hữu (ownership / 소유권), tín hiệu (signal / 신호) handling, tài nguyên (resource / 자원) ranh giới (boundary / 경계), log/telemetry đường dẫn (path / 경로) và health ngữ nghĩa (semantics / 의미론) nhất quán. bộ chứa (container / 컨테이너) hay VM chỉ thay packaging và isolation ranh giới (boundary / 경계); bất biến (invariant / 불변식) này vẫn còn.
-
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **11. tải (load / 로드) average không đồng nghĩa CPU utilization** tiếp nhận điểm tựa từ **10. môi trường vận hành (production / 운영 환경) bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Pressure Stall thông tin (information / 정보) giúp đo thời gian tải công việc (workload / 워크로드) bị thiếu tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. tải (load / 로드) average không đồng nghĩa CPU utilization
 
@@ -112,15 +92,11 @@ Một dịch vụ (service / 서비스) vận hành tốt cần có vòng đời
 
 Khi độ trễ (latency / 지연 시간) tăng cùng tải (load / 로드) average, đừng kết luận “thiếu CPU” trước khi xem run hàng đợi (queue / 큐), CPU utilization, I/O wait và pressure. Đây là ví dụ điển hình của việc một chỉ số (metric / 지표) tổng hợp chỉ là đầu mối, không phải diagnosis.
 
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **12. Pressure Stall thông tin (information / 정보) giúp đo thời gian tải công việc (workload / 워크로드) bị thiếu tài nguyên** tiếp nhận điểm tựa từ **11. tải (load / 로드) average không đồng nghĩa CPU utilization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Cgroup v2: tài nguyên (resource / 자원) điều khiển (control / 제어) là hierarchy chứ không chỉ một con số limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 12. Pressure Stall thông tin (information / 정보) giúp đo thời gian tải công việc (workload / 워크로드) bị thiếu tài nguyên
 
 Pressure Stall thông tin (information / 정보) (PSI) cho biết trong một khoảng thời gian, tác vụ (task / 작업) đã phải chờ vì thiếu CPU, bộ nhớ (memory / 메모리) hoặc I/O bao lâu. Đây là góc nhìn khác utilization. CPU có thể chưa 100% trung bình nhưng một tải công việc (workload / 워크로드) latency-sensitive vẫn chịu pressure do cgroup quota hoặc run hàng đợi (queue / 큐). bộ nhớ (memory / 메모리) usage có thể chưa chạm limit nhưng reclaim liên tục làm tác vụ (task / 작업) stall.
 
 Trong sự cố (incident / 인시던트), PSI hữu ích vì nó hỏi trực tiếp: “tải công việc (workload / 워크로드) có đang bị trì hoãn bởi tài nguyên (resource / 자원) contention không?”. Sau đó mới đi sâu xem contention đến từ cgroup ranh giới (boundary / 경계), nút (node / 노드) overcommit, reclaim, lưu trữ (storage / 저장소) độ trễ (latency / 지연 시간) hay tải công việc (workload / 워크로드) khác.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **12. Pressure Stall thông tin (information / 정보) giúp đo thời gian tải công việc (workload / 워크로드) bị thiếu tài nguyên** đã nêu tiêu chí phân biệt, còn **13. Cgroup v2: tài nguyên (resource / 자원) điều khiển (control / 제어) là hierarchy chứ không chỉ một con số limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. OOM phải xác định phạm vi (scope / 범위): tiến trình (process / 프로세스), cgroup hay host** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Cgroup v2: tài nguyên (resource / 자원) điều khiển (control / 제어) là hierarchy chứ không chỉ một con số limit
 
@@ -128,15 +104,11 @@ Trong hệ thống dùng cgroup v2, CPU, bộ nhớ (memory / 메모리) và nhi
 
 Bộ nhớ (memory / 메모리) điều khiển (control / 제어) cũng không chỉ có hard limit. Các ngưỡng như `memory.high` có thể tạo reclaim/throttling pressure trước khi `memory.max` dẫn tới OOM. Về operational lập luận (reasoning / 추론), điều quan trọng là phân biệt **pressure** với **hard thất bại (failure / 실패)**: dịch vụ (service / 서비스) có thể chậm nghiêm trọng trước khi bị kill.
 
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **13. Cgroup v2: tài nguyên (resource / 자원) điều khiển (control / 제어) là hierarchy chứ không chỉ một con số limit** đã nêu tiêu chí phân biệt, còn **14. OOM phải xác định phạm vi (scope / 범위): tiến trình (process / 프로세스), cgroup hay host** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. cấp cao (senior / 시니어) walkthrough: độ trễ (latency / 지연 시간) tăng nhưng CPU dashboard chỉ 45%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 14. OOM phải xác định phạm vi (scope / 범위): tiến trình (process / 프로세스), cgroup hay host
 
 Một dòng log “OOM” chưa nói rõ miền lỗi (failure domain / 장애 도메인). Có trường hợp tiến trình (process / 프로세스)/thời gian chạy (runtime / 런타임) tự ném lỗi vì vùng nhớ động (heap / 힙) limit. Có trường hợp cgroup OOM kill vì tải công việc (workload / 워크로드) vượt bộ nhớ (memory / 메모리) ranh giới (boundary / 경계). Có trường hợp host chịu toàn cục (global / 전역) bộ nhớ (memory / 메모리) pressure và kernel chọn victim.
 
 Ba trường hợp cần bằng chứng (evidence / 증거) khác nhau. thời gian chạy (runtime / 런타임) vùng nhớ động (heap / 힙) metrics trả lời câu hỏi bên trong tiến trình (process / 프로세스). Cgroup events trả lời tải công việc (workload / 워크로드) có chạm ranh giới (boundary / 경계) không. Kernel log/nút (node / 노드) pressure trả lời host có thiếu bộ nhớ (memory / 메모리) toàn cục không. Chỉ tăng vùng nhớ động (heap / 힙) hoặc tăng pod limit mà không xác định phạm vi (scope / 범위) có thể chuyển thất bại (failure / 실패) sang tầng khác.
-
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **14. OOM phải xác định phạm vi (scope / 범위): tiến trình (process / 프로세스), cgroup hay host** xác định đầu vào; **15. cấp cao (senior / 시니어) walkthrough: độ trễ (latency / 지연 시간) tăng nhưng CPU dashboard chỉ 45%** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Dirty page và writeback có thể tạo độ trễ (latency / 지연 시간) trước khi disk “đầy”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. cấp cao (senior / 시니어) walkthrough: độ trễ (latency / 지연 시간) tăng nhưng CPU dashboard chỉ 45%
 
@@ -146,8 +118,6 @@ Nếu throttling tăng đúng lúc độ trễ (latency / 지연 시간) tăng, 
 
 Cách lập luận (reasoning / 추론) này giữ nguyên nguyên tắc của chapter: một chỉ số (metric / 지표) ở một tầng (layer / 계층) không phủ định pressure ở tầng (layer / 계층) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **16. Dirty page và writeback có thể tạo độ trễ (latency / 지연 시간) trước khi disk “đầy”** tiếp nhận điểm tựa từ **15. cấp cao (senior / 시니어) walkthrough: độ trễ (latency / 지연 시간) tăng nhưng CPU dashboard chỉ 45%** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Listen socket có hàng đợi (queue / 큐) trước khi ứng dụng (application / 애플리케이션) accept() liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 16. Dirty page và writeback có thể tạo độ trễ (latency / 지연 시간) trước khi disk “đầy”
 
 Khi tiến trình (process / 프로세스) ghi tệp (file / 파일), nhiều ghi (write / 쓰기) không lập tức đi thẳng xuống lưu trữ (storage / 저장소); dữ liệu có thể đi vào page bộ nhớ đệm (cache / 캐시) rồi kernel flush dần xuống thiết bị. Điều này làm ghi (write / 쓰기) bình thường nhìn rất nhanh, nhưng nếu tốc độ dirty dữ liệu (data / 데이터) cao hơn tốc độ writeback lâu đủ, kernel phải throttle writer hoặc ứng dụng (application / 애플리케이션) gặp burst độ trễ (latency / 지연 시간) khi flush/fsync.
@@ -155,8 +125,6 @@ Khi tiến trình (process / 프로세스) ghi tệp (file / 파일), nhiều gh
 Vì vậy một dịch vụ (service / 서비스) ghi log, temporary tệp (file / 파일) hoặc cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) có thể xuất hiện p99 độ trễ (latency / 지연 시간) tăng trong khi disk usage vẫn còn nhiều. bằng chứng (evidence / 증거) cần nối ứng dụng (application / 애플리케이션) ghi (write / 쓰기) độ trễ (latency / 지연 시간), I/O PSI, thiết bị (device / 장치) độ trễ (latency / 지연 시간)/hàng đợi (queue / 큐) và dirty/writeback hành vi (behavior / 동작). “Disk chưa đầy” chỉ loại trừ sức chứa (capacity / 용량) theo dung lượng, không loại trừ saturation theo thông lượng (throughput / 처리량)/độ trễ (latency / 지연 시간).
 
 Operational lesson là lưu trữ (storage / 저장소) có ít nhất hai loại headroom: còn bao nhiêu bytes và còn bao nhiêu dịch vụ (service / 서비스) tỷ lệ (rate / 비율) cho I/O. Hai thứ không thay thế nhau.
-
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, sau nội dung của **16. Dirty page và writeback có thể tạo độ trễ (latency / 지연 시간) trước khi disk “đầy”**, **17. Listen socket có hàng đợi (queue / 큐) trước khi ứng dụng (application / 애플리케이션) accept() liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **18. tài nguyên (resource / 자원) limit có nhiều tầng và effective limit là tầng chặt nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Listen socket có hàng đợi (queue / 큐) trước khi ứng dụng (application / 애플리케이션) `accept()` liên kết (connection / 연결)
 
@@ -166,8 +134,6 @@ Do đó `ss -lntp` xác nhận listener tồn tại nhưng chưa chứng minh li
 
 Đây là cùng mô hình tư duy (mental model / 사고 모델) queueing: kernel hàng đợi (queue / 큐) hấp thụ burst, nhưng hàng đợi (queue / 큐) không tạo thêm dịch vụ (service / 서비스) sức chứa (capacity / 용량). Nếu producer liên kết (connection / 연결) đến nhanh hơn ứng dụng (application / 애플리케이션) nhận lâu đủ, thất bại (failure / 실패) cuối cùng vẫn xuất hiện.
 
-> **Chuyển mạch:** Ở chặng này của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **17. Listen socket có hàng đợi (queue / 큐) trước khi ứng dụng (application / 애플리케이션) accept() liên kết (connection / 연결)** đã nêu tiêu chí phân biệt, còn **18. tài nguyên (resource / 자원) limit có nhiều tầng và effective limit là tầng chặt nhất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. Clock là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경) dù không tiêu CPU đáng kể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 18. tài nguyên (resource / 자원) limit có nhiều tầng và effective limit là tầng chặt nhất
 
 Một tiến trình (process / 프로세스) có thể chịu `RLIMIT_NOFILE`, `systemd` đơn vị (unit / 단위) limit, cgroup ranh giới (boundary / 경계), bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) setting và node-level pressure cùng lúc. Operator thường nhìn một tầng rồi nghĩ đó là “limit thực”. Thực tế effective hành vi (behavior / 동작) đến từ ràng buộc (constraint / 제약조건) chặt nhất trên đường thực thi.
@@ -176,8 +142,6 @@ Ví dụ shell tương tác báo `ulimit -n` rất cao nhưng dịch vụ (servi
 
 Mô hình tư duy (mental model / 사고 모델) này áp dụng rộng hơn Linux: môi trường vận hành (production / 운영 환경) lớp trừu tượng (abstraction / 추상화) thường là composition của nhiều chính sách (policy / 정책); giá trị hiển thị ở một tầng (layer / 계층) chỉ có nghĩa trong ranh giới (boundary / 경계) đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **18. tài nguyên (resource / 자원) limit có nhiều tầng và effective limit là tầng chặt nhất** đã nêu tiêu chí phân biệt, còn **19. Clock là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경) dù không tiêu CPU đáng kể** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. cấp cao (senior / 시니어) walkthrough: API hết thời gian chờ (timeout / 타임아웃) tăng cùng log burst nhưng CPU và DB đều bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 19. Clock là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경) dù không tiêu CPU đáng kể
 
 Nhiều giao thức (protocol / 프로토콜) và hệ thống phụ thuộc thời gian: TLS certificate validity, đơn vị từ (token / 토큰) expiry, phân tán (distributed / 분산) dấu vết (trace / 추적) thứ tự (ordering / 순서), lease, cron/scheduler, bộ nhớ đệm (cache / 캐시) TTL và log correlation. Nếu clock skew lớn, dịch vụ (service / 서비스) có thể thất bại (fail / 실패) authentication hoặc tạo timeline điều tra sai dù CPU/bộ nhớ (memory / 메모리)/mạng (network / 네트워크) đều khỏe.
@@ -185,8 +149,6 @@ Nhiều giao thức (protocol / 프로토콜) và hệ thống phụ thuộc th�
 Không nên dùng wall clock như một nguồn thứ tự (ordering / 순서) tuyệt đối cho phân tán (distributed / 분산) sự kiện (event / 이벤트). Trong sự cố (incident / 인시던트), timestamp giữa hai host lệch nhau có thể làm chuỗi nhân quả (causal chain / 인과 사슬) nhìn đảo ngược. NTP/time-sync health vì vậy là operational phụ thuộc (dependency / 의존성); còn thứ tự (ordering / 순서)/causality sâu hơn thuộc phân tán (distributed / 분산) các hệ thống (systems / 시스템들) chuẩn gốc (canonical / 정본) docs.
 
 Khi thất bại (failure / 실패) gắn với “đơn vị từ (token / 토큰) chưa có hiệu lực”, “certificate chưa hợp lệ” hoặc sự kiện (event / 이벤트) dường như xảy ra trước cause, hãy kiểm tra clock/source-time giả định (assumption / 가정) trước khi invent một race điều kiện (condition / 조건) phức tạp.
-
-> **Chuyển mạch:** Trong **Linux như môi trường thực thi môi trường vận hành (production / 운영 환경)**, **20. cấp cao (senior / 시니어) walkthrough: API hết thời gian chờ (timeout / 타임아웃) tăng cùng log burst nhưng CPU và DB đều bình thường** tiếp nhận điểm tựa từ **19. Clock là phụ thuộc (dependency / 의존성) môi trường vận hành (production / 운영 환경) dù không tiêu CPU đáng kể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## 20. cấp cao (senior / 시니어) walkthrough: API hết thời gian chờ (timeout / 타임아웃) tăng cùng log burst nhưng CPU và DB đều bình thường
 

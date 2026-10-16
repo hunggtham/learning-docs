@@ -14,8 +14,6 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** duplicate count, xung đột (conflict / 충돌) count, source-to-sink reconciliation và replay kiểm thử (test / 테스트) trên một khoảng offset.
 
-> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 1 — CDC duplicate sau thử lại (retry / 재시도)** cho ta quy tắc; **Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)
 
 **Tình huống:** thiết bị offline gửi sự kiện (event / 이벤트) 09:05 lúc 11:00; dashboard 09:00–10:00 đã finalize theo watermark.
@@ -25,8 +23,6 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 **Thiết kế:** lưu sự kiện (event / 이벤트) thời gian (time / 시간) và ingestion thời gian (time / 시간); late sự kiện (event / 이벤트) đi vào correction đường dẫn (path / 경로) hoặc tạo phiên bản (version / 버전) mới của aggregate; downstream biết chính sách (policy / 정책) finalization. trạng thái (state / 상태) retention đủ dài để replay trong late-arrival bound.
 
 **bằng chứng (evidence / 증거):** watermark lag phân phối (distribution / 분포), late-event tỷ lệ (rate / 비율), correction reconciliation và số chỉ số (metric / 지표) đã publish lại.
-
-> **Chuyển mạch:** Ở chặng này của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 2 — Late sự kiện (event / 이벤트) làm thay đổi cửa sổ (window / 윈도우)** cho ta quy tắc; **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 4 — Small files và compaction race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại
 
@@ -38,8 +34,6 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** đầu vào (input / 입력)/mã (code / 코드) phiên bản (version / 버전), mục tiêu (target / 대상) phạm vi (range / 범위), diff metrics, quay lui (rollback / 롤백) marker và bên tiêu thụ (consumer / 소비자) cutover thời gian (time / 시간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 3 — Backfill lô-gic (logic / 논리) mới không được ghi đè dữ liệu hiện tại** cho ta quy tắc; **Trường hợp (case / 사례) 4 — Small files và compaction race** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Trường hợp (case / 사례) 4 — Small files và compaction race
 
 **Tình huống:** micro-batch tạo hàng triệu tệp (file / 파일) nhỏ; compaction chạy đồng thời với reader và writer.
@@ -49,8 +43,6 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 **Thiết kế:** siêu dữ liệu (metadata / 메타데이터) lần ghi nhận (commit / 커밋) xác định snapshot, compaction tạo files mới trước, publish pointer sau kiểm tra hợp lệ (validation / 검증), garbage collection tách khỏi lần ghi nhận (commit / 커밋). truy vấn (query / 쿼리)/compaction có sức chứa (capacity / 용량) ngân sách (budget / 예산) riêng.
 
 **bằng chứng (evidence / 증거):** snapshot lineage, tệp (file / 파일) count/kích thước (size / 크기) phân phối (distribution / 분포), reader lỗi (error / 오류) tỷ lệ (rate / 비율), compaction ghi (write / 쓰기) amplification và restore kiểm thử (test / 테스트).
-
-> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 4 — Small files và compaction race** cho ta quy tắc; **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách viết trường hợp (case / 사례) study mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out
 
@@ -62,13 +54,9 @@ Trường hợp (case / 사례) study là nơi kiểm tra mô hình tư duy (men
 
 **bằng chứng (evidence / 증거):** reconciliation với ledger, cardinality check, golden queries và chỉ số (metric / 지표) phiên bản (version / 버전) diff.
 
-> **Chuyển mạch:** Ở chặng này của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Trường hợp (case / 사례) 5 — ngữ nghĩa (semantic / 의미적) chỉ số (metric / 지표) fan-out** cho ta quy tắc; **Cách viết trường hợp (case / 사례) study mới** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ma trận đối chiếu trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cách viết trường hợp (case / 사례) study mới
 
 Mỗi trường hợp (case / 사례) phải có `context → invariant → failure boundary → design → evidence → trade-off`. Không biến trường hợp (case / 사례) study thành tutorial API; mục tiêu là chứng minh lập luận (reasoning / 추론) có thể chuyển giữa các công cụ (tool / 도구) và nền tảng (platform / 플랫폼).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Cách viết trường hợp (case / 사례) study mới** cho ta quy tắc; **Ma trận đối chiếu trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận đối chiếu trường hợp (case / 사례)
 
@@ -79,8 +67,6 @@ Mỗi trường hợp (case / 사례) phải có `context → invariant → fail
 | backfill race | partition effective thời gian (time / 시간) | đầu ra (output / 출력) phiên bản (version / 버전) | manifest phạm vi (range / 범위) | chỉ số (metric / 지표)/golden diff |
 | compaction race | snapshot lần ghi nhận (commit / 커밋) thời gian (time / 시간) | siêu dữ liệu (metadata / 메타데이터) snapshot | snapshot id | tệp (file / 파일)/snapshot kiểm tra hợp lệ (validation / 검증) |
 | ngữ nghĩa (semantic / 의미적) fan-out | chỉ số (metric / 지표) thời gian (time / 시간) | aggregate trạng thái (state / 상태) | mô hình (model / 모델) phiên bản (version / 버전) | grain/cardinality check |
-
-> **Chuyển mạch:** **Ma trận đối chiếu case** nêu invariant dùng chung; **Câu hỏi cấp cao cho mọi case** buộc người học kiểm tra invariant đó qua ingestion, storage, serving và failure evidence của từng owner.
 
 ## Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)
 

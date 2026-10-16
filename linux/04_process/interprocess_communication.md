@@ -14,8 +14,6 @@ Virtual bộ nhớ (memory / 메모리) tạo isolation. IPC cung cấp các **k
 
 Do đó IPC là điểm cân bằng giữa isolation và cooperation.
 
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **Vì sao không cho mọi tiến trình (process / 프로세스) đọc bộ nhớ (memory / 메모리) của nhau?** đặt đầu vào cho **Pipe: dòng byte một chiều**, rồi **Named pipe (FIFO)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Pipe: dòng byte một chiều
 
 Anonymous pipe thường xuất hiện trong shell:
@@ -33,8 +31,6 @@ Pipe thường phù hợp khi:
 - tiến trình có quan hệ cha–con hoặc shell đang orchestration.
 
 Pipe không có pathname trong filesystem theo cách regular tệp (file / 파일) có.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Named pipe (FIFO)** nối từ **Pipe: dòng byte một chiều** sang **Unix lĩnh vực (domain / 도메인) socket**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Named pipe (FIFO)
 
@@ -60,8 +56,6 @@ FIFO hữu ích để hiểu rằng pathname có thể trỏ tới đối tượ
 
 Không nên dùng `/tmp` FIFO môi trường vận hành (production / 운영 환경) mà không nghĩ tới permission, thời gian tồn tại (lifetime / 수명) và cleanup.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **Unix lĩnh vực (domain / 도메인) socket** nối từ **Named pipe (FIFO)** sang **TCP socket cũng là IPC**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Unix lĩnh vực (domain / 도메인) socket
 
 Unix lĩnh vực (domain / 도메인) socket cho phép IPC qua socket API nhưng không cần đi qua IP networking.
@@ -82,8 +76,6 @@ Một ứng dụng (application / 애플리케이션) cục bộ (local / 로컬
 - overhead thấp hơn trong một số tải công việc (workload / 워크로드);
 - rõ ràng rằng communication chỉ cục bộ (local / 로컬) host.
 
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **TCP socket cũng là IPC** nối từ **Unix lĩnh vực (domain / 도메인) socket** sang **Tín hiệu (signal / 신호): gửi sự kiện, không phải payload lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## TCP socket cũng là IPC
 
 IPC không nhất thiết chỉ cục bộ (local / 로컬) machine.
@@ -95,8 +87,6 @@ process A -> socket -> TCP/IP -> socket -> process B
 ```
 
 Khi hai services cùng host dùng `127.0.0.1`, vẫn là mạng (network / 네트워크) IPC.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Tín hiệu (signal / 신호): gửi sự kiện, không phải payload lớn** nối từ **TCP socket cũng là IPC** sang **Dùng chung (shared / 공유) bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tín hiệu (signal / 신호): gửi sự kiện, không phải payload lớn
 
@@ -111,8 +101,6 @@ kill -TERM 1234
 hoặc daemon reload bằng `SIGHUP` nếu software hỗ trợ.
 
 Tín hiệu (signal / 신호) có thể mang rất ít thông tin so với socket/pipe. Nó nói kiểu “một sự kiện xảy ra”, không phải stream dữ liệu (data / 데이터) phức tạp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **Dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** nối từ **Tín hiệu (signal / 신호): gửi sự kiện, không phải payload lớn** sang **POSIX dùng chung (shared / 공유) bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
 
@@ -132,8 +120,6 @@ Do đó dùng chung (shared / 공유) bộ nhớ (memory / 메모리) thường 
 - lock-free thuật toán (algorithm / 알고리즘);
 - bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) rules.
 
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **POSIX dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** nối từ **Dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** sang **Semaphore**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## POSIX dùng chung (shared / 공유) bộ nhớ (memory / 메모리)
 
 Một số hệ thống dùng objects dưới `/dev/shm`:
@@ -145,8 +131,6 @@ ls -lah /dev/shm
 `/dev/shm` thường là tmpfs dùng cho POSIX dùng chung (shared / 공유) bộ nhớ (memory / 메모리) và application-specific files.
 
 Nếu `/dev/shm` quá nhỏ trong bộ chứa (container / 컨테이너), một số cơ sở dữ liệu (database / 데이터베이스)/trình duyệt (browser / 브라우저)/thời gian chạy (runtime / 런타임) có thể gặp lỗi.
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Semaphore** nối từ **POSIX dùng chung (shared / 공유) bộ nhớ (memory / 메모리)** sang **Message hàng đợi (queue / 큐)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Semaphore
 
@@ -161,8 +145,6 @@ counter = 0 -> worker phải chờ
 
 Hệ thống (system / 시스템) V/POSIX semaphores tồn tại ở OS mức (level / 수준), nhưng ứng dụng (application / 애플리케이션) hiện đại thường sử dụng lớp trừu tượng (abstraction / 추상화) từ thời gian chạy (runtime / 런타임)/thư viện (library / 라이브러리).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **Message hàng đợi (queue / 큐)** nối từ **Semaphore** sang **Memory-mapped tệp (file / 파일) (mmap)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Message hàng đợi (queue / 큐)
 
 POSIX/hệ thống (system / 시스템) V message hàng đợi (queue / 큐) cho phép gửi discrete messages thay vì byte stream.
@@ -173,8 +155,6 @@ Ngày nay nhiều ứng dụng (application / 애플리케이션) dùng Redis, K
 
 - OS IPC hàng đợi (queue / 큐) thường cục bộ (local / 로컬) host;
 - phân tán (distributed / 분산) broker thêm persistence, replication, routing và mạng (network / 네트워크) giao thức (protocol / 프로토콜).
-
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **Memory-mapped tệp (file / 파일) (mmap)** nối từ **Message hàng đợi (queue / 큐)** sang **Bản sao (copy / 복사) và zero-copy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Memory-mapped tệp (file / 파일) (`mmap`)
 
@@ -195,8 +175,6 @@ Xem ánh xạ (mapping / 매핑):
 cat /proc/<PID>/maps
 ```
 
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Bản sao (copy / 복사) và zero-copy** nối từ **Memory-mapped tệp (file / 파일) (mmap)** sang **sendfile() và Nginx**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bản sao (copy / 복사) và zero-copy
 
 Một dữ liệu (data / 데이터) đường dẫn (path / 경로) thông thường có thể bản sao (copy / 복사) bytes nhiều lần giữa kernel/người dùng (user / 사용자) buffers.
@@ -213,15 +191,11 @@ Web máy chủ (server / 서버) gửi static tệp (file / 파일) có thể d�
 
 Đây là ví dụ hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) xuất phát từ hiểu dữ liệu (data / 데이터) movement.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **sendfile() và Nginx** nối từ **Bản sao (copy / 복사) và zero-copy** sang **IPC và tệp (file / 파일) descriptor**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `sendfile()` và Nginx
 
 Nginx có directive `sendfile on;` để tận dụng kernel cơ chế (mechanism / 메커니즘) cho static tệp (file / 파일) trong môi trường phù hợp.
 
 Nhưng mạng (network / 네트워크) filesystem/virtualized filesystem có thể có ngữ nghĩa (semantics / 의미론) khác. Không nên bật/tắt chỉ theo “best practice” mà không benchmark tải công việc (workload / 워크로드) thực.
-
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **IPC và tệp (file / 파일) descriptor** nối từ **sendfile() và Nginx** sang **Eventfd và epoll**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## IPC và tệp (file / 파일) descriptor
 
@@ -232,8 +206,6 @@ Pipe, socket, eventfd và nhiều IPC objects đều được tiến trình (pro
 ```bash
 ls -l /proc/<PID>/fd
 ```
-
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Eventfd và epoll** nối từ **IPC và tệp (file / 파일) descriptor** sang **Blocking I/O và non-blocking I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Eventfd và epoll
 
@@ -255,8 +227,6 @@ threads chỉ xử lý sockets ready
 
 Java NIO `Selector`, Netty vòng lặp sự kiện (event loop / 이벤트 루프) và nút (node / 노드).js/libuv đều có liên kết (connection / 연결) tới readiness-based I/O mechanisms như epoll trên Linux.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **Blocking I/O và non-blocking I/O** nối từ **Eventfd và epoll** sang **Backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Blocking I/O và non-blocking I/O
 
 Với blocking I/O, `read()` có thể làm luồng thực thi (thread / 스레드) ngủ cho tới khi dữ liệu (data / 데이터) sẵn sàng.
@@ -264,8 +234,6 @@ Với blocking I/O, `read()` có thể làm luồng thực thi (thread / 스레�
 Với non-blocking descriptor, lời gọi (call / 호출) có thể trả ngay với trạng thái chưa có dữ liệu (data / 데이터), và ứng dụng (application / 애플리케이션) dùng polling/sự kiện (event / 이벤트) cơ chế (mechanism / 메커니즘) như epoll.
 
 Không có mô hình nào “luôn tốt hơn”. Blocking mã (code / 코드) đơn giản; event-driven mô hình (model / 모델) quy mô (scale / 규모) tốt với nhiều mostly-idle connections nhưng tăng độ phức tạp (complexity / 복잡도).
-
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **Backpressure** nối từ **Blocking I/O và non-blocking I/O** sang **Thundering herd**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backpressure
 
@@ -279,8 +247,6 @@ Pipe/socket có sức chứa (capacity / 용량) hữu hạn. Khi buffer đầy:
 
 Backpressure không phải khái niệm riêng của Kafka hay reactive programming; nó xuất hiện ngay trong IPC primitives của OS.
 
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Thundering herd** nối từ **Backpressure** sang **IPC và bộ chứa (container / 컨테이너) không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thundering herd
 
 Nếu nhiều workers cùng chờ một sự kiện (event / 이벤트) và tất cả được đánh thức dù chỉ một worker cần xử lý, scheduler overhead có thể tăng.
@@ -288,8 +254,6 @@ Nếu nhiều workers cùng chờ một sự kiện (event / 이벤트) và tấ
 Linux và máy chủ (server / 서버) frameworks có nhiều kỹ thuật để giảm thundering herd.
 
 Đây là ví dụ cho việc synchronization thiết kế (design / 설계) ảnh hưởng scalability.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **IPC và bộ chứa (container / 컨테이너) không gian tên (namespace / 네임스페이스)** nối từ **Thundering herd** sang **Gỡ lỗi (debug / 디버그) IPC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## IPC và bộ chứa (container / 컨테이너) không gian tên (namespace / 네임스페이스)
 
@@ -304,8 +268,6 @@ Ví dụ nổi tiếng:
 ```
 
 Mount Docker socket vào bộ chứa (container / 컨테이너) trao quyền điều khiển Docker daemon rất lớn. Đây là ranh giới bảo mật (security boundary / 보안 경계) quan trọng, không chỉ “một tệp (file / 파일) socket”.
-
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **Gỡ lỗi (debug / 디버그) IPC** nối từ **IPC và bộ chứa (container / 컨테이너) không gian tên (namespace / 네임스페이스)** sang **Java liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gỡ lỗi (debug / 디버그) IPC
 
@@ -354,8 +316,6 @@ strace -e trace=network,ipc -p <PID>
 
 Hỗ trợ (support / 지원) của dấu vết (trace / 추적) categories phụ thuộc strace phiên bản (version / 버전).
 
-> **Nối mạch:** Ở chặng này của **Giao tiếp giữa các tiến trình (IPC)**, **Java liên kết (connection / 연결)** nối từ **Gỡ lỗi (debug / 디버그) IPC** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Java liên kết (connection / 연결)
 
 Trong Java backend:
@@ -369,8 +329,6 @@ Trong Java backend:
 
 Khi JVM luồng thực thi (thread / 스레드) dump cho thấy nhiều threads `WAITING` hoặc `RUNNABLE` trong mạng (network / 네트워크)/bản địa (native / 네이티브) calls, hiểu IPC giúp giải thích chúng đang chờ cái gì.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp giữa các tiến trình (IPC)**, **Những hiểu lầm phổ biến** nối từ **Java liên kết (connection / 연결)** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Những hiểu lầm phổ biến
 
 **“IPC chỉ là pipe.”** Linux có pipe, socket, dùng chung (shared / 공유) bộ nhớ (memory / 메모리), semaphore, signals, queues và nhiều cơ chế khác.
@@ -382,8 +340,6 @@ Khi JVM luồng thực thi (thread / 스레드) dump cho thấy nhiều threads 
 **“Non-blocking I/O luôn nhanh hơn blocking I/O.”** Hiệu quả phụ thuộc tính đồng thời (concurrency / 동시성) mô hình (model / 모델) và tải công việc (workload / 워크로드).
 
 **“Socket tệp (file / 파일) permission nhỏ nên không nguy hiểm.”** Một socket như Docker daemon socket có thể trao quyền cực lớn.
-
-> **Nối mạch:** Trong **Giao tiếp giữa các tiến trình (IPC)**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

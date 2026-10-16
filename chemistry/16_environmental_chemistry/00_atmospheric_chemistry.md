@@ -20,8 +20,6 @@ Hóa học khí quyển ghép nhiều nền tảng đã học trước:
 
 Sự khác biệt nhiệt này ảnh hưởng trộn thẳng đứng, thời gian lưu và cơ chế phản ứng. Cao hơn nữa, mật độ khí giảm mạnh và hóa học ion cùng bức xạ năng lượng cao trở nên quan trọng hơn.
 
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Quang phân — ánh sáng là một tác nhân hóa học** nối từ **Cấu trúc khí quyển quyết định môi trường phản ứng** sang **Gốc tự do — nồng độ nhỏ nhưng thông lượng phản ứng lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quang phân — ánh sáng là một tác nhân hóa học
 
 Một phân tử có thể hấp thụ photon rồi bị phá vỡ hoặc tái sắp xếp:
@@ -46,8 +44,6 @@ trong đó:
 
 Điều này nối trực tiếp hóa học khí quyển với phổ học: không phải mọi photon đều có khả năng kích hoạt cùng một phân tử, và không phải mọi photon đã hấp thụ đều cho cùng sản phẩm.
 
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Gốc tự do — nồng độ nhỏ nhưng thông lượng phản ứng lớn** nối từ **Quang phân — ánh sáng là một tác nhân hóa học** sang **Một nguồn OH quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gốc tự do — nồng độ nhỏ nhưng thông lượng phản ứng lớn
 
 Gốc tự do chứa electron độc thân nên thường phản ứng nhanh.
@@ -57,8 +53,6 @@ Gốc hydroxyl `OH·` thường được gọi là “chất tẩy rửa của k
 Nồng độ `OH·` rất thấp nhưng nó có thể được tái sinh qua nhiều bước lan truyền chuỗi. Vì vậy mức độ quan trọng của một chất không thể suy chỉ từ nồng độ tức thời.
 
 Đây là cùng lô-gic (logic / 논리) với chất xúc tác: một tiểu phân có thể có nồng độ nhỏ nhưng thông lượng qua nó rất lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Gốc tự do — nồng độ nhỏ nhưng thông lượng phản ứng lớn** đặt vấn đề; **Một nguồn OH quan trọng** đối chiếu bằng chứng, rồi **Ozone tầng đối lưu — chất ô nhiễm thứ cấp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Một nguồn OH quan trọng
 
@@ -75,8 +69,6 @@ O(^1D)+H_2O\rightarrow2OH
 \]
 
 Chuỗi này nối cường độ ánh sáng, ozone, độ ẩm và khả năng oxy hóa của khí quyển.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Một nguồn OH quan trọng** đặt vấn đề; **Ozone tầng đối lưu — chất ô nhiễm thứ cấp** đối chiếu bằng chứng, rồi **Vì sao VOC làm ozone tích lũy?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ozone tầng đối lưu — chất ô nhiễm thứ cấp
 
@@ -98,8 +90,6 @@ O_3+NO\rightarrow NO_2+O_2
 
 Nếu chỉ có chu trình này, ozone khó tích lũy mạnh vì phản ứng cuối tiêu thụ ozone gần như bù cho quá trình tạo.
 
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Vì sao VOC làm ozone tích lũy?** nối từ **Ozone tầng đối lưu — chất ô nhiễm thứ cấp** sang **Hóa học NOx–VOC là phi tuyến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao VOC làm ozone tích lũy?
 
 `OH·` oxy hóa VOC và tạo các gốc peroxy như `RO2·` và `HO2·`.
@@ -114,8 +104,6 @@ RO_2+NO\rightarrow RO+NO_2
 
 Vì vậy VOC mở một con đường chuyển `NO → NO2` không cần dùng `O3`, cho phép ozone tích lũy.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hóa học NOx–VOC là phi tuyến** nối từ **Vì sao VOC làm ozone tích lũy?** sang **Lan truyền và kết thúc chuỗi gốc tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học NOx–VOC là phi tuyến
 
 Lượng ozone không thay đổi tuyến tính đơn giản theo lượng tiền chất.
@@ -128,8 +116,6 @@ Do đó có thể phân biệt các chế độ:
 - **giới hạn VOC (VOC-limited)**.
 
 Đây là ví dụ quan trọng cho thấy một mạng phản ứng không thể được điều khiển tốt bằng quy tắc tuyến tính kiểu “giảm tiền chất 20% thì sản phẩm giảm 20%”.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hóa học NOx–VOC là phi tuyến** đặt đầu vào cho **Lan truyền và kết thúc chuỗi gốc tự do**, rồi **Oxy hóa VOC và aerosol hữu cơ thứ cấp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Lan truyền và kết thúc chuỗi gốc tự do
 
@@ -153,8 +139,6 @@ Tốc độ tạo ozone và sản phẩm oxy hóa phụ thuộc cạnh tranh gi�
 
 Đây chính là ứng dụng thực của tư duy cơ chế đã học trong động học hóa học.
 
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Lan truyền và kết thúc chuỗi gốc tự do** đặt đầu vào cho **Oxy hóa VOC và aerosol hữu cơ thứ cấp**, rồi **Aerosol — pha hạt trong khí quyển** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Oxy hóa VOC và aerosol hữu cơ thứ cấp
 
 `OH·` có thể chuyển VOC thành carbonyl, nitrate hữu cơ và các sản phẩm oxy hóa có độ bay hơi thấp hơn.
@@ -173,8 +157,6 @@ VOC pha khí
 
 Do đó hóa học pha khí và nhiệt động phân bố pha phải được xét cùng nhau.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Aerosol — pha hạt trong khí quyển** nối từ **Oxy hóa VOC và aerosol hữu cơ thứ cấp** sang **Kích thước hạt quyết định hành vi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Aerosol — pha hạt trong khí quyển
 
 **Aerosol** là tập hợp hạt rắn hoặc lỏng lơ lửng trong không khí.
@@ -188,8 +170,6 @@ Nguồn có thể là:
 
 Thành phần hạt phụ thuộc nhiệt độ, độ ẩm, hoạt độ nước và cân bằng khí–hạt.
 
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Kích thước hạt quyết định hành vi** nối từ **Aerosol — pha hạt trong khí quyển** sang **Hóa học dị thể và đa pha**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kích thước hạt quyết định hành vi
 
 Kích thước ảnh hưởng:
@@ -201,8 +181,6 @@ Kích thước ảnh hưởng:
 - diện tích bề mặt cho phản ứng dị thể.
 
 Hạt siêu mịn có diện tích bề mặt rất lớn trên mỗi đơn vị khối lượng nhưng cũng có thể kết tụ hoặc lớn dần nhanh.
-
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hóa học dị thể và đa pha** nối từ **Kích thước hạt quyết định hành vi** sang **Ozone tầng bình lưu — bộ lọc UV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học dị thể và đa pha
 
@@ -218,8 +196,6 @@ Một chất khí đi vào giọt nước có thể proton hóa, ion hóa hoặc
 Trong tầng bình lưu, mây tầng bình lưu cực cung cấp bề mặt cho các phản ứng chuyển chlorine dự trữ thành dạng dễ quang phân.
 
 Khí quyển vì vậy là **hệ phản ứng đa pha**, không phải chỉ một hỗn hợp khí.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Ozone tầng bình lưu — bộ lọc UV** nối từ **Hóa học dị thể và đa pha** sang **Phá hủy ozone theo cơ chế xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ozone tầng bình lưu — bộ lọc UV
 
@@ -242,8 +218,6 @@ O+O_3\rightarrow2O_2
 \]
 
 Chu trình này hấp thụ một phần UV năng lượng cao và giảm lượng bức xạ tới bề mặt Trái Đất.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Ozone tầng bình lưu — bộ lọc UV** đặt đầu vào cho **Phá hủy ozone theo cơ chế xúc tác**, rồi **Chất dự trữ và hoạt hóa chlorine** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Phá hủy ozone theo cơ chế xúc tác
 
@@ -269,8 +243,6 @@ O_3+O\rightarrow2O_2
 
 Đây là ví dụ môi trường điển hình của xúc tác: chất xúc tác thay đổi tốc độ/con đường nhưng không bị tiêu thụ theo hệ số phản ứng tổng.
 
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Phá hủy ozone theo cơ chế xúc tác** đặt đầu vào cho **Chất dự trữ và hoạt hóa chlorine**, rồi **Hiệu ứng nhà kính — phổ học ở quy mô hành tinh** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Chất dự trữ và hoạt hóa chlorine
 
 Chlorine có thể tồn tại trong dạng ít phản ứng hơn như `HCl` hoặc `ClONO2`.
@@ -280,8 +252,6 @@ Phản ứng trên mây tầng bình lưu cực có thể chuyển chúng thành
 Khi ánh sáng trở lại sau mùa đông vùng cực, quang phân giải phóng `Cl·` và làm chu trình phá ozone tăng nhanh.
 
 Nhiệt độ, pha vật chất và chu kỳ chiếu sáng vì vậy ghép trực tiếp vào mạng phản ứng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hiệu ứng nhà kính — phổ học ở quy mô hành tinh** nối từ **Chất dự trữ và hoạt hóa chlorine** sang **Tác động bức xạ và thời gian sống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng nhà kính — phổ học ở quy mô hành tinh
 
@@ -301,8 +271,6 @@ Hiệu ứng nhà kính không phải “nhiệt bị nhốt dưới mái kính�
 
 Đây là liên hệ trực tiếp giữa **quy tắc chọn phổ học** và khí hậu.
 
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Tác động bức xạ và thời gian sống** nối từ **Hiệu ứng nhà kính — phổ học ở quy mô hành tinh** sang **Thời gian lưu và mô hình hộp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tác động bức xạ và thời gian sống
 
 Ảnh hưởng khí hậu của một chất phụ thuộc:
@@ -315,8 +283,6 @@ Hiệu ứng nhà kính không phải “nhiệt bị nhốt dưới mái kính�
 - tương tác với mây/aerosol.
 
 Methane có nồng độ thấp hơn `CO2` nhưng có dải hấp thụ mạnh và còn tham gia hóa học ảnh hưởng ozone và hơi nước.
-
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Thời gian lưu và mô hình hộp** nối từ **Tác động bức xạ và thời gian sống** sang **Lắng đọng acid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian lưu và mô hình hộp
 
@@ -342,8 +308,6 @@ C_{ss}=\frac{E}{k}
 
 Xem lại [cân bằng động và steady state](../07_chemical_equilibrium/00_dynamic_equilibrium.md).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Lắng đọng acid** nối từ **Thời gian lưu và mô hình hộp** sang **Aerosol và khí hậu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lắng đọng acid
 
 `SO2` có thể bị oxy hóa thành sulfuric acid/sulfate, còn `NOx` thành nitric acid/nitrate.
@@ -351,8 +315,6 @@ Xem lại [cân bằng động và steady state](../07_chemical_equilibrium/00_d
 Các acid hòa vào mây/mưa hoặc lắng đọng trực tiếp dưới dạng khí/hạt, góp phần acid hóa đất, nước và ăn mòn vật liệu.
 
 `NH3`, bụi khoáng và độ kiềm có thể trung hòa một phần acid. Vì vậy pH mưa không chỉ phụ thuộc lượng acid tạo ra mà còn phụ thuộc khả năng đệm/cơ sở (base / 기반) của hệ.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Aerosol và khí hậu** nối từ **Lắng đọng acid** sang **Hóa học cạnh tranh với vận chuyển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Aerosol và khí hậu
 
@@ -363,8 +325,6 @@ Aerosol sulfate thường tán xạ mạnh; carbon đen hấp thụ mạnh.
 Hạt còn có thể làm nhân ngưng tụ mây, thay đổi số giọt, kích thước giọt và thời gian sống của mây.
 
 Ảnh hưởng ròng vì vậy phụ thuộc kích thước, thành phần, trạng thái trộn, độ cao và độ ẩm.
-
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hóa học cạnh tranh với vận chuyển** nối từ **Aerosol và khí hậu** sang **Hóa học không khí trong nhà**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học cạnh tranh với vận chuyển
 
@@ -382,8 +342,6 @@ vận chuyển nhanh hơn phản ứng
 
 Đây là cầu nối (bridge / 브리지) giữa kinetics và fluid vận chuyển (transport / 전송).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Hóa học không khí trong nhà** nối từ **Hóa học cạnh tranh với vận chuyển** sang **Đo thành phần khí quyển**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa học không khí trong nhà
 
 Không khí trong nhà thường có UV thấp hơn, tỷ lệ diện tích bề mặt/thể tích cao hơn và chịu ảnh hưởng mạnh của vật liệu xây dựng, chất tẩy rửa, con người và thông gió.
@@ -391,8 +349,6 @@ Không khí trong nhà thường có UV thấp hơn, tỷ lệ diện tích bề
 Ozone đi vào nhà có thể phản ứng với hợp chất không no trên bề mặt hoặc dầu trên da, tạo sản phẩm oxy hóa thứ cấp.
 
 Hình học không gian vì vậy làm hóa học bề mặt trở nên quan trọng hơn so với nhiều môi trường ngoài trời.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Đo thành phần khí quyển** nối từ **Hóa học không khí trong nhà** sang **Ví dụ suy luận: vì sao giảm NOx đôi khi chưa làm ozone giảm ngay theo cùng tỉ lệ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đo thành phần khí quyển
 
@@ -408,8 +364,6 @@ Vì nhiều chất ở mức ppb hoặc ppt, hiệu chuẩn, nhiễu, hấp ph�
 
 Đối với chất rất phản ứng, **hệ lấy mẫu có thể thay đổi chính mẫu cần đo**.
 
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Đo thành phần khí quyển** nêu quy tắc; **Ví dụ suy luận: vì sao giảm NOx đôi khi chưa làm ozone giảm ngay theo cùng tỉ lệ?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao một chất nồng độ rất thấp vẫn có thể chi phối mạng phản ứng?** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao giảm NOx đôi khi chưa làm ozone giảm ngay theo cùng tỉ lệ?
 
 Trong chế độ VOC-limited, lượng NOx cao có thể vừa hỗ trợ tạo ozone vừa làm tăng các đường kết thúc gốc hoặc tiêu thụ ozone trực tiếp.
@@ -418,8 +372,6 @@ Giảm NOx làm mạng phản ứng chuyển sang chế độ mới; đáp ứng
 
 Cần biết **chế độ hóa học**, không chỉ biết tổng phát thải.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Ví dụ suy luận: vì sao giảm NOx đôi khi chưa làm ozone giảm ngay theo cùng tỉ lệ?** nêu quy tắc; **Ví dụ suy luận: vì sao một chất nồng độ rất thấp vẫn có thể chi phối mạng phản ứng?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
-
 ## Ví dụ suy luận: vì sao một chất nồng độ rất thấp vẫn có thể chi phối mạng phản ứng?
 
 Nếu chất đó được tái sinh sau mỗi chu kỳ, một phân tử có thể tham gia nhiều sự kiện phản ứng trước khi bị loại.
@@ -427,8 +379,6 @@ Nếu chất đó được tái sinh sau mỗi chu kỳ, một phân tử có th
 Gốc `OH·` và chlorine hoạt tính là ví dụ. Nồng độ tức thời thấp nhưng **turnover** cao làm thông lượng hóa học lớn.
 
 Đây là cùng nguyên lý với chất xúc tác trong hóa học thông thường.
-
-> **Nối mạch:** Trong **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Ví dụ suy luận: vì sao một chất nồng độ rất thấp vẫn có thể chi phối mạng phản ứng?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -455,8 +405,6 @@ Không. `NOx–VOC`, phân bố khí–hạt và phản hồi hóa học có th�
 ### “Steady trạng thái (state / 상태) nghĩa là cân bằng”
 
 Không. Trạng thái ổn định vẫn có nguồn và mất mát liên tục; cân bằng nhiệt động không có dòng ròng.
-
-> **Nối mạch:** Ở chặng này của **Hóa học khí quyển — khí phản ứng, gốc tự do và tác động bức xạ**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

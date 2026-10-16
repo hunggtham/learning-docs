@@ -24,8 +24,6 @@ Chemistry thư viện (library / 라이브러리) hiện là nội dung chuẩn 
 
 Không tạo một thư viện `chemistry` mới hoặc các tệp (file / 파일) kiểu `_final`, `_updated`, `_v2` khi tệp chuẩn gốc (canonical file / 정본 파일) hiện tại có thể được cập nhật trực tiếp. Mọi thay đổi mới nên đi qua `main` và được ghi nhận trong `COVERAGE_AUDIT.md`.
 
-> **Nối mạch:** Trong **Thư viện kiến thức Hóa học**, **Trạng thái chuẩn gốc (canonical / 정본)** đặt đầu vào cho **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**, rồi **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi
 
 Hóa học dễ bị học thành nhiều mảnh rời: nguyên tử, bảng tuần hoàn, mol, acid-base, pin... Thực tế chúng nối thành một chuỗi phụ thuộc khá chặt.
@@ -59,8 +57,6 @@ flowchart TD
 ```
 
 Đồ thị này là lộ trình mặc định, không phải thứ tự bắt buộc tuyệt đối. Một chapter chuyên ngành có thể quay lại prerequisite thông qua liên kết chéo.
-
-> **Nối mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** đặt đầu vào cho **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại**, rồi **Quy tắc ngôn ngữ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cấu trúc chuẩn gốc (canonical / 정본) hiện tại
 
@@ -210,8 +206,6 @@ chemistry/
 
 Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một tệp (file / 파일) mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại.
 
-> **Nối mạch:** **Cấu trúc canonical hiện tại** giữ owner và boundary; **Quy tắc ngôn ngữ** biến chúng thành thuật ngữ dễ tra cứu, rồi **Ba tầng mô tả** nối macro–mechanism–evidence.
-
 ## Quy tắc ngôn ngữ
 
 **Tiếng Việt là ngôn ngữ giải thích chính.** Thuật ngữ tiếng Anh dùng như từ khóa tra cứu trong ngoặc khi có giá trị, ví dụ:
@@ -234,8 +228,6 @@ Các ký hiệu và tên chuẩn quốc tế như `pH`, `pKa`, `Ka`, `ΔG`, `VSE
 
 Thuật ngữ tiếng Hàn chỉ là lớp bổ sung khi hữu ích cho học tập hoặc công việc tại Hàn Quốc; phần giải thích chính vẫn phải là tiếng Việt.
 
-> **Nối mạch:** **Quy tắc ngôn ngữ** khóa cách gọi; **Ba tầng mô tả** kiểm tra cùng một hiện tượng ở scale khác nhau trước khi **Chuẩn về độ sâu** đặt mức giải thích.
-
 ## Ba tầng mô tả luôn phải nối với nhau
 
 Một chapter Hóa học tốt cần phân biệt:
@@ -256,8 +248,6 @@ ký hiệu: NaCl(s) → Na+(aq) + Cl−(aq)
 
 Nếu một tệp (file / 파일) chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, tệp (file / 파일) đó chưa đạt chuẩn của thư viện (library / 라이브러리).
 
-> **Nối mạch:** **Chuẩn về độ sâu** yêu cầu cơ chế, giới hạn và ví dụ; **Lộ trình từ gần số 0** dùng chuẩn đó để xây prerequisite mà không nhảy cóc.
-
 ## Chuẩn về độ sâu
 
 Một chapter được xem là đủ mạnh khi người đọc có thể trả lời:
@@ -272,8 +262,6 @@ Một chapter được xem là đủ mạnh khi người đọc có thể trả 
 8. Nó nối sang chapter khác bằng quan hệ nhân quả nào?
 
 Độ dài tệp (file / 파일) chỉ là tín hiệu kiểm tra (audit / 감사), không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
-
-> **Nối mạch:** **Lộ trình từ gần số 0** sắp xếp concept theo prerequisite; **Các liên hệ liên ngành** chỉ những điểm nối thật với physics, biology và materials.
 
 ## Lộ trình cho người học lại từ gần số 0
 
@@ -316,8 +304,6 @@ Chặng 7
 
 Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mô hình tư duy (mental model / 사고 모델), biết prerequisite ở đâu và có thể quay lại bằng nội bộ (internal / 내부) link.
 
-> **Nối mạch:** **Các liên hệ liên ngành** giúp chọn context cần dùng; **Bắt đầu học** quay lại câu hỏi trung tâm và mở đúng canonical chemistry owner.
-
 ## Các liên hệ liên ngành được ưu tiên
 
 ### Vật lý
@@ -339,8 +325,6 @@ Redox + Nernst + kinetics + mass vận chuyển (transport / 전송) + material 
 ### Đời sống
 
 Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa và pin được giải thích bằng cùng các cơ chế nền, không tách thành danh sách mẹo.
-
-> **Nối mạch:** **Bắt đầu học** khép README bằng câu hỏi, prerequisite và route; chi tiết chuyên môn quay về chapter chemistry tương ứng.
 
 ## Bắt đầu học
 

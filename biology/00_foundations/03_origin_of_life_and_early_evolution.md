@@ -30,8 +30,6 @@ chemical system có khả năng Darwinian evolution ngày càng mạnh
 
 Điểm quan trọng là các mô-đun (module / 모듈) không nhất thiết xuất hiện hoàn chỉnh theo thứ tự cứng. Chúng có thể **co-evolve**: compartment làm replication ổn định hơn; replication tốt hơn giúp giữ chất xúc tác; catalyst làm năng lượng (energy / 에너지) harvesting hiệu quả hơn; năng lượng (energy / 에너지) tốt hơn cho phép polymer dài và precise hơn.
 
-> **Nối mạch:** Một hệ sống tối thiểu cần boundary, chemistry và energy flow; hóa học tiền sinh học cung cấp building blocks, còn concentration và kinetics quyết định chúng có thể polymerize trước khi phân hủy hay không.
-
 ## 2. Hóa học tiền sinh học: khối cấu tạo có thể đến từ đâu?
 
 **Hóa học tiền sinh học (Prebiotic Chemistry / 생명 전 화학)** nghiên cứu cách molecule hữu cơ có thể hình thành trước khi có sinh vật (organism). Carbon đặc biệt phù hợp vì có thể tạo bốn liên kết cộng hóa trị (covalent bond) tương đối ổn định, cho phép chuỗi (chain / 사슬), ring, branch và nhiều nhóm chức. Tuy nhiên “carbon có khả năng tạo độ phức tạp (complexity / 복잡도)” không đồng nghĩa khối cấu tạo tự động tập trung đúng chỗ hay tự lắp thành cell. Origin-of-life là bài toán cả synthesis, concentration, reaction pathway và persistence.
@@ -42,8 +40,6 @@ Nghiên cứu hiện đại xem xét nhiều setting thay vì một location duy
 
 Do đó, câu hỏi khoa học tốt không phải “life chắc chắn bắt đầu ở đâu?”, mà là: **môi trường nào cho phép precursor được tạo, tập trung, polymerize, nhận năng lượng (energy / 에너지) và tồn tại đủ lâu để mạng (network / 네트워크) phức tạp hóa?**
 
-> **Nối mạch:** **3. Từ monomer đến polymer: concentration và kinetics quan trọng không kém thermodynamics** nối từ **2. Hóa học tiền sinh học: khối cấu tạo có thể đến từ đâu?** sang **4. Thế giới RNA (RNA world): khi “dữ liệu (data / 데이터)” và “machine” chưa tách rời**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Từ monomer đến polymer: concentration và kinetics quan trọng không kém thermodynamics
 
 Axit amin đơn lẻ chưa tạo protein (protein). Nucleotit (nucleotide) đơn lẻ chưa tạo RNA. Muốn có trình tự (sequence) thông tin (information / 정보) và catalysis phong phú, monomer phải nối thành polymer.
@@ -52,8 +48,6 @@ Trong nước (water), nhiều phản ứng ngưng tụ (condensation reaction) 
 
 Đây là một lesson dùng xuyên suốt Biology: **tỷ lệ (rate / 비율) và ngữ cảnh (context / 맥락) quyết định hành vi (behavior / 동작) của hệ thống (system / 시스템)**, không chỉ việc một reaction “có thể xảy ra”. Trong cell hiện đại, enzym (enzyme), membrane compartment và ghép năng lượng giải đúng bài toán này; ở prebiotic hệ thống (system / 시스템), khoáng chất (mineral), wet–dry cycle hoặc độ dốc (gradient / 기울기) có thể đóng vai trò tương tự nhưng đơn giản hơn.
 
-> **Nối mạch:** **3. Từ monomer đến polymer: concentration và kinetics quan trọng không kém thermodynamics** đặt vấn đề; **4. Thế giới RNA (RNA world): khi “dữ liệu (data / 데이터)” và “machine” chưa tách rời** kiểm tra bằng chứng, rồi **5. Replication phải đủ chính xác nhưng không được hoàn hảo tuyệt đối** mở rộng hệ quả.
-
 ## 4. Thế giới RNA (RNA world): khi “dữ liệu (data / 데이터)” và “machine” chưa tách rời
 
 Trong cell hiện đại, DNA chủ yếu giữ thông tin (information / 정보), còn protein enzyme thực hiện phần lớn catalysis. Cấu trúc đó tạo chicken-and-egg bài toán (problem / 문제): muốn protein cần bộ máy dịch mã (translation machinery); muốn replication chính xác lại cần enzyme protein.
@@ -61,8 +55,6 @@ Trong cell hiện đại, DNA chủ yếu giữ thông tin (information / 정보
 Giả thuyết **Thế giới RNA (Thế giới RNA / RNA 세계)** hấp dẫn vì RNA vừa mang chuỗi (sequence / 시퀀스) thông tin (information / 정보) vừa có thể fold thành cấu trúc (structure / 구조) có catalytic activity. RNA có khả năng catalysis được gọi là **ribozyme (리보자임)**. Ribosomal RNA trong ribosome hiện đại vẫn tham gia trực tiếp catalytic center của peptide-bond formation, gợi ý rằng RNA catalysis là một tính năng (feature / 기능) rất cổ.
 
 Tuy nhiên, Thế giới RNA không phải lời giải đã hoàn thành. Nucleotide synthesis tiền sinh học khó, RNA dễ hydrolyze hơn DNA, và polymerase tự sao chép (self-copying polymerase) ribozyme hoàn chỉnh chưa phải một chuyện đơn giản. Vì vậy nên hiểu Thế giới RNA như một family of cơ chế (mechanism / 메커니즘): một giai đoạn trong đó RNA-like polymer có thể đóng cả vai trò template lẫn catalyst trước khi phân công chức năng (division of labor) giữa DNA–RNA–protein trở nên sâu hơn.
-
-> **Nối mạch:** **4. Thế giới RNA (RNA world): khi “dữ liệu (data / 데이터)” và “machine” chưa tách rời** đặt vấn đề; **5. Replication phải đủ chính xác nhưng không được hoàn hảo tuyệt đối** kiểm tra bằng chứng, rồi **6. Selection có thể bắt đầu trước khi có “tế bào (cell) đúng nghĩa”** mở rộng hệ quả.
 
 ## 5. Replication phải đủ chính xác nhưng không được hoàn hảo tuyệt đối
 
@@ -87,8 +79,6 @@ replication tốt hơn
 
 Life hiện đại giải bài toán này bằng polymerase, đọc sửa (proofreading) và DNA repair; chương (chapter) [Sửa chữa DNA, tái tổ hợp và ổn định genome](../02_genetics_molecular_biology/03_dna_repair_recombination_and_genome_stability.md) là phiên bản trưởng thành của cùng một ràng buộc (constraint / 제약조건) cổ xưa.
 
-> **Nối mạch:** **6. Selection có thể bắt đầu trước khi có “tế bào (cell) đúng nghĩa”** nối từ **5. Replication phải đủ chính xác nhưng không được hoàn hảo tuyệt đối** sang **7. Tiền tế bào (protocell): ranh giới biến chemistry thành một đơn vị có định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Selection có thể bắt đầu trước khi có “tế bào (cell) đúng nghĩa”
 
 Chọn lọc tự nhiên (natural selection) cần ba ingredient về lôgic (logic): có biến dị, variant có khả năng persistence/replication khác nhau, và một phần khác biệt đó được truyền lại. Không nhất thiết phải có nucleus, nhiễm sắc thể (chromosome) hay membrane hiện đại.
@@ -96,8 +86,6 @@ Chọn lọc tự nhiên (natural selection) cần ba ingredient về lôgic (lo
 Nếu một RNA chuỗi (sequence / 시퀀스) tự bản sao (copy / 복사) nhanh hơn chuỗi (sequence / 시퀀스) khác, nó có thể tăng frequency. Nếu một catalyst giúp vesicle chứa nó lấy precursor tốt hơn, vesicle đó có thể grow hoặc divide nhiều hơn. Khi sản phẩm (product / 제품) của một molecule chỉ giúp chính compartment chứa nó, benefit bắt đầu gắn chặt với “dòng dõi (lineage)” hơn.
 
 Đây là bước chuyển từ **molecular selection** sang **khoang (compartment)-level selection**. Nó quan trọng vì sự phối hợp (cooperation) giữa molecule chỉ ổn định khi sản phẩm của cooperation không bị free-rider bên ngoài khai thác hoàn toàn.
-
-> **Nối mạch:** **7. Tiền tế bào (protocell): ranh giới biến chemistry thành một đơn vị có định danh (identity / 식별자)** nối từ **6. Selection có thể bắt đầu trước khi có “tế bào (cell) đúng nghĩa”** sang **8. năng lượng (energy / 에너지) trước ATP hiện đại: life cần coupling chứ không chỉ cần “nhiên liệu”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Tiền tế bào (protocell): ranh giới biến chemistry thành một đơn vị có định danh (identity / 식별자)
 
@@ -107,8 +95,6 @@ Ranh giới giải nhiều bài toán cùng lúc. Nó giữ molecule gần nhau,
 
 Đây là lý do sinh học tế bào (cell biology) bắt đầu tự nhiên từ màng. Membrane không phải “vỏ bảo vệ” thêm vào sau cùng; nó là một phần của lô-gic (logic / 논리) khiến một mạng (network / 네트워크) hóa học có thể trở thành thực thể (entity / 엔터티) tiến hóa độc lập.
 
-> **Nối mạch:** **8. năng lượng (energy / 에너지) trước ATP hiện đại: life cần coupling chứ không chỉ cần “nhiên liệu”** nối từ **7. Tiền tế bào (protocell): ranh giới biến chemistry thành một đơn vị có định danh (identity / 식별자)** sang **9. Chuyển hóa (metabolism)-first và thông tin-first là hai cực của cùng một bài toán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. năng lượng (energy / 에너지) trước ATP hiện đại: life cần coupling chứ không chỉ cần “nhiên liệu”
 
 Một hệ thống (system / 시스템) có cơ chất (substrate) giàu năng lượng (energy / 에너지) vẫn không tự động sử dụng được năng lượng (energy / 에너지) đó. Nó cần **ghép năng lượng (ghép năng lượng / 에너지 결합)**: một reaction favorable phải được nối với reaction cần năng lượng (energy / 에너지) sao cho overall tiến trình (process / 프로세스) có thể tiến hành có kiểm soát.
@@ -116,8 +102,6 @@ Một hệ thống (system / 시스템) có cơ chất (substrate) giàu năng l
 Cell hiện đại dùng ATP, chênh lệch proton, reduced cofactors như NADH/NADPH và enzym (enzyme) mạng lưới (network). Trước khi hệ này hoàn thiện, chênh lệch hóa học (chemical gradient) và activated intermediate có thể cung cấp những dạng coupling đơn giản hơn. Hydrothermal môi trường (environment / 환경) đặc biệt thú vị vì cung cấp redox difference và chênh lệch proton giữa compartment mineral khác nhau.
 
 Một insight quan trọng là **thẩm thấu hóa học (chemiosmosis)** có thể cổ về lôgic. Cell hiện đại dùng membrane để duy trì động lực proton (proton motive force), rồi ATP synthase (ATP synthase) khai thác độ dốc (gradient / 기울기). Điều này nối origin-of-life trực tiếp với [Chuyển hóa, Hô hấp tế bào và Quang hợp](../01_cell_biology/01_metabolism_respiration_photosynthesis.md): metabolism không chỉ là danh sách reaction, mà là nghệ thuật giữ năng lượng ở dạng độ dốc (gradient / 기울기) và carrier có thể tái sử dụng.
-
-> **Nối mạch:** **9. Chuyển hóa (metabolism)-first và thông tin-first là hai cực của cùng một bài toán** nối từ **8. năng lượng (energy / 에너지) trước ATP hiện đại: life cần coupling chứ không chỉ cần “nhiên liệu”** sang **10. Từ RNA-like hệ thống (system / 시스템) đến phân công chức năng DNA–RNA–protein**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chuyển hóa (metabolism)-first và thông tin-first là hai cực của cùng một bài toán
 
@@ -127,8 +111,6 @@ Thông tin (information / 정보) mà không có material/dòng năng lượng (
 
 Khi một mạng (network / 네트워크) tạo precursor hỗ trợ replicator, replicator encode catalyst hỗ trợ mạng lưới (network), và cả hai nằm trong cùng compartment, selection có thể bắt đầu tối ưu tích hợp (integration / 통합) chứ không chỉ từng molecule riêng.
 
-> **Nối mạch:** **10. Từ RNA-like hệ thống (system / 시스템) đến phân công chức năng DNA–RNA–protein** nối từ **9. Chuyển hóa (metabolism)-first và thông tin-first là hai cực của cùng một bài toán** sang **11. Mã di truyền (genetic code) và vấn đề “đóng băng” của convention sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Từ RNA-like hệ thống (system / 시스템) đến phân công chức năng DNA–RNA–protein
 
 Tại sao life hiện đại dùng ba loại macromolecule chính cho dòng thông tin (information flow) thay vì chỉ một? Một explanation hợp lý là specialization cải thiện hiệu năng (performance / 성능).
@@ -136,8 +118,6 @@ Tại sao life hiện đại dùng ba loại macromolecule chính cho dòng thô
 DNA bền hơn RNA nên phù hợp lưu thông tin (information / 정보) lâu dài. RNA linh hoạt và transient hơn nên phù hợp làm messenger, regulator và một số chất xúc tác. Protein có alphabet axit amin phong phú nên tạo catalytic chemistry đa dạng hơn nhiều.
 
 Chuyển tiếp (transition / 전이) này có thể được hiểu như **phân công chức năng ở quy mô phân tử (molecular scale)**. Một hệ thống (system / 시스템) ban đầu dùng một molecule cho nhiều nhiệm vụ có thể tiến hóa thành hệ thống (system / 시스템) nhiều mô-đun (module / 모듈) chuyên biệt nếu tổng hiệu năng (performance / 성능) tăng. Đây chính là motif sẽ tái xuất ở multicellularity: specialization của đơn vị (unit / 단위) nhỏ làm toàn hệ thống (system / 시스템) mạnh hơn.
-
-> **Nối mạch:** **11. Mã di truyền (genetic code) và vấn đề “đóng băng” của convention sinh học** nối từ **10. Từ RNA-like hệ thống (system / 시스템) đến phân công chức năng DNA–RNA–protein** sang **12. LUCA: tổ tiên chung gần nhất, không phải sinh vật đầu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Mã di truyền (genetic code) và vấn đề “đóng băng” của convention sinh học
 
@@ -147,8 +127,6 @@ Mã di truyền gần như universal: codon ba nucleotide map sang axit amin tư
 
 Đây là một mô hình tư duy quan trọng khi học Biology: nhiều tính năng (feature / 기능) hiện đại không nhất thiết là “solution tối ưu duy nhất”; chúng có thể là giải pháp (solution) đủ tốt đã được cố định bởi phụ thuộc đường đi lịch sử (path dependence).
 
-> **Nối mạch:** **12. LUCA: tổ tiên chung gần nhất, không phải sinh vật đầu tiên** nối từ **11. Mã di truyền (genetic code) và vấn đề “đóng băng” của convention sinh học** sang **13. Quang hợp (photosynthesis) và Great Oxidation: life trở thành một lực địa hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. LUCA: tổ tiên chung gần nhất, không phải sinh vật đầu tiên
 
 **LUCA — Last Universal Tổ tiên chung (common ancestor) (tổ tiên chung phổ quát gần nhất / 최후 보편 공통 조상)** là population tổ tiên gần nhất mà mọi lineage hiện đại cùng truy về. LUCA không phải first life.
@@ -156,8 +134,6 @@ Mã di truyền gần như universal: codon ba nucleotide map sang axit amin tư
 Việc ribosome, mã di truyền, ATP coupling và nhiều cốt lõi (core / 핵심) biochemical pathway được chia sẻ rộng cho thấy trước LUCA, tiến hóa (evolution) đã đi rất xa. Có thể đã tồn tại nhiều lineage khác rồi tuyệt chủng, nhiều chuyển gen ngang (horizontal gene transfer) và một giai đoạn evolution “mạng lưới-like” hơn tree-like.
 
 Do đó, cây phát sinh chủng loại (phylogenetic tree) hiện đại bắt đầu rõ hơn sau khi cellular lineages và vertical inheritance ổn định; giai đoạn trước đó có thể phức tạp hơn nhiều.
-
-> **Nối mạch:** Photosynthesis và Great Oxidation tổng hợp hệ quả từ LUCA, rồi **Endosymbiosis** mở cơ chế tăng complexity bằng hợp nhất lineage.
 
 ## 13. Quang hợp (photosynthesis) và Great Oxidation: life trở thành một lực địa hóa
 
@@ -175,8 +151,6 @@ metabolic innovation
 
 Đây là một trong những ví dụ đầu tiên của **niche construction** ở quy mô (scale / 규모) hành tinh và là cầu nối (bridge / 브리지) trực tiếp sang [Quần xã sinh học, biến đổi toàn cầu và sinh quyển](../05_ecology/02_biomes_global_change_and_biosphere.md).
 
-> **Nối mạch:** Endosymbiosis tổng hợp tác động của photosynthesis và Great Oxidation; **case study màng + replicator** kiểm tra vì sao compartmentalization có lợi.
-
 ## 14. Nội cộng sinh (endosymbiosis): evolution có thể tăng độ phức tạp (complexity / 복잡도) bằng hợp nhất lineage
 
 Mitochondria và chloroplast mang nhiều dấu vết bacterial: genome riêng, ribosome tương đồng bacteria, division tương tự nhị phân (binary / 이진) fission và màng (membrane) kiến trúc (architecture / 아키텍처) phù hợp với origin qua engulfment.
@@ -185,8 +159,6 @@ Mitochondria và chloroplast mang nhiều dấu vết bacterial: genome riêng, 
 
 Điểm sâu hơn không phải chỉ “organelle từng là bacteria”. Nó cho thấy evolution có thể tạo new mức (level / 수준) of organization bằng cách **biến cooperation giữa lineage thành tích hợp (integration / 통합) không thể tách rời**. Motif này tái xuất trong [Lịch sử sự sống và các bước chuyển lớn](../03_evolution_and_diversity/03_history_of_life_and_major_transitions.md).
 
-> **Nối mạch:** **14. Nội cộng sinh (endosymbiosis): evolution có thể tăng độ phức tạp (complexity / 복잡도) bằng hợp nhất lineage** nêu quy tắc; **15. Một tình huống phân tích (case study) lập luận (reasoning / 추론): vì sao màng + replicator tốt hơn replicator trôi tự do?** thử quy tắc trong tình huống, rồi **16. Một tình huống phân tích định lượng: fidelity giới hạn genome độ phức tạp (complexity / 복잡도)** mở rộng hệ quả.
-
 ## 15. Một tình huống phân tích (case study) lập luận (reasoning / 추론): vì sao màng + replicator tốt hơn replicator trôi tự do?
 
 Hãy tưởng tượng hai loại replicator A và B trong cùng môi trường. A tạo chất xúc tác giúp tạo precursor nhanh hơn nhưng catalyst khuếch tán tự do. Nếu mọi replicator đều hưởng benefit, B có thể không trả chi phí (cost / 비용) tạo catalyst nhưng vẫn hưởng lợi; A dễ bị free-rider khai thác.
@@ -194,8 +166,6 @@ Hãy tưởng tượng hai loại replicator A và B trong cùng môi trường.
 Nếu A và catalyst nằm trong vesicle, benefit tập trung cho chính descendants trong vesicle đó. Khi vesicle grow/divide, gói (package / 패키지) A + chất xúc tác được truyền cùng nhau thường xuyên hơn. Khoang đã biến một công khai (public / 공개) good thành lợi ích mang tính lineage.
 
 Trường hợp (case / 사례) này giúp thấy tiền tế bào không chỉ giải vấn đề “giữ molecule khỏi trôi đi”. Nó thay đổi **đơn vị chọn lọc (unit of selection)** và vì vậy thay đổi loại cooperation mà evolution có thể duy trì.
-
-> **Nối mạch:** **15. Một tình huống phân tích (case study) lập luận (reasoning / 추론): vì sao màng + replicator tốt hơn replicator trôi tự do?** nêu quy tắc; **16. Một tình huống phân tích định lượng: fidelity giới hạn genome độ phức tạp (complexity / 복잡도)** thử quy tắc trong tình huống, rồi **17. Những gì science hiện biết và những gì vẫn còn mở** mở rộng hệ quả.
 
 ## 16. Một tình huống phân tích định lượng: fidelity giới hạn genome độ phức tạp (complexity / 복잡도)
 
@@ -215,8 +185,6 @@ Gần như không có bản sao hoàn toàn chính xác. Con số chỉ là illu
 
 Đây là cầu nối (bridge / 브리지) tự nhiên sang độ ổn định hệ gen (genome stability) trong life hiện đại.
 
-> **Nối mạch:** **16. Một tình huống phân tích định lượng: fidelity giới hạn genome độ phức tạp (complexity / 복잡도)** nêu quy tắc; **17. Những gì science hiện biết và những gì vẫn còn mở** thử quy tắc trong tình huống, rồi **18. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 17. Những gì science hiện biết và những gì vẫn còn mở
 
 Ta có bằng chứng (evidence / 증거) mạnh rằng organic khối cấu tạo có thể hình thành abiotically; lipid-like molecule có thể tự tạo khoang; RNA có thể mang thông tin (information / 정보) và catalyze reaction; độ dốc (gradient / 기울기) có thể drive chemistry; selection có thể xảy ra ở molecular/compartment quy mô (scale / 규모).
@@ -224,8 +192,6 @@ Ta có bằng chứng (evidence / 증거) mạnh rằng organic khối cấu t�
 Nhưng vẫn chưa có một chuỗi (sequence / 시퀀스) duy nhất được xác nhận từ geochemistry → first self-sustaining replicator → tiền tế bào → LUCA. Các bước intermediate, môi trường chính, mức đóng góp của RNA-like chemistry, peptide và khoáng chất catalysis vẫn là vùng nghiên cứu tích cực.
 
 Điều này không làm trường dữ liệu (field / 필드) “mơ hồ vô hạn”. mô hình (model / 모델) vẫn bị ràng buộc (constraint / 제약조건) bởi chemistry, geology, experiment và consistency với universal features của life. Unknown không đồng nghĩa mọi explanation đều có giá trị như nhau.
-
-> **Nối mạch:** **18. Các hiểu lầm phổ biến (common misconceptions)** nối từ **17. Những gì science hiện biết và những gì vẫn còn mở** sang **19. Mô hình tư duy tổng hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -236,8 +202,6 @@ Một hiểu lầm khác là “Miller–Urey đã tạo ra sự sống”. Expe
 Cũng sai khi nghĩ first life phải giống bacteria hiện đại. Bacteria ngày nay đã qua hàng tỉ năm evolution; tiền tế bào ban đầu gần như chắc chắn đơn giản hơn rất nhiều.
 
 Cuối cùng, “random” không có nghĩa “mọi thứ đều hoàn toàn ngẫu nhiên”. Variation có stochastic thành phần (component / 컴포넌트), nhưng chemistry bị vật lý (physical / 물리적) law constrain và selection tạo directional thay đổi (change / 변경) trong tần số (frequency) khi variant có hiệu năng (performance / 성능) khác nhau.
-
-> **Nối mạch:** Mô hình tư duy tổng hợp sửa các hiểu lầm của mục 18; **cầu nối sang Sinh học tế bào** mang chuỗi chemistry–evolution vào cấu trúc cell.
 
 ## 19. Mô hình tư duy tổng hợp
 
@@ -257,8 +221,6 @@ simple chemistry
 ```
 
 Mỗi mũi tên không phải một sự kiện (event / 이벤트) duy nhất mà là một vùng problem-solving kéo dài. Sự sống không bắt đầu bằng việc “có đủ danh sách molecule”, mà bằng việc các tiến trình (process / 프로세스) trở thành một hệ thống (system / 시스템) tự duy trì và có lịch sử di truyền.
-
-> **Nối mạch:** **20. cầu nối (bridge / 브리지) sang Sinh học tế bào** tổng hợp kết quả từ **19. Mô hình tư duy tổng hợp** để khép mạch giải thích.
 
 ## 20. cầu nối (bridge / 브리지) sang Sinh học tế bào
 

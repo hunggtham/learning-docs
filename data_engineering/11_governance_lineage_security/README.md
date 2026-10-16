@@ -10,15 +10,11 @@ Quản trị (governance / 거버넌스) là cách hệ thống biết dữ li�
 
 Lược đồ (schema / 스키마) registry không tự tạo ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약). trường dữ liệu (field / 필드) `status` có thể parse được nhưng đổi nghĩa từ “payment trạng thái (state / 상태)” sang “shipment trạng thái (state / 상태)” vẫn là breaking thay đổi (change / 변경).
 
-> **Chuyển mạch:** Trong **11 — quản trị (governance / 거버넌스), lineage và bảo mật (security / 보안)**, **1. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **2. danh mục (catalog / 카탈로그) và quyền sở hữu (ownership / 소유권)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Lineage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. danh mục (catalog / 카탈로그) và quyền sở hữu (ownership / 소유권)
 
 Danh mục (catalog / 카탈로그) tối thiểu cần biết dataset đường dẫn (path / 경로), lĩnh vực (domain / 도메인), đơn vị sở hữu (owner / 오너), steward, nguồn (source / 소스), grain, sensitivity, freshness SLO, retention và related assets. Dataset không có đơn vị sở hữu (owner / 오너) không có người quyết định khi chất lượng (quality / 품질) thất bại (fail / 실패) hoặc lược đồ (schema / 스키마) cần evolve.
 
 Quyền sở hữu (ownership / 소유권) phải gắn với hành động (action / 동작): ai approve thay đổi (change / 변경), ai triage sự cố (incident / 인시던트), ai xác nhận delete, ai chịu chi phí (cost / 비용).
-
-> **Chuyển mạch:** **Catalog và ownership** xác định tài sản dữ liệu; **Lineage** truy nguyên biến đổi, rồi **Security boundary** giới hạn ai được xem và thay đổi.
 
 ## 3. Lineage
 
@@ -26,15 +22,11 @@ Lineage là bằng chứng (evidence / 증거) đồ thị (graph / 그래프) t
 
 Lineage không chứng minh dữ liệu (data / 데이터) đúng. Nó giúp khoanh blast radius và lần ngược nguyên nhân nhanh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — quản trị (governance / 거버넌스), lineage và bảo mật (security / 보안)**, **3. Lineage** đã nêu tiêu chí phân biệt, còn **4. ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Retention và deletion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. ranh giới bảo mật (security boundary / 보안 경계)
 
 Least privilege áp dụng cho dịch vụ (service / 서비스) account, engineer và bên tiêu thụ (consumer / 소비자). Tách quyền đọc raw PII khỏi quyền đọc serving aggregate. Encryption at rest/in transit là baseline; cần thêm masking/tokenization, row/column-level truy cập (access / 접근), nhật ký kiểm tra (audit log / 감사 로그) và secret rotation.
 
 Development không nên bản sao (copy / 복사) môi trường vận hành (production / 운영 환경) PII mặc định. Nếu cần mẫu (sample / 표본), dùng synthetic hoặc masked dữ liệu (data / 데이터) có chính sách (policy / 정책) rõ.
-
-> **Chuyển mạch:** Trong **11 — quản trị (governance / 거버넌스), lineage và bảo mật (security / 보안)**, **4. ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **5. Retention và deletion** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. chất lượng (quality / 품질) và sự cố (incident / 인시던트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. Retention và deletion
 
@@ -42,13 +34,9 @@ Retention phải bao phủ raw files, snapshots, backups, caches, derived tables
 
 Replayability và privacy có thể xung đột. Thiết kế cần biết trường dữ liệu (field / 필드) nào immutable, trường dữ liệu (field / 필드) nào có thể redact, và khi deletion xảy ra thì trạng thái (state / 상태)/projection nào phải rebuild.
 
-> **Chuyển mạch:** **Retention và deletion** quy định vòng đời dữ liệu; **Quality và incident** cho biết tác động khi vòng đời hoặc dữ liệu thực tế lệch contract, rồi **Review checklist** kiểm tra nguyên nhân.
-
 ## 6. chất lượng (quality / 품질) và sự cố (incident / 인시던트)
 
 Quản trị (governance / 거버넌스) nên liên kết đặc tả hợp đồng (contract / 계약) với chất lượng (quality / 품질) checks, lineage-aware alert và runbook. Alert về lược đồ (schema / 스키마) drift phải cho biết bên tiêu thụ (consumer / 소비자) bị ảnh hưởng; alert về PII truy cập (access / 접근) phải giữ kiểm tra (audit / 감사) bằng chứng (evidence / 증거); quarantine phải có đơn vị sở hữu (owner / 오너) và replay procedure.
-
-> **Chuyển mạch:** **Review checklist** gom quality và incident evidence; **Classification và policy enforcement** biến evidence đó thành quyền truy cập và hành động cụ thể.
 
 ## 7. rà soát (review / 검토) checklist
 
@@ -60,15 +48,11 @@ Quản trị (governance / 거버넌스) nên liên kết đặc tả hợp đ�
 
 Đọc tiếp: [04 — Reliability](../04_reliability_and_production.md), [09 — Warehouse/lakehouse](../09_warehouse_lake_lakehouse/README.md), [10 — Serving](../10_serving_semantic_layer/README.md).
 
-> **Chuyển mạch:** **Classification và policy enforcement** đặt guardrail lên asset và consumer; **Lineage confidence** cho biết quyết định đó dựa trên metadata chắc chắn đến đâu.
-
 ## 8. Classification và chính sách (policy / 정책) enforcement
 
 Sensitivity classification nên gắn với column/trường dữ liệu (field / 필드) và purpose, không chỉ gắn với cơ sở dữ liệu (database / 데이터베이스). Một dataset có thể chứa PII ở một column, aggregate an toàn ở column khác và secret ở payload nested.
 
 Chính sách (policy / 정책) enforcement cần xảy ra cả lúc đọc và lúc bản sao (copy / 복사)/export. Masking trong UI không đủ nếu người dùng (user / 사용자) vẫn có quyền đọc raw tệp (file / 파일) hoặc download bộ nhớ đệm (cache / 캐시). chính sách (policy / 정책) kiểm thử (test / 테스트) nên kiểm tra role, purpose, môi trường (environment / 환경), region và kiểm tra (audit / 감사) sự kiện (event / 이벤트).
-
-> **Chuyển mạch:** **Lineage confidence** lượng hóa mức tin cậy của metadata; **Change management** dùng mức đó để quyết định migration, approval và rollback.
 
 ## 9. Lineage confidence
 
@@ -80,15 +64,11 @@ declared contract > runtime observed > static parser > naming convention
 
 Danh mục (catalog / 카탈로그) nên lưu nguồn (source / 소스) của edge và timestamp quan sát. Khi lineage thiếu, hiển thị “unknown” tốt hơn tạo đồ thị (graph / 그래프) giả chắc chắn khiến sự cố (incident / 인시던트) triage đi sai.
 
-> **Chuyển mạch:** **Change management** giữ version và approval trail; **Data deletion audit** kiểm tra thay đổi nhạy cảm đã thực sự xóa đúng downstream asset hay chưa.
-
 ## 10. thay đổi (change / 변경) management
 
 Một lược đồ (schema / 스키마)/ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경) cần blast-radius truy vấn (query / 쿼리): downstream tables, dashboards, ML features, exports, truy cập (access / 접근) policies và chi phí (cost / 비용) centers. đơn vị sở hữu (owner / 오너) phê duyệt thay đổi (change / 변경) phải khác với người chỉ sửa tệp (file / 파일) nếu rủi ro (risk / 위험) cao.
 
 Deprecation cửa sổ (window / 윈도우) cần có telemetry bên tiêu thụ (consumer / 소비자). Không xóa trường dữ liệu (field / 필드) chỉ vì danh mục (catalog / 카탈로그) không liệt kê bên tiêu thụ (consumer / 소비자); absence of bằng chứng (evidence / 증거) không phải bằng chứng (evidence / 증거) of absence.
-
-> **Chuyển mạch:** **Data deletion audit** khép README bằng policy, lineage evidence và owner; chi tiết access-control quay về canonical security/governance chapter.
 
 ## 11. dữ liệu (data / 데이터) deletion kiểm tra (audit / 감사)
 

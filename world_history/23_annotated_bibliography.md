@@ -12,15 +12,11 @@
 - **Sebastian Conrad — *What Is toàn cục (global / 전역) lịch sử (history / 이력)?*** Cung cấp phương pháp, quy mô (scale / 규모) và ranh giới (boundary / 경계) cho toàn cục (global / 전역) lịch sử (history / 이력); hữu ích khi phân biệt liên kết (connection / 연결) với causation.
 - **Dipesh Chakrabarty — *Provincializing Europe*.** Nhắc rằng category hiện đại và temporal scheme của châu Âu không phải thước đo trung tính cho mọi nơi.
 
-> **Nối mạch:** Origins, agriculture và early states cung cấp nền vật chất–thể chế cho **Classical, medieval và các mạng trao đổi**, nơi cùng cơ chế được mở rộng sang quy mô liên vùng.
-
 ## Origins, agriculture và early states
 
 - **James C. Scott — *Against the Grain*.** Đặt câu hỏi về trạng thái (state / 상태) legibility, cereal taxation và việc “văn minh” có thực sự tốt hơn cho mọi hộ hay không; nên đọc cùng phản biện khảo cổ.
 - **Ian Morris — *Why the West Rules—For Now*.** Có mô hình tư duy (mental model / 사고 모델) năng lượng–xã hội quy mô lớn; dùng như một hypothesis có thể kiểm tra, không phải verdict chung cuộc.
 - **Norman Yoffee (ed.) — *The Cambridge World lịch sử (history / 이력), Vol. 2: A World with Agriculture, 12,000 BCE–500 CE*.** Cung cấp nhiều trường hợp (case / 사례) về nông nghiệp, đô thị và nhà nước ngoài một basin duy nhất.
-
-> **Nối mạch:** Nền vật chất và thể chế của origins–early states được thử ở các mạng Classical, medieval và trao đổi liên vùng, rồi mở sang đại dương và công nghiệp.
 
 ## Classical, medieval và các mạng trao đổi
 
@@ -28,8 +24,6 @@
 - **K. N. Chaudhuri — *Trade and Civilisation in the Indian Ocean*.** Nối monsoon, cổng (port / 포트), merchant và ecology; phù hợp với chapter 05–08.
 - **Sanjay Subrahmanyam — *Explorations in Connected lịch sử (history / 이력)*.** Mô hình “connected histories” giúp tránh kể các khu vực như những hộp kín.
 - **Chris Wickham — *The Inheritance of Rome* và *Framing the Early Middle Ages*.** Mạnh về trạng thái (state / 상태) sức chứa (capacity / 용량), land, labor và transformation sau Rome; nên đặt cạnh các world vùng châu Phi và châu Á.
-
-> **Nối mạch:** Đại dương, colonialism và industrialization nối trao đổi với cưỡng chế và năng lượng; **World wars, Cold War và decolonization** kiểm tra hệ quả chính trị của cấu trúc đó.
 
 ## Đại dương, colonialism và industrialization
 
@@ -39,8 +33,6 @@
 - **Frederick Cooper — *Colonialism in Question*.** Kỷ luật hóa cách dùng các khái niệm colony, empire, globalization và agency.
 - **John Darwin — *After Tamerlane*.** Theo dõi empire, trạng thái (state / 상태) và toàn cục (global / 전역) power sau 1400 mà không đặt châu Âu làm actor duy nhất.
 
-> **Nối mạch:** Chiến tranh và chủ quyền tái cấu trúc mạng cũ; **Globalization, môi trường và phương pháp** đưa di sản đó vào phân tích rủi ro và bằng chứng.
-
 ## World wars, Cold War và decolonization
 
 - **Christopher Clark — *The Sleepwalkers*.** Phân tích escalation trước WWI; đọc cùng scholarship về imperialism, Balkan và colonial participation.
@@ -49,8 +41,6 @@
 - **Odd Arne Westad — *The toàn cục (global / 전역) Cold War*.** Đặt proxy war và development ideology trong bối cảnh Third World agency, không chỉ US–USSR.
 - **Frederick Cooper — *Africa Since 1940*.** Giúp đọc decolonization, citizenship, labor và development qua xã hội/chính trị châu Phi.
 
-> **Nối mạch:** Globalization, môi trường và phương pháp tổng hợp mạng, giới hạn sinh thái và cách đọc nguồn; **Quy tắc sử dụng bibliography** biến tổng hợp đó thành thao tác nâng cấp chapter.
-
 ## Globalization, môi trường (environment / 환경) và phương pháp
 
 - **William McNeill — *Plagues and Peoples*.** Gợi ý cách nối disease với mobility và ecology; các claim định lượng cần kiểm tra bằng nghiên cứu dịch tễ mới.
@@ -58,8 +48,6 @@
 - **Thomas Piketty — *Capital and Ideology*.** Có khung so sánh inequality/ideology dài hạn; không thay thế economic lịch sử (history / 이력) theo từng quốc gia.
 - **Lauren Benton — *A tìm kiếm (search / 검색) for Sovereignty*.** Hữu ích để hiểu legal pluralism, jurisdiction và empire trước mô hình nation-state.
 - **Sanjay Subrahmanyam, Natalie Zemon Davis và các tác giả connected/microhistory.** Dùng để kiểm tra xem narrative vĩ mô có còn đúng khi xuống household, cổng (port / 포트) hoặc một nhóm cụ thể không.
-
-> **Nối mạch:** Quy tắc sử dụng bibliography gắn mỗi claim với loại nguồn, phạm vi và câu hỏi kiểm chứng; danh mục tài liệu chỉ là bản đồ tra cứu, không phải kết luận tự thân.
 
 ## Quy tắc sử dụng bibliography
 

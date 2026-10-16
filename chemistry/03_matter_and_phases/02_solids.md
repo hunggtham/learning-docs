@@ -25,8 +25,6 @@ Kết quả:
 
 Đây là ví dụ kinh điển của **quan hệ cấu trúc–tính chất (structure–property relationship)**.
 
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn tinh thể và vô định hình** nối từ **Thành phần chưa đủ để xác định tính chất** sang **Mạng tinh thể, cơ sở và ô đơn vị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất rắn tinh thể và vô định hình
 
 **Chất rắn tinh thể (crystalline solid / 결정성 고체)** có trật tự tịnh tiến dài hạn. Một mô-típ cấu trúc lặp lại định kỳ qua không gian.
@@ -36,8 +34,6 @@ Kết quả:
 Thủy tinh oxide là ví dụ quen thuộc. Nó có mạng liên kết nhưng thiếu sự lặp lại đều đặn của tinh thể.
 
 Không nên gọi mọi chất rắn vô định hình là “chất lỏng siêu lạnh” theo nghĩa đơn giản. Ở thang thời gian sử dụng, chúng có đáp ứng cơ học của chất rắn; mô tả chính xác hơn liên quan đến động học thư giãn và chuyển thủy tinh.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mạng tinh thể, cơ sở và ô đơn vị** nối từ **Chất rắn tinh thể và vô định hình** sang **Các cấu trúc lập phương cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng tinh thể, cơ sở và ô đơn vị
 
@@ -55,8 +51,6 @@ lattice + basis → crystal structure
 
 Đây là khái niệm hình học, không phải “một phân tử đại diện” của tinh thể.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các cấu trúc lập phương cơ bản** nối từ **Mạng tinh thể, cơ sở và ô đơn vị** sang **Số phối trí**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các cấu trúc lập phương cơ bản
 
 Ba mạng lập phương thường gặp trong nhập môn:
@@ -69,8 +63,6 @@ FCC có độ xếp chặt cao và số phối trí lớn. BCC không phải c�
 
 Vì vậy không nên suy ra cấu trúc tinh thể chỉ từ “cách xếp các quả cầu chặt nhất”. Electron và năng lượng tự do mới quyết định pha ổn định.
 
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Số phối trí** nối từ **Các cấu trúc lập phương cơ bản** sang **Chất rắn ion**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Số phối trí
 
 **Số phối trí (coordination number)** là số hàng xóm gần nhất quanh một tâm trong mô hình cấu trúc.
@@ -78,8 +70,6 @@ Vì vậy không nên suy ra cấu trúc tinh thể chỉ từ “cách xếp c�
 Trong tinh thể ion, số phối trí phụ thuộc kích thước tương đối, điện tích, phân cực và toàn bộ năng lượng mạng.
 
 Quy tắc tỷ lệ bán kính có thể cho trực giác đầu tiên nhưng không phải định luật tuyệt đối.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn ion** nối từ **Số phối trí** sang **Chất rắn phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn ion
 
@@ -94,8 +84,6 @@ Tính chất điển hình:
 
 Tính giòn xuất hiện vì trượt mạng có thể đưa các ion cùng dấu tới gần nhau, làm lực đẩy tăng mạnh và tạo nứt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn phân tử** nối từ **Chất rắn ion** sang **Chất rắn mạng cộng hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất rắn phân tử
 
 **Chất rắn phân tử (molecular solid)** gồm các phân tử rời rạc giữ nhau bằng lực liên phân tử.
@@ -105,8 +93,6 @@ Băng, iodine rắn, CO₂ rắn và nhiều tinh thể hữu cơ thuộc nhóm 
 Nhiệt độ nóng chảy không chỉ phụ thuộc độ mạnh lực liên phân tử mà còn phụ thuộc hiệu quả đóng gói tinh thể và chênh lệch entropy giữa rắn với lỏng.
 
 Hai đồng phân có lực liên phân tử gần giống nhau vẫn có thể có nhiệt độ nóng chảy khác đáng kể nếu một cấu trúc đóng gói tinh thể đối xứng hơn.
-
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn mạng cộng hóa trị** nối từ **Chất rắn phân tử** sang **Chất rắn kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn mạng cộng hóa trị
 
@@ -123,8 +109,6 @@ Mạng mạnh thường tạo độ cứng và nhiệt độ nóng chảy cao, n
 
 Silicon là bán dẫn dù có mạng cộng hóa trị bền.
 
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn kim loại** nối từ **Chất rắn mạng cộng hóa trị** sang **Đa hình và thù hình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất rắn kim loại
 
 Trong kim loại, electron hóa trị phi định xứ trên toàn tinh thể. Mô hình “biển electron” cho trực giác ban đầu, nhưng **lý thuyết dải (band theory)** mô tả tốt hơn cấu trúc điện tử.
@@ -132,8 +116,6 @@ Trong kim loại, electron hóa trị phi định xứ trên toàn tinh thể. M
 Nếu có các trạng thái năng lượng trống rất gần mức Fermi, electron có thể đáp ứng trường điện dễ dàng và vật liệu dẫn điện tốt.
 
 Liên kết kim loại không định hướng mạnh như nhiều liên kết cộng hóa trị, nên các mặt nguyên tử có thể trượt thông qua chuyển động lệch mạng mà mạng vẫn duy trì liên kết tổng thể. Đây là một phần nguyên nhân kim loại có tính dẻo.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Đa hình và thù hình** nối từ **Chất rắn kim loại** sang **Khuyết tật điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đa hình và thù hình
 
@@ -150,8 +132,6 @@ Các pha khác nhau có thể có:
 - tốc độ chuyển pha khác.
 
 Trong dược phẩm, polymorph khác nhau của cùng hoạt chất có thể hòa tan với tốc độ khác, ảnh hưởng sinh khả dụng và quy trình sản xuất.
-
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật điểm** nối từ **Đa hình và thù hình** sang **Khuyết tật trong tinh thể ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật điểm
 
@@ -173,8 +153,6 @@ với \(E_f\) là năng lượng hình thành vacancy.
 
 Khuyết tật không chỉ là lỗi. Chúng tạo đường cho khuếch tán và có thể quyết định độ dẫn ion.
 
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật trong tinh thể ion** nối từ **Khuyết tật điểm** sang **Lệch mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khuyết tật trong tinh thể ion
 
 Trong chất rắn ion, việc tạo khuyết tật phải tôn trọng điều kiện trung hòa điện tích tổng.
@@ -183,8 +161,6 @@ Ví dụ, thay một ion bằng ion có hóa trị khác có thể tạo thêm v
 
 Đây là nền của **hóa học khuyết tật (defect chemistry)** và rất quan trọng với pin nhiên liệu oxide rắn, sensor oxygen và điện cực pin.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Lệch mạng** nối từ **Khuyết tật trong tinh thể ion** sang **Biên hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lệch mạng
 
 **Lệch mạng (dislocation)** là khuyết tật đường. Nó cho phép tinh thể biến dạng dẻo bằng cách dịch chuyển từng phần nhỏ của mặt tinh thể thay vì phải trượt đồng thời toàn bộ một mặt.
@@ -192,8 +168,6 @@ Ví dụ, thay một ion bằng ion có hóa trị khác có thể tạo thêm v
 Nếu tinh thể hoàn hảo tuyệt đối, ứng suất lý thuyết cần để trượt rất lớn. Sự tồn tại của lệch mạng giải thích vì sao kim loại thực biến dạng ở ứng suất thấp hơn nhiều.
 
 Các cơ chế hóa bền như solution strengthening, precipitation hardening hoặc công việc (work / 작업) hardening hoạt động một phần bằng cách cản chuyển động lệch mạng.
-
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Biên hạt** nối từ **Lệch mạng** sang **Khuếch tán trong chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biên hạt
 
@@ -208,8 +182,6 @@ Tuy vậy hạt nhỏ cũng có thể làm tăng độ bền chảy theo quan h�
 \]
 
 Đây là ví dụ cho sự đánh đổi (trade-off / 트레이드오프): nhiều biên hạt có thể tăng độ bền nhưng đồng thời tăng diện tích giao diện và một số dạng bất ổn hóa học.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuếch tán trong chất rắn** nối từ **Biên hạt** sang **Dao động mạng và phonon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuếch tán trong chất rắn
 
@@ -230,8 +202,6 @@ Do phụ thuộc hàm mũ, tăng nhiệt độ vừa phải có thể làm khu�
 
 Khuếch tán chất rắn chi phối tôi luyện, carburizing, sintering, aging hợp kim, phát triển SEI trong pin và nhiều quá trình bán dẫn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Dao động mạng và phonon** nối từ **Khuếch tán trong chất rắn** sang **Giãn nở nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dao động mạng và phonon
 
 Nguyên tử trong tinh thể dao động quanh vị trí cân bằng. Các dao động tập thể có thể được lượng tử hóa thành **phonon**.
@@ -245,15 +215,11 @@ Phonon giúp giải thích:
 
 Đây là cầu nối trực tiếp giữa Hóa học chất rắn và Vật lý vật chất ngưng tụ.
 
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Giãn nở nhiệt** nối từ **Dao động mạng và phonon** sang **Cấu trúc vùng và tính dẫn điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Giãn nở nhiệt
 
 Nếu thế liên nguyên tử hoàn toàn đối xứng quanh cực tiểu, khoảng cách trung bình có thể không đổi nhiều khi biên độ dao động tăng. Nhưng thế thực thường bất đối xứng (**anharmonic**), nên khi nhiệt độ tăng, khoảng cách trung bình tăng và vật liệu giãn nở.
 
 Do đó giãn nở nhiệt là hệ quả của hình dạng thế năng liên nguyên tử chứ không đơn giản vì “nguyên tử phình ra”.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Cấu trúc vùng và tính dẫn điện** nối từ **Giãn nở nhiệt** sang **Tính chất cơ học không chỉ là “liên kết mạnh”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu trúc vùng và tính dẫn điện
 
@@ -262,8 +228,6 @@ Trong tinh thể rất lớn, các orbital nguyên tử tương tác tạo số 
 Kim loại có trạng thái điện tử khả dụng gần mức Fermi, còn chất cách điện có vùng cấm lớn. Bán dẫn có vùng cấm vừa phải và độ dẫn có thể điều khiển bằng nhiệt độ, ánh sáng hoặc doping.
 
 Pha tạp silicon bằng donor hoặc acceptor làm thay đổi mật độ hạt tải mà không cần thay đổi hoàn toàn mạng tinh thể.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, sau nội dung của **Cấu trúc vùng và tính dẫn điện**, **Tính chất cơ học không chỉ là “liên kết mạnh”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Chuyển thủy tinh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tính chất cơ học không chỉ là “liên kết mạnh”
 
@@ -277,8 +241,6 @@ Gốm có liên kết mạnh và độ cứng cao nhưng có thể giòn. Kim lo
 
 Tính chất cơ học phụ thuộc liên kết, khuyết tật, vi cấu trúc và lịch sử gia công.
 
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chuyển thủy tinh** nối từ **Tính chất cơ học không chỉ là “liên kết mạnh”** sang **Nhiễu xạ tia X và cấu trúc tinh thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển thủy tinh
 
 Polymer vô định hình và thủy tinh không nhất thiết có một nhiệt độ nóng chảy sắc nét như tinh thể.
@@ -288,8 +250,6 @@ Polymer vô định hình và thủy tinh không nhất thiết có một nhiệ
 `Tg` mang tính động học rõ rệt: tốc độ gia nhiệt/làm lạnh có thể ảnh hưởng giá trị quan sát.
 
 Điều này khác chuyển pha cân bằng bậc nhất như nóng chảy tinh thể.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Nhiễu xạ tia X và cấu trúc tinh thể** nối từ **Chuyển thủy tinh** sang **Liên hệ với pin và vật liệu năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiễu xạ tia X và cấu trúc tinh thể
 
@@ -304,8 +264,6 @@ n\lambda=2d\sin\theta
 cho phép liên hệ góc nhiễu xạ với khoảng cách mạng \(d\).
 
 Nhiễu xạ tia X (XRD) là một trong những công cụ chính để xác định pha và cấu trúc tinh thể.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Liên hệ với pin và vật liệu năng lượng** nối từ **Nhiễu xạ tia X và cấu trúc tinh thể** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với pin và vật liệu năng lượng
 
@@ -322,8 +280,6 @@ thế redox phù hợp
 ```
 
 Tăng dung lượng bằng cách chèn nhiều ion hơn có thể làm biến dạng mạng mạnh hơn và giảm tuổi thọ. Đây là sự đánh đổi (trade-off / 트레이드오프) vật liệu điển hình.
-
-> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các hiểu lầm thường gặp** nối từ **Liên hệ với pin và vật liệu năng lượng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -346,8 +302,6 @@ Không. Độ dai còn phụ thuộc khả năng tiêu tán năng lượng và n
 ### “Chất rắn vô định hình không có cấu trúc”
 
 Không. Nó vẫn có trật tự cục bộ, chỉ thiếu tuần hoàn dài hạn.
-
-> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

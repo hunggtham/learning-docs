@@ -25,8 +25,6 @@ Lợi nhuận kế toán trước thuế
 
 Vì vậy không thể chỉ lấy lợi nhuận kế toán nhân với thuế suất luật định rồi kỳ vọng ra đúng chi phí thuế.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Các bậc thuế doanh nghiệp năm 2026** tiếp nhận điểm tựa từ **Thuế thu nhập doanh nghiệp đánh trên thu nhập chịu thuế, không phải doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuế suất luật định, thuế suất hiệu dụng và thuế tiền mặt khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Các bậc thuế doanh nghiệp năm 2026
 
 Với năm tài chính bắt đầu từ 1/1/2026, mức thuế suất cơ bản do National Tax dịch vụ (service / 서비스) công bố cho công ty vì lợi nhuận thông thường gồm:
@@ -39,8 +37,6 @@ Với năm tài chính bắt đầu từ 1/1/2026, mức thuế suất cơ bản
 | trên 300 tỷ KRW | 25% |
 
 Đây là thuế suất luật định. Chi phí thuế kế toán và số tiền thuế thực trả có thể khác đáng kể. Khi ra quyết định giao dịch thực tế, phải kiểm tra quy định hiện hành với NTS hoặc chuyên gia thuế.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Thuế suất luật định, thuế suất hiệu dụng và thuế tiền mặt khác nhau** tiếp nhận điểm tựa từ **Các bậc thuế doanh nghiệp năm 2026** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuế hoãn lại: khác biệt thời điểm tạo tài sản hoặc nợ kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thuế suất luật định, thuế suất hiệu dụng và thuế tiền mặt khác nhau
 
@@ -56,8 +52,6 @@ ETR \approx \frac{Chi\ phí\ thuế\ thu\ nhập}{Lợi\ nhuận\ kế\ toán\ t
 
 Một khoản ưu đãi thuế một lần có thể làm ETR giảm; thuế hoãn lại có thể chuyển chi phí giữa các kỳ; lỗ chuyển tiếp có thể làm thuế tiền mặt thấp hơn. Vì vậy một năm thuế thấp chưa chứng minh lợi thế thuế mang tính cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Thuế hoãn lại: khác biệt thời điểm tạo tài sản hoặc nợ kế toán** tiếp nhận điểm tựa từ **Thuế suất luật định, thuế suất hiệu dụng và thuế tiền mặt khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗ thuế: giá trị kinh tế phụ thuộc lợi nhuận tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Thuế hoãn lại: khác biệt thời điểm tạo tài sản hoặc nợ kế toán
 
 Kế toán và luật thuế có thể ghi nhận doanh thu hoặc chi phí ở thời điểm khác nhau. Điều này tạo **tài sản/nợ thuế hoãn lại (deferred tax asset/liability / 이연법인세자산·부채)**.
@@ -66,8 +60,6 @@ Ví dụ khấu hao kế toán và khấu hao thuế khác nhau. Tổng thuế t
 
 Tài sản thuế hoãn lại chỉ có giá trị nếu công ty có khả năng tạo đủ thu nhập chịu thuế trong tương lai để sử dụng. DTA lớn ở doanh nghiệp lỗ kéo dài cần được xem xét kỹ.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Lỗ thuế: giá trị kinh tế phụ thuộc lợi nhuận tương lai** tiếp nhận điểm tựa từ **Thuế hoãn lại: khác biệt thời điểm tạo tài sản hoặc nợ kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ưu đãi thuế và khuyến khích đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Lỗ thuế: giá trị kinh tế phụ thuộc lợi nhuận tương lai
 
 Lỗ trong quá khứ có thể được dùng để giảm thu nhập chịu thuế tương lai theo quy định, nhưng **lỗ chuyển tiếp (tax-loss carryforward)** không phải tiền mặt hiện tại.
@@ -75,8 +67,6 @@ Lỗ trong quá khứ có thể được dùng để giảm thu nhập chịu th
 Giá trị của nó phụ thuộc lợi nhuận chịu thuế tương lai, giới hạn sử dụng/thời hạn, quy tắc thay đổi sở hữu hoặc tái cấu trúc và từng khu vực pháp lý.
 
 Có thể coi đây như một quyền chọn: chỉ hữu ích khi công ty tạo lợi nhuận sau này.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Ưu đãi thuế và khuyến khích đầu tư** tiếp nhận điểm tựa từ **Lỗ thuế: giá trị kinh tế phụ thuộc lợi nhuận tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **VAT: thuế giao dịch khác thuế lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ưu đãi thuế và khuyến khích đầu tư
 
@@ -92,8 +82,6 @@ NPV = PV(Dòng\ tiền\ sau\ thuế) - Chi\ phí\ đầu\ tư\ hiệu\ dụng
 
 Nhưng hỗ trợ không đảm bảo ROIC dương; một dự án kém vẫn có thể kém sau trợ cấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **VAT: thuế giao dịch khác thuế lợi nhuận** tiếp nhận điểm tựa từ **Ưu đãi thuế và khuyến khích đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gánh nặng thuế: người nộp theo luật và người chịu về kinh tế có thể khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## VAT: thuế giao dịch khác thuế lợi nhuận
 
 **Thuế giá trị gia tăng (Value Added Tax / VAT / 부가가치세)** là thuế ở tầng giao dịch–tiêu dùng.
@@ -102,8 +90,6 @@ Doanh nghiệp thường thu VAT đầu ra và khấu trừ VAT đầu vào đ�
 
 Khi so hóa đơn khách hàng với doanh số doanh nghiệp phải xác định số tiền có bao gồm VAT hay không.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Gánh nặng thuế: người nộp theo luật và người chịu về kinh tế có thể khác nhau** tiếp nhận điểm tựa từ **VAT: thuế giao dịch khác thuế lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuế quốc tế và định giá chuyển giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Gánh nặng thuế: người nộp theo luật và người chịu về kinh tế có thể khác nhau
 
 Thuế được áp lên công ty về mặt pháp lý nhưng gánh nặng kinh tế có thể được chia qua giá bán cao hơn, lương thấp hơn, giá mua từ nhà cung cấp thấp hơn hoặc lợi suất cổ đông thấp hơn.
@@ -111,8 +97,6 @@ Thuế được áp lên công ty về mặt pháp lý nhưng gánh nặng kinh 
 Ai cuối cùng chịu thuế phụ thuộc độ co giãn và quyền lực thị trường. Đây là **phân bổ gánh nặng thuế (tax incidence / 조세귀착)**.
 
 Vì vậy phân tích chính sách phải hỏi không chỉ “ai nộp thuế?” mà còn “ai có thể chuyển chi phí đó cho bên khác?”.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Thuế quốc tế và định giá chuyển giao** tiếp nhận điểm tựa từ **Gánh nặng thuế: người nộp theo luật và người chịu về kinh tế có thể khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định là một phần của kiến trúc kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Thuế quốc tế và định giá chuyển giao
 
@@ -123,8 +107,6 @@ Tập đoàn đa quốc gia giao dịch giữa các công ty thành viên về l
 Với nhà phân tích, biên lợi nhuận của công ty con địa phương có thể phản ánh cách tập đoàn phân bổ chức năng toàn cầu chứ không chỉ chất lượng vận hành tại Hàn Quốc.
 
 Xem [`23_foreign_invested_companies_and_korea_entry.md`](./23_foreign_invested_companies_and_korea_entry.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định là một phần của kiến trúc kinh doanh** tiếp nhận điểm tựa từ **Thuế quốc tế và định giá chuyển giao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí tuân thủ cố định và quy mô doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy định là một phần của kiến trúc kinh doanh
 
@@ -138,8 +120,6 @@ Quy định tạo hai tác động trái chiều.
 
 Do đó quy định vừa có thể bảo vệ khách hàng vừa tạo rào cản gia nhập.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Chi phí tuân thủ cố định và quy mô doanh nghiệp** tiếp nhận điểm tựa từ **Quy định là một phần của kiến trúc kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **KFTC và chính sách cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chi phí tuân thủ cố định và quy mô doanh nghiệp
 
 Giả sử quy định yêu cầu hệ thống tuân thủ tốn 5 tỷ KRW/năm.
@@ -147,8 +127,6 @@ Giả sử quy định yêu cầu hệ thống tuân thủ tốn 5 tỷ KRW/năm
 Với doanh nghiệp doanh thu 5 nghìn tỷ, chi phí chỉ 0,1%. Với startup doanh thu 50 tỷ, nó tương đương 10% doanh thu.
 
 Cùng một quy định vì vậy có thể vô tình ưu ái quy mô lớn. Đây là lý do “quy định nhiều hơn = quyền lực thị trường thấp hơn” không phải lúc nào cũng đúng.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **KFTC và chính sách cạnh tranh** tiếp nhận điểm tựa từ **Chi phí tuân thủ cố định và quy mô doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách cạnh tranh: quy mô lớn tự nó không phải hành vi vi phạm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## KFTC và chính sách cạnh tranh
 
@@ -158,8 +136,6 @@ Khi phân tích chaebol, KFTC đặc biệt quan trọng vì cơ quan quản lý
 
 Khung chỉ định tập đoàn lớn đặt ra nghĩa vụ công bố và hạn chế khác nhau theo tiêu chí luật định. Ngưỡng có thể thay đổi nên phân tích hiện hành phải dùng dữ liệu KFTC mới nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Chính sách cạnh tranh: quy mô lớn tự nó không phải hành vi vi phạm** tiếp nhận điểm tựa từ **KFTC và chính sách cạnh tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác định thị trường liên quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chính sách cạnh tranh: quy mô lớn tự nó không phải hành vi vi phạm
 
 Thị phần lớn có thể đến từ đổi mới, hiệu quả hoặc hiệu ứng mạng. Vấn đề cạnh tranh xuất hiện khi quyền lực thị trường được sử dụng theo cách làm giảm khả năng cạnh tranh hoặc gây hại cho đối tác–người tiêu dùng theo luật.
@@ -167,8 +143,6 @@ Thị phần lớn có thể đến từ đổi mới, hiệu quả hoặc hiệ
 Các khái niệm chính gồm cartel/thông đồng, lạm dụng vị thế thống lĩnh, hành vi loại trừ, giao dịch không công bằng, M&A làm giảm cạnh tranh và thầu phụ không công bằng.
 
 Không nên thay phân tích kinh tế–pháp lý bằng công thức “lớn = xấu”.
-
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Xác định thị trường liên quan** tiếp nhận điểm tựa từ **Chính sách cạnh tranh: quy mô lớn tự nó không phải hành vi vi phạm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số tập trung: hữu ích nhưng chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Xác định thị trường liên quan
 
@@ -178,15 +152,11 @@ Cần hỏi sản phẩm nào thay thế được nhau, phạm vi địa lý nà
 
 Một công ty có 80% thị phần trong một danh mục hẹp vẫn có thể chịu cạnh tranh mạnh từ công nghệ lân cận. Cách xác định thị trường thường quyết định kết luận cạnh tranh.
 
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Chỉ số tập trung: hữu ích nhưng chưa đủ** tiếp nhận điểm tựa từ **Xác định thị trường liên quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm soát M&A: hiệp lực cổ đông và cạnh tranh xã hội là hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chỉ số tập trung: hữu ích nhưng chưa đủ
 
 Mức tập trung có thể được ước tính bằng thị phần các công ty lớn hoặc chỉ số kiểu HHI. Nhưng thị phần tĩnh không phản ánh rào cản gia nhập, tốc độ đổi mới, chi phí chuyển đổi, cạnh tranh tiềm năng và quyền lực người mua.
 
 Tập trung cao trong thiết bị bán dẫn có rào cản R&D khổng lồ khác về kinh tế với tập trung tạm thời trong một xu hướng thời trang.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Kiểm soát M&A: hiệp lực cổ đông và cạnh tranh xã hội là hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **Chỉ số tập trung: hữu ích nhưng chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định chaebol: rủi ro ở cấp tập đoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Kiểm soát M&A: hiệp lực cổ đông và cạnh tranh xã hội là hai câu hỏi khác nhau
 
@@ -196,8 +166,6 @@ Hai mục tiêu có thể khác nhau. Một thương vụ có thể tạo giá t
 
 Phân tích M&A cần xem thị trường liên quan, mức tập trung, rào cản gia nhập, hiệu quả kinh tế, quyền lực người mua và tác động đổi mới.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định chaebol: rủi ro ở cấp tập đoàn** tiếp nhận điểm tựa từ **Kiểm soát M&A: hiệp lực cổ đông và cạnh tranh xã hội là hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định thầu phụ: quyền lực người mua trong chuỗi cung ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quy định chaebol: rủi ro ở cấp tập đoàn
 
 Tập đoàn lớn tạo lợi ích qua quy mô, thị trường vốn nội bộ và R&D nhưng cũng có thể tạo đòn bẩy kiểm soát qua sở hữu chéo, ưu ái bên liên quan, hỗ trợ nội bộ không công bằng, phụ thuộc nhà cung cấp và tập trung quyền lực kinh tế.
@@ -205,8 +173,6 @@ Tập đoàn lớn tạo lợi ích qua quy mô, thị trường vốn nội b�
 Hàn Quốc vì vậy có khung công bố và cạnh tranh ở cấp tập đoàn bên cạnh luật công ty thông thường.
 
 Xem [`04_chaebol_and_large_business_groups.md`](./04_chaebol_and_large_business_groups.md).
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định chaebol: rủi ro ở cấp tập đoàn** xác định đầu vào; **Quy định thầu phụ: quyền lực người mua trong chuỗi cung ứng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cạnh tranh nền tảng: dịch vụ giá 0 làm trực giác chống độc quyền phức tạp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy định thầu phụ: quyền lực người mua trong chuỗi cung ứng
 
@@ -216,8 +182,6 @@ Quy định thầu phụ công bằng cố gắng hạn chế lạm dụng nhưn
 
 Xem [`06_sme_mid_sized_and_subcontracting_ecosystem.md`](./06_sme_mid_sized_and_subcontracting_ecosystem.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định thầu phụ: quyền lực người mua trong chuỗi cung ứng** xác định đầu vào; **Cạnh tranh nền tảng: dịch vụ giá 0 làm trực giác chống độc quyền phức tạp hơn** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quy định tài chính: yêu cầu vốn thay đổi mô hình kinh doanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cạnh tranh nền tảng: dịch vụ giá 0 làm trực giác chống độc quyền phức tạp hơn
 
 Nhiều nền tảng thu người dùng giá bằng 0 hoặc rất thấp rồi kiếm tiền từ quảng cáo, nhà bán hoặc dịch vụ tài chính. Câu hỏi truyền thống “giá có tăng không?” vì vậy không đủ.
@@ -226,15 +190,11 @@ Cần xem hiệu ứng mạng, lợi thế dữ liệu, multi-homing, tự ưu t
 
 Nền tảng là thị trường nhiều phía; can thiệp một phía có thể thay đổi phía khác.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định tài chính: yêu cầu vốn thay đổi mô hình kinh doanh** tiếp nhận điểm tựa từ **Cạnh tranh nền tảng: dịch vụ giá 0 làm trực giác chống độc quyền phức tạp hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định y tế: giấy phép là một phần của sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quy định tài chính: yêu cầu vốn thay đổi mô hình kinh doanh
 
 Ngân hàng không thể tối đa hóa đòn bẩy như công ty công nghiệp vì phải duy trì bộ đệm vốn và thanh khoản.
 
 Yêu cầu vốn cao hơn có thể làm ROE thấp hơn nhưng khả năng chống chịu cao hơn. Vì vậy so ROE ngân hàng với ROE phần mềm mà bỏ qua quy định vốn là vô nghĩa.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định y tế: giấy phép là một phần của sản phẩm** tiếp nhận điểm tựa từ **Quy định tài chính: yêu cầu vốn thay đổi mô hình kinh doanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy định môi trường và chi phí chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Quy định y tế: giấy phép là một phần của sản phẩm
 
@@ -252,15 +212,11 @@ Khoa học
 
 Quy định nằm trực tiếp trong **mức phù hợp sản phẩm–thị trường**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Quy định môi trường và chi phí chuyển đổi** tiếp nhận điểm tựa từ **Quy định y tế: giấy phép là một phần của sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất định chính sách và quyền chọn thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quy định môi trường và chi phí chuyển đổi
 
 Thép, hóa chất, năng lượng và vận tải chịu quy tắc phát thải, giấy phép và carbon. Chính sách có thể tạo chi phí hiện tại nhưng đồng thời tạo thị trường cho công nghệ sạch hơn.
 
 Doanh nghiệp có cơ sở tài sản cũ có thể chịu rủi ro tài sản mắc kẹt; công ty công nghệ mới có thể hưởng cầu mới. Quy định vì thế phân phối lại giá trị giữa các ngành.
-
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Bất định chính sách và quyền chọn thực** tiếp nhận điểm tựa từ **Quy định môi trường và chi phí chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuân thủ ngày càng là bài toán phần mềm và hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Bất định chính sách và quyền chọn thực
 
@@ -270,8 +226,6 @@ Nếu doanh nghiệp chuẩn bị đầu tư nhà máy 10 nghìn tỷ KRW không
 
 Vì vậy chỉ một thông báo chính sách cũng có thể thay đổi đầu tư trước khi quy định chính thức có hiệu lực.
 
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Tuân thủ ngày càng là bài toán phần mềm và hạ tầng** tiếp nhận điểm tựa từ **Bất định chính sách và quyền chọn thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách lập bản đồ quy định của một công ty Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Tuân thủ ngày càng là bài toán phần mềm và hạ tầng
 
 Quy định hiện đại cần hệ thống giám sát giao dịch, nhật ký kiểm tra (audit log / 감사 로그), kiểm soát riêng tư, dữ liệu kế toán, an ninh mạng và báo cáo.
@@ -279,8 +233,6 @@ Quy định hiện đại cần hệ thống giám sát giao dịch, nhật ký 
 Chi phí tuân thủ vì thế không chỉ là nhân sự pháp lý mà trở thành kiến trúc CNTT doanh nghiệp. Với công ty SI/SM Hàn Quốc, chính quy định tạo ra một phần nhu cầu dự án hệ thống.
 
 Xem [`34_digital_fintech_cloud_and_it_services.md`](./34_digital_fintech_cloud_and_it_services.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Cách lập bản đồ quy định của một công ty Hàn Quốc** tiếp nhận điểm tựa từ **Tuân thủ ngày càng là bài toán phần mềm và hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Cách lập bản đồ quy định của một công ty Hàn Quốc
 
@@ -299,13 +251,9 @@ Quy định tác động lên doanh nghiệp qua nhiều lớp: luật, cơ quan
 
 Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền.
 
-> **Chuyển mạch:** Trong **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** gom các mảnh từ **Cách lập bản đồ quy định của một công ty Hàn Quốc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy
 
 > Thuế và quy định xác định **không gian chiến lược khả thi** của doanh nghiệp. Mô hình kinh doanh không chỉ là sản phẩm + khách hàng; nó còn là sản phẩm + khách hàng + luật + thuế + giấy phép + cấu trúc cạnh tranh. Nếu lợi nhuận phụ thuộc một quy định, quy định đó phải nằm trong mô hình định giá và rủi ro.
-
-> **Chuyển mạch:** Ở chặng này của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Mô hình tư duy (mental model / 사고 모델) — mô hình tư duy** đã nêu tiêu chí phân biệt, còn **Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những nhầm lẫn thường gặp
 
@@ -320,8 +268,6 @@ Sau đó xác định quy định nào thật sự đi thẳng vào dòng tiền
 **Hỗ trợ chính phủ không xóa kinh tế dự án.**
 
 **Thông báo chính sách không phải dòng tiền thật** cho tới khi điều kiện, số tiền và thời điểm rõ ràng.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuế doanh nghiệp, quy định và chính sách cạnh tranh tại Hàn Quốc (Tax & Regulation / 법인세·규제·공정거래)**, **Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **Liên kết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết
 

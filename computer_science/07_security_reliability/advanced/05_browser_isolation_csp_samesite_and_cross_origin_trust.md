@@ -10,23 +10,17 @@ Origin thường được xác định bởi scheme, host và cổng (port / 포
 
 SOP không ngăn mọi cross-origin yêu cầu (request / 요청); nhiều yêu cầu (request / 요청) vẫn có thể được gửi. Điều quan trọng thường là quyền đọc phản hồi (response / 응답) và truy cập (access / 접근) DOM/trạng thái (state / 상태).
 
-> **Nối mạch:** **Origin là ranh giới (boundary / 경계) cơ bản** đặt tiêu chí; **CORS** dùng nó để kiểm tra ranh giới, rồi **CSRF và SameSite** mở rộng hệ quả.
-
 ## CORS
 
 **CORS** là giao thức (protocol / 프로토콜) để máy chủ (server / 서버) nói trình duyệt (browser / 브라우저) rằng origin nào được phép đọc cross-origin phản hồi (response / 응답). Nó không phải authentication và không ngăn non-browser máy khách (client / 클라이언트) gọi API.
 
 Cấu hình `Access-Control-Allow-Origin: *` có thể hợp lệ cho công khai (public / 공개) tài nguyên (resource / 자원) nhưng nguy hiểm nếu nhà phát triển (developer / 개발자) tưởng nó thay thế authorization.
 
-> **Nối mạch:** **CSRF và SameSite** nối từ **CORS** sang **XSS và CSP**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CSRF và SameSite
 
 Cookie có thể được trình duyệt (browser / 브라우저) tự động gửi kèm yêu cầu (request / 요청), tạo nguy cơ Cross-Site yêu cầu (request / 요청) Forgery nếu attacker khiến trình duyệt (browser / 브라우저) người dùng (user / 사용자) gửi state-changing yêu cầu (request / 요청) tới site đang login.
 
-`SameSite` cookie giảm một số cross-site sending contexts. CSRF đơn vị từ (token / 토큰) vẫn hữu ích trong kiến trúc (architecture / 아키텍처) cần bảo vệ các luồng (flow / 흐름) không được SameSite cover đầy đủ.
-
-> **Nối mạch:** **XSS và CSP** nối từ **CSRF và SameSite** sang **iframe và embedding**, vì cơ chế trước tạo đầu vào cho bước sau.
+`SameSite` cookie giảm một số cross-site sending contexts. CSRF token (토큰) vẫn hữu ích trong kiến trúc (architecture / 아키텍처) cần bảo vệ các luồng (flow / 흐름) không được SameSite cover đầy đủ.
 
 ## XSS và CSP
 
@@ -34,29 +28,21 @@ Cross-Site Scripting cho attacker chạy script trong origin của ứng dụng 
 
 **Content bảo mật (security / 보안) chính sách (policy / 정책) (CSP)** giới hạn nguồn script/tài nguyên (resource / 자원) và có thể giảm impact khi injection xảy ra. CSP tốt là defense-in-depth, không thay thế fix XSS.
 
-> **Nối mạch:** **iframe và embedding** nối từ **XSS và CSP** sang **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## iframe và embedding
 
 Iframe tạo browsing ngữ cảnh (context / 맥락) riêng nhưng parent/child communication qua `postMessage` cần validate `origin` và message lược đồ (schema / 스키마). Dùng wildcard mục tiêu (target / 대상) origin hoặc tin mọi incoming message làm ranh giới (boundary / 경계) yếu đi.
 
 Frame-ancestors/CSP hoặc X-Frame-Options giúp chống clickjacking bằng cách kiểm soát ai được embed page.
 
-> **Nối mạch:** **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** nối từ **iframe và embedding** sang **Site isolation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lưu trữ trình duyệt (browser storage / 브라우저 저장소)
 
-LocalStorage dễ dùng nhưng script cùng origin có thể đọc, nên XSS có thể lấy bearer đơn vị từ (token / 토큰) lưu ở đó. HttpOnly cookie không cho JavaScript đọc trực tiếp nhưng vẫn cần CSRF lập luận (reasoning / 추론).
+LocalStorage dễ dùng nhưng script cùng origin có thể đọc, nên XSS có thể lấy bearer token (토큰) lưu ở đó. HttpOnly cookie không cho JavaScript đọc trực tiếp nhưng vẫn cần CSRF lập luận (reasoning / 추론).
 
 Không có lưu trữ (storage / 저장소) choice “an toàn tuyệt đối”; threat mô hình (model / 모델) quyết định sự đánh đổi (trade-off / 트레이드오프) giữa XSS exposure, CSRF và UX/session kiến trúc (architecture / 아키텍처).
-
-> **Nối mạch:** **Site isolation** nối từ **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Site isolation
 
 Hiện đại (modern / 현대적) browsers còn dùng tiến trình (process / 프로세스) isolation để tách sites/origins ở OS tiến trình (process / 프로세스) mức (level / 수준), giảm blast radius của renderer compromise và side-channel classes. Đây là ví dụ ranh giới bảo mật (security boundary / 보안 경계) được reinforce qua nhiều layers: web chính sách (policy / 정책) + tiến trình (process / 프로세스) sandbox + hardware mitigations.
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Site isolation**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

@@ -120,7 +120,7 @@ Cross-encoder thường chính xác nhưng đắt khi chấm hàng triệu tài 
 
 ## Late tương tác (interaction / 상호작용)
 
-Các architectures như late tương tác (interaction / 상호작용) giữ multiple đơn vị từ (token / 토큰) vectors cho document/truy vấn (query / 쿼리) rồi compute finer tương tác (interaction / 상호작용) mà vẫn pre-index được phần document.
+Các architectures như late tương tác (interaction / 상호작용) giữ multiple token (토큰) vectors cho document/truy vấn (query / 쿼리) rồi compute finer tương tác (interaction / 상호작용) mà vẫn pre-index được phần document.
 
 Nó nằm giữa bi-encoder và cross-encoder về chi phí (cost / 비용)/chất lượng (quality / 품질).
 
@@ -166,7 +166,7 @@ Semantic similarity có thể bỏ qua identifier và con số quan trọng; exa
 
 Embedding mô hình (model / 모델) có thể smooth rare strings. lỗi (error / 오류) mã (code / 코드) `E1012` và `E1013` có thể nằm gần nhau dù khác meaning operationally.
 
-Sparse retrieval nên giữ chính xác (exact / 정확한) đơn vị từ (token / 토큰) tín hiệu (signal / 신호).
+Sparse retrieval nên giữ chính xác (exact / 정확한) token (토큰) tín hiệu (signal / 신호).
 
 Exact-match bảo vệ token hiếm, còn multilingual retrieval mở rộng khả năng nối cùng intent giữa các ngôn ngữ; cả hai đều cần evaluation theo ngữ cảnh sử dụng.
 

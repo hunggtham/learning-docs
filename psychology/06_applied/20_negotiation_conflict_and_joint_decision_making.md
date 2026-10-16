@@ -10,8 +10,6 @@
 
 Hai người có thể tranh cãi “deadline phải là thứ Sáu” và “phải là thứ Hai”, nhưng interest thật có thể là một bên cần demo cho khách hàng còn bên kia muốn tránh deploy khi chưa có quay lui (rollback / 롤백) plan. Khi interest được làm rõ, solution không gian (space / 공간) rộng hơn.
 
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **BATNA** nối từ **Position và interest** sang **Reservation điểm (point / 지점) và ZOPA**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## BATNA
 
 **Phương án thay thế tốt nhất nếu không đạt thỏa thuận (Best Alternative to a Negotiated Agreement — BATNA)** quyết định sức mạnh thực tế của một bên. Nếu không có deal thì điều gì xảy ra?
@@ -20,15 +18,11 @@ BATNA khác aspiration. Một người có thể muốn salary 100 nhưng nếu 
 
 BATNA nên được cải thiện trước negotiation khi có thể, thay vì chỉ cố “nói hay hơn” trong phòng họp.
 
-> **Nối mạch:** Ở chặng này của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Reservation điểm (point / 지점) và ZOPA** nối từ **BATNA** sang **Distributive và integrative negotiation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reservation điểm (point / 지점) và ZOPA
 
 **Điểm giới hạn (reservation point)** là threshold mà dưới đó deal không còn tốt hơn BATNA. Nếu reservation phạm vi (range / 범위) của hai bên overlap, có **vùng có thể thỏa thuận (Zone of Possible Agreement — ZOPA)**.
 
 Không có ZOPA thì kỹ năng giao tiếp không thể tạo giá trị (value / 값) từ không khí; cần thay cấu trúc (structure / 구조), thêm issue hoặc chấp nhận no-deal.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Distributive và integrative negotiation** nối từ **Reservation điểm (point / 지점) và ZOPA** sang **Anchoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Distributive và integrative negotiation
 
@@ -36,15 +30,11 @@ Không có ZOPA thì kỹ năng giao tiếp không thể tạo giá trị (value
 
 Ví dụ, một bên coi remote day rất quan trọng nhưng ít quan tâm title; bên kia dễ cho remote hơn tăng salary. Multi-issue negotiation tạo cơ hội exchange thay vì chỉ kéo một con số qua lại.
 
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Anchoring** nối từ **Distributive và integrative negotiation** sang **Fairness**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Anchoring
 
 Con số đầu tiên có thể tạo **neo nhận thức (anchoring)**. Anchor mạnh khi bất định (uncertainty / 불확실성) lớn và counter-information yếu.
 
 Điều này không có nghĩa “luôn phải nói số đầu tiên”. Nếu bạn có dữ liệu thị trường (market / 시장) tốt, first offer có thể giúp frame phạm vi (range / 범위). Nếu thông tin (information / 정보) rất yếu, anchor của bên kia có thể tiết lộ useful dữ liệu (data / 데이터) nhưng cũng tạo độ lệch (bias / 편향).
-
-> **Nối mạch:** Ở chặng này của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Fairness** nối từ **Anchoring** sang **Reactive devaluation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fairness
 
@@ -52,15 +42,11 @@ Con người không chỉ tối ưu tiền; perceived fairness ảnh hưởng wi
 
 **Công bằng kết quả (distributive justice)** khác **công bằng quy trình (procedural justice)**. Người ta có thể chấp nhận kết quả (outcome / 결과) không lý tưởng nếu tiến trình (process / 프로세스) minh bạch và họ có voice.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Reactive devaluation** nối từ **Fairness** sang **Face và định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reactive devaluation
 
 **Giảm giá trị vì nguồn đề xuất (reactive devaluation)** xảy ra khi một proposal bị xem kém hơn chỉ vì đến từ đối thủ. Trong xung đột (conflict / 충돌) kéo dài, cùng một idea nếu do third party nói có thể được đón nhận tốt hơn.
 
 Kỹ thuật hữu ích là đánh giá option theo criterion trước khi biết ai đề xuất, khi ngữ cảnh (context / 맥락) cho phép.
-
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Face và định danh (identity / 식별자)** nối từ **Reactive devaluation** sang **Emotion trong negotiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Face và định danh (identity / 식별자)
 
@@ -70,23 +56,17 @@ Cho đối phương cách thay đổi position mà không mất face thường q
 
 Xem [[03_interpersonal_communication_and_conflict]].
 
-> **Nối mạch:** Ở chặng này của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Emotion trong negotiation** nối từ **Face và định danh (identity / 식별자)** sang **Thông tin (information / 정보) sharing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Emotion trong negotiation
 
 Anger có thể tín hiệu (signal / 신호) firmness nhưng cũng tăng retaliation hoặc reduce thông tin (information / 정보) sharing. Anxiety có thể làm người ta accept nhanh hơn để thoát discomfort. Excitement có thể làm overbid.
 
 Goal không phải trở thành emotionless. Tốt hơn là nhận biết trạng thái (state / 상태) trước quyết định (decision / 결정) có irreversible consequence.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Thông tin (information / 정보) sharing** nối từ **Emotion trong negotiation** sang **Multi-party negotiation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thông tin (information / 정보) sharing
 
 Integrative deal cần chia sẻ một phần interest, nhưng disclosure tạo vulnerability. Trust thấp làm hai bên giữ thông tin (information / 정보), khiến mutually beneficial sự đánh đổi (trade-off / 트레이드오프) không được phát hiện.
 
 Vì vậy negotiation tốt thường cần **chia sẻ có chọn lọc (selective disclosure)**: reveal preference cấu trúc (structure / 구조) đủ để tạo giá trị (value / 값) nhưng không nhất thiết reveal mọi limit.
-
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Multi-party negotiation** nối từ **Thông tin (information / 정보) sharing** sang **Escalation of commitment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-party negotiation
 
@@ -96,15 +76,11 @@ Trong dự án (project / 프로젝트) cross-team, “ai được mời vào me
 
 Xem [[16_psychological_safety_team_learning_and_speaking_up]] và [[../03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]].
 
-> **Nối mạch:** Ở chặng này của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Escalation of commitment** nối từ **Multi-party negotiation** sang **Negotiation trong công việc kỹ thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Escalation of commitment
 
 Sau khi đã đầu tư nhiều vào một position, người ta dễ tiếp tục để tránh thừa nhận mất mát (loss / 손실). Đây là **leo thang cam kết (escalation of commitment)**, gần với sunk chi phí (cost / 비용).
 
 Một cách giảm là đặt exit criterion trước: nếu chỉ số (metric / 지표) A không đạt sau N tuần, nhóm (team / 팀) re-evaluate thay vì defend dự án (project / 프로젝트) vô hạn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Negotiation trong công việc kỹ thuật** nối từ **Escalation of commitment** sang **Xung đột (conflict / 충돌) và joint bài toán (problem / 문제) solving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Negotiation trong công việc kỹ thuật
 
@@ -112,15 +88,11 @@ Nhà phát triển (developer / 개발자) thường negotiation về phạm vi 
 
 Thay vì “phải refactor vì mã (code / 코드) xấu”, translation tốt hơn có thể là “nếu không xử lý mô-đun (module / 모듈) này, bản phát hành (release / 릴리스) tiếp theo có xác suất regression cao hơn và lead thời gian (time / 시간) tăng”. Negotiation hiệu quả cần map technical concern sang interest của người nghe.
 
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Xung đột (conflict / 충돌) và joint bài toán (problem / 문제) solving** nối từ **Negotiation trong công việc kỹ thuật** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xung đột (conflict / 충돌) và joint bài toán (problem / 문제) solving
 
 Khi relationship dài hạn, thắng một issue nhưng phá trust có thể là kết quả (outcome / 결과) kém. Joint bài toán (problem / 문제) solving hỏi: ràng buộc (constraint / 제약조건) chung là gì, thông tin (information / 정보) nào mỗi bên giữ, và quyết định (decision / 결정) quy tắc (rule / 규칙) nào cả hai chấp nhận?
 
 Điều này không có nghĩa tránh disagreement. xung đột (conflict / 충돌) tác vụ (task / 작업) có thể hữu ích nếu psychological an toàn (safety / 안전) đủ để tranh luận idea mà không biến thành attack cá nhân.
-
-> **Nối mạch:** Ở chặng này của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Những hiểu lầm phổ biến** nối từ **Xung đột (conflict / 충돌) và joint bài toán (problem / 문제) solving** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -131,8 +103,6 @@ Khi relationship dài hạn, thắng một issue nhưng phá trust có thể là
 **“Compromise luôn công bằng.”** Chia đôi có thể bỏ qua difference về giá trị (value / 값) hoặc ràng buộc (constraint / 제약조건).
 
 **“Nếu bên kia không đồng ý thì cần thuyết phục mạnh hơn.”** Có thể đơn giản là không có ZOPA.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -154,8 +124,6 @@ relationship + future bargaining power
 ```
 
 > Đàm phán tốt không chỉ hỏi “mình lấy được bao nhiêu?”, mà hỏi “cấu trúc (structure / 구조) của lựa chọn là gì và agreement này thay đổi quan hệ tương lai ra sao?”.
-
-> **Nối mạch:** Trong **Đàm phán, xung đột và ra quyết định chung — Negotiation & Joint quyết định (decision / 결정) Making**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

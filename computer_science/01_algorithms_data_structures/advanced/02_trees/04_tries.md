@@ -592,7 +592,7 @@ Trie không luôn tiết kiệm hơn hash table, không tự giải quyết Unic
 
 “Trie lookup O(L) nên luôn nhanh hơn HashMap” — sai; constant factor và bộ nhớ (memory / 메모리) locality rất khác.
 
-“Trie chỉ dùng cho từ tiếng Anh” — sai; key có thể là byte, bit, đơn vị từ (token / 토큰) hoặc mã (code / 코드) điểm (point / 지점).
+“Trie chỉ dùng cho từ tiếng Anh” — sai; key có thể là byte, bit, token (토큰) hoặc mã (code / 코드) điểm (point / 지점).
 
 “Prefix truy vấn (query / 쿼리) luôn cần Trie” — sai; sorted array/static dictionary có thể đơn giản hơn.
 

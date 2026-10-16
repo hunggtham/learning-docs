@@ -268,8 +268,6 @@ X_A=\frac{n_{A,0}-n_A}{n_{A,0}}
 
 cho biết phần A đã phản ứng.
 
-> **Nối mạch:** Độ chuyển hóa cho biết bao nhiêu chất đã phản ứng; độ chọn lọc cho biết phần sản phẩm đi đúng hướng, và hiệu suất tiếp theo đối chiếu sản lượng thực với giới hạn lý thuyết.
-
 ## Độ chọn lọc
 
 Nếu A tạo sản phẩm mong muốn P và phụ phẩm U, có thể định nghĩa chọn lọc theo mol hoặc carbon tùy bài toán.
@@ -281,8 +279,6 @@ S_{P/U}=\frac{n_P}{n_U}
 \]
 
 sau khi hiệu chỉnh theo hóa lượng nếu cần.
-
-> **Nối mạch:** Ở chặng này của **Hóa lượng — định lượng phản ứng từ các định luật bảo toàn**, **Hiệu suất tạo sản phẩm** nối từ **Độ chọn lọc** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Hiệu suất tạo sản phẩm
 

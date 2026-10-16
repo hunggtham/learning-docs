@@ -8,8 +8,6 @@ Epistemic virtue chuyển câu hỏi từ “belief này có justified không?�
 
 Một trait chỉ có giá trị epistemic khi nó hoạt động đúng ngữ cảnh (context / 맥락). Skepticism giúp chống credulity nhưng thành denial khi mọi bằng chứng (evidence / 증거) đều bị bác bỏ. Confidence giúp hành động dưới bất định (uncertainty / 불확실성) nhưng thành overclaim nếu không calibration. Humility là khả năng nhận giới hạn mà vẫn kết luận khi bằng chứng (evidence / 증거) đủ mạnh.
 
-> **Chuyển mạch:** Epistemic virtue không phải branding personality; trait phải hiện thành practice dưới điều kiện khó, nơi attention, humility và courage cải thiện inquiry.
-
 ## From trait to practice
 
 Có thể biến virtue thành procedure: ghi forecast trước khi biết kết quả (outcome / 결과), tách observation khỏi interpretation, tìm disconfirming bằng chứng (evidence / 증거), dùng checklist cho quyết định lặp lại và công khai xung đột (conflict / 충돌) of interest. Đây là điểm nối giữa ethics của người biết, metacognition và khoa học mở.

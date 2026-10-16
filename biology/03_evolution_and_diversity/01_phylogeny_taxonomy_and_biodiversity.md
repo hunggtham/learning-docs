@@ -14,8 +14,6 @@ Hai tip nằm cạnh nhau trên hình không nhất thiết “giống nhau hơn
 
 Không có tip nào “cao cấp hơn” tip khác. Human và chimpanzee đều là lineage hiện đại, mỗi bên có lịch sử (history / 이력) riêng từ tổ tiên chung.
 
-> **Nối mạch:** Tree of life encodes branching ancestry, not a ladder; reading topology correctly lets homology signal shared origin while analogy signals convergent function.
-
 ## 2. Cách đọc một cây (tree / 트리) đúng
 
 Nếu nút (node / 노드) chia thành A và B, A và B là **nhóm chị em (sister taxa)**. Một group gồm ancestor và toàn bộ descendant gọi là **clade (nhánh đơn ngành / 단계통군)**.
@@ -23,8 +21,6 @@ Nếu nút (node / 노드) chia thành A và B, A và B là **nhóm chị em (si
 Cây (tree / 트리) có thể rotate quanh nút (node / 노드) mà relationship không đổi. Vì vậy thứ tự (order / 순서) trái–phải của tip thường không mang meaning evolutionary progress.
 
 Độ dài nhánh (branch length) chỉ có meaning nếu cây (tree / 트리) được quy mô (scale / 규모) theo amount thay đổi (change / 변경) hoặc thời gian (time / 시간); không phải mọi cây (tree / 트리) đều như vậy.
-
-> **Nối mạch:** **3. Homology và analogy** nối từ **2. Cách đọc một cây (tree / 트리) đúng** sang **4. Đặc điểm dẫn xuất chung (shared derived character)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Homology và analogy
 
@@ -34,8 +30,6 @@ Cây (tree / 트리) có thể rotate quanh nút (node / 노드) mà relationshi
 
 Phân biệt homology với convergence cực kỳ quan trọng khi reconstruct cây (tree / 트리).
 
-> **Nối mạch:** **4. Đặc điểm dẫn xuất chung (shared derived character)** nối từ **3. Homology và analogy** sang **5. Molecular phylogenetics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Đặc điểm dẫn xuất chung (shared derived character)
 
 Phylogenetic suy luận (inference / 추론) tìm **dùng chung (shared / 공유) derived characters (synapomorphy / 공유파생형질)** — trait xuất hiện ở tổ tiên chung gần và được descendant chia sẻ.
@@ -43,8 +37,6 @@ Phylogenetic suy luận (inference / 추론) tìm **dùng chung (shared / 공유
 Một trait ancestral quá rộng thường không giúp phân giải relationship gần.
 
 Ví dụ vertebral column giúp define vertebrate clade nhưng không phân biệt mammal species với nhau.
-
-> **Nối mạch:** **5. Molecular phylogenetics** nối từ **4. Đặc điểm dẫn xuất chung (shared derived character)** sang **6. Căn chỉnh trình tự (sequence alignment) là bước lập luận (reasoning / 추론) chứ không chỉ thao tác kỹ thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Molecular phylogenetics
 
@@ -54,8 +46,6 @@ Nhưng gene cây (tree / 트리) có thể khác species cây (tree / 트리) do
 
 Một gene không phải luôn đại diện toàn lịch sử (history / 이력) của species.
 
-> **Nối mạch:** **6. Căn chỉnh trình tự (sequence alignment) là bước lập luận (reasoning / 추론) chứ không chỉ thao tác kỹ thuật** nối từ **5. Molecular phylogenetics** sang **7. Parsimony, likelihood và Bayesian suy luận (inference / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Căn chỉnh trình tự (sequence alignment) là bước lập luận (reasoning / 추론) chứ không chỉ thao tác kỹ thuật
 
 Trước khi so difference, ta cần align nucleotide/axit amin (amino acid) sao cho position tương ứng homologous được đặt cạnh nhau.
@@ -63,8 +53,6 @@ Trước khi so difference, ta cần align nucleotide/axit amin (amino acid) sao
 Insertion/deletion làm alignment không trivial. thuật toán (algorithm / 알고리즘) dùng scoring cho match, mismatch, gap.
 
 Bad alignment có thể tạo false phylogenetic tín hiệu (signal / 신호). Đây là liên kết (connection / 연결) trực tiếp với bioinformatics.
-
-> **Nối mạch:** **7. Parsimony, likelihood và Bayesian suy luận (inference / 추론)** nối từ **6. Căn chỉnh trình tự (sequence alignment) là bước lập luận (reasoning / 추론) chứ không chỉ thao tác kỹ thuật** sang **8. hỗ trợ (support / 지원) cho branch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Parsimony, likelihood và Bayesian suy luận (inference / 추론)
 
@@ -76,8 +64,6 @@ Bad alignment có thể tạo false phylogenetic tín hiệu (signal / 신호). 
 
 Không có phương thức (method / 메서드) “nhìn dữ liệu (data / 데이터) rồi cây (tree / 트리) tự xuất hiện”; mỗi suy luận (inference / 추론) dựa trên mô hình (model / 모델) đột biến (mutation)/tiến hóa.
 
-> **Nối mạch:** **8. hỗ trợ (support / 지원) cho branch** nối từ **7. Parsimony, likelihood và Bayesian suy luận (inference / 추론)** sang **9. Đồng hồ phân tử (molecular clock)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. hỗ trợ (support / 지원) cho branch
 
 Bootstrap resampling hoặc posterior xác suất (probability / 확률) được dùng đánh giá hỗ trợ (support / 지원) của clade.
@@ -86,8 +72,6 @@ Hỗ trợ (support / 지원) cao không có nghĩa cây (tree / 트리) chắc 
 
 Bất định (uncertainty / 불확실성) nên được giữ lại thay vì ép mọi branch thành certainty.
 
-> **Nối mạch:** **9. Đồng hồ phân tử (molecular clock)** nối từ **8. hỗ trợ (support / 지원) cho branch** sang **10. Phân loại học (taxonomy): đặt tên để communication ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Đồng hồ phân tử (molecular clock)
 
 Nếu substitution tích lũy gần đều theo thời gian (time / 시간) ở marker phù hợp, chuỗi (sequence / 시퀀스) divergence có thể estimate split thời gian (time / 시간).
@@ -95,8 +79,6 @@ Nếu substitution tích lũy gần đều theo thời gian (time / 시간) ở 
 Nhưng tỷ lệ (rate / 비율) thay đổi giữa lineage/gen (gene). Calibration bằng fossil hoặc geological sự kiện (event / 이벤트) cần thiết.
 
 Clock là mô hình (model / 모델) có lỗi (error / 오류) bar, không phải đồng hồ literal.
-
-> **Nối mạch:** **10. Phân loại học (taxonomy): đặt tên để communication ổn định** nối từ **9. Đồng hồ phân tử (molecular clock)** sang **11. Three domains**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Phân loại học (taxonomy): đặt tên để communication ổn định
 
@@ -108,8 +90,6 @@ Hierarchy truyền thống: lĩnh vực (domain / 도메인) → Kingdom → Phy
 
 Nhưng phân loại hiện đại ngày càng ưu tiên clade và phylogeny hơn rigid rank.
 
-> **Nối mạch:** **11. Three domains** nối từ **10. Phân loại học (taxonomy): đặt tên để communication ổn định** sang **12. Bacteria: đa dạng chuyển hóa (metabolic diversity) khổng lồ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Three domains
 
 Life cellular hiện đại thường được chia ba lĩnh vực (domain / 도메인): **Bacteria, Archaea, Eukarya**.
@@ -118,15 +98,11 @@ Archaea từng bị gộp với bacteria vì đều prokaryotic, nhưng molecula
 
 Đây là ví dụ molecular phylogeny thay đổi taxonomy.
 
-> **Nối mạch:** **12. Bacteria: đa dạng chuyển hóa (metabolic diversity) khổng lồ** nối từ **11. Three domains** sang **13. Archaea: không chỉ organism sống ở cực hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Bacteria: đa dạng chuyển hóa (metabolic diversity) khổng lồ
 
 Bacteria không phải synonym “germ gây bệnh”. Phần lớn bacteria không pathogenic; nhiều species essential trong chu trình dinh dưỡng (nutrient cycle), microbiome và công nghệ sinh học (biotechnology).
 
 Bacteria có tế bào (cell) kiến trúc (architecture / 아키텍처) prokaryotic nhưng metabolism rất đa dạng: aerobic/anaerobic respiration, lên men (fermentation), quang hợp (photosynthesis), chemolithotrophy.
-
-> **Nối mạch:** **13. Archaea: không chỉ organism sống ở cực hạn** nối từ **12. Bacteria: đa dạng chuyển hóa (metabolic diversity) khổng lồ** sang **14. Eukarya và major lineage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Archaea: không chỉ organism sống ở cực hạn
 
@@ -136,8 +112,6 @@ Methanogen là group đặc biệt tạo methane trong anaerobic môi trường 
 
 Archaea cho thấy morphology “nhìn giống bacteria” không đồng nghĩa close evolutionary relationship.
 
-> **Nối mạch:** **14. Eukarya và major lineage** nối từ **13. Archaea: không chỉ organism sống ở cực hạn** sang **15. Plant diversity như lịch sử (history / 이력) của chuyển tiếp (transition / 전이) lên land**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Eukarya và major lineage
 
 Eukarya gồm animal, plant, fungi và nhiều protist lineage.
@@ -145,8 +119,6 @@ Eukarya gồm animal, plant, fungi và nhiều protist lineage.
 “Protist” thường là convenience category hơn clade tự nhiên duy nhất.
 
 Phát sinh chủng loại hiện đại cho thấy eukaryotic diversity sâu hơn classification schoolbook kingdom đơn giản.
-
-> **Nối mạch:** **15. Plant diversity như lịch sử (history / 이력) của chuyển tiếp (transition / 전이) lên land** nối từ **14. Eukarya và major lineage** sang **16. Fungi: absorptive heterotroph và mạng (network / 네트워크) hyphae**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Plant diversity như lịch sử (history / 이력) của chuyển tiếp (transition / 전이) lên land
 
@@ -156,8 +128,6 @@ Bryophyte, vascular plant, seed plant và flowering plant phản ánh các innov
 
 Plant biology chapter sẽ xem cơ chế (mechanism / 메커니즘) của những innovation này.
 
-> **Nối mạch:** **16. Fungi: absorptive heterotroph và mạng (network / 네트워크) hyphae** nối từ **15. Plant diversity như lịch sử (history / 이력) của chuyển tiếp (transition / 전이) lên land** sang **17. Animal diversity và sơ đồ cơ thể (body plan)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Fungi: absorptive heterotroph và mạng (network / 네트워크) hyphae
 
 Fungi không phải plant. Chúng lấy nutrient bằng secretion enzyme ra môi trường rồi absorb sản phẩm (product / 제품).
@@ -166,8 +136,6 @@ Hypha tạo mycelium với diện tích bề mặt (surface area) lớn, rất p
 
 Mycorrhiza nối fungi với plant gốc (root / 루트), ảnh hưởng nutrient acquisition và ecosystem chu trình dinh dưỡng.
 
-> **Nối mạch:** **17. Animal diversity và sơ đồ cơ thể (body plan)** nối từ **16. Fungi: absorptive heterotroph và mạng (network / 네트워크) hyphae** sang **18. Biodiversity có nhiều cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. Animal diversity và sơ đồ cơ thể (body plan)
 
 Animal evolution tạo nhiều sơ đồ cơ thể khác nhau về symmetry, tissue tầng (layer / 계층), body cavity, segmentation và phát triển (development).
@@ -175,8 +143,6 @@ Animal evolution tạo nhiều sơ đồ cơ thể khác nhau về symmetry, tis
 Không cần học toàn taxonomy trước để hiểu principle: chương trình phát triển (developmental program) và điều hòa gen (gene regulation) tạo kiến trúc (architecture / 아키텍처) body; selection và lịch sử (history / 이력) tạo diversification.
 
 Vertebrate chỉ là một nhánh nhỏ trong animal diversity.
-
-> **Nối mạch:** **18. Biodiversity có nhiều cấp** nối từ **17. Animal diversity và sơ đồ cơ thể (body plan)** sang **19. Species richness và evenness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Biodiversity có nhiều cấp
 
@@ -188,8 +154,6 @@ Vertebrate chỉ là một nhánh nhỏ trong animal diversity.
 
 Mất biodiversity không chỉ là “mất số loài”. mất mát (loss / 손실) đa dạng di truyền làm population khó adapt; mất mát (loss / 손실) nhóm chức (functional group) có thể đổi ecosystem quá trình (process).
 
-> **Nối mạch:** **19. Species richness và evenness** nối từ **18. Biodiversity có nhiều cấp** sang **20. Extinction là phần tự nhiên của evolution nhưng tỷ lệ (rate / 비율) quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Species richness và evenness
 
 Community có thể có cùng số species nhưng phân phối (distribution / 분포) abundance rất khác.
@@ -197,8 +161,6 @@ Community có thể có cùng số species nhưng phân phối (distribution / �
 **Richness** là số loài; **evenness** phản ánh abundance phân bố đều đến đâu.
 
 Diversity chỉ mục (index / 인덱스) kết hợp hai dimension, nhưng choice chỉ số (metric / 지표) phụ thuộc question.
-
-> **Nối mạch:** **20. Extinction là phần tự nhiên của evolution nhưng tỷ lệ (rate / 비율) quan trọng** nối từ **19. Species richness và evenness** sang **21. Bức xạ thích nghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Extinction là phần tự nhiên của evolution nhưng tỷ lệ (rate / 비율) quan trọng
 
@@ -208,8 +170,6 @@ Sau tuyệt chủng (extinction), ecological niche trống có thể tạo bức
 
 Hiện tại (current / 현재) extinction concern không phải vì “extinction chưa từng xảy ra”, mà vì tốc độ (rate), cause và hệ quả (consequence) đối với ecosystem/human society.
 
-> **Nối mạch:** **21. Bức xạ thích nghi** nối từ **20. Extinction là phần tự nhiên của evolution nhưng tỷ lệ (rate / 비율) quan trọng** sang **22. Convergent evolution**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 21. Bức xạ thích nghi
 
 Khi lineage tiếp cận nhiều niche mới, diversification có thể nhanh. Island colonization hoặc key innovation có thể mở ecological opportunity.
@@ -217,8 +177,6 @@ Khi lineage tiếp cận nhiều niche mới, diversification có thể nhanh. I
 Darwin’s finches thường được dùng minh họa beak diversification theo food niche.
 
 Phát sinh chủng loại (phylogeny) + ecology cùng giải thích mẫu (pattern / 패턴).
-
-> **Nối mạch:** **22. Convergent evolution** nối từ **21. Bức xạ thích nghi** sang **23. Chuyển gen ngang làm cây (tree / 트리) of life thành mạng (network / 네트워크) ở microbes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Convergent evolution
 
@@ -228,8 +186,6 @@ Streamlined body ở shark, ichthyosaur extinct và dolphin là convergence do h
 
 Convergence nhắc ta không suy cây (tree / 트리) chỉ từ superficial similarity.
 
-> **Nối mạch:** **23. Chuyển gen ngang làm cây (tree / 트리) of life thành mạng (network / 네트워크) ở microbes** nối từ **22. Convergent evolution** sang **24. Nội cộng sinh (endosymbiosis) và chimeric lịch sử (history / 이력) của eukaryote**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Chuyển gen ngang làm cây (tree / 트리) of life thành mạng (network / 네트워크) ở microbes
 
 Bacteria/Archaea có thể trao đổi gene qua transformation, transduction, conjugation.
@@ -237,8 +193,6 @@ Bacteria/Archaea có thể trao đổi gene qua transformation, transduction, co
 Vì vậy một gene như kháng kháng sinh (antibiotic resistance) có lịch sử (history / 이력) khác organism dòng dõi.
 
 Ở deep microbial evolution, “cây (tree / 트리)” đôi khi cần bổ sung mạng (network / 네트워크) reticulation.
-
-> **Nối mạch:** **24. Nội cộng sinh (endosymbiosis) và chimeric lịch sử (history / 이력) của eukaryote** nối từ **23. Chuyển gen ngang làm cây (tree / 트리) of life thành mạng (network / 네트워크) ở microbes** sang **25. Biogeography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Nội cộng sinh (endosymbiosis) và chimeric lịch sử (history / 이력) của eukaryote
 
@@ -248,8 +202,6 @@ Eukaryotic cell vì vậy mang genetic/lịch sử (history / 이력) thành ph�
 
 Evolution không chỉ phân nhánh; đôi khi lineage merge qua symbiosis.
 
-> **Nối mạch:** **25. Biogeography** nối từ **24. Nội cộng sinh (endosymbiosis) và chimeric lịch sử (history / 이력) của eukaryote** sang **26. Conservation cần phylogeny**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Biogeography
 
 Phân phối (distribution / 분포) species trên Earth chứa bằng chứng (evidence / 증거) lịch sử (history / 이력). Island species thường gần relative trên mainland/nearby island nhưng diverge sau isolation.
@@ -257,8 +209,6 @@ Phân phối (distribution / 분포) species trên Earth chứa bằng chứng (
 Continental drift cũng giải thích mẫu (pattern / 패턴) hóa thạch (fossil)/living species.
 
 Biogeography nối evolution với geology và sinh thái học (ecology).
-
-> **Nối mạch:** **26. Conservation cần phylogeny** nối từ **25. Biogeography** sang **27. Tình huống phân tích (case study): whale vẫn là mammal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Conservation cần phylogeny
 
@@ -268,8 +218,6 @@ Phylogenetic diversity là một dimension của biodiversity planning.
 
 Nhưng conservation quyết định (decision / 결정) còn phụ thuộc ecology, xã hội (social / 사회적) giá trị (value / 값) và độ bất định (uncertainty / 불확실성); không có một chỉ số (metric / 지표) duy nhất quyết định mọi thứ.
 
-> **Nối mạch:** **26. Conservation cần phylogeny** nêu quy tắc; **27. Tình huống phân tích (case study): whale vẫn là mammal** thử quy tắc trong tình huống, rồi **28. Tình huống phân tích: giant panda taxonomy** mở rộng hệ quả.
-
 ## 27. Tình huống phân tích (case study): whale vẫn là mammal
 
 Whale sống dưới nước và body streamlined giống fish ở superficial mức (level / 수준), nhưng anatomy, development và molecular phylogeny đặt whale trong mammals, gần hippo hơn fish.
@@ -278,15 +226,11 @@ Convergent adaptation với aquatic môi trường (environment / 환경) làm b
 
 Cây (tree / 트리) thinking giúp phân biệt ancestry với hàm (function / 함수).
 
-> **Nối mạch:** **27. Tình huống phân tích (case study): whale vẫn là mammal** nêu quy tắc; **28. Tình huống phân tích: giant panda taxonomy** thử quy tắc trong tình huống, rồi **29. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 28. Tình huống phân tích: giant panda taxonomy
 
 Hình thái (morphology)/diet từng gây tranh luận quan hệ (relation / 관계) của giant panda. Molecular bằng chứng (evidence / 증거) đặt giant panda trong bear family, còn red panda ở lineage riêng gần musteloid group hơn.
 
 DNA dữ liệu (data / 데이터) có thể resolve ambiguity mà hình thái đơn độc khó giải.
-
-> **Nối mạch:** **28. Tình huống phân tích: giant panda taxonomy** nêu quy tắc; **29. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Cây (tree / 트리) suy luận (inference / 추론) có thể thất bại khi mô hình (model / 모델) sai** mở rộng hệ quả.
 
 ## 29. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -302,8 +246,6 @@ DNA dữ liệu (data / 데이터) có thể resolve ambiguity mà hình thái �
 
 <!-- depth-audit-2026:tree-model-failure -->
 
-> **Nối mạch:** **Cây (tree / 트리) suy luận (inference / 추론) có thể thất bại khi mô hình (model / 모델) sai** nối từ **29. Các hiểu lầm phổ biến (common misconceptions)** sang **30. cầu nối (bridge / 브리지): microbe và virus làm evolutionary quy tắc (rule / 규칙) trở nên rõ nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cây (tree / 트리) suy luận (inference / 추론) có thể thất bại khi mô hình (model / 모델) sai
 
 Nhiều substitution ở cùng một site có thể che lịch sử (history / 이력) cũ; lineage tiến hóa nhanh có thể vô tình giống nhau ở nhiều position. Nếu mô hình (model / 모델) không xử lý tỷ lệ (rate / 비율) variation hoặc composition độ lệch (bias / 편향) phù hợp, **hấp dẫn nhánh dài (long-branch attraction)** có thể kéo các lineage xa nhau thành group giả, đặc biệt với phương pháp đơn giản.
@@ -313,8 +255,6 @@ Gene cây (tree / 트리) và species cây (tree / 트리) cũng khác nhau theo
 **Tái dựng trạng thái tổ tiên (ancestral-state reconstruction)** có thể estimate trait ở nút (node / 노드) quá khứ, nhưng conclusion phụ thuộc cây (tree / 트리), mô hình (model / 모델) chuyển tiếp (transition / 전이) và sampling. Càng lùi sâu, bất định (uncertainty / 불확실성) thường tăng. Phylogeny mạnh nhất khi giữ bất định (uncertainty / 불확실성) hiển thị thay vì biến hypothesis thành certainty.
 
 Trong conservation, phylogenetic diversity bổ sung chứ không thay thế abundance, ecological hàm (function / 함수) hay extinction rủi ro (risk / 위험). Một quyết định tốt phải ghép lịch sử (history / 이력), hàm (function / 함수), population viability và xã hội (social / 사회적) ràng buộc (constraint / 제약조건); không có một chỉ số duy nhất “tối ưu biodiversity”.
-
-> **Nối mạch:** Cầu nối về microbe và virus khép mạch bằng cách dùng failure của phylogenetic inference để làm rõ evolutionary rules.
 
 ## 30. cầu nối (bridge / 브리지): microbe và virus làm evolutionary quy tắc (rule / 규칙) trở nên rõ nhất
 

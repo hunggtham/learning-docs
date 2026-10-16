@@ -23,19 +23,15 @@ Leader-based giao thức (protocol / 프로토콜) như Raft làm mô hình (mod
 
 Bất biến (invariant / 불변식) quan trọng không phải “mọi replica luôn giống nhau tức thì”. Replica có thể lag. bất biến (invariant / 불변식) là **lịch sử (history / 이력) đã lần ghi nhận (commit / 커밋) không được bị thay bằng lịch sử (history / 이력) mâu thuẫn sau election/failover hợp lệ.**
 
-> **Nối mạch:** **2. Term/epoch biến authority thành một thứ có thứ tự (ordering / 순서)** nối từ **1. máy trạng thái (state machine / 상태 머신) replication biến consensus thành bài toán thứ tự (ordering / 순서)** sang **3. Quorum intersection là cốt lõi (core / 핵심) an toàn (safety / 안전) argument**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Term/epoch biến authority thành một thứ có thứ tự (ordering / 순서)
 
 Leadership không phải quyền vĩnh viễn. Term/epoch tăng qua elections. Message từ leader cũ có epoch thấp bị xem là stale.
 
 Điều này giải quyết một thất bại (failure / 실패) phổ biến: tiến trình (process / 프로세스) cũ bị pause/mạng (network / 네트워크) partition, sau đó sống lại và vẫn tin mình là leader.
 
-Term một mình chưa đủ; downstream side effects ngoài consensus log có thể vẫn bị old leader thực hiện. Khi cần bảo vệ bên ngoài (external / 외부) tài nguyên (resource / 자원), **fencing đơn vị từ (token / 토큰)** hoặc monotonic epoch phải được tài nguyên (resource / 자원) đó kiểm tra.
+Term một mình chưa đủ; downstream side effects ngoài consensus log có thể vẫn bị old leader thực hiện. Khi cần bảo vệ bên ngoài (external / 외부) tài nguyên (resource / 자원), **fencing token (토큰)** hoặc monotonic epoch phải được tài nguyên (resource / 자원) đó kiểm tra.
 
 Đọc cùng [Leases, fencing tokens và split-brain prevention](./02_leases_fencing_tokens_and_split_brain_prevention.md).
-
-> **Nối mạch:** **3. Quorum intersection là cốt lõi (core / 핵심) an toàn (safety / 안전) argument** nối từ **2. Term/epoch biến authority thành một thứ có thứ tự (ordering / 순서)** sang **4. Append cục bộ (local / 로컬), replicate, lần ghi nhận (commit / 커밋) và apply là bốn mốc khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Quorum intersection là cốt lõi (core / 핵심) an toàn (safety / 안전) argument
 
@@ -44,8 +40,6 @@ Majority quorums có thuộc tính (property / 속성) mọi hai majorities giao
 An toàn (safety / 안전) không đến từ ý tưởng “đa số luôn đúng”. Nó đến từ **set intersection + giao thức (protocol / 프로토콜) rules về nút (node / 노드) nào được vote/accept lịch sử (history / 이력) nào**.
 
 Nếu cấu hình membership thay đổi sai làm old/new quorum không còn overlap cần thiết, hệ thống (system / 시스템) có thể tạo split-brain lịch sử (history / 이력) dù mỗi phía đều thấy mình có “đa số” trong cấu hình (config / 설정) riêng.
-
-> **Nối mạch:** **4. Append cục bộ (local / 로컬), replicate, lần ghi nhận (commit / 커밋) và apply là bốn mốc khác nhau** nối từ **3. Quorum intersection là cốt lõi (core / 핵심) an toàn (safety / 안전) argument** sang **5. an toàn (safety / 안전) và durability giao nhau tại acknowledgement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Append cục bộ (local / 로컬), replicate, lần ghi nhận (commit / 커밋) và apply là bốn mốc khác nhau
 
@@ -63,8 +57,6 @@ accepted by leader
 Trộn các mốc này dẫn tới acknowledgement bug. Nếu API hứa ghi (write / 쓰기) survive leader mất mát (loss / 손실), leader không được ack chỉ vì cục bộ (local / 로컬) append đã xong.
 
 Lần ghi nhận (commit / 커밋) đặc tả hợp đồng (contract / 계약) còn phụ thuộc cục bộ (local / 로컬) durability: follower “có entry” nhưng chỉ ở volatile bộ nhớ (memory / 메모리) có thể không đủ cho thất bại (failure / 실패) mô hình (model / 모델) mạnh hơn.
-
-> **Nối mạch:** **5. an toàn (safety / 안전) và durability giao nhau tại acknowledgement** nối từ **4. Append cục bộ (local / 로컬), replicate, lần ghi nhận (commit / 커밋) và apply là bốn mốc khác nhau** sang **6. mạng (network / 네트워크) partition: nút (node / 노드) alive không có nghĩa nút (node / 노드) có authority**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. an toàn (safety / 안전) và durability giao nhau tại acknowledgement
 
@@ -87,8 +79,6 @@ Nếu ack xảy ra trước durability/quorum điều kiện (condition / 조건
 
 Xem [đường durability xuyên tầng](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Nối mạch:** **6. mạng (network / 네트워크) partition: nút (node / 노드) alive không có nghĩa nút (node / 노드) có authority** nối từ **5. an toàn (safety / 안전) và durability giao nhau tại acknowledgement** sang **7. Election hết thời gian chờ (timeout / 타임아웃) là liveness tuning, không phải tính đúng đắn (correctness / 정확성) proof duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. mạng (network / 네트워크) partition: nút (node / 노드) alive không có nghĩa nút (node / 노드) có authority
 
 Một minority partition có thể có processes hoàn toàn khỏe, CPU thấp và disk bình thường nhưng không được lần ghi nhận (commit / 커밋) writes nếu giao thức (protocol / 프로토콜) cần quorum.
@@ -99,8 +89,6 @@ Thất bại (failure / 실패) detector chỉ nói “tôi nghi nút (node / �
 
 Không được biến suspicion thành authority bằng hết thời gian chờ (timeout / 타임아웃) đơn giản.
 
-> **Nối mạch:** **7. Election hết thời gian chờ (timeout / 타임아웃) là liveness tuning, không phải tính đúng đắn (correctness / 정확성) proof duy nhất** nối từ **6. mạng (network / 네트워크) partition: nút (node / 노드) alive không có nghĩa nút (node / 노드) có authority** sang **8. Log matching và leader completeness giữ lịch sử (history / 이력)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Election hết thời gian chờ (timeout / 타임아웃) là liveness tuning, không phải tính đúng đắn (correctness / 정확성) proof duy nhất
 
 Hết thời gian chờ (timeout / 타임아웃) quá ngắn có thể gây election churn khi mạng (network / 네트워크) jitter/GC pause; quá dài làm failover chậm.
@@ -108,8 +96,6 @@ Hết thời gian chờ (timeout / 타임아웃) quá ngắn có thể gây elec
 Hết thời gian chờ (timeout / 타임아웃) tuning chủ yếu ảnh hưởng liveness và operational hành vi (behavior / 동작). an toàn (safety / 안전) phải đến từ term/voting/log rules, không dựa vào giả định (assumption / 가정) “hai leaders chắc không overlap vì hết thời gian chờ (timeout / 타임아웃)”.
 
 Đây là mẫu (pattern / 패턴) quan trọng trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들): **clock/timing có thể giúp progress nhưng an toàn (safety / 안전) nên dựa vào bất biến (invariant / 불변식) giao thức (protocol / 프로토콜) khi có thể.**
-
-> **Nối mạch:** **8. Log matching và leader completeness giữ lịch sử (history / 이력)** nối từ **7. Election hết thời gian chờ (timeout / 타임아웃) là liveness tuning, không phải tính đúng đắn (correctness / 정확성) proof duy nhất** sang **9. lần ghi nhận (commit / 커밋) chỉ mục (index / 인덱스) và apply chỉ mục (index / 인덱스) không nên bị trộn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Log matching và leader completeness giữ lịch sử (history / 이력)
 
@@ -125,8 +111,6 @@ followers không được chấp nhận arbitrary conflicting suffix
 Xung đột (conflict / 충돌) repair được phép thay speculative/uncommitted suffix, nhưng committed prefix phải được bảo toàn theo giao thức (protocol / 프로토콜).
 
 Đây là nơi “replication là bản sao (copy / 복사) log” trở thành state-machine giao thức (protocol / 프로토콜) thực sự.
-
-> **Nối mạch:** **9. lần ghi nhận (commit / 커밋) chỉ mục (index / 인덱스) và apply chỉ mục (index / 인덱스) không nên bị trộn** nối từ **8. Log matching và leader completeness giữ lịch sử (history / 이력)** sang **10. Linearizable read cần chứng minh authority hiện tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. lần ghi nhận (commit / 커밋) chỉ mục (index / 인덱스) và apply chỉ mục (index / 인덱스) không nên bị trộn
 
@@ -144,8 +128,6 @@ applied position
 
 Một replica “caught up log” chưa chắc “caught up ứng dụng (application / 애플리케이션) trạng thái (state / 상태)”.
 
-> **Nối mạch:** **10. Linearizable read cần chứng minh authority hiện tại** nối từ **9. lần ghi nhận (commit / 커밋) chỉ mục (index / 인덱스) và apply chỉ mục (index / 인덱스) không nên bị trộn** sang **11. Reconfiguration là consensus trên chính membership**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Linearizable read cần chứng minh authority hiện tại
 
 Read từ leader tưởng miễn phí vì không append log mới. Nhưng stale leader bị partition có thể chưa biết mình đã mất quorum.
@@ -153,8 +135,6 @@ Read từ leader tưởng miễn phí vì không append log mới. Nhưng stale 
 Linearizable read cần cơ chế (mechanism / 메커니즘) xác nhận leader vẫn có authority/hiện tại (current / 현재) lần ghi nhận (commit / 커밋) trạng thái (state / 상태), ví dụ quorum confirmation/read-index style giao thức (protocol / 프로토콜) hoặc lease dưới timing các giả định (assumptions / 가정들) đủ mạnh.
 
 Nếu sản phẩm (product / 제품) chỉ cần stale/eventual read, có thể chọn đường dẫn (path / 경로) rẻ hơn. Consistency guarantee phải là thiết kế (design / 설계) đầu vào (input / 입력), không phải label gắn sau hiện thực (implementation / 구현).
-
-> **Nối mạch:** **11. Reconfiguration là consensus trên chính membership** nối từ **10. Linearizable read cần chứng minh authority hiện tại** sang **12. Snapshot và log compaction phải giữ điểm nối với lịch sử (history / 이력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Reconfiguration là consensus trên chính membership
 
@@ -173,8 +153,6 @@ A và B không overlap đủ
 
 Operational tooling phải coi membership thay đổi (change / 변경) là state-machine thao tác (operation / 연산) có guardrail.
 
-> **Nối mạch:** **12. Snapshot và log compaction phải giữ điểm nối với lịch sử (history / 이력)** nối từ **11. Reconfiguration là consensus trên chính membership** sang **13. Lagging replica và backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Snapshot và log compaction phải giữ điểm nối với lịch sử (history / 이력)
 
 Log tăng vô hạn là không thực tế. Replica có thể snapshot trạng thái (state / 상태) tại một committed/applied chỉ mục (index / 인덱스) rồi bỏ prefix log cũ.
@@ -183,8 +161,6 @@ Snapshot phải gắn chính xác với chỉ mục (index / 인덱스)/term ho�
 
 Dạng thất bại (failure mode / 실패 모드) gồm snapshot quá cũ, partial snapshot install, trạng thái (state / 상태) không đồng bộ với log suffix hoặc compaction xóa lịch sử (history / 이력) còn cần cho lagging replica/khôi phục (recovery / 복구).
 
-> **Nối mạch:** **13. Lagging replica và backpressure** nối từ **12. Snapshot và log compaction phải giữ điểm nối với lịch sử (history / 이력)** sang **14. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Lagging replica và backpressure
 
 Replica chậm có thể giữ WAL/log retention lâu, chiếm disk và tăng leader bộ nhớ (memory / 메모리)/mạng (network / 네트워크) pressure. Nếu leader chờ mọi replica, một nút (node / 노드) chậm có thể kéo độ trễ (latency / 지연 시간) toàn cluster; nếu chỉ chờ quorum, nút (node / 노드) đó có thể tụt xa rồi cần snapshot.
@@ -192,8 +168,6 @@ Replica chậm có thể giữ WAL/log retention lâu, chiếm disk và tăng le
 Đây là sự đánh đổi (trade-off / 트레이드오프) giữa foreground độ trễ (latency / 지연 시간) và khôi phục (recovery / 복구)/catch-up chi phí (cost / 비용).
 
 Consensus tầng (layer / 계층) vì thế cần retention chính sách (policy / 정책), snapshot chính sách (policy / 정책) và monitoring cho lag phân phối (distribution / 분포), không chỉ “quorum còn đủ”.
-
-> **Nối mạch:** **14. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) ở đâu?** nối từ **13. Lagging replica và backpressure** sang **15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) ở đâu?
 
@@ -211,8 +185,6 @@ Khi cluster gần sức chứa (capacity / 용량), queueing có thể lớn hơ
 
 Batching/group lần ghi nhận (commit / 커밋) cải thiện thông lượng (throughput / 처리량) nhưng có thể thêm độ trễ (latency / 지연 시간) nhỏ để gom công việc (work / 작업). bất biến (invariant / 불변식) lần ghi nhận (commit / 커밋) không được yếu đi chỉ vì batching.
 
-> **Nối mạch:** **15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng** nối từ **14. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) ở đâu?** sang **16. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng
 
 ```text
@@ -227,8 +199,6 @@ external side effect từ stale leader thiếu fencing
 ```
 
 Không nên gom mọi symptom thành “consensus unstable”. Mỗi thất bại (failure / 실패) vi phạm hoặc làm pressure một bất biến (invariant / 불변식) khác.
-
-> **Nối mạch:** **15. thất bại (failure / 실패) modes cần lập luận (reasoning / 추론) riêng** đặt vấn đề; **16. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **17. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 16. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -249,21 +219,15 @@ client retry/timeout rate
 
 Log statement “became leader” đơn lẻ không đủ. sự cố (incident / 인시던트) cần timeline election → quorum → lần ghi nhận (commit / 커밋) positions → máy khách (client / 클라이언트) acknowledgements.
 
-> **Nối mạch:** **16. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **17. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?** kiểm tra bằng chứng, rồi **18. Mô hình tư duy** mở rộng hệ quả.
-
 ## 17. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?
 
 Nếu lần ghi nhận (commit / 커밋) p99 tăng, nguyên nhân có thể là lưu trữ (storage / 저장소) flush hoặc mạng (network / 네트워크) hàng đợi (queue / 큐), không phải election lô-gic (logic / 논리). Nếu leader churn khi GC pause, thời gian chạy (runtime / 런타임) stop-the-world hành vi (behavior / 동작) có thể quyết định liveness. Nếu stale leader vẫn làm bên ngoài (external / 외부) ghi (write / 쓰기), tài nguyên (resource / 자원) fencing ranh giới (boundary / 경계) mới là nơi tính đúng đắn (correctness / 정확성) phải được enforce.
 
 Consensus thuật toán (algorithm / 알고리즘) là lớp trừu tượng (abstraction / 추상화) trung tâm nhưng môi trường vận hành (production / 운영 환경) hành vi (behavior / 동작) phụ thuộc OS/thời gian chạy (runtime / 런타임)/mạng (network / 네트워크)/lưu trữ (storage / 저장소) dưới nó.
 
-> **Nối mạch:** **18. Mô hình tư duy** tổng hợp từ **17. Lower lớp trừu tượng (abstraction / 추상화) nào quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## 18. Mô hình tư duy
 
 > Consensus quản lý **một lịch sử (history / 이력) có authority dưới partial thất bại (failure / 실패)**. Quorum intersection + voting/log rules giữ an toàn (safety / 안전); term/epoch phân biệt authority qua thời gian; durability nối committed lịch sử (history / 이력) với lưu trữ (storage / 저장소); reconfiguration giữ quorum overlap; snapshots nén lịch sử (history / 이력) mà không được mất điểm nối; bằng chứng vận hành (production evidence / 운영 증거) phải chỉ ra term, quorum và log positions chứ không chỉ nút (node / 노드) health.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **18. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

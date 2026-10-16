@@ -20,15 +20,11 @@ Ví dụ clinician có thể burnout vì tải công việc (workload / 워크�
 
 Xem [[../06_applied/14_work_stress_burnout_and_recovery]].
 
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Moral distress** nối từ **Moral injury khác burnout** sang **Guilt và shame**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Moral distress
 
 **Moral distress** thường xuất hiện khi người ta biết điều mình tin là đúng nhưng hệ thống (system / 시스템) ràng buộc (constraint / 제약조건) ngăn thực hiện.
 
 Nếu tình trạng lặp lại và không được repair, moral distress có thể góp phần tạo moral injury.
-
-> **Nối mạch:** Ở chặng này của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Guilt và shame** nối từ **Moral distress** sang **Responsibility cần calibration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Guilt và shame
 
@@ -41,8 +37,6 @@ Nếu tình trạng lặp lại và không được repair, moral distress có t
 > “Tôi là người xấu.”
 
 Guilt có thể thúc đẩy repair nếu responsibility thực và có hành động (action / 동작) khả thi. Shame dễ mở rộng từ hành vi (behavior / 동작) sang toàn định danh (identity / 식별자) và dẫn tới concealment, withdrawal hoặc self-attack.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Responsibility cần calibration** nối từ **Guilt và shame** sang **Betrayal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Responsibility cần calibration
 
@@ -58,8 +52,6 @@ Một formulation tốt hỏi:
 
 Hindsight độ lệch (bias / 편향) có thể khiến past choice trông “rõ ràng sai” hơn nhiều so với lúc thực tế.
 
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Betrayal** nối từ **Responsibility cần calibration** sang **Profession và định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Betrayal
 
 Moral injury có thể xuất hiện do **betrayal** từ institution hoặc leader.
@@ -67,8 +59,6 @@ Moral injury có thể xuất hiện do **betrayal** từ institution hoặc lea
 Ví dụ organization tuyên bố an toàn (safety / 안전) là ưu tiên nhưng trừng phạt người report rủi ro (risk / 위험). Vấn đề không chỉ là stress; nó phá trust và moral đặc tả hợp đồng (contract / 계약).
 
 Xem [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
-
-> **Nối mạch:** Ở chặng này của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Profession và định danh (identity / 식별자)** nối từ **Betrayal** sang **PTSD và moral injury**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Profession và định danh (identity / 식별자)
 
@@ -78,15 +68,11 @@ Nếu môi trường (environment / 환경) buộc hành vi trái với role ide
 
 Xem [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **PTSD và moral injury** nối từ **Profession và định danh (identity / 식별자)** sang **Rumination**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## PTSD và moral injury
 
 PTSD truyền thống nhấn mạnh threat, fear, intrusion và avoidance. Moral injury có thể overlap nhưng emotion nổi bật hơn là guilt, shame, anger hoặc betrayal.
 
 Một người có thể có cả hai. Treatment cần xác định cơ chế (mechanism / 메커니즘) nào đang giữ distress.
-
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Rumination** nối từ **PTSD và moral injury** sang **Repair**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rumination
 
@@ -105,8 +91,6 @@ self-condemnation trừu tượng
 → acceptance phần không thể đảo ngược
 ```
 
-> **Nối mạch:** Ở chặng này của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Repair** nối từ **Rumination** sang **Self-forgiveness**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Repair
 
 Moral repair không có nghĩa tự tha thứ ngay lập tức. Nó có thể gồm:
@@ -121,8 +105,6 @@ Moral repair không có nghĩa tự tha thứ ngay lập tức. Nó có thể g�
 
 Nếu harm là system-level, bắt cá nhân “self-compassion” mà không sửa hệ thống (system / 시스템) có thể trở thành invalidating.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Self-forgiveness** nối từ **Repair** sang **Organizational ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Self-forgiveness
 
 Self-forgiveness tốt khác self-excusing.
@@ -134,8 +116,6 @@ Một chuỗi (sequence / 시퀀스) hợp lý:
 3. repair nếu có thể;
 4. học quy tắc (rule / 규칙) mới;
 5. không đóng băng định danh (identity / 식별자) vĩnh viễn vào worst hành động (action / 동작).
-
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Organizational ngữ cảnh (context / 맥락)** nối từ **Self-forgiveness** sang **Shame culture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Organizational ngữ cảnh (context / 맥락)
 
@@ -150,15 +130,11 @@ Prevention cần:
 - decompression/debrief phù hợp;
 - realistic staffing/tài nguyên (resource / 자원).
 
-> **Nối mạch:** Ở chặng này của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Shame culture** nối từ **Organizational ngữ cảnh (context / 맥락)** sang **Values trong ACT**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Shame culture
 
 Organization dùng shame để điều khiển (control / 제어) có thể tạo concealment. Người sợ bị humiliate sẽ tối ưu self-protection thay vì truth reporting.
 
 Đây là lý do moral repair và psychological an toàn (safety / 안전) liên quan chặt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Values trong ACT** nối từ **Shame culture** sang **Collective moral injury**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Values trong ACT
 
@@ -174,15 +150,11 @@ sang:
 
 Xem [[../05_intervention/01_cbt_behavioral_and_third_wave]].
 
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Collective moral injury** nối từ **Values trong ACT** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Collective moral injury
 
 Một group có thể cùng cảm thấy institution phản bội giá trị (value / 값) chung. Điều này ảnh hưởng trust, retention và voice.
 
 Không phải mọi organizational dissatisfaction là moral injury; term nên được dùng có kỷ luật để tránh concept inflation.
-
-> **Nối mạch:** Ở chặng này của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Dùng chung (common / 공통) misconceptions** nối từ **Collective moral injury** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -193,8 +165,6 @@ Không phải mọi organizational dissatisfaction là moral injury; term nên �
 **“Self-compassion nghĩa là bỏ qua trách nhiệm.”** Có thể kết hợp accountability với giảm toàn cục (global / 전역) self-condemnation.
 
 **“Moral injury chỉ có ở quân đội.”** Construct được nghiên cứu ở nhiều nghề có ethical stakes cao.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -211,8 +181,6 @@ value
             ↓
  cần meaning + repair + system change
 ```
-
-> **Nối mạch:** Trong **Tổn thương đạo đức, xấu hổ, tội lỗi và xung đột giá trị — Moral Injury, Shame, Guilt & giá trị (value / 값) xung đột (conflict / 충돌) / 도덕적 상처·수치심·죄책감**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

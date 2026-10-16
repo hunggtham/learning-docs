@@ -10,15 +10,11 @@ Warehouse thường cung cấp danh mục (catalog / 카탈로그), SQL, tải c
 
 Điểm cần kiểm tra là truy vấn (query / 쿼리) isolation, tính đồng thời (concurrency / 동시성), ingestion độ trễ (latency / 지연 시간), historical correction và quyền truy cập—not chỉ benchmark scan.
 
-> **Chuyển mạch:** Trong **09 — Warehouse, lake và lakehouse**, **1. Warehouse** nêu điều cần giải thích; **2. dữ liệu (data / 데이터) lake** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Lakehouse và snapshot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. dữ liệu (data / 데이터) lake
 
 Lake lưu tệp (file / 파일) linh hoạt trên đối tượng (object / 객체) lưu trữ (storage / 저장소), phù hợp raw bằng chứng (evidence / 증거), nhiều format và chi phí lưu trữ (storage / 저장소) thấp. Nếu thiếu lược đồ (schema / 스키마) discipline, quyền sở hữu (ownership / 소유권), chất lượng (quality / 품질) và danh mục (catalog / 카탈로그), lake nhanh chóng trở thành swamp: nhiều tệp (file / 파일) nhưng không biết tệp (file / 파일) nào đáng tin.
 
 Đối tượng (object / 객체) lưu trữ (storage / 저장소) không cung cấp mọi ngữ nghĩa (semantics / 의미론) của filesystem. Rename có thể là bản sao (copy / 복사)+delete; listing có thể eventually consistent; nhiều writer có thể ghi cùng prefix. lần ghi nhận (commit / 커밋) giao thức (protocol / 프로토콜) phải được thiết kế rõ.
-
-> **Chuyển mạch:** Ở chặng này của **09 — Warehouse, lake và lakehouse**, **2. dữ liệu (data / 데이터) lake** nêu điều cần giải thích; **3. Lakehouse và snapshot** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Compaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Lakehouse và snapshot
 
@@ -30,15 +26,11 @@ read current snapshot → validate conflict → write new files → publish meta
 
 Reader chỉ đọc tệp (file / 파일) thuộc snapshot đã lần ghi nhận (commit / 커밋). thời gian (time / 시간) travel là khả năng chọn snapshot cũ, không phải phép màu để phục hồi mọi dữ liệu nếu tệp (file / 파일) đã bị garbage-collect.
 
-> **Chuyển mạch:** **Lakehouse và snapshot** tạo các phiên bản dữ liệu; **Compaction** giảm phân mảnh mà vẫn giữ snapshot semantics, rồi **Schema evolution** kiểm tra compatibility.
-
 ## 4. Compaction
 
 Streaming và micro-batch tạo small files. Compaction đọc nhiều tệp (file / 파일) nhỏ, rewrite thành tệp (file / 파일) lớn hơn và cập nhật siêu dữ liệu (metadata / 메타데이터). Compaction phải bảo đảm reader cũ vẫn đọc được snapshot của nó, reader mới thấy snapshot mới, và tệp (file / 파일) cũ chỉ bị xóa sau retention an toàn.
 
 Compaction quá thường xuyên làm tăng ghi (write / 쓰기) amplification; quá muộn làm truy vấn (query / 쿼리) siêu dữ liệu (metadata / 메타데이터) và tác vụ (task / 작업) scheduling chậm. Trigger nên dựa trên tệp (file / 파일) count/kích thước (size / 크기), truy vấn (query / 쿼리) hành vi (behavior / 동작) và khôi phục (recovery / 복구) cửa sổ (window / 윈도우).
-
-> **Chuyển mạch:** **Schema evolution** giữ contract khi snapshot thay đổi; **Partition và layout** quyết định cách contract đó được đọc hiệu quả trong storage.
 
 ## 5. Snapshot và lược đồ (schema / 스키마) evolution
 
@@ -46,15 +38,11 @@ Lược đồ (schema / 스키마) evolution cần tương thích với cả t�
 
 Di chuyển (migration / 마이그레이션) an toàn thường dùng dual-read/dual-write hoặc versioned lược đồ (schema / 스키마), có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우) và quay lui (rollback / 롤백) đường dẫn (path / 경로). Xóa column khỏi siêu dữ liệu (metadata / 메타데이터) không đồng nghĩa bytes đã biến mất; retention/privacy chính sách (policy / 정책) phải bao phủ cả tệp (file / 파일) cũ và snapshot cũ.
 
-> **Chuyển mạch:** **Partition và layout** biến schema thành physical access path; **Decision frame** cân query pattern, cost, freshness và ownership trước khi chọn cấu hình.
-
 ## 6. Partition và bố cục (layout / 레이아웃)
 
 Partition theo ngày hỗ trợ pruning và vòng đời (lifecycle / 생명주기) nhưng có thể tạo partition nhỏ khi volume thấp. Partition theo high-cardinality key tạo directory explosion. tệp (file / 파일) kích thước (size / 크기), row group, sort thứ tự (order / 순서) và clustering có thể quan trọng hơn số partition.
 
 Bố cục (layout / 레이아웃) phải được đo bằng bytes scanned, files opened, tác vụ (task / 작업) count, compaction chi phí (cost / 비용) và truy vấn (query / 쿼리) độ trễ (latency / 지연 시간) trên tải công việc (workload / 워크로드) thật.
-
-> **Chuyển mạch:** **Decision frame** làm rõ trade-off của layout; **Snapshot isolation và conflict detection** kiểm tra correctness khi nhiều writer cùng thay đổi dữ liệu.
 
 ## 7. quyết định (decision / 결정) frame
 
@@ -68,8 +56,6 @@ Chọn lưu trữ (storage / 저장소) bằng câu hỏi:
 
 Đọc tiếp: [03 — Storage và formats](../03_storage_and_formats.md), [11 — Governance](../11_governance_lineage_security/README.md), [12 — Cost và capacity](../12_cost_performance_capacity/README.md).
 
-> **Chuyển mạch:** **Snapshot isolation và conflict detection** xác định khi nào bản ghi hợp lệ; **Time travel, retention và delete** đặt validity đó vào lifecycle và policy.
-
 ## 8. Snapshot isolation và xung đột (conflict / 충돌) detection
 
 Hai writer có thể cùng đọc snapshot S0 rồi tạo S1a và S1b. siêu dữ liệu (metadata / 메타데이터) lần ghi nhận (commit / 커밋) phải quyết định:
@@ -81,15 +67,11 @@ S0 + changes(b) → reject/merge → S2
 
 Nếu lần ghi nhận (commit / 커밋) chỉ kiểm tra tệp (file / 파일) đường dẫn (path / 경로) mới mà bỏ qua logical overlap, hai writer có thể cùng sửa một partition và làm mất cập nhật (update / 업데이트). xung đột (conflict / 충돌) detection phải xét partition/key/phạm vi (range / 범위) mà thao tác (operation / 연산) đọc và ghi.
 
-> **Chuyển mạch:** **Time travel, retention và delete** biến snapshot thành policy có thời hạn; **Table maintenance contract** ghi rõ compaction, vacuum và evidence cần giữ.
-
 ## 9. thời gian (time / 시간) travel, retention và GDPR-style delete
 
 Thời gian (time / 시간) travel hữu ích cho kiểm tra (audit / 감사) và quay lui (rollback / 롤백) nhưng giữ snapshot cũ đồng nghĩa giữ bytes cũ. Retention chính sách (policy / 정책) cần đồng thời trả lời truy vấn (query / 쿼리) quay lui (rollback / 롤백), replay cửa sổ (window / 윈도우), backup cửa sổ (window / 윈도우) và deletion yêu cầu (requirement / 요구사항).
 
 Khi cần xóa một subject, phải xác định dữ liệu (data / 데이터) files, snapshots, manifests, materialized views, caches và downstream exports nào chứa bản ghi (record / 레코드). Rewriting tệp (file / 파일) để redact có thể phá snapshot lineage; do đó deletion job cần tạo bằng chứng (evidence / 증거) về phiên bản (version / 버전) trước/sau và xác nhận các bản bản sao (copy / 복사) đã hết retention.
-
-> **Chuyển mạch:** **Table maintenance contract** khép README bằng storage invariant, lifecycle policy và owner; implementation detail quay về canonical data-platform chapter.
 
 ## 10. bảng (table / 테이블) maintenance đặc tả hợp đồng (contract / 계약)
 

@@ -42,8 +42,6 @@ categorical information encode thế nào
 
 Biểu diễn (representation / 표현) quyết định hình học (geometry / 기하학) mà mô hình (model / 모델) nhìn thấy.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **1. dữ liệu (data / 데이터) biểu diễn (representation / 표현) là quyết định toán học** đặt vấn đề; **2. tuyến tính (linear / 선형) tầng (layer / 계층) là affine map** đối chiếu bằng chứng, rồi **3. hàm (function / 함수) composition là backbone của neural mạng (network / 네트워크)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 2. tuyến tính (linear / 선형) tầng (layer / 계층) là affine map
 
 Một tầng (layer / 계층):
@@ -63,8 +61,6 @@ W_3(W_2(W_1x+b_1)+b_2)+b_3
 vẫn collapse thành một affine map.
 
 Nonlinearity là thứ cho mạng (network / 네트워크) expressive power vượt one tuyến tính (linear / 선형) transformation.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **3. hàm (function / 함수) composition là backbone của neural mạng (network / 네트워크)** nối từ **2. tuyến tính (linear / 선형) tầng (layer / 계층) là affine map** sang **4. Computational đồ thị (graph / 그래프) nối calculus với software đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. hàm (function / 함수) composition là backbone của neural mạng (network / 네트워크)
 
@@ -92,8 +88,6 @@ thì:
 
 Trong véc-tơ (vector / 벡터) setting, Jacobians compose bằng phép nhân ma trận (matrix multiplication / 행렬 곱셈).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **4. Computational đồ thị (graph / 그래프) nối calculus với software đồ thị (graph / 그래프)** nối từ **3. hàm (function / 함수) composition là backbone của neural mạng (network / 네트워크)** sang **5. hàm mất mát (loss function / 손실 함수) chọn hình học (geometry / 기하학) của lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Computational đồ thị (graph / 그래프) nối calculus với software đồ thị (graph / 그래프)
 
 Operations tạo nodes; tensors tạo values; dependencies tạo directed đồ thị (graph / 그래프).
@@ -111,8 +105,6 @@ graph theory
 gặp nhau.
 
 Automatic differentiation không phải symbolic differentiation cũng không phải finite difference. Nó evaluate chính xác (exact / 정확한) derivatives của program operations tới floating-point precision bằng chuỗi (chain / 사슬) quy tắc (rule / 규칙).
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **5. hàm mất mát (loss function / 손실 함수) chọn hình học (geometry / 기하학) của lỗi (error / 오류)** nối từ **4. Computational đồ thị (graph / 그래프) nối calculus với software đồ thị (graph / 그래프)** sang **6. huấn luyện (training / 학습) là tối ưu hóa (optimization / 최적화) dưới finite dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. hàm mất mát (loss function / 손실 함수) chọn hình học (geometry / 기하학) của lỗi (error / 오류)
 
@@ -140,8 +132,6 @@ Squared mất mát (loss / 손실) penalize large errors quadratically; absolute
 
 “Chọn mất mát (loss / 손실)” là modeling quyết định (decision / 결정), không chỉ API parameter.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **5. hàm mất mát (loss function / 손실 함수) chọn hình học (geometry / 기하학) của lỗi (error / 오류)** đặt vấn đề; **6. huấn luyện (training / 학습) là tối ưu hóa (optimization / 최적화) dưới finite dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **7. độ dốc (gradient / 기울기) descent dùng cục bộ (local / 로컬) thông tin (information / 정보)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 6. huấn luyện (training / 학습) là tối ưu hóa (optimization / 최적화) dưới finite dữ liệu (data / 데이터)
 
 Empirical rủi ro (risk / 위험):
@@ -165,8 +155,6 @@ R(\theta)=E[L(f_\theta(X),Y)].
 
 Gap giữa empirical rủi ro (risk / 위험) và population rủi ro (risk / 위험) là statistical/generalization question, không chỉ tối ưu hóa (optimization / 최적화) question.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **6. huấn luyện (training / 학습) là tối ưu hóa (optimization / 최적화) dưới finite dữ liệu (data / 데이터)** đặt vấn đề; **7. độ dốc (gradient / 기울기) descent dùng cục bộ (local / 로컬) thông tin (information / 정보)** đối chiếu bằng chứng, rồi **8. Hessian và curvature** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 7. độ dốc (gradient / 기울기) descent dùng cục bộ (local / 로컬) thông tin (information / 정보)
 
 Cập nhật (update / 업데이트):
@@ -180,8 +168,6 @@ Cập nhật (update / 업데이트):
 Step kích thước (size / 크기) quá lớn có thể overshoot; quá nhỏ convergence chậm.
 
 Conditioning quyết định directions nào steep/flat và ảnh hưởng tối ưu hóa (optimization / 최적화) speed.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **8. Hessian và curvature** nối từ **7. độ dốc (gradient / 기울기) descent dùng cục bộ (local / 로컬) thông tin (information / 정보)** sang **9. xác suất (probability / 확률) đầu ra (output / 출력) cần interpretation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Hessian và curvature
 
@@ -200,8 +186,6 @@ Large điều kiện (condition / 조건) number nghĩa landscape elongated; đ�
 
 Preconditioning và adaptive methods cố rescale hình học (geometry / 기하학).
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **9. xác suất (probability / 확률) đầu ra (output / 출력) cần interpretation** nối từ **8. Hessian và curvature** sang **10. Log-sum-exp là numerical mathematics trong ML**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. xác suất (probability / 확률) đầu ra (output / 출력) cần interpretation
 
 Softmax:
@@ -217,8 +201,6 @@ Nhưng “sum to 1” chưa đủ để guarantee calibrated probabilities.
 Calibration là empirical/statistical thuộc tính (property / 속성) của mô hình (model / 모델) + dữ liệu (data / 데이터) phân phối (distribution / 분포).
 
 Predicted `0.9` nên roughly đúng 90% trong relevant calibration population nếu mô hình (model / 모델) calibrated.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **10. Log-sum-exp là numerical mathematics trong ML** nối từ **9. xác suất (probability / 확률) đầu ra (output / 출력) cần interpretation** sang **11. Floating điểm (point / 지점) là finite mô hình (model / 모델) của real arithmetic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Log-sum-exp là numerical mathematics trong ML
 
@@ -248,8 +230,6 @@ Mathematics chính xác (exact / 정확한), computation stable hơn.
 
 > algebraically equivalent expressions có thể rất khác numerical hành vi (behavior / 동작).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **11. Floating điểm (point / 지점) là finite mô hình (model / 모델) của real arithmetic** nối từ **10. Log-sum-exp là numerical mathematics trong ML** sang **12. Mixed precision là sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Floating điểm (point / 지점) là finite mô hình (model / 모델) của real arithmetic
 
 ML huấn luyện (training / 학습) dùng fp32, fp16, bfloat16.
@@ -274,8 +254,6 @@ exactly.
 
 Parallel reduction thứ tự (order / 순서) có thể đổi final low-order bits.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **12. Mixed precision là sự đánh đổi (trade-off / 트레이드오프)** nối từ **11. Floating điểm (point / 지점) là finite mô hình (model / 모델) của real arithmetic** sang **13. Embeddings tạo learned hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Mixed precision là sự đánh đổi (trade-off / 트레이드오프)
 
 Lower precision:
@@ -291,8 +269,6 @@ Huấn luyện (training / 학습) frameworks dùng techniques như mất mát (
 
 Hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링) và numerical stability không thể tách hoàn toàn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **13. Embeddings tạo learned hình học (geometry / 기하학)** nối từ **12. Mixed precision là sự đánh đổi (trade-off / 트레이드오프)** sang **14. Curse of dimensionality**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Embeddings tạo learned hình học (geometry / 기하학)
 
 Embedding map:
@@ -307,8 +283,6 @@ Nếu learned mục tiêu (objective / 목표) thay đổi, hình học (geometr
 
 Véc-tơ (vector / 벡터) “gần” nghĩa gần theo mô hình (model / 모델) biểu diễn (representation / 표현), không universal ngữ nghĩa (semantic / 의미적) truth.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **14. Curse of dimensionality** nối từ **13. Embeddings tạo learned hình học (geometry / 기하학)** sang **15. PCA và SVD như dữ liệu (data / 데이터) compression hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Curse of dimensionality
 
 Trong high dimensions:
@@ -322,8 +296,6 @@ nearest-neighbor intuition yếu đi
 Distance concentration có thể làm naive similarity methods kém discriminative.
 
 Dimensionality reduction, regularization và biểu diễn (representation / 표현) học tập (learning / 학습) partly address this.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **14. Curse of dimensionality** đặt vấn đề; **15. PCA và SVD như dữ liệu (data / 데이터) compression hình học (geometry / 기하학)** đối chiếu bằng chứng, rồi **16. Statistics bắt đầu ở train/kiểm thử (test / 테스트) split** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. PCA và SVD như dữ liệu (data / 데이터) compression hình học (geometry / 기하학)
 
@@ -344,8 +316,6 @@ X_k=U_k\Sigma_kV_k^T.
 là best rank-`k` approximation under Frobenius norm.
 
 Nhưng maximum variance không luôn equal maximum tác vụ (task / 작업) relevance.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **15. PCA và SVD như dữ liệu (data / 데이터) compression hình học (geometry / 기하학)** đặt vấn đề; **16. Statistics bắt đầu ở train/kiểm thử (test / 테스트) split** đối chiếu bằng chứng, rồi **17. phân phối (distribution / 분포) shift phá IID giả định (assumption / 가정)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Statistics bắt đầu ở train/kiểm thử (test / 테스트) split
 
@@ -369,8 +339,6 @@ multiple experiments đã chạy bao nhiêu?
 
 ML benchmark không thoát khỏi statistical suy luận (inference / 추론).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **17. phân phối (distribution / 분포) shift phá IID giả định (assumption / 가정)** nối từ **16. Statistics bắt đầu ở train/kiểm thử (test / 테스트) split** sang **18. nhân quả (causal / 인과적) question khác predictive question**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. phân phối (distribution / 분포) shift phá IID giả định (assumption / 가정)
 
 Huấn luyện (training / 학습) thường idealize:
@@ -392,8 +360,6 @@ market regime shifts
 
 High offline score không guarantee môi trường vận hành (production / 운영 환경) độ tin cậy (reliability / 신뢰성) under shift.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **18. nhân quả (causal / 인과적) question khác predictive question** nối từ **17. phân phối (distribution / 분포) shift phá IID giả định (assumption / 가정)** sang **19. đồ thị (graph / 그래프) lý thuyết (theory / 이론) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. nhân quả (causal / 인과적) question khác predictive question
 
 Prediction asks:
@@ -411,8 +377,6 @@ Y thay đổi thế nào nếu intervene X?
 Correlation/mô hình (model / 모델) fit alone không identify nhân quả (causal / 인과적) tác động (effect / 효과).
 
 A/B testing, randomization và nhân quả (causal / 인과적) các giả định (assumptions / 가정들) matter nếu quyết định (decision / 결정) mục tiêu (target / 대상) là intervention.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **19. đồ thị (graph / 그래프) lý thuyết (theory / 이론) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nối từ **18. nhân quả (causal / 인과적) question khác predictive question** sang **20. Trees và indexes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. đồ thị (graph / 그래프) lý thuyết (theory / 이론) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
@@ -436,8 +400,6 @@ network route cycle → có thể problematic
 
 Cấu trúc (structure / 구조) phải interpret theo bài toán (problem / 문제).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **20. Trees và indexes** nối từ **19. đồ thị (graph / 그래프) lý thuyết (theory / 이론) trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sang **21. cơ sở dữ liệu (database / 데이터베이스) cardinality estimation là statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Trees và indexes
 
 B-tree/B+cây (tree / 트리) power cơ sở dữ liệu (database / 데이터베이스) indexes vì balanced hierarchy cho logarithmic tìm kiếm (search / 검색)/cập nhật (update / 업데이트) độ sâu (depth / 깊이).
@@ -445,8 +407,6 @@ B-tree/B+cây (tree / 트리) power cơ sở dữ liệu (database / 데이터�
 Băm (hash / 해시) chỉ mục (index / 인덱스) dựa trên different mathematical cấu trúc (structure / 구조).
 
 Cấu trúc dữ liệu (data structure / 자료구조) choice là ánh xạ (mapping / 매핑) giữa thao tác (operation / 연산) profile và độ phức tạp (complexity / 복잡도) mô hình (model / 모델).
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **20. Trees và indexes** đặt vấn đề; **21. cơ sở dữ liệu (database / 데이터베이스) cardinality estimation là statistics** đối chiếu bằng chứng, rồi **22. Big-O nói asymptotic growth, không chính xác (exact / 정확한) thời gian chạy (runtime / 런타임)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. cơ sở dữ liệu (database / 데이터베이스) cardinality estimation là statistics
 
@@ -457,8 +417,6 @@ Nếu estimate sai mạnh, optimizer có thể chọn bad plan.
 Statistics như histograms, selectivity các giả định (assumptions / 가정들) và correlations ảnh hưởng hiệu năng (performance / 성능).
 
 Backend hiệu năng (performance / 성능) vì vậy chứa xác suất (probability / 확률)/statistics dù nhà phát triển (developer / 개발자) không viết formula trực tiếp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **21. cơ sở dữ liệu (database / 데이터베이스) cardinality estimation là statistics** đặt vấn đề; **22. Big-O nói asymptotic growth, không chính xác (exact / 정확한) thời gian chạy (runtime / 런타임)** đối chiếu bằng chứng, rồi **23. NP-hardness thay đổi kỹ thuật (engineering / 엔지니어링) chiến lược (strategy / 전략)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Big-O nói asymptotic growth, không chính xác (exact / 정확한) thời gian chạy (runtime / 런타임)
 
@@ -474,8 +432,6 @@ n → 10n
 
 có thể biến exponential thuật toán (algorithm / 알고리즘) thành impossible.
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **23. NP-hardness thay đổi kỹ thuật (engineering / 엔지니어링) chiến lược (strategy / 전략)** nối từ **22. Big-O nói asymptotic growth, không chính xác (exact / 정확한) thời gian chạy (runtime / 런타임)** sang **24. Numerical conditioning khác thuật toán (algorithm / 알고리즘) bug**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. NP-hardness thay đổi kỹ thuật (engineering / 엔지니어링) chiến lược (strategy / 전략)
 
 Nếu general chính xác (exact / 정확한) bài toán (problem / 문제) NP-hard, practical hệ thống (system / 시스템) có thể dùng:
@@ -489,8 +445,6 @@ special-case structure
 ```
 
 Mathematical hardness không nói “không làm được”; nó nói cần quản lý sự đánh đổi (trade-off / 트레이드오프) thay vì kỳ vọng one efficient chính xác (exact / 정확한) thuật toán (algorithm / 알고리즘) cho general trường hợp (case / 사례).
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **24. Numerical conditioning khác thuật toán (algorithm / 알고리즘) bug** nối từ **23. NP-hardness thay đổi kỹ thuật (engineering / 엔지니어링) chiến lược (strategy / 전략)** sang **25. Software khả năng quan sát (observability / 관측 가능성) cũng dùng tỷ lệ (rate / 비율)/accumulation/statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Numerical conditioning khác thuật toán (algorithm / 알고리즘) bug
 
@@ -506,8 +460,6 @@ Phân biệt:
 conditioning → property của problem
 stability    → property của algorithm
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **25. Software khả năng quan sát (observability / 관측 가능성) cũng dùng tỷ lệ (rate / 비율)/accumulation/statistics** nối từ **24. Numerical conditioning khác thuật toán (algorithm / 알고리즘) bug** sang **26. AI hệ thống (system / 시스템) là chuỗi xử lý (pipeline / 파이프라인), không chỉ mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Software khả năng quan sát (observability / 관측 가능성) cũng dùng tỷ lệ (rate / 비율)/accumulation/statistics
 
@@ -526,8 +478,6 @@ CPU utilization
 Average độ trễ (latency / 지연 시간) có thể hide tail độ trễ (latency / 지연 시간). lỗi (error / 오류) tỷ lệ (rate / 비율) cần denominator. Percentile cần mẫu (sample / 표본) cửa sổ (window / 윈도우). thông lượng (throughput / 처리량) là tỷ lệ (rate / 비율), hàng đợi (queue / 큐) độ sâu (depth / 깊이) là accumulated trạng thái (state / 상태).
 
 Monitoring đúng cần quantitative literacy.
-
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **25. Software khả năng quan sát (observability / 관측 가능성) cũng dùng tỷ lệ (rate / 비율)/accumulation/statistics** đặt đầu vào cho **26. AI hệ thống (system / 시스템) là chuỗi xử lý (pipeline / 파이프라인), không chỉ mô hình (model / 모델)**, rồi **27. bảo mật (security / 보안) liên kết (connection / 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. AI hệ thống (system / 시스템) là chuỗi xử lý (pipeline / 파이프라인), không chỉ mô hình (model / 모델)
 
@@ -548,8 +498,6 @@ Math xuất hiện ở mỗi tầng (layer / 계층) khác nhau.
 
 Một mô hình (model / 모델) mathematically tốt vẫn có thể thất bại (fail / 실패) vì dữ liệu (data / 데이터) leakage, unstable tính năng (feature / 기능) chuỗi xử lý (pipeline / 파이프라인), bad threshold, stale phân phối (distribution / 분포) hoặc numerical serving mismatch.
 
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **26. AI hệ thống (system / 시스템) là chuỗi xử lý (pipeline / 파이프라인), không chỉ mô hình (model / 모델)** đặt đầu vào cho **27. bảo mật (security / 보안) liên kết (connection / 연결)**, rồi **28. Một forward pass nhìn bằng nhiều branches của math** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 27. bảo mật (security / 보안) liên kết (connection / 연결)
 
 Hashing, modular arithmetic, xác suất (probability / 확률) và combinatorics xuất hiện trong bảo mật (security / 보안).
@@ -562,8 +510,6 @@ Nhưng “dùng crypto math” không tự động tạo secure hệ thống (sy
 correct mathematics
 ≠ automatically correct system
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **28. Một forward pass nhìn bằng nhiều branches của math** nối từ **27. bảo mật (security / 보안) liên kết (connection / 연결)** sang **Dùng chung (common / 공통) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Một forward pass nhìn bằng nhiều branches của math
 
@@ -591,8 +537,6 @@ serving SLA  → systems metrics
 
 Một vài dòng mã (code / 코드) có thể nằm ở intersection của gần toàn bộ Mathematics thư viện (library / 라이브러리).
 
-> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **Dùng chung (common / 공통) thất bại (failure / 실패) modes** nối từ **28. Một forward pass nhìn bằng nhiều branches của math** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dùng chung (common / 공통) thất bại (failure / 실패) modes
 
 ### Học “math for AI” như formula danh sách (list / 목록)
@@ -614,8 +558,6 @@ Algebraic equivalence có thể khác stability.
 ### Đánh đồng correlation với causation
 
 Prediction và intervention là different questions.
-
-> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Toán trong AI, dữ liệu (data / 데이터) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): từ biểu diễn (representation / 표현) đến reliable các hệ thống (systems / 시스템들)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

@@ -438,7 +438,7 @@ Load balancing phân phối công việc, còn rate limiter giới hạn tốc �
 
 ## 29. tỷ lệ (rate / 비율) Limiter
 
-Đơn vị từ (token / 토큰) Bucket có thể được xem như trạng thái (state / 상태) nhỏ gồm số đơn vị từ (token / 토큰) và timestamp cập nhật cuối. Sliding-window chính xác (exact / 정확한) limiter có thể cần hàng đợi (queue / 큐) timestamp; approximate limiter có thể dùng fixed buckets.
+Đơn vị từ (token / 토큰) Bucket có thể được xem như trạng thái (state / 상태) nhỏ gồm số token (토큰) và timestamp cập nhật cuối. Sliding-window chính xác (exact / 정확한) limiter có thể cần hàng đợi (queue / 큐) timestamp; approximate limiter có thể dùng fixed buckets.
 
 Cùng yêu cầu (requirement / 요구사항) “giới hạn yêu cầu (request / 요청)” có nhiều biểu diễn (representation / 표현) với sự đánh đổi (trade-off / 트레이드오프) precision/bộ nhớ (memory / 메모리).
 
@@ -527,7 +527,7 @@ Inverted postings tận dụng list đã sắp xếp để giao và xếp hạng
 
 Suffix Array, FM-index hoặc inverted chỉ mục (index / 인덱스) phù hợp các kiểu tìm kiếm (search / 검색) khác nhau.
 
-Inverted chỉ mục (index / 인덱스) mạnh cho đơn vị từ (token / 토큰)/term queries. Suffix structures phù hợp substring/order-based queries. FM-index hỗ trợ compressed substring tìm kiếm (search / 검색).
+Inverted chỉ mục (index / 인덱스) mạnh cho token (토큰)/term queries. Suffix structures phù hợp substring/order-based queries. FM-index hỗ trợ compressed substring tìm kiếm (search / 검색).
 
 Chỉ mục (index / 인덱스) phải khớp truy vấn (query / 쿼리) ngữ nghĩa (semantics / 의미론).
 

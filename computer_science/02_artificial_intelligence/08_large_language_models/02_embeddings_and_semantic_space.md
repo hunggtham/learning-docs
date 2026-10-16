@@ -2,11 +2,11 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Embeddings và semantic space trong LLM systems**. Route đi từ token embeddings → positional information → contextual hidden states → pooling/projection → similarity, probing, and transfer limits, để “không gian ngữ nghĩa” được nối với representation thực tế.
 
-“Embedding” trong LLM ngữ cảnh (context / 맥락) có ít nhất ba meanings cần tách: **đầu vào (input / 입력) đơn vị từ (token / 토큰) embedding**, **nội bộ (internal / 내부) contextual hidden states**, và **bên ngoài (external / 외부) embedding mô hình (model / 모델) đầu ra (output / 출력) dùng cho retrieval/similarity**. Chúng đều là vectors nhưng mục tiêu (objective / 목표)/use khác nhau.
+“Embedding” trong LLM ngữ cảnh (context / 맥락) có ít nhất ba meanings cần tách: **đầu vào (input / 입력) token (토큰) embedding**, **nội bộ (internal / 내부) contextual hidden states**, và **bên ngoài (external / 외부) embedding mô hình (model / 모델) đầu ra (output / 출력) dùng cho retrieval/similarity**. Chúng đều là vectors nhưng mục tiêu (objective / 목표)/use khác nhau.
 
-Nếu trộn ba loại, dễ nghĩ véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스) đang lưu “LLM thoughts” hoặc đơn vị từ (token / 토큰) embedding là ngữ nghĩa (semantic / 의미적) sentence embedding. Không đúng.
+Nếu trộn ba loại, dễ nghĩ véc-tơ (vector / 벡터) cơ sở dữ liệu (database / 데이터베이스) đang lưu “LLM thoughts” hoặc token (토큰) embedding là ngữ nghĩa (semantic / 의미적) sentence embedding. Không đúng.
 
-## Đầu vào (input / 입력) đơn vị từ (token / 토큰) Embedding
+## Đầu vào (input / 입력) token (토큰) Embedding
 
 Tokenizer ID maps row:
 
@@ -28,7 +28,7 @@ After tầng (layer / 계층) `l`:
 h_t^{(l)}=TransformerLayer_l(...)
 \]
 
-depends other allowed tokens. Same đơn vị từ (token / 토큰) has different hidden trạng thái (state / 상태) based ngữ cảnh (context / 맥락).
+depends other allowed tokens. Same token (토큰) has different hidden trạng thái (state / 상태) based ngữ cảnh (context / 맥락).
 
 Nội bộ (internal / 내부) hidden states optimized for next-token mục tiêu (objective / 목표), not necessarily cosine sentence tìm kiếm (search / 검색).
 
@@ -44,7 +44,7 @@ z=W_Uh_t
 
 Often `W_U=E^T` through weight tying, but not universal.
 
-Dot sản phẩm (product / 제품) hidden trạng thái (state / 상태) with đơn vị từ (token / 토큰) đầu ra (output / 출력) vectors yields đơn vị từ (token / 토큰) tính tương thích (compatibility / 호환성) logits.
+Dot sản phẩm (product / 제품) hidden trạng thái (state / 상태) with token (토큰) đầu ra (output / 출력) vectors yields token (토큰) tính tương thích (compatibility / 호환성) logits.
 
 This creates interesting geometric quan hệ (relation / 관계) between hidden không gian (space / 공간) and vocabulary, but softmax hành vi (behavior / 동작) is contextual/composed through layers.
 

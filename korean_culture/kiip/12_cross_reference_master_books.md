@@ -27,8 +27,6 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 아동·육아·돌봄 | [`../29_childhood_parenting_care_institutions.md`](../29_childhood_parenting_care_institutions.md) |
 | 시민사회·민주주의 | [`../25_civic_media_public_sphere_protest.md`](../25_civic_media_public_sphere_protest.md) |
 
-> **Nối mạch:** Trong **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Lịch sử (history / 이력) map** nối từ **Culture map** sang **Cách dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lịch sử (history / 이력) map
 
 Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → đối chiếu lại cơ chế thay vì học thuộc danh sách rời.
@@ -49,8 +47,6 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 | 한국전쟁 | [`../../korean_history/17_korean_war_1950_1953.md`](../../korean_history/17_korean_war_1950_1953.md) |
 | 산업화 | [`../../korean_history/19_developmental_state_industrialization_1961_1979.md`](../../korean_history/19_developmental_state_industrialization_1961_1979.md) |
 | 민주화 | [`../../korean_history/20_gwangju_and_democratization_1987.md`](../../korean_history/20_gwangju_and_democratization_1987.md) |
-
-> **Nối mạch:** Ở chặng này của **12. KIIP ↔ Korean Culture / Korean lịch sử (history / 이력) Cross tham chiếu (reference / 참조)**, **Cách dùng** nối từ **Lịch sử (history / 이력) map** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Cách dùng
 

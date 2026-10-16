@@ -2,7 +2,6 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Abstraction layers và leaky abstractions**. Route bắt đầu từ contract/encapsulation, đi qua leakage, cross-layer debugging và performance, rồi kết thúc bằng câu hỏi layer nào thực sự sở hữu invariant khi abstraction không còn che được failure.
 
-
 Computer các hệ thống (systems / 시스템들) are possible because no one thinks about all layers simultaneously. trình duyệt (browser / 브라우저) nhà phát triển (developer / 개발자) sees DOM/HTTP; backend sees objects/transactions; cơ sở dữ liệu (database / 데이터베이스) sees pages/logs; kernel sees processes/pages/sockets; CPU sees instructions/bộ nhớ đệm (cache / 캐시) lines. Each tầng (layer / 계층) offers an lớp trừu tượng (abstraction / 추상화) đặc tả hợp đồng (contract / 계약).
 
 ## Why lớp trừu tượng (abstraction / 추상화) is essential
@@ -10,9 +9,6 @@ Computer các hệ thống (systems / 시스템들) are possible because no one 
 Without lớp trừu tượng (abstraction / 추상화), to append văn bản (text / 텍스트) to tệp (file / 파일) nhà phát triển (developer / 개발자) would need điều khiển (control / 제어) SSD voltage cells. Filesystem turns blocks into files; thời gian chạy (runtime / 런타임) turns bộ nhớ (memory / 메모리) into objects; TCP turns packets into byte stream; SQL turns pages/indexes into relations/truy vấn (query / 쿼리) results.
 
 Lớp trừu tượng (abstraction / 추상화) creates **cục bộ (local / 로컬) lập luận (reasoning / 추론)**: solve bài toán (problem / 문제) using mô hình (model / 모델) without reproducing lower-layer mechanics.
-
-
-> **Nối mạch:** Abstraction giảm chi phí nhận thức bằng contract; khi latency, failure hoặc resource detail xuyên qua contract, đó là leaky abstraction cần được đo ở đúng tầng.
 
 ## Leaky lớp trừu tượng (abstraction / 추상화)
 
@@ -27,9 +23,6 @@ Examples:
 - Cloud đối tượng (object / 객체) lưu trữ (storage / 저장소) mounted as filesystem leaks different rename/consistency ngữ nghĩa (semantics / 의미론).
 
 Leak does not make lớp trừu tượng (abstraction / 추상화) useless. It defines when engineer must descend a tầng (layer / 계층).
-
-
-> **Nối mạch:** **Leaky lớp trừu tượng (abstraction / 추상화)** cung cấp điều kiện cho **tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)
 
@@ -67,9 +60,6 @@ Physical medium
 
 A bug can be reasoned at highest tầng (layer / 계층) where bằng chứng (evidence / 증거) explains hành vi (behavior / 동작). Descend only when đặc tả hợp đồng (contract / 계약) no longer explains observation.
 
-
-> **Nối mạch:** **tầng (layer / 계층) đặc tả hợp đồng (contract / 계약) and khả năng quan sát (observability / 관측 가능성)** cung cấp điều kiện cho **ranh giới (boundary / 경계) mismatch examples**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Ranh giới (boundary / 경계) mismatch examples
 
 ### ORM N+1
@@ -88,9 +78,6 @@ App thinks `write()` “saved”; OS buffers; thiết bị (device / 장치) b�
 
 Thuật toán (algorithm / 알고리즘) tầng (layer / 계층) says expected constant; microarchitecture sees bộ nhớ đệm (cache / 캐시) misses/đối tượng (object / 객체) allocations; adversarial collisions see O(n). hiệu năng (performance / 성능)/bảo mật (security / 보안) leak các giả định (assumptions / 가정들).
 
-
-> **Nối mạch:** **ranh giới (boundary / 경계) mismatch examples** cung cấp điều kiện cho **Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging
 
 Start with symptom and observable đặc tả hợp đồng (contract / 계약):
@@ -103,29 +90,17 @@ Start with symptom and observable đặc tả hợp đồng (contract / 계약):
 
 Avoid descending to assembly for every bài toán (problem / 문제); avoid refusing to descend when high-level mô hình (model / 모델) fails.
 
-
-> **Nối mạch:** **Choosing lớp trừu tượng (abstraction / 추상화) mức (level / 수준) for debugging** cung cấp điều kiện cho **Encapsulation and escape hatches**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Encapsulation and escape hatches
 
 Good lớp trừu tượng (abstraction / 추상화) offers safe dùng chung (common / 공통) đường dẫn (path / 경로) plus measured escape hatch: SQL hints/raw SQL, memory-mapped I/O, bản địa (native / 네이티브) interop, custom allocator, vận chuyển (transport / 전송) cấu hình (configuration / 구성). Escape hatch should be tường minh (explicit / 명시적) because caller now inherits lower-level các ràng buộc (constraints / 제약조건들).
-
-
-> **Nối mạch:** **Encapsulation and escape hatches** cung cấp điều kiện cho **tầng (layer / 계층) inversion hazards**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Tầng (layer / 계층) inversion hazards
 
 If nghiệp vụ (business / 비즈니스) tầng (layer / 계층) depends on storage-page details, coupling makes thay đổi (change / 변경) hard. Conversely hạ tầng (infrastructure / 인프라) mã (code / 코드) cannot ignore lĩnh vực (domain / 도메인) ngữ nghĩa (semantics / 의미론) like idempotency/giao dịch (transaction / 트랜잭션) boundaries. kiến trúc (architecture / 아키텍처) should điểm (point / 지점) dependencies toward stable chính sách (policy / 정책) while adapters know mechanisms.
 
-
-> **Nối mạch:** **tầng (layer / 계층) inversion hazards** cung cấp điều kiện cho **mô hình tư duy (mental model / 사고 모델)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > lớp trừu tượng (abstraction / 추상화) is a **lossy compression of lower-layer reality**: it preserves properties most users need and hides the rest. When hidden variables become relevant, descend deliberately, learn the leaked cơ chế (mechanism / 메커니즘), then return to the highest useful mô hình (model / 모델).
-
-
-> **Nối mạch:** **mô hình tư duy (mental model / 사고 모델)** cung cấp điều kiện cho **Cross-references**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Cross-references
 

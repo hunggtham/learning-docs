@@ -16,8 +16,6 @@ Chiều tự nhiên xuất hiện từ xu hướng thống kê: các trạng th�
 
 Nói cách khác, định luật thứ nhất là **điều kiện bảo toàn**, còn định luật thứ hai cung cấp **mũi tên thời gian thống kê** cho hệ vĩ mô.
 
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Trạng thái vĩ mô và vi trạng thái** nối từ **Vì sao định luật thứ nhất chưa đủ?** sang **Hệ thức Boltzmann**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái vĩ mô và vi trạng thái
 
 Một **trạng thái vĩ mô (macrostate)** được mô tả bằng các đại lượng như:
@@ -33,8 +31,6 @@ Một **vi trạng thái (microstate)** mô tả chi tiết hơn cách các hạ
 Rất nhiều vi trạng thái khác nhau có thể tạo ra cùng một trạng thái vĩ mô.
 
 Ví dụ, nếu có các phân tử khí phân bố trong một hộp, trạng thái “khí gần như đều trong toàn hộp” có số cách sắp xếp lớn hơn cực nhiều so với trạng thái “mọi phân tử cùng nằm ở góc trái”. Vì vậy trạng thái phân bố đều áp đảo về xác suất.
-
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Hệ thức Boltzmann** nối từ **Trạng thái vĩ mô và vi trạng thái** sang **Từ số vi trạng thái tới xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ thức Boltzmann
 
@@ -60,8 +56,6 @@ S_{total}=k_B\ln(W_AW_B)=S_A+S_B
 
 Nhờ vậy entropy trở thành đại lượng cộng được ở thang vĩ mô.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Từ số vi trạng thái tới xác suất** nối từ **Hệ thức Boltzmann** sang **Entropy không đơn giản là “mức độ lộn xộn”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ số vi trạng thái tới xác suất
 
 Nếu tất cả vi trạng thái khả dĩ có xác suất như nhau trong mô hình vi chính tắc, trạng thái vĩ mô có nhiều vi trạng thái hơn cũng có xác suất lớn hơn.
@@ -82,8 +76,6 @@ Hàm phân hoạch là cầu nối rất mạnh giữa mức năng lượng lư�
 
 Từ \(Z\), về nguyên tắc có thể suy ra năng lượng trung bình, entropy, năng lượng tự do và nhiều đại lượng khác.
 
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy không đơn giản là “mức độ lộn xộn”** nối từ **Từ số vi trạng thái tới xác suất** sang **Định nghĩa Clausius**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy không đơn giản là “mức độ lộn xộn”
 
 Khí thường có entropy cao hơn chất lỏng cùng chất chủ yếu vì phân tử khí có nhiều trạng thái chuyển động tịnh tiến khả dĩ hơn. Trộn hai khí làm entropy tăng vì các hạt có nhiều cách phân bố hơn trong thể tích lớn hơn.
@@ -95,8 +87,6 @@ Từ “hỗn loạn” thiếu định nghĩa định lượng và không mô t
 Một cách nói tốt hơn là:
 
 > entropy tăng khi số cách khả dĩ để hệ phân bố vật chất và năng lượng tăng dưới cùng các ràng buộc vĩ mô.
-
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Định nghĩa Clausius** nối từ **Entropy không đơn giản là “mức độ lộn xộn”** sang **Quá trình không thuận nghịch và entropy sinh ra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định nghĩa Clausius
 
@@ -113,8 +103,6 @@ Với biến đổi đẳng nhiệt thuận nghịch hữu hạn:
 \]
 
 Đây là định nghĩa nhiệt động cho biến thiên entropy. Nó không có nghĩa quá trình thật bắt buộc phải thuận nghịch; con đường thuận nghịch chỉ là một con đường toán học thuận tiện để tính chênh lệch của hàm trạng thái.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Quá trình không thuận nghịch và entropy sinh ra** nối từ **Định nghĩa Clausius** sang **Định luật thứ hai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quá trình không thuận nghịch và entropy sinh ra
 
@@ -147,8 +135,6 @@ S_{gen}=0
 
 Khái niệm này rất quan trọng trong kỹ thuật hóa học và phân tích hiệu suất năng lượng.
 
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Định luật thứ hai** nối từ **Quá trình không thuận nghịch và entropy sinh ra** sang **Vì sao nhiệt tự truyền từ nóng sang lạnh?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Định luật thứ hai
 
 Đối với một vũ trụ cô lập:
@@ -162,8 +148,6 @@ Quá trình tự diễn ra không thuận nghịch có tổng entropy tăng; tr�
 Entropy của một hệ con riêng lẻ có thể giảm nếu entropy của môi trường tăng nhiều hơn.
 
 Ví dụ nước đông thành băng làm entropy của nước giảm, nhưng giải phóng nhiệt ra môi trường. Dưới nhiệt độ đông đặc, tổng biến thiên entropy của hệ + môi trường vẫn có thể dương.
-
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Vì sao nhiệt tự truyền từ nóng sang lạnh?** nối từ **Định luật thứ hai** sang **Entropy mol chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao nhiệt tự truyền từ nóng sang lạnh?
 
@@ -193,15 +177,11 @@ nên:
 
 Đây là cách định lượng cho chiều truyền nhiệt tự nhiên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy mol chuẩn** nối từ **Vì sao nhiệt tự truyền từ nóng sang lạnh?** sang **Định luật thứ ba của nhiệt động lực học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy mol chuẩn
 
 Khác với enthalpy tạo thành chuẩn, **entropy mol chuẩn (standard molar entropy)** của nguyên tố tinh khiết ở `298 K` không được quy ước bằng 0.
 
 Giá trị entropy tuyệt đối có thể được xây dựng từ định luật thứ ba bằng cách tích phân khả năng nhiệt và cộng entropy của các chuyển pha.
-
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Định luật thứ ba của nhiệt động lực học** nối từ **Entropy mol chuẩn** sang **Entropy dư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật thứ ba của nhiệt động lực học
 
@@ -225,8 +205,6 @@ S=k_B\ln1=0
 
 Định luật thứ ba tạo điểm gốc cho entropy tuyệt đối.
 
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy dư** nối từ **Định luật thứ ba của nhiệt động lực học** sang **Nhiệt dung và entropy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy dư
 
 Một số tinh thể vẫn có nhiều cách sắp xếp tương đương ngay gần 0 K nếu hệ bị “đóng băng” trong trạng thái mất trật tự cấu hình.
@@ -236,8 +214,6 @@ Khi đó có thể tồn tại **entropy dư (residual entropy)**.
 Ví dụ kinh điển là sự định hướng phân tử trong một số tinh thể hoặc băng, nơi nhiều cấu hình vi mô vẫn tương thích với năng lượng rất gần nhau.
 
 Điều này cho thấy điều kiện “tinh thể hoàn hảo, trạng thái cơ bản duy nhất” trong định luật thứ ba là quan trọng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Nhiệt dung và entropy** nối từ **Entropy dư** sang **Entropy của chuyển pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt dung và entropy
 
@@ -250,8 +226,6 @@ Khi hệ được nung thuận nghịch từ \(T_1\) đến \(T_2\):
 Ở áp suất không đổi dùng \(C_p\), còn thể tích không đổi dùng \(C_V\) tùy con đường.
 
 Công thức này cho thấy nhiệt dung liên hệ trực tiếp với số mức năng lượng có thể tiếp cận khi nhiệt độ thay đổi.
-
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy của chuyển pha** nối từ **Nhiệt dung và entropy** sang **Một số xu hướng entropy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Entropy của chuyển pha
 
@@ -269,8 +243,6 @@ Ví dụ entropy nóng chảy:
 
 Chất lỏng thường có entropy cao hơn chất rắn vì có nhiều cấu hình khả dĩ hơn.
 
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Một số xu hướng entropy** nối từ **Entropy của chuyển pha** sang **Entropy trộn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Một số xu hướng entropy
 
 Với cùng một chất và điều kiện tương đương, thường có xu hướng:
@@ -284,8 +256,6 @@ Phân tử phức tạp hơn thường có entropy mol lớn hơn vì có nhiề
 Phản ứng làm tăng số mol khí thường có xu hướng tạo \(\Delta S\) dương.
 
 Tuy nhiên đây chỉ là các quy tắc kinh nghiệm; khi cần độ chính xác phải dùng dữ liệu nhiệt động thực.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy trộn** nối từ **Một số xu hướng entropy** sang **Ý nghĩa vi mô của entropy trộn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Entropy trộn
 
@@ -311,8 +281,6 @@ nên:
 
 Đây là một lý do entropy đóng vai trò lớn trong sự hòa tan và trộn khí.
 
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Ý nghĩa vi mô của entropy trộn** nối từ **Entropy trộn** sang **Nghịch lý Gibbs và tính phân biệt của hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ý nghĩa vi mô của entropy trộn
 
 Trước khi trộn, phân tử A chỉ có thể nằm trong vùng A và phân tử B trong vùng B. Sau khi bỏ vách ngăn, mỗi phân tử có nhiều vị trí khả dĩ hơn.
@@ -321,8 +289,6 @@ Số cách phân bố tăng rất mạnh dù không cần thay đổi đáng k�
 
 Đây là ví dụ điển hình cho một quá trình được thúc đẩy chủ yếu bởi entropy.
 
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Nghịch lý Gibbs và tính phân biệt của hạt** nối từ **Ý nghĩa vi mô của entropy trộn** sang **Entropy và phản ứng hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nghịch lý Gibbs và tính phân biệt của hạt
 
 Nếu trộn hai khí hoàn toàn giống nhau, không có entropy trộn thực sự quan sát được vì trạng thái trước và sau không phân biệt về mặt vật lý.
@@ -330,8 +296,6 @@ Nếu trộn hai khí hoàn toàn giống nhau, không có entropy trộn thực
 Điều này dẫn tới **nghịch lý Gibbs (Gibbs paradox)** trong cách đếm cổ điển và được giải quyết khi tính đúng tính không phân biệt của các hạt đồng nhất trong cơ học lượng tử/thống kê.
 
 Đây là một ví dụ sâu cho thấy cách đếm vi trạng thái phải tuân bản chất vật lý của hệ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy và phản ứng hóa học** nối từ **Nghịch lý Gibbs và tính phân biệt của hạt** sang **Entropy và thế hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Entropy và phản ứng hóa học
 
@@ -357,8 +321,6 @@ Entropy đóng góp vào động lực phản ứng qua:
 
 Một phản ứng không thuận lợi về enthalpy vẫn có thể thuận lợi về Gibbs nếu entropy tăng đủ mạnh.
 
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy và thế hóa học** nối từ **Entropy và phản ứng hóa học** sang **Entropy và thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy và thế hóa học
 
 Trong hỗn hợp, entropy trộn làm thế hóa học phụ thuộc thành phần.
@@ -379,8 +341,6 @@ Hạng logarithm thành phần có nguồn gốc sâu từ entropy cấu hình c
 - cân bằng hóa học;
 - thế điện hóa.
 
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy và thông tin** nối từ **Entropy và thế hóa học** sang **Entropy trong sinh học không vi phạm định luật thứ hai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy và thông tin
 
 Entropy Shannon trong **lý thuyết thông tin (information theory)** có dạng:
@@ -399,8 +359,6 @@ Hai biểu thức có cấu trúc toán học gần như giống nhau vì đều
 
 Tuy nhiên không nên tùy tiện đồng nhất “bit thông tin” với entropy nhiệt động. Muốn nối hai khái niệm phải xác định rõ hệ vật lý, trạng thái và đơn vị.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy trong sinh học không vi phạm định luật thứ hai** nối từ **Entropy và thông tin** sang **Entropy và tính không thuận nghịch trong công nghệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy trong sinh học không vi phạm định luật thứ hai
 
 Sinh vật tạo cấu trúc có tổ chức cao và có thể làm entropy cục bộ giảm. Nhưng sinh vật là hệ mở: chúng lấy năng lượng tự do từ thức ăn hoặc ánh sáng và thải nhiệt cùng sản phẩm phân hủy ra môi trường.
@@ -408,8 +366,6 @@ Sinh vật tạo cấu trúc có tổ chức cao và có thể làm entropy cụ
 Tổng entropy của hệ rộng hơn vẫn tăng.
 
 Vì vậy “sự sống tạo trật tự” không mâu thuẫn với nhiệt động lực học.
-
-> **Nối mạch:** Trong **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Entropy và tính không thuận nghịch trong công nghệ** nối từ **Entropy trong sinh học không vi phạm định luật thứ hai** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Entropy và tính không thuận nghịch trong công nghệ
 
@@ -424,8 +380,6 @@ Các nguồn gồm:
 - phản ứng quá xa cân bằng.
 
 Trong kỹ thuật, phân tích entropy giúp tìm nơi hệ tiêu tán **khả năng sinh công (exergy)**.
-
-> **Nối mạch:** Ở chặng này của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Các hiểu lầm thường gặp** nối từ **Entropy và tính không thuận nghịch trong công nghệ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -448,8 +402,6 @@ Không. Entropy và năng lượng là hai đại lượng khác nhau. Một tr�
 ### “Entropy chỉ có ý nghĩa trong khí”
 
 Không. Entropy có vai trò trong chất rắn, chất lỏng, dung dịch, phản ứng, vật liệu, sinh học và thông tin thống kê.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Entropy — số cách phân bố năng lượng, vật chất và thông tin vi mô**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

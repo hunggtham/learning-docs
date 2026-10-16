@@ -12,8 +12,6 @@ Static typing kiểm tra nhiều properties trước thời gian chạy (runtime
 
 Một static hệ kiểu (type system / 타입 시스템) vẫn có thể có unsafe escape hatches; một dynamically typed ngôn ngữ (language / 언어) vẫn có bộ nhớ (memory / 메모리) an toàn (safety / 안전) và strong thời gian chạy (runtime / 런타임) checks.
 
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **Kiểu (type / 타입) là một proposition về giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nominal và structural typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)
 
 `transfer(Account from, Account to, Money amount)` có thể type-check hoàn hảo nhưng vẫn cho phép amount âm nếu kiểu (type / 타입) `Money` không encode ràng buộc (constraint / 제약조건) đó.
@@ -21,8 +19,6 @@ Một static hệ kiểu (type system / 타입 시스템) vẫn có thể có un
 Hệ kiểu (type system / 타입 시스템) chỉ bảo đảm properties mà nó biểu diễn. Một thiết kế richer kiểu (type / 타입) như `PositiveMoney` có thể chuyển bất biến (invariant / 불변식) từ thời gian chạy (runtime / 런타임) check sang construction quy tắc (rule / 규칙).
 
 Đây là principle “make invalid states unrepresentable”, nhưng quá nhiều kiểu (type / 타입) độ phức tạp (complexity / 복잡도) cũng tăng cognitive chi phí (cost / 비용).
-
-> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Nominal và structural typing** tiếp nhận điểm tựa từ **Kiểu (type / 타입) an toàn (safety / 안전) không đồng nghĩa nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subtyping và substitutability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Nominal và structural typing
 
@@ -32,15 +28,11 @@ Structural typing dựa trên shape/capabilities: nếu đối tượng (object 
 
 Hai các mô hình (models / 모델들) ảnh hưởng API evolution, tính tương thích (compatibility / 호환성) và lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Subtyping và substitutability** tiếp nhận điểm tựa từ **Nominal và structural typing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parametric polymorphism và generics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Subtyping và substitutability
 
 Nếu `S` là subtype của `T`, giá trị (value / 값) `S` có thể dùng ở nơi `T` được yêu cầu mà không phá đặc tả hợp đồng (contract / 계약). Đây là tinh thần của Liskov Substitution Principle.
 
 Inheritance cú pháp (syntax / 문법) không tự đảm bảo ngữ nghĩa (semantic / 의미적) substitutability. Một subclass có thể type-compatible nhưng strengthen precondition hoặc weaken postcondition theo cách phá caller các giả định (assumptions / 가정들).
-
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Parametric polymorphism và generics** tiếp nhận điểm tựa từ **Subtyping và substitutability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Parametric polymorphism và generics
 
@@ -50,8 +42,6 @@ Generic containers như `List<T>` cho phép reuse cấu trúc dữ liệu (data 
 
 Hiện thực (implementation / 구현) có thể monomorphize thành phiên bản (version / 버전) riêng cho mỗi concrete kiểu (type / 타입) hoặc erase kiểu (type / 타입) parameters ở thời gian chạy (runtime / 런타임) (như Java type erasure cho nhiều generics). sự đánh đổi (trade-off / 트레이드오프) là mã (code / 코드) kích thước (size / 크기), specialization hiệu năng (performance / 성능) và thời gian chạy (runtime / 런타임) kiểu (type / 타입) thông tin (information / 정보).
 
-> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Variance** tiếp nhận điểm tựa từ **Parametric polymorphism và generics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sum types và sản phẩm (product / 제품) types** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Variance
 
 Nếu `Cat <: Animal`, có phải `List<Cat> <: List<Animal>`? Không phải luôn.
@@ -59,8 +49,6 @@ Nếu `Cat <: Animal`, có phải `List<Cat> <: List<Animal>`? Không phải lu�
 Nếu mutable `List<Cat>` được coi là `List<Animal>`, caller có thể insert `Dog`, phá bất biến (invariant / 불변식). Read-only producer có thể covariance an toàn hơn; bên tiêu thụ (consumer / 소비자) có thể contravariance.
 
 Java wildcard quy tắc (rule / 규칙) “Producer Extends, bên tiêu thụ (consumer / 소비자) Super” là practical reflection của variance lý thuyết (theory / 이론).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Sum types và sản phẩm (product / 제품) types** tiếp nhận điểm tựa từ **Variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nullability và option types** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Sum types và sản phẩm (product / 제품) types
 
@@ -76,23 +64,17 @@ encode success/thất bại (failure / 실패) vào kiểu (type / 타입) thay 
 
 Mẫu (pattern / 패턴) matching có thể buộc exhaustiveness, giúp trình biên dịch (compiler / 컴파일러) phát hiện trường hợp (case / 사례) bị bỏ sót.
 
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Sum types và sản phẩm (product / 제품) types** cho ta quy tắc; **Nullability và option types** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Gradual typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Nullability và option types
 
 Nếu `null` có thể xuất hiện ở hầu hết tham chiếu (reference / 참조) types, nhiều invalid states lan vào program. Nullable kiểu (type / 타입) `T?` hoặc `Option<T>` tách “có giá trị (value / 값)” và “không có giá trị (value / 값)” thành tường minh (explicit / 명시적) kiểu (type / 타입) trạng thái (state / 상태).
 
 Static nullability không loại mọi null bug, nhưng thu hẹp nơi cần lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Nullability và option types** cho ta quy tắc; **Gradual typing** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Gradual typing
 
 Một số languages kết hợp static và động (dynamic / 동적) typing. TypeScript thêm static tầng (layer / 계층) trên JavaScript nhưng erase types khi emit JS. Python kiểu (type / 타입) hints chủ yếu phục vụ tools/checkers chứ ngữ nghĩa thời gian chạy (runtime semantics / 런타임 의미론) mặc định không enforce toàn bộ annotations.
 
 Điều này cho phép adoption từng bước nhưng ranh giới (boundary / 경계) typed/untyped cần được validate.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Gradual typing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,13 +84,9 @@ Một số languages kết hợp static và động (dynamic / 동적) typing. T
 
 **“Inheritance và subtyping là cùng một thứ.”** Inheritance là reuse/nominal cơ chế (mechanism / 메커니즘); ngữ nghĩa (semantic / 의미적) substitutability là thuộc tính (property / 속성) mạnh hơn.
 
-> **Chuyển mạch:** Trong **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hệ kiểu (type system / 타입 시스템) là một ngôn ngữ (language / 언어) nhỏ bên trong ngôn ngữ (language / 언어) lớn, mô tả những states/operations nào được coi là hợp lệ trước hoặc trong thời gian chạy (runtime / 런타임).
-
-> **Chuyển mạch:** Ở chặng này của **Kiểu (type / 타입) các hệ thống (systems / 시스템들), generics và polymorphism**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

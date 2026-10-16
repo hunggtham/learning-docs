@@ -10,8 +10,6 @@ Trình duyệt (browser / 브라우저) Same-Origin chính sách (policy / 정�
 
 SOP là isolation ranh giới (boundary / 경계) của nền tảng Web (web platform / 웹 플랫폼). CORS không “bật bảo mật (security / 보안)”; nó là cơ chế (mechanism / 메커니즘) máy chủ (server / 서버) dùng để nới quyền cross-origin read cho origins được phép.
 
-> **Nối mạch:** **Same-Origin chính sách (policy / 정책)** đặt vấn đề; **XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)** kiểm tra bằng chứng, rồi **CSRF: trình duyệt (browser / 브라우저) mang credentials ngoài ý muốn** mở rộng hệ quả.
-
 ## XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)
 
 Cross-Site Scripting xảy ra khi attacker-controlled dữ liệu (data / 데이터) được trình thông dịch (interpreter / 인터프리터) của trình duyệt (browser / 브라우저) coi là executable script/markup trong ngữ cảnh (context / 맥락) không intended.
@@ -20,15 +18,11 @@ Defense cốt lõi là context-aware đầu ra (output / 출력) encoding và tr
 
 Content bảo mật (security / 보안) chính sách (policy / 정책) (CSP) thêm defense-in-depth bằng cách giới hạn sources/thực thi (execution / 실행) modes, nhưng không thay thế đầu ra (output / 출력) an toàn (safety / 안전).
 
-> **Nối mạch:** **XSS: dữ liệu (data / 데이터) trở thành mã (code / 코드)** đặt vấn đề; **CSRF: trình duyệt (browser / 브라우저) mang credentials ngoài ý muốn** kiểm tra bằng chứng, rồi **SQL/command injection** mở rộng hệ quả.
-
 ## CSRF: trình duyệt (browser / 브라우저) mang credentials ngoài ý muốn
 
 Cross-Site yêu cầu (request / 요청) Forgery lợi dụng việc trình duyệt (browser / 브라우저) tự động gửi credentials như cookies tới mục tiêu (target / 대상) site khi người dùng (user / 사용자) bị dụ tạo yêu cầu (request / 요청) từ site khác.
 
-Defenses gồm SameSite cookies, anti-CSRF tokens và checking origin/referer trong phù hợp ngữ cảnh (context / 맥락). Nếu auth dùng bearer đơn vị từ (token / 토큰) chỉ gửi qua tường minh (explicit / 명시적) JavaScript header và attacker site không đọc đơn vị từ (token / 토큰), threat mô hình (model / 모델) khác.
-
-> **Nối mạch:** **SQL/command injection** nối từ **CSRF: trình duyệt (browser / 브라우저) mang credentials ngoài ý muốn** sang **SSRF và trust vào mạng (network / 네트워크) location**, vì cơ chế trước tạo đầu vào cho bước sau.
+Defenses gồm SameSite cookies, anti-CSRF tokens và checking origin/referer trong phù hợp ngữ cảnh (context / 맥락). Nếu auth dùng bearer token (토큰) chỉ gửi qua tường minh (explicit / 명시적) JavaScript header và attacker site không đọc token (토큰), threat mô hình (model / 모델) khác.
 
 ## SQL/command injection
 
@@ -36,23 +30,17 @@ Injection xảy ra khi untrusted dữ liệu (data / 데이터) được concate
 
 Same principle áp dụng shell command, LDAP, template và expression languages: **dữ liệu (data / 데이터) không được trở thành cú pháp (syntax / 문법) ngoài ý muốn**.
 
-> **Nối mạch:** **SSRF và trust vào mạng (network / 네트워크) location** nối từ **SQL/command injection** sang **Session bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## SSRF và trust vào mạng (network / 네트워크) location
 
 Server-Side yêu cầu (request / 요청) Forgery làm backend fetch attacker-controlled destination. Nếu backend có quyền truy cập (access / 접근) nội bộ (internal / 내부) siêu dữ liệu (metadata / 메타데이터)/admin services, attacker piggybacks trust của máy chủ (server / 서버).
 
 Defense cần URL kiểm tra hợp lệ (validation / 검증), mạng (network / 네트워크) egress chính sách (policy / 정책), allowlist và protection against DNS rebinding/redirect tricks tùy threat mô hình (model / 모델).
 
-> **Nối mạch:** **Session bảo mật (security / 보안)** nối từ **SSRF và trust vào mạng (network / 네트워크) location** sang **Authentication không kết thúc ở login**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Session bảo mật (security / 보안)
 
-Session ID/đơn vị từ (token / 토큰) là bearer năng lực (capability / 역량): ai sở hữu có thể impersonate người dùng (user / 사용자) trong phạm vi quyền. Tokens cần entropy đủ, secure vận chuyển (transport / 전송), appropriate thời gian tồn tại (lifetime / 수명), rotation/revocation chiến lược (strategy / 전략).
+Session ID/token (토큰) là bearer năng lực (capability / 역량): ai sở hữu có thể impersonate người dùng (user / 사용자) trong phạm vi quyền. Tokens cần entropy đủ, secure vận chuyển (transport / 전송), appropriate thời gian tồn tại (lifetime / 수명), rotation/revocation chiến lược (strategy / 전략).
 
 Cookie flags `Secure`, `HttpOnly`, `SameSite` bảo vệ các threat khác nhau. `HttpOnly` giảm script truy cập (access / 접근) nhưng không làm XSS vô hại vì injected script vẫn có thể gửi requests dưới session.
-
-> **Nối mạch:** **Authentication không kết thúc ở login** nối từ **Session bảo mật (security / 보안)** sang **Tệp (file / 파일) upload**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Authentication không kết thúc ở login
 
@@ -60,13 +48,9 @@ Password reset, email thay đổi (change / 변경), MFA khôi phục (recovery 
 
 Authorization phải check server-side trên mỗi sensitive đối tượng (object / 객체)/hành động (action / 동작). Hidden button trong UI không phải kiểm soát truy cập (access control / 접근 제어).
 
-> **Nối mạch:** **Tệp (file / 파일) upload** nối từ **Authentication không kết thúc ở login** sang **Bảo mật (security / 보안) headers và trình duyệt (browser / 브라우저) primitives**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tệp (file / 파일) upload
 
 Upload tệp (file / 파일) kết hợp content-type ambiguity, parser bugs, đường dẫn (path / 경로) traversal, executable content và lưu trữ (storage / 저장소) permissions. Safe thiết kế (design / 설계) thường tách upload lưu trữ (storage / 저장소) khỏi executable web gốc (root / 루트), rename generated IDs, validate kiểu (type / 타입)/content và scan/tiến trình (process / 프로세스) trong constrained môi trường (environment / 환경).
-
-> **Nối mạch:** **Bảo mật (security / 보안) headers và trình duyệt (browser / 브라우저) primitives** nối từ **Tệp (file / 파일) upload** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo mật (security / 보안) headers và trình duyệt (browser / 브라우저) primitives
 
@@ -74,23 +58,17 @@ HSTS ép HTTPS cho future requests; CSP giới hạn content thực thi (executi
 
 Headers chỉ hiệu quả khi hiểu threat tương ứng, không phải checklist score.
 
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Bảo mật (security / 보안) headers và trình duyệt (browser / 브라우저) primitives** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 **“Frontend kiểm tra hợp lệ (validation / 검증) đủ vì người dùng (user / 사용자) không sửa được UI.”** máy khách (client / 클라이언트) hoàn toàn attacker-controlled.
 
-**“JWT an toàn hơn session.”** JWT chỉ là đơn vị từ (token / 토큰) format/signing mô hình (model / 모델); vòng đời (lifecycle / 생명주기), lưu trữ (storage / 저장소), revocation và authorization vẫn quyết định bảo mật (security / 보안).
+**“JWT an toàn hơn session.”** JWT chỉ là token (토큰) format/signing mô hình (model / 모델); vòng đời (lifecycle / 생명주기), lưu trữ (storage / 저장소), revocation và authorization vẫn quyết định bảo mật (security / 보안).
 
 **“HTTPS ngăn XSS/SQL injection.”** TLS bảo vệ dữ liệu (data / 데이터) in transit, không sửa ứng dụng (application / 애플리케이션) lô-gic (logic / 논리).
-
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Web bảo mật (security / 보안) là kiểm soát trình thông dịch (interpreter / 인터프리터) boundaries, origin boundaries, credential boundaries và authorization boundaries. Mỗi lần dữ liệu (data / 데이터) đổi ngữ cảnh (context / 맥락), phải hỏi ai kiểm soát nó và thành phần (component / 컴포넌트) tiếp theo sẽ diễn giải nó như dữ liệu (data / 데이터) hay mã (code / 코드).
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

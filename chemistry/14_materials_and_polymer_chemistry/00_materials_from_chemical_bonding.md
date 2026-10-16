@@ -56,23 +56,17 @@ Electron dẫn còn giúp nhiều kim loại có độ dẫn điện và dẫn n
 
 Tuy nhiên độ bền thực tế phụ thuộc mạnh vào **lệch mạng (dislocation)**, kích thước hạt, kết tủa và lịch sử biến dạng. Vì vậy không thể giải thích độ bền kim loại chỉ bằng “liên kết kim loại mạnh”.
 
-> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn ion** nối từ **Liên kết kim loại** sang **Mạng cộng hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chất rắn ion
 
 Tương tác Coulomb mạnh có thể tạo nhiệt độ nóng chảy và độ cứng cao. Nhưng khi một mặt tinh thể trượt, các ion cùng dấu có thể bị đưa lại gần, làm năng lượng tăng mạnh và khe nứt dễ phát triển.
 
 Đây là một lý do nhiều gốm ion cứng nhưng giòn.
 
-> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Mạng cộng hóa trị** nối từ **Chất rắn ion** sang **Chất rắn phân tử và polymer**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mạng cộng hóa trị
 
 Liên kết mạnh và định hướng có thể tạo môđun cao, độ cứng lớn và nhiệt độ làm việc cao. Kim cương và SiC là ví dụ.
 
 Mặt trái là chuyển động lệch mạng thường khó, nên vật liệu ít khả năng biến dạng dẻo để làm tù đầu khe nứt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn phân tử và polymer** nối từ **Mạng cộng hóa trị** sang **Đa hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn phân tử và polymer
 
@@ -103,8 +97,6 @@ Tính chất khối vì vậy phụ thuộc mạnh vào:
 
 Thủy tinh là chất rắn vô định hình nằm ngoài trạng thái tinh thể cân bằng, không nên được mô tả đơn giản như “chất lỏng cực nhớt đang chảy ở nhiệt độ phòng”.
 
-> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đa hình** nối từ **Chất rắn phân tử và polymer** sang **Khuyết tật điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đa hình
 
 Cùng thành phần có thể tạo nhiều **đa hình (polymorph)** với cách sắp xếp khác nhau.
@@ -117,8 +109,6 @@ Vì vậy “công thức hóa học giống nhau” chưa đồng nghĩa “cù
 
 Tinh thể hoàn hảo chỉ là mô hình tham chiếu. Vật liệu thật luôn chứa khuyết tật; nhiều công nghệ còn chủ động tạo chúng.
 
-> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Khuyết tật điểm** nối từ **Đa hình** sang **Lệch mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khuyết tật điểm
 
 Các loại điển hình:
@@ -130,15 +120,11 @@ Các loại điển hình:
 
 Khuyết tật điểm tạo đường cho khuếch tán, dẫn ion và pha tạp điện tử.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Lệch mạng** nối từ **Khuyết tật điểm** sang **Biên hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lệch mạng
 
 **Lệch mạng (dislocation)** là khuyết tật đường. Biến dạng dẻo của kim loại chủ yếu xảy ra nhờ lệch mạng di chuyển từng bước thay vì cả mặt tinh thể trượt đồng thời.
 
 Nhờ vậy ứng suất biến dạng thấp hơn rất nhiều so với tinh thể lý tưởng. Các cơ chế tăng bền thường hoạt động bằng cách làm lệch mạng khó di chuyển hơn.
-
-> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Biên hạt** nối từ **Lệch mạng** sang **Đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biên hạt
 
@@ -221,8 +207,6 @@ Vì vậy một chuyển pha thuận lợi về nhiệt động chưa chắc x�
 
 # Tính chất cơ học từ cấu trúc
 
-> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đàn hồi** nối từ **Biên hạt** sang **Chảy và biến dạng dẻo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đàn hồi
 
 Biến dạng đàn hồi tương ứng với dịch chuyển nhỏ quanh trạng thái cân bằng.
@@ -235,13 +219,9 @@ E=\frac{\sigma}{\varepsilon}
 
 với \(E\) là môđun Young.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chảy và biến dạng dẻo** nối từ **Đàn hồi** sang **Độ bền và độ dai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chảy và biến dạng dẻo
 
 Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim loại, cơ chế trung tâm là chuyển động lệch mạng.
-
-> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Độ bền và độ dai** nối từ **Chảy và biến dạng dẻo** sang **Gãy nứt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ bền và độ dai
 
@@ -250,8 +230,6 @@ Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim 
 **Độ dai (toughness)** liên quan năng lượng vật liệu hấp thụ trước khi gãy, gần với diện tích dưới đường ứng suất–biến dạng.
 
 Một vật liệu rất cứng hoặc rất bền vẫn có thể có độ dai thấp.
-
-> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Gãy nứt** nối từ **Độ bền và độ dai** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Gãy nứt
 

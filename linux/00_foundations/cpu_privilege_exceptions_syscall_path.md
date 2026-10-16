@@ -14,8 +14,6 @@ Hệ điều hành xây dựng các lớp trừu tượng cao hơn như tiến t
 
 Một luồng thực thi (thread / 스레드) Java đang chạy cuối cùng vẫn là một luồng instruction được CPU thực thi. Khi luồng thực thi (thread / 스레드) chỉ cộng số hoặc thao tác dữ liệu đã nằm trong bộ nhớ của chính nó, CPU có thể tiếp tục chạy ở **chế độ người dùng (user mode / 사용자 모드)**. Khi luồng thực thi (thread / 스레드) cần đọc tệp (file / 파일), chờ socket hoặc xin thêm ánh xạ (mapping / 매핑) bộ nhớ, nó phải đi qua giao diện kernel.
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Mức đặc quyền tồn tại để bảo vệ hệ thống** nối từ **CPU không biết khái niệm “ứng dụng Java”** sang **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간) còn là ranh giới địa chỉ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mức đặc quyền tồn tại để bảo vệ hệ thống
 
 Kiến trúc CPU cung cấp các mức đặc quyền để giới hạn instruction và vùng bộ nhớ mà mã đang chạy có thể truy cập.
@@ -36,8 +34,6 @@ kernel
 
 Nếu tiến trình người dùng (user process / 사용자 프로세스) có thể tùy ý sửa bảng trang (page table / 페이지 테이블), cấu hình interrupt controller hoặc ghi vào bộ nhớ (memory / 메모리) của kernel thì mọi cơ chế permission phía trên gần như mất ý nghĩa.
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간) còn là ranh giới địa chỉ** nối từ **Mức đặc quyền tồn tại để bảo vệ hệ thống** sang **Ba con đường phổ biến làm CPU đi vào kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간) còn là ranh giới địa chỉ
 
 Mỗi tiến trình (process / 프로세스) có không gian địa chỉ ảo riêng. Một phần address không gian (space / 공간) dành cho tiến trình người dùng (user process / 사용자 프로세스); kernel có vùng riêng được bảo vệ theo thiết kế kiến trúc và cấu hình hệ thống.
@@ -51,8 +47,6 @@ Nếu tiến trình (process / 프로세스) truy cập địa chỉ không hợ
 - hoặc gửi tín hiệu (signal / 신호) như `SIGSEGV` nếu truy cập không hợp lệ.
 
 Điểm quan trọng là nhiều hành vi mà lập trình viên nhìn thấy ở tầng tiến trình (process / 프로세스) thực ra bắt đầu từ exception của CPU rồi được kernel chuyển thành ngữ nghĩa (semantics / 의미론) của Unix.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Ba con đường phổ biến làm CPU đi vào kernel** nối từ **Người dùng (user / 사용자) không gian (space / 공간) và kernel không gian (space / 공간) còn là ranh giới địa chỉ** sang **Đường đi khái niệm của một lời gọi hệ thống (system call / 시스템 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ba con đường phổ biến làm CPU đi vào kernel
 
@@ -93,8 +87,6 @@ Ba nhóm đều có thể đưa CPU vào kernel, nhưng nguyên nhân và ngữ 
 
 Xem thêm [Interrupt, softirq và device model](./interrupts_softirq_device_model.md).
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Đường đi khái niệm của một lời gọi hệ thống (system call / 시스템 호출)** nối từ **Ba con đường phổ biến làm CPU đi vào kernel** sang **ABI là hợp đồng giữa nhị phân (binary / 이진) và kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đường đi khái niệm của một lời gọi hệ thống (system call / 시스템 호출)
 
 Giả sử chương trình gọi:
@@ -129,8 +121,6 @@ Chi tiết register và instruction phụ thuộc kiến trúc. Trên x86-64 th�
 
 Điều cần hiểu là lời gọi hệ thống (system call / 시스템 호출) không phải hàm (function / 함수) lời gọi (call / 호출) bình thường. Nó đi qua một **privilege ranh giới (boundary / 경계)** với quy tắc ABI và entry/exit riêng.
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **ABI là hợp đồng giữa nhị phân (binary / 이진) và kernel** nối từ **Đường đi khái niệm của một lời gọi hệ thống (system call / 시스템 호출)** sang **Vì sao thư viện thường đứng trước lời gọi hệ thống (system call / 시스템 호출)?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## ABI là hợp đồng giữa nhị phân (binary / 이진) và kernel
 
 **ứng dụng (application / 애플리케이션) nhị phân (binary / 이진) giao diện (interface / 인터페이스) (ABI)** quy định cách nhị phân (binary / 이진) giao tiếp ở mức máy: calling convention, register, bố cục (layout / 레이아웃) và lời gọi hệ thống (system call / 시스템 호출) giao diện (interface / 인터페이스).
@@ -140,8 +130,6 @@ API là giao diện ở mức mã nguồn (source code / 소스 코드). ABI là
 Ví dụ chương trình C gọi `read()`. mã nguồn (source code / 소스 코드) nhìn thấy API của libc. Nhưng libc phải biết ABI kernel để đặt đúng syscall number và arguments.
 
 Đây là lý do nhị phân (binary / 이진) tính tương thích (compatibility / 호환성) khác nguồn (source / 소스) tính tương thích (compatibility / 호환성).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Vì sao thư viện thường đứng trước lời gọi hệ thống (system call / 시스템 호출)?** nối từ **ABI là hợp đồng giữa nhị phân (binary / 이진) và kernel** sang **vDSO và ý tưởng tránh lời gọi hệ thống (system call / 시스템 호출) không cần thiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao thư viện thường đứng trước lời gọi hệ thống (system call / 시스템 호출)?
 
@@ -157,8 +145,6 @@ Ví dụ một số thao tác thời gian có thể tận dụng **vDSO (virtual
 
 Vì thế khi profiling không nên suy luận rằng mọi API hệ thống đều gây một kernel entry thực sự.
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **vDSO và ý tưởng tránh lời gọi hệ thống (system call / 시스템 호출) không cần thiết** nối từ **Vì sao thư viện thường đứng trước lời gọi hệ thống (system call / 시스템 호출)?** sang **Kernel ngăn xếp (stack / 스택) khác người dùng (user / 사용자) ngăn xếp (stack / 스택)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## vDSO và ý tưởng tránh lời gọi hệ thống (system call / 시스템 호출) không cần thiết
 
 Một lời gọi hệ thống (system call / 시스템 호출) có chi phí. Với những thông tin kernel có thể công bố an toàn qua vùng bộ nhớ (memory / 메모리) đặc biệt, Linux có thể cung cấp vDSO để tiến trình người dùng (user process / 사용자 프로세스) gọi mã (code / 코드) được ánh xạ sẵn.
@@ -167,8 +153,6 @@ Các API thời gian là ví dụ điển hình trên nhiều hệ thống.
 
 Ý tưởng lớn hơn là: **ranh giới privilege chỉ nên đi qua khi thực sự cần kernel thực hiện thao tác đặc quyền hoặc đồng bộ trạng thái**.
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Kernel ngăn xếp (stack / 스택) khác người dùng (user / 사용자) ngăn xếp (stack / 스택)** nối từ **vDSO và ý tưởng tránh lời gọi hệ thống (system call / 시스템 호출) không cần thiết** sang **Điều gì phải được bảo toàn khi vào kernel?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kernel ngăn xếp (stack / 스택) khác người dùng (user / 사용자) ngăn xếp (stack / 스택)
 
 Mỗi luồng thực thi (thread / 스레드) có user-space ngăn xếp (stack / 스택) dùng khi chạy mã (code / 코드) ứng dụng. Khi CPU đi vào kernel để xử lý lời gọi hệ thống (system call / 시스템 호출) hoặc exception, kernel cần vùng ngăn xếp (stack / 스택) phù hợp để xử lý kernel mã (code / 코드).
@@ -176,8 +160,6 @@ Mỗi luồng thực thi (thread / 스레드) có user-space ngăn xếp (stack 
 Không nên hình dung kernel tiếp tục dùng nguyên người dùng (user / 사용자) ngăn xếp (stack / 스택) như không có ranh giới bảo mật. Kernel duy trì ngữ cảnh riêng để xử lý an toàn.
 
 Khái niệm này giúp hiểu vì sao luồng thực thi (thread / 스레드) có cả trạng thái user-space lẫn kernel-side trạng thái (state / 상태).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Điều gì phải được bảo toàn khi vào kernel?** nối từ **Kernel ngăn xếp (stack / 스택) khác người dùng (user / 사용자) ngăn xếp (stack / 스택)** sang **Lời gọi hệ thống (system call / 시스템 호출) có luôn chạy ngay đến cuối không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều gì phải được bảo toàn khi vào kernel?
 
@@ -192,8 +174,6 @@ Khái niệm cần bảo toàn gồm:
 - thông tin privilege trước đó.
 
 Kernel còn phải biết luồng thực thi (thread / 스레드) nào đang chạy để liên kết lời gọi hệ thống (system call / 시스템 호출) với credentials, tệp (file / 파일) descriptor bảng (table / 테이블), bộ nhớ (memory / 메모리) mappings và scheduling trạng thái (state / 상태) tương ứng.
-
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Lời gọi hệ thống (system call / 시스템 호출) có luôn chạy ngay đến cuối không?** nối từ **Điều gì phải được bảo toàn khi vào kernel?** sang **Blocking không có nghĩa CPU đứng yên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống (system call / 시스템 호출) có luôn chạy ngay đến cuối không?
 
@@ -228,8 +208,6 @@ user -> kernel -> phải chờ
 
 Đây là điểm nối trực tiếp giữa lời gọi hệ thống (system call / 시스템 호출), wait hàng đợi (queue / 큐) và scheduler.
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Blocking không có nghĩa CPU đứng yên** nối từ **Lời gọi hệ thống (system call / 시스템 호출) có luôn chạy ngay đến cuối không?** sang **Ngữ cảnh (context / 맥락) switch khác syscall entry**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Blocking không có nghĩa CPU đứng yên
 
 Khi luồng thực thi (thread / 스레드) Java gọi socket read và chưa có dữ liệu, luồng thực thi (thread / 스레드) đó có thể ngủ. CPU không nhất thiết chờ cùng nó; scheduler có thể chạy luồng thực thi (thread / 스레드) khác.
@@ -243,8 +221,6 @@ Vì thế “yêu cầu (request / 요청) đang chờ I/O 200 ms” không có 
 - off-CPU thời gian (time / 시간).
 
 Xem [Quan sát bằng strace, perf và eBPF](../09_production/observability_tracing_strace_perf.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Ngữ cảnh (context / 맥락) switch khác syscall entry** nối từ **Blocking không có nghĩa CPU đứng yên** sang **Page fault là exception nhưng không luôn là lỗi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngữ cảnh (context / 맥락) switch khác syscall entry
 
@@ -273,8 +249,6 @@ lúc này có ngữ cảnh (context / 맥락) switch giữa scheduling entities.
 
 Phân biệt này quan trọng khi đọc metrics ngữ cảnh (context / 맥락) switch và đánh giá syscall overhead.
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Page fault là exception nhưng không luôn là lỗi** nối từ **Ngữ cảnh (context / 맥락) switch khác syscall entry** sang **Tín hiệu (signal / 신호) delivery liên quan gì tới ranh giới kernel?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Page fault là exception nhưng không luôn là lỗi
 
 Tên “fault” dễ gây cảm giác đây là sự cố. Trong virtual bộ nhớ (memory / 메모리), page fault có thể là một phần hoạt động hoàn toàn bình thường.
@@ -287,8 +261,6 @@ Chỉ khi địa chỉ hoặc quyền không hợp lệ, kernel mới có thể 
 
 Xem [Page fault, allocator và reclaim](../06_resources/virtual_memory_page_fault_reclaim_allocator.md).
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Tín hiệu (signal / 신호) delivery liên quan gì tới ranh giới kernel?** nối từ **Page fault là exception nhưng không luôn là lỗi** sang **Preemption và việc kernel có thể bị ngắt**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tín hiệu (signal / 신호) delivery liên quan gì tới ranh giới kernel?
 
 Tín hiệu (signal / 신호) là trạng thái do kernel quản lý. Khi cần giao tín hiệu (signal / 신호) cho tiến trình (process / 프로세스)/luồng thực thi (thread / 스레드), kernel phải sắp xếp để user-space handler chạy trong ngữ cảnh phù hợp.
@@ -296,8 +268,6 @@ Tín hiệu (signal / 신호) là trạng thái do kernel quản lý. Khi cần 
 Tín hiệu (signal / 신호) không phải một hàm (function / 함수) lời gọi (call / 호출) trực tiếp từ tiến trình (process / 프로세스) gửi sang tiến trình (process / 프로세스) khác. tiến trình (process / 프로세스) gửi yêu cầu qua kernel; kernel kiểm tra quyền, đánh dấu pending tín hiệu (signal / 신호) và giao theo ngữ nghĩa (semantics / 의미론) tương ứng.
 
 Điều này giải thích vì sao `SIGKILL` không thể bị user-space handler bắt: kernel quyết định kết thúc tiến trình (process / 프로세스) trước khi người dùng (user / 사용자) mã (code / 코드) có cơ hội override ngữ nghĩa (semantics / 의미론) đó.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Preemption và việc kernel có thể bị ngắt** nối từ **Tín hiệu (signal / 신호) delivery liên quan gì tới ranh giới kernel?** sang **Bảo mật (security / 보안): syscall ranh giới (boundary / 경계) là nơi chính sách gặp yêu cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Preemption và việc kernel có thể bị ngắt
 
@@ -308,8 +278,6 @@ Một CPU đang chạy kernel mã (code / 코드) có thể vẫn nhận interru
 Đây là lý do kernel cần nhiều thành phần nguyên thủy (primitive / 기본 요소) đồng bộ khác nhau thay vì chỉ một loại mutex.
 
 Xem [Đồng thời, khóa và RCU trong kernel](./kernel_concurrency_locking_rcu.md).
-
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Preemption và việc kernel có thể bị ngắt** đặt tiêu chí; **Bảo mật (security / 보안): syscall ranh giới (boundary / 경계) là nơi chính sách gặp yêu cầu** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Seccomp lọc lời gọi hệ thống (system call / 시스템 호출) như thế nào về mặt ý tưởng?** mở rộng hệ quả.
 
 ## Bảo mật (security / 보안): syscall ranh giới (boundary / 경계) là nơi chính sách gặp yêu cầu
 
@@ -326,8 +294,6 @@ Một lời gọi hệ thống (system call / 시스템 호출) vì vậy là đ
 
 Đây là mô hình tư duy (mental model / 사고 모델) rất hữu ích khi đọc `EPERM` hoặc `EACCES`: thay vì hỏi “Linux có lỗi không?”, hãy hỏi lớp chính sách (policy / 정책) nào đã từ chối thao tác (operation / 연산) nào.
 
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Bảo mật (security / 보안): syscall ranh giới (boundary / 경계) là nơi chính sách gặp yêu cầu** đặt tiêu chí; **Seccomp lọc lời gọi hệ thống (system call / 시스템 호출) như thế nào về mặt ý tưởng?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Quan sát lời gọi hệ thống (system call / 시스템 호출) bằng strace** mở rộng hệ quả.
-
 ## Seccomp lọc lời gọi hệ thống (system call / 시스템 호출) như thế nào về mặt ý tưởng?
 
 Seccomp có thể hạn chế tập lời gọi hệ thống (system call / 시스템 호출) hoặc mẫu argument mà tiến trình (process / 프로세스) được phép sử dụng tùy chính sách (policy / 정책).
@@ -335,8 +301,6 @@ Seccomp có thể hạn chế tập lời gọi hệ thống (system call / 시�
 Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) thường tận dụng cơ chế này để giảm attack surface. Nếu ứng dụng (application / 애플리케이션) không cần một syscall nguy hiểm, việc chặn nó làm giảm khả năng mã bị khai thác dùng syscall đó.
 
 Seccomp không thay thế filesystem permission, năng lực (capability / 역량) hay không gian tên (namespace / 네임스페이스). Nó là thêm một lớp kiểm soát tại syscall ranh giới (boundary / 경계).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Quan sát lời gọi hệ thống (system call / 시스템 호출) bằng strace** nối từ **Seccomp lọc lời gọi hệ thống (system call / 시스템 호출) như thế nào về mặt ý tưởng?** sang **strace có overhead**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan sát lời gọi hệ thống (system call / 시스템 호출) bằng `strace`
 
@@ -363,8 +327,6 @@ futex() chờ lock?
 ENOENT ở path nào?
 ```
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **strace có overhead** nối từ **Quan sát lời gọi hệ thống (system call / 시스템 호출) bằng strace** sang **Hệ thống (system / 시스템) CPU thời gian (time / 시간) nói điều gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `strace` có overhead
 
 Tracing lời gọi hệ thống (system call / 시스템 호출) làm thay đổi timing. Với tải công việc (workload / 워크로드) latency-sensitive hoặc thông lượng (throughput / 처리량) cao, attach `strace` có thể tạo overhead đáng kể.
@@ -372,8 +334,6 @@ Tracing lời gọi hệ thống (system call / 시스템 호출) làm thay đ�
 Môi trường vận hành (production / 운영 환경) diagnosis phải cân bằng lượng bằng chứng (evidence / 증거) với ảnh hưởng quan sát.
 
 Khi cần quan sát nhẹ hơn hoặc aggregate nhiều sự kiện (event / 이벤트), eBPF/perf có thể phù hợp hơn tùy mục tiêu.
-
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Hệ thống (system / 시스템) CPU thời gian (time / 시간) nói điều gì?** nối từ **strace có overhead** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ thống (system / 시스템) CPU thời gian (time / 시간) nói điều gì?
 
@@ -390,8 +350,6 @@ Trong `top`, `vmstat` hoặc metrics, thời gian CPU thường được chia th
 
 Không nên nhảy thẳng tới kết luận kernel bug.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Hệ thống (system / 시스템) CPU thời gian (time / 시간) nói điều gì?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Hãy hình dung một luồng thực thi (thread / 스레드) có hai “mặt” liên tục của cùng một thực thi (execution / 실행) ngữ cảnh (context / 맥락):
@@ -406,8 +364,6 @@ user-space execution tiếp tục
 
 Kernel không phải một tiến trình (process / 프로세스) riêng mà ứng dụng (application / 애플리케이션) “gửi yêu cầu (request / 요청)” qua mạng (network / 네트워크). Kernel mã (code / 코드) có thể chạy trực tiếp trên CPU trong ngữ cảnh (context / 맥락) của luồng thực thi (thread / 스레드) đang gọi, hoặc trong interrupt/kernel worker ngữ cảnh (context / 맥락) tùy loại công việc.
 
-> **Nối mạch:** Trong **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“lời gọi hệ thống (system call / 시스템 호출) luôn tạo ngữ cảnh (context / 맥락) switch.”** Không. Nó tạo privilege chuyển tiếp (transition / 전이); ngữ cảnh (context / 맥락) switch chỉ xảy ra nếu scheduler đổi scheduling thực thể (entity / 엔터티).
@@ -419,8 +375,6 @@ Kernel không phải một tiến trình (process / 프로세스) riêng mà ứ
 **“hàm (function / 함수) C nào đọc tệp (file / 파일) cũng trực tiếp là lời gọi hệ thống (system call / 시스템 호출).”** thời gian chạy (runtime / 런타임)/thư viện (library / 라이브러리) có thể buffer hoặc dùng cơ chế khác; API và syscall không luôn 1:1.
 
 **“hệ thống (system / 시스템) CPU cao chứng minh kernel đang gặp lỗi.”** Nó chỉ chứng minh nhiều CPU thời gian (time / 시간) đang ở kernel; cần tìm subsystem tạo công việc đó.
-
-> **Nối mạch:** Ở chặng này của **CPU privilege, exception và đường đi của lời gọi hệ thống (system call / 시스템 호출)**, sau nội dung của **Những hiểu lầm phổ biến**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

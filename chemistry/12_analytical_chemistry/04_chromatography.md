@@ -34,8 +34,6 @@ Vì vậy một phép tách tốt phải thỏa hai điều:
 - các chất khác nhau có thời gian lưu trung bình đủ khác nhau;
 - các phân tử của cùng một chất có phân bố thời gian lưu đủ hẹp.
 
-> **Nối mạch:** Mỗi lần chất phân bố giữa hai pha góp phần tạo đỉnh; hệ số phân bố quyết định mức giữ, còn thời gian lưu phải được đọc cùng thời gian chết để tách retention khỏi transit.
-
 ## Cân bằng phân bố
 
 Một hệ số phân bố đơn giản:
@@ -49,8 +47,6 @@ trong đó `Cs` là nồng độ chất phân tích trong pha tĩnh, còn `Cm` l
 `K` lớn thường nghĩa chất được giữ lại mạnh hơn.
 
 Sắc ký thực có thể dựa trên hấp phụ, phân bố, trao đổi ion, loại trừ kích thước hoặc ái lực đặc hiệu. Điểm thống nhất là chất phân tích phải có mức ưu tiên khác nhau giữa các trạng thái có thể tiếp cận.
-
-> **Nối mạch:** **Cân bằng phân bố** quyết định chất ở pha tĩnh bao lâu; **thời gian lưu và thời gian chết** chuyển cân bằng đó thành đại lượng đo được trên sắc ký đồ. **Độ chọn lọc** tiếp tục hỏi hai chất khác nhau về mức giữ như thế nào.
 
 ## Thời gian lưu và thời gian chết
 
@@ -68,8 +64,6 @@ cho biết phần thời gian bổ sung do tương tác với pha tĩnh.
 
 Nếu `k'` quá nhỏ, các chất dễ đồng rửa giải gần thời gian chết. Nếu `k'` quá lớn, thời gian phân tích dài và đỉnh có thể bị mở rộng không cần thiết.
 
-> **Nối mạch:** Chênh lệch thời gian lưu mới chỉ tạo khoảng cách giữa các đỉnh; **độ chọn lọc** mô tả chênh lệch hóa học tương đối đó. **Độ phân giải** phải kết hợp khoảng cách với độ rộng đỉnh để biết tách đã đủ dùng chưa.
-
 ## Độ chọn lọc
 
 Với hai chất:
@@ -81,8 +75,6 @@ Với hai chất:
 **Độ chọn lọc (selectivity, α)** mô tả khả năng hệ pha động–pha tĩnh phân biệt hai chất.
 
 Nếu `α ≈ 1`, kéo dài cột hoặc tăng số đĩa chỉ giúp giới hạn. Thay đổi hóa học pha tĩnh, pH, dung môi hoặc nhiệt độ thường hiệu quả hơn vì nó thay đổi chính chênh lệch tương tác giữa hai chất.
-
-> **Nối mạch:** **Độ phân giải** cho tiêu chí vận hành nhưng không tự nói vì sao đỉnh rộng hay hẹp. **Lý thuyết đĩa** cung cấp ngôn ngữ thống kê để liên hệ hiệu suất cột với hình dạng đỉnh.
 
 ## Độ phân giải — khoảng cách giữa đỉnh so với độ rộng đỉnh
 
@@ -104,8 +96,6 @@ hiệu suất cột N
 
 Do đó “giữ lâu hơn” không phải chiến lược chung cho mọi phép tách.
 
-> **Nối mạch:** **Lý thuyết đĩa** biến độ rộng đỉnh thành thước đo số bậc lý thuyết, nhưng đây là mô hình chứ không phải các đĩa vật lý. **Phương trình Van Deemter** sẽ phân rã các nguồn làm mất hiệu suất theo tốc độ dòng.
-
 ## Lý thuyết đĩa — mô hình thống kê, không có các đĩa thật trong cột
 
 Hiệu suất cột thường được biểu diễn bằng **số đĩa lý thuyết (theoretical plates)**:
@@ -125,8 +115,6 @@ H=\frac{L}{N}
 `H` càng nhỏ thì hiệu suất trên một đơn vị chiều dài cột càng cao.
 
 Các “đĩa” chỉ là mô hình thống kê cho quá trình phân bố lặp lại; chúng không phải các ngăn vật lý thật.
-
-> **Nối mạch:** Van Deemter liên kết khuếch tán xoáy, khuếch tán dọc và truyền khối với tốc độ tối ưu. **Sắc ký khí** là môi trường rõ nhất để xem các thành phần này thay đổi khi pha động là khí.
 
 ## Vì sao đỉnh rộng ra — phương trình Van Deemter
 
@@ -162,8 +150,6 @@ nhưng
 → có thể giảm hiệu suất
 ```
 
-> **Nối mạch:** **Sắc ký khí** cho thấy ảnh hưởng của độ bay hơi, nhiệt độ và chương trình nhiệt lên thời gian lưu. **Sắc ký lỏng và HPLC** mở rộng cùng logic phân bố sang hợp chất ít bay hơi và hệ dung môi có thể điều chỉnh.
-
 ## Sắc ký khí
 
 **Sắc ký khí (gas chromatography, GC)** dùng khí làm pha động. Chất phân tích phải đủ bay hơi và đủ bền nhiệt trong điều kiện đo.
@@ -183,8 +169,6 @@ Với hỗn hợp có khoảng độ bay hơi rộng, nhiệt độ cố định
 **Bộ dò dẫn nhiệt (thermal conductivity detector, TCD)** tổng quát hơn nhưng thường kém nhạy hơn.
 
 **GC–MS** ghép sự tách theo thời gian với thông tin `m/z` và phân mảnh từ phổ khối.
-
-> **Nối mạch:** HPLC thay pha động khí bằng dung môi lỏng, nhờ vậy kiểm soát được pha đảo, gradient và áp suất. Với chất có thể ion hóa, **pH và ion hóa** trở thành biến số quyết định hệ số phân bố.
 
 ## Sắc ký lỏng và HPLC
 
@@ -210,8 +194,6 @@ Pha tĩnh phân cực và pha động ít phân cực hơn. Chất phân cực t
 
 Độ dốc (gradient / 기울기) đặc biệt hữu ích khi hỗn hợp có chất lưu rất yếu và rất mạnh. Nó tương tự vai trò lập trình nhiệt độ trong GC: giữ điều kiện nhẹ ở đầu để tách chất ra sớm, rồi tăng sức rửa giải để đưa chất giữ mạnh ra khỏi cột.
 
-> **Nối mạch:** Khi pH đổi, tỉ lệ dạng trung hòa và tích điện đổi theo, kéo theo thời gian lưu. **Sắc ký trao đổi ion** khai thác trực tiếp điện tích đó bằng tương tác thuận nghịch với nhóm mang điện trên pha tĩnh.
-
 ## pH và ion hóa — sắc ký cũng là hóa học acid–cơ sở (base / 기반)
 
 Nếu chất phân tích có thể proton hóa hoặc khử proton, điện tích và độ kỵ nước sẽ phụ thuộc pH.
@@ -228,8 +210,6 @@ Do đó pH tương đối với `pKa` có thể làm thay đổi mạnh thời g
 
 Nhóm silanol trên silica cũng có thể ion hóa và tương tác với chất phân tích cơ sở (base / 기반). Chọn **dung dịch đệm (buffer)** vì vậy là một phần của hóa học phương pháp, không chỉ là cài đặt vận hành.
 
-> **Nối mạch:** **Sắc ký trao đổi ion** tách theo điện tích và điều kiện rửa giải, nên cần kiểm soát pH và lực ion. **Sắc ký loại trừ kích thước** đổi cơ chế: phân tử đi qua lỗ xốp theo kích thước thủy động học, không theo điện tích.
-
 ## Sắc ký trao đổi ion
 
 Pha tĩnh mang nhóm điện tích cố định. Chất mang điện trái dấu bị giữ bởi tương tác tĩnh điện.
@@ -237,8 +217,6 @@ Pha tĩnh mang nhóm điện tích cố định. Chất mang điện trái dấu
 Thay đổi nồng độ muối hoặc pH làm thay đổi cạnh tranh và có thể rửa giải chất phân tích.
 
 Phương pháp được dùng nhiều cho protein, amino acid và ion vô cơ.
-
-> **Nối mạch:** Sau cơ chế trao đổi điện tích, **sắc ký loại trừ kích thước** minh họa cách hình học lỗ xốp quyết định đường đi. **Sắc ký ái lực** còn chọn lọc hơn khi dùng nhận biết phân tử đặc hiệu giữa ligand và chất phân tích.
 
 ## Sắc ký loại trừ kích thước
 
@@ -248,15 +226,11 @@ Phân tử lớn không vào được nhiều lỗ xốp nên đi đường ng�
 
 Trong chế độ này, tương tác hấp phụ mạnh với bề mặt thường là điều không mong muốn vì nó phá vỡ lô-gic (logic / 논리) tách theo kích thước.
 
-> **Nối mạch:** **Sắc ký ái lực** tách dựa trên một cặp nhận biết cụ thể và thường cần bước rửa giải cạnh tranh. Với các đồng phân hình học, **sắc ký đối quang** thay ligand bằng môi trường bất đối để tạo khác biệt tương tác.
-
 ## Sắc ký ái lực
 
 **Sắc ký ái lực (affinity chromatography)** dùng pha tĩnh có phối tử liên kết chọn lọc với mục tiêu, ví dụ kháng thể–kháng nguyên, chất tương tự cơ chất hoặc chelate kim loại.
 
 Phương pháp đánh đổi tính tổng quát để lấy độ chọn lọc rất cao và đặc biệt hữu ích trong tinh sạch phân tử sinh học.
-
-> **Nối mạch:** Nhận biết đặc hiệu và bất đối đều làm thay đổi tương tác giữ, nhưng **sắc ký đối quang** thường nhạy với tải mẫu và cân bằng cột. Vì vậy bước **đưa mẫu vào cột và hiện tượng quá tải** phải được kiểm soát trước khi so sánh độ phân giải.
 
 ## Sắc ký đối quang
 
@@ -265,8 +239,6 @@ Hai **đồng phân đối quang (enantiomer)** có tính chất giống nhau tr
 Chênh lệch rất nhỏ về năng lượng tự do tương tác có thể tích lũy thành chênh lệch thời gian lưu đủ để tách.
 
 Đây là ví dụ trực tiếp của việc hóa lập thể trở thành công nghệ phân tách.
-
-> **Nối mạch:** Khi lượng mẫu vượt sức chứa của pha tĩnh, cơ chế giữ trở nên phi tuyến và độ phân giải giảm. **Kéo đuôi và nhô đầu đỉnh** là dấu hiệu hình dạng để truy ngược quá tải hoặc tương tác không đồng nhất.
 
 ## Đưa mẫu vào cột và hiện tượng quá tải
 
@@ -278,8 +250,6 @@ Ngoài ra, thể tích tiêm hoặc dung môi mẫu quá mạnh so với pha đ�
 
 Vì vậy chuẩn bị mẫu là một phần của hiệu năng sắc ký, không phải bước tách rời.
 
-> **Nối mạch:** Hình dạng lệch của đỉnh cảnh báo vấn đề truyền khối, hoạt tính bề mặt hoặc quá tải, không chỉ là lỗi thẩm mỹ. Khi đỉnh đã được kiểm soát, **định lượng** mới có thể liên hệ diện tích với lượng chất qua đường chuẩn.
-
 ## Kéo đuôi và nhô đầu đỉnh
 
 Đỉnh lý tưởng thường gần dạng Gaussian đối xứng, nhưng hệ thực có thể lệch.
@@ -289,8 +259,6 @@ Vì vậy chuẩn bị mẫu là một phần của hiệu năng sắc ký, khô
 **Nhô đầu (fronting)** thường liên quan quá tải hoặc hấp phụ phi tuyến.
 
 Hình dạng đỉnh là tín hiệu chẩn đoán về hóa học cột, tình trạng bề mặt và điều kiện đưa mẫu.
-
-> **Nối mạch:** **Diện tích đỉnh** chỉ trở thành nồng độ sau khi hiệu chuẩn, kiểm tra tuyến tính, nền và thu hồi; đỉnh méo làm sai giả định đó. **Phát triển phương pháp** vì thế phải tối ưu đồng thời tách, độ nhạy, thời gian và độ tin cậy.
 
 ## Định lượng — diện tích đỉnh không tự động bằng nồng độ
 
@@ -305,8 +273,6 @@ Các chiến lược hiệu chuẩn gồm:
 Chuẩn nội giúp bù một phần biến thiên thể tích tiêm hoặc đáp ứng hệ. Thêm chuẩn có thể giảm sai lệch do hiệu ứng nền.
 
 Sự tách sắc ký làm giảm nhiễu nhưng không tự động loại bỏ mọi hiệu ứng nền. Phần này nối trực tiếp với [thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
-
-> **Nối mạch:** Khi mục tiêu định lượng đã rõ, **phát triển phương pháp** phải cân bằng độ phân giải với tiêu chí xác nhận và chi phí vận hành. **Ghép LC–MS** mở thêm thông tin nhận dạng khối lượng để giảm rủi ro nhầm đỉnh.
 
 ## Phát triển phương pháp là bài toán tối ưu đa mục tiêu
 
@@ -334,8 +300,6 @@ Một phương pháp tốt phải cân bằng:
 
 Không tồn tại một cấu hình “tốt nhất” độc lập với mục đích phân tích.
 
-> **Nối mạch:** **LC–MS** ghép tách chromatographic với tỉ số khối lượng–điện tích, nhưng tín hiệu vẫn cần chuẩn hóa và kiểm tra nhiễu nền. **Sắc ký đồ và xử lý dữ liệu** là nơi các tín hiệu đó được tích phân, định danh và lưu bằng chứng.
-
 ## Ghép LC–MS
 
 LC tách hỗn hợp theo thời gian; MS tách ion theo `m/z` và cung cấp thông tin khối lượng/phân mảnh.
@@ -351,8 +315,6 @@ không nhất thiết
 ```
 
 Thiết kế phương pháp phải tối ưu toàn chuỗi đo.
-
-> **Nối mạch:** **Sắc ký đồ và xử lý dữ liệu** biến tín hiệu thành thời gian lưu, diện tích, độ phân giải và báo cáo định lượng; mọi bước tích phân đều phải truy vết được. Ví dụ tăng chiều dài cột sẽ cho thấy một cải thiện hình thức có thể đổi lấy áp suất và thời gian.
 
 ## Sắc ký đồ và xử lý dữ liệu
 
@@ -371,15 +333,11 @@ Trong metabolomics hoặc proteomics, hàng nghìn đặc trưng trên nhiều m
 
 Tuy nhiên thuật toán tốt không thể khôi phục thông tin hóa học đã mất do chuẩn bị mẫu kém, cột không ổn định hoặc đồng rửa giải nghiêm trọng.
 
-> **Nối mạch:** Dữ liệu cho phép định lượng trade-off của chiều dài cột thay vì mặc định “cột dài hơn luôn tốt”. Ví dụ một đỉnh đẹp nhưng sai giúp kiểm tra thêm định danh, nền và hiệu chuẩn, không chỉ nhìn hình dạng.
-
 ## Ví dụ suy luận: vì sao tăng chiều dài cột không phải lúc nào cũng là cách tốt nhất?
 
 Tăng chiều dài thường làm tăng số đĩa và có thể cải thiện độ phân giải. Nhưng nó cũng tăng thời gian chạy và áp suất, trong khi nếu `α` gần 1 thì lợi ích rất hạn chế.
 
 Nếu hai chất tương tác gần như giống nhau với pha tĩnh, thay đổi pH hoặc hóa học pha tĩnh để tăng độ chọn lọc thường hiệu quả hơn nhiều so với chỉ kéo dài cột.
-
-> **Nối mạch:** Hai ví dụ đặt cùng một nguyên tắc vào hai quyết định khác nhau: tối ưu cột và kiểm chứng kết quả. **Những hiểu lầm thường gặp** tiếp theo giúp nhận diện các kết luận vội như giữ lâu hơn luôn tốt hay đỉnh đẹp luôn đúng.
 
 ## Ví dụ suy luận: vì sao một đỉnh đẹp vẫn có thể cho kết quả sai?
 
@@ -388,8 +346,6 @@ Một đỉnh đối xứng và tách rõ không chứng minh nó chỉ chứa m
 Định danh đáng tin cần thêm thông tin trực giao như phổ khối, phổ UV, chuẩn tham chiếu hoặc thay đổi điều kiện tách.
 
 Đây là lý do sắc ký vừa là bài toán phân tách vừa là bài toán **bằng chứng định danh**.
-
-> **Nối mạch:** Các hiểu lầm được sửa bằng cách quay lại biến đo: phân bố, độ chọn lọc, độ rộng đỉnh, hiệu chuẩn và độ không đảm bảo. **Mô hình tư duy** sẽ xếp các biến đó thành chuỗi thiết kế–đo–kiểm chứng.
 
 ## Những hiểu lầm thường gặp
 
@@ -412,8 +368,6 @@ Không. Sự lưu giữ bị chi phối bởi tương tác hóa học, ion hóa,
 ### “Cột có số đĩa cao thì phương pháp chắc chắn tốt”
 
 Không. Nếu độ chọn lọc kém hoặc mẫu bị quá tải, số đĩa cao không giải quyết được vấn đề cốt lõi.
-
-> **Nối mạch:** **Mô hình tư duy** khép lại bằng chuỗi: chọn cơ chế phân bố → tối ưu truyền khối → tách và định lượng → xác nhận bằng dữ liệu. Đây là điểm tựa để bàn giao sang các phương pháp phân tích khác mà vẫn giữ rõ owner của chemistry.
 
 ## Mô hình tư duy
 

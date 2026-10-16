@@ -44,15 +44,11 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 15. [`16_coverage_audit.md`](16_coverage_audit.md) — coverage kiểm tra (audit / 감사) và vùng cần hiện tại (current / 현재) xác minh (verification / 확인).
 16. [`SOURCES.md`](SOURCES.md) — provenance của 8 PDF và các trang đối chiếu.
 
-> **Nối mạch:** **Cấu trúc hiện tại** cho biết 50 bài đang phân bố theo topic; **Backbone 50 bài** gom chúng thành route, rồi **Workflow học đề xuất** dùng route đó để học theo owner của từng chapter.
-
 ## Backbone 50 bài
 
 `사회 1~8 → 교육 9~12 → 문화 13~19 → 정치 20~24 → 경제 25~29 → 법 30~37 → 역사 38~44 → 지리 45~50`
 
 Phần cơ bản được dựng từ 8 PDF người học cung cấp. Nội dung `귀화용 심화` được **gộp vào đúng lĩnh vực (domain / 도메인) liên quan**, ví dụ `국민·복지` trong 사회, `기본권·헌정·민주주의` trong 정치/법/역사, thay vì tạo một cây thư mục riêng.
-
-> **Nối mạch:** Ở chặng này của **KIIP exam notes — 한국사회 이해**, **Backbone 50 bài** đặt đầu vào cho **Workflow học đề xuất**, rồi **Quan hệ với Master kiến thức (knowledge / 지식) Book** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Workflow học đề xuất
 
@@ -72,11 +68,9 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 
 Nếu một fact khó nhớ vì chưa hiểu nguyên nhân, mở [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md) để đọc chapter sâu rồi quay lại luyện recall.
 
-> **Nối mạch:** **Workflow học đề xuất** xác định prerequisite và evidence cần ghi; **Quan hệ với Master Knowledge Book** chỉ ra lúc nào phải quay về owner nền tảng để đọc sâu hơn.
-
 ## Quan hệ với Master kiến thức (knowledge / 지식) Book
 
-KIIP ở đây trả lời: **“để ôn thi cần nhớ, phân biệt và nói được gì?”**  
+KIIP ở đây trả lời: **“để ôn thi cần nhớ, phân biệt và nói được gì?”**
 Các chapter cha của `korean_culture/` và thư viện `korean_history/` trả lời: **“vì sao khái niệm/sự kiện này tồn tại và nó nối với hệ thống nào?”**
 
 Hai lớp bổ sung cho nhau nhưng không duplicate toàn bộ nội dung.

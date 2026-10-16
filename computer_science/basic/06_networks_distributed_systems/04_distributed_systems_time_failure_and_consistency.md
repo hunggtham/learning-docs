@@ -10,8 +10,6 @@ Một tiến trình đơn lẻ bị crash thường dễ nhận biết vì nó d
 
 Hết thời gian chờ (timeout / 타임아웃) chỉ cho biết “chưa nhận được phản hồi trong thời gian chờ”; nó không chứng minh thao tác ở phía xa chưa được thực hiện. Đây là nguồn phổ biến của hiệu ứng phụ bị lặp khi hệ thống thử lại.
 
-> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Không có thời gian toàn cục đơn giản** tiếp nhận điểm tựa từ **Lỗi một phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Không có thời gian toàn cục đơn giản
 
 Đồng hồ vật lý bị trôi theo thời gian. NTP hoặc PTP giúp đồng bộ tương đối nhưng vẫn tồn tại sai số. Việc máy A ghi `10:00:00.100` còn máy B ghi `10:00:00.090` không đủ để kết luận sự kiện B xảy ra trước A theo quan hệ nhân quả.
@@ -20,13 +18,9 @@ Hết thời gian chờ (timeout / 타임아웃) chỉ cho biết “chưa nhậ
 
 Đồng hồ lô-gic (logic / 논리) không đo thời gian thực; nó mã hóa thông tin về thứ tự.
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Quan hệ nhân quả** tiếp nhận điểm tựa từ **Không có thời gian toàn cục đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các mô hình nhất quán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Quan hệ nhân quả
 
 Sự kiện A **đi trước theo nhân quả (causally precedes)** sự kiện B nếu B có thể bị ảnh hưởng bởi A thông qua chuỗi thực thi hoặc thông điệp. Hai sự kiện đồng thời không có quan hệ nhân quả với nhau. Nhiều mô hình nhất quán chỉ cần bảo toàn thứ tự nhân quả chứ không cần ép toàn bộ hệ thống vào một thứ tự toàn cục.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Các mô hình nhất quán** tiếp nhận điểm tựa từ **Quan hệ nhân quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiểu đúng định lý CAP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Các mô hình nhất quán
 
@@ -36,8 +30,6 @@ Sự kiện A **đi trước theo nhân quả (causally precedes)** sự kiện 
 
 Các bảo đảm theo phiên như **đọc thấy dữ liệu vừa ghi (read-your-writes)** và **đọc đơn điệu (monotonic reads)** giúp hệ thống nhất quán yếu dễ sử dụng hơn.
 
-> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Hiểu đúng định lý CAP** tiếp nhận điểm tựa từ **Các mô hình nhất quán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **An toàn (safety / 안전) và liveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Hiểu đúng định lý CAP
 
 CAP nói rằng trong một hệ thống dữ liệu phân tán có mạng bất đồng bộ, khi xảy ra **phân vùng mạng (partition)** thì không thể đồng thời bảo đảm cả tính nhất quán mạnh kiểu linearizability và khả năng phục vụ mọi yêu cầu. Phân vùng mạng là khả năng thực tế phải chấp nhận; khi nó xảy ra, thiết kế phải lựa chọn giữa từ chối/trì hoãn một số yêu cầu hoặc tiếp tục phục vụ với nguy cơ trạng thái các phía tạm thời khác nhau.
@@ -46,15 +38,11 @@ CAP không có nghĩa “luôn chọn 2 trong 3” trong vận hành bình thư�
 
 PACELC mở rộng trực giác này: khi có phân vùng thì đánh đổi giữa khả năng sẵn sàng và tính nhất quán; khi không có phân vùng thì thường còn đánh đổi giữa độ trễ và tính nhất quán.
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **An toàn (safety / 안전) và liveness** tiếp nhận điểm tựa từ **Hiểu đúng định lý CAP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Huyền thoại “exactly once”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## An toàn (safety / 안전) và liveness
 
 **Thuộc tính an toàn (safety / 안전)** nói rằng điều xấu không bao giờ được xảy ra, ví dụ hai leader không được cùng lần ghi nhận (commit / 커밋) hai giá trị xung đột vào cùng vị trí log. **Thuộc tính tiến triển (liveness)** nói rằng điều tốt cuối cùng sẽ xảy ra, ví dụ yêu cầu cuối cùng hoàn thành khi điều kiện hệ thống phục hồi.
 
 Thuật toán đồng thuận thường chấp nhận mất liveness trong một số kiểu phân vùng để giữ an toàn (safety / 안전).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Huyền thoại “exactly once”** tiếp nhận điểm tựa từ **An toàn (safety / 안전) và liveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ phát hiện lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Huyền thoại “exactly once”
 
@@ -62,19 +50,13 @@ Mạng có thể làm mất yêu cầu hoặc phản hồi. Khi máy khách (cli
 
 Broker thông điệp có thể cung cấp bảo đảm exactly-once trong một phạm vi cụ thể, nhưng hiệu ứng phụ ở cơ sở dữ liệu hoặc API bên ngoài vẫn cần giao thức phối hợp.
 
-> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Bộ phát hiện lỗi** tiếp nhận điểm tựa từ **Huyền thoại “exactly once”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bộ phát hiện lỗi
 
 Trong mô hình hoàn toàn bất đồng bộ, không thể luôn phân biệt hoàn hảo một nút “rất chậm” với một nút “đã chết”. Hệ thống thực tế dùng heartbeat, hết thời gian chờ (timeout / 타임아웃) và các giả định cuối cùng đủ chính xác. Phát hiện quá nhạy tạo dương tính giả; phát hiện quá chậm làm failover bị trì hoãn.
 
-> **Chuyển mạch:** Ở chặng này của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Mô hình tư duy** gom các mảnh từ **Bộ phát hiện lỗi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy
 
 > Hệ thống phân tán thay sự chắc chắn bằng **thông điệp + bất định**. Không được suy ra “không xảy ra” chỉ từ hết thời gian chờ (timeout / 타임아웃). Hãy mô tả riêng các bảo đảm về thứ tự, độ bền dữ liệu, khả năng sẵn sàng và độ trễ.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Những hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những hiểu lầm thường gặp
 
@@ -83,8 +65,6 @@ Trong mô hình hoàn toàn bất đồng bộ, không thể luôn phân biệt 
 **“CAP nghĩa là mọi cơ sở dữ liệu phân tán phải thuộc đúng CA, CP hoặc AP.”** Định lý tập trung vào giai đoạn có phân vùng và các bảo đảm cụ thể; hệ thống thực tế có thể cung cấp nhiều chế độ hoặc mức bảo đảm khác nhau theo thao tác.
 
 **“Sắp xếp timestamp sẽ cho đúng thứ tự toàn cục.”** Sai lệch và bất định đồng hồ phá vỡ suy luận nhân quả nếu không có giao thức hoặc giả định mạnh hơn.
-
-> **Chuyển mạch:** Trong **Thời gian, lỗi và tính nhất quán trong hệ thống phân tán**, **Kết nối** tiếp nhận điểm tựa từ **Những hiểu lầm thường gặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

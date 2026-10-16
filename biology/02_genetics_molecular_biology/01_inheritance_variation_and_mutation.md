@@ -14,8 +14,6 @@ Một **alen (alen / 대립유전자)** là một phiên bản (version / 버전
 
 Genotype không đồng nghĩa phenotype. Cùng genotype có thể cho phenotype khác do môi trường (environment / 환경), development và stochastic factor. Ngược lại, phenotype tương tự có thể đến từ nhiều genotype khác nhau.
 
-> **Nối mạch:** Allele/genotype/phenotype link genetic state to observable trait; diploid homologs carry paired copies, and meiosis separates them into haploid gametes.
-
 ## 2. Diploid organism và nhiễm sắc thể tương đồng (homologous chromosome)
 
 Human somatic cell điển hình là diploid: có hai set chromosome, một từ mẹ và một từ cha.
@@ -26,8 +24,6 @@ Nhiễm sắc tử chị em (sister chromatid) thì khác: đó là hai bản sa
 
 Phân biệt homolog với nhiễm sắc tử chị em là điều bắt buộc để hiểu meiosis.
 
-> **Nối mạch:** **3. Meiosis tạo gamete haploid** nối từ **2. Diploid organism và nhiễm sắc thể tương đồng (homologous chromosome)** sang **4. Phân ly độc lập (independent assortment): variation xuất hiện từ cách chromosome xếp ngẫu nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Meiosis tạo gamete haploid
 
 Meiosis giảm số lượng nhiễm sắc thể (chromosome number) từ diploid xuống haploid để khi fertilization kết hợp hai gamete, diploid number được phục hồi.
@@ -37,8 +33,6 @@ Meiosis I tách nhiễm sắc thể tương đồng; meiosis II tách nhiễm s�
 Nếu không có reduction division, số lượng nhiễm sắc thể sẽ double mỗi generation.
 
 Meiosis vì vậy là lời giải structural cho sinh sản hữu tính (sexual reproduction).
-
-> **Nối mạch:** **4. Phân ly độc lập (independent assortment): variation xuất hiện từ cách chromosome xếp ngẫu nhiên** nối từ **3. Meiosis tạo gamete haploid** sang **5. Trao đổi chéo: homolog không chỉ chia ngẫu nhiên, chúng còn trao đổi đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phân ly độc lập (independent assortment): variation xuất hiện từ cách chromosome xếp ngẫu nhiên
 
@@ -54,8 +48,6 @@ Nếu có \(n\) chromosome pair và bỏ qua tái tổ hợp (recombination), s�
 
 Sinh sản hữu tính tạo variation khổng lồ từ mechanics của meiosis.
 
-> **Nối mạch:** **5. Trao đổi chéo: homolog không chỉ chia ngẫu nhiên, chúng còn trao đổi đoạn** nối từ **4. Phân ly độc lập (independent assortment): variation xuất hiện từ cách chromosome xếp ngẫu nhiên** sang **6. Mendel: từ mẫu hình (pattern) phenotype suy ra đơn vị (unit / 단위) inheritance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Trao đổi chéo: homolog không chỉ chia ngẫu nhiên, chúng còn trao đổi đoạn
 
 Trong prophase I, nhiễm sắc thể tương đồng pair và non-nhiễm sắc tử chị em có thể recombine.
@@ -65,8 +57,6 @@ Trong prophase I, nhiễm sắc thể tương đồng pair và non-nhiễm sắc
 Recombination vừa tăng variation vừa có vai trò giúp homolog segregation đúng qua chiasma.
 
 Distance giữa loci ảnh hưởng xác suất (probability / 확률) tái tổ hợp, tạo cơ sở genetic ánh xạ (mapping / 매핑).
-
-> **Nối mạch:** **6. Mendel: từ mẫu hình (pattern) phenotype suy ra đơn vị (unit / 단위) inheritance** nối từ **5. Trao đổi chéo: homolog không chỉ chia ngẫu nhiên, chúng còn trao đổi đoạn** sang **7. Dominant và recessive không có nghĩa “mạnh” và “yếu”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Mendel: từ mẫu hình (pattern) phenotype suy ra đơn vị (unit / 단위) inheritance
 
@@ -78,8 +68,6 @@ Ngày nay ta nối mô hình (model / 모델) Mendel với chromosome hành vi (
 
 **Phân ly độc lập** đúng xấp xỉ cho gene trên chromosome khác nhau hoặc đủ xa nhau; linked gene là limitation quan trọng.
 
-> **Nối mạch:** **7. Dominant và recessive không có nghĩa “mạnh” và “yếu”** nối từ **6. Mendel: từ mẫu hình (pattern) phenotype suy ra đơn vị (unit / 단위) inheritance** sang **8. Molecular basis của dominance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Dominant và recessive không có nghĩa “mạnh” và “yếu”
 
 Nếu heterozygote phenotype giống một homozygote, allele thể hiện được gọi **dominant** trong ngữ cảnh (context / 맥락) trait đó; allele kia **recessive**.
@@ -88,8 +76,6 @@ Dominance là mối quan hệ (relationship) kiểu hình giữa allele, không 
 
 Một recessive allele vẫn có thể phổ biến. Một dominant disease allele vẫn có thể rare.
 
-> **Nối mạch:** **8. Molecular basis của dominance** nối từ **7. Dominant và recessive không có nghĩa “mạnh” và “yếu”** sang **9. Punnett square là xác suất (probability / 확률) công cụ (tool / 도구), không phải machine dự đoán family cụ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Molecular basis của dominance
 
 Nhiều recessive loss-of-chức năng (function) allele xảy ra vì một functional bản sao (copy / 복사) tạo đủ protein (protein) cho phenotype bình thường; đây là **haplosufficiency**.
@@ -97,8 +83,6 @@ Nhiều recessive loss-of-chức năng (function) allele xảy ra vì một func
 Trong trường hợp khác, một bản sao (copy / 복사) không đủ (**haploinsufficiency**) hoặc mutant protein interfere với normal protein (**dominant negative**), làm inheritance dominant.
 
 Mendelian label có molecular cơ chế (mechanism / 메커니즘) phía sau.
-
-> **Nối mạch:** **9. Punnett square là xác suất (probability / 확률) công cụ (tool / 도구), không phải machine dự đoán family cụ thể** nối từ **8. Molecular basis của dominance** sang **10. sản phẩm (product / 제품) quy tắc (rule / 규칙) và sum quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Punnett square là xác suất (probability / 확률) công cụ (tool / 도구), không phải machine dự đoán family cụ thể
 
@@ -113,8 +97,6 @@ Nếu complete dominance, phenotype ratio expected 3:1.
 Nhưng mỗi child là sự kiện (event / 이벤트) mới; bốn child không bắt buộc có đúng ba dominant và một recessive phenotype.
 
 Expected ratio xuất hiện khi mẫu (sample / 표본) đủ lớn.
-
-> **Nối mạch:** **10. sản phẩm (product / 제품) quy tắc (rule / 규칙) và sum quy tắc (rule / 규칙)** nối từ **9. Punnett square là xác suất (probability / 확률) công cụ (tool / 도구), không phải machine dự đoán family cụ thể** sang **11. kiểm thử (test / 테스트) cross và suy luận (inference / 추론) kiểu gen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. sản phẩm (product / 제품) quy tắc (rule / 규칙) và sum quy tắc (rule / 규칙)
 
@@ -134,8 +116,6 @@ Xác suất (probability / 확률) giúp giải genetic cross phức tạp mà k
 
 Math ở đây mô tả bất định (uncertainty / 불확실성) của gamete combination.
 
-> **Nối mạch:** **11. kiểm thử (test / 테스트) cross và suy luận (inference / 추론) kiểu gen** nối từ **10. sản phẩm (product / 제품) quy tắc (rule / 규칙) và sum quy tắc (rule / 규칙)** sang **12. Trội không hoàn toàn (incomplete dominance) và đồng trội (codominance)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. kiểm thử (test / 테스트) cross và suy luận (inference / 추론) kiểu gen
 
 Nếu individual có dominant phenotype nhưng genotype có thể AA hoặc Aa, crossing với homozygous recessive có thể cung cấp bằng chứng (evidence / 증거).
@@ -143,8 +123,6 @@ Nếu individual có dominant phenotype nhưng genotype có thể AA hoặc Aa, 
 Nếu offspring recessive xuất hiện, parent dominant phải mang recessive allele.
 
 Đây là ví dụ scientific suy luận (inference / 추론): phenotype offspring cung cấp dữ liệu (data / 데이터) để suy genotype không quan sát trực tiếp.
-
-> **Nối mạch:** **12. Trội không hoàn toàn (incomplete dominance) và đồng trội (codominance)** nối từ **11. kiểm thử (test / 테스트) cross và suy luận (inference / 추론) kiểu gen** sang **13. Pleiotropy và polygenic trait**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Trội không hoàn toàn (incomplete dominance) và đồng trội (codominance)
 
@@ -156,8 +134,6 @@ ABO blood group là ví dụ đồng trội giữa IA và IB, đồng thời c�
 
 Một locus có thể có **multiple alleles** trong population dù mỗi diploid individual chỉ mang tối đa hai alen ở locus đó.
 
-> **Nối mạch:** **13. Pleiotropy và polygenic trait** nối từ **12. Trội không hoàn toàn (incomplete dominance) và đồng trội (codominance)** sang **14. Epistasis: gene tương tác gene**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Pleiotropy và polygenic trait
 
 **Pleiotropy**: một gene ảnh hưởng nhiều trait vì protein tham gia tiến trình (process / 프로세스) chung hoặc nhiều tissue.
@@ -165,8 +141,6 @@ Một locus có thể có **multiple alleles** trong population dù mỗi diploi
 **Polygenic trait**: nhiều gene đóng góp một trait. Height, skin pigmentation và nhiều tính trạng định lượng (quantitative trait) thuộc kiểu này.
 
 Điều này phá mô hình (model / 모델) “một gene — một trait” vốn chỉ hữu ích trong một số trường hợp (case / 사례) đơn giản.
-
-> **Nối mạch:** **14. Epistasis: gene tương tác gene** nối từ **13. Pleiotropy và polygenic trait** sang **15. Linkage: gene gần nhau không assort hoàn toàn độc lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Epistasis: gene tương tác gene
 
@@ -176,8 +150,6 @@ Ví dụ pathway pigment có enzyme A tạo precursor và enzyme B chuyển prec
 
 Phenotype là đầu ra (output / 출력) của pathway, không phải tổng độc lập của từng gene.
 
-> **Nối mạch:** **15. Linkage: gene gần nhau không assort hoàn toàn độc lập** nối từ **14. Epistasis: gene tương tác gene** sang **16. Sex-linked inheritance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Linkage: gene gần nhau không assort hoàn toàn độc lập
 
 Gene trên cùng chromosome có tendency đi cùng nhau. Recombination có thể tách chúng.
@@ -186,8 +158,6 @@ Tái tổ hợp frequency tăng theo genetic distance ở khoảng phù hợp. 1
 
 Nhưng frequency không tăng tuyến tính vô hạn; multiple crossover làm ánh xạ (mapping / 매핑) dài cần mô hình (model / 모델) correction.
 
-> **Nối mạch:** **16. Sex-linked inheritance** nối từ **15. Linkage: gene gần nhau không assort hoàn toàn độc lập** sang **17. Mutation tạo allele mới**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Sex-linked inheritance
 
 Gene trên sex chromosome tạo mẫu hình inheritance khác autosomal gene.
@@ -195,8 +165,6 @@ Gene trên sex chromosome tạo mẫu hình inheritance khác autosomal gene.
 Ở X-linked recessive trait, male XY chỉ có một X nên allele recessive trên X có thể biểu hiện ngay nếu không có bản sao (copy / 복사) tương ứng trên Y.
 
 Nhưng sex determination và sex-linked biology đa dạng giữa species; không nên lấy human XY làm universal mô hình (model / 모델).
-
-> **Nối mạch:** **17. Mutation tạo allele mới** nối từ **16. Sex-linked inheritance** sang **18. Germline và đột biến soma (somatic mutation)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Mutation tạo allele mới
 
@@ -208,8 +176,6 @@ Large-scale variant gồm duplication, deletion, inversion, translocation và co
 
 Tác động (effect / 효과) phụ thuộc locus, regulatory ngữ cảnh (context / 맥락) và môi trường.
 
-> **Nối mạch:** **18. Germline và đột biến soma (somatic mutation)** nối từ **17. Mutation tạo allele mới** sang **19. Tốc độ đột biến (mutation rate) và selection không phải cùng thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. Germline và đột biến soma (somatic mutation)
 
 **Đột biến dòng mầm (germline mutation)** có thể truyền cho offspring nếu nằm lineage tạo gamete.
@@ -218,8 +184,6 @@ Tác động (effect / 효과) phụ thuộc locus, regulatory ngữ cảnh (con
 
 Một human body vì vậy không hoàn toàn genetic-uniform; mosaicism có thể xuất hiện.
 
-> **Nối mạch:** **19. Tốc độ đột biến (mutation rate) và selection không phải cùng thứ** nối từ **18. Germline và đột biến soma (somatic mutation)** sang **20. Chromosome không phân ly (nondisjunction)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Tốc độ đột biến (mutation rate) và selection không phải cùng thứ
 
 Mutation xuất hiện không vì sinh vật (organism) “cần” thích nghi (adaptation). Mutation nguồn (source / 소스) có độ lệch (bias / 편향) nhưng không được tạo ra có định hướng phù hợp future fitness theo cách Lamarck đơn giản.
@@ -227,8 +191,6 @@ Mutation xuất hiện không vì sinh vật (organism) “cần” thích nghi 
 Selection acts **sau khi variation tồn tại** bằng differential reproduction/survival.
 
 Phân biệt nguồn (source / 소스) variation với filter variation là nền của evolution.
-
-> **Nối mạch:** **20. Chromosome không phân ly (nondisjunction)** nối từ **19. Tốc độ đột biến (mutation rate) và selection không phải cùng thứ** sang **21. Quantitative genetics: trait liên tục được phân tích thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Chromosome không phân ly (nondisjunction)
 
@@ -239,8 +201,6 @@ Sau fertilization có thể tạo **aneuploidy**.
 Tác động (effect / 효과) thường lớn vì dosage của hàng trăm gene thay đổi cùng lúc.
 
 Age-related thay đổi (change / 변경) trong meiosis có thể ảnh hưởng rủi ro (risk / 위험) ở một số aneuploidy, nhưng cơ chế (mechanism / 메커니즘) phức tạp hơn một nguyên nhân đơn.
-
-> **Nối mạch:** **21. Quantitative genetics: trait liên tục được phân tích thế nào?** nối từ **20. Chromosome không phân ly (nondisjunction)** sang **22. Heritability: một khái niệm rất dễ hiểu sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Quantitative genetics: trait liên tục được phân tích thế nào?
 
@@ -256,8 +216,6 @@ Trong đó genetic variance, environmental variance và gen–môi trường (en
 
 Đây là mô hình thống kê (statistical model) ở population mức (level / 수준), không phải decomposition cố định của một individual.
 
-> **Nối mạch:** **22. Heritability: một khái niệm rất dễ hiểu sai** nối từ **21. Quantitative genetics: trait liên tục được phân tích thế nào?** sang **23. Gen–môi trường (environment / 환경) tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Heritability: một khái niệm rất dễ hiểu sai
 
 **Heritability (유전력)** là phần variance phenotype trong một population/môi trường được liên hệ với genetic variance theo mô hình (model / 모델) cụ thể.
@@ -266,8 +224,6 @@ Heritability cao không có nghĩa trait “không đổi được bởi môi tr
 
 Heritability cũng không nói “X% trait của một người do gen”. Nó là thuộc tính (property / 속성) của population variance, không phải individual nhân quả (causal / 인과적) percentage.
 
-> **Nối mạch:** **23. Gen–môi trường (environment / 환경) tương tác (interaction / 상호작용)** nối từ **22. Heritability: một khái niệm rất dễ hiểu sai** sang **24. Độ thấm (penetrance) và mức biểu hiện (expressivity)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 23. Gen–môi trường (environment / 환경) tương tác (interaction / 상호작용)
 
 Cùng genotype có thể phản ứng khác nhau trong môi trường (environment / 환경) khác. **Reaction norm** mô tả phenotype của genotype qua phạm vi (range / 범위) môi trường.
@@ -275,8 +231,6 @@ Cùng genotype có thể phản ứng khác nhau trong môi trường (environme
 Ví dụ chất dinh dưỡng (nutrient), temperature hoặc stress có thể thay tác động (effect / 효과) allele.
 
 Nature và nurture không phải hai hộp cộng độc lập; chúng tương tác.
-
-> **Nối mạch:** **24. Độ thấm (penetrance) và mức biểu hiện (expressivity)** nối từ **23. Gen–môi trường (environment / 환경) tương tác (interaction / 상호작용)** sang **25. Pedigree: suy inheritance từ family mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Độ thấm (penetrance) và mức biểu hiện (expressivity)
 
@@ -288,8 +242,6 @@ Incomplete độ thấm có thể đến từ modifier gene, môi trường, age
 
 Điều này làm pedigree thực tế phức tạp hơn Punnett square đơn giản.
 
-> **Nối mạch:** **25. Pedigree: suy inheritance từ family mẫu (pattern / 패턴)** nối từ **24. Độ thấm (penetrance) và mức biểu hiện (expressivity)** sang **26. Di truyền ty thể (mitochondrial inheritance)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 25. Pedigree: suy inheritance từ family mẫu (pattern / 패턴)
 
 Pedigree dùng symbol để biểu diễn relationship và kiểu hình qua generation.
@@ -297,8 +249,6 @@ Pedigree dùng symbol để biểu diễn relationship và kiểu hình qua gene
 Ta suy autosomal dominant/recessive, X-linked hoặc mitochondrial mẫu (pattern / 패턴) dựa trên transmission, nhưng cần cẩn trọng vì small family, incomplete độ thấm và new mutation có thể làm mẫu (pattern / 패턴) mơ hồ.
 
 Pedigree là suy luận (inference / 추론) under bất định (uncertainty / 불확실성), không phải nhìn một hình rồi “đoán chắc”.
-
-> **Nối mạch:** **26. Di truyền ty thể (mitochondrial inheritance)** nối từ **25. Pedigree: suy inheritance từ family mẫu (pattern / 패턴)** sang **27. Biến dị di truyền (genetic variation) ở quy mô quần thể (population scale)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Di truyền ty thể (mitochondrial inheritance)
 
@@ -308,8 +258,6 @@ Tuy nhiên phenotype mitochondrial disease còn phụ thuộc heteroplasmy và n
 
 Non-Mendelian inheritance nhắc ta rằng Mendel là nền, không phải toàn bộ di truyền học (genetics).
 
-> **Nối mạch:** **27. Biến dị di truyền (genetic variation) ở quy mô quần thể (population scale)** nối từ **26. Di truyền ty thể (mitochondrial inheritance)** sang **28. Tình huống phân tích (case study): lactose persistence**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 27. Biến dị di truyền (genetic variation) ở quy mô quần thể (population scale)
 
 Ở một individual ta nói genotype. Ở quần thể (population) ta quan tâm **tần số alen (allele frequency)** và **tần số kiểu gen (genotype frequency)**.
@@ -317,8 +265,6 @@ Non-Mendelian inheritance nhắc ta rằng Mendel là nền, không phải toàn
 Đây là bước chuyển cực kỳ quan trọng. Evolution không phải “một individual đổi gene để thích nghi”; nó là thay đổi (change / 변경) phân phối (distribution / 분포) variation trong quần thể qua generation.
 
 Mọi mutation, meiosis, recombination học trong chapter này trở thành đầu vào (input / 입력) cho di truyền học quần thể (population genetics).
-
-> **Nối mạch:** **27. Biến dị di truyền (genetic variation) ở quy mô quần thể (population scale)** nêu quy tắc; **28. Tình huống phân tích (case study): lactose persistence** thử quy tắc trong tình huống, rồi **29. Tình huống phân tích: kháng kháng sinh (antibiotic resistance) không phải bacteria “cố biến đổi”** mở rộng hệ quả.
 
 ## 28. Tình huống phân tích (case study): lactose persistence
 
@@ -339,8 +285,6 @@ regulatory DNA variant
 
 Gen–culture đồng tiến hóa (coevolution) nối molecular genetics, inheritance và tiến hóa (evolution).
 
-> **Nối mạch:** **28. Tình huống phân tích (case study): lactose persistence** nêu quy tắc; **29. Tình huống phân tích: kháng kháng sinh (antibiotic resistance) không phải bacteria “cố biến đổi”** thử quy tắc trong tình huống, rồi **30. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 29. Tình huống phân tích: kháng kháng sinh (antibiotic resistance) không phải bacteria “cố biến đổi”
 
 Trong bacterial population có biến dị (variation) do đột biến/chuyển gen ngang (horizontal gene transfer). Antibiotic giết susceptible cell mạnh hơn. Resistant variant survive/reproduce, làm resistance allele tăng frequency.
@@ -348,8 +292,6 @@ Trong bacterial population có biến dị (variation) do đột biến/chuyển
 Selection thay composition population; antibiotic không “dạy” từng bacterium cách resistance theo nghĩa có mục tiêu.
 
 Đây là cầu nối (bridge / 브리지) sang evolution và microbiology.
-
-> **Nối mạch:** **29. Tình huống phân tích: kháng kháng sinh (antibiotic resistance) không phải bacteria “cố biến đổi”** nêu quy tắc; **30. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Từ genotype đến phenotype: bản đồ không tuyến tính** mở rộng hệ quả.
 
 ## 30. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -367,8 +309,6 @@ Selection thay composition population; antibiotic không “dạy” từng bact
 
 <!-- depth-audit-2026:genotype-phenotype-map -->
 
-> **Nối mạch:** **Từ genotype đến phenotype: bản đồ không tuyến tính** nối từ **30. Các hiểu lầm phổ biến (common misconceptions)** sang **Từ cơ chế meiosis tới xác suất di truyền và bản đồ liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ genotype đến phenotype: bản đồ không tuyến tính
 
 Một allele không “chứa sẵn” phenotype. chuỗi (sequence / 시퀀스) thay đổi trước hết tác động một RNA, protein, mức biểu hiện hoặc regulatory tương tác (interaction / 상호작용); thay đổi đó đi qua mạng phát triển và physiology rồi mới thành trait đo được. Do đó cùng một mutation có thể có tác động (effect / 효과) khác nhau theo tissue, age, môi trường (environment / 환경) hoặc genetic background.
@@ -381,8 +321,6 @@ Với quantitative trait, phương sai phenotype là kết quả của nhiều l
 
 <!-- continuity-2026:meiosis-linkage -->
 
-> **Nối mạch:** Genotype–phenotype không tuyến tính; meiosis tạo xác suất và linkage map để theo dõi biến dị. **Cầu nối từ family inheritance sang genome và population** kiểm tra hệ quả ở quy mô lớn hơn.
-
 ## Từ cơ chế meiosis tới xác suất di truyền và bản đồ liên kết
 
 Quy luật phân ly của Mendel xuất hiện từ hành vi vật lý của chromosome: hai homolog mang các allele tương ứng bắt cặp rồi phân ly ở meiosis I; sister chromatid phân ly ở meiosis II. Khi hai locus nằm trên chromosome khác nhau, orientation của các cặp homolog tạo cơ sở cho phân ly độc lập. Khi hai locus nằm gần nhau trên cùng chromosome, chúng không còn độc lập vì được truyền cùng một đoạn DNA.
@@ -390,8 +328,6 @@ Quy luật phân ly của Mendel xuất hiện từ hành vi vật lý của chr
 Trao đổi chéo (crossing-over) tạo recombinant chromosome. Tần số recombinant tăng khi hai locus xa nhau hơn, nhưng không thể dùng tuyến tính vô hạn vì nhiều crossover có thể che lẫn nhau; ở khoảng cách lớn, recombination fraction tiến gần 0,5 và hai locus trông gần như không liên kết. Đây là lý do bản đồ di truyền là mô hình (model / 모델) xác suất của meiosis, không phải thước đo vật lý hoàn hảo.
 
 Thất bại (failure / 실패) ở meiosis cũng cho thấy cấu trúc tạo chức năng như thế nào. Nondisjunction làm chromosome không phân ly đúng, tạo giao tử thừa hoặc thiếu chromosome. Cơ thể có checkpoint và cơ chế cohesion để giảm lỗi, nhưng selection không thể làm lỗi về zero tuyệt đối vì replication, recombination và segregation đều có chi phí và giới hạn vật lý.
-
-> **Nối mạch:** Meiosis cung cấp cơ chế cho xác suất di truyền và linkage map; cầu nối sang genome và population khép mạch bằng cách mở rộng từ family inheritance.
 
 ## 31. cầu nối (bridge / 브리지): từ family inheritance sang genome và quần thể
 

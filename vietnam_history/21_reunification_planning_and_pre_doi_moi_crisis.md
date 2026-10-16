@@ -10,8 +10,6 @@ Câu hỏi của chapter này là: **một quốc gia vừa trải qua nhiều t
 
 Để trả lời, cần đặt reconstruction, socialist transformation, international isolation, chiến tranh biên giới, population movement và experimentation về kinh tế trong cùng một nhân quả (causal / 인과적) đồ thị (graph / 그래프).
 
-> **Nối mạch:** Trong **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **1975 không phải “reset”** nối từ **Điểm tựa và câu hỏi trung tâm** sang **1976: institutional reunification**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1975 không phải “reset”
 
 Miền Bắc và miền Nam bước vào 1975 với khác biệt lớn về institution, quyền sở hữu (ownership / 소유권), thị trường (market / 시장) mạng (network / 네트워크), urban economy và bên ngoài (external / 외부) liên kết (connection / 연결). Miền Bắc đã có nhiều thập niên central planning và collective agriculture; miền Nam có private commerce, urban services, private thuộc tính (property / 속성) networks và một economy chịu ảnh hưởng mạnh của war expenditure và foreign aid.
@@ -31,8 +29,6 @@ very high reconstruction cost
 
 Vì vậy “thống nhất” về constitutional và territorial sense không đồng nghĩa toàn bộ daily economy lập tức trở thành một hệ thống (system / 시스템) coherent.
 
-> **Nối mạch:** Ở chặng này của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **1976: institutional reunification** nối từ **1975 không phải “reset”** sang **Socialist transformation ở miền Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 1976: institutional reunification
 
 Năm **1976**, nước **Cộng hòa Xã hội Chủ nghĩa Việt Nam** được thành lập trên toàn lãnh thổ với Hà Nội là thủ đô và Sài Gòn được đổi tên thành Thành phố Hồ Chí Minh.
@@ -40,8 +36,6 @@ Năm **1976**, nước **Cộng hòa Xã hội Chủ nghĩa Việt Nam** đượ
 Điều đáng học không chỉ là tên mới. Administrative reunification tạo khả năng dùng một national planning hệ thống (system / 시스템), một currency regime, một hệ thống (system / 시스템) of ministries và một set of economic goals trên toàn quốc. Nhưng càng centralize, trung tâm càng phải xử lý lượng thông tin (information / 정보) rất lớn về môi trường vận hành (production / 운영 환경), demand, vận chuyển (transport / 전송) và cục bộ (local / 로컬) conditions.
 
 Đây là classical thông tin (information / 정보) bài toán (problem / 문제) của central planning: planner có thể set mục tiêu (target / 대상), nhưng khó quan sát tức thời hàng triệu cục bộ (local / 로컬) ràng buộc (constraint / 제약조건).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Socialist transformation ở miền Nam** nối từ **1976: institutional reunification** sang **Agriculture: cooperative không đồng nghĩa productivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socialist transformation ở miền Nam
 
@@ -52,8 +46,6 @@ Lô-gic (logic / 논리) chính sách (policy / 정책) có thể hiểu đượ
 Nhưng hiện thực (implementation / 구현) gặp mismatch. Commercial networks ở miền Nam dựa mạnh vào cục bộ (local / 로컬) kiến thức (knowledge / 지식), credit quan hệ (relation / 관계) và price tín hiệu (signal / 신호). Khi incentive và quyền sở hữu (ownership / 소유권) cấu trúc (structure / 구조) thay đổi nhanh, môi trường vận hành (production / 운영 환경) và exchange có thể co lại nếu administrative replacement chưa đủ hiệu quả.
 
 Điểm cần tránh là hai extreme narrative: “mọi vấn đề chỉ do ideology” hoặc “mọi khó khăn chỉ do war”. Postwar crisis hình thành từ **war legacy + chính sách (policy / 정책) thiết kế (design / 설계) + hiện thực (implementation / 구현) sức chứa (capacity / 용량) + bên ngoài (external / 외부) shocks + regional xung đột (conflict / 충돌)**.
-
-> **Nối mạch:** Trong **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Agriculture: cooperative không đồng nghĩa productivity** nối từ **Socialist transformation ở miền Nam** sang **“Kinh tế hai tầng”: plan chính thức và exchange phi chính thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Agriculture: cooperative không đồng nghĩa productivity
 
@@ -73,8 +65,6 @@ food shortage + informal exchange
 
 Điều này không có nghĩa collective hành động (action / 동작) luôn thất bại. Irrigation, dike và dùng chung (shared / 공유) machinery có thể cần cooperation. Vấn đề là thiết kế (design / 설계) của thuộc tính (property / 속성)/use rights, price, procurement và responsibility.
 
-> **Nối mạch:** Ở chặng này của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **“Kinh tế hai tầng”: plan chính thức và exchange phi chính thức** nối từ **Agriculture: cooperative không đồng nghĩa productivity** sang **Population movement và New Economic Zones**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## “Kinh tế hai tầng”: plan chính thức và exchange phi chính thức
 
 Khi official price không phản ánh scarcity, hàng hóa có xu hướng đi sang informal thị trường (market / 시장) nơi price tín hiệu (signal / 신호) mạnh hơn. Đây là lý do planned economy thường xuất hiện parallel thị trường (market / 시장).
@@ -82,8 +72,6 @@ Khi official price không phản ánh scarcity, hàng hóa có xu hướng đi s
 Người dân không ngừng economic calculation chỉ vì thị trường (market / 시장) bị hạn chế. Household vẫn phải tìm food, vận chuyển (transport / 전송), repair dịch vụ (service / 서비스) và bên tiêu thụ (consumer / 소비자) goods. Vì vậy daily life trở thành nơi chính sách (policy / 정책) ranh giới (boundary / 경계) được “gỡ lỗi (debug / 디버그)” mỗi ngày.
 
 Đây là bước quan trọng để hiểu Đổi Mới: reform không xuất hiện từ vacuum năm 1986. Trước đó đã có cục bộ (local / 로컬) experimentation, đặc tả hợp đồng (contract / 계약) arrangements và chính sách (policy / 정책) adjustment nhằm làm môi trường vận hành (production / 운영 환경) incentive hoạt động tốt hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Population movement và New Economic Zones** nối từ **“Kinh tế hai tầng”: plan chính thức và exchange phi chính thức** sang **War chưa thật sự biến mất khỏi economy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Population movement và New Economic Zones
 
@@ -95,8 +83,6 @@ Nếu settlement thiếu road, irrigation, health dịch vụ (service / 서비�
 
 Điều này nối trực tiếp historical geography với development economics: population relocation chỉ bền khi hạ tầng (infrastructure / 인프라) và ecological ràng buộc (constraint / 제약조건) được tính đúng.
 
-> **Nối mạch:** Trong **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **War chưa thật sự biến mất khỏi economy** nối từ **Population movement và New Economic Zones** sang **Soviet bloc và bên ngoài (external / 외부) hỗ trợ (support / 지원)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## War chưa thật sự biến mất khỏi economy
 
 Cuối thập niên 1970, Việt Nam tiếp tục đối mặt serious bảo mật (security / 보안) xung đột (conflict / 충돌), bao gồm chiến tranh với Khmer Rouge/Campuchia và chiến tranh biên giới Việt–Trung năm **1979**.
@@ -107,8 +93,6 @@ Military expenditure, mobilization và disrupted trade tăng burden lên một e
 
 Vì vậy postwar reconstruction không diễn ra trong peaceful development môi trường (environment / 환경) đơn giản.
 
-> **Nối mạch:** Ở chặng này của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Soviet bloc và bên ngoài (external / 외부) hỗ trợ (support / 지원)** nối từ **War chưa thật sự biến mất khỏi economy** sang **Inflation và shortage như tín hiệu (signal / 신호) của hệ thống (system / 시스템) stress**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Soviet bloc và bên ngoài (external / 외부) hỗ trợ (support / 지원)
 
 Việt Nam ngày càng gắn với Soviet-led economic mạng (network / 네트워크) trong late 1970s và 1980s. Aid, equipment, technical cooperation và trade từ Soviet bloc giúp sustain nhiều sector.
@@ -116,8 +100,6 @@ Việt Nam ngày càng gắn với Soviet-led economic mạng (network / 네트�
 Nhưng dependence trên một bên ngoài (external / 외부) bloc cũng tạo ràng buộc (constraint / 제약조건). Trade cấu trúc (structure / 구조), price arrangement và technology nguồn (source / 소스) gắn mạnh với geopolitical relationship.
 
 Khi chapter sau đi tới 1990s, collapse của Soviet bloc sẽ cho thấy vì sao diversification of bên ngoài (external / 외부) relations trở thành strategic economic necessity.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Inflation và shortage như tín hiệu (signal / 신호) của hệ thống (system / 시스템) stress** nối từ **Soviet bloc và bên ngoài (external / 외부) hỗ trợ (support / 지원)** sang **Reform trước Đổi Mới: hệ thống (system / 시스템) đã tự tìm workaround**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Inflation và shortage như tín hiệu (signal / 신호) của hệ thống (system / 시스템) stress
 
@@ -136,8 +118,6 @@ more informal adaptation
 ```
 
 Khi price hệ thống (system / 시스템) mất thông tin (information / 정보) chất lượng (quality / 품질), economy càng khó coordinate bằng administrative instruction.
-
-> **Nối mạch:** Trong **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Reform trước Đổi Mới: hệ thống (system / 시스템) đã tự tìm workaround** nối từ **Inflation và shortage như tín hiệu (signal / 신호) của hệ thống (system / 시스템) stress** sang **Everyday-life checkpoint: tem phiếu và phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reform trước Đổi Mới: hệ thống (system / 시스템) đã tự tìm workaround
 
@@ -159,8 +139,6 @@ workaround proves useful
 policy recognition / institutional change
 ```
 
-> **Nối mạch:** Ở chặng này của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Everyday-life checkpoint: tem phiếu và phân phối (distribution / 분포)** nối từ **Reform trước Đổi Mới: hệ thống (system / 시스템) đã tự tìm workaround** sang **Di chuyển (migration / 마이그레이션) và refugee crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Everyday-life checkpoint: tem phiếu và phân phối (distribution / 분포)
 
 Nếu muốn hiểu period này qua material lịch sử (history / 이력), **tem phiếu**, sổ mua lương thực, state-shop bản ghi (record / 레코드) và household bộ nhớ (memory / 메모리) là nguồn (source / 소스) rất mạnh.
@@ -168,8 +146,6 @@ Nếu muốn hiểu period này qua material lịch sử (history / 이력), **t
 Tem phiếu cho thấy scarcity được administratively allocated. Nó cũng cho thấy income bằng money chưa đủ; entitlement to purchase certain goods có thể là một separate tài nguyên (resource / 자원).
 
 Một economic hệ thống (system / 시스템) trở nên dễ hiểu hơn khi ta hỏi: một household muốn mua gạo, vải, xe đạp hoặc spare part thì giao dịch (transaction / 트랜잭션) đường dẫn (path / 경로) thực tế là gì?
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Di chuyển (migration / 마이그레이션) và refugee crisis** nối từ **Everyday-life checkpoint: tem phiếu và phân phối (distribution / 분포)** sang **Ranh giới (boundary / 경계): “bao cấp” không phải toàn bộ economy giống nhau ở mọi nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Di chuyển (migration / 마이그레이션) và refugee crisis
 
@@ -179,8 +155,6 @@ Nguyên nhân không thể nén thành một factor duy nhất: postwar politica
 
 Đây là reminder rằng macro chính sách (policy / 정책) luôn tạo heterogeneous household kết quả (outcome / 결과).
 
-> **Nối mạch:** Trong **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Di chuyển (migration / 마이그레이션) và refugee crisis** đặt tiêu chí; **Ranh giới (boundary / 경계): “bao cấp” không phải toàn bộ economy giống nhau ở mọi nơi** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Từ crisis tới Đổi Mới** mở rộng hệ quả.
-
 ## Ranh giới (boundary / 경계): “bao cấp” không phải toàn bộ economy giống nhau ở mọi nơi
 
 Thuật ngữ **thời bao cấp** hữu ích để chỉ một planning/phân phối (distribution / 분포) regime, nhưng dễ tạo illusion rằng Hanoi, rural Red River, Ho Chi Minh City và Mekong Delta hoạt động identically.
@@ -189,8 +163,6 @@ Cục bộ (local / 로컬) hiện thực (implementation / 구현), informal th
 
 Vì vậy chapter này dùng “planned economy” như hệ thống (system / 시스템) mô hình (model / 모델), không biến nó thành description tuyệt đối của từng giao dịch (transaction / 트랜잭션).
 
-> **Nối mạch:** Ở chặng này của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Ranh giới (boundary / 경계): “bao cấp” không phải toàn bộ economy giống nhau ở mọi nơi** đặt tiêu chí; **Từ crisis tới Đổi Mới** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Recap và bàn giao** mở rộng hệ quả.
-
 ## Từ crisis tới Đổi Mới
 
 Đến giữa thập niên 1980, bài toán (problem / 문제) không còn là một shortage tạm thời mà là structural coordination crisis.
@@ -198,8 +170,6 @@ Vì vậy chapter này dùng “planned economy” như hệ thống (system / �
 Reform pressure đến từ môi trường vận hành (production / 운영 환경) incentive, inflation, fiscal ràng buộc (constraint / 제약조건), bên ngoài (external / 외부) quan hệ (relation / 관계) và bằng chứng (evidence / 증거) từ cục bộ (local / 로컬) experimentation.
 
 Năm **1986** vì thế là institutional turning điểm (point / 지점): chính sách (policy / 정책) direction chuyển rõ hơn sang renovation, greater thị trường (market / 시장) cơ chế (mechanism / 메커니즘) và bên ngoài (external / 외부) opening.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **1975–1986: thống nhất, reconstruction và giới hạn của kinh tế kế hoạch**, **Recap và bàn giao** nối từ **Từ crisis tới Đổi Mới** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

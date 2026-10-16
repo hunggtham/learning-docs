@@ -8,7 +8,7 @@ NLP Evaluation (자연어 처리 평가) khó vì ngôn ngữ (language / 언어
 
 Classification dùng accuracy, precision, recall, F1, calibration như ML chung.
 
-NER nên thực thể (entity / 엔터티)/span-level F1 thay đơn vị từ (token / 토큰) accuracy vì lớp (class / 클래스) `O` dominate.
+NER nên thực thể (entity / 엔터티)/span-level F1 thay token (토큰) accuracy vì lớp (class / 클래스) `O` dominate.
 
 Chính xác (exact / 정확한) thực thể (entity / 엔터티) match strict:
 

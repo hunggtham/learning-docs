@@ -4,7 +4,7 @@
 
 Ở tầng (layer / 계층) trước, Transformer đã được giải thích như một kiến trúc (architecture / 아키텍처) gồm attention, feed-forward mạng (network / 네트워크), residual liên kết (connection / 연결) và normalization. Khi kiến trúc (architecture / 아키텍처) đó được quy mô (scale / 규모) thành Large ngôn ngữ (language / 언어) mô hình (model / 모델), cơ chế cơ bản không đổi, nhưng **tỷ lệ giữa các thành phần, cách tổ chức attention, positional encoding, normalization, feed-forward khối (block / 블록), bộ nhớ đệm (cache / 캐시) và parallelism** trở thành những quyết định ảnh hưởng trực tiếp tới chất lượng, tốc độ và chi phí.
 
-Chapter này không lặp lại công thức attention từ đầu. Mục tiêu là nhìn Transformer như một **LLM computation engine**: một đơn vị từ (token / 토큰) đi qua mô hình (model / 모델) như thế nào, parameters nằm ở đâu, ngữ cảnh (context / 맥락) được trộn ra sao, và vì sao suy luận (inference / 추론) hành vi (behavior / 동작) khác huấn luyện (training / 학습) hành vi (behavior / 동작).
+Chapter này không lặp lại công thức attention từ đầu. Mục tiêu là nhìn Transformer như một **LLM computation engine**: một token (토큰) đi qua mô hình (model / 모델) như thế nào, parameters nằm ở đâu, ngữ cảnh (context / 맥락) được trộn ra sao, và vì sao suy luận (inference / 추론) hành vi (behavior / 동작) khác huấn luyện (training / 학습) hành vi (behavior / 동작).
 
 Xem nền: [Transformer](../06_deep_learning_architectures/05_transformer.md) và [Attention](../06_deep_learning_architectures/04_attention.md).
 
@@ -55,9 +55,9 @@ x' = x + Attention(Norm(x))
 x'' = x' + MLP(Norm(x'))
 \]
 
-Một cách nghĩ hữu ích là residual stream chứa biểu diễn (representation / 표현) hiện tại của mỗi đơn vị từ (token / 토큰). Attention đọc biểu diễn (representation / 표현) của nhiều positions và ghi một cập nhật (update / 업데이트); MLP đọc từng position và ghi một tính năng (feature / 기능) transformation khác.
+Một cách nghĩ hữu ích là residual stream chứa biểu diễn (representation / 표현) hiện tại của mỗi token (토큰). Attention đọc biểu diễn (representation / 표현) của nhiều positions và ghi một cập nhật (update / 업데이트); MLP đọc từng position và ghi một tính năng (feature / 기능) transformation khác.
 
-Đây là mô hình tư duy (mental model / 사고 모델), không phải claim rằng mô hình (model / 모델) có các “register” symbolic rõ ràng. Hidden thông tin (information / 정보) phân tán qua dimensions, layers và đơn vị từ (token / 토큰) positions.
+Đây là mô hình tư duy (mental model / 사고 모델), không phải claim rằng mô hình (model / 모델) có các “register” symbolic rõ ràng. Hidden thông tin (information / 정보) phân tán qua dimensions, layers và token (토큰) positions.
 
 Attention cho phép mỗi vị trí chọn lọc tín hiệu từ các vị trí khác trong residual stream. Khi đặt cơ chế này vào hệ thống LLM, số lượng đầu attention và cách dùng chung K/V trở thành điểm cần phân tích tiếp.
 
@@ -69,7 +69,7 @@ Với hidden states `X`, mỗi tầng (layer / 계층) tạo:
 Q=XW_Q,\qquad K=XW_K,\qquad V=XW_V
 \]
 
-Nhân quả (causal / 인과적) mask đảm bảo đơn vị từ (token / 토큰) tại position `t` chỉ dùng positions `≤t`.
+Nhân quả (causal / 인과적) mask đảm bảo token (토큰) tại position `t` chỉ dùng positions `≤t`.
 
 Attention đầu ra (output / 출력):
 
@@ -141,7 +141,7 @@ MLP có thể được xem như nơi biến đổi các đặc trưng đã đư�
 
 ## MLP đang làm gì?
 
-Attention chủ yếu tuyến (route / 경로)/mix thông tin (information / 정보) across đơn vị từ (token / 토큰) positions. MLP biến đổi biểu diễn (representation / 표현) tại từng đơn vị từ (token / 토큰) độc lập theo position nhưng dùng chung (shared / 공유) weights.
+Attention chủ yếu tuyến (route / 경로)/mix thông tin (information / 정보) across token (토큰) positions. MLP biến đổi biểu diễn (representation / 표현) tại từng token (토큰) độc lập theo position nhưng dùng chung (shared / 공유) weights.
 
 Một perspective nghiên cứu xem MLP như associative/key-value-like bộ nhớ (memory / 메모리) cho learned features/facts, nhưng không nên literalize rằng mỗi neuron hay row là một fact. kiến thức (knowledge / 지식) phân tán (distributed / 분산) và có tương tác (interaction / 상호작용) qua many layers.
 
@@ -167,7 +167,7 @@ RoPE đưa thông tin vị trí vào phép tính attention bằng cách xoay bi�
 
 ## Rotary Position Embedding (RoPE)
 
-Transformer attention tự nó không biết đơn vị từ (token / 토큰) thứ tự (order / 순서). RoPE encode position bằng rotation của Q/K components.
+Transformer attention tự nó không biết token (토큰) thứ tự (order / 순서). RoPE encode position bằng rotation của Q/K components.
 
 Simplified pairwise rotation:
 
@@ -233,9 +233,9 @@ Mô hình (model / 모델) nhận toàn prompt dài `T` và computes representat
 
 ### Decode
 
-Sau đó mỗi step chỉ thêm một đơn vị từ (token / 토큰). K/V cũ bộ nhớ đệm (cache / 캐시) lại; mô hình (model / 모델) tính truy vấn (query / 쿼리)/new K/V cho đơn vị từ (token / 토큰) mới rồi attend toàn bộ nhớ đệm (cache / 캐시).
+Sau đó mỗi step chỉ thêm một token (토큰). K/V cũ bộ nhớ đệm (cache / 캐시) lại; mô hình (model / 모델) tính truy vấn (query / 쿼리)/new K/V cho token (토큰) mới rồi attend toàn bộ nhớ đệm (cache / 캐시).
 
-Decode thường memory-bandwidth/latency-sensitive vì mỗi đơn vị từ (token / 토큰) cần đọc large weights + KV bộ nhớ đệm (cache / 캐시) nhưng batch/chuỗi (sequence / 시퀀스) compute nhỏ hơn.
+Decode thường memory-bandwidth/latency-sensitive vì mỗi token (토큰) cần đọc large weights + KV bộ nhớ đệm (cache / 캐시) nhưng batch/chuỗi (sequence / 시퀀스) compute nhỏ hơn.
 
 Do đó tối ưu hóa (optimization / 최적화) suy luận (inference / 추론) phải tách:
 
@@ -281,7 +281,7 @@ MoE thay một số MLP dense bằng nhiều expert và một router chọn expe
 
 ## Mixture of Experts (MoE) preview
 
-Not every LLM is dense. MoE khối (block / 블록) has multiple expert FFNs and router sends each đơn vị từ (token / 토큰) to subset experts.
+Not every LLM is dense. MoE khối (block / 블록) has multiple expert FFNs and router sends each token (토큰) to subset experts.
 
 Conceptually:
 
@@ -289,7 +289,7 @@ Conceptually:
 y=\sum_{e\in TopK(router(x))}p_e(x)Expert_e(x)
 \]
 
-Total parameters can be huge while only few experts active per đơn vị từ (token / 토큰), reducing active compute relative dense mô hình (model / 모델) of same total parameter count.
+Total parameters can be huge while only few experts active per token (토큰), reducing active compute relative dense mô hình (model / 모델) of same total parameter count.
 
 Challenges:
 
@@ -305,9 +305,9 @@ Tổng số tham số quyết định phần lớn dung lượng checkpoint, cò
 
 ## Parameter count vs active parameters
 
-For dense mô hình (model / 모델), nearly all tầng (layer / 계층) parameters participate every đơn vị từ (token / 토큰).
+For dense mô hình (model / 모델), nearly all tầng (layer / 계층) parameters participate every token (토큰).
 
-For MoE, total parameters ≠ active parameters per đơn vị từ (token / 토큰). Therefore comparing “mô hình (model / 모델) kích thước (size / 크기)” only by total billions can mislead compute comparisons.
+For MoE, total parameters ≠ active parameters per token (토큰). Therefore comparing “mô hình (model / 모델) kích thước (size / 크기)” only by total billions can mislead compute comparisons.
 
 Need ask:
 
@@ -344,7 +344,7 @@ retrieve relevant context via attention
 
 After many layers, final biểu diễn (representation / 표현) has undergone iterative contextual computation.
 
-This is why next-token prediction can involve substantial nội bộ (internal / 내부) computation before one đơn vị từ (token / 토큰) is emitted.
+This is why next-token prediction can involve substantial nội bộ (internal / 내부) computation before one token (토큰) is emitted.
 
 Những ngộ nhận về attention, neuron, tham số và MoE thường xuất hiện khi ta biến một phép ẩn dụ thành khẳng định literal. Mô hình tư duy sau đây gom các cơ chế vừa học thành một chuỗi suy luận có thể áp dụng lại.
 
@@ -368,7 +368,7 @@ Usually same kiến trúc (architecture / 아키텍처)/hàm (function / 함수)
 
 ### “MoE 1T parameters compute như dense 1T mô hình (model / 모델)”
 
-Only subset experts active each đơn vị từ (token / 토큰), though bộ nhớ (memory / 메모리)/communication still substantial.
+Only subset experts active each token (토큰), though bộ nhớ (memory / 메모리)/communication still substantial.
 
 Mô hình tư duy này nối input token với residual stream, attention, MLP, normalization và output projection, đồng thời giữ rõ ranh giới giữa cơ chế và ẩn dụ. Phần cuối chỉ ra các tài liệu nền để người học tiếp tục đào sâu.
 

@@ -26,23 +26,17 @@ Interpretation about construct
 
 Sai ở bất kỳ bước nào cũng có thể tạo kết luận sai dù phép tính thống kê hoàn toàn chính xác. Đây là lý do trong psychology, đo lường (measurement / 측정) thường là vấn đề sâu hơn calculation.
 
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **2. Thao tác hóa không phải “định nghĩa thật” của construct** nối từ **1. Từ construct tới biến quan sát** sang **3. Thang đo và loại dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Thao tác hóa không phải “định nghĩa thật” của construct
 
 **Thao tác hóa (operationalization)** biến một khái niệm thành thủ tục đo cụ thể. Nếu nghiên cứu “chú ý” bằng reaction thời gian (time / 시간) trong một tác vụ (task / 작업), tác vụ (task / 작업) đó chỉ cung cấp một cửa sổ vào attention, không phải toàn bộ attention.
 
 Một construct có thể có nhiều operationalization. Khi nhiều phương pháp độc lập hội tụ về cùng một mẫu (pattern / 패턴), suy luận (inference / 추론) thường mạnh hơn. Ngược lại, nếu toàn bộ literature dựa vào một bảng hỏi duy nhất, ta khó biết kết quả (result / 결과) phản ánh construct hay idiosyncrasy của instrument.
 
-> **Nối mạch:** Ở chặng này của **Đo lường và thống kê nền tảng trong tâm lý học**, **2. Thao tác hóa không phải “định nghĩa thật” của construct** đặt vấn đề; **3. Thang đo và loại dữ liệu** đối chiếu bằng chứng, rồi **4. Sai số đo lường** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 3. Thang đo và loại dữ liệu
 
 Dữ liệu có thể được mô tả theo nhiều kiểu. **Danh nghĩa (nominal)** biểu diễn category không có thứ tự; **thứ bậc (ordinal)** có thứ tự nhưng khoảng cách giữa mức không nhất thiết bằng nhau; **khoảng (interval)** giả định khoảng cách có ý nghĩa; **tỷ lệ (ratio)** có mốc zero có ý nghĩa theo mô hình đo.
 
 Trong thực hành psychology, câu hỏi Likert riêng lẻ thường mang tính ordinal, còn tổng hoặc trung bình của nhiều item đôi khi được mô hình hóa gần continuous nếu giả định phù hợp. Đây không phải quy tắc máy móc; lựa chọn phân tích cần dựa vào đo lường (measurement / 측정) mô hình (model / 모델), phân phối và robustness của phương pháp.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và thống kê nền tảng trong tâm lý học**, **3. Thang đo và loại dữ liệu** đặt vấn đề; **4. Sai số đo lường** đối chiếu bằng chứng, rồi **5. Độ tin cậy khác độ giá trị** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Sai số đo lường
 
@@ -56,8 +50,6 @@ X = T + E
 
 Sai số có thể đến từ wording, fatigue, rater, thiết bị, day-to-day fluctuation, ngôn ngữ (language / 언어), ngữ cảnh (context / 맥락) hoặc sampling item. Sai số đo lường không chỉ làm score cá nhân dao động; nó còn có thể làm tương quan yếu đi, làm tác động (effect / 효과) estimate lệch và giảm khả năng tái lập.
 
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **4. Sai số đo lường** đặt vấn đề; **5. Độ tin cậy khác độ giá trị** đối chiếu bằng chứng, rồi **6. Phân phối, trung tâm và độ phân tán** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 5. Độ tin cậy khác độ giá trị
 
 **độ tin cậy (reliability / 신뢰성)** hỏi phép đo có nhất quán ở mức cần thiết cho use trường hợp (case / 사례) hay không. Các dạng thường gặp gồm kiểm thử (test / 테스트)–retest, inter-rater và nội bộ (internal / 내부) consistency.
@@ -68,15 +60,11 @@ Một thước đo có thể rất reliable nhưng đo sai construct. Ngược l
 
 Phần này được phát triển sâu hơn tại [[05_psychometrics_and_test_interpretation]].
 
-> **Nối mạch:** Ở chặng này của **Đo lường và thống kê nền tảng trong tâm lý học**, **6. Phân phối, trung tâm và độ phân tán** nối từ **5. Độ tin cậy khác độ giá trị** sang **7. Kích thước hiệu ứng quan trọng hơn câu hỏi “có hay không”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Phân phối, trung tâm và độ phân tán
 
 Trung bình (mean) là một summary hữu ích nhưng không mô tả toàn bộ phân phối (distribution / 분포). Hai nhóm có cùng mean có thể khác mạnh về variance, skewness hoặc subgroup cấu trúc (structure / 구조). Hai nhóm có mean khác nhau vẫn có thể overlap rất lớn.
 
 **Độ lệch chuẩn (standard deviation)** mô tả mức phân tán quanh trung bình theo mô hình; **trung vị (median)** hữu ích khi phân phối (distribution / 분포) lệch hoặc có outlier mạnh. Khi đọc psychological dữ liệu (data / 데이터), nên nhìn cả center, spread, phân phối (distribution / 분포) shape và missingness thay vì chỉ một average.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và thống kê nền tảng trong tâm lý học**, **7. Kích thước hiệu ứng quan trọng hơn câu hỏi “có hay không”** nối từ **6. Phân phối, trung tâm và độ phân tán** sang **8. Khoảng tin cậy và độ không chắc chắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Kích thước hiệu ứng quan trọng hơn câu hỏi “có hay không”
 
@@ -92,15 +80,11 @@ Có ý nghĩa thực tiễn không?
 Có generalize sang population cần quan tâm không?
 ```
 
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **8. Khoảng tin cậy và độ không chắc chắn** nối từ **7. Kích thước hiệu ứng quan trọng hơn câu hỏi “có hay không”** sang **9. Giá trị p không phải xác suất hypothesis sai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Khoảng tin cậy và độ không chắc chắn
 
 **Khoảng tin cậy (confidence interval)** được tạo bởi một procedure có tính chất bao phủ dài hạn dưới những giả định nhất định. Trong thực hành, nó giúp thấy precision của estimate. Khoảng hẹp thường nghĩa estimate chính xác hơn, nhưng không bảo đảm đo lường (measurement / 측정) không độ lệch (bias / 편향) hoặc mô hình (model / 모델) đúng.
 
 Độ không chắc chắn không phải khuyết điểm cần giấu. Báo cáo bất định (uncertainty / 불확실성) rõ là một phần của lập luận (reasoning / 추론) khoa học.
-
-> **Nối mạch:** Ở chặng này của **Đo lường và thống kê nền tảng trong tâm lý học**, **9. Giá trị p không phải xác suất hypothesis sai** nối từ **8. Khoảng tin cậy và độ không chắc chắn** sang **10. Công suất thống kê và cỡ mẫu (sample size / 표본 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Giá trị p không phải xác suất hypothesis sai
 
@@ -110,23 +94,17 @@ Ngưỡng `.05` là convention, không phải đường biên giữa “truth”
 
 Khi nhiều phân tích (analysis / 분석) được thử nhưng chỉ kết quả (result / 결과) thuận lợi được báo cáo, false-positive rủi ro (risk / 위험) tăng. Vì vậy preregistration, transparent reporting và correction for multiple testing quan trọng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và thống kê nền tảng trong tâm lý học**, **10. Công suất thống kê và cỡ mẫu (sample size / 표본 크기)** nối từ **9. Giá trị p không phải xác suất hypothesis sai** sang **11. Correlation và regression không tự tạo causality**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Công suất thống kê và cỡ mẫu (sample size / 표본 크기)
 
 **Công suất thống kê (statistical power)** là xác suất procedure phát hiện một tác động (effect / 효과) có kích thước giả định trong những điều kiện cụ thể. Power thấp làm estimate không ổn định và literature dễ bị selection độ lệch (bias / 편향): chỉ những estimate tình cờ lớn mới vượt threshold để được công bố.
 
 Cỡ mẫu (sample size / 표본 크기) lớn hơn thường tăng precision, nhưng “N lớn” không sửa được đo lường (measurement / 측정) kém, sampling độ lệch (bias / 편향) hoặc confounding.
 
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **11. Correlation và regression không tự tạo causality** nối từ **10. Công suất thống kê và cỡ mẫu (sample size / 표본 크기)** sang **12. Repeated measures và dữ liệu lồng nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Correlation và regression không tự tạo causality
 
 Correlation cho biết variables thay đổi cùng nhau theo một mẫu (pattern / 패턴) nhất định. Regression có thể estimate conditional association khi kiểm soát một số variables, nhưng neither automatically proves causation.
 
 Điều chỉnh sai biến còn có thể làm suy luận (inference / 추론) tệ hơn, ví dụ điều khiển (control / 제어) mediator hoặc collider. lập luận nhân quả (causal reasoning / 인과적 추론) được phát triển riêng tại [[08_causal_inference_and_psychological_evidence]].
-
-> **Nối mạch:** Ở chặng này của **Đo lường và thống kê nền tảng trong tâm lý học**, **11. Correlation và regression không tự tạo causality** đặt vấn đề; **12. Repeated measures và dữ liệu lồng nhau** đối chiếu bằng chứng, rồi **13. Missing dữ liệu (data / 데이터) không chỉ là vấn đề “thiếu vài ô”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Repeated measures và dữ liệu lồng nhau
 
@@ -136,15 +114,11 @@ Repeated-measures các mô hình (models / 모델들) và multilevel các mô h�
 
 Xem [[07_ecological_momentary_assessment_and_real_world_measurement]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và thống kê nền tảng trong tâm lý học**, **12. Repeated measures và dữ liệu lồng nhau** đặt vấn đề; **13. Missing dữ liệu (data / 데이터) không chỉ là vấn đề “thiếu vài ô”** đối chiếu bằng chứng, rồi **14. So sánh nhóm và tính bất biến đo lường** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 13. Missing dữ liệu (data / 데이터) không chỉ là vấn đề “thiếu vài ô”
 
 Missingness có thể mang thông tin. Người stress nặng có thể bỏ survey nhiều hơn; participant không cải thiện có thể dropout khỏi treatment study. Nếu missingness liên quan kết quả (outcome / 결과) hoặc variables không đo được, complete-case phân tích (analysis / 분석) có thể độ lệch (bias / 편향).
 
 Các khái niệm MCAR, MAR và MNAR là mô hình hóa cơ chế missingness, không phải nhãn chắc chắn quan sát trực tiếp được. Sensitivity phân tích (analysis / 분석) thường quan trọng khi conclusion phụ thuộc giả định missing dữ liệu (data / 데이터).
-
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **13. Missing dữ liệu (data / 데이터) không chỉ là vấn đề “thiếu vài ô”** đặt tiêu chí; **14. So sánh nhóm và tính bất biến đo lường** dùng tiêu chí đó để kiểm tra ranh giới, rồi **15. Mức bằng chứng trong đo lường (measurement / 측정)** mở rộng hệ quả.
 
 ## 14. So sánh nhóm và tính bất biến đo lường
 
@@ -153,8 +127,6 @@ Nếu hai nhóm dùng cùng một quy mô (scale / 규모), chưa chắc cùng s
 **Tính bất biến đo lường (measurement invariance)** là một nhóm kiểm tra xem đo lường (measurement / 측정) mô hình (model / 모델) có đủ tương đương để hỗ trợ (support / 지원) comparison hay không. Đây đặc biệt quan trọng trong nghiên cứu xuyên văn hóa, giới, tuổi hoặc di chuyển (migration / 마이그레이션).
 
 Không đạt invariance không có nghĩa “hai nhóm hoàn toàn không so sánh được”; nó báo rằng interpretation cần thận trọng và có thể cần mô hình (model / 모델) khác, partial invariance hoặc item-level investigation.
-
-> **Nối mạch:** Ở chặng này của **Đo lường và thống kê nền tảng trong tâm lý học**, **14. So sánh nhóm và tính bất biến đo lường** đặt tiêu chí; **15. Mức bằng chứng trong đo lường (measurement / 측정)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 15. Mức bằng chứng trong đo lường (measurement / 측정)
 
@@ -169,8 +141,6 @@ CTT, factor các mô hình (models / 모델들), IRT, multilevel các mô hình 
 ### Vấn đề còn tranh luận
 
 Cách tốt nhất để mô hình (model / 모델) Likert dữ liệu (data / 데이터), tiêu chuẩn fit tối ưu, mức invariance cần thiết cho từng loại comparison, hoặc threshold “đủ tốt” cho độ tin cậy (reliability / 신뢰성) phụ thuộc mục đích và literature cụ thể. Không nên biến rule-of-thumb thành luật tự nhiên.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và thống kê nền tảng trong tâm lý học**, các dấu vết trong **15. Mức bằng chứng trong đo lường (measurement / 측정)** được đọc cùng nhau ở **16. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. mô hình tư duy (mental model / 사고 모델)
 
@@ -193,8 +163,6 @@ Decision
 ```
 
 Statistical sophistication ở phần giữa không thể cứu một construct mơ hồ ở đầu chuỗi hoặc một interpretation vượt quá bằng chứng (evidence / 증거) ở cuối chuỗi.
-
-> **Nối mạch:** Trong **Đo lường và thống kê nền tảng trong tâm lý học**, **Kết nối kiến thức** tổng hợp từ **16. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

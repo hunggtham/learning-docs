@@ -16,8 +16,6 @@ Trong psychology, thay đổi cách mô tả một bài toán (problem / 문제)
 
 Điều này cho thấy đôi khi lập luận (reasoning / 추론) thất bại không phải vì thiếu “thông minh” mà vì biểu diễn (representation / 표현) ban đầu sai hoặc quá mơ hồ.
 
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **2. Khái niệm, category và lược đồ (schema / 스키마)** nối từ **1. Biểu diễn vấn đề quyết định không gian lời giải** sang **3. Deduction và induction**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Khái niệm, category và lược đồ (schema / 스키마)
 
 Con người nén kinh nghiệm thành **khái niệm (concept)** và **danh mục (category)**. Một **prototype** là ví dụ điển hình; một **lược đồ (schema / 스키마)** là cấu trúc kiến thức giúp dự đoán điều thường xảy ra trong ngữ cảnh (context / 맥락) nhất định.
@@ -26,15 +24,11 @@ Lược đồ (schema / 스키마) giảm tải nhận thức nhưng cũng tạo
 
 Lược đồ (schema / 스키마) là công cụ nén và dự đoán, không phải định nghĩa tuyệt đối của reality.
 
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **3. Deduction và induction** nối từ **2. Khái niệm, category và lược đồ (schema / 스키마)** sang **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và diagnostic bằng chứng (evidence / 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Deduction và induction
 
 **Suy diễn (deduction)** hỏi kết luận có bắt buộc đúng khi premise đúng hay không. **Quy nạp (induction)** đi từ số quan sát hữu hạn tới kết luận rộng hơn, vì vậy luôn chứa bất định (uncertainty / 불확실성).
 
 Phần lớn quyết định (decision / 결정) đời thực là inductive. Ta không có complete thông tin (information / 정보) và phải đánh giá xác suất (probability / 확률), chi phí (cost / 비용) của lỗi (error / 오류) và chất lượng (quality / 품질) của bằng chứng (evidence / 증거).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **3. Deduction và induction** đặt vấn đề; **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và diagnostic bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **5. Bayesian lập luận (reasoning / 추론) như mô hình cập nhật** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và diagnostic bằng chứng (evidence / 증거)
 
@@ -45,8 +39,6 @@ Nếu một kiểm thử (test / 테스트) có false-positive tỷ lệ (rate /
 **Bỏ qua tỷ lệ nền (base-rate neglect)** xảy ra khi người ta overweight case-specific cue và underweight prevalence hoặc prior.
 
 Xem [[../00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
-
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và diagnostic bằng chứng (evidence / 증거)** đặt vấn đề; **5. Bayesian lập luận (reasoning / 추론) như mô hình cập nhật** đối chiếu bằng chứng, rồi **6. Bounded rationality** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Bayesian lập luận (reasoning / 추론) như mô hình cập nhật
 
@@ -68,8 +60,6 @@ Trong debugging, một cause phổ biến có prior cao, nhưng log có likeliho
 
 Bayesian lập luận (reasoning / 추론) không yêu cầu “tin prior mù quáng”; prior phải được cập nhật (update / 업데이트) khi dữ liệu (data / 데이터) mới xuất hiện.
 
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **6. Bounded rationality** nối từ **5. Bayesian lập luận (reasoning / 추론) như mô hình cập nhật** sang **7. Heuristics**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Bounded rationality
 
 Con người không có thời gian, attention hay computational tài nguyên (resource / 자원) vô hạn. **Tính duy lý giới hạn (bounded rationality)** mô tả quyết định (decision / 결정) dưới tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건).
@@ -77,8 +67,6 @@ Con người không có thời gian, attention hay computational tài nguyên (r
 Vì vậy heuristic không mặc định là lỗi. Một chiến lược (strategy / 전략) đơn giản có thể rất hiệu quả nếu cue–môi trường (environment / 환경) quan hệ (relation / 관계) ổn định.
 
 Độ lệch (bias / 편향) xuất hiện khi shortcut dùng cue không còn diagnostic cho mục tiêu (target / 대상).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **7. Heuristics** nối từ **6. Bounded rationality** sang **8. Dual-process các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Heuristics
 
@@ -88,8 +76,6 @@ Các tác động (effect / 효과) này có bằng chứng (evidence / 증거) 
 
 Không nên dùng label độ lệch (bias / 편향) để giải thích hậu nghiệm mọi quyết định (decision / 결정) mình không đồng ý.
 
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **7. Heuristics** đặt đầu vào cho **8. Dual-process các mô hình (models / 모델들)**, rồi **9. lập luận (reasoning / 추론) môi trường (environment / 환경) quan trọng hơn lời nhắc “hãy suy nghĩ kỹ”** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 8. Dual-process các mô hình (models / 모델들)
 
 Các mô hình (model / 모델) hai quá trình phân biệt processing nhanh/tự động và processing chậm/có kiểm soát.
@@ -98,15 +84,11 @@ Các mô hình (model / 모델) hai quá trình phân biệt processing nhanh/t�
 
 Khi mệt hoặc thời gian (time / 시간) pressure cao, reliance vào default/habit thường tăng, nhưng tác động (effect / 효과) không universal cho mọi tác vụ (task / 작업).
 
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **8. Dual-process các mô hình (models / 모델들)** đặt đầu vào cho **9. lập luận (reasoning / 추론) môi trường (environment / 환경) quan trọng hơn lời nhắc “hãy suy nghĩ kỹ”**, rồi **10. Ngôn ngữ ảnh hưởng cognition nhưng không quyết định toàn bộ thought** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## 9. lập luận (reasoning / 추론) môi trường (environment / 환경) quan trọng hơn lời nhắc “hãy suy nghĩ kỹ”
 
 Quyết định (decision / 결정) chất lượng (quality / 품질) có thể được cải thiện bằng tiến trình (process / 프로세스) thiết kế (design / 설계): independent estimate trước discussion, checklist, tham chiếu (reference / 참조) lớp (class / 클래스), pre-mortem, delay với high-stake choice và yêu cầu (requirement / 요구사항) nêu hypothesis cạnh tranh.
 
 Những công cụ (tool / 도구) này hoạt động bằng cách thay thông tin (information / 정보) luồng (flow / 흐름) và reducing độ lệch (bias / 편향) opportunity, không phải bằng cách làm con người “ít thiên kiến” vĩnh viễn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **10. Ngôn ngữ ảnh hưởng cognition nhưng không quyết định toàn bộ thought** nối từ **9. lập luận (reasoning / 추론) môi trường (environment / 환경) quan trọng hơn lời nhắc “hãy suy nghĩ kỹ”** sang **11. Framing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Ngôn ngữ ảnh hưởng cognition nhưng không quyết định toàn bộ thought
 
@@ -116,15 +98,11 @@ Phiên bản yếu hơn hợp lý hơn: ngôn ngữ (language / 언어) categori
 
 Ngôn ngữ (language / 언어) là cognitive công cụ (tool / 도구) mạnh, nhưng cognition không bị khóa hoàn toàn vào vocabulary hoặc grammar.
 
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **11. Framing** nối từ **10. Ngôn ngữ ảnh hưởng cognition nhưng không quyết định toàn bộ thought** sang **12. Prospect lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Framing
 
 Cùng một quantitative kết quả (outcome / 결과) có thể tạo preference khác khi được frame dưới dạng gain hoặc mất mát (loss / 손실).
 
 > **Established tác động (effect / 효과) with ranh giới (boundary / 경계):** framing tác động (effect / 효과) được replicate trong nhiều paradigm, nhưng magnitude phụ thuộc population, tác vụ (task / 작업), numeracy và wording. Không phải mọi người luôn “sợ mất mát (loss / 손실) hơn gain” trong mọi lĩnh vực (domain / 도메인).
-
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **12. Prospect lý thuyết (theory / 이론)** nối từ **11. Framing** sang **13. quyết định (decision / 결정) under ambiguity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Prospect lý thuyết (theory / 이론)
 
@@ -134,8 +112,6 @@ Nó là một mô hình (model / 모델) có strong empirical influence, nhưng 
 
 Xem [[08_decision_under_risk_uncertainty_and_ambiguity]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **13. quyết định (decision / 결정) under ambiguity** nối từ **12. Prospect lý thuyết (theory / 이론)** sang **14. Metacognition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. quyết định (decision / 결정) under ambiguity
 
 **rủi ro (risk / 위험)** thường ngụ ý xác suất (probability / 확률) tương đối xác định; **ambiguity** xuất hiện khi xác suất (probability / 확률) mô hình (model / 모델) itself không rõ.
@@ -143,8 +119,6 @@ Xem [[08_decision_under_risk_uncertainty_and_ambiguity]].
 Con người thường xử lý ambiguity khác rủi ro (risk / 위험), nhưng preference thay đổi theo lĩnh vực (domain / 도메인), expertise và framing.
 
 Trong sản phẩm (product / 제품) planning hoặc investing, nhiều situation là ambiguity hơn rủi ro (risk / 위험) thuần túy vì phân phối (distribution / 분포) tương lai chưa biết tốt.
-
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **14. Metacognition** nối từ **13. quyết định (decision / 결정) under ambiguity** sang **15. Hindsight và kết quả (outcome / 결과) độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Metacognition
 
@@ -156,8 +130,6 @@ Confidence vì vậy không nên được đọc như direct measure của truth
 
 Xem [[04_cognitive_biases_and_metacognition]].
 
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **15. Hindsight và kết quả (outcome / 결과) độ lệch (bias / 편향)** nối từ **14. Metacognition** sang **16. Creativity và restructuring**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 15. Hindsight và kết quả (outcome / 결과) độ lệch (bias / 편향)
 
 Sau khi kết quả (outcome / 결과) đã biết, past bằng chứng (evidence / 증거) trông obvious hơn. **Hindsight độ lệch (bias / 편향)** làm ta underestimate bất định (uncertainty / 불확실성) trước sự kiện (event / 이벤트).
@@ -165,8 +137,6 @@ Sau khi kết quả (outcome / 결과) đã biết, past bằng chứng (evidenc
 **kết quả (outcome / 결과) độ lệch (bias / 편향)** đánh giá quyết định (decision / 결정) chất lượng (quality / 품질) dựa quá nhiều vào kết quả (result / 결과) cuối. Nhưng good tiến trình (process / 프로세스) có thể unlucky và bad tiến trình (process / 프로세스) có thể lucky.
 
 Quyết định (decision / 결정) log ghi prediction, xác suất (probability / 확률) và rationale trước kết quả (outcome / 결과) giúp giữ historical bất định (uncertainty / 불확실성).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **16. Creativity và restructuring** nối từ **15. Hindsight và kết quả (outcome / 결과) độ lệch (bias / 편향)** sang **17. nhóm (team / 팀) quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Creativity và restructuring
 
@@ -176,8 +146,6 @@ Creativity không đối lập lập luận (reasoning / 추론). Good creative 
 
 Xem [[06_expertise_creativity_and_problem_solving]].
 
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **17. nhóm (team / 팀) quyết định (decision / 결정)** nối từ **16. Creativity và restructuring** sang **18. AI-assisted lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 17. nhóm (team / 팀) quyết định (decision / 결정)
 
 Group có thể aggregate diverse thông tin (information / 정보), nhưng cũng có thể amplify dùng chung (shared / 공유) độ lệch (bias / 편향).
@@ -185,8 +153,6 @@ Group có thể aggregate diverse thông tin (information / 정보), nhưng cũn
 Authority, status và early confident speaker ảnh hưởng discussion. Independent estimate trước meeting và structured dissent có thể giảm informational cascade.
 
 Xem [[../03_human_development_and_person/10_group_dynamics_collective_behavior_and_cooperation]] và [[../06_applied/20_negotiation_conflict_and_joint_decision_making]].
-
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **18. AI-assisted lập luận (reasoning / 추론)** nối từ **17. nhóm (team / 팀) quyết định (decision / 결정)** sang **19. dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. AI-assisted lập luận (reasoning / 추론)
 
@@ -205,8 +171,6 @@ Short-term hiệu năng (performance / 성능) với công cụ (tool / 도구) 
 
 Xem [[10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy, suy luận và ra quyết định**, **19. dùng chung (common / 공통) misconceptions** nối từ **18. AI-assisted lập luận (reasoning / 추론)** sang **20. mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. dùng chung (common / 공통) misconceptions
 
 **“lô-gic (logic / 논리) tốt là đủ để quyết định tốt.”** Không. đầu vào (input / 입력), biểu diễn (representation / 표현) và bất định (uncertainty / 불확실성) matter.
@@ -218,8 +182,6 @@ Xem [[10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../
 **“Biết độ lệch (bias / 편향) giúp miễn nhiễm độ lệch (bias / 편향).”** Không. Procedure và phản hồi (feedback / 피드백) thường quan trọng hơn awareness.
 
 **“Confidence cao nghĩa xác suất (probability / 확률) đúng cao.”** Chỉ khi confidence được calibrated trong lĩnh vực (domain / 도메인) và procedure phù hợp.
-
-> **Nối mạch:** Trong **Tư duy, suy luận và ra quyết định**, **20. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **19. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. mô hình tư duy (mental model / 사고 모델)
 
@@ -242,8 +204,6 @@ Feedback / model update
 ```
 
 Lập luận (reasoning / 추론) tốt không phải cố loại bỏ mọi heuristic. Nó là biết khi nào shortcut đủ tốt và khi nào stakes/bất định (uncertainty / 불확실성) đòi hỏi procedure chặt hơn.
-
-> **Nối mạch:** Ở chặng này của **Tư duy, suy luận và ra quyết định**, **Kết nối kiến thức** tổng hợp từ **20. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

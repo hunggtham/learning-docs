@@ -22,8 +22,6 @@ Không chiến lược (strategy / 전략) nào universally superior.
 
 ---
 
-> **Nối mạch:** Asexual reproduction trades variation for speed; sexual reproduction uses meiosis and specialization, with oogenesis adding a distinct time/stock architecture.
-
 ## 2. Gametogenesis: meiosis + cell specialization
 
 Gametogenesis không chỉ giảm số lượng nhiễm sắc thể (chromosome number).
@@ -36,8 +34,6 @@ Hai gamete cùng haploid genome nhưng contribution cellular rất bất đối 
 
 ---
 
-> **Nối mạch:** **3. Oogenesis có temporal kiến trúc (architecture / 아키텍처) đặc biệt** nối từ **2. Gametogenesis: meiosis + cell specialization** sang **4. Spermatogenesis là continuous môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 3. Oogenesis có temporal kiến trúc (architecture / 아키텍처) đặc biệt
 
 Ở nhiều mammals, oocyte bắt đầu meiosis sớm rồi arrest trong thời gian dài, sau đó tiếp tục theo chu kỳ sinh sản (reproductive cycle).
@@ -48,8 +44,6 @@ Long arrest tạo vulnerability với lỗi phân ly nhiễm sắc thể (chromo
 
 ---
 
-> **Nối mạch:** **4. Spermatogenesis là continuous môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)** nối từ **3. Oogenesis có temporal kiến trúc (architecture / 아키텍처) đặc biệt** sang **5. Fertilization: nhận dạng (recognition), fusion và activation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Spermatogenesis là continuous môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)
 
 Spermatogonial tế bào gốc (stem cell) duy trì dòng dõi (lineage); meiosis tạo tế bào đơn bội (haploid cell); spermiogenesis remodel cell thành sperm.
@@ -59,8 +53,6 @@ Tiến trình (process / 프로세스) cần hỗ trợ nội tiết (endocrine 
 Reproduction là mô (tissue)-hệ thống tiến trình (process / 프로세스), không chỉ “testis tạo sperm”.
 
 ---
-
-> **Nối mạch:** **5. Fertilization: nhận dạng (recognition), fusion và activation** nối từ **4. Spermatogenesis là continuous môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템)** sang **6. Polyspermy tại sao nguy hiểm?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Fertilization: nhận dạng (recognition), fusion và activation
 
@@ -79,8 +71,6 @@ Fertilization không chỉ ghép DNA. Nó chuyển egg từ arrested trạng th�
 
 ---
 
-> **Nối mạch:** **6. Polyspermy tại sao nguy hiểm?** nối từ **5. Fertilization: nhận dạng (recognition), fusion và activation** sang **7. Cleavage: tăng cell number mà body chưa lớn tương ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 6. Polyspermy tại sao nguy hiểm?
 
 Nếu nhiều sperm contribute genome, chromosome content và spindle organization bị phá.
@@ -90,8 +80,6 @@ Do đó egg có fast/slow khối (block / 블록) cơ chế (mechanism / 메커�
 Reproduction cần **selective entry + immediate chuyển tiếp trạng thái (state transition / 상태 전이)**.
 
 ---
-
-> **Nối mạch:** **7. Cleavage: tăng cell number mà body chưa lớn tương ứng** nối từ **6. Polyspermy tại sao nguy hiểm?** sang **8. Chuyển tiếp mẹ–hợp tử (maternal-to-zygotic transition)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Cleavage: tăng cell number mà body chưa lớn tương ứng
 
@@ -105,8 +93,6 @@ Phát triển (development) ban đầu ưu tiên **thông tin (information / 정
 
 ---
 
-> **Nối mạch:** **8. Chuyển tiếp mẹ–hợp tử (maternal-to-zygotic transition)** nối từ **7. Cleavage: tăng cell number mà body chưa lớn tương ứng** sang **9. Compaction và tính phân cực tế bào (cell polarity)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Chuyển tiếp mẹ–hợp tử (maternal-to-zygotic transition)
 
 Early embryo ban đầu dựa nhiều vào RNA/protein (protein) được egg chuẩn bị sẵn.
@@ -119,8 +105,6 @@ Development vì vậy có hand-off giữa hai regulatory regimes.
 
 ---
 
-> **Nối mạch:** **9. Compaction và tính phân cực tế bào (cell polarity)** nối từ **8. Chuyển tiếp mẹ–hợp tử (maternal-to-zygotic transition)** sang **10. Gastrulation: hình học (geometry / 기하학) đổi thì truyền tín hiệu bối cảnh (context) đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 9. Compaction và tính phân cực tế bào (cell polarity)
 
 Ở mammalian embryo, early blastomere thay adhesion, polarity và contact hình học (geometry / 기하학).
@@ -130,8 +114,6 @@ Cell bên ngoài/bên trong nhận ngữ cảnh (context / 맥락) khác, góp p
 Một tiny spatial difference ở early stage có thể được gene mạng (network / 네트워크) amplify thành fate khác.
 
 ---
-
-> **Nối mạch:** **10. Gastrulation: hình học (geometry / 기하학) đổi thì truyền tín hiệu bối cảnh (context) đổi** nối từ **9. Compaction và tính phân cực tế bào (cell polarity)** sang **11. Lá phôi là starting map, không phải destiny bảng (table / 테이블) cứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Gastrulation: hình học (geometry / 기하학) đổi thì truyền tín hiệu bối cảnh (context) đổi
 
@@ -149,8 +131,6 @@ Development không phải phân chia tế bào (cell division) đơn thuần; **
 
 ---
 
-> **Nối mạch:** **11. Lá phôi là starting map, không phải destiny bảng (table / 테이블) cứng** nối từ **10. Gastrulation: hình học (geometry / 기하학) đổi thì truyền tín hiệu bối cảnh (context) đổi** sang **12. Biệt hóa tế bào (cell differentiation) = regulatory-state chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 11. Lá phôi là starting map, không phải destiny bảng (table / 테이블) cứng
 
 Ectoderm góp phần hệ thần kinh (nervous system)/epidermis.
@@ -163,8 +143,6 @@ Nhưng organ fate thực sự đến từ iterative signaling + phiên mã (tran
 
 ---
 
-> **Nối mạch:** **12. Biệt hóa tế bào (cell differentiation) = regulatory-state chuyển tiếp (transition / 전이)** nối từ **11. Lá phôi là starting map, không phải destiny bảng (table / 테이블) cứng** sang **13. Cell định danh (identity / 식별자) cần maintenance**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Biệt hóa tế bào (cell differentiation) = regulatory-state chuyển tiếp (transition / 전이)
 
 Neuron và muscle có genome gần giống nhau nhưng expression program khác.
@@ -175,8 +153,6 @@ Differentiation là chuyển tiếp (transition / 전이) từ one regulatory re
 
 ---
 
-> **Nối mạch:** **13. Cell định danh (identity / 식별자) cần maintenance** nối từ **12. Biệt hóa tế bào (cell differentiation) = regulatory-state chuyển tiếp (transition / 전이)** sang **14. Potency: breadth of possible futures**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Cell định danh (identity / 식별자) cần maintenance
 
 Một cell không chỉ “chọn fate một lần”. định danh (identity / 식별자) phải được duy trì qua phân chia tế bào bằng transcriptional phản hồi (feedback / 피드백), chromatin modification và niche tín hiệu (signal / 신호).
@@ -186,8 +162,6 @@ Nếu maintenance thất bại (fail / 실패), cell có thể dedifferentiate h
 Developmental bộ nhớ (memory / 메모리) là molecular trạng thái (state / 상태) persistence.
 
 ---
-
-> **Nối mạch:** **14. Potency: breadth of possible futures** nối từ **13. Cell định danh (identity / 식별자) cần maintenance** sang **15. Phân chia bất đối xứng (asymmetric division)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Potency: breadth of possible futures
 
@@ -200,8 +174,6 @@ Developmental bộ nhớ (memory / 메모리) là molecular trạng thái (state
 Potency không phải “cell càng potent càng tốt”; mature specialized cell cần stability hơn breadth.
 
 ---
-
-> **Nối mạch:** **15. Phân chia bất đối xứng (asymmetric division)** nối từ **14. Potency: breadth of possible futures** sang **16. Induction: neighbor quyết định fate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Phân chia bất đối xứng (asymmetric division)
 
@@ -216,8 +188,6 @@ Asymmetry cho phép vừa self-renew vừa produce differentiated descendant.
 
 ---
 
-> **Nối mạch:** **16. Induction: neighbor quyết định fate** nối từ **15. Phân chia bất đối xứng (asymmetric division)** sang **17. Chênh lệch morphogen (morphogen gradient): thông tin vị trí (positional information)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. Induction: neighbor quyết định fate
 
 Cell trạng thái phát triển (developmental state) phụ thuộc cục bộ (local / 로컬) tín hiệu (signal / 신호).
@@ -227,8 +197,6 @@ Classic lens induction cho thấy tissue này có thể instruct tissue khác.
 Cell fate vì vậy là thuộc tính (property / 속성) của **tế bào + neighborhood + thời gian (time / 시간)**, không của genome riêng lẻ.
 
 ---
-
-> **Nối mạch:** **17. Chênh lệch morphogen (morphogen gradient): thông tin vị trí (positional information)** nối từ **16. Induction: neighbor quyết định fate** sang **18. độ dốc (gradient / 기울기) formation là một vật lý (physical / 물리적) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Chênh lệch morphogen (morphogen gradient): thông tin vị trí (positional information)
 
@@ -248,8 +216,6 @@ Cell không chỉ đọc concentration snapshot; nó có thể integrate tín hi
 
 ---
 
-> **Nối mạch:** **18. độ dốc (gradient / 기울기) formation là một vật lý (physical / 물리적) bài toán (problem / 문제)** nối từ **17. Chênh lệch morphogen (morphogen gradient): thông tin vị trí (positional information)** sang **19. Phản ứng–khuếch tán có thể tự tạo mẫu hình (pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 18. độ dốc (gradient / 기울기) formation là một vật lý (physical / 물리적) bài toán (problem / 문제)
 
 Morphogen spread chịu diffusion, sự tạo ra (production), degradation và liên kết (binding).
@@ -266,8 +232,6 @@ Mẫu (pattern / 패턴) quy mô (scale / 규모) vì vậy phụ thuộc both m
 
 ---
 
-> **Nối mạch:** **19. Phản ứng–khuếch tán có thể tự tạo mẫu hình (pattern)** nối từ **18. độ dốc (gradient / 기울기) formation là một vật lý (physical / 물리적) bài toán (problem / 문제)** sang **20. Hox gene và positional định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 19. Phản ứng–khuếch tán có thể tự tạo mẫu hình (pattern)
 
 Turing cho thấy interacting activator/inhibitor có thể tạo stripe/spot từ homogeneous starting trạng thái (state / 상태).
@@ -278,8 +242,6 @@ Emergence xuất hiện ngay trong body formation.
 
 ---
 
-> **Nối mạch:** **20. Hox gene và positional định danh (identity / 식별자)** nối từ **19. Phản ứng–khuếch tán có thể tự tạo mẫu hình (pattern)** sang **21. Segmentation: thời gian (time / 시간) trở thành không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Hox gene và positional định danh (identity / 식별자)
 
 **Hox genes (혹스 유전자)** encode yếu tố phiên mã xác định regional định danh (identity / 식별자) dọc anterior–posterior axis ở nhiều animal.
@@ -289,8 +251,6 @@ Spatial collinearity giữa gene cluster và expression lĩnh vực (domain / �
 Mutation Hox có thể đổi định danh (identity / 식별자) segment, không chỉ làm tissue “thiếu gene”.
 
 ---
-
-> **Nối mạch:** **21. Segmentation: thời gian (time / 시간) trở thành không gian (space / 공간)** nối từ **20. Hox gene và positional định danh (identity / 식별자)** sang **22. Sự di chuyển tế bào cần polarity, adhesion và force**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Segmentation: thời gian (time / 시간) trở thành không gian (space / 공간)
 
@@ -306,8 +266,6 @@ Development dùng thời gian (time / 시간) như thông tin (information / 정
 
 ---
 
-> **Nối mạch:** **22. Sự di chuyển tế bào cần polarity, adhesion và force** nối từ **21. Segmentation: thời gian (time / 시간) trở thành không gian (space / 공간)** sang **23. Epithelial–mesenchymal chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Sự di chuyển tế bào cần polarity, adhesion và force
 
 Migrating cell tạo front–rear polarity, polymerize cytoskeleton, form/break adhesion và remodel ECM.
@@ -317,8 +275,6 @@ Neural crest là classic example: cell migrate xa rồi tạo nhiều derivative
 Sinh học tế bào bộ máy (machinery) được quy mô (scale / 규모) lên tissue tạo hình (morphogenesis).
 
 ---
-
-> **Nối mạch:** **23. Epithelial–mesenchymal chuyển tiếp (transition / 전이)** nối từ **22. Sự di chuyển tế bào cần polarity, adhesion và force** sang **24. Cơ học mô (tissue mechanics) tạo shape**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Epithelial–mesenchymal chuyển tiếp (transition / 전이)
 
@@ -332,8 +288,6 @@ Chương trình phát triển không “xấu”; disease xuất hiện khi prog
 
 ---
 
-> **Nối mạch:** **24. Cơ học mô (tissue mechanics) tạo shape** nối từ **23. Epithelial–mesenchymal chuyển tiếp (transition / 전이)** sang **25. Mechanotransduction: shape cũng phản hồi (feedback / 피드백) ngược vào gen**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. Cơ học mô (tissue mechanics) tạo shape
 
 Apical constriction, cell intercalation, differential growth và ECM stiffness tạo force.
@@ -343,8 +297,6 @@ Biểu hiện gen → protein → cytoskeletal force → tissue deformation.
 Morphogenesis là chuỗi nhân quả (causal chain / 인과 사슬) xuyên quy mô (scale / 규모) từ transcription tới hình học (geometry / 기하학).
 
 ---
-
-> **Nối mạch:** **25. Mechanotransduction: shape cũng phản hồi (feedback / 피드백) ngược vào gen** nối từ **24. Cơ học mô (tissue mechanics) tạo shape** sang **26. Apoptosis là constructive tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Mechanotransduction: shape cũng phản hồi (feedback / 피드백) ngược vào gen
 
@@ -366,8 +318,6 @@ Development là bidirectional multi-scale hệ thống (system / 시스템).
 
 ---
 
-> **Nối mạch:** Mechanotransduction đưa shape vào feedback gene; apoptosis tạo tiến trình constructive cho mô. **Left–right asymmetry** kiểm tra hệ quả phát triển.
-
 ## 26. Apoptosis là constructive tiến trình (process / 프로세스)
 
 Programmed chết tế bào (cell death) sculpt digit, prune neuron, remove damaged cell.
@@ -380,8 +330,6 @@ Nếu quá nhiều → degeneration/developmental thất bại (failure / 실패
 
 ---
 
-> **Nối mạch:** Apoptosis tạo không gian và ranh giới; left–right asymmetry tổ chức pattern. **Organ formation** kiểm tra việc tái sử dụng toolkit nhỏ.
-
 ## 27. Left–right asymmetry
 
 Early cilia/fluid-dòng chảy (flow)-like cơ chế (mechanism / 메커니즘) trong vertebrate tạo tiny symmetry breaking → asymmetric biểu hiện gen → heart/gut/liver laterality.
@@ -389,8 +337,6 @@ Early cilia/fluid-dòng chảy (flow)-like cơ chế (mechanism / 메커니즘) 
 Small early độ lệch (bias / 편향) được mạng (network / 네트워크) amplify thành body-level asymmetry.
 
 ---
-
-> **Nối mạch:** **28. Sự hình thành cơ quan = repeated use of a small toolkit** nối từ **27. Left–right asymmetry** sang **29. Tạo hình phân nhánh (branching morphogenesis)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Sự hình thành cơ quan = repeated use of a small toolkit
 
@@ -408,8 +354,6 @@ Evolution tái sử dụng toolkit thay vì invent unique pathway cho mỗi orga
 
 ---
 
-> **Nối mạch:** **29. Tạo hình phân nhánh (branching morphogenesis)** nối từ **28. Sự hình thành cơ quan = repeated use of a small toolkit** sang **30. Placenta: vận chuyển (transport / 전송) + endocrine + immune giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 29. Tạo hình phân nhánh (branching morphogenesis)
 
 Lung, kidney, mammary gland và glandular organ thường tạo branching cây (tree / 트리).
@@ -422,8 +366,6 @@ Cấu trúc (structure / 구조)–hàm (function / 함수) xuất hiện từ d
 
 ---
 
-> **Nối mạch:** **30. Placenta: vận chuyển (transport / 전송) + endocrine + immune giao diện (interface / 인터페이스)** nối từ **29. Tạo hình phân nhánh (branching morphogenesis)** sang **31. Maternal–fetal tài nguyên (resource / 자원) allocation là xung đột (conflict / 충돌) + sự phối hợp (cooperation)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 30. Placenta: vận chuyển (transport / 전송) + endocrine + immune giao diện (interface / 인터페이스)
 
 Placenta exchange O₂, CO₂, nutrient và chất thải (waste) giữa maternal/fetal circulation mà blood không free-mix như same vessel.
@@ -434,8 +376,6 @@ Pregnancy không phải fetus “sống độc lập trong uterus”; đó là t
 
 ---
 
-> **Nối mạch:** **30. Placenta: vận chuyển (transport / 전송) + endocrine + immune giao diện (interface / 인터페이스)** đặt vấn đề; **31. Maternal–fetal tài nguyên (resource / 자원) allocation là xung đột (conflict / 충돌) + sự phối hợp (cooperation)** kiểm tra bằng chứng, rồi **32. Sex differentiation không chỉ là chromosome label** mở rộng hệ quả.
-
 ## 31. Maternal–fetal tài nguyên (resource / 자원) allocation là xung đột (conflict / 충돌) + sự phối hợp (cooperation)
 
 Maternal hệ thống (system / 시스템) phải hỗ trợ (support / 지원) fetus nhưng giữ own homeostasis.
@@ -445,8 +385,6 @@ Placental hormone có thể tăng maternal insulin resistance trong normal pregn
 Reproduction là evolutionary cooperation nhưng cũng có resource-allocation tension.
 
 ---
-
-> **Nối mạch:** **31. Maternal–fetal tài nguyên (resource / 자원) allocation là xung đột (conflict / 충돌) + sự phối hợp (cooperation)** nêu quy tắc; **32. Sex differentiation không chỉ là chromosome label** thử quy tắc trong tình huống, rồi **33. Puberty: endocrine reactivation của chương trình phát triển** mở rộng hệ quả.
 
 ## 32. Sex differentiation không chỉ là chromosome label
 
@@ -466,8 +404,6 @@ Variation có thể xảy ra ở nhiều tầng (layer / 계층).
 
 ---
 
-> **Nối mạch:** **32. Sex differentiation không chỉ là chromosome label** nêu quy tắc; **33. Puberty: endocrine reactivation của chương trình phát triển** thử quy tắc trong tình huống, rồi **34. Brain development tiếp tục sau sinh** mở rộng hệ quả.
-
 ## 33. Puberty: endocrine reactivation của chương trình phát triển
 
 Hypothalamic–pituitary–gonadal axis tăng pulsatile activity → sex steroid tăng → secondary sexual characteristic, gametogenesis và growth thay đổi (change / 변경).
@@ -478,8 +414,6 @@ Development kéo dài qua adolescence; không kết thúc ở birth.
 
 ---
 
-> **Nối mạch:** **34. Brain development tiếp tục sau sinh** nối từ **33. Puberty: endocrine reactivation của chương trình phát triển** sang **35. Giai đoạn tới hạn (critical period) và sensitive period**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 34. Brain development tiếp tục sau sinh
 
 Synaptogenesis, pruning, myelination và circuit refinement tiếp tục nhiều năm.
@@ -489,8 +423,6 @@ Experience-dependent plasticity tương tác gene-driven program.
 “Born with brain cấu trúc (structure / 구조)” không đồng nghĩa mạng (network / 네트워크) đã mature hoàn toàn.
 
 ---
-
-> **Nối mạch:** **35. Giai đoạn tới hạn (critical period) và sensitive period** nối từ **34. Brain development tiếp tục sau sinh** sang **36. Teratogen: same exposure, different timing, different kết quả (outcome / 결과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Giai đoạn tới hạn (critical period) và sensitive period
 
@@ -508,8 +440,6 @@ what developmental time?
 
 ---
 
-> **Nối mạch:** **36. Teratogen: same exposure, different timing, different kết quả (outcome / 결과)** nối từ **35. Giai đoạn tới hạn (critical period) và sensitive period** sang **37. Developmental plasticity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 36. Teratogen: same exposure, different timing, different kết quả (outcome / 결과)
 
 Teratogen có thể ảnh hưởng embryonic development mạnh nếu mục tiêu (target / 대상) pathway active đúng trọng yếu (critical / 중요) cửa sổ (window / 윈도우).
@@ -519,8 +449,6 @@ Adult toxicity dữ liệu (data / 데이터) không đủ predict embryonic tá
 Thalidomide là historical lesson nổi bật về thời điểm-dependent developmental toxicity.
 
 ---
-
-> **Nối mạch:** **37. Developmental plasticity** nối từ **36. Teratogen: same exposure, different timing, different kết quả (outcome / 결과)** sang **38. Nguồn gốc phát triển của sức khỏe (developmental origins of health) and disease**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Developmental plasticity
 
@@ -532,8 +460,6 @@ Development không hoàn toàn deterministic.
 
 ---
 
-> **Nối mạch:** **37. Developmental plasticity** đặt vấn đề; **38. Nguồn gốc phát triển của sức khỏe (developmental origins of health) and disease** kiểm tra bằng chứng, rồi **39. Tái sinh: re-use developmental lô-gic (logic / 논리) after injury** mở rộng hệ quả.
-
 ## 38. Nguồn gốc phát triển của sức khỏe (developmental origins of health) and disease
 
 Early-life môi trường (environment / 환경) có thể ảnh hưởng long-term physiology qua cơ quan (organ) phát triển (development), endocrine/metabolic programming và epigenetic regulation.
@@ -543,8 +469,6 @@ Early-life môi trường (environment / 환경) có thể ảnh hưởng long-t
 Suy luận nhân quả (causal reasoning) phải tránh fatalism.
 
 ---
-
-> **Nối mạch:** **38. Nguồn gốc phát triển của sức khỏe (developmental origins of health) and disease** đặt vấn đề; **39. Tái sinh: re-use developmental lô-gic (logic / 논리) after injury** kiểm tra bằng chứng, rồi **40. Regeneration vs fibrosis** mở rộng hệ quả.
 
 ## 39. Tái sinh: re-use developmental lô-gic (logic / 논리) after injury
 
@@ -562,8 +486,6 @@ Salamander limb regeneration cho thấy adult tissue vẫn có thể re-enter po
 
 ---
 
-> **Nối mạch:** **40. Regeneration vs fibrosis** nối từ **39. Tái sinh: re-use developmental lô-gic (logic / 논리) after injury** sang **41. Thân-cell niche giữ balance giữa renewal và cancer prevention**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 40. Regeneration vs fibrosis
 
 Mammalian injury có thể repair bằng true regeneration hoặc scar/xơ hóa (fibrosis).
@@ -573,8 +495,6 @@ Fast closure giúp survival nhưng excess ECM deposition giảm original tissue 
 Repair chiến lược (strategy / 전략) là sự đánh đổi (trade-off / 트레이드오프) giữa speed, structural stability và perfect restoration.
 
 ---
-
-> **Nối mạch:** **41. Thân-cell niche giữ balance giữa renewal và cancer prevention** nối từ **40. Regeneration vs fibrosis** sang **42. Aging là life-course tiến trình (process / 프로세스), không phải một sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Thân-cell niche giữ balance giữa renewal và cancer prevention
 
@@ -587,8 +507,6 @@ Too much / uncontrolled proliferation → neoplasia rủi ro (risk / 위험).
 Regeneration và cancer share growth machinery but differ điều khiển (control / 제어).
 
 ---
-
-> **Nối mạch:** Stem-cell niche cân bằng renewal và cancer prevention; aging là life-course process. **Cellular aging có benefit và cost** kiểm tra hệ quả.
 
 ## 42. Aging là life-course tiến trình (process / 프로세스), không phải một sự kiện (event / 이벤트)
 
@@ -605,8 +523,6 @@ Aging liên quan:
 Không có một single “lão hóa (aging) gen”. Aging là hệ thống-level trajectory.
 
 ---
-
-> **Nối mạch:** Aging là life-course process với benefit và cost; **Cancer như misregulated development** kiểm tra khi regulation bị lệch.
 
 ## 43. Lão hóa tế bào có benefit và chi phí (cost / 비용)
 
@@ -627,8 +543,6 @@ Một cơ chế (mechanism / 메커니즘) có thể protective early nhưng cos
 
 ---
 
-> **Nối mạch:** **44. Cancer như misregulated development** nối từ **43. Lão hóa tế bào có benefit và chi phí (cost / 비용)** sang **45. Evo-Devo: evolution thay body form bằng đổi developmental regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 44. Cancer như misregulated development
 
 Cancer reuse growth, survival, angiogenesis, EMT-like di chuyển (migration / 마이그레이션) và stemness program.
@@ -638,8 +552,6 @@ Oncogenesis thường là **mất mát (loss / 손실) of điều khiển (contr
 Sinh học phát triển (developmental biology) vì vậy rất relevant với cancer.
 
 ---
-
-> **Nối mạch:** **45. Evo-Devo: evolution thay body form bằng đổi developmental regulation** nối từ **44. Cancer như misregulated development** sang **46. Ràng buộc phát triển (developmental constraint)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Evo-Devo: evolution thay body form bằng đổi developmental regulation
 
@@ -651,8 +563,6 @@ Developmental toolkit conserved nhưng regulatory wiring evolvable.
 
 ---
 
-> **Nối mạch:** **46. Ràng buộc phát triển (developmental constraint)** nối từ **45. Evo-Devo: evolution thay body form bằng đổi developmental regulation** sang **47. Tình huống phân tích (case study): identical twins**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 46. Ràng buộc phát triển (developmental constraint)
 
 Evolution không thể jump tới arbitrary phenotype; new form phải đi qua viable developmental đường dẫn (path / 경로).
@@ -662,8 +572,6 @@ Pleiotropy và mạng (network / 네트워크) coupling làm một mutation bene
 Historical developmental kiến trúc (architecture / 아키텍처) định hình future evolutionary possibility.
 
 ---
-
-> **Nối mạch:** **46. Ràng buộc phát triển (developmental constraint)** nêu quy tắc; **47. Tình huống phân tích (case study): identical twins** thử quy tắc trong tình huống, rồi **48. Tình huống phân tích: neural tube closure** mở rộng hệ quả.
 
 ## 47. Tình huống phân tích (case study): identical twins
 
@@ -679,8 +587,6 @@ Monozygotic twins bắt đầu gần cùng genome nhưng diverge do:
 
 ---
 
-> **Nối mạch:** **47. Tình huống phân tích (case study): identical twins** nêu quy tắc; **48. Tình huống phân tích: neural tube closure** thử quy tắc trong tình huống, rồi **49. Tình huống phân tích: limb patterning** mở rộng hệ quả.
-
 ## 48. Tình huống phân tích: neural tube closure
 
 Early neural plate folds/closure theo tightly timed morphogenetic program.
@@ -690,8 +596,6 @@ Thất bại (failure / 실패) can arise from genetics + chất dinh dưỡng (
 Trường hợp (case / 사례) này minh họa development as tương tác (interaction / 상호작용) rather than single-gene causation.
 
 ---
-
-> **Nối mạch:** **48. Tình huống phân tích: neural tube closure** nêu quy tắc; **49. Tình huống phân tích: limb patterning** thử quy tắc trong tình huống, rồi **50. Tình huống phân tích: metamorphosis** mở rộng hệ quả.
 
 ## 49. Tình huống phân tích: limb patterning
 
@@ -703,8 +607,6 @@ Small thay đổi (change / 변경) morphogen timing/concentration có thể t�
 
 ---
 
-> **Nối mạch:** **49. Tình huống phân tích: limb patterning** nêu quy tắc; **50. Tình huống phân tích: metamorphosis** thử quy tắc trong tình huống, rồi **51. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
-
 ## 50. Tình huống phân tích: metamorphosis
 
 Insect/amphibian metamorphosis cho thấy hormone có thể trigger organism-wide trạng thái phát triển chuyển tiếp (transition / 전이).
@@ -714,8 +616,6 @@ Same genome nhưng hormone + tissue competence làm body kiến trúc (architect
 Chương trình phát triển có thể remain latent rồi activated later.
 
 ---
-
-> **Nối mạch:** **50. Tình huống phân tích: metamorphosis** nêu quy tắc; **51. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **52. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 51. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -736,8 +636,6 @@ Chương trình phát triển có thể remain latent rồi activated later.
 **“Cancer hoàn toàn khác normal growth.”** Sai; nó reuse developmental/growth program nhưng mất điều khiển (control / 제어).
 
 ---
-
-> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 51; development cần robustness nhưng vẫn giữ plasticity.
 
 ## 52. Mô hình tư duy tổng hợp
 
@@ -769,8 +667,6 @@ Môi trường (environment / 환경) và mechanics phản hồi (feedback / 피
 
 <!-- depth-audit-2026:developmental-robustness -->
 
-> **Nối mạch:** Development cần robustness và plasticity; cầu nối sang Ecology và Human Health mở rộng hệ quả ra môi trường và sức khỏe.
-
 ## Development cần robustness nhưng vẫn phải giữ plasticity
 
 Embryo không phát triển trong môi trường hoàn hảo. Nồng độ morphogen dao động, cell division có noise, gene expression có stochasticity. Dù vậy body plan thường reproducible vì mạng (network / 네트워크) có phản hồi (feedback / 피드백), threshold, cell–cell signaling và cơ học mô giúp **canalization (tính ổn định phát triển)**.
@@ -780,8 +676,6 @@ Robustness không có nghĩa bất biến. Ở một số giai đoạn, hệ th�
 Thất bại (failure / 실패) phát triển vì vậy thường là thất bại (failure / 실패) của timing và hình học (geometry / 기하학), không chỉ “gene bị mất”. Một tín hiệu (signal / 신호) đúng nhưng xuất hiện quá sớm, quá muộn hoặc sai vị trí có thể tạo phenotype khác mạnh. Đây là lý do morphogen độ dốc (gradient / 기울기), Hox ranh giới (boundary / 경계), cell di chuyển (migration / 마이그레이션) và tissue mechanics quan trọng ngang danh sách gene.
 
 Evolution khai thác chính toolkit này. Thay enhancer hoặc timing expression có thể đổi anatomy mà không cần tạo protein hoàn toàn mới. Evo-Devo vì thế nối regulatory thông tin (information / 정보) → developmental cơ chế (mechanism / 메커니즘) → morphology → natural selection.
-
-> **Nối mạch:** Cầu nối sang Ecology và Human Health khép mạch từ robustness/plasticity của development.
 
 ## 53. cầu nối (bridge / 브리지) sang Ecology và Human Health
 

@@ -34,8 +34,6 @@ Không phải mọi truy vấn đều cần cùng mức chính xác.
 
 Ví dụ số billing có thể cần chính xác; cardinality dashboard có thể chấp nhận sai số 1–2%; heavy hitter detection thường chỉ cần tìm đúng nhóm lớn nhất.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map** tiếp nhận điểm tựa từ **1. Những truy vấn điển hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Top-K với băm (hash / 해시) Map + vùng nhớ động (heap / 힙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map
 
 Baseline cho tần suất:
@@ -53,8 +51,6 @@ state chính xác còn vừa bộ nhớ không?
 ```
 
 Nếu không, cần approximation hoặc partitioning.
-
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **3. Top-K với băm (hash / 해시) Map + vùng nhớ động (heap / 힙)** tiếp nhận điểm tựa từ **2. chính xác (exact / 정확한) trạng thái (state / 상태) bằng băm (hash / 해시) Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Count-Min Sketch khi không thể giữ mọi key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 3. Top-K với băm (hash / 해시) Map + vùng nhớ động (heap / 힙)
 
@@ -76,8 +72,6 @@ với `n` là số key phân biệt.
 
 Nếu cần Top-K liên tục sau mỗi sự kiện (event / 이벤트), cập nhật vùng nhớ động (heap / 힙) trực tiếp phức tạp hơn vì priority thay đổi. Có thể dùng indexed vùng nhớ động (heap / 힙) hoặc lazy entries.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **4. Count-Min Sketch khi không thể giữ mọi key** tiếp nhận điểm tựa từ **3. Top-K với băm (hash / 해시) Map + vùng nhớ động (heap / 힙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. CMS không tự tìm được key nổi bật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 4. Count-Min Sketch khi không thể giữ mọi key
 
 CMS giữ ma trận bộ đếm nhỏ và nhiều hàm băm. Mỗi sự kiện (event / 이벤트) cập nhật một ô ở mỗi hàng.
@@ -93,8 +87,6 @@ Trong mô hình cập nhật không âm, CMS không đánh giá thấp số đ�
 Bộ nhớ (memory / 메모리) phụ thuộc `ε`, `δ`, không phụ thuộc trực tiếp số key phân biệt.
 
 Đây là lý do CMS phù hợp telemetry có keyspace rất lớn.
-
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **5. CMS không tự tìm được key nổi bật** tiếp nhận điểm tựa từ **4. Count-Min Sketch khi không thể giữ mọi key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Space-Saving cho heavy hitters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 5. CMS không tự tìm được key nổi bật
 
@@ -112,8 +104,6 @@ hoặc dùng thuật toán như Misra–Gries/Space-Saving.
 
 > truy vấn (query / 쿼리) by known key và discovery of unknown key là hai loại bài toán khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **6. Space-Saving cho heavy hitters** tiếp nhận điểm tựa từ **5. CMS không tự tìm được key nổi bật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. HyperLogLog cho distinct count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 6. Space-Saving cho heavy hitters
 
 Space-Saving giữ một số lượng counter hữu hạn cho các candidate lớn.
@@ -129,8 +119,6 @@ Space-Saving -> candidate discovery
 exact backend -> verify candidate
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **7. HyperLogLog cho distinct count** tiếp nhận điểm tựa từ **6. Space-Saving cho heavy hitters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Mergeability là tính chất hệ thống quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 7. HyperLogLog cho distinct count
 
 Muốn đếm số người dùng (user / 사용자) phân biệt chính xác cần băm (hash / 해시) Set:
@@ -144,8 +132,6 @@ Bộ nhớ (memory / 메모리) tăng theo cardinality.
 HyperLogLog giữ thống kê trên băm (hash / 해시) và dùng rất ít bộ nhớ (memory / 메모리) so với băm (hash / 해시) Set.
 
 Các worker có thể merge HLL bằng phép `max` theo từng register, nên rất phù hợp phân tán (distributed / 분산) aggregation.
-
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **8. Mergeability là tính chất hệ thống quan trọng** tiếp nhận điểm tựa từ **7. HyperLogLog cho distinct count** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. thời gian (time / 시간) cửa sổ (window / 윈도우) làm trạng thái (state / 상태) khó hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 8. Mergeability là tính chất hệ thống quan trọng
 
@@ -167,8 +153,6 @@ coordinator có thể dùng cây (tree / 트리) reduction song song.
 
 Đây là lý do HLL/CMS/bottom-k hấp dẫn hơn nhiều cấu trúc chính xác (exact / 정확한) không dễ merge ở quy mô lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **9. thời gian (time / 시간) cửa sổ (window / 윈도우) làm trạng thái (state / 상태) khó hơn** tiếp nhận điểm tựa từ **8. Mergeability là tính chất hệ thống quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tumbling, Sliding và Session cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 9. thời gian (time / 시간) cửa sổ (window / 윈도우) làm trạng thái (state / 상태) khó hơn
 
 “Distinct count từ đầu hệ thống” dễ hơn “distinct count 5 phút gần nhất”.
@@ -188,8 +172,6 @@ Ví dụ giữ 60 HLL cho 60 phút gần nhất rồi merge các bucket cần th
 
 Đổi lại, ranh giới (boundary / 경계) của cửa sổ (window / 윈도우) và bộ nhớ (memory / 메모리) tăng theo số bucket.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **10. Tumbling, Sliding và Session cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **9. thời gian (time / 시간) cửa sổ (window / 윈도우) làm trạng thái (state / 상태) khó hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. sự kiện (event / 이벤트) thời gian (time / 시간) và Processing thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 10. Tumbling, Sliding và Session cửa sổ (window / 윈도우)
 
 **Tumbling cửa sổ (window / 윈도우)** chia thời gian thành các đoạn không chồng lấp.
@@ -201,8 +183,6 @@ Ví dụ giữ 60 HLL cho 60 phút gần nhất rồi merge các bucket cần th
 Session cửa sổ (window / 윈도우) cần trạng thái (state / 상태) theo key và hết thời gian chờ (timeout / 타임아웃) management; thường dùng timer hàng đợi (queue / 큐)/vùng nhớ động (heap / 힙) hoặc timer wheel.
 
 Cùng gọi là “cửa sổ (window / 윈도우)”, nhưng máy trạng thái (state machine / 상태 머신) rất khác nhau.
-
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **10. Tumbling, Sliding và Session cửa sổ (window / 윈도우)** xác định đầu vào; **11. sự kiện (event / 이벤트) thời gian (time / 시간) và Processing thời gian (time / 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Reservoir Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 11. sự kiện (event / 이벤트) thời gian (time / 시간) và Processing thời gian (time / 시간)
 
@@ -217,8 +197,6 @@ Nếu dùng sự kiện (event / 이벤트) thời gian (time / 시간), phải 
 
 Đây không còn là DSA thuần nhưng trạng thái (state / 상태)/cửa sổ (window / 윈도우) cấu trúc (structure / 구조) phải phù hợp ngữ nghĩa (semantics / 의미론) thời gian.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **11. sự kiện (event / 이벤트) thời gian (time / 시간) và Processing thời gian (time / 시간)** xác định đầu vào; **12. Reservoir Sampling** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Quantile Sketch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 12. Reservoir Sampling
 
 Nếu muốn giữ một mẫu đại diện `k` sự kiện (event / 이벤트) từ stream chưa biết trước độ dài, Reservoir Sampling dùng bộ nhớ `O(k)`.
@@ -226,8 +204,6 @@ Nếu muốn giữ một mẫu đại diện `k` sự kiện (event / 이벤트)
 Nó tránh thiên lệch về sự kiện (event / 이벤트) đầu hoặc cuối và rất hữu ích cho gỡ lỗi (debug / 디버그), inspection hoặc offline phân tích (analysis / 분석).
 
 Sampling là cách giảm dữ liệu trong khi cố giữ phân phối đại diện.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **13. Quantile Sketch** tiếp nhận điểm tựa từ **12. Reservoir Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Histogram** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 13. Quantile Sketch
 
@@ -243,8 +219,6 @@ quantile -> cần thông tin về distribution
 ```
 
 Do đó trạng thái (state / 상태) phức tạp hơn một counter.
-
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **14. Histogram** tiếp nhận điểm tựa từ **13. Quantile Sketch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Approximate vs chính xác (exact / 정확한) chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Histogram
 
@@ -262,8 +236,6 @@ Bộ nhớ (memory / 메모리) nhỏ và merge rất dễ, nhưng precision ph�
 Nếu phân phối (distribution / 분포) thay đổi mạnh, bucket cố định có thể mất chi tiết ở vùng quan trọng.
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) giữa simplicity, mergeability và precision.
-
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **14. Histogram** xác định đầu vào; **15. Approximate vs chính xác (exact / 정확한) chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Partitioning theo key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 15. Approximate vs chính xác (exact / 정확한) chuỗi xử lý (pipeline / 파이프라인)
 
@@ -287,8 +259,6 @@ CMS phát hiện endpoint có vẻ nóng
 
 Approximation giúp giảm tìm kiếm (search / 검색) không gian (space / 공간), không nhất thiết thay thế kết quả chính xác cuối cùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **15. Approximate vs chính xác (exact / 정확한) chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **16. Partitioning theo key** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Hot Key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 16. Partitioning theo key
 
 Để trạng thái (state / 상태) cùng key nằm một worker, hệ thống có thể dùng:
@@ -300,8 +270,6 @@ partition = hash(key) mod N
 Hashing cân bằng tương đối nhưng khi số partition thay đổi sẽ remap nhiều key. Consistent/rendezvous hashing có thể giảm lượng trạng thái (state / 상태) di chuyển trong một số kiến trúc.
 
 Stateful streaming vì vậy nối trực tiếp với hashing phân tán.
-
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **17. Hot Key** tiếp nhận điểm tựa từ **16. Partitioning theo key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 17. Hot Key
 
@@ -319,8 +287,6 @@ special-case hot keys
 Ví dụ split `celebrity_user` thành nhiều subkey rồi merge count ở tầng sau.
 
 Đây là vấn đề phân phối (distribution / 분포), không phải lỗi của băm (hash / 해시) hàm (function / 함수).
-
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **18. Backpressure** tiếp nhận điểm tựa từ **17. Hot Key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Exactly-once, At-least-once và duplicate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Backpressure
 
@@ -340,8 +306,6 @@ Hàng đợi (queue / 큐) sức chứa (capacity / 용량) là một phần c�
 
 Streaming analytics vì vậy kết nối trực tiếp với scheduler/backpressure, không chỉ sketch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **19. Exactly-once, At-least-once và duplicate** tiếp nhận điểm tựa từ **18. Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Snapshot và khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 19. Exactly-once, At-least-once và duplicate
 
 Nếu sự kiện (event / 이벤트) có thể được xử lý lại sau thử lại (retry / 재시도), counter đơn giản có thể đếm trùng.
@@ -358,8 +322,6 @@ Dedup có thể cần sự kiện (event / 이벤트) ID + băm (hash / 해시) 
 
 Approximate duplicate filters như Bloom Filter có thể tạo false positive, vì vậy không phải lĩnh vực (domain / 도메인) nào cũng chấp nhận được.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **20. Snapshot và khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **19. Exactly-once, At-least-once và duplicate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Monitoring chính sketch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 20. Snapshot và khôi phục (recovery / 복구)
 
 Trạng thái (state / 상태) phải được checkpoint:
@@ -375,8 +337,6 @@ Nếu snapshot không nhất quán với đầu vào (input / 입력) offset, kh
 
 Một cấu trúc đúng trong RAM chưa đủ; phân tán (distributed / 분산) trạng thái (state / 상태) cần giao thức (protocol / 프로토콜) persistence tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **21. Monitoring chính sketch** tiếp nhận điểm tựa từ **20. Snapshot và khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 21. Monitoring chính sketch
 
 Approximate cấu trúc (structure / 구조) cũng cần khả năng quan sát (observability / 관측 가능성):
@@ -391,8 +351,6 @@ bucket age
 ```
 
 Nếu dữ liệu tăng gấp 100 lần so với giả định (assumption / 가정) ban đầu, lỗi (error / 오류) guarantee có thể không còn phù hợp.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **22. Testing** tiếp nhận điểm tựa từ **21. Monitoring chính sketch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Benchmark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Testing
 
@@ -418,8 +376,6 @@ duplicate/retry
 window boundary
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **23. Benchmark** tiếp nhận điểm tựa từ **22. Testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Kiến trúc khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## 23. Benchmark
 
 Đo đồng thời:
@@ -435,8 +391,6 @@ p95/p99 processing latency
 ```
 
 Không nên chỉ đo CPU thông lượng (throughput / 처리량) mà bỏ qua trạng thái (state / 상태) growth và khôi phục (recovery / 복구) chi phí (cost / 비용).
-
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **24. Kiến trúc khái niệm** tiếp nhận điểm tựa từ **23. Benchmark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 24. Kiến trúc khái niệm
 
@@ -460,8 +414,6 @@ Merge / Reduce
    ↓
 Top-K / Alert / Dashboard
 ```
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) Study: Streaming Analytics với dữ liệu lớn**, **Mô hình tư duy** gom các mảnh từ **24. Kiến trúc khái niệm** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Mô hình tư duy
 

@@ -498,7 +498,7 @@ LLM uncertainty is not only sampling randomness; it can reflect missing knowledg
 
 LLM next-token probabilities are conditional chuỗi (sequence / 시퀀스) probabilities, not directly “truth probabilities”.
 
-A đơn vị từ (token / 토큰) can have high xác suất (probability / 확률) because it is linguistically likely despite claim being false.
+A token (토큰) can have high xác suất (probability / 확률) because it is linguistically likely despite claim being false.
 
 Therefore:
 

@@ -12,8 +12,6 @@ Recursion tính đúng đắn (correctness / 정확성) thường dùng inductio
 
 Thời gian chạy (runtime / 런타임) thường dùng ngăn xếp lời gọi (call stack / 호출 스택), nên recursion độ sâu (depth / 깊이) lớn có thể ngăn xếp (stack / 스택) overflow nếu ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) không có tail-call tối ưu hóa (optimization / 최적화) hoặc thuật toán (algorithm / 알고리즘) không cân bằng.
 
-> **Chuyển mạch:** Trong **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Divide-and-conquer** tiếp nhận điểm tựa từ **Recursion: định nghĩa bài toán (problem / 문제) bằng phiên bản nhỏ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy: cục bộ (local / 로컬) choice cần proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Divide-and-conquer
 
 Mẫu (pattern / 패턴):
@@ -28,8 +26,6 @@ Merge sort chia hai halves và merge. tìm kiếm nhị phân (binary search / �
 
 Lợi ích đến khi subproblems nhỏ đáng kể và combine không quá đắt. Recurrence mô tả total chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Greedy: cục bộ (local / 로컬) choice cần proof** tiếp nhận điểm tựa từ **Divide-and-conquer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backtracking: tìm kiếm (search / 검색) có quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Greedy: cục bộ (local / 로컬) choice cần proof
 
 Greedy thuật toán (algorithm / 알고리즘) chọn option tốt nhất hiện tại rồi không quay lại. Nó nhanh/simpler nhưng chỉ đúng khi bài toán (problem / 문제) có cấu trúc (structure / 구조) như greedy-choice thuộc tính (property / 속성) và optimal substructure.
@@ -38,15 +34,11 @@ Ví dụ interval scheduling tối đa số non-overlapping intervals: chọn in
 
 Counterexample là công cụ quan trọng để phá greedy intuition.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Backtracking: tìm kiếm (search / 검색) có quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **Greedy: cục bộ (local / 로컬) choice cần proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) Programming: trạng thái (state / 상태) là bản tóm tắt quá khứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Backtracking: tìm kiếm (search / 검색) có quay lui (rollback / 롤백)
 
 Backtracking xây partial solution, nếu vi phạm ràng buộc (constraint / 제약조건) thì undo và thử choice khác. Sudoku, N-Queens và ràng buộc (constraint / 제약조건) problems dùng mẫu (pattern / 패턴) này.
 
 Worst-case có thể exponential, nhưng pruning tốt giảm tìm kiếm (search / 검색) thực tế. Branch-and-bound thêm bound để loại branches không thể beat hiện tại (current / 현재) best.
-
-> **Chuyển mạch:** Trong **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Động (dynamic / 동적) Programming: trạng thái (state / 상태) là bản tóm tắt quá khứ** tiếp nhận điểm tựa từ **Backtracking: tìm kiếm (search / 검색) có quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ recurrence sang DP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Động (dynamic / 동적) Programming: trạng thái (state / 상태) là bản tóm tắt quá khứ
 
@@ -55,8 +47,6 @@ DP dùng khi subproblems overlap và optimal solution có thể xây từ soluti
 Ví dụ shortest đường dẫn (path / 경로) trong DAG có trạng thái (state / 상태) `dp[v] = shortest distance to v`. Knapsack có trạng thái (state / 상태) theo items considered và sức chứa (capacity / 용량). Edit distance trạng thái (state / 상태) `dp[i][j]` mô tả prefix lengths của hai strings.
 
 Top-down memoization giữ recursive cấu trúc (structure / 구조) và bộ nhớ đệm (cache / 캐시) results. Bottom-up tabulation xác định phụ thuộc (dependency / 의존성) thứ tự (order / 순서) rồi fill bảng (table / 테이블).
-
-> **Chuyển mạch:** Ở chặng này của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Từ recurrence sang DP** tiếp nhận điểm tựa từ **Động (dynamic / 동적) Programming: trạng thái (state / 상태) là bản tóm tắt quá khứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không gian (space / 공간) tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Từ recurrence sang DP
 
@@ -68,27 +58,19 @@ F(n)=F(n-1)+F(n-2)
 
 recomputes same subproblems exponentially. Memoization bảo đảm mỗi `F(k)` tính một lần, thành O(n). Nhưng Fibonacci chỉ minh họa overlap; DP thật sự đáng học ở trạng thái (state / 상태) thiết kế (design / 설계) và chuyển tiếp (transition / 전이) proof.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Không gian (space / 공간) tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **Từ recurrence sang DP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Greedy, DP hay đồ thị (graph / 그래프)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Không gian (space / 공간) tối ưu hóa (optimization / 최적화)
 
 Nếu `dp[i]` chỉ phụ thuộc vài previous rows/states, ta không cần giữ toàn bảng (table / 테이블). Edit-distance row có thể compress từ O(mn) không gian (space / 공간) xuống O(min(m,n)) nếu chỉ cần distance, nhưng nếu cần reconstruct alignment phải giữ thêm thông tin (information / 정보) hoặc recompute.
 
 Đây là time-space-output-requirement sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Trong **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Greedy, DP hay đồ thị (graph / 그래프)?** tiếp nhận điểm tựa từ **Không gian (space / 공간) tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Greedy, DP hay đồ thị (graph / 그래프)?
 
 Nhiều DP problems có thể nhìn như shortest đường dẫn (path / 경로) trên implicit DAG: trạng thái (state / 상태) là nodes, transitions là edges, chi phí (cost / 비용) là weight. Greedy Dijkstra đúng khi edge weights non-negative; general DP trên DAG dùng topological thứ tự (order / 순서). Nhìn cùng bài toán (problem / 문제) qua đồ thị (graph / 그래프) giúp thấy liên kết (connection / 연결) giữa paradigms.
 
-> **Chuyển mạch:** Ở chặng này của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Greedy, DP hay đồ thị (graph / 그래프)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > chiến lược (strategy / 전략) được chọn theo **cấu trúc (structure / 구조) của phụ thuộc (dependency / 의존성)/tìm kiếm (search / 검색) không gian (space / 공간)**: recursive self-similarity; independent subproblems → divide-and-conquer; provably safe cục bộ (local / 로컬) commitment → greedy; exhaustive choices với pruning → backtracking; repeated states → động (dynamic / 동적) programming.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -97,8 +79,6 @@ Nhiều DP problems có thể nhìn như shortest đường dẫn (path / 경로
 **“Greedy là chọn cái lớn nhất/nhỏ nhất.”** Greedy là irrevocable cục bộ (local / 로컬) quyết định (decision / 결정) theo criterion; tính đúng đắn (correctness / 정확성) phụ thuộc proof, không phụ thuộc vẻ hợp lý.
 
 **“Memoization luôn cải thiện.”** Nó đổi compute lấy bộ nhớ (memory / 메모리); nếu subproblems hầu như không overlap hoặc bộ nhớ đệm (cache / 캐시) keys lớn, overhead có thể không đáng.
-
-> **Chuyển mạch:** Trong **Recursion, divide-and-conquer, greedy, backtracking và động (dynamic / 동적) programming**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Kết nối
 

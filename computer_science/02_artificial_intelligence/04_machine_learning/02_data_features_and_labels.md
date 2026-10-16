@@ -320,7 +320,7 @@ Traditional:
 
 Hiện đại (modern / 현대적):
 
-- đơn vị từ (token / 토큰) IDs;
+- token (토큰) IDs;
 - learned embeddings;
 - contextual transformer representations.
 

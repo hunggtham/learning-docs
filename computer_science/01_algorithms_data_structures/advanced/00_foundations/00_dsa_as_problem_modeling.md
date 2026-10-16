@@ -27,8 +27,6 @@ Có nhiều truy vấn hơn cập nhật, hay ngược lại?
 
 Đây là **mô hình tải công việc (workload model)**. Cấu trúc dữ liệu chỉ có ý nghĩa khi đặt trong một tải công việc (workload / 워크로드) cụ thể.
 
-> **Nối mạch:** **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** nối từ **Bắt đầu từ câu hỏi cần trả lời** sang **Kiểu dữ liệu trừu tượng trước cách triển khai**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy
 
 Một yêu cầu nghiệp vụ nên được phân rã thành các thao tác cụ thể. Ví dụ hệ thống chat có thể cần:
@@ -51,8 +49,6 @@ E[C] = \sum_i p_i C_i
 
 trong đó `p_i` là tần suất tương đối của thao tác `i`, còn `C_i` là chi phí của nó. Không phải lúc nào cũng cần tính chính xác công thức này; giá trị của nó nằm ở việc buộc ta suy nghĩ theo tỷ lệ sử dụng thay vì theo tên cấu trúc dữ liệu.
 
-> **Nối mạch:** **Từ yêu cầu nghiệp vụ sang các thao tác nguyên thủy** đặt vấn đề; **Kiểu dữ liệu trừu tượng trước cách triển khai** kiểm tra bằng chứng, rồi **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** mở rộng hệ quả.
-
 ## Kiểu dữ liệu trừu tượng trước cách triển khai
 
 **Kiểu dữ liệu trừu tượng (Abstract Data Type – ADT / 추상 자료형)** mô tả ngữ nghĩa và hợp đồng thao tác, chưa quyết định biểu diễn vật lý.
@@ -68,8 +64,6 @@ Cấu trúc sẽ làm điều đó bằng cách nào?
 
 Hai hiện thực (implementation / 구현) có thể cùng ngữ nghĩa nhưng rất khác về locality, cấp phát, bộ nhớ, mất hiệu lực của iterator và chi phí theo từng thao tác.
 
-> **Nối mạch:** **Kiểu dữ liệu trừu tượng trước cách triển khai** đặt vấn đề; **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** kiểm tra bằng chứng, rồi **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)** mở rộng hệ quả.
-
 ## Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”
 
 Mỗi cấu trúc dữ liệu trả một chi phí nào đó để giữ sẵn một loại thông tin, nhờ đó một số truy vấn trở nên rẻ hơn.
@@ -77,8 +71,6 @@ Mỗi cấu trúc dữ liệu trả một chi phí nào đó để giữ sẵn m
 Mảng đã sắp xếp giữ toàn bộ thứ tự nên tìm kiếm nhị phân nhanh, nhưng chèn giữa đắt. bảng băm (hash table / 해시 테이블) không giữ thứ tự nhưng giữ ánh xạ từ băm (hash / 해시) tới vị trí tìm kiếm. vùng nhớ động (heap / 힙) chỉ giữ đủ quan hệ thứ tự để phần tử cực trị ở gốc. Segment cây (tree / 트리) lưu sẵn kết quả tổng hợp của nhiều khoảng chuẩn. Trie lưu cấu trúc tiền tố để tránh so sánh lại phần tiền tố chung.
 
 Có thể xem cấu trúc dữ liệu như một dạng **thông tin được vật chất hóa trước (materialized information)**. Ta bỏ công cập nhật và bộ nhớ để tránh tính lại từ đầu trong tương lai.
-
-> **Nối mạch:** **Cách biểu diễn chính là quyết định “thông tin nào được lưu sẵn”** đặt đầu vào cho **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)**, rồi **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?** mở rộng hệ quả.
 
 ## Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)
 
@@ -100,8 +92,6 @@ Ví dụ nhị phân (binary / 이진) vùng nhớ động (heap / 힙) dùng m�
 
 Nếu yêu cầu vùng nhớ động (heap / 힙) phải trả lời mọi truy vấn mà Balanced BST hỗ trợ, vấn đề không nằm ở mã (code / 코드) vùng nhớ động (heap / 힙) “chưa đủ tốt”; vấn đề là ta đang dùng sai lớp trừu tượng (abstraction / 추상화).
 
-> **Nối mạch:** **Chuỗi suy luận từ biểu diễn (representation / 표현) tới độ phức tạp (complexity / 복잡도)** đặt đầu vào cho **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?**, rồi **Quan hệ tương đương giữa các lịch sử** mở rộng hệ quả.
-
 ## Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?
 
 Một trạng thái đúng phải chứa đủ thông tin để mọi quyết định tương lai được xác định.
@@ -118,8 +108,6 @@ Ngược lại, nếu hai lịch sử khác nhau dẫn tới cùng tập hành �
 
 > Trạng thái không phải là “lịch sử đầy đủ”; trạng thái là lượng thông tin tối thiểu từ lịch sử còn ảnh hưởng tới tương lai.
 
-> **Nối mạch:** **Quan hệ tương đương giữa các lịch sử** nối từ **Mô hình trạng thái: thông tin nào thực sự quyết định tương lai?** sang **Đồ thị thực thể và đồ thị trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quan hệ tương đương giữa các lịch sử
 
 Có thể formalize trực giác trên bằng cách coi hai lịch sử `h1` và `h2` là tương đương nếu:
@@ -135,8 +123,6 @@ Khi đó ta không cần lưu toàn bộ lịch sử; chỉ cần lưu lớp tư
 Ví dụ trong bài đường đi có tối đa `K` lần phá tường, trạng thái cần số lần phá đã dùng. Trong bài mà chỉ tổng parity của số bước quan trọng, toàn bộ số bước có thể được nén về một bit chẵn/lẻ.
 
 **Nén trạng thái (state compression)** không phải mẹo bitmask đơn thuần; nó là kết quả của việc nhận ra phần nào của lịch sử không còn ảnh hưởng tới tương lai.
-
-> **Nối mạch:** **Đồ thị thực thể và đồ thị trạng thái** nối từ **Quan hệ tương đương giữa các lịch sử** sang **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồ thị thực thể và đồ thị trạng thái
 
@@ -164,8 +150,6 @@ Nếu còn phụ thuộc loại vé:
 
 Đây là **đồ thị không gian trạng thái (state-space graph)**. Một thuật toán shortest đường dẫn (path / 경로) hoàn hảo trên mô hình trạng thái sai vẫn trả kết quả sai cho bài toán thật.
 
-> **Nối mạch:** **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái** nối từ **Đồ thị thực thể và đồ thị trạng thái** sang **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái
 
 Nhiều bài có thể được xem là tích của hai hoặc nhiều không gian trạng thái.
@@ -181,8 +165,6 @@ Một ô `(r,c)` không phải một trạng thái duy nhất; `(r,c,north)` và
 Tư duy **đồ thị tích (product graph)** giúp giải thích vì sao việc “thêm một dimension vào trạng thái (state / 상태)” thường làm số trạng thái tăng theo tích kích thước của các chiều.
 
 Nếu grid có `R*C` ô và `M` trạng thái phụ, tổng trạng thái có thể là `O(R*C*M)`. Điều này phải được tính trước khi chọn BFS/DP.
-
-> **Nối mạch:** **Sản phẩm (product / 제품) đồ thị (graph / 그래프): ghép nhiều chiều trạng thái** đặt vấn đề; **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán** kiểm tra bằng chứng, rồi **Trước tiên phải xác định mục tiêu (objective / 목표)** mở rộng hệ quả.
 
 ## Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán
 
@@ -202,8 +184,6 @@ negative cycle đạt tới    -> có thể không tồn tại minimum hữu h�
 Subset bài toán (problem / 문제) với `n = 20` có thể duyệt `2^n`; với `n ≈ 40–50` có thể nghĩ tới meet-in-the-middle; với `n = 200000` thì exponential tìm kiếm (search / 검색) thường không còn khả thi và phải khai thác thêm cấu trúc.
 
 Các ràng buộc (constraints / 제약조건들) không phải phần phụ cuối đề bài; chúng là một phần của định nghĩa bài toán.
-
-> **Nối mạch:** **Ràng buộc là dữ liệu đầu vào cho việc chọn thuật toán** đặt vấn đề; **Trước tiên phải xác định mục tiêu (objective / 목표)** kiểm tra bằng chứng, rồi **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
 
 ## Trước tiên phải xác định mục tiêu (objective / 목표)
 
@@ -226,8 +206,6 @@ Hai bài có cùng trạng thái và chuyển tiếp (transition / 전이) nhưn
 
 Ví dụ “có đường đi hay không” có thể dùng BFS/DFS đơn giản; “đường đi ngắn nhất” cần thêm chỉ số (metric / 지표); “đường đi ngắn nhất rồi nhỏ nhất từ điển” còn cần tie-breaking và thứ tự duyệt phù hợp.
 
-> **Nối mạch:** **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** nối từ **Trước tiên phải xác định mục tiêu (objective / 목표)** sang **Bài toán tĩnh, động, trực tuyến và ngoại tuyến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tách feasibility khỏi tối ưu hóa (optimization / 최적화)
 
 Một kỹ thuật mô hình hóa quan trọng là tách:
@@ -247,8 +225,6 @@ Khi `feasible(x)` chuyển từ false sang true theo một chiều, bài tối �
 
 Điều này cho thấy thuật toán tìm kiếm không nhất thiết tìm trực tiếp đáp án; đôi khi ta mô hình hóa bài tối ưu thành một quyết định Boolean dễ hơn.
 
-> **Nối mạch:** **Bài toán tĩnh, động, trực tuyến và ngoại tuyến** nối từ **Tách feasibility khỏi tối ưu hóa (optimization / 최적화)** sang **Chính xác (exact / 정확한), approximate và probabilistic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bài toán tĩnh, động, trực tuyến và ngoại tuyến
 
 Bốn thuộc tính này thay đổi hoàn toàn không gian lựa chọn.
@@ -262,8 +238,6 @@ Bốn thuộc tính này thay đổi hoàn toàn không gian lựa chọn.
 **Ngoại tuyến (offline)**: có toàn bộ truy vấn trước và có thể đổi thứ tự xử lý. Khi đó có thể dùng Mo’s thuật toán (algorithm / 알고리즘), sort queries, DSU offline hoặc nhiều kỹ thuật sweep.
 
 Cùng một bộ truy vấn, quyền biết trước tương lai có thể làm bài toán dễ hơn đáng kể.
-
-> **Nối mạch:** **Chính xác (exact / 정확한), approximate và probabilistic** nối từ **Bài toán tĩnh, động, trực tuyến và ngoại tuyến** sang **Deterministic guarantee và expected guarantee**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chính xác (exact / 정확한), approximate và probabilistic
 
@@ -282,15 +256,11 @@ Sai có ảnh hưởng tính an toàn hay tiền bạc không?
 
 Một Bloom Filter có thể hợp cho “có lẽ đã thấy URL này”, nhưng không phù hợp nếu false positive có thể từ chối quyền truy cập hợp lệ hoặc làm sai số dư tài chính.
 
-> **Nối mạch:** **Deterministic guarantee và expected guarantee** nối từ **Chính xác (exact / 정확한), approximate và probabilistic** sang **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Deterministic guarantee và expected guarantee
 
 Balanced BST có chiều cao worst-case `O(log n)`. Skip danh sách (list / 목록) có hiệu năng kỳ vọng `O(log n)` dưới mô hình ngẫu nhiên phù hợp. bảng băm (hash table / 해시 테이블) thường có tra cứu kỳ vọng gần `O(1)` nhưng có thể suy giảm trong trường hợp xấu.
 
 Không có loại guarantee “luôn tốt hơn” độc lập bối cảnh. Với hệ thống độ trễ (latency / 지연 시간) cực nhạy hoặc đối mặt đầu vào (input / 입력) đối kháng, worst-case bound có thể quan trọng. Với tải công việc (workload / 워크로드) bình thường, expected hiệu năng (performance / 성능) có thể cho hiện thực (implementation / 구현) đơn giản và nhanh hơn.
-
-> **Nối mạch:** **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng** nối từ **Deterministic guarantee và expected guarantee** sang **Tiền xử lý là đổi chi phí theo thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng
 
@@ -309,8 +279,6 @@ adversarial-case khi input cố tình phá assumption
 
 Hai thuật toán có cùng Big-O trung bình nhưng hành vi khác hẳn dưới dữ liệu có cấu trúc hoặc đầu vào (input / 입력) độc hại.
 
-> **Nối mạch:** **Tiền xử lý là đổi chi phí theo thời gian** nối từ **Đầu vào (input / 입력) ngẫu nhiên, đầu vào (input / 입력) trung bình và đầu vào (input / 입력) đối kháng** sang **Output-sensitive algorithms**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tiền xử lý là đổi chi phí theo thời gian
 
 Giả sử có `Q` truy vấn. Tổng chi phí có thể được mô hình hóa:
@@ -322,8 +290,6 @@ C_{total} = C_{bản dựng (build / 빌드)} + Q\cdot C_{truy vấn (query / �
 Nếu `Q` rất lớn, tiền xử lý đắt có thể đáng giá. Nếu chỉ một truy vấn, quét tuyến tính có thể tốt hơn xây một chỉ mục phức tạp.
 
 Đây là nguyên lý đứng sau cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스), Prefix Sum, Sparse bảng (table / 테이블), Suffix Array và nhiều cấu trúc tìm kiếm.
-
-> **Nối mạch:** **Output-sensitive algorithms** nối từ **Tiền xử lý là đổi chi phí theo thời gian** sang **Lower bound: có việc không thể tránh khỏi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Output-sensitive algorithms
 
@@ -341,8 +307,6 @@ Nếu kết quả chứa một triệu phần tử thì không thuật toán nà
 
 Tư duy **output-sensitive** giúp tránh yêu cầu phi thực tế kiểu “trả tất cả kết quả trong O(log n)”.
 
-> **Nối mạch:** **Lower bound: có việc không thể tránh khỏi** nối từ **Output-sensitive algorithms** sang **Reduction: biến bài toán lạ thành bài toán đã hiểu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lower bound: có việc không thể tránh khỏi
 
 Trước khi cố tối ưu, nên hỏi liệu tồn tại cận dưới tự nhiên nào không.
@@ -356,8 +320,6 @@ implementation chưa tốt
 vs
 mô hình bài toán tự nó đòi lượng công việc đó
 ```
-
-> **Nối mạch:** **Reduction: biến bài toán lạ thành bài toán đã hiểu** nối từ **Lower bound: có việc không thể tránh khỏi** sang **Từ miền bài toán sang miền khóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reduction: biến bài toán lạ thành bài toán đã hiểu
 
@@ -377,8 +339,6 @@ Reduction giúp tái sử dụng cấu trúc dữ liệu và chứng minh đã b
 
 Điểm quan trọng là phải chứng minh ánh xạ (mapping / 매핑) bảo toàn ngữ nghĩa. Nếu quá trình biến đổi làm mất một ràng buộc, thuật toán mới có thể giải một bài khác với bài gốc.
 
-> **Nối mạch:** **Từ miền bài toán sang miền khóa** nối từ **Reduction: biến bài toán lạ thành bài toán đã hiểu** sang **Mô hình dữ liệu thưa và dày đặc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ miền bài toán sang miền khóa
 
 Nhiều lựa chọn cấu trúc phụ thuộc trực tiếp miền khóa.
@@ -387,8 +347,6 @@ Nếu khóa là số nguyên dày đặc `0..n-1`, một mảng có thể thay H
 
 Câu hỏi “khóa trông như thế nào?” thường quan trọng ngang “có bao nhiêu phần tử?”.
 
-> **Nối mạch:** **Từ miền bài toán sang miền khóa** đặt vấn đề; **Mô hình dữ liệu thưa và dày đặc** kiểm tra bằng chứng, rồi **Dominance: loại trạng thái chắc chắn không còn hữu ích** mở rộng hệ quả.
-
 ## Mô hình dữ liệu thưa và dày đặc
 
 Một ma trận `n x n` có thể lưu trực tiếp nếu phần lớn ô có dữ liệu. Nhưng nếu chỉ có `m << n²` cạnh, adjacency danh sách (list / 목록) hoặc CSR tiết kiệm hơn adjacency ma trận (matrix / 행렬).
@@ -396,8 +354,6 @@ Một ma trận `n x n` có thể lưu trực tiếp nếu phần lớn ô có d
 Tương tự, DP có thể dùng array nếu trạng thái (state / 상태) không gian (space / 공간) dày đặc và có chỉ số tự nhiên; dùng HashMap nếu phần lớn trạng thái lý thuyết không bao giờ xuất hiện.
 
 **Mật độ trạng thái (state density)** là một tín hiệu để chọn biểu diễn (representation / 표현).
-
-> **Nối mạch:** **Mô hình dữ liệu thưa và dày đặc** đặt vấn đề; **Dominance: loại trạng thái chắc chắn không còn hữu ích** kiểm tra bằng chứng, rồi **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** mở rộng hệ quả.
 
 ## Dominance: loại trạng thái chắc chắn không còn hữu ích
 
@@ -413,8 +369,6 @@ B: cost = 12, fuel = 3
 Nếu càng ít chi phí (cost / 비용) và càng nhiều fuel luôn tốt hơn, `B` không thể dẫn tới lời giải tốt hơn `A`. Ta có thể bỏ `B`.
 
 Dominance pruning là một dạng nén trạng thái dựa trên quan hệ thứ tự từng phần. Nó xuất hiện trong DP, shortest đường dẫn (path / 경로) nhiều tiêu chí, branch-and-bound và tìm kiếm (search / 검색) trên Pareto frontier.
-
-> **Nối mạch:** **Dominance: loại trạng thái chắc chắn không còn hữu ích** đặt vấn đề; **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** kiểm tra bằng chứng, rồi **Big-O chỉ là một mô hình chi phí** mở rộng hệ quả.
 
 ## Cấu trúc dữ liệu ghép và bất biến liên cấu trúc
 
@@ -435,8 +389,6 @@ size(map) == size(list)
 
 Nhiều bug môi trường vận hành (production / 운영 환경) không phá bất biến của một cấu trúc đơn lẻ mà phá quan hệ giữa hai cấu trúc.
 
-> **Nối mạch:** **Cấu trúc dữ liệu ghép và bất biến liên cấu trúc** đặt vấn đề; **Big-O chỉ là một mô hình chi phí** kiểm tra bằng chứng, rồi **Bộ nhớ cũng cần mô hình thật** mở rộng hệ quả.
-
 ## Big-O chỉ là một mô hình chi phí
 
 Hai thuật toán cùng `O(n)` có thể khác đáng kể do bộ nhớ đệm (cache / 캐시), cấp phát, branch prediction, GC hoặc I/O.
@@ -450,8 +402,6 @@ mô hình máy thật: dữ liệu được di chuyển và cấp phát ra sao
 
 Trong cơ sở dữ liệu (database / 데이터베이스), page I/O có thể quan trọng hơn số phép so sánh. Trong hệ thống phân tán, một mạng (network / 네트워크) round-trip có thể đắt hơn hàng nghìn phép toán CPU. Trong Java, object-heavy biểu diễn (representation / 표현) có thể làm GC và bộ nhớ đệm (cache / 캐시) trở thành chi phí chính.
 
-> **Nối mạch:** **Bộ nhớ cũng cần mô hình thật** nối từ **Big-O chỉ là một mô hình chi phí** sang **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ nhớ cũng cần mô hình thật
 
 Hai cấu trúc cùng `O(n)` không gian (space / 공간) không nhất thiết tiêu tốn bộ nhớ gần nhau.
@@ -460,8 +410,6 @@ Mảng thành phần nguyên thủy (primitive / 기본 요소) khá gọn. Link
 
 Dung lượng bộ nhớ còn ảnh hưởng tốc độ qua bộ nhớ đệm (cache / 캐시) và paging, vì vậy không gian (space / 공간) độ phức tạp (complexity / 복잡도) không tách rời thời gian (time / 시간) hiệu năng (performance / 성능) trên máy thật.
 
-> **Nối mạch:** **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)** nối từ **Bộ nhớ cũng cần mô hình thật** sang **Một quy trình mô hình hóa có thể tái sử dụng**, vì owner và lifetime quyết định cách mô hình hóa tiếp theo.
-
 ## Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)
 
 Trong C, biểu diễn (representation / 표현) còn phải mô hình hóa ai sở hữu bộ nhớ, ai giải phóng và con trỏ nào chỉ được mượn. Trong Java, `equals/hashCode`, định danh (identity / 식별자) và GC reachability ảnh hưởng ngữ nghĩa (semantics / 의미론). Trong JavaScript, đối tượng (object / 객체) định danh (identity / 식별자), `Map`, `Number` và engine biểu diễn (representation / 표현) tạo thêm ràng buộc.
@@ -469,8 +417,6 @@ Trong C, biểu diễn (representation / 표현) còn phải mô hình hóa ai s
 Tính đồng thời (concurrency / 동시성) bổ sung một chiều khác: cấu trúc đúng trong single-thread chưa chắc đúng khi nhiều luồng cập nhật. Khi đó cần thêm mô hình atomicity, synchronization và visibility. Lock-free cấu trúc (structure / 구조) còn cần lập luận (reasoning / 추론) về ABA, bộ nhớ (memory / 메모리) thứ tự (ordering / 순서) và reclamation.
 
 Nói cách khác, “cùng một ADT” không có nghĩa cùng một hiện thực (implementation / 구현) phù hợp cho mọi thời gian chạy (runtime / 런타임) và mô hình đồng thời.
-
-> **Nối mạch:** **Mutability, quyền sở hữu (ownership / 소유권) và tính đồng thời (concurrency / 동시성)** đặt đầu vào cho **Một quy trình mô hình hóa có thể tái sử dụng**, rồi **Những sai lầm tư duy phổ biến** mở rộng hệ quả.
 
 ## Một quy trình mô hình hóa có thể tái sử dụng
 
@@ -493,8 +439,6 @@ Khi gặp bài toán mới, có thể đi theo thứ tự sau:
 
 Đây là quy trình tổng quát hơn việc học thuộc “mẫu A dùng HashMap, mẫu B dùng vùng nhớ động (heap / 힙)”.
 
-> **Nối mạch:** **Một quy trình mô hình hóa có thể tái sử dụng** đặt đầu vào cho **Những sai lầm tư duy phổ biến**, rồi **Mô hình tư duy** mở rộng hệ quả.
-
 ## Những sai lầm tư duy phổ biến
 
 “Cấu trúc có Big-O tốt hơn thì luôn tốt hơn” — sai vì tải công việc (workload / 워크로드), locality, bộ nhớ và hệ số hằng khác nhau.
@@ -508,8 +452,6 @@ Khi gặp bài toán mới, có thể đi theo thứ tự sau:
 “Nếu trạng thái (state / 상태) chứa càng nhiều thông tin thì càng an toàn” — sai; trạng thái (state / 상태) dư thừa có thể làm không gian tìm kiếm tăng theo tích nhiều chiều và biến bài khả thi thành không khả thi.
 
 “Preprocessing luôn tốt” — sai; nó chỉ đáng khi số truy vấn hoặc yêu cầu độ trễ (latency / 지연 시간) biện minh cho chi phí bản dựng (build / 빌드) và bộ nhớ (memory / 메모리).
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Những sai lầm tư duy phổ biến**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

@@ -10,15 +10,11 @@ Một principle mạnh là hiện vật bản dựng (build artifact / 빌드 �
 
 Environment-specific hành vi (behavior / 동작) nên đến từ cấu hình (configuration / 구성) hoặc injected secrets, không phải nguồn (source / 소스) branch divergent.
 
-> **Nối mạch:** **Cấu hình (configuration / 구성)** nối từ **Bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)** sang **Tính năng (feature / 기능) flags**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu hình (configuration / 구성)
 
 Cấu hình (configuration / 구성) là dữ liệu (data / 데이터) thay đổi triển khai (deployment / 배포)/hành vi thời gian chạy (runtime behavior / 런타임 동작) mà không đổi mã (code / 코드). Nhưng cấu hình (config / 설정) cũng cần lược đồ (schema / 스키마), kiểm tra hợp lệ (validation / 검증), versioning và quyền sở hữu (ownership / 소유권).
 
 Một typo cấu hình (config / 설정) có thể outage như mã (code / 코드) bug. cấu hình (config / 설정) changes nên kiểm tra (audit / 감사)/kiểm thử (test / 테스트)/quay lui (rollback / 롤백) được.
-
-> **Nối mạch:** **Tính năng (feature / 기능) flags** nối từ **Cấu hình (configuration / 구성)** sang **CI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính năng (feature / 기능) flags
 
@@ -26,15 +22,11 @@ Cờ tính năng (feature flag / 기능 플래그) tách deploy mã (code / 코�
 
 Nhưng flags tạo combinatorial states và technical debt. Mỗi flag nên có đơn vị sở hữu (owner / 오너)/expiry plan; permanent zombie flags làm mã (code / 코드) khó lập luận (reasoning / 추론).
 
-> **Nối mạch:** **CI** nối từ **Tính năng (feature / 기능) flags** sang **CD**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## CI
 
 Continuous tích hợp (integration / 통합) nghĩa developers integrate frequent changes và automated chuỗi xử lý (pipeline / 파이프라인) bản dựng (build / 빌드)/kiểm thử (test / 테스트) chúng. CI goal là detect incompatibility sớm, không chỉ “có Jenkins/GitHub Actions”.
 
 Chuỗi xử lý (pipeline / 파이프라인) phản hồi (feedback / 피드백) càng chậm thì batch kích thước (size / 크기) changes càng lớn và fix chi phí (cost / 비용) tăng.
-
-> **Nối mạch:** **CD** nối từ **CI** sang **Triển khai (deployment / 배포) strategies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CD
 
@@ -42,15 +34,11 @@ Continuous Delivery giữ hệ thống (system / 시스템) luôn ở trạng th
 
 Hai terms thường bị dùng lẫn; distinction nằm ở automatic môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스).
 
-> **Nối mạch:** **Triển khai (deployment / 배포) strategies** nối từ **CD** sang **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Triển khai (deployment / 배포) strategies
 
 Rolling cập nhật (update / 업데이트) thay instances dần. Blue-green giữ hai environments và switch traffic. Canary gửi small traffic tới phiên bản (version / 버전) mới rồi tăng dần.
 
 Chiến lược (strategy / 전략) chọn theo quay lui (rollback / 롤백) speed, sức chứa (capacity / 용량) chi phí (cost / 비용), trạng thái (state / 상태)/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và khả năng quan sát (observability / 관측 가능성).
-
-> **Nối mạch:** **Triển khai (deployment / 배포) strategies** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** kiểm tra bằng chứng, rồi **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** mở rộng hệ quả.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)
 
@@ -58,15 +46,11 @@ App deploy quay lui (rollback / 롤백) không đơn giản nếu lược đồ 
 
 Backward/forward tính tương thích (compatibility / 호환성) là yêu cầu (requirement / 요구사항) xuyên nhiều deploy versions.
 
-> **Nối mạch:** **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** đặt vấn đề; **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** kiểm tra bằng chứng, rồi **Runbook và operational readiness** mở rộng hệ quả.
-
 ## Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)
 
 IaC phiên bản (version / 버전) hóa hạ tầng (infrastructure / 인프라) definitions giúp rà soát (review / 검토)/reproducibility. Nhưng trạng thái (state / 상태) drift, provider hành vi (behavior / 동작) và secrets vẫn cần quản lý.
 
 Declarative cấu hình (config / 설정) mô tả desired trạng thái (state / 상태); controller/công cụ (tool / 도구) reconcile actual trạng thái (state / 상태) với desired trạng thái (state / 상태).
-
-> **Nối mạch:** **Runbook và operational readiness** nối từ **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** sang **Quay lui (rollback / 롤백) và roll-forward**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Runbook và operational readiness
 
@@ -74,15 +58,11 @@ Một dịch vụ (service / 서비스) môi trường vận hành (production /
 
 “Deploy thành công” không phải endpoint; operability là chất lượng (quality / 품질) attribute.
 
-> **Nối mạch:** **Quay lui (rollback / 롤백) và roll-forward** nối từ **Runbook và operational readiness** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quay lui (rollback / 롤백) và roll-forward
 
 Quay lui (rollback / 롤백) nhanh hữu ích nhưng không luôn possible sau irreversible dữ liệu (data / 데이터) changes. Roll-forward bằng hotfix đôi khi safer.
 
 Bản phát hành (release / 릴리스) thiết kế (design / 설계) nên biết trước khôi phục (recovery / 복구) đường dẫn (path / 경로) thay vì nghĩ sau sự cố (incident / 인시던트).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Quay lui (rollback / 롤백) và roll-forward** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,13 +72,9 @@ Bản phát hành (release / 릴리스) thiết kế (design / 설계) nên bi�
 
 **“ảnh bộ chứa (container image / 컨테이너 이미지) giống nhau thì environments giống nhau.”** Kernel, mạng (network / 네트워크), secrets, dữ liệu (data / 데이터) và bên ngoài (external / 외부) dependencies vẫn khác.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Delivery là chuyển tiếp trạng thái (state transition / 상태 전이) của socio-technical hệ thống (system / 시스템). Mỗi bản phát hành (release / 릴리스) phải bảo toàn tính tương thích (compatibility / 호환성)/invariants khi old và new versions có thể cùng tồn tại.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -30,8 +30,6 @@ HA+OH^-\rightarrow A^-+H_2O
 
 Thay vì để toàn bộ `H+` hoặc `OH-` mới thêm tồn tại tự do, hệ chuyển chúng thành dạng acid hoặc cơ sở (base / 기반) yếu hơn. Kết quả là pH chỉ thay đổi theo sự thay đổi tỉ lệ `A-/HA`.
 
-> **Nối mạch:** Cơ chế đệm biến acid hoặc base mạnh thành dạng liên hợp yếu hơn, nên pH phụ thuộc vào tỉ lệ (A^-/HA). **Phương trình Henderson–Hasselbalch** viết chính xác tỉ lệ đó thành công cụ tính; mục kế tiếp diễn giải khi nào phép xấp xỉ này hữu ích.
-
 ## Suy ra phương trình Henderson–Hasselbalch
 
 Bắt đầu từ:
@@ -56,8 +54,6 @@ pH=pK_a+\log\frac{[A^-]}{[HA]}
 
 Dạng dùng nồng độ là xấp xỉ của biểu thức nhiệt động đầy đủ dùng hoạt độ.
 
-> **Nối mạch:** Từ (K_a), phương trình Henderson–Hasselbalch liên hệ pH với tỉ lệ base liên hợp/acid; khi tỉ lệ bằng 1 thì pH xấp xỉ (pK_a). **Ý nghĩa của phương trình** xác định cách đọc tỉ lệ và giới hạn trước khi chọn khoảng đệm thực hành.
-
 ## Ý nghĩa của phương trình
 
 Nếu:
@@ -76,8 +72,6 @@ Nếu tỉ lệ cơ sở (base / 기반)/acid tăng 10 lần, pH tăng khoảng 
 
 Vì sự phụ thuộc logarithm, dung dịch đệm có thể hấp thụ một lượng acid/cơ sở (base / 기반) đáng kể mà pH chỉ thay đổi vừa phải cho tới khi một thành phần gần cạn.
 
-> **Nối mạch:** Phương trình cho biết tỉ lệ (A^-/HA) điều khiển pH; **Khoảng đệm** đặt tỉ lệ đó vào vùng khoảng (pK_a\pm1), nơi cả hai dạng còn đủ để phản ứng. Nhưng khoảng pH chưa nói hệ chịu được bao nhiêu acid/base, nên cần chuyển sang **Dung lượng đệm**.
-
 ## Khoảng đệm
 
 Khoảng hoạt động hữu ích thường gần:
@@ -95,8 +89,6 @@ vì khi đó tỉ lệ:
 và cả hai kho acid/cơ sở (base / 기반) vẫn có lượng đáng kể.
 
 Đây chỉ là hướng dẫn thực hành, không phải ranh giới vật lý cứng.
-
-> **Nối mạch:** Khoảng đệm mô tả vùng pH hoạt động, còn **Dung lượng đệm** phụ thuộc lượng tuyệt đối của cả (HA) và (A^-), không chỉ tỉ lệ. Khi biết tải acid/base cần hấp thụ, **Thiết kế dung dịch đệm** sẽ chọn nồng độ và thể tích phù hợp.
 
 ## Dung lượng đệm
 
@@ -140,8 +132,6 @@ pH=pK_a
 
 vì lúc đó cả dạng acid và cơ sở (base / 기반) đều hiện diện nhiều.
 
-> **Nối mạch:** Ở chặng này của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Thiết kế dung dịch đệm** nối từ **Dung lượng đệm** sang **Chuẩn bị đệm bằng cách trộn cặp liên hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thiết kế dung dịch đệm
 
 Để chọn đệm cho pH mục tiêu, trước hết chọn acid/cơ sở (base / 기반) liên hợp có:
@@ -159,8 +149,6 @@ Sau đó dùng:
 để xác định tỉ lệ.
 
 Tổng nồng độ được chọn dựa trên dung lượng đệm cần thiết, độ tan, lực ion và các ràng buộc thực nghiệm.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Chuẩn bị đệm bằng cách trộn cặp liên hợp** nối từ **Thiết kế dung dịch đệm** sang **Thêm acid mạnh hoặc cơ sở (base / 기반) mạnh vào đệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuẩn bị đệm bằng cách trộn cặp liên hợp
 
@@ -186,8 +174,6 @@ A− tạo thành: 40%
 ```
 
 Từ đó có thể tính tỉ lệ `A-/HA`.
-
-> **Nối mạch:** Trong **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Thêm acid mạnh hoặc cơ sở (base / 기반) mạnh vào đệm** nối từ **Chuẩn bị đệm bằng cách trộn cặp liên hợp** sang **Pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thêm acid mạnh hoặc cơ sở (base / 기반) mạnh vào đệm
 
@@ -225,8 +211,6 @@ Dùng các lượng mới trong Henderson–Hasselbalch hoặc giải cân bằn
 
 Không nên đưa trực tiếp lượng `H+` vừa thêm vào công thức Henderson–Hasselbalch mà bỏ qua bước stoichiometric.
 
-> **Nối mạch:** Ở chặng này của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Pha loãng** nối từ **Thêm acid mạnh hoặc cơ sở (base / 기반) mạnh vào đệm** sang **Hoạt độ và dung dịch đệm đậm đặc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha loãng
 
 Nếu cả `HA` và `A-` cùng bị pha loãng bởi một hệ số:
@@ -244,8 +228,6 @@ Vì vậy:
 ```text
 pH gần như không đổi ≠ khả năng đệm không đổi
 ```
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Hoạt độ và dung dịch đệm đậm đặc** nối từ **Pha loãng** sang **Ảnh hưởng của nhiệt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoạt độ và dung dịch đệm đậm đặc
 
@@ -265,15 +247,11 @@ nên hệ số hoạt độ có thể làm pH thực khác dự đoán chỉ t�
 
 Điều này quan trọng trong dịch sinh học, nước biển và dung dịch đệm đậm đặc.
 
-> **Nối mạch:** Trong **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Ảnh hưởng của nhiệt độ** nối từ **Hoạt độ và dung dịch đệm đậm đặc** sang **Hệ đệm sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ảnh hưởng của nhiệt độ
 
 `K_a` và `K_w` đều phụ thuộc nhiệt độ nên pH của một dung dịch đệm có thể thay đổi khi nhiệt độ đổi dù thành phần hóa học không đổi.
 
 Trong phép đo chính xác hoặc thí nghiệm sinh hóa, cần quan tâm **hệ số nhiệt độ của đệm (temperature coefficient)**.
-
-> **Nối mạch:** Ở chặng này của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Hệ đệm sinh học** nối từ **Ảnh hưởng của nhiệt độ** sang **Chọn đệm trong phòng thí nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ đệm sinh học
 
@@ -299,8 +277,6 @@ Các nhóm ion hóa trên protein, đặc biệt histidine trong một số vùn
 
 Protein là hệ đa proton chứ không phải một cặp `HA/A-` duy nhất.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Chọn đệm trong phòng thí nghiệm** nối từ **Hệ đệm sinh học** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chọn đệm trong phòng thí nghiệm
 
 Ngoài `pKa`, cần xét:
@@ -315,8 +291,6 @@ Ngoài `pKa`, cần xét:
 
 Các đệm sinh hóa như phosphate, Tris, HEPES, MES hay MOPS có ưu và nhược điểm khác nhau. Không có dung dịch đệm nào hoàn toàn “trơ” trong mọi thí nghiệm.
 
-> **Nối mạch:** Trong **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Các hiểu lầm thường gặp** nối từ **Chọn đệm trong phòng thí nghiệm** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các hiểu lầm thường gặp
 
 ### “Dung dịch đệm giữ pH hoàn toàn không đổi”
@@ -330,8 +304,6 @@ Không. Bất kỳ hỗn hợp có lượng đáng kể của cả hai dạng li
 ### “Henderson–Hasselbalch luôn chính xác tuyệt đối”
 
 Không. Dạng nồng độ dựa trên xấp xỉ hoạt độ và thích hợp nhất khi cả hai dạng liên hợp có lượng đủ lớn.
-
-> **Nối mạch:** Ở chặng này của **Dung dịch đệm — kiểm soát biến động của môi trường proton**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

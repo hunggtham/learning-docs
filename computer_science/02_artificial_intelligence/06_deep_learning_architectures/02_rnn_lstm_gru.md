@@ -22,8 +22,6 @@ y_t=g(W_{hy}h_t+b_y)
 
 Same weights `W` reused mọi timestep → parameter sharing across thời gian (time / 시간).
 
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Unrolling through thời gian (time / 시간)** tiếp nhận điểm tựa từ **Vanilla RNN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vanishing độ dốc (gradient / 기울기) trong RNN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Unrolling through thời gian (time / 시간)
 
 RNN có thể unroll:
@@ -38,8 +36,6 @@ x3 → [cell] → h3
 
 Mathematically đồ thị (graph / 그래프) độ sâu (depth / 깊이) proportional chuỗi (sequence / 시퀀스) length. Backpropagation phải traverse unrolled đồ thị (graph / 그래프) — **Backpropagation Through thời gian (time / 시간) (BPTT)**.
 
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Vanishing độ dốc (gradient / 기울기) trong RNN** tiếp nhận điểm tựa từ **Unrolling through thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truncated BPTT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vanishing độ dốc (gradient / 기울기) trong RNN
 
 Độ dốc (gradient / 기울기) qua many timesteps chứa repeated products involving recurrent Jacobian:
@@ -52,8 +48,6 @@ Mathematically đồ thị (graph / 그래프) độ sâu (depth / 깊이) propo
 Nếu spectral effects/activation derivatives shrink, độ dốc (gradient / 기울기) vanish; nếu grow, explode.
 
 Do đó vanilla RNN khó học long-range dependencies.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Truncated BPTT** tiếp nhận điểm tựa từ **Vanishing độ dốc (gradient / 기울기) trong RNN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LSTM: tạo bộ nhớ (memory / 메모리) đường dẫn (path / 경로) có gates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Truncated BPTT
 
@@ -68,8 +62,6 @@ lower memory/compute
 ↔
 cannot assign credit through dependencies longer than truncation window directly
 ```
-
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Truncated BPTT** xác định đầu vào; **LSTM: tạo bộ nhớ (memory / 메모리) đường dẫn (path / 경로) có gates** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vì sao LSTM giúp độ dốc (gradient / 기울기) luồng (flow / 흐름)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## LSTM: tạo bộ nhớ (memory / 메모리) đường dẫn (path / 경로) có gates
 
@@ -111,8 +103,6 @@ Hidden:
 h_t=o_t\odot\tanh(c_t)
 \]
 
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **LSTM: tạo bộ nhớ (memory / 메모리) đường dẫn (path / 경로) có gates** xác định đầu vào; **Vì sao LSTM giúp độ dốc (gradient / 기울기) luồng (flow / 흐름)?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Gate interpretation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Vì sao LSTM giúp độ dốc (gradient / 기울기) luồng (flow / 흐름)?
 
 Cell trạng thái (state / 상태) cập nhật (update / 업데이트) có additive đường dẫn (path / 경로):
@@ -131,8 +121,6 @@ Nếu forget gate gần `1`, thông tin (information / 정보)/độ dốc (grad
 
 LSTM không “giải quyết hoàn toàn” long phụ thuộc (dependency / 의존성), nhưng cải thiện đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Vì sao LSTM giúp độ dốc (gradient / 기울기) luồng (flow / 흐름)?** xác định đầu vào; **Gate interpretation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **GRU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Gate interpretation
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -142,8 +130,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 - output gate: bao nhiêu cell state expose ra hidden.
 
 Gates learned, không hand-coded ngữ nghĩa (semantic / 의미적).
-
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **GRU** tiếp nhận điểm tựa từ **Gate interpretation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bidirectional RNN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## GRU
 
@@ -175,8 +161,6 @@ h_t=(1-z_t)\odot h_{t-1}+z_t\odot\tilde h_t
 
 GRU fewer parameters/gates; hiệu năng (performance / 성능) depends tác vụ (task / 작업)/dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Bidirectional RNN** tiếp nhận điểm tựa từ **GRU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stacked RNN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Bidirectional RNN
 
 Nếu tác vụ (task / 작업) cho phép future ngữ cảnh (context / 맥락), run one RNN forward và one backward:
@@ -187,9 +171,7 @@ h_t=[\overrightarrow h_t;\overleftarrow h_t]
 
 Useful tagging/speech encoders.
 
-Không dùng directly cho nhân quả (causal / 인과적) generation nếu future đơn vị từ (token / 토큰) unavailable.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Stacked RNN** tiếp nhận điểm tựa từ **Bidirectional RNN** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Không dùng directly cho nhân quả (causal / 인과적) generation nếu future token (토큰) unavailable.
 
 ## Stacked RNN
 
@@ -204,23 +186,17 @@ sequence
 
 Độ sâu (depth / 깊이) across thời gian (time / 시간) + layers makes tối ưu hóa (optimization / 최적화) harder. Dropout/residual/norm variants help.
 
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Stacked RNN** xác định đầu vào; **Chuỗi (sequence / 시퀀스) bottleneck** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **RNN strengths** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Chuỗi (sequence / 시퀀스) bottleneck
 
 Many-to-one mô hình (model / 모델) dùng final hidden trạng thái (state / 상태) `h_T` để summarize entire đầu vào (input / 입력). Long chuỗi (sequence / 시퀀스) thông tin (information / 정보) phải compress vào fixed véc-tơ (vector / 벡터).
 
 Early seq2seq translation suffered this bottleneck. Attention solves by allowing decoder truy cập (access / 접근) all encoder states rather than one final trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Chuỗi (sequence / 시퀀스) bottleneck** xác định đầu vào; **RNN strengths** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **RNN limitations vs Transformer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## RNN strengths
 
 RNN processes streaming đầu vào (input / 입력) incrementally with constant trạng thái (state / 상태) kích thước (size / 크기) per tầng (layer / 계층). suy luận (inference / 추론) per new timestep can be efficient without storing all past activations (beyond state).
 
 This is useful edge/online time-series/audio contexts.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **RNN strengths** đã nêu tiêu chí phân biệt, còn **RNN limitations vs Transformer** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **RNN vẫn còn giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RNN limitations vs Transformer
 
@@ -229,8 +205,6 @@ Sequential phụ thuộc (dependency / 의존성) prevents parallel computation 
 Long-range đường dẫn (path / 경로) length in RNN is `O(T)` recurrent steps; self-attention connects positions in one tầng (layer / 계층).
 
 This compute/tối ưu hóa (optimization / 최적화) advantage drove Transformer dominance in NLP.
-
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **RNN limitations vs Transformer** đã nêu tiêu chí phân biệt, còn **RNN vẫn còn giá trị** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Encoder–Decoder with RNN** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## RNN vẫn còn giá trị
 
@@ -244,8 +218,6 @@ RNN/LSTM/GRU remain useful for:
 
 Hiện đại (modern / 현대적) state-space các mô hình (models / 모델들) also revive recurrent-style efficient suy luận (inference / 추론) with better long-range thiết kế (design / 설계).
 
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Encoder–Decoder with RNN** tiếp nhận điểm tựa từ **RNN vẫn còn giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Encoder–Decoder with RNN
 
 Encoder processes nguồn (source / 소스) chuỗi (sequence / 시퀀스) to states. Decoder recurrently generates mục tiêu (target / 대상), conditioned on encoder summary/states.
@@ -253,8 +225,6 @@ Encoder processes nguồn (source / 소스) chuỗi (sequence / 시퀀스) to st
 Adding attention was the key cầu nối (bridge / 브리지) to hiện đại (modern / 현대적) kiến trúc (architecture / 아키텍처).
 
 Xem [Encoder–Decoder Models](./03_encoder_decoder_models.md) và [Attention](./04_attention.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Encoder–Decoder with RNN** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -265,8 +235,6 @@ RNN  = continuously update compressed state
 LSTM = state + learned gates controlling write/keep/read
 GRU  = simplified gated state update
 ```
-
-> **Chuyển mạch:** Trong **RNN, LSTM và GRU: học trạng thái qua thời gian**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -285,8 +253,6 @@ Transformer dominates many large chuỗi (sequence / 시퀀스) tasks, but recur
 ### “Hidden trạng thái (state / 상태) is human-readable bộ nhớ (memory / 메모리)”
 
 It is phân tán (distributed / 분산) learned véc-tơ (vector / 벡터) trạng thái (state / 상태), not tường minh (explicit / 명시적) symbolic bộ nhớ (memory / 메모리).
-
-> **Chuyển mạch:** Ở chặng này của **RNN, LSTM và GRU: học trạng thái qua thời gian**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

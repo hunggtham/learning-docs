@@ -34,8 +34,6 @@ Một sự kiện (event / 이벤트) là subset của `\Omega`. sự kiện (ev
 
 Điểm subtle: mẫu (sample / 표본) không gian (space / 공간) là modeling choice. Nếu ta mô hình (model / 모델) độ trễ (latency / 지연 시간) chỉ bằng categories `{fast, slow}`, ta đã bỏ nhiều detail so với continuous milliseconds. xác suất (probability / 확률) conclusions chỉ đúng trong biểu diễn (representation / 표현) đã chọn.
 
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Xác suất (probability / 확률) axioms tồn tại để giữ lập luận (reasoning / 추론) nhất quán** nối từ **Mẫu (sample / 표본) không gian (space / 공간): universe của mô hình (model / 모델), không nhất thiết universe của reality** sang **Equally likely formula là special trường hợp (case / 사례)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác suất (probability / 확률) axioms tồn tại để giữ lập luận (reasoning / 추론) nhất quán
 
 Xác suất (probability / 확률) measure `P` phải thỏa:
@@ -79,8 +77,6 @@ P(A\cup B)
 
 vì intersection bị double-count nếu chỉ cộng hai probabilities.
 
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Xác suất (probability / 확률) axioms tồn tại để giữ lập luận (reasoning / 추론) nhất quán** nêu quy tắc; **Equally likely formula là special trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **Worked example — inclusion-exclusion từ set lập luận (reasoning / 추론)** mở rộng hệ quả.
-
 ## Equally likely formula là special trường hợp (case / 사례)
 
 Nếu finite outcomes equally likely:
@@ -92,8 +88,6 @@ P(A)=\frac{|A|}{|\Omega|}.
 Nhưng đây không phải definition chung của xác suất (probability / 확률). Nó chỉ đúng sau khi giả định (assumption / 가정) “equally likely” được justify.
 
 Một loaded die, thị trường (market / 시장) return hay máy chủ (server / 서버) thất bại (failure / 실패) không có outcomes tự nhiên equally likely. xác suất (probability / 확률) phải đến từ cơ chế (mechanism / 메커니즘), empirical mô hình (model / 모델), symmetry hoặc suy luận (inference / 추론).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Equally likely formula là special trường hợp (case / 사례)** nêu quy tắc; **Worked example — inclusion-exclusion từ set lập luận (reasoning / 추론)** thử quy tắc trong tình huống, rồi **Conditional xác suất (probability / 확률): xác suất (probability / 확률) luôn phụ thuộc thông tin (information / 정보)** mở rộng hệ quả.
 
 ## Worked example — inclusion-exclusion từ set lập luận (reasoning / 추론)
 
@@ -113,8 +107,6 @@ P(A\cup B)
 ```
 
 Nếu chỉ cộng 0.42 và 0.35, overlap bị count twice. xác suất (probability / 확률) union quy tắc (rule / 규칙) chính là set inclusion-exclusion được normalize thành measure.
-
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Worked example — inclusion-exclusion từ set lập luận (reasoning / 추론)** nêu quy tắc; **Conditional xác suất (probability / 확률): xác suất (probability / 확률) luôn phụ thuộc thông tin (information / 정보)** thử quy tắc trong tình huống, rồi **Worked Bayes example — cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** mở rộng hệ quả.
 
 ## Conditional xác suất (probability / 확률): xác suất (probability / 확률) luôn phụ thuộc thông tin (information / 정보)
 
@@ -151,8 +143,6 @@ P(A\mid B)
 
 Bayes không phải magic inversion; nó chỉ là intersection được factor theo hai directions khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Conditional xác suất (probability / 확률): xác suất (probability / 확률) luôn phụ thuộc thông tin (information / 정보)** nêu quy tắc; **Worked Bayes example — cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** thử quy tắc trong tình huống, rồi **Independence: một structural giả định (assumption / 가정), không phải cảm giác “không liên quan”** mở rộng hệ quả.
-
 ## Worked Bayes example — cơ sở (base / 기반) tỷ lệ (rate / 비율) matters
 
 Suppose disease prevalence là 1%. kiểm thử (test / 테스트) có sensitivity 95% và false-positive tỷ lệ (rate / 비율) 5%.
@@ -174,8 +164,6 @@ Among positive tests, disease cases khoảng
 
 Positive kiểm thử (test / 테스트) không imply 95% chance disease. Sensitivity `P(+|D)` khác posterior `P(D|+)`. cơ sở (base / 기반) tỷ lệ (rate / 비율) quyết định denominator.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Worked Bayes example — cơ sở (base / 기반) tỷ lệ (rate / 비율) matters** nêu quy tắc; **Independence: một structural giả định (assumption / 가정), không phải cảm giác “không liên quan”** thử quy tắc trong tình huống, rồi **Pairwise independence chưa chắc mutual independence** mở rộng hệ quả.
-
 ## Independence: một structural giả định (assumption / 가정), không phải cảm giác “không liên quan”
 
 Events `A,B` independent nếu
@@ -194,8 +182,6 @@ Nghĩa là biết `B` không thay xác suất (probability / 확률) của `A` t
 
 Independence khác mutual exclusivity. Nếu `A` và `B` mutually exclusive với positive probabilities, occurrence của `B` làm xác suất (probability / 확률) `A` thành zero, nên chúng strongly dependent.
 
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Pairwise independence chưa chắc mutual independence** nối từ **Independence: một structural giả định (assumption / 가정), không phải cảm giác “không liên quan”** sang **Why multiplication appears in repeated trials**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pairwise independence chưa chắc mutual independence
 
 Nhiều events có thể pairwise independent nhưng không jointly independent. Vì vậy trong high-dimensional các mô hình (models / 모델들), statement “independent” phải rõ mức (level / 수준) và conditioning ngữ cảnh (context / 맥락).
@@ -207,8 +193,6 @@ X\perp Y\mid Z.
 ```
 
 Nó nói sau khi biết `Z`, `X` không cung cấp thêm thông tin (information / 정보) về `Y` trong mô hình (model / 모델).
-
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Why multiplication appears in repeated trials** nối từ **Pairwise independence chưa chắc mutual independence** sang **Frequency interpretation và law of large numbers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Why multiplication appears in repeated trials
 
@@ -224,8 +208,6 @@ Binomial xác suất (probability / 확률) thêm combinatorial factor `\binom n
 
 Xác suất (probability / 확률) và combinatorics gặp nhau ở đây: counting tells how many paths, xác suất (probability / 확률) tells weight mỗi đường dẫn (path / 경로).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Frequency interpretation và law of large numbers** nối từ **Why multiplication appears in repeated trials** sang **Bayesian viewpoint: bất định (uncertainty / 불확실성) given hiện tại (current / 현재) thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Frequency interpretation và law of large numbers
 
 Nếu repeat một stable random experiment nhiều lần, mẫu (sample / 표본) average/frequency thường converge về expectation/xác suất (probability / 확률) dưới suitable các giả định (assumptions / 가정들).
@@ -240,8 +222,6 @@ P(H)=0.5.
 
 Belief “heads is now due” là gambler's fallacy: nó nhầm long-run frequency convergence với short-run compensating force.
 
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Bayesian viewpoint: bất định (uncertainty / 불확실성) given hiện tại (current / 현재) thông tin (information / 정보)** nối từ **Frequency interpretation và law of large numbers** sang **Expected giá trị (value / 값): probability-weighted balance điểm (point / 지점)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bayesian viewpoint: bất định (uncertainty / 불확실성) given hiện tại (current / 현재) thông tin (information / 정보)
 
 Bayesian xác suất (probability / 확률) dùng xác suất (probability / 확률) để encode bất định (uncertainty / 불확실성) về unknown states/parameters. Khi bằng chứng (evidence / 증거) mới đến:
@@ -255,8 +235,6 @@ likelihood\times prior.
 Frequentist khung phần mềm (framework / 프레임워크) khác về interpretation của parameters và xác suất (probability / 확률) statements, nhưng share axioms và much of the same xác suất (probability / 확률) calculus.
 
 Không nên biến hai frameworks thành slogans. Mỗi one answers suy luận (inference / 추론) questions với các giả định (assumptions / 가정들) và procedures khác nhau.
-
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Expected giá trị (value / 값): probability-weighted balance điểm (point / 지점)** nối từ **Bayesian viewpoint: bất định (uncertainty / 불확실성) given hiện tại (current / 현재) thông tin (information / 정보)** sang **Worked Finance example — expected return không đủ mô tả rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Expected giá trị (value / 값): probability-weighted balance điểm (point / 지점)
 
@@ -278,8 +256,6 @@ không cần independence.
 
 Đây là reason expected chi phí (cost / 비용)/revenue often easy to decompose.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Expected giá trị (value / 값): probability-weighted balance điểm (point / 지점)** nêu quy tắc; **Worked Finance example — expected return không đủ mô tả rủi ro (risk / 위험)** thử quy tắc trong tình huống, rồi **Calibration: xác suất (probability / 확률) forecast nên được kiểm tra thế nào?** mở rộng hệ quả.
-
 ## Worked Finance example — expected return không đủ mô tả rủi ro (risk / 위험)
 
 Investment A returns `+10%` chắc chắn. Investment B returns `+30%` với xác suất (probability / 확률) 0.5 và `-10%` với xác suất (probability / 확률) 0.5.
@@ -294,8 +270,6 @@ Nhưng distributions khác hoàn toàn. Expected giá trị (value / 값) alone 
 
 Xác suất (probability / 확률) mô hình (model / 모델) phải match quyết định (decision / 결정) question; một scalar expectation hiếm khi đủ cho rủi ro (risk / 위험) management.
 
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Worked Finance example — expected return không đủ mô tả rủi ro (risk / 위험)** nêu quy tắc; **Calibration: xác suất (probability / 확률) forecast nên được kiểm tra thế nào?** thử quy tắc trong tình huống, rồi **Common-cause dependence trong kỹ thuật (engineering / 엔지니어링)** mở rộng hệ quả.
-
 ## Calibration: xác suất (probability / 확률) forecast nên được kiểm tra thế nào?
 
 Nếu mô hình (model / 모델) đưa xác suất (probability / 확률) khoảng 0.7 cho nhiều comparable cases, một calibrated mô hình (model / 모델) sẽ thấy sự kiện (event / 이벤트) xảy ra roughly 70% trong nhóm đó over repeated samples.
@@ -303,8 +277,6 @@ Nếu mô hình (model / 모델) đưa xác suất (probability / 확률) khoả
 Calibration khác discrimination. mô hình (model / 모델) có thể rank risks tốt nhưng probabilities badly calibrated.
 
 Trong AI classification, medical rủi ro (risk / 위험), weather forecast và credit rủi ro (risk / 위험), distinction này quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Common-cause dependence trong kỹ thuật (engineering / 엔지니어링)** nối từ **Calibration: xác suất (probability / 확률) forecast nên được kiểm tra thế nào?** sang **Xác suất (probability / 확률) zero không luôn nghĩa impossible**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Common-cause dependence trong kỹ thuật (engineering / 엔지니어링)
 
@@ -318,8 +290,6 @@ Nhưng nếu cả hai share same power supply hoặc mạng (network / 네트워
 
 Independence là giả định (assumption / 가정) phải justify, không phải default convenience.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Xác suất (probability / 확률) zero không luôn nghĩa impossible** nối từ **Common-cause dependence trong kỹ thuật (engineering / 엔지니어링)** sang **Khoa học máy tính (computer science / 컴퓨터 과학), AI và thông tin (information / 정보) lý thuyết (theory / 이론) connections**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xác suất (probability / 확률) zero không luôn nghĩa impossible
 
 Với continuous phân phối (distribution / 분포):
@@ -331,8 +301,6 @@ P(X=x)=0
 cho every chính xác (exact / 정확한) điểm (point / 지점), nhưng một realized `X` vẫn nhận một chính xác (exact / 정확한) giá trị (value / 값). xác suất (probability / 확률) zero sự kiện (event / 이벤트) trong continuous mathematics không đồng nghĩa logical impossibility.
 
 Đây là cầu nối (bridge / 브리지) tới measure-theoretic xác suất (probability / 확률).
-
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Khoa học máy tính (computer science / 컴퓨터 과학), AI và thông tin (information / 정보) lý thuyết (theory / 이론) connections** nối từ **Xác suất (probability / 확률) zero không luôn nghĩa impossible** sang **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khoa học máy tính (computer science / 컴퓨터 과학), AI và thông tin (information / 정보) lý thuyết (theory / 이론) connections
 
@@ -352,21 +320,15 @@ Thông tin (information / 정보) lý thuyết (theory / 이론) dùng
 
 để đo surprisal. Rare outcomes carry more thông tin (information / 정보) under the mô hình (model / 모델).
 
-> **Nối mạch:** Ở chặng này của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Khoa học máy tính (computer science / 컴퓨터 과학), AI và thông tin (information / 정보) lý thuyết (theory / 이론) connections** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
 Xác suất (probability / 확률) statements depend on sự kiện (event / 이벤트) definition, conditioning thông tin (information / 정보) và mô hình (model / 모델) stability. phân phối (distribution / 분포) shift phá historical probabilities. Selection độ lệch (bias / 편향) làm observed frequencies không represent mục tiêu (target / 대상) population. Hidden variables phá independence. Small samples tạo high bất định (uncertainty / 불확실성) ngay cả khi điểm (point / 지점) estimate nhìn precise.
 
 Một xác suất (probability / 확률) mô hình (model / 모델) tốt phải nói cả number **và** các giả định (assumptions / 가정들) đã tạo number đó.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > xác suất (probability / 확률) là bookkeeping nhất quán cho bất định (uncertainty / 불확실성). mẫu (sample / 표본) không gian (space / 공간) nói những outcomes nào mô hình (model / 모델) cho phép; events gom outcomes thành câu hỏi; conditioning thay đổi thông tin (information / 정보) set; independence là structural simplification; Bayes chỉ re-express cùng joint xác suất (probability / 확률) khi bằng chứng (evidence / 증거) thay đổi. xác suất (probability / 확률) không tồn tại trong vacuum — nó luôn gắn với mô hình (model / 모델) và thông tin (information / 정보).
-
-> **Nối mạch:** Trong **Nền tảng xác suất: mô hình hóa bất định bằng events, thông tin (information / 정보) và các giả định (assumptions / 가정들)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

@@ -11,8 +11,6 @@ question → formalization/model → measurement or computation
 
 Mathematics làm rõ cấu trúc (structure / 구조) và consistency; Science kiểm tra các mô hình (models / 모델들) against observation/intervention; Philosophy hỏi mô hình (model / 모델) đang đại diện cho cái gì, bằng chứng (evidence / 증거) đủ cho claim nào, và giá trị (value / 값) premise nào vẫn chưa được chứng minh. AI thêm một lớp: hệ thống có thể tối ưu mục tiêu (objective / 목표) mà không “hiểu” meaning theo nghĩa con người, nên năng lực (capability / 역량), độ tin cậy (reliability / 신뢰성) và agency phải được tách.
 
-> **Nối mạch:** Vòng lặp claim–model–measurement–decision là sợi chỉ chung; bridge giữa philosophy, science, math và AI cho thấy mỗi lĩnh vực đổi loại bằng chứng và tiêu chuẩn kiểm tra ra sao.
-
 ## Các cầu nối chính
 
 - lô-gic (logic / 논리) và [Mathematics](../../mathematics/README.md) làm rõ validity, xác suất (probability / 확률), proof, approximation và bất định (uncertainty / 불확실성).

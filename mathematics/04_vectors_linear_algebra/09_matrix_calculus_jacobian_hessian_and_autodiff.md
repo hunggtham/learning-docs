@@ -38,8 +38,6 @@ f(x+\Delta x)\approx f(x)+\nabla f(x)^T\Delta x.
 
 Độ dốc (gradient / 기울기) xuất hiện vì đầu ra (output / 출력) là scalar còn đầu vào (input / 입력) là véc-tơ (vector / 벡터).
 
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Độ dốc (gradient / 기울기)** nối từ **Từ derivative một biến đến differential nhiều biến** sang **Jacobian**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ dốc (gradient / 기울기)
 
 Với
@@ -81,8 +79,6 @@ nên
 
 Điều này giải thích vì sao L2 regularization tạo độ dốc (gradient / 기울기) kéo parameter về origin.
 
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Jacobian** nối từ **Độ dốc (gradient / 기울기)** sang **Ví dụ Jacobian**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Jacobian
 
 Nếu
@@ -112,8 +108,6 @@ f(x+\Delta x)\approx f(x)+J_f(x)\Delta x.
 
 Đây chính là tuyến tính (linear / 선형) transformation tốt nhất xấp xỉ hàm (function / 함수) nonlinear gần `x`.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Jacobian** nêu quy tắc; **Ví dụ Jacobian** thử quy tắc trong tình huống, rồi **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở dạng ma trận (matrix / 행렬)** mở rộng hệ quả.
-
 ## Ví dụ Jacobian
 
 Xét
@@ -138,8 +132,6 @@ J_f(x,y)=
 
 Nếu đầu vào (input / 입력) dịch một lượng nhỏ `(Δx,Δy)`, ma trận (matrix / 행렬) này dự đoán first-order thay đổi (change / 변경) của cả hai đầu ra (output / 출력).
 
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Ví dụ Jacobian** nêu quy tắc; **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở dạng ma trận (matrix / 행렬)** thử quy tắc trong tình huống, rồi **Hessian** mở rộng hệ quả.
-
 ## Chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở dạng ma trận (matrix / 행렬)
 
 Nếu
@@ -157,8 +149,6 @@ J_{f\circ g}(x)=J_f(g(x))J_g(x).
 Thứ tự nhân ma trận (matrix / 행렬) phản ánh đúng luồng (flow / 흐름) của perturbation: perturbation ở `x` trước hết bị `J_g` biến đổi thành perturbation ở `y`, rồi `J_f` biến đổi tiếp thành perturbation ở `z`.
 
 Đây chính là nền tảng toán học của backpropagation.
-
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) ở dạng ma trận (matrix / 행렬)** đặt đầu vào cho **Hessian**, rồi **Quadratic form** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hessian
 
@@ -184,8 +174,6 @@ f(x+\Delta x)\approx f(x)+\nabla f(x)^T\Delta x+
 
 Nếu Hessian positive definite tại stationary điểm (point / 지점), hàm (function / 함수) cục bộ (local / 로컬) cong lên theo mọi direction và điểm đó là strict cục bộ (local / 로컬) minimum. Nếu Hessian có cả positive và negative eigenvalues, stationary điểm (point / 지점) là saddle điểm (point / 지점).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Quadratic form** nối từ **Hessian** sang **Đạo hàm theo ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quadratic form
 
 Với
@@ -205,8 +193,6 @@ H_f(x)=A.
 ```
 
 Quadratic functions đặc biệt quan trọng vì curvature là constant. Nhiều tối ưu hóa (optimization / 최적화) algorithms cục bộ (local / 로컬) xem nonlinear mục tiêu (objective / 목표) như một quadratic approximation.
-
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Đạo hàm theo ma trận (matrix / 행렬)** nối từ **Quadratic form** sang **Differential notation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đạo hàm theo ma trận (matrix / 행렬)
 
@@ -235,8 +221,6 @@ df=\operatorname{tr}(G^T dX),
 ```
 
 sau đó đọc độ dốc (gradient / 기울기) `G`.
-
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Differential notation** nối từ **Đạo hàm theo ma trận (matrix / 행렬)** sang **Shape checking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Differential notation
 
@@ -282,15 +266,11 @@ Nếu `A` symmetric thì độ dốc (gradient / 기울기) trở thành `2Ax`.
 
 Differential notation thường giảm lỗi transpose khi expression phức tạp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Shape checking** nối từ **Differential notation** sang **Forward-mode automatic differentiation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Shape checking
 
 Trong ma trận (matrix / 행렬) calculus, kiểm tra shape là phương pháp debugging rất mạnh. Nếu `x∈R^n`, độ dốc (gradient / 기울기) của scalar theo `x` phải có `n` components. Nếu `f:R^n→R^m`, Jacobian phải ánh xạ perturbation dimension `n` sang đầu ra (output / 출력) perturbation dimension `m`.
 
 Nếu một expression derivative tạo shape không phù hợp với vai trò tuyến tính (linear / 선형) map của nó, nhiều khả năng notation hoặc transpose đang sai.
-
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Forward-mode automatic differentiation** nối từ **Shape checking** sang **Reverse-mode automatic differentiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Forward-mode automatic differentiation
 
@@ -328,8 +308,6 @@ Forward chế độ (mode / 모드) propagate cùng lúc giá trị (value / 값
 
 Nếu đầu vào (input / 입력) dimension nhỏ và đầu ra (output / 출력) dimension lớn, forward chế độ (mode / 모드) thường phù hợp.
 
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Reverse-mode automatic differentiation** nối từ **Forward-mode automatic differentiation** sang **Backpropagation là reverse-mode AD trên computational đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Reverse-mode automatic differentiation
 
 Reverse chế độ (mode / 모드) trước tiên chạy computation forward để lưu intermediate values, sau đó đi ngược đồ thị (graph / 그래프) để propagate sensitivities từ đầu ra (output / 출력) về inputs.
@@ -351,8 +329,6 @@ y=f(x),
 thì reverse chế độ (mode / 모드) thực hiện vector-Jacobian sản phẩm (product / 제품) thay vì materialize full Jacobian.
 
 Đây là lý do reverse chế độ (mode / 모드) cực kỳ hiệu quả khi đầu ra (output / 출력) là một scalar mất mát (loss / 손실) còn mô hình (model / 모델) có hàng triệu parameters.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Backpropagation là reverse-mode AD trên computational đồ thị (graph / 그래프)** nối từ **Reverse-mode automatic differentiation** sang **Finite difference và vì sao không dùng để train mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backpropagation là reverse-mode AD trên computational đồ thị (graph / 그래프)
 
@@ -380,8 +356,6 @@ với upstream độ dốc (gradient / 기울기) `g=∂L/∂y` cho
 
 Ba công thức này không phải mẹo deep học tập (learning / 학습); chúng là ma trận (matrix / 행렬) chuỗi (chain / 사슬) quy tắc (rule / 규칙).
 
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Finite difference và vì sao không dùng để train mạng (network / 네트워크)** nối từ **Backpropagation là reverse-mode AD trên computational đồ thị (graph / 그래프)** sang **Jacobian-vector sản phẩm (product / 제품) và vector-Jacobian sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Finite difference và vì sao không dùng để train mạng (network / 네트워크)
 
 Derivative có thể xấp xỉ bằng
@@ -393,8 +367,6 @@ f'(x)\approx\frac{f(x+h)-f(x)}{h}.
 Nhưng `h` quá lớn tạo truncation lỗi (error / 오류); `h` quá nhỏ tạo floating-point cancellation. Với hàng triệu parameters, finite difference còn yêu cầu số lần evaluate hàm (function / 함수) rất lớn.
 
 Automatic differentiation tránh hai vấn đề đó bằng cách tính derivative qua algebra của computation đồ thị (graph / 그래프) ở machine precision.
-
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Jacobian-vector sản phẩm (product / 제품) và vector-Jacobian sản phẩm (product / 제품)** nối từ **Finite difference và vì sao không dùng để train mạng (network / 네트워크)** sang **Hessian-vector sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Jacobian-vector sản phẩm (product / 제품) và vector-Jacobian sản phẩm (product / 제품)
 
@@ -418,8 +390,6 @@ nghĩa là propagate sensitivity từ đầu ra (output / 출력) backward.
 
 Cách nhìn này giải thích hiệu năng (performance / 성능) của hiện đại (modern / 현대적) autodiff frameworks tốt hơn việc tưởng rằng chúng xây một giant Jacobian ma trận (matrix / 행렬).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Hessian-vector sản phẩm (product / 제품)** nối từ **Jacobian-vector sản phẩm (product / 제품) và vector-Jacobian sản phẩm (product / 제품)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hessian-vector sản phẩm (product / 제품)
 
 Second-order tối ưu hóa (optimization / 최적화) đôi khi cần curvature nhưng Hessian `n×n` quá lớn để materialize. Có thể tính trực tiếp
@@ -432,21 +402,15 @@ bằng combinations của automatic differentiation mà không lưu toàn bộ H
 
 Điều này quan trọng trong Newton-CG, curvature phân tích (analysis / 분석) và một số meta-learning methods.
 
-> **Nối mạch:** Trong **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Hessian-vector sản phẩm (product / 제품)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Derivative nhiều chiều nên được hiểu như một **tuyến tính (linear / 선형) map của perturbations**. độ dốc (gradient / 기울기), Jacobian và Hessian chỉ là các representations khác nhau của cục bộ (local / 로컬) sensitivity và curvature. Automatic differentiation là kỹ thuật thực thi chuỗi (chain / 사슬) quy tắc (rule / 규칙) trên computational đồ thị (graph / 그래프) mà không cần viết symbolic derivative bằng tay.
-
-> **Nối mạch:** Ở chặng này của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
 Độ dốc (gradient / 기울기) không phải lúc nào cũng là “derivative duy nhất” của véc-tơ (vector / 벡터) hàm (function / 함수); vector-output hàm (function / 함수) tự nhiên có Jacobian. Backpropagation cũng không phải một thuật toán (algorithm / 알고리즘) tối ưu hóa (optimization / 최적화) riêng: nó là cách tính gradients. độ dốc (gradient / 기울기) descent mới là thuật toán (algorithm / 알고리즘) dùng gradients đó để cập nhật (update / 업데이트) parameters.
 
 Autodiff không phải finite difference. Nó không perturb đầu vào (input / 입력) bằng một `h` nhỏ mà propagate derivatives qua các elementary operations.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận (matrix / 행렬) calculus, Jacobian, Hessian và automatic differentiation**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

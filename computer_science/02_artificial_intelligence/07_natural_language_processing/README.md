@@ -37,7 +37,7 @@ Dependency map đi từ tokenization và representation tới modeling; mental m
 
 **[03 — Word Embeddings](./03_word_embeddings.md)** giải thích distributional hypothesis, Word2Vec/CBOW/Skip-Gram/negative sampling, GloVe, PMI, fastText và static embedding limitations.
 
-**[04 — Contextual Embeddings](./04_contextual_embeddings.md)** nối ELMo/BERT, đơn vị từ (token / 토큰)/sentence representations, bi-encoder/cross-encoder, contrastive retrieval, multilingual embeddings và embedding phiên bản (version / 버전) drift.
+**[04 — Contextual Embeddings](./04_contextual_embeddings.md)** nối ELMo/BERT, token (토큰)/sentence representations, bi-encoder/cross-encoder, contrastive retrieval, multilingual embeddings và embedding phiên bản (version / 버전) drift.
 
 **[05 — Sequence-to-Sequence NLP](./05_sequence_to_sequence_nlp.md)** tập trung translation/summarization, conditional ngôn ngữ (language / 언어) modeling, beam tìm kiếm (search / 검색), bản sao (copy / 복사)/constrained decoding, denoising text-to-text pretraining và faithfulness.
 

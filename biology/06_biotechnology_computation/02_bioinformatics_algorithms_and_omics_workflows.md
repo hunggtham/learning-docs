@@ -18,8 +18,6 @@ Các format phổ biến phản ánh stage đó. FASTQ giữ read và chất lư
 
 Format không chỉ là cú pháp (syntax / 문법) IT; nó encode **trạng thái (state / 상태) của lập luận (reasoning / 추론)**.
 
-> **Nối mạch:** Bioinformatics biến molecule thành digital object; metadata giữ ngữ cảnh mẫu và pipeline, còn QC phải đi trước inference để tránh diễn giải tín hiệu do lỗi kỹ thuật.
-
 ## 2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)
 
 Chuỗi (sequence / 시퀀스) không đủ. mẫu (sample / 표본) thuộc tissue nào, treatment gì, batch nào, thời gian (time / 시간) điểm (point / 지점) nào, patient nào, replicate nào — tất cả là siêu dữ liệu.
@@ -28,8 +26,6 @@ Nếu siêu dữ liệu (metadata / 메타데이터) sai hoặc ambiguous, phân
 
 Điều này làm cơ sở dữ liệu (database / 데이터베이스) thiết kế (design / 설계), quy ước đặt tên (naming convention) và từ vựng được kiểm soát (controlled vocabulary) trở thành thành phần (component / 컴포넌트) của chất lượng khoa học (scientific quality).
 
-> **Nối mạch:** **2. siêu dữ liệu (metadata / 메타데이터) là một phần của dữ liệu (data / 데이터)** đặt vấn đề; **3. QC phải diễn ra trước suy luận (inference / 추론)** kiểm tra bằng chứng, rồi **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** mở rộng hệ quả.
-
 ## 3. QC phải diễn ra trước suy luận (inference / 추론)
 
 Adapter contamination, low-quality tail, unusual GC content, overrepresented chuỗi (sequence / 시퀀스) hoặc duplicated read có thể báo vấn đề kỹ thuật (technical issue).
@@ -37,8 +33,6 @@ Adapter contamination, low-quality tail, unusual GC content, overrepresented chu
 Nhưng QC chỉ số (metric / 지표) không có ngưỡng phổ quát (universal threshold). High duplication có thể bình thường trong targeted amplicon sequencing nhưng suspicious trong whole-genome thư viện (library / 라이브러리).
 
 QC vì vậy là **đánh giá theo bối cảnh (contextual diagnosis)**, không phải đạt/không đạt (pass/fail) máy móc.
-
-> **Nối mạch:** **3. QC phải diễn ra trước suy luận (inference / 추론)** đặt vấn đề; **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** kiểm tra bằng chứng, rồi **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** mở rộng hệ quả.
 
 ## 4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)
 
@@ -52,8 +46,6 @@ Q30 tương ứng estimated xác suất lỗi (error probability) khoảng 0.001
 
 Nhưng điểm chất lượng vẫn là mô hình (model / 모델) estimate từ machine hành vi (behavior / 동작). “Q30” không nghĩa cơ sở (base / 기반) chắc chắn đúng; nó nghĩa instrument/mô hình (model / 모델) đánh giá độ tin cậy (confidence) ở mức tương ứng.
 
-> **Nối mạch:** **4. Phred score là probabilistic siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)** kiểm tra bằng chứng, rồi **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** mở rộng hệ quả.
-
 ## 5. Căn chỉnh trình tự (sequence alignment) biến biological similarity thành bài toán tối ưu (optimization problem)
 
 Hai chuỗi (sequence / 시퀀스) có thể khác do substitution, insertion hoặc deletion. Alignment chèn gap để tìm correspondence.
@@ -64,8 +56,6 @@ Căn chỉnh toàn cục (global alignment) thích hợp khi hai chuỗi (sequen
 
 Biological question “hai chuỗi (sequence / 시퀀스) có quan hệ không?” trở thành computational bài toán (problem / 문제) “alignment nào có score cao dưới mô hình (model / 모델) đã chọn?”.
 
-> **Nối mạch:** Sequence alignment defines an optimization objective; dynamic programming finds an exact solution at cost, while BLAST trades completeness for speed through heuristics.
-
 ## 6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)
 
 Needleman–Wunsch và Smith–Waterman dùng động (dynamic / 동적) programming. Với chuỗi (sequence / 시퀀스) length \(m\) và \(n\), thời gian (time / 시간)/bộ nhớ (memory / 메모리) thường tăng theo tích của chiều dài trong hiện thực (implementation / 구현) cơ bản.
@@ -73,8 +63,6 @@ Needleman–Wunsch và Smith–Waterman dùng động (dynamic / 동적) program
 Khi cơ sở dữ liệu (database / 데이터베이스) có millions chuỗi (sequence / 시퀀스), chạy chính xác (exact / 정확한) thuật toán (algorithm / 알고리즘) với mọi pair quá đắt. Đây là nơi heuristic xuất hiện.
 
 Khoa học máy tính (computer science / 컴퓨터 과학) không chỉ giúp chạy nhanh hơn; nó quyết định loại approximation nào ta chấp nhận để quy mô (scale / 규모) biological question.
-
-> **Nối mạch:** **7. BLAST: heuristic đánh đổi completeness lấy speed** nối từ **6. động (dynamic / 동적) programming: chính xác (exact / 정확한) solution có chi phí (cost / 비용)** sang **8. E-value và significance của chuỗi (sequence / 시퀀스) match**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. BLAST: heuristic đánh đổi completeness lấy speed
 
@@ -84,8 +72,6 @@ Kết quả nhanh và thường biologically useful, nhưng “BLAST hit” khô
 
 Chức năng (function) suy luận (inference / 추론) nên xem coverage, định danh (identity / 식별자), conserved lĩnh vực (domain / 도메인), synteny, phylogeny và ideally experiment.
 
-> **Nối mạch:** BLAST heuristic đánh đổi completeness lấy speed; E-value định lượng significance của sequence match. **Reference genome** kiểm tra coordinate system và giới hạn diễn giải.
-
 ## 8. E-value và significance của chuỗi (sequence / 시퀀스) match
 
 BLAST E-value gần biểu diễn số match có score tương tự hoặc tốt hơn kỳ vọng xuất hiện ngẫu nhiên trong cơ sở dữ liệu (database / 데이터베이스) theo mô hình (model / 모델) nhất định.
@@ -93,8 +79,6 @@ BLAST E-value gần biểu diễn số match có score tương tự hoặc tốt
 Cơ sở dữ liệu (database / 데이터베이스) càng lớn, chance match càng nhiều. Vì vậy cùng score có significance khác khi tìm kiếm (search / 검색) cơ sở dữ liệu (database / 데이터베이스) khác kích thước (size / 크기).
 
 Đây là lesson statistical quan trọng: bằng chứng (evidence / 증거) strength phụ thuộc tìm kiếm (search / 검색) không gian (space / 공간).
-
-> **Nối mạch:** E-value và sequence-match significance đặt nền; reference genome là coordinate system chứ không phải chuẩn tuyệt đối. **Mapping quality** định lượng uncertainty về vị trí.
 
 ## 9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”
 
@@ -104,8 +88,6 @@ Read từ region divergent hoặc repeat có thể map khó. **Sai lệch do tha
 
 Hệ gen toàn quần thể (pangenome) biểu diễn (representation / 표현) cố mô hình hóa nhiều đường dẫn (path / 경로)/haplotype hơn, thường bằng graph-like cấu trúc (structure / 구조).
 
-> **Nối mạch:** **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** nối từ **9. Hệ gen tham chiếu (reference genome) là coordinate hệ thống (system / 시스템), không phải “genome chuẩn tuyệt đối”** sang **11. Coverage là redundancy, nhưng coverage thực không đều**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí
 
 Short read ở repeat region có thể align nhiều nơi. Mapper phải chọn best location, đánh multi-mapping hoặc bỏ read.
@@ -113,8 +95,6 @@ Short read ở repeat region có thể align nhiều nơi. Mapper phải chọn 
 Chất lượng ánh xạ phản ánh confidence placement. Vì vậy statement “read này thuộc gene X” cũng là suy luận (inference / 추론) có độ bất định (uncertainty / 불확실성).
 
 Nếu downstream variant caller bỏ qua bất định (uncertainty / 불확실성) ánh xạ (mapping / 매핑), dương tính giả (false positive) có thể tăng.
-
-> **Nối mạch:** **11. Coverage là redundancy, nhưng coverage thực không đều** nối từ **10. Chất lượng ánh xạ (mapping quality) là bất định (uncertainty / 불확실성) về vị trí** sang **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Coverage là redundancy, nhưng coverage thực không đều
 
@@ -130,8 +110,6 @@ Coverage cao tạo redundancy giúp phân biệt sequencing lỗi (error / 오�
 
 “30× hệ gen (genome)” là average, không nghĩa mọi cơ sở (base / 기반) đều được đọc 30 lần.
 
-> **Nối mạch:** **12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)** nối từ **11. Coverage là redundancy, nhưng coverage thực không đều** sang **13. Germline và somatic workflow dùng biological prior khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Gọi biến thể (variant calling) là probabilistic quyết định (decision / 결정)
 
 Giả sử tại một locus có 18 read A và 12 read G. Có thể mẫu (sample / 표본) heterozygous, nhưng cũng có thể ánh xạ (mapping / 매핑) độ lệch (bias / 편향), contamination hoặc sequencing lỗi (error / 오류).
@@ -139,8 +117,6 @@ Giả sử tại một locus có 18 read A và 12 read G. Có thể mẫu (sampl
 Variant caller so likelihood của genotype hypothesis dựa trên cơ sở (base / 기반) chất lượng (quality / 품질), chất lượng ánh xạ, allele balance và mô hình (model / 모델) ploidy.
 
 VCF vì vậy không phải danh sách (list / 목록) truth. Nó là collection of candidate variant + bằng chứng (evidence / 증거) + filter.
-
-> **Nối mạch:** Variant calling là probabilistic decision; germline và somatic workflow dùng prior khác nhau. **Copy-number và structural variant** cần evidence khác SNV.
 
 ## 13. Germline và somatic workflow dùng biological prior khác nhau
 
@@ -150,8 +126,6 @@ Tumor mẫu (sample / 표본) có purity <100%, subclone, copy-number alteration
 
 Cùng raw read nhưng mô hình (model / 모델) biological khác làm suy luận (inference / 추론) khác.
 
-> **Nối mạch:** Germline/somatic priors cần được kiểm chứng; copy-number và structural variant đòi hỏi evidence riêng. **Genome assembly không có reference** tiếp tục bằng reconstruction.
-
 ## 14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV
 
 Large deletion, duplication, inversion hoặc translocation không thể luôn detect bằng single-base mismatch.
@@ -159,8 +133,6 @@ Large deletion, duplication, inversion hoặc translocation không thể luôn d
 Ta cần độ sâu (depth / 깊이) thay đổi (change / 변경), discordant paired-end orientation, split read hoặc long-read spanning sự kiện (event / 이벤트).
 
 Điều này cho thấy thuật toán (algorithm / 알고리즘) phụ thuộc **signature vật lý mà experiment tạo ra**.
-
-> **Nối mạch:** **14. Copy-number và structural variant cần bằng chứng (evidence / 증거) khác SNV** đặt vấn đề; **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** kiểm tra bằng chứng, rồi **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** mở rộng hệ quả.
 
 ## 15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)
 
@@ -170,8 +142,6 @@ Repeat tạo branch, sequencing lỗi (error / 오류) tạo spur, heterozygosit
 
 Assembly là đồ thị (graph / 그래프) reconstruction dưới incomplete/noisy dữ liệu (data / 데이터).
 
-> **Nối mạch:** **16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)** nối từ **15. Genome assembly: reconstruction không có tham chiếu (reference / 참조)** sang **17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 16. k-mer kích thước (size / 크기) là sự đánh đổi (trade-off / 트레이드오프)
 
 k nhỏ tăng overlap nhưng làm repeat khó phân biệt. k lớn tăng uniqueness nhưng yêu cầu read dài và đủ coverage.
@@ -179,8 +149,6 @@ k nhỏ tăng overlap nhưng làm repeat khó phân biệt. k lớn tăng unique
 Không có k “tốt nhất” universal. Parameter phản ánh sự đánh đổi (trade-off / 트레이드오프) giữa connectivity và độ đặc hiệu (specificity).
 
 Đây là example thuật toán (algorithm / 알고리즘) parameter có biological consequence.
-
-> **Nối mạch:** k-mer size tạo trade-off; annotation diễn giải sequence thành gene; **RNA-seq count** kiểm tra vì count không phải expression tuyệt đối.
 
 ## 17. Annotation: chuỗi (sequence / 시퀀스) không tự nói “đây là gen (gene)”
 
@@ -190,8 +158,6 @@ Annotation cơ sở dữ liệu (database / 데이터베이스) có phiên bản
 
 Do đó downstream phân tích (analysis / 분석) phải ghi hệ gen tham chiếu **và annotation phiên bản (version / 버전)**.
 
-> **Nối mạch:** Annotation tạo giả thuyết gene; RNA-seq count cần mô hình; **Normalization** kiểm tra khi global shift bị che.
-
 ## 18. RNA-seq: count không phải expression tuyệt đối trực tiếp
 
 RNA-seq workflow thường gồm QC → căn chỉnh/pseudoalignment → counting → normalization → biểu hiện khác biệt (differential expression).
@@ -199,8 +165,6 @@ RNA-seq workflow thường gồm QC → căn chỉnh/pseudoalignment → countin
 Raw count phụ thuộc thư viện (library / 라이브러리) kích thước (size / 크기), mức độ phong phú của bản phiên mã (transcript abundance) và technical độ lệch (bias / 편향). Transcript length ảnh hưởng xác suất (probability / 확률) read xuất hiện trong within-sample comparison.
 
 Normalization cố tạo comparable quy mô (scale / 규모) giữa mẫu (sample / 표본) nhưng luôn có giả định (assumption / 가정).
-
-> **Nối mạch:** **19. Normalization có thể che toàn cục (global / 전역) shift** nối từ **18. RNA-seq: count không phải expression tuyệt đối trực tiếp** sang **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Normalization có thể che toàn cục (global / 전역) shift
 
@@ -210,8 +174,6 @@ Nếu treatment làm toàn cục (global / 전역) RNA môi trường vận hàn
 
 Đây là reason spike-in điều khiển (control / 제어) đôi khi hữu ích: bên ngoài (external / 외부) tham chiếu (reference / 참조) giúp nhận biết toàn cục (global / 전역) scaling.
 
-> **Nối mạch:** **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** nối từ **19. Normalization có thể che toàn cục (global / 전역) shift** sang **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)
 
 Nếu kiểm thử (test / 테스트) 20,000 gene với p<0.05 mà không correction, dương tính giả xuất hiện nhiều chỉ do chance.
@@ -219,8 +181,6 @@ Nếu kiểm thử (test / 테스트) 20,000 gene với p<0.05 mà không correc
 False Discovery tỷ lệ (rate / 비율) giúp kiểm soát expected false discovery proportion trong khung phần mềm (framework / 프레임워크) nhất định.
 
 Nhưng adjusted p-value nhỏ vẫn cần tác động (effect / 효과) kích thước (size / 크기). Gene thay 1.03× với huge n có thể significant mà biological relevance thấp.
-
-> **Nối mạch:** **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** nối từ **20. Biểu hiện khác biệt và kiểm định nhiều lần (multiple testing)** sang **22. Clustering là hypothesis generator, không phải truth generator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục
 
@@ -230,8 +190,6 @@ PCA plot giúp detect batch, outlier hoặc major biological separation. Nhưng 
 
 Loading và siêu dữ liệu (metadata / 메타데이터) cần để interpret axis.
 
-> **Nối mạch:** **22. Clustering là hypothesis generator, không phải truth generator** nối từ **21. PCA: nhìn cấu trúc (structure / 구조) high-dimensional bằng vài trục** sang **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 22. Clustering là hypothesis generator, không phải truth generator
 
 Clustering nhóm cell/mẫu (sample / 표본) theo similarity. Kết quả phụ thuộc tính năng (feature / 기능) selection, normalization, distance chỉ số (metric / 지표) và độ phân giải (resolution).
@@ -239,8 +197,6 @@ Clustering nhóm cell/mẫu (sample / 표본) theo similarity. Kết quả phụ
 Một cluster đẹp không tự chứng minh “loại tế bào (cell type) mới”. Cần marker, developmental ngữ cảnh (context / 맥락) và ideally kiểm tra hợp lệ (validation / 검증).
 
 Thuật toán (algorithm / 알고리즘) tạo partition; biologist gắn interpretation.
-
-> **Nối mạch:** **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** nối từ **22. Clustering là hypothesis generator, không phải truth generator** sang **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)
 
@@ -250,15 +206,11 @@ Nhưng capture efficiency thấp, count sparse và nhiều zero. Zero có thể 
 
 Vì vậy single-cell phân tích (analysis / 분석) cần mô hình (model / 모델) count noise và tránh đọc heatmap như đo lường (measurement / 측정) hoàn hảo.
 
-> **Nối mạch:** **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** nối từ **23. Single-cell RNA-seq: từ average sang phân phối (distribution / 분포)** sang **25. Pseudotime: reconstruct dynamics từ snapshot**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách
 
 Giảm chiều dữ liệu (dimensionality reduction) nén hàng nghìn dimension xuống 2D/3D. cục bộ (local / 로컬) neighborhood có thể hữu ích, nhưng toàn cục (global / 전역) distance và cluster gap trên plot không nên overinterpret.
 
 Một plot đẹp là biểu diễn (representation / 표현) của thuật toán (algorithm / 알고리즘), không phải microscope ảnh (image / 이미지) của “tế bào (cell)-state không gian (space / 공간)”.
-
-> **Nối mạch:** **25. Pseudotime: reconstruct dynamics từ snapshot** nối từ **24. UMAP/t-SNE: visualization không bảo toàn mọi khoảng cách** sang **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Pseudotime: reconstruct dynamics từ snapshot
 
@@ -268,8 +220,6 @@ Pseudotime không phải actual chronological thời gian (time / 시간). Nó l
 
 Kiểm tra hợp lệ (validation / 검증) bằng lineage tracing hoặc time-course giúp mạnh hơn.
 
-> **Nối mạch:** **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** nối từ **25. Pseudotime: reconstruct dynamics từ snapshot** sang **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality
 
 ATAC-seq đo khả năng tiếp cận nhiễm sắc chất (chromatin accessibility). ChIP-seq đo enrichment DNA fragment associated với protein/histone mark. Methyl hóa DNA (DNA methylation) phép thử (assay) đo methylation trạng thái (state / 상태).
@@ -277,8 +227,6 @@ ATAC-seq đo khả năng tiếp cận nhiễm sắc chất (chromatin accessibil
 Kết hợp epigenomics với RNA-seq giúp xây regulatory hypothesis. Nhưng open enhancer correlated với gene up không tự chứng minh enhancer gây expression.
 
 CRISPR perturb enhancer hoặc reporter assay có thể kiểm tra nhân quả (causal / 인과적) role.
-
-> **Nối mạch:** **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** nối từ **26. Epigenomics: khả năng tiếp cận (accessibility / 접근성) và binding không đồng nghĩa causality** sang **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác
 
@@ -288,8 +236,6 @@ Mức độ phong phú của protein (protein abundance) chịu translation, ph�
 
 Không tầng (layer / 계층) omics nào “cao hơn” tuyệt đối. Mỗi tầng (layer / 계층) có ý nghĩa sinh học và phép đo (measurement) độ lệch (bias / 편향) riêng.
 
-> **Nối mạch:** **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** nối từ **27. Proteomics và metabolomics đưa ta gần phenotype hơn nhưng tăng ambiguity khác** sang **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết
 
 Kết hợp genome, epigenome, transcriptome, proteome và metabolome tăng ngữ cảnh (context / 맥락) nhưng dimension và missing dữ liệu (data / 데이터) cũng tăng.
@@ -297,8 +243,6 @@ Kết hợp genome, epigenome, transcriptome, proteome và metabolome tăng ng�
 Một useful chiến lược (strategy / 전략) là đặt nhân quả (causal / 인과적) question rõ: variant có đổi chromatin không, chromatin có đổi expression không, expression có đổi protein/metabolite không?
 
 Tích hợp (integration / 통합) tốt đi theo biological cơ chế (mechanism / 메커니즘), không chỉ concatenate ma trận (matrix / 행렬).
-
-> **Nối mạch:** **28. Multi-omics tích hợp (integration / 통합): nhiều tầng (layer / 계층) không tự động tạo hiểu biết** đặt vấn đề; **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** kiểm tra bằng chứng, rồi **30. Học máy (machine learning): prediction khác explanation** mở rộng hệ quả.
 
 ## 29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)
 
@@ -308,8 +252,6 @@ Degree, centrality và quần xã (community) cấu trúc (structure / 구조) g
 
 Mọi mạng (network / 네트워크) visualization nên hỏi: **edge nghĩa gì và bằng chứng (evidence / 증거) từ đâu?**
 
-> **Nối mạch:** **29. Mạng lưới (network) sinh học (biology): đồ thị (graph / 그래프) hữu ích nhưng edge cần bằng chứng (evidence / 증거) kiểu (type / 타입)** đặt vấn đề; **30. Học máy (machine learning): prediction khác explanation** kiểm tra bằng chứng, rồi **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** mở rộng hệ quả.
-
 ## 30. Học máy (machine learning): prediction khác explanation
 
 ML có thể classify ảnh (image / 이미지), predict phenotype hoặc infer protein đặc tính (property). Nhưng high kiểm thử (test / 테스트) accuracy không tự chứng minh mô hình (model / 모델) học biology đúng.
@@ -317,8 +259,6 @@ ML có thể classify ảnh (image / 이미지), predict phenotype hoặc infer 
 Mô hình (model / 모델) có thể học batch, hospital, scanner hoặc ancestry confounder.
 
 Prediction trả lời “có dự đoán được không?”. Causality trả lời “thay X có làm Y đổi không?”. Hai câu hỏi khác nhau.
-
-> **Nối mạch:** **30. Học máy (machine learning): prediction khác explanation** đặt vấn đề; **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** kiểm tra bằng chứng, rồi **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** mở rộng hệ quả.
 
 ## 31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)
 
@@ -328,23 +268,17 @@ Huấn luyện (training / 학습) set fit mô hình (model / 모델). kiểm tr
 
 Mô hình khi đó có thể memorize individual-specific tín hiệu (signal / 신호) thay vì general biological quy tắc (rule / 규칙).
 
-> **Nối mạch:** **31. Train/kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) và rò rỉ dữ liệu (data leakage)** đặt vấn đề; **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** kiểm tra bằng chứng, rồi **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** mở rộng hệ quả.
-
 ## 32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập
 
 Nếu đơn vị (unit / 단위) biological thật là patient, split nên theo patient, không theo ảnh (image / 이미지) patch hay cell riêng lẻ từ cùng patient.
 
 Đây là cầu nối (bridge / 브리지) giữa thiết kế thực nghiệm (experimental design) và ML: independence giả định (assumption / 가정) phải phản ánh sampling quá trình (process).
 
-> **Nối mạch:** **33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance** nối từ **32. Cross-validation phải tôn trọng đơn vị (unit / 단위) độc lập** sang **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 33. tính năng (feature / 기능) importance không phải nhân quả (causal / 인과적) importance
 
 Một gene có predictive power lớn có thể chỉ là downstream marker. SHAP/importance score cho biết mô hình (model / 모델) dùng tính năng (feature / 기능), không chứng minh gene driver disease.
 
 Để kiểm thử (test / 테스트) driver cần perturbation hoặc nhân quả (causal / 인과적) thiết kế (design / 설계).
-
-> **Nối mạch:** Feature importance không phải causal importance; reproducible workflow giữ science có thể kiểm tra. **Germline variant workflow** kiểm tra cả chuỗi end-to-end.
 
 ## 34. Quy trình có thể tái lập (reproducible workflow) là một phần của science
 
@@ -367,8 +301,6 @@ raw data
 
 Nếu chuỗi (chain / 사슬) không dấu vết (trace / 추적) được, reproducibility yếu.
 
-> **Nối mạch:** **34. Quy trình có thể tái lập (reproducible workflow) là một phần của science** nêu quy tắc; **35. Tình huống phân tích (case study): germline variant workflow end-to-end** thử quy tắc trong tình huống, rồi **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** mở rộng hệ quả.
-
 ## 35. Tình huống phân tích (case study): germline variant workflow end-to-end
 
 Mẫu (sample / 표본) DNA được chuỗi (sequence / 시퀀스) thành FASTQ. QC kiểm chất lượng (quality / 품질)/adapter. Read map lên tham chiếu (reference / 참조). Duplicate/technical sản phẩm tạo ra (artifact / 산출물) được xử lý. Variant caller tính genotype likelihood. Biến thể (variant) được filter rồi annotate bằng gene/chức năng/cơ sở dữ liệu tần số (frequency).
@@ -377,8 +309,6 @@ Cuối cùng variant “pathogenic hay không” vẫn cần clinical/genetic b�
 
 Chuỗi xử lý (pipeline / 파이프라인) không biến raw read trực tiếp thành diagnosis; mỗi stage thu hẹp bất định (uncertainty / 불확실성) một phần.
 
-> **Nối mạch:** Germline variant workflow cho thấy pipeline end-to-end; RNA-seq differential expression mở case thứ hai và **misconceptions** kiểm tra giới hạn.
-
 ## 36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot
 
 Sau QC và count, mô hình thống kê tìm gene khác expression. Volcano plot chỉ là visualization.
@@ -386,8 +316,6 @@ Sau QC và count, mô hình thống kê tìm gene khác expression. Volcano plot
 Biological lập luận (reasoning / 추론) tiếp theo hỏi pathway nào enriched, tác động (effect / 효과) có replicate không, cell composition có thay không, yếu tố phiên mã (transcription factor) nào plausible, và perturbation gene candidate có đổi phenotype không.
 
 Omics là hypothesis engine mạnh, nhưng cơ chế (mechanism / 메커니즘) cần vòng experiment mới.
-
-> **Nối mạch:** **36. Tình huống phân tích: RNA-seq biểu hiện khác biệt không dừng ở volcano plot** nêu quy tắc; **37. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **38. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 37. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -398,8 +326,6 @@ Omics là hypothesis engine mạnh, nhưng cơ chế (mechanism / 메커니즘) 
 “AI tìm được tính năng (feature / 기능) quan trọng nghĩa đã tìm ra cơ chế (mechanism / 메커니즘)” sai.
 
 “Hệ gen tham chiếu là genome chuẩn của species” quá đơn giản; population có diversity và biến thể cấu trúc (structural variation).
-
-> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 37; bioinformatics phải bắt đầu từ data-generating process.
 
 ## 38. Mô hình tư duy tổng hợp
 
@@ -420,8 +346,6 @@ Mỗi stage vừa thêm thông tin (information / 정보) vừa làm mất một
 
 <!-- depth-audit-2026:ai-data-generating-process -->
 
-> **Nối mạch:** Data-generating process đặt giới hạn cho bioinformatics; cầu nối sang systems biology mở rộng từ pipeline tới mô hình hệ thống.
-
 ## Bioinformatics phải bắt đầu từ data-generating tiến trình (process / 프로세스)
 
 FASTQ, count ma trận (matrix / 행렬) hay embedding đều là đầu ra (output / 출력) sau nhiều transformation. mẫu (sample / 표본) collection, thư viện (library / 라이브러리) preparation, sequencing chemistry, tham chiếu (reference / 참조) alignment và filtering quyết định phân phối (distribution / 분포) của dữ liệu (data / 데이터) trước khi mô hình (model / 모델) nhìn thấy nó. Vì vậy một mẫu (pattern / 패턴) machine học tập (learning / 학습) tìm được có thể phản ánh batch, ancestry imbalance hoặc tham chiếu (reference / 참조) độ lệch (bias / 편향) thay vì cơ chế (mechanism / 메커니즘) sinh học.
@@ -431,8 +355,6 @@ FASTQ, count ma trận (matrix / 행렬) hay embedding đều là đầu ra (out
 Foundation mô hình (model / 모델) và protein ngôn ngữ (language / 언어) mô hình (model / 모델) có thể học biểu diễn (representation / 표현) mạnh từ chuỗi (sequence / 시퀀스) lớn, hỗ trợ cấu trúc (structure / 구조)/hàm (function / 함수) prediction và variant prioritization. Nhưng prediction không đồng nghĩa nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘). mô hình (model / 모델) có thể nội suy statistical regularity mà không biết intervention sẽ làm gì trong cell thật. kiểm tra hợp lệ (validation / 검증) tốt cần bên ngoài (external / 외부) dataset, perturbation experiment và bất định (uncertainty / 불확실성) calibration.
 
 AI hữu ích nhất khi đặt trong chuỗi xử lý (pipeline / 파이프라인) `biological question → measurement → representation → model → prediction → experimental test`, không phải khi thay toàn bộ biology bằng score.
-
-> **Nối mạch:** Data-generating process cung cấp đầu vào; cầu nối sang systems biology giải thích vận hành và khép mạch.
 
 ## 39. cầu nối (bridge / 브리지) sang Sinh học hệ thống (systems biology)
 

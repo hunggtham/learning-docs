@@ -2,7 +2,7 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pretraining large language models**. Route đi từ corpus construction → filtering/deduplication → next-token objective → distributed optimization → checkpoints and data mixtures, để pipeline dữ liệu được đọc cùng mục tiêu học và năng lực đầu ra.
 
-**Pretraining (사전학습 / tiền huấn luyện)** là giai đoạn mô hình (model / 모델) học statistical cấu trúc (structure / 구조) từ một lượng dữ liệu rất lớn trước khi được điều chỉnh để làm theo instruction hoặc phục vụ một ứng dụng (application / 애플리케이션) cụ thể. Với decoder-only LLM, mục tiêu (objective / 목표) phổ biến là **next-token prediction**: tại mỗi vị trí, mô hình (model / 모델) nhận prefix và tối đa hóa xác suất của đơn vị từ (token / 토큰) tiếp theo.
+**Pretraining (사전학습 / tiền huấn luyện)** là giai đoạn mô hình (model / 모델) học statistical cấu trúc (structure / 구조) từ một lượng dữ liệu rất lớn trước khi được điều chỉnh để làm theo instruction hoặc phục vụ một ứng dụng (application / 애플리케이션) cụ thể. Với decoder-only LLM, mục tiêu (objective / 목표) phổ biến là **next-token prediction**: tại mỗi vị trí, mô hình (model / 모델) nhận prefix và tối đa hóa xác suất của token (토큰) tiếp theo.
 
 \[
 P(x_{1:T})=\prod_{t=1}^{T}P(x_t\mid x_{<t})
@@ -14,7 +14,7 @@ Mất mát (loss / 손실) tương ứng thường là negative log-likelihood h
 \mathcal L=-\sum_t \log P_\theta(x_t\mid x_{<t})
 \]
 
-Điểm quan trọng là mục tiêu (objective / 목표) này nhìn có vẻ đơn giản nhưng buộc mô hình (model / 모델) phải nén rất nhiều regularity của ngôn ngữ (language / 언어) và world vào parameters. Muốn dự đoán đơn vị từ (token / 토큰) tiếp theo tốt, mô hình (model / 모델) phải học cú pháp (syntax / 문법), ngữ nghĩa (semantic / 의미적) association, discourse cấu trúc (structure / 구조), factual co-occurrence, coding patterns và nhiều dạng lập luận (reasoning / 추론) mẫu (pattern / 패턴) xuất hiện trong huấn luyện (training / 학습) phân phối (distribution / 분포).
+Điểm quan trọng là mục tiêu (objective / 목표) này nhìn có vẻ đơn giản nhưng buộc mô hình (model / 모델) phải nén rất nhiều regularity của ngôn ngữ (language / 언어) và world vào parameters. Muốn dự đoán token (토큰) tiếp theo tốt, mô hình (model / 모델) phải học cú pháp (syntax / 문법), ngữ nghĩa (semantic / 의미적) association, discourse cấu trúc (structure / 구조), factual co-occurrence, coding patterns và nhiều dạng lập luận (reasoning / 추론) mẫu (pattern / 패턴) xuất hiện trong huấn luyện (training / 학습) phân phối (distribution / 분포).
 
 ## Pretraining không phải cơ sở dữ liệu (database / 데이터베이스) ingestion
 
@@ -36,7 +36,7 @@ Pipeline quyết định mô hình nhìn thấy phân phối token nào và mỗ
 
 ## Đơn vị từ (token / 토큰) ngân sách (budget / 예산) và exposure
 
-Dataset thường được đo bằng **đơn vị từ (token / 토큰) count**, không chỉ số document. Một document dài có nhiều huấn luyện (training / 학습) positions hơn document ngắn. Tokenization cũng ảnh hưởng exposure: cùng một câu tiếng Việt hoặc tiếng Hàn có thể cần nhiều đơn vị từ (token / 토큰) hơn tiếng Anh tùy vocabulary, làm tăng compute và giảm effective ngữ cảnh (context / 맥락) sức chứa (capacity / 용량).
+Dataset thường được đo bằng **token (토큰) count**, không chỉ số document. Một document dài có nhiều huấn luyện (training / 학습) positions hơn document ngắn. Tokenization cũng ảnh hưởng exposure: cùng một câu tiếng Việt hoặc tiếng Hàn có thể cần nhiều token (토큰) hơn tiếng Anh tùy vocabulary, làm tăng compute và giảm effective ngữ cảnh (context / 맥락) sức chứa (capacity / 용량).
 
 Xem thêm: [LLM Tokenization](./01_llm_tokenization.md).
 
@@ -44,9 +44,9 @@ Ngân sách token cho biết lượng tín hiệu mà mô hình nhận được;
 
 ## Nhân quả (causal / 인과적) masking
 
-Decoder-only mô hình (model / 모델) dùng nhân quả (causal / 인과적) mask để đơn vị từ (token / 토큰) tại vị trí `t` không nhìn thấy future đơn vị từ (token / 토큰) `x_{>t}` trong huấn luyện (training / 학습). Điều này làm huấn luyện (training / 학습) tác vụ (task / 작업) khớp với autoregressive generation.
+Decoder-only mô hình (model / 모델) dùng nhân quả (causal / 인과적) mask để token (토큰) tại vị trí `t` không nhìn thấy future token (토큰) `x_{>t}` trong huấn luyện (training / 학습). Điều này làm huấn luyện (training / 학습) tác vụ (task / 작업) khớp với autoregressive generation.
 
-Trong mỗi chuỗi (sequence / 시퀀스), forward pass vẫn có thể xử lý nhiều positions song song vì ground-truth previous tokens đã biết. suy luận (inference / 추론) khác: đơn vị từ (token / 토큰) mới phải được sinh tuần tự vì đầu ra (output / 출력) của bước trước trở thành đầu vào (input / 입력) bước sau.
+Trong mỗi chuỗi (sequence / 시퀀스), forward pass vẫn có thể xử lý nhiều positions song song vì ground-truth previous tokens đã biết. suy luận (inference / 추론) khác: token (토큰) mới phải được sinh tuần tự vì đầu ra (output / 출력) của bước trước trở thành đầu vào (input / 입력) bước sau.
 
 Sự khác nhau này là lý do huấn luyện (training / 학습) thông lượng (throughput / 처리량) và generation độ trễ (latency / 지연 시간) có characteristics rất khác.
 
@@ -54,9 +54,9 @@ Mask xác định phạm vi ngữ cảnh, còn teacher forcing xác định toke
 
 ## Teacher forcing
 
-Trong huấn luyện (training / 학습) autoregressive, mô hình (model / 모델) thường nhận **ground-truth previous tokens** thay vì đơn vị từ (token / 토큰) do chính nó sinh. Cơ chế này gọi là teacher forcing.
+Trong huấn luyện (training / 학습) autoregressive, mô hình (model / 모델) thường nhận **ground-truth previous tokens** thay vì token (토큰) do chính nó sinh. Cơ chế này gọi là teacher forcing.
 
-Nó làm tối ưu hóa (optimization / 최적화) ổn định và parallelizable nhưng tạo mismatch với suy luận (inference / 추론): khi mô hình (model / 모델) sinh sai một đơn vị từ (token / 토큰) lúc triển khai (deployment / 배포), những bước tiếp theo phải điều kiện (condition / 조건) trên chính lỗi đó. lỗi (error / 오류) có thể compound.
+Nó làm tối ưu hóa (optimization / 최적화) ổn định và parallelizable nhưng tạo mismatch với suy luận (inference / 추론): khi mô hình (model / 모델) sinh sai một token (토큰) lúc triển khai (deployment / 배포), những bước tiếp theo phải điều kiện (condition / 조건) trên chính lỗi đó. lỗi (error / 오류) có thể compound.
 
 Instruction tuning và preference huấn luyện (training / 학습) không loại bỏ hoàn toàn mismatch này.
 
@@ -64,7 +64,7 @@ Teacher forcing tạo tín hiệu mục tiêu cho từng vị trí; sequence pac
 
 ## Packing và chuỗi (sequence / 시퀀스) construction
 
-Để tận dụng GPU, nhiều short documents có thể được **packed** vào cùng chuỗi (sequence / 시퀀스). hiện thực (implementation / 구현) phải đảm bảo attention ranh giới (boundary / 경계) đúng nếu không muốn đơn vị từ (token / 토큰) của document này vô tình nhìn sang document khác theo cách không mong muốn.
+Để tận dụng GPU, nhiều short documents có thể được **packed** vào cùng chuỗi (sequence / 시퀀스). hiện thực (implementation / 구현) phải đảm bảo attention ranh giới (boundary / 경계) đúng nếu không muốn token (토큰) của document này vô tình nhìn sang document khác theo cách không mong muốn.
 
 Long-context huấn luyện (training / 학습) cũng làm chi phí (cost / 비용) attention tăng mạnh. Với vanilla self-attention, compute/bộ nhớ (memory / 메모리) attention tăng gần quadratic theo chuỗi (sequence / 시퀀스) length:
 
@@ -143,7 +143,7 @@ Hãy giữ mô hình tư duy này như một câu hỏi kiểm tra: mô hình đ
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
-> Pretraining là quá trình **nén phân phối (distribution / 분포) của một corpus khổng lồ vào parameters** bằng mục tiêu (objective / 목표) dự đoán đơn vị từ (token / 토큰). mô hình (model / 모델) không học một encyclopedia có chỉ mục (index / 인덱스); nó học một hàm (function / 함수) tạo xác suất (probability / 확률) phân phối (distribution / 분포) dựa trên ngữ cảnh (context / 맥락).
+> Pretraining là quá trình **nén phân phối (distribution / 분포) của một corpus khổng lồ vào parameters** bằng mục tiêu (objective / 목표) dự đoán token (토큰). mô hình (model / 모델) không học một encyclopedia có chỉ mục (index / 인덱스); nó học một hàm (function / 함수) tạo xác suất (probability / 확률) phân phối (distribution / 분포) dựa trên ngữ cảnh (context / 맥락).
 
 Các ngộ nhận trên đều quay về một lỗi chung: đồng nhất việc mô hình học được quy luật thống kê với việc mô hình có một kho sự thật hoàn hảo. Phần liên kết kiến thức đặt pretraining cạnh các owner kỹ thuật liên quan để kiểm tra giả định đó.
 

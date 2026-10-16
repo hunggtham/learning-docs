@@ -43,8 +43,6 @@ Vận tốc trung bình:
 
 Mật độ năng lượng động học cũng thu được từ moment bậc hai của `v`.
 
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Phương trình Boltzmann** nối từ **Hàm phân bố một hạt** sang **Nếu không có va chạm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương trình Boltzmann
 
 Trong dạng khái quát,
@@ -61,8 +59,6 @@ Vế trái mô tả hạt trôi trong không gian và bị lực làm thay đổ
 
 Đây không phải phương trình chuyển động của một hạt riêng lẻ. Nó là phương trình tiến hóa của **phân bố thống kê**.
 
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Nếu không có va chạm** nối từ **Phương trình Boltzmann** sang **Vai trò của va chạm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nếu không có va chạm
 
 Khi vế va chạm bằng không,
@@ -74,8 +70,6 @@ Khi vế va chạm bằng không,
 dọc theo quỹ đạo hạt trong không gian pha. Điều đó có nghĩa mật độ phân bố được vận chuyển theo dòng Hamilton của các hạt.
 
 Trong plasma không va chạm, phiên bản này dẫn tới phương trình Vlasov khi lực được xác định tự nhất quán bởi trường điện từ của chính phân bố hạt.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Vai trò của va chạm** nối từ **Nếu không có va chạm** sang **Quãng đường tự do trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vai trò của va chạm
 
@@ -97,8 +91,6 @@ v_{th}\sim\sqrt{\frac{k_BT}{m}}.
 
 Hạt nhẹ có tốc độ nhiệt lớn hơn hạt nặng ở cùng nhiệt độ.
 
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Quãng đường tự do trung bình** nối từ **Vai trò của va chạm** sang **Số Knudsen**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quãng đường tự do trung bình
 
 Giữa các va chạm, một hạt đi quãng đường trung bình `\lambda` gọi là **quãng đường tự do trung bình (mean free path)**.
@@ -116,8 +108,6 @@ Thời gian va chạm đặc trưng là
 ```
 
 `\lambda` và `\tau` quyết định khi nào mô hình chất lưu liên tục là hợp lý.
-
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Số Knudsen** nối từ **Quãng đường tự do trung bình** sang **Từ Boltzmann tới phương trình liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số Knudsen
 
@@ -137,8 +127,6 @@ một phần tử chất lưu chứa nhiều va chạm trước khi thay đổi 
 
 Nếu `Kn` không nhỏ, các hiệu ứng phi liên tục và biên động học trở nên quan trọng. Trong chân không kỹ thuật, vi lưu khí và khí quyển rất loãng, Navier–Stokes có thể không còn đủ.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Từ Boltzmann tới phương trình liên tục** nối từ **Số Knudsen** sang **Moment bậc nhất: phương trình động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ Boltzmann tới phương trình liên tục
 
 Lấy tích phân phương trình Boltzmann trên toàn không gian vận tốc. Vì va chạm bảo toàn số hạt, moment bậc không của hạng va chạm bằng không. Kết quả là
@@ -151,8 +139,6 @@ Lấy tích phân phương trình Boltzmann trên toàn không gian vận tốc.
 Nhân thêm khối lượng cho ta phương trình bảo toàn khối lượng.
 
 Đây là một kết quả quan trọng: phương trình liên tục của chất lưu không phải quy tắc tách rời khỏi động học vi mô; nó xuất hiện như moment của phương trình phân bố.
-
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Moment bậc nhất: phương trình động lượng** nối từ **Từ Boltzmann tới phương trình liên tục** sang **Vì sao có độ nhớt?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Moment bậc nhất: phương trình động lượng
 
@@ -169,8 +155,6 @@ Khi quan hệ cấu thành thích hợp được dùng, nó tiến tới phươn
 
 Như vậy Navier–Stokes có thể được nhìn như mô tả thấp bậc của một lý thuyết động học giàu thông tin hơn.
 
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Vì sao có độ nhớt?** nối từ **Moment bậc nhất: phương trình động lượng** sang **Vì sao có dẫn nhiệt?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao có độ nhớt?
 
 Tưởng tượng hai lớp khí có vận tốc trung bình khác nhau. Các phân tử từ lớp nhanh bay sang lớp chậm mang theo động lượng lớn hơn trung bình; phân tử từ lớp chậm đi ngược lại mang động lượng nhỏ hơn.
@@ -185,8 +169,6 @@ Bậc độ lớn của độ nhớt động học có thể hiểu qua
 
 Hệ số chính xác phụ thuộc mô hình va chạm, nhưng cấu trúc cho thấy vận chuyển mạnh hơn khi hạt đi xa hơn và nhanh hơn giữa các va chạm.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Vì sao có dẫn nhiệt?** nối từ **Vì sao có độ nhớt?** sang **Vì sao có khuếch tán?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao có dẫn nhiệt?
 
 Trong vùng nóng, phân tử có năng lượng động học trung bình lớn hơn. Các hạt chuyển động sang vùng lạnh mang năng lượng theo; hạt từ vùng lạnh mang ít năng lượng hơn quay lại.
@@ -198,8 +180,6 @@ Dòng năng lượng ròng hướng xuống độ dốc (gradient / 기울기) n
 ```
 
 Một lần nữa, hệ số vận chuyển vĩ mô xuất hiện từ chuyển động và va chạm vi mô.
-
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Vì sao có khuếch tán?** nối từ **Vì sao có dẫn nhiệt?** sang **H-theorem và xu hướng tới cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao có khuếch tán?
 
@@ -216,8 +196,6 @@ D\sim v_{th}\lambda.
 ```
 
 Điểm sâu là khuếch tán, độ nhớt và dẫn nhiệt đều là các hình thức **vận chuyển do chuyển động vi mô giữa những vùng có giá trị vĩ mô khác nhau**.
-
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **H-theorem và xu hướng tới cân bằng** nối từ **Vì sao có khuếch tán?** sang **Nghịch lý thuận nghịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## H-theorem và xu hướng tới cân bằng
 
@@ -237,15 +215,11 @@ Dưới các giả định của mô hình va chạm Boltzmann,
 
 Tuy nhiên cần hiểu giả định “molecular chaos”: trước va chạm, vận tốc của hai hạt được xem gần như không tương quan. Việc đưa giả định thống kê này vào là nơi mũi tên thời gian xuất hiện trong mô tả động học, dù động lực học vi mô cơ bản có thể thuận nghịch.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Nghịch lý thuận nghịch** nối từ **H-theorem và xu hướng tới cân bằng** sang **Xấp xỉ thời gian thư giãn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nghịch lý thuận nghịch
 
 Nếu phương trình Newton cho các hạt thuận nghịch theo thời gian, tại sao entropy lại tăng?
 
 Không có mâu thuẫn đơn giản. Mô tả vĩ mô bỏ đi thông tin chi tiết về tương quan vi mô, và H-theorem dựa trên giả định thống kê về trạng thái trước va chạm. Entropy tăng là phát biểu về những trạng thái vĩ mô cực kỳ điển hình trong một không gian trạng thái khổng lồ, không phải tuyên bố rằng phương trình vi mô mất tính thuận nghịch.
-
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Xấp xỉ thời gian thư giãn** nối từ **Nghịch lý thuận nghịch** sang **Liên hệ với mô hình Drude**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xấp xỉ thời gian thư giãn
 
@@ -261,8 +235,6 @@ Nó nói phân bố có xu hướng thư giãn về cân bằng `f_{eq}` với t
 
 Mặc dù đơn giản, xấp xỉ này rất hữu ích trong vật lý bán dẫn, vận chuyển (transport / 전송) điện tử và plasma khi cần trực giác về cạnh tranh giữa lực ngoài và va chạm.
 
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Liên hệ với mô hình Drude** nối từ **Xấp xỉ thời gian thư giãn** sang **Khi phương trình Boltzmann không đủ?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ với mô hình Drude
 
 Trong kim loại, mô hình Drude có thể được hiểu như một xấp xỉ động học rất đơn giản: electron được gia tốc bởi điện trường giữa các sự kiện tán xạ có thời gian thư giãn `\tau`.
@@ -275,8 +247,6 @@ Trong kim loại, mô hình Drude có thể được hiểu như một xấp x�
 
 Mô hình lượng tử hiện đại tinh tế hơn, nhưng ý tưởng “trường tạo động lượng có hướng, va chạm làm thư giãn phân bố” vẫn là nền tảng của lý thuyết vận chuyển.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Khi phương trình Boltzmann không đủ?** nối từ **Liên hệ với mô hình Drude** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi phương trình Boltzmann không đủ?
 
 Mô hình Boltzmann cổ điển có giới hạn. Với khí lượng tử suy biến, phải xét thống kê Fermi–Dirac hoặc Bose–Einstein và các hệ số chặn/tăng cường trạng thái cuối.
@@ -284,8 +254,6 @@ Mô hình Boltzmann cổ điển có giới hạn. Với khí lượng tử suy 
 Trong hệ tương tác mạnh, tương quan nhiều hạt có thể quan trọng. Với plasma không va chạm, trường tự nhất quán và hiệu ứng tập thể có thể chi phối hơn va chạm hai hạt đơn giản.
 
 Ở thang nano, mô tả sóng lượng tử hoặc vận chuyển Landauer có thể phù hợp hơn mô hình khuếch tán cổ điển.
-
-> **Nối mạch:** Trong **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi phương trình Boltzmann không đủ?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -301,8 +269,6 @@ quỹ đạo từng hạt
 
 Nó giải thích **vì sao** các định luật khuếch tán, độ nhớt và dẫn nhiệt có dạng độ dốc (gradient / 기울기): hạt mang các đại lượng vi mô qua những khoảng tự do hữu hạn giữa các vùng có trạng thái khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Nhiệt độ là vận tốc của một hạt”
@@ -316,8 +282,6 @@ Không. Va chạm tái phân bố năng lượng và động lượng giữa cá
 ### “Navier–Stokes và Boltzmann là hai lý thuyết không liên quan”
 
 Không. Trong miền thích hợp, phương trình chất lưu có thể được suy ra như các moment gần cân bằng của mô tả động học.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết động học và phương trình Boltzmann: cầu nối từ hạt tới vận chuyển**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

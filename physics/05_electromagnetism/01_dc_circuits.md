@@ -20,8 +20,6 @@ I=\frac{dQ}{dt}.
 
 Chiều dòng điện quy ước là chiều chuyển động của điện tích dương. Trong kim loại, electron mang điện âm nên vận tốc trôi của electron ngược chiều dòng điện quy ước.
 
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Vận tốc trôi và tốc độ truyền tín hiệu** nối từ **Dòng điện là tốc độ truyền điện tích** sang **Mật độ dòng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vận tốc trôi và tốc độ truyền tín hiệu
 
 Trong dây kim loại, electron có chuyển động nhiệt rất nhanh nhưng vận tốc trôi trung bình do điện trường thường nhỏ. Điều này không có nghĩa bóng đèn phải chờ electron đi từ công tắc tới bóng mới sáng.
@@ -35,8 +33,6 @@ vận tốc trôi của hạt tải
 ≠
 tốc độ lan truyền tín hiệu điện từ
 ```
-
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mật độ dòng điện** nối từ **Vận tốc trôi và tốc độ truyền tín hiệu** sang **Quan hệ Ohm ở mức vĩ mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mật độ dòng điện
 
@@ -67,8 +63,6 @@ I=\int_A\mathbf J\cdot d\mathbf A.
 
 Đây là cùng cấu trúc bảo toàn xuất hiện trong chất lưu: lượng trong một vùng thay đổi do dòng qua biên.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vĩ mô** nối từ **Mật độ dòng điện** sang **Quan hệ Ohm ở mức vi mô**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quan hệ Ohm ở mức vĩ mô
 
 Với một phần tử ohmic trong miền hoạt động tuyến tính,
@@ -84,8 +78,6 @@ R=\rho\frac{L}{A}.
 ```
 
 Dây dài hơn có điện trở lớn hơn vì hạt tải phải đi qua quãng đường dài hơn. Tiết diện lớn hơn giảm điện trở vì có nhiều kênh dẫn song song hơn.
-
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** nối từ **Quan hệ Ohm ở mức vĩ mô** sang **Nguồn điện áp và sức điện động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Ohm ở mức vi mô
 
@@ -105,8 +97,6 @@ Quan hệ này cho thấy `V=IR` là kết quả vĩ mô của một quan hệ c
 
 Ohm không phải định luật phổ quát cho mọi linh kiện. Diode, transistor, bóng đèn dây tóc và nhiều điện cực hóa học có đặc tuyến `I-V` phi tuyến.
 
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** đặt vấn đề; **Nguồn điện áp và sức điện động** đối chiếu bằng chứng, rồi **Điện trở trong của nguồn** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nguồn điện áp và sức điện động
 
 Pin hoặc nguồn lý tưởng được mô hình như thiết bị cung cấp chênh lệch thế điện hóa. Suất điện động (electromotive force, emf) `\mathcal E` có đơn vị volt dù tên chứa chữ “force”. Nó biểu diễn năng lượng được cung cấp trên mỗi đơn vị điện tích:
@@ -116,8 +106,6 @@ Pin hoặc nguồn lý tưởng được mô hình như thiết bị cung cấp 
 ```
 
 Trong pin, năng lượng hóa học duy trì sự tách điện tích và chênh lệch thế.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Nguồn điện áp và sức điện động** đặt vấn đề; **Điện trở trong của nguồn** đối chiếu bằng chứng, rồi **Công suất điện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Điện trở trong của nguồn
 
@@ -130,8 +118,6 @@ V_{terminal}=\mathcal E-Ir.
 ```
 
 Khi tải yêu cầu dòng lớn, sụt áp trong nguồn tăng và một phần năng lượng bị tỏa nhiệt bên trong pin.
-
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở trong của nguồn** đặt vấn đề; **Công suất điện** đối chiếu bằng chứng, rồi **Quy tắc dấu công suất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Công suất điện
 
@@ -152,8 +138,6 @@ Năng lượng điện chuyển thành nhiệt qua tương tác giữa hạt t�
 
 Công suất không phải “dòng điện bị tiêu thụ”. Điện tích vẫn được bảo toàn; thứ được chuyển đổi là năng lượng.
 
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quy tắc dấu công suất** nối từ **Công suất điện** sang **Định luật Kirchhoff về dòng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quy tắc dấu công suất
 
 Nếu dòng đi vào cực được chọn là điện áp dương của một phần tử, quy ước thụ động cho
@@ -165,8 +149,6 @@ P=VI>0
 khi phần tử hấp thụ năng lượng.
 
 Nếu `P<0`, phần tử đang cung cấp năng lượng cho phần còn lại của mạch. Quy tắc dấu giúp tránh nhầm lẫn khi nguồn có thể vừa nạp vừa xả như pin sạc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về dòng điện** nối từ **Quy tắc dấu công suất** sang **Định luật Kirchhoff về điện áp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Kirchhoff về dòng điện
 
@@ -186,8 +168,6 @@ Nếu điện tích đáng kể đang tích tụ tại nút, dạng tổng quát
 ```
 
 Trong mạch tập trung thông thường, điện tích nút ổn định rất nhanh nên vế phải được xem gần bằng không.
-
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về điện áp** nối từ **Định luật Kirchhoff về dòng điện** sang **Điện trở nối tiếp và song song**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Kirchhoff về điện áp
 
@@ -210,8 +190,6 @@ nên tổng “voltage drops” electrostatic đơn giản cần được sửa 
 
 Điều này cho thấy Kirchhoff là xấp xỉ mạch của điện từ học đầy đủ.
 
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở nối tiếp và song song** nối từ **Định luật Kirchhoff về điện áp** sang **Chia áp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điện trở nối tiếp và song song
 
 Với điện trở nối tiếp, cùng dòng đi qua mọi phần tử và hiệu điện thế cộng:
@@ -228,8 +206,6 @@ Với điện trở song song, cùng hiệu điện thế đặt lên các nhán
 ```
 
 Đây không nên học như hai công thức biệt lập. Chúng đi trực tiếp từ topology của mạch cộng với KCL/KVL và quan hệ `V=IR`.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia áp** nối từ **Điện trở nối tiếp và song song** sang **Chia dòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chia áp
 
@@ -251,8 +227,6 @@ V_2
 
 Khi nối thêm tải vào đầu ra, tải làm thay đổi điện trở tương đương và tỉ số chia áp. Vì vậy công thức chia áp lý tưởng chỉ đúng khi tải không làm mạch thay đổi đáng kể hoặc đã được đưa vào mô hình.
 
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia dòng** nối từ **Chia áp** sang **Tụ điện trong mạch DC**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chia dòng
 
 Với hai nhánh song song,
@@ -271,8 +245,6 @@ I_1
 ```
 
 Công thức có vẻ “ngược” vì dòng qua `R_1` chứa `R_2`, nhưng điều này chỉ phản ánh việc nhánh điện trở lớn hơn cạnh tranh kém hơn trong chia dòng.
-
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Tụ điện trong mạch DC** nối từ **Chia dòng** sang **Mạch RC nạp điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tụ điện trong mạch DC
 
@@ -295,8 +267,6 @@ I=0.
 ```
 
 Vì vậy ở trạng thái DC xác lập, tụ lý tưởng không cho dòng dẫn liên tục đi qua. Nhưng trong quá trình chuyển tiếp, nó có thể nhận hoặc nhả dòng lớn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch RC nạp điện** nối từ **Tụ điện trong mạch DC** sang **Hằng số thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạch RC nạp điện
 
@@ -336,8 +306,6 @@ Dòng điện:
 I(t)=\frac{V_0}{R}e^{-t/RC}.
 ```
 
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Hằng số thời gian** nối từ **Mạch RC nạp điện** sang **Xả tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hằng số thời gian
 
 Đặt
@@ -364,8 +332,6 @@ Sau khoảng `5\tau`, hệ thường được xem gần trạng thái xác lập
 
 Phân tích thứ nguyên giúp kiểm tra ngay công thức.
 
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Xả tụ** nối từ **Hằng số thời gian** sang **Năng lượng khi nạp tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xả tụ
 
 Nếu bỏ nguồn và cho tụ xả qua điện trở,
@@ -383,8 +349,6 @@ Q(t)=Q_0e^{-t/RC}.
 Hàm mũ xuất hiện vì tốc độ thay đổi tỉ lệ với lượng còn lại.
 
 Cùng cấu trúc này xuất hiện trong phân rã phóng xạ, làm nguội tuyến tính hóa và nhiều hệ bậc nhất.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** nối từ **Xả tụ** sang **Mạch tập trung có giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng khi nạp tụ
 
@@ -404,8 +368,6 @@ Một nửa được lưu trong tụ, một nửa bị tỏa nhiệt trên đi�
 
 Đây là một kết quả đáng chú ý và nhắc rằng cần phân biệt động lực học theo thời gian với cân bằng năng lượng tổng.
 
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** đặt tiêu chí; **Mạch tập trung có giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Mạch tập trung có giới hạn
 
 Mô hình lumped circuit giả sử điện áp và dòng có thể gán cho phần tử mà không cần theo dõi độ trễ lan truyền bên trong chúng.
@@ -414,15 +376,11 @@ Khi kích thước mạch trở nên đáng kể so với bước sóng tín hi�
 
 Một dây dài ở GHz không thể luôn được xem chỉ là một điện trở hoặc một kết nối lý tưởng.
 
-> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch tập trung có giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Mạch DC là cách nén điện từ học thành một mạng các phần tử. Dòng điện là thông lượng điện tích, điện áp là chênh lệch năng lượng trên mỗi điện tích, KCL là bảo toàn điện tích và KVL là xấp xỉ quasi-static của trường điện bảo toàn.
 
 Điện trở mô tả mất năng lượng có hướng của hạt tải vào dao động vi mô; tụ điện lưu năng lượng trong trường; nguồn chuyển năng lượng từ hóa học hoặc cơ chế khác thành năng lượng điện.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -441,8 +399,6 @@ Chỉ ở DC xác lập lý tưởng. Trong quá trình nạp/xả hoặc tín h
 ### “Kirchhoff luôn đúng chính xác cho mọi dây và mọi tần số”
 
 Không. Quy tắc mạch tập trung là xấp xỉ của Maxwell; ở tần số cao hoặc kích thước lớn phải tính lan truyền và cảm ứng.
-
-> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

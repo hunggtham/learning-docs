@@ -12,23 +12,17 @@ Băm (hash / 해시) không có secret key, nên ai cũng có thể băm (hash /
 
 SHA-256 là cryptographic băm (hash / 해시) phổ biến; MD5/SHA-1 không phù hợp collision-sensitive bảo mật (security / 보안) hiện đại (modern / 현대적) dù có thể còn dùng non-security checksums/legacy identifiers.
 
-> **Nối mạch:** Cryptographic hash gives integrity primitive; password hashing adds salt/cost for offline resistance, while MAC next authenticates message origin with a shared secret.
-
 ## Password hashing
 
 Password không nên lưu bằng fast general băm (hash / 해시). Attacker có cơ sở dữ liệu (database / 데이터베이스) hashes có thể thử billions guesses. Password KDF như Argon2, scrypt, bcrypt hoặc PBKDF2 intentionally expensive và salted.
 
 Salt random unique per password ngăn precomputed rainbow tables và làm identical passwords có hashes khác. Salt không cần secret. Pepper nếu dùng là server-held secret separate from DB.
 
-> **Nối mạch:** **MAC** nối từ **Password hashing** sang **Symmetric encryption**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## MAC
 
 Message Authentication mã (code / 코드) dùng dùng chung (shared / 공유) secret key để tạo tag, cung cấp integrity + authenticity giữa parties biết key. HMAC xây MAC từ cryptographic băm (hash / 해시) theo construction an toàn, không phải `hash(key || message)` tự chế.
 
 MAC không cung cấp non-repudiation giữa parties cùng share key vì cả hai có thể forge tag.
-
-> **Nối mạch:** **Symmetric encryption** nối từ **MAC** sang **Public-key cryptography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Symmetric encryption
 
@@ -38,15 +32,11 @@ Authenticated Encryption with Associated dữ liệu (data / 데이터) — AEAD
 
 Nonce reuse có thể catastrophic tùy construction; “random IV bất kỳ” không phải universal quy tắc (rule / 규칙).
 
-> **Nối mạch:** **Public-key cryptography** nối từ **Symmetric encryption** sang **Digital signature**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Public-key cryptography
 
 Asymmetric hệ thống (system / 시스템) có công khai (public / 공개)/private key. Encryption/key encapsulation cho phép establish secret tới holder private key; digital signature cho verifier dùng công khai (public / 공개) key kiểm tra signature private-key holder tạo.
 
 Public-key operations chậm hơn symmetric, nên protocols thường dùng asymmetric key exchange/authentication để establish symmetric session keys, rồi bulk encrypt symmetric.
-
-> **Nối mạch:** **Digital signature** nối từ **Public-key cryptography** sang **Key exchange và forward secrecy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital signature
 
@@ -54,39 +44,27 @@ Signature binds message to private key thao tác (operation / 연산) under thu�
 
 PKI/certificates giải phân phối (distribution / 분포)/trust ánh xạ (mapping / 매핑) bằng certificate authorities và kiểm tra hợp lệ (validation / 검증) rules.
 
-> **Nối mạch:** **Key exchange và forward secrecy** nối từ **Digital signature** sang **Randomness**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Key exchange và forward secrecy
 
 Ephemeral Diffie–Hellman variants cho parties derive dùng chung (shared / 공유) secret qua công khai (public / 공개) channel. Nếu ephemeral private keys bị discard, later compromise long-term key không necessarily decrypt past captured sessions — forward secrecy.
 
 TLS hiện đại (modern / 현대적) commonly uses ephemeral key exchange + certificates for authentication.
 
-> **Nối mạch:** **Randomness** nối từ **Key exchange và forward secrecy** sang **Checksums vs hashes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Randomness
 
 Cryptographic keys/nonces cần cryptographically secure random generator. `Math.random()`-style PRNG không thích hợp cho secrets nếu predictable. CSPRNG seed/trạng thái (state / 상태) bảo mật (security / 보안) là foundational.
-
-> **Nối mạch:** **Checksums vs hashes** nối từ **Randomness** sang **Crypto kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Checksums vs hashes
 
 CRC detects accidental transmission errors efficiently but attacker có thể deliberately alter message và recompute CRC. Cryptographic integrity primitives assume adversary and are computationally stronger.
 
-> **Nối mạch:** **Crypto kỹ thuật (engineering / 엔지니어링)** nối từ **Checksums vs hashes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Crypto kỹ thuật (engineering / 엔지니어링)
 
 “Do not roll your own crypto” không chỉ vì math khó; giao thức (protocol / 프로토콜) composition, nonce management, side channels, key rotation, encoding, lỗi (error / 오류) hành vi (behavior / 동작) đều dễ sai. Use mature libraries/protocols and safe APIs.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Crypto kỹ thuật (engineering / 엔지니어링)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > băm (hash / 해시) = fingerprint không key. MAC = integrity/authenticity với dùng chung (shared / 공유) key. Encryption = confidentiality. AEAD = confidentiality + integrity. Signature = authenticity/integrity với asymmetric key. **Key management quyết định bảo mật (security / 보안) thực tế nhiều như thuật toán (algorithm / 알고리즘).**
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -95,8 +73,6 @@ CRC detects accidental transmission errors efficiently but attacker có thể de
 **“Base64 là encryption.”** Chỉ encoding reversible không secret.
 
 **“Encrypt rồi là không cần integrity.”** Malleability/tampering có thể nguy hiểm; authenticated encryption preferred.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -8,8 +8,6 @@ Nước sôi là ví dụ chuyển pha quen thuộc, nhưng nhiều hệ như na
 
 Hiện tượng tới hạn (critical phenomena / 임계현상) là vùng mà chi tiết vi mô có thể trở nên kém quan trọng hơn đối xứng, số chiều và tương quan tập thể.
 
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Tham số trật tự** nối từ **Vì sao chuyển pha không chỉ là “đổi trạng thái”?** sang **Mô hình Landau cho năng lượng tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tham số trật tự
 
 Tham số trật tự (order parameter / 질서변수) là đại lượng dùng để phân biệt các pha.
@@ -22,8 +20,6 @@ Với hệ sắt từ, từ hóa `M` là một lựa chọn tự nhiên. Khi kh�
 Các phương trình có đối xứng `M\to -M`, nhưng trạng thái cân bằng cụ thể chọn một nhánh. Đây là **phá vỡ đối xứng tự phát (spontaneous symmetry breaking / 자발적 대칭 깨짐)**.
 
 Trong chuyển pha lỏng–khí, chênh lệch mật độ có thể đóng vai tham số trật tự. Trong siêu dẫn, tham số trật tự là một trường phức liên hệ với condensate kết hợp.
-
-> **Nối mạch:** Ở chặng này của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Mô hình Landau cho năng lượng tự do** nối từ **Tham số trật tự** sang **Độ dài tương quan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Landau cho năng lượng tự do
 
@@ -63,8 +59,6 @@ M\propto(T_c-T)^{1/2}.
 
 Số mũ `1/2` là một số mũ tới hạn của mô hình trường trung bình. Trong nhiều hệ thực, đặc biệt ở số chiều thấp, dao động không gian làm số mũ thực nghiệm khác giá trị này.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Độ dài tương quan** nối từ **Mô hình Landau cho năng lượng tự do** sang **Tính phổ quát**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ dài tương quan
 
 Hàm tương quan mô tả mức độ trạng thái ở hai điểm cách nhau `r` còn liên hệ với nhau đến đâu.
@@ -78,8 +72,6 @@ Xa điểm tới hạn, tương quan thường giảm trên một thang chiều 
 Khi `T\to T_c`, `\xi` tăng rất lớn. Hệ không còn một thang vi mô duy nhất chi phối; các vùng từ rất nhỏ đến rất lớn trở nên tương quan.
 
 Hiện tượng opalescence tới hạn là ví dụ quang học: dao động mật độ trên nhiều thang làm ánh sáng nhìn thấy bị tán xạ mạnh.
-
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Tính phổ quát** nối từ **Độ dài tương quan** sang **Nhóm tái chuẩn hóa: vật lý khi thay đổi thang đo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính phổ quát
 
@@ -95,8 +87,6 @@ Lý do là khi quan sát ở thang đủ lớn, nhiều chi tiết vi mô trở 
 - phạm vi tương tác.
 
 Đây là một bài học quan trọng của vật lý hiện đại: **cùng một lý thuyết hiệu dụng có thể nổi lên từ những hệ vi mô rất khác nhau**.
-
-> **Nối mạch:** Ở chặng này của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Nhóm tái chuẩn hóa: vật lý khi thay đổi thang đo** nối từ **Tính phổ quát** sang **Bất biến theo thang và quy luật lũy thừa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm tái chuẩn hóa: vật lý khi thay đổi thang đo
 
@@ -119,8 +109,6 @@ Các coupling có thể được phân thành:
 
 Tính phổ quát xuất hiện vì nhiều mô hình vi mô khác nhau có thể chảy về cùng một fixed điểm (point / 지점).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Bất biến theo thang và quy luật lũy thừa** nối từ **Nhóm tái chuẩn hóa: vật lý khi thay đổi thang đo** sang **Chuyển pha bậc nhất và chuyển pha liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bất biến theo thang và quy luật lũy thừa
 
 Khi không còn một thang chiều dài đặc trưng, quy luật mũ suy giảm thường được thay bằng quy luật lũy thừa:
@@ -131,8 +119,6 @@ C(r)\sim r^{-\alpha}.
 
 Quy luật lũy thừa cũng xuất hiện trong dòng rối, percolation và nhiều hệ phức tạp khác. Tuy nhiên, nhìn thấy một power law không tự động chứng minh hệ đang ở trọng yếu (critical / 중요) điểm (point / 지점); cần kiểm tra cơ chế, miền thang đo và hiệu ứng kích thước hữu hạn.
 
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Chuyển pha bậc nhất và chuyển pha liên tục** nối từ **Bất biến theo thang và quy luật lũy thừa** sang **Mô hình Ising**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển pha bậc nhất và chuyển pha liên tục
 
 Không phải mọi chuyển pha đều có hiện tượng tới hạn.
@@ -142,8 +128,6 @@ Chuyển pha bậc nhất thường có ẩn nhiệt và đồng tồn tại pha
 Chuyển pha liên tục có tham số trật tự thay đổi liên tục nhưng susceptibility hoặc độ dài tương quan có thể phân kỳ.
 
 RG đặc biệt quan trọng đối với các chuyển pha liên tục, nơi dao động đa thang quyết định hành vi gần trọng yếu (critical / 중요) điểm (point / 지점).
-
-> **Nối mạch:** Ở chặng này của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Mô hình Ising** nối từ **Chuyển pha bậc nhất và chuyển pha liên tục** sang **Các số mũ tới hạn và quan hệ scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Ising
 
@@ -156,8 +140,6 @@ H=-J\sum_{\langle ij\rangle}s_is_j-h\sum_i s_i.
 Dù cực kỳ đơn giản, mô hình nắm bắt cạnh tranh giữa tương tác muốn các spin lân cận cùng hướng và entropy muốn nhiều cấu hình có thể xảy ra.
 
 Trong 2D, mô hình Ising có nghiệm tới hạn chính xác và cho số mũ khác lý thuyết trường trung bình. Nó là “phòng thí nghiệm lý thuyết” cho phá vỡ đối xứng, phổ quát, Monte Carlo và RG.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Các số mũ tới hạn và quan hệ scaling** nối từ **Mô hình Ising** sang **Khi nào trường trung bình thất bại?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các số mũ tới hạn và quan hệ scaling
 
@@ -177,8 +159,6 @@ Từ hóa, susceptibility và nhiệt dung cũng có các số mũ riêng.
 
 Các số mũ không hoàn toàn độc lập. Các giả thuyết scaling tạo quan hệ giữa chúng, nhờ đó đo một số đại lượng có thể dùng để kiểm tra tính nhất quán của lớp phổ quát.
 
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Khi nào trường trung bình thất bại?** nối từ **Các số mũ tới hạn và quan hệ scaling** sang **Finite-size scaling trong mô phỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi nào trường trung bình thất bại?
 
 Lý thuyết Landau giả sử dao động quanh tham số trật tự trung bình không quá mạnh.
@@ -186,8 +166,6 @@ Lý thuyết Landau giả sử dao động quanh tham số trật tự trung bì
 Gần trọng yếu (critical / 중요) điểm (point / 지점), `\xi` tăng lớn và dao động xuất hiện trên nhiều thang. Ở số chiều thấp, chúng có thể làm xấp xỉ trường trung bình không còn đúng.
 
 Tiêu chuẩn Ginzburg (Ginzburg criterion / 긴즈부르크 기준) ước lượng miền nhiệt độ nơi dao động trở nên đủ mạnh để trường dữ liệu (field / 필드) lý thuyết (theory / 이론) trung bình mất độ tin cậy.
-
-> **Nối mạch:** Ở chặng này của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Finite-size scaling trong mô phỏng** nối từ **Khi nào trường trung bình thất bại?** sang **Liên hệ với khoa học máy tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Finite-size scaling trong mô phỏng
 
@@ -197,8 +175,6 @@ Finite-size scaling khai thác phụ thuộc theo `L` để ngoại suy giới h
 
 Đây là cầu nối trực tiếp giữa RG trừu tượng và phân tích dữ liệu Monte Carlo thực tế.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Liên hệ với khoa học máy tính** nối từ **Finite-size scaling trong mô phỏng** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ với khoa học máy tính
 
 Mô phỏng Metropolis và các phương pháp Monte Carlo cho phép khảo sát hệ tới hạn lớn.
@@ -207,15 +183,11 @@ Gần trọng yếu (critical / 중요) điểm (point / 지점), **trọng yế
 
 Trong machine học tập (learning / 학습), coarse-graining và latent biểu diễn (representation / 표현) đôi khi được so sánh với RG. So sánh này hữu ích ở mức trực giác “loại bỏ bậc tự do không quan trọng theo thang”, nhưng RG là một khung toán–lý cụ thể chứ không đồng nghĩa với giảm chiều dữ liệu.
 
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Liên hệ với khoa học máy tính** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Miền áp dụng và giới hạn
 
 Khai triển Landau hoạt động tốt khi tham số trật tự thay đổi chậm và dao động không quá mạnh. Nó không tự động dự đoán đúng số mũ tới hạn thực tế.
 
 RG cung cấp mô tả sâu hơn nhưng việc tính luồng (flow / 흐름) chính xác có thể khó. Trong nhiều hệ cần dùng khai triển nhiễu loạn, mô phỏng lattice hoặc phương pháp số chuyên dụng.
-
-> **Nối mạch:** Ở chặng này của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -235,8 +207,6 @@ microscopic model
 → universality class
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 ### “Tính phổ quát nghĩa mọi chuyển pha đều giống nhau”
@@ -254,8 +224,6 @@ Không. Nó vẫn cho trực giác về tham số trật tự, symmetry breaking
 ### “Mọi power law đều chứng minh criticality”
 
 Không. Cần kiểm tra cơ chế, phạm vi scaling, finite-size tác động (effect / 효과) và các mô hình thay thế.
-
-> **Nối mạch:** Trong **Hiện tượng tới hạn, tính phổ quát và nhóm tái chuẩn hóa**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

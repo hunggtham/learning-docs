@@ -27,8 +27,6 @@ graph LR
 
 Khi yêu cầu thất bại, đồ thị này tạo ra danh sách các lớp có thể quan sát và kiểm tra.
 
-> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tên và đối tượng** nối từ **Một yêu cầu web đi qua Linux như thế nào?** sang **Tham chiếu và vòng đời**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tên và đối tượng
 
 Một quy luật xuyên suốt Linux là **tên không phải bản thân đối tượng**.
@@ -39,15 +37,11 @@ Khi đồng nhất tên với đối tượng, việc xử lý sự cố dễ đ
 
 Mô hình chung là luôn hỏi: **bước phân giải nào biến tên thành đối tượng hoặc trạng thái hiện tại?**
 
-> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Tham chiếu và vòng đời** nối từ **Tên và đối tượng** sang **Cô lập là thay đổi góc nhìn và quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tham chiếu và vòng đời
 
 Nhiều đối tượng Linux tồn tại dựa trên tham chiếu và vòng đời. Một tệp (file / 파일) descriptor đang mở có thể giữ đối tượng tệp sống sau khi tên bị `unlink`. Socket tồn tại theo vòng đời tiến trình và tệp (file / 파일) descriptor. Tiến trình con kết thúc cần tiến trình cha thu nhận trạng thái. Mount giữ một hệ thống tệp gắn trong không gian tên (namespace / 네임스페이스).
 
 Khái niệm **tham chiếu và vòng đời (reference/lifetime)** có mối liên hệ mạnh với lập trình: garbage collection, tham chiếu (reference / 참조) counting, quyền sở hữu tài nguyên và RAII/`try-with-resources` đều giải quyết các biến thể của câu hỏi "tài nguyên này vẫn đang được ai giữ?".
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Cô lập là thay đổi góc nhìn và quyền** nối từ **Tham chiếu và vòng đời** sang **Khả năng kết hợp thông qua tệp (file / 파일) descriptor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cô lập là thay đổi góc nhìn và quyền
 
@@ -67,15 +61,11 @@ Sự cô lập không phải một cơ chế duy nhất. Nó là sự kết hợ
 
 Đó là lý do câu "ứng dụng chạy trong bộ chứa (container / 컨테이너)" chưa đủ để trả lời một câu hỏi bảo mật.
 
-> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** nối từ **Cô lập là thay đổi góc nhìn và quyền** sang **Trạng thái và bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng kết hợp thông qua tệp (file / 파일) descriptor
 
 Tệp thông thường, pipe, terminal và socket khác nhau về quy tắc hoạt động, nhưng nhiều thao tác hội tụ ở lớp trừu tượng tệp (file / 파일) descriptor. Shell tận dụng điểm chung này để chuyển hướng và tạo chuỗi xử lý (pipeline / 파이프라인) mà chương trình không cần biết trước đích cụ thể.
 
 Đây là một bài học rộng hơn trong kỹ nghệ phần mềm: **giao diện nhỏ, ổn định làm tăng khả năng kết hợp**. Giao diện I/O của Unix là một ví dụ lịch sử rất rõ cho nguyên tắc này.
-
-> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Khả năng kết hợp thông qua tệp (file / 파일) descriptor** đặt vấn đề; **Trạng thái và bằng chứng** đối chiếu bằng chứng, rồi **Dung lượng phục vụ và hàng đợi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trạng thái và bằng chứng
 
@@ -88,8 +78,6 @@ quan sát -> giả thuyết -> phép kiểm tra phân biệt -> can thiệp -> x
 ```
 
 Cùng cách suy nghĩ này áp dụng được cho gỡ lỗi mã nguồn, hiệu năng truy vấn cơ sở dữ liệu và hệ thống phân tán.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái và bằng chứng** đặt vấn đề; **Dung lượng phục vụ và hàng đợi** đối chiếu bằng chứng, rồi **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dung lượng phục vụ và hàng đợi
 
@@ -107,23 +95,17 @@ Trong đó `L` là số lượng phần tử trung bình trong hệ thống, `λ
 
 Cần nhớ giả định trạng thái ổn định và ranh giới đo phải được xác định rõ; một đợt tăng tải ngắn trên môi trường vận hành (production / 운영 환경) có thể chưa thỏa các giả định đó.
 
-> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** nối từ **Dung lượng phục vụ và hàng đợi** sang **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới
 
 Page bộ nhớ đệm (cache / 캐시) dùng RAM để giảm I/O đĩa. bộ nhớ đệm (cache / 캐시) DNS giảm thời gian phân giải nhưng làm thay đổi không lan truyền tức thời. bộ nhớ đệm (cache / 캐시) CPU và TLB giảm chi phí truy cập hoặc dịch địa chỉ. bộ nhớ đệm (cache / 캐시) ở ứng dụng giảm tải phía sau nhưng tạo bài toán hết hạn và làm mới dữ liệu.
 
 Mô hình chung là bộ nhớ đệm (cache / 캐시) đổi **không gian lưu trữ và độ phức tạp nhất quán** để lấy **độ trễ thấp hơn hoặc thông lượng cao hơn**. Khi gỡ lỗi, hãy hỏi bộ nhớ đệm (cache / 캐시) nằm ở lớp nào, cơ chế hết hạn là gì và dữ liệu được làm mới theo quy tắc nào.
 
-> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** nối từ **Bộ nhớ đệm (cache / 캐시) là sự đánh đổi giữa thời gian, không gian và độ mới** sang **Trạng thái mong muốn và trạng thái thực tế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp
 
 Bộ nhớ ảo ánh xạ địa chỉ ảo → vật lý. Hệ thống tệp ánh xạ đường dẫn → `inode`/dữ liệu. DNS ánh xạ tên → IP. Symlink ánh xạ tên → đường dẫn đích. LVM ánh xạ volume lô-gic (logic / 논리) → lưu trữ vật lý. Mạng bộ chứa (container / 컨테이너) ánh xạ giao diện ảo → mạng host.
 
 **Ánh xạ gián tiếp (indirection)** tạo sự linh hoạt nhưng đồng thời thêm một lớp phân giải có thể thất bại. Người xử lý sự cố có kinh nghiệm thường nhanh hơn vì biết các điểm ánh xạ nào cần được kiểm tra.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Trạng thái mong muốn và trạng thái thực tế** nối từ **Ánh xạ gián tiếp tạo linh hoạt nhưng thêm lớp** sang **Kết nối với độ tin cậy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái mong muốn và trạng thái thực tế
 
@@ -133,15 +115,11 @@ Sửa `application.yml` không có nghĩa JVM đang chạy đã nạp lại. S�
 
 Việc xác minh vận hành phải kiểm tra **trạng thái thực tế đang có hiệu lực**, không chỉ nhìn tệp cấu hình.
 
-> **Nối mạch:** Trong **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Kết nối với độ tin cậy** nối từ **Trạng thái mong muốn và trạng thái thực tế** sang **Mô hình tư duy cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kết nối với độ tin cậy
 
 Một hệ thống đáng tin không phải là hệ thống "không bao giờ lỗi", mà là hệ thống có các kiểu thất bại được giới hạn, có thể quan sát và có thể phục hồi. Các cơ chế Linux cung cấp những khối xây dựng; kiến trúc quyết định cách kết hợp chúng.
 
 Chính sách restart của systemd, lưu giữ nhật ký, giới hạn tài nguyên, đặc quyền tối thiểu, health check và backup đều chỉ là cơ chế. Chúng chỉ có giá trị khi phù hợp với mô hình lỗi thực tế của hệ thống.
-
-> **Nối mạch:** Ở chặng này của **Mô hình tư duy hệ thống Linux và các kết nối kiến thức**, **Mô hình tư duy cuối cùng** tổng hợp từ **Kết nối với độ tin cậy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy cuối cùng
 

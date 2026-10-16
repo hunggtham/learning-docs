@@ -14,8 +14,6 @@ Carbon có graphite và diamond. Ice có nhiều pha tinh thể ở các vùng �
 
 Vì vậy “pha” là khái niệm nhiệt động–cấu trúc rộng hơn “trạng thái vật chất” theo nghĩa phổ thông.
 
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Chuyển pha vật lý khác phản ứng hóa học như thế nào?** nối từ **Pha không đồng nghĩa chỉ với rắn, lỏng, khí** sang **Các chuyển pha cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Chuyển pha vật lý khác phản ứng hóa học như thế nào?
 
 Khi `H2O(s)` tan thành `H2O(l)`, bản sắc phân tử không đổi. Phần thay đổi chủ yếu là tổ chức tập thể và entropy.
@@ -25,8 +23,6 @@ Trong phản ứng hóa học, cách liên kết hoặc thành phần hóa học
 Tuy nhiên cả hai đều được mô tả bằng nhiệt động lực học và đều có thể có hàng rào động học.
 
 Do đó ranh giới “vật lý–hóa học” không có nghĩa chuyển pha đơn giản hay không có năng lượng.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Các chuyển pha cơ bản** nối từ **Chuyển pha vật lý khác phản ứng hóa học như thế nào?** sang **Entalpy chuyển pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các chuyển pha cơ bản
 
@@ -40,8 +36,6 @@ Các tên thường dùng:
 - khí → rắn: lắng đọng trực tiếp (deposition).
 
 Ở cân bằng pha, hai chiều vẫn xảy ra ở cấp vi mô. Ví dụ ở điểm nóng chảy, các phân tử vừa rời pha rắn vừa gia nhập pha rắn; tốc độ ròng bằng 0.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Entalpy chuyển pha** nối từ **Các chuyển pha cơ bản** sang **Vì sao nhiệt độ có thể đứng yên trong chuyển pha?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Entalpy chuyển pha
 
@@ -66,8 +60,6 @@ Do định luật Hess:
 
 nếu các trạng thái tham chiếu được chọn nhất quán.
 
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Vì sao nhiệt độ có thể đứng yên trong chuyển pha?** nối từ **Entalpy chuyển pha** sang **Cân bằng pha là cân bằng thế hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Vì sao nhiệt độ có thể đứng yên trong chuyển pha?
 
 Trong vùng một pha, nhiệt cung cấp thường làm tăng nhiệt độ:
@@ -82,8 +74,6 @@ Tại một chuyển pha bậc nhất ở áp suất không đổi, năng lượ
 
 Trong mẫu thực, plateau có thể không hoàn toàn phẳng do độ dốc (gradient / 기울기) nhiệt, hỗn hợp, quá nhiệt hoặc truyền nhiệt không lý tưởng.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Cân bằng pha là cân bằng thế hóa học** nối từ **Vì sao nhiệt độ có thể đứng yên trong chuyển pha?** sang **Giản đồ pha một thành phần**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cân bằng pha là cân bằng thế hóa học
 
 Với một chất tinh khiết có hai pha \(\alpha\) và \(\beta\), điều kiện cân bằng là:
@@ -95,8 +85,6 @@ Với một chất tinh khiết có hai pha \(\alpha\) và \(\beta\), điều ki
 Nếu \(\mu^\alpha<\mu^\beta\), pha \(\alpha\) bền hơn và hệ có xu hướng chuyển về \(\alpha\) nếu động học cho phép.
 
 Đường biên trên giản đồ pha chính là tập các điểm `T,P` nơi hai pha có thế hóa học bằng nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Giản đồ pha một thành phần** nối từ **Cân bằng pha là cân bằng thế hóa học** sang **Điểm ba**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giản đồ pha một thành phần
 
@@ -113,8 +101,6 @@ Một điểm nằm trong vùng một pha cho biết pha nào có Gibbs mol th�
 
 Một điểm nằm trên đường biên cho phép hai pha cùng tồn tại cân bằng.
 
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Điểm ba** nối từ **Giản đồ pha một thành phần** sang **Điểm tới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điểm ba
 
 **Điểm ba (triple point / 삼중점)** là điều kiện duy nhất của một chất tinh khiết nơi ba pha cùng tồn tại cân bằng.
@@ -127,8 +113,6 @@ F=C-P+2=1-3+2=0
 
 nghĩa là không còn bậc tự do cường độ nào nếu chỉ xét `T` và `P`: cả nhiệt độ và áp suất đều bị xác định.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Điểm tới hạn** nối từ **Điểm ba** sang **Chất lưu siêu tới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điểm tới hạn
 
 Trên đường cân bằng lỏng–khí, tăng nhiệt độ làm khối lượng riêng hai pha tiến gần nhau. Tại **điểm tới hạn (critical point)**, ranh giới pha biến mất.
@@ -136,8 +120,6 @@ Trên đường cân bằng lỏng–khí, tăng nhiệt độ làm khối lư�
 Trên điểm tới hạn, hệ là **chất lưu siêu tới hạn (supercritical fluid)**; không thể phân biệt lỏng và khí bằng một bề mặt pha sắc nét.
 
 Gần điểm tới hạn, độ nén và dao động mật độ có thể tăng mạnh. Đây là vùng mà các mô hình mean-field đơn giản có thể mất chính xác.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Chất lưu siêu tới hạn** nối từ **Điểm tới hạn** sang **Độ dốc đường cân bằng pha: phương trình Clapeyron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lưu siêu tới hạn
 
@@ -149,8 +131,6 @@ CO₂ siêu tới hạn được dùng trong chiết caffeine, chiết tinh dầ
 - dễ loại khỏi sản phẩm khi hạ áp.
 
 Tuy nhiên thiết bị phải chịu áp suất cao, làm tăng chi phí kỹ thuật và yêu cầu an toàn.
-
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Độ dốc đường cân bằng pha: phương trình Clapeyron** nối từ **Chất lưu siêu tới hạn** sang **Vì sao đường nóng chảy của nước có độ dốc âm?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ dốc đường cân bằng pha: phương trình Clapeyron
 
@@ -165,8 +145,6 @@ Dọc một đường cân bằng hai pha:
 Đây là **phương trình Clapeyron**.
 
 Nó cho biết độ dốc đường pha xuất hiện từ chênh lệch entropy và thể tích mol giữa hai pha.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Vì sao đường nóng chảy của nước có độ dốc âm?** nối từ **Độ dốc đường cân bằng pha: phương trình Clapeyron** sang **Clausius–Clapeyron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao đường nóng chảy của nước có độ dốc âm?
 
@@ -192,8 +170,6 @@ Do đó tăng áp suất làm nhiệt độ nóng chảy giảm trong vùng này
 
 Điều này không phải “nước vi phạm quy tắc”; nó là hệ quả trực tiếp của cấu trúc băng mở hơn nước lỏng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Clausius–Clapeyron** nối từ **Vì sao đường nóng chảy của nước có độ dốc âm?** sang **Quy tắc pha Gibbs**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Clausius–Clapeyron
 
 Với cân bằng lỏng–hơi, nếu coi hơi gần khí lý tưởng và thể tích lỏng nhỏ so với thể tích hơi, có thể thu được gần đúng:
@@ -207,8 +183,6 @@ Với cân bằng lỏng–hơi, nếu coi hơi gần khí lý tưởng và th�
 Quan hệ này giải thích vì sao áp suất hơi tăng rất nhanh với nhiệt độ.
 
 Đây là nền cho chưng cất, thiết kế hệ chân không và dự đoán điểm sôi theo áp suất.
-
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Quy tắc pha Gibbs** nối từ **Clausius–Clapeyron** sang **Trạng thái siêu bền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc pha Gibbs
 
@@ -242,8 +216,6 @@ nên chọn `T` thì `P` cân bằng được xác định.
 
 Quy tắc pha là một công cụ đếm bậc tự do, không tự cho hình dạng chi tiết của giản đồ.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Trạng thái siêu bền** nối từ **Quy tắc pha Gibbs** sang **Tạo mầm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trạng thái siêu bền
 
 Giản đồ pha cân bằng chỉ nói trạng thái có Gibbs thấp nhất. Hệ thực có thể bị giữ ở một trạng thái có Gibbs cao hơn do hàng rào động học.
@@ -256,8 +228,6 @@ Ví dụ:
 - diamond ở điều kiện thường.
 
 Các trạng thái này gọi là **siêu bền (metastable)**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Tạo mầm** nối từ **Trạng thái siêu bền** sang **Tạo mầm dị thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo mầm
 
@@ -275,8 +245,6 @@ Trong đó \(\gamma\) là năng lượng giao diện và \(\Delta G_v<0\) khi ph
 
 Kết quả tồn tại một bán kính tới hạn. Cụm nhỏ hơn có xu hướng tan trở lại; cụm lớn hơn có xu hướng phát triển.
 
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Tạo mầm dị thể** nối từ **Tạo mầm** sang **Động học tăng trưởng pha**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tạo mầm dị thể
 
 Trong thực tế, bụi, thành bình, vết xước hoặc bề mặt khác có thể giảm chi phí tạo giao diện và làm tạo mầm dễ hơn.
@@ -286,8 +254,6 @@ Trong thực tế, bụi, thành bình, vết xước hoặc bề mặt khác c�
 - nước siêu lạnh có thể đóng băng đột ngột khi bị rung;
 - chất lỏng quá nhiệt có thể sôi bùng;
 - seeding giúp kết tinh có kiểm soát.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Động học tăng trưởng pha** nối từ **Tạo mầm dị thể** sang **Giản đồ pha nhị phân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học tăng trưởng pha
 
@@ -299,8 +265,6 @@ Ngay cả sau khi tạo mầm, pha mới còn phải phát triển. Tốc độ 
 - biến đổi cấu trúc tại mặt pha.
 
 Vì vậy trạng thái cân bằng và vi cấu trúc cuối cùng là hai câu hỏi khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Giản đồ pha nhị phân** nối từ **Động học tăng trưởng pha** sang **Quy tắc đòn bẩy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giản đồ pha nhị phân
 
@@ -316,8 +280,6 @@ L + β
 ```
 
 Trong vùng hai pha, thành phần của từng pha được đọc tại hai đầu đường tie line.
-
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Quy tắc đòn bẩy** nối từ **Giản đồ pha nhị phân** sang **Eutectic và ứng dụng vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc đòn bẩy
 
@@ -337,8 +299,6 @@ f_\beta
 
 Giản đồ pha nhị phân là cầu nối trực tiếp sang luyện kim, vật liệu bán dẫn, ceramic và pin.
 
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Eutectic và ứng dụng vật liệu** nối từ **Quy tắc đòn bẩy** sang **Pha và phản ứng hóa học có thể ghép với nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Eutectic và ứng dụng vật liệu
 
 Tại thành phần eutectic, chất lỏng có thể chuyển trực tiếp thành hai pha rắn ở một nhiệt độ đặc trưng.
@@ -347,8 +307,6 @@ Hợp kim hàn thường khai thác điểm nóng chảy thấp của thành ph�
 
 Trong pin, sự hình thành hỗn hợp pha hoặc solid solution trong điện cực cũng có thể được hiểu bằng giản đồ pha và Gibbs mixing.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Pha và phản ứng hóa học có thể ghép với nhau** nối từ **Eutectic và ứng dụng vật liệu** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha và phản ứng hóa học có thể ghép với nhau
 
 Trong hệ nhiều thành phần, phản ứng hóa học và cân bằng pha xảy ra đồng thời. Ví dụ trong dung dịch có thể vừa có protonation, complexation vừa có kết tủa.
@@ -356,8 +314,6 @@ Trong hệ nhiều thành phần, phản ứng hóa học và cân bằng pha x�
 Trong luyện kim có thể vừa có pha rắn khác nhau vừa có phản ứng oxy hóa–khử.
 
 Khi đó cần cực tiểu hóa tổng Gibbs dưới các ràng buộc bảo toàn thành phần thay vì tách từng cân bằng độc lập quá đơn giản.
-
-> **Nối mạch:** Trong **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Các hiểu lầm thường gặp** nối từ **Pha và phản ứng hóa học có thể ghép với nhau** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -380,8 +336,6 @@ Không. Nếu hàng rào động học lớn, trạng thái siêu bền có th�
 ### “Giản đồ pha chỉ dùng cho kim loại”
 
 Không. Nó áp dụng cho nước, polymer, hỗn hợp dung môi, ceramic, bán dẫn, dược phẩm và vật liệu pin.
-
-> **Nối mạch:** Ở chặng này của **Chuyển pha và giản đồ pha — bản đồ ổn định của vật chất**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

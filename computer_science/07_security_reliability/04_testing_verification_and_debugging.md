@@ -12,15 +12,11 @@ Property-based testing generate many inputs và check bất biến (invariant / 
 
 Fuzzing generate/mutate unexpected inputs để tìm crash/bảo mật (security / 보안) bugs, especially parsers and bản địa (native / 네이티브) mã (code / 코드).
 
-> **Nối mạch:** Test là sample của behavior, specification là property cần giữ; unit/integration/system mở rộng phạm vi bằng chứng, còn determinism quyết định test có đáng tin hay flaky.
-
 ## Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)
 
 Đơn vị (unit / 단위) kiểm thử (test / 테스트) isolate small thành phần (component / 컴포넌트), nhanh và precise diagnosis. kiểm thử tích hợp (integration test / 통합 테스트) kiểm tra boundaries thật như DB/mạng (network / 네트워크)/serialization. End-to-end kiểm thử (test / 테스트) cover whole luồng (flow / 흐름) nhưng chậm/flaky và khó localize thất bại (failure / 실패).
 
 Testing pyramid không phải law; optimal mix phụ thuộc kiến trúc (architecture / 아키텍처)/rủi ro (risk / 위험). đặc tả hợp đồng (contract / 계약) tests hữu ích cho dịch vụ (service / 서비스) APIs.
-
-> **Nối mạch:** **Determinism và flaky tests** nối từ **Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)** sang **Static phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Determinism và flaky tests
 
@@ -28,23 +24,17 @@ Flaky kiểm thử (test / 테스트) thường do hidden inputs: clock, random 
 
 A flaky kiểm thử (test / 테스트) is not merely annoyance; it erodes trust in tín hiệu (signal / 신호).
 
-> **Nối mạch:** **Static phân tích (analysis / 분석)** nối từ **Determinism và flaky tests** sang **Formal methods**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Static phân tích (analysis / 분석)
 
 Trình biên dịch (compiler / 컴파일러) warnings, linters, dataflow phân tích (analysis / 분석), abstract interpretation và symbolic thực thi (execution / 실행) tìm classes bugs without running all paths concretely. They trade precision vs scalability, potentially false positives/negatives.
 
 Undecidability explains why universal perfect analyzer for arbitrary programs impossible; tools solve restricted properties/các mô hình (models / 모델들).
 
-> **Nối mạch:** **Formal methods** nối từ **Static phân tích (analysis / 분석)** sang **Debugging as hypothesis testing**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Formal methods
 
 Hoare lô-gic (logic / 논리) uses `{P} C {Q}` precondition/program/postcondition. mô hình (model / 모델) checking explores finite trạng thái (state / 상태) mô hình (model / 모델). SMT solvers prove các ràng buộc (constraints / 제약조건들). Proof assistants verify machine-checkable proofs.
 
 Formal methods are especially valuable for protocols, crypto, kernels, safety-critical mã (code / 코드), but chi phí (cost / 비용)/mô hình (model / 모델) fidelity matter. Proving wrong mô hình (model / 모델) perfectly still leaves real hệ thống (system / 시스템) bugs.
-
-> **Nối mạch:** **Debugging as hypothesis testing** nối từ **Formal methods** sang **Logs, traces, metrics and debuggers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Debugging as hypothesis testing
 
@@ -59,15 +49,11 @@ Good debugging vòng lặp (loop / 루프):
 
 Random mã (code / 코드) changes are tìm kiếm (search / 검색) without mô hình (model / 모델).
 
-> **Nối mạch:** **Logs, traces, metrics and debuggers** nối từ **Debugging as hypothesis testing** sang **Reproduction and minimization**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Logs, traces, metrics and debuggers
 
 Logs bản ghi (record / 레코드) discrete events/ngữ cảnh (context / 맥락); metrics aggregate numeric thời gian (time / 시간) series; traces connect nhân quả (causal / 인과적) đường đi của yêu cầu (request path / 요청 경로) across components; debugger inspects thực thi (execution / 실행) trạng thái (state / 상태). cốt lõi (core / 핵심) dumps/profile captures freeze bằng chứng (evidence / 증거) after thất bại (failure / 실패)/hiệu năng (performance / 성능) issue.
 
 Each view loses different thông tin (information / 정보). High-cardinality IDs belong naturally in traces/logs more than naive chỉ số (metric / 지표) labels.
-
-> **Nối mạch:** **Reproduction and minimization** nối từ **Logs, traces, metrics and debuggers** sang **Tests and refactoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reproduction and minimization
 
@@ -75,19 +61,13 @@ Reduce failing đầu vào (input / 입력)/môi trường (environment / 환경
 
 For tính đồng thời (concurrency / 동시성), deterministic bản ghi (record / 레코드)/replay or stress scheduling can help; for phân tán (distributed / 분산) failures, fault injection/mạng (network / 네트워크) simulation reveals các giả định (assumptions / 가정들).
 
-> **Nối mạch:** **Tests and refactoring** nối từ **Reproduction and minimization** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tests and refactoring
 
 Tests provide behavioral đặc tả hợp đồng (contract / 계약) during refactor. But over-mocking hiện thực (implementation / 구현) details makes tests brittle and blocks nội bộ (internal / 내부) changes. kiểm thử (test / 테스트) observable đặc tả hợp đồng (contract / 계약)/invariants, use mocks at meaningful boundaries.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tests and refactoring**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Confidence comes from **overlapping bằng chứng (evidence / 증거)**. Types prove one lớp (class / 클래스), tests mẫu (sample / 표본) behaviors, static phân tích (analysis / 분석) approximates paths, formal proof covers modeled properties, môi trường vận hành (production / 운영 환경) khả năng quan sát (observability / 관측 가능성) checks reality.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -96,8 +76,6 @@ Tests provide behavioral đặc tả hợp đồng (contract / 계약) during re
 **“đơn vị (unit / 단위) tests should mock everything bên ngoài (external / 외부).”** Excessive mocks kiểm thử (test / 테스트) hiện thực (implementation / 구현) choreography, not tích hợp (integration / 통합) contracts.
 
 **“Debugger is first công cụ (tool / 도구) for every issue.”** Logs/traces/profiles/reproducers may locate phân tán (distributed / 분산)/hiệu năng (performance / 성능) bugs better.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

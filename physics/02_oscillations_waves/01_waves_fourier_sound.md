@@ -32,8 +32,6 @@ v=\frac{\omega}{k}=f\lambda
 
 Quan hệ `v=f\lambda` không có nghĩa tần số tự nó “gây ra” tốc độ truyền. Trong nhiều môi trường, tốc độ sóng chủ yếu do các tính chất của môi trường quyết định. Nếu nguồn thay đổi tần số trong cùng một môi trường, bước sóng thường thay đổi tương ứng.
 
-> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Phương trình sóng** nối từ **Từ dao động cục bộ đến sóng** sang **Nguyên lý chồng chập**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phương trình sóng
 
 Một phương trình sóng (Wave Equation / 파동방정식) cơ bản trong một chiều là:
@@ -46,8 +44,6 @@ Một phương trình sóng (Wave Equation / 파동방정식) cơ bản trong m�
 Đạo hàm riêng (Partial Derivative / 편미분) xuất hiện vì trường `\psi` phụ thuộc đồng thời vào vị trí và thời gian.
 
 Phương trình cho biết độ cong theo không gian của trường liên hệ với gia tốc theo thời gian của nó. Trong một môi trường cơ học, biến dạng cục bộ tạo lực lên vùng lân cận; vùng lân cận lại biến dạng và tác động tiếp lên vùng kế tiếp. Cơ chế liên kết cục bộ này khiến nhiễu động lan truyền thành sóng.
-
-> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Nguyên lý chồng chập** nối từ **Phương trình sóng** sang **Sóng dừng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên lý chồng chập
 
@@ -62,8 +58,6 @@ Nguyên lý chồng chập (Superposition / 중첩) là nền tảng của giao 
 ### Giao thoa
 
 Hai sóng cùng pha có thể làm biên độ tổng tăng lên; hai sóng ngược pha có thể triệt tiêu một phần hoặc hoàn toàn tại một vị trí. Trong giao thoa triệt tiêu, năng lượng không biến mất khỏi toàn hệ mà được phân bố lại trong không gian.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Sóng dừng** nối từ **Nguyên lý chồng chập** sang **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng dừng
 
@@ -87,8 +81,6 @@ Ta thu được sóng dừng (Standing Wave / 정상파), với các nút (node 
 
 Điều kiện biên chỉ cho phép một số bước sóng hoặc chế độ (mode / 모드) nhất định. Đây là một trực giác quan trọng trước khi học lượng tử hóa: ràng buộc hình học và điều kiện biên có thể biến một miền giá trị liên tục thành một phổ chế độ (mode / 모드) rời rạc mà chưa cần đến cơ học lượng tử.
 
-> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** nối từ **Sóng dừng** sang **Âm thanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản
 
 Phân tích Fourier (Fourier Analysis / 푸리에 해석) cho phép biểu diễn một lớp rất rộng các tín hiệu hoặc trường như tổng của các thành phần sin, cos hoặc số mũ phức có tần số khác nhau.
@@ -105,8 +97,6 @@ Dạng số mũ phức gọn vì biên độ và pha được mã hóa tự nhi�
 
 FFT (Fast Fourier Transform) là nhóm thuật toán tính DFT hiệu quả, thường giảm độ phức tạp từ khoảng `O(N^2)` của phép tính trực tiếp xuống `O(N\log N)`.
 
-> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Âm thanh** nối từ **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** sang **Decibel và thang logarit**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Âm thanh
 
 Âm thanh (Sound / 음파) trong không khí chủ yếu là sóng áp suất dọc (longitudinal pressure wave / 종파). Các phân tử không bay từ loa đến tai người nghe; chúng dao động quanh vị trí cân bằng và truyền nhiễu động cho các phân tử lân cận thông qua lực tương tác và chênh lệch áp suất.
@@ -114,8 +104,6 @@ FFT (Fast Fourier Transform) là nhóm thuật toán tính DFT hiệu quả, th�
 Tốc độ âm thanh phụ thuộc môi trường và trạng thái nhiệt động của môi trường. Trong không khí gần nhiệt độ phòng, giá trị điển hình vào khoảng `343 m/s`.
 
 Cao độ (pitch) liên hệ chủ yếu với tần số. Độ to cảm nhận (loudness) liên hệ với cường độ nhưng còn phụ thuộc đáp ứng của tai người. Âm sắc (timbre) phụ thuộc phổ họa âm, pha và sự biến thiên theo thời gian của bao tín hiệu.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Decibel và thang logarit** nối từ **Âm thanh** sang **Hiệu ứng Doppler**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Decibel và thang logarit
 
@@ -127,8 +115,6 @@ L=10\log_{10}\left(\frac{I}{I_0}\right)\,dB
 
 Thang logarit hữu ích vì cường độ âm trong thực tế trải rộng qua nhiều bậc độ lớn, đồng thời cảm nhận của con người không tuyến tính với cường độ vật lý. Tăng `10 dB` tương ứng cường độ tăng 10 lần, chứ không phải chỉ tăng thêm “10 đơn vị tuyến tính”.
 
-> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Hiệu ứng Doppler** nối từ **Decibel và thang logarit** sang **Vận tốc pha và vận tốc nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng Doppler
 
 Hiệu ứng Doppler (Doppler Effect / 도플러 효과) là sự thay đổi tần số quan sát khi nguồn và người quan sát chuyển động tương đối với nhau.
@@ -136,8 +122,6 @@ Hiệu ứng Doppler (Doppler Effect / 도플러 효과) là sự thay đổi t�
 Đối với âm thanh, môi trường truyền sóng cung cấp một hệ quy chiếu vật lý quan trọng, nên chuyển động của nguồn và chuyển động của người quan sát không hoàn toàn đối xứng trong công thức cổ điển. Đối với ánh sáng trong chân không, hiệu ứng Doppler phải được mô tả bằng thuyết tương đối hẹp.
 
 Radar, siêu âm y khoa và thiên văn học đều khai thác dịch chuyển Doppler để suy ra thành phần vận tốc dọc theo phương quan sát.
-
-> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Vận tốc pha và vận tốc nhóm** nối từ **Hiệu ứng Doppler** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc pha và vận tốc nhóm
 
@@ -157,13 +141,9 @@ v_g=\frac{d\omega}{dk}
 
 Vận tốc nhóm thường mô tả tốc độ lan truyền của bao sóng và, trong nhiều điều kiện thông thường, liên hệ với sự truyền năng lượng hoặc thông tin. Tuy nhiên trong các môi trường tán sắc mạnh hoặc bất thường, không nên đồng nhất máy móc vận tốc nhóm với tốc độ truyền tín hiệu nhân quả.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Vận tốc pha và vận tốc nhóm** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Dao động mô tả chuyển động quanh một trạng thái cân bằng. Sóng xuất hiện khi nhiều bậc tự do được liên kết với nhau, khiến nhiễu động ở một nơi tạo thay đổi ở nơi lân cận và tiếp tục lan truyền. Fourier bổ sung một góc nhìn khác: thay vì xem một dạng sóng phức tạp như một hình duy nhất, ta đổi cơ sở và phân tích nó thành tổ hợp của các chế độ (mode / 모드) đơn giản.
-
-> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -174,8 +154,6 @@ Không. Âm thanh, sóng trên dây và nhiều loại sóng nước truyền n�
 ### “Cộng hưởng chỉ xảy ra khi tần số kích thích đúng tuyệt đối bằng tần số riêng”
 
 Không. Trong một hệ có tắt dần, đáp ứng cộng hưởng có độ rộng hữu hạn. Vị trí đỉnh, biên độ và băng thông phụ thuộc vào mức tắt dần và cách hệ ghép với nguồn kích thích.
-
-> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

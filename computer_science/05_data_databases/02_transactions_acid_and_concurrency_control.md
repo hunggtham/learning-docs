@@ -10,15 +10,11 @@ Atomicity nghĩa giao dịch (transaction / 트랜잭션) effects được coi n
 
 Atomicity thường dựa log/khôi phục (recovery / 복구) hoặc sao chép khi ghi (copy-on-write / 쓰기 시 복사) techniques, không phải hardware thực hiện mọi writes cùng một nanosecond.
 
-> **Nối mạch:** Atomicity gom thay đổi thành một đơn vị; consistency giữ invariant của dữ liệu, rồi isolation quyết định các transaction đồng thời nhìn và ảnh hưởng nhau ở mức nào.
-
 ## Consistency trong ACID
 
 Consistency ở ACID thường nghĩa giao dịch (transaction / 트랜잭션) đưa cơ sở dữ liệu (database / 데이터베이스) từ trạng thái (state / 상태) thỏa các ràng buộc (constraints / 제약조건들)/invariants sang trạng thái (state / 상태) thỏa các ràng buộc (constraints / 제약조건들) nếu giao dịch (transaction / 트랜잭션) lô-gic (logic / 논리) đúng. Nó khác “consistency” trong phân tán (distributed / 분산) các hệ thống (systems / 시스템들)/CAP, nơi term nói về views/thứ tự (ordering / 순서) giữa replicas.
 
 DB không tự biết mọi nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식). Nếu bất biến (invariant / 불변식) không encoded hoặc giao dịch (transaction / 트랜잭션) mã (code / 코드) sai, ACID không cứu lô-gic (logic / 논리).
-
-> **Nối mạch:** **Isolation** nối từ **Consistency trong ACID** sang **Durability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Isolation
 
@@ -28,13 +24,9 @@ Dirty read: đọc uncommitted dữ liệu (data / 데이터). Non-repeatable re
 
 Isolation-level names trong SQL standards và DB products có hiện thực (implementation / 구현) differences; cần đọc engine docs.
 
-> **Nối mạch:** **Durability** nối từ **Isolation** sang **Locks**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Durability
 
 Lần ghi nhận (commit / 커밋) success hứa effects survive defined failures. WAL/redo logs, fsync/thiết bị (device / 장치) guarantees và replication chính sách (policy / 정책) quyết định durability strength. Async replication có thể lose acknowledged dữ liệu (data / 데이터) khi primary dies trước replica receive, tùy hệ thống (system / 시스템).
-
-> **Nối mạch:** **Locks** nối từ **Durability** sang **MVCC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Locks
 
@@ -42,15 +34,11 @@ Two-phase locking family dùng dùng chung (shared / 공유)/exclusive locks đ�
 
 Locks có thể deadlock; DB detect wait-for cycles và abort một giao dịch (transaction / 트랜잭션). ứng dụng (application / 애플리케이션) phải sẵn sàng thử lại (retry / 재시도) giao dịch (transaction / 트랜잭션) bị deadlock victim.
 
-> **Nối mạch:** **MVCC** nối từ **Locks** sang **Optimistic tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## MVCC
 
 Multi-Version tính đồng thời (concurrency / 동시성) điều khiển (control / 제어) giữ multiple row versions để readers và writers ít khối (block / 블록) nhau. giao dịch (transaction / 트랜잭션) đọc snapshot theo visibility rules; cập nhật (update / 업데이트) tạo new phiên bản (version / 버전).
 
 MVCC không “loại locks hoàn toàn”. Writes/các ràng buộc (constraints / 제약조건들)/siêu dữ liệu (metadata / 메타데이터) vẫn cần coordination, và old versions cần vacuum/garbage collection.
-
-> **Nối mạch:** **Optimistic tính đồng thời (concurrency / 동시성)** nối từ **MVCC** sang **Serializability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Optimistic tính đồng thời (concurrency / 동시성)
 
@@ -58,15 +46,11 @@ Optimistic scheme cho công việc (work / 작업) tiến hành rồi validate p
 
 Ứng dụng (application / 애플리케이션) mẫu (pattern / 패턴) `UPDATE ... WHERE id=? AND version=?` là simple compare-and-swap at DB mức (level / 수준).
 
-> **Nối mạch:** **Serializability** nối từ **Optimistic tính đồng thời (concurrency / 동시성)** sang **Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Serializability
 
 Serializability là tính đúng đắn (correctness / 정확성) criterion: concurrent thực thi (execution / 실행) equivalent về tác động (effect / 효과) với một serial schedule. xung đột (conflict / 충돌) serializability có thể analyze precedence đồ thị (graph / 그래프); cycle chỉ non-serializable schedule.
 
 Serializable Snapshot Isolation dùng phụ thuộc (dependency / 의존성) tracking để abort dangerous structures thay vì khóa (lock / 잠금) mọi read theo classic 2PL.
-
-> **Nối mạch:** **Serializability** đặt tiêu chí; **Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계)
 
@@ -74,13 +58,9 @@ Giao dịch (transaction / 트랜잭션) quá lớn giữ versions/locks lâu, t
 
 Remote API lời gọi (call / 호출) bên trong DB giao dịch (transaction / 트랜잭션) nguy hiểm vì độ trễ (latency / 지연 시간)/thất bại (failure / 실패) kéo dài locks. Saga/outbox patterns giải cross-service workflows với weaker atomicity và compensations.
 
-> **Nối mạch:** **Giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계)** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng nó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > giao dịch (transaction / 트랜잭션) là **một chuyển tiếp trạng thái (state transition / 상태 전이) có đặc tả hợp đồng (contract / 계약) dưới tính đồng thời (concurrency / 동시성) và crash**. ACID không phải bốn checkbox độc lập; hiện thực (implementation / 구현) phối hợp isolation + logging + các ràng buộc (constraints / 제약조건들) để giữ invariants.
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -89,8 +69,6 @@ Remote API lời gọi (call / 호출) bên trong DB giao dịch (transaction / 
 **“MVCC nghĩa không có blocking.”** Writes, DDL, các ràng buộc (constraints / 제약조건들) và cleanup vẫn có conflicts.
 
 **“READ COMMITTED đủ vì không dirty read.”** Cross-row invariants và lost-update/write-skew patterns vẫn cần rà soát (review / 검토).
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -139,13 +139,9 @@ Nếu \(\Delta n_{gas}=0\), compression lý tưởng không làm Q thay đổi.
 
 Có nhiều cách làm total pressure tăng.
 
-> **Nối mạch:** Giảm thể tích làm hệ khí ưu tiên phía có ít mol khí hơn vì Q thay đổi; thêm khí trơ ở thể tích không đổi lại không đổi áp suất riêng phần, nên không làm cân bằng dịch chuyển.
-
 ## Giảm thể tích
 
 Partial pressures của reactive gases tăng → Q thường thay đổi.
-
-> **Nối mạch:** Giảm thể tích làm mọi áp suất riêng phần tăng cùng hệ số, nên (Q) đổi theo tổng số mol khí của hai vế. **Thêm khí trơ ở thể tích không đổi** không đổi các áp suất riêng phần của species phản ứng; vì vậy phải kiểm tra (Q), không suy từ áp suất tổng.
 
 ## Thêm khí trơ ở thể tích không đổi
 
@@ -158,8 +154,6 @@ P_i=\frac{n_iRT}{V}
 của reactive species không đổi.
 
 Do đó Q không đổi và equilibrium không shift trong mô hình ideal gas.
-
-> **Nối mạch:** Ở thể tích không đổi, khí trơ chỉ làm áp suất tổng tăng còn (P_i) của chất phản ứng giữ nguyên; ở áp suất tổng không đổi, thể tích phải giãn ra nên các (P_i) cùng giảm. Trường hợp thứ hai có thể làm (Q) đổi nếu số mol khí hai vế khác nhau; **Mô hình tư duy** sẽ gom hai điều kiện này thành một phép kiểm tra thống nhất.
 
 ## Thêm khí trơ ở áp suất tổng không đổi
 
@@ -392,8 +386,6 @@ Không. Catalyst thay kinetics.
 ### “Le Châtelier dự đoán được tốc độ”
 
 Không. Nó chỉ là equilibrium direction heuristic.
-
-> **Nối mạch:** Trong **Nguyên lý Le Châtelier — từ quy tắc định tính tới suy luận bằng Q, K và chemical potential**, **Mô hình tư duy** tổng hợp từ **Thêm khí trơ ở áp suất tổng không đổi** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

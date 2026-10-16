@@ -37,13 +37,9 @@ feedback: arms burden → fiscal stress → reform/repression → legitimacy cha
 
 1989–91 cần đọc cùng economic stagnation, reform choices, nationalist claims, civil society, China’s separate trajectory và giá dầu; không quy về một “victory” duy nhất.
 
-> **Nối mạch:** Cạnh tranh trên ba tầng tách hạt nhân, viện trợ–liên minh và chiến tranh ủy nhiệm khỏi một câu chuyện lưỡng cực đơn giản. **Bằng chứng, giới hạn và cầu nối** kiểm tra từng tầng trước depth pass.
-
 ## Bằng chứng, giới hạn và cầu nối
 
 Declassified cables, aid records, arms transfers, oral lịch sử (history / 이력), development indicators và cục bộ (local / 로컬) newspapers cần được ghép với nhau; superpower archive dễ biến actor địa phương thành quân cờ. Counterfactual: nếu non-aligned states kiểm soát nhiều hơn aid conditions, development mô hình (model / 모델) và institutional autonomy có thể khác mà không loại bỏ rivalry. Cầu nối sang 15–16 là **sovereignty, debt, telecom, trade quy tắc (rule / 규칙) và development mạng (network / 네트워크)**.
-
-> **Nối mạch:** Bằng chứng phải tách cạnh tranh hạt nhân, viện trợ, liên minh và chiến tranh ủy nhiệm; **Độ sâu pass** chỉ nâng khi không quy mọi biến động về một trục Mỹ–Xô.
 
 ## Độ sâu (depth / 깊이) pass: Cold War như hệ thống nhiều tầng
 

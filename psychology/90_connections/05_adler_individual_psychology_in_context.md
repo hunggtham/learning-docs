@@ -25,8 +25,6 @@ Một cách dùng tốt là chuyển câu hỏi Adlerian thành câu hỏi đo �
 
 Xem [[../03_human_development_and_person/02_motivation_and_emotion]], [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]] và [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 
-> **Nối mạch:** Trong **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Striving for superiority không nên hiểu đơn giản là muốn hơn người** nối từ **Inferiority và compensation** sang **Fictional finalism và goal-directed hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Striving for superiority không nên hiểu đơn giản là muốn hơn người
 
 Adler dùng **striving for superiority** theo nghĩa rộng hơn xã hội (social / 사회적) dominance: nỗ lực vượt qua trạng thái thiếu hụt và hướng tới competence, mastery hoặc một imagined future trạng thái (state / 상태).
@@ -43,8 +41,6 @@ Cách đúng hơn:
 
 `Adler đặt câu hỏi lịch sử về goal và competence; modern psychology nghiên cứu các phần của câu hỏi đó bằng construct và measurement khác.`
 
-> **Nối mạch:** Ở chặng này của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Fictional finalism và goal-directed hành vi (behavior / 동작)** nối từ **Striving for superiority không nên hiểu đơn giản là muốn hơn người** sang **Xã hội (social / 사회적) interest**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Fictional finalism và goal-directed hành vi (behavior / 동작)
 
 Adler nhấn mạnh con người hành động theo goal và future-oriented biểu diễn (representation / 표현), không chỉ bị quá khứ “đẩy” từ phía sau. Khái niệm **fictional finalism** mô tả những mục tiêu hoặc idealized endpoint có thể tổ chức hành vi dù chúng không phải fact khách quan.
@@ -54,8 +50,6 @@ Adler nhấn mạnh con người hành động theo goal và future-oriented bi�
 Hiện đại (modern / 현대적) psychology nghiên cứu prospective cognition, hiện thực (implementation / 구현) intentions, temporal cognition, expected utility, possible selves và goal hierarchy. Những lĩnh vực này hỗ trợ claim rộng rằng biểu diễn (representation / 표현) về tương lai ảnh hưởng hành vi, nhưng không xác nhận toàn bộ fictional-finalism khung phần mềm (framework / 프레임워크).
 
 Xem [[../02_learning_and_cognition/12_temporal_cognition_prospective_memory_and_time]], [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Xã hội (social / 사회적) interest** nối từ **Fictional finalism và goal-directed hành vi (behavior / 동작)** sang **Birth thứ tự (order / 순서): một ví dụ quan trọng về historical claim cần kiểm tra riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) interest
 
@@ -71,8 +65,6 @@ Cần tránh suy luận:
 
 Xem [[../03_human_development_and_person/12_loneliness_social_connection_and_belonging]], [[../03_human_development_and_person/08_moral_psychology_and_prosocial_behavior]].
 
-> **Nối mạch:** Trong **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Xã hội (social / 사회적) interest** nêu quy tắc; **Birth thứ tự (order / 순서): một ví dụ quan trọng về historical claim cần kiểm tra riêng** thử quy tắc trong tình huống, rồi **Family constellation và hệ thống gia đình** mở rộng hệ quả.
-
 ## Birth thứ tự (order / 순서): một ví dụ quan trọng về historical claim cần kiểm tra riêng
 
 Adlerian tradition thường gắn birth thứ tự (order / 순서) với personality development. Popular psychology sau đó biến nó thành các stereotype như “con cả trách nhiệm”, “con út nổi loạn”.
@@ -82,8 +74,6 @@ Adlerian tradition thường gắn birth thứ tự (order / 순서) với perso
 Birth thứ tự (order / 순서) có thể covary với family kích thước (size / 크기), parental age, socioeconomic conditions và role assignment. Một số study tìm tác động (effect / 효과) nhỏ trong kết quả (outcome / 결과) cụ thể, nhưng broad personality stereotypes không nên trình bày như established fact.
 
 Đây là ví dụ tốt cho nguyên tắc của thư viện (library / 라이브러리): một lý thuyết (theory / 이론) lịch sử có thể tạo hypothesis hữu ích, nhưng hypothesis phải đứng riêng trước đo lường (measurement / 측정) và replication.
-
-> **Nối mạch:** Ở chặng này của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Birth thứ tự (order / 순서): một ví dụ quan trọng về historical claim cần kiểm tra riêng** nêu quy tắc; **Family constellation và hệ thống gia đình** thử quy tắc trong tình huống, rồi **Lifestyle trong Adler không phải “lifestyle” đời thường** mở rộng hệ quả.
 
 ## Family constellation và hệ thống gia đình
 
@@ -95,8 +85,6 @@ Hiện đại (modern / 현대적) developmental psychology thực sự cho th�
 
 Xem [[../03_human_development_and_person/07_close_relationships_intimacy_and_family]], [[../03_human_development_and_person/14_parenting_caregiving_and_family_development]].
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Lifestyle trong Adler không phải “lifestyle” đời thường** nối từ **Family constellation và hệ thống gia đình** sang **Adlerian psychotherapy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lifestyle trong Adler không phải “lifestyle” đời thường
 
 Adler dùng **lifestyle** để chỉ một mẫu (pattern / 패턴) tương đối thống nhất về cách cá nhân perceive self, others, goal và challenge. Nó gần một personal chiến lược (strategy / 전략) hoặc organizing style hơn là ăn uống, tập thể thao hay tiêu dùng.
@@ -106,8 +94,6 @@ Adler dùng **lifestyle** để chỉ một mẫu (pattern / 패턴) tương đ�
 Hiện đại (modern / 현대적) personality science thường sử dụng dimensional traits, characteristic adaptations, narrative định danh (identity / 식별자) và person–môi trường (environment / 환경) tương tác (interaction / 상호작용). Những khung phần mềm (framework / 프레임워크) này đo được rõ hơn và không cần giả định một unified lifestyle theo nghĩa Adler.
 
 Xem [[../03_human_development_and_person/03_personality]].
-
-> **Nối mạch:** Trong **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Adlerian psychotherapy** nối từ **Lifestyle trong Adler không phải “lifestyle” đời thường** sang **Adler so với Freud**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adlerian psychotherapy
 
@@ -121,23 +107,17 @@ Hiện đại (modern / 현대적) psychotherapy research cũng cho thấy allia
 
 Xem [[../05_intervention/00_psychotherapy_and_change]], [[../05_intervention/03_psychodynamic_humanistic_and_systemic_therapy]].
 
-> **Nối mạch:** Ở chặng này của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Adler so với Freud** nối từ **Adlerian psychotherapy** sang **Adler so với Jung**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Adler so với Freud
 
 Freud nhấn mạnh xung đột (conflict / 충돌), drive, developmental lịch sử (history / 이력) và động (dynamic / 동적) unconscious. Adler dịch trọng tâm sang goal, competence, xã hội (social / 사회적) embeddedness và interpretation của vị trí cá nhân.
 
 Sự khác biệt này quan trọng về lịch sử vì nó báo trước nhiều câu hỏi sau này của motivation, xã hội (social / 사회적) psychology và family các hệ thống (systems / 시스템들). Nhưng “báo trước” không đồng nghĩa “đã xây lý thuyết (theory / 이론) hiện đại hoàn chỉnh”.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Adler so với Jung** nối từ **Adler so với Freud** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Adler so với Jung
 
 Jung tập trung symbol, archetype, individuation và meaning ở tầng mythic/cultural. Adler thực dụng và interpersonal hơn, chú ý goal, family role, xã hội (social / 사회적) belonging và contribution.
 
 Cả hai đều rời Freud, nhưng theo hai hướng khác nhau. Đọc họ như một khối “độ sâu (depth / 깊이) psychology” duy nhất sẽ làm mất các khác biệt này.
-
-> **Nối mạch:** Trong **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Những hiểu lầm phổ biến** nối từ **Adler so với Jung** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -148,8 +128,6 @@ Cả hai đều rời Freud, nhưng theo hai hướng khác nhau. Đọc họ nh
 **“Self-efficacy chứng minh Adler đúng.”** Không. Các construct có overlap ở một số câu hỏi nhưng khác definition, đo lường (measurement / 측정) và lý thuyết (theory / 이론).
 
 **“Adler chỉ nói về cá nhân.”** Tên Individual Psychology dễ gây hiểu nhầm; xã hội (social / 사회적) embeddedness và community feeling lại là phần trung tâm của ông.
-
-> **Nối mạch:** Ở chặng này của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -168,8 +146,6 @@ Keep, revise, or reject specific claim
 ```
 
 Giá trị tốt nhất của Adler trong thư viện (library / 라이브러리) là lịch sử của các câu hỏi về **goal, competence, belonging và xã hội (social / 사회적) embeddedness**. Giá trị đó không cần biến Individual Psychology thành consensus mô hình (model / 모델) hiện đại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Alfred Adler và Individual Psychology trong bối cảnh tâm lý học hiện đại**, **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối
 

@@ -29,8 +29,6 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [05 — Multimodal Transformers](./05_multimodal_transformers.md)
 - [06 — Multimodal Agents](./06_multimodal_agents.md)
 
-> **Chuyển mạch:** **Chapters** phân biệt waveform, spectrogram, token và modality alignment; **Core distinctions** gom chúng thành mental model cho từng đường biểu diễn.
-
 ## Cốt lõi (core / 핵심) distinctions
 
 Phần này kiểm tra ranh giới và failure mode của cơ chế vừa học. Hãy dùng nó để biết khi nào mô hình còn đúng, khi nào cần đổi chiến lược và bằng chứng nào phải thu thập.
@@ -47,8 +45,6 @@ Visual Text ≠ Trusted Instruction
 Multimodal Agent ≠ VLM With Click Tool Only
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Speech, Audio and Multimodal AI — Reading Map**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cốt lõi (core / 핵심) distinctions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -63,8 +59,6 @@ Physical signals / visual scenes
 ```
 
 The thư viện (library / 라이브러리) treats multimodal AI as an giao diện (interface / 인터페이스) bài toán (problem / 문제) between heterogeneous đo lường (measurement / 측정) spaces, not as a buzzword tầng (layer / 계층) over an LLM.
-
-> **Chuyển mạch:** **Mental model** làm rõ trade-off giữa fidelity, latency và alignment; **Connections** trả trade-off đó về signal processing, NLP và vision owners.
 
 ## Connections
 

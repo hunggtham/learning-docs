@@ -10,15 +10,11 @@ Khi số bảng tăng, số thứ tự nối tăng theo kiểu tổ hợp. Bộ 
 
 Vì vậy tối ưu truy vấn bản thân cũng là một bài toán tìm kiếm thuật toán dưới giới hạn thời gian.
 
-> **Nối mạch:** **Số lượng bản ghi là biến trung tâm** nối từ **Không gian kế hoạch tăng rất nhanh** sang **Giả định độc lập**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Số lượng bản ghi là biến trung tâm
 
 Nếu bộ tối ưu nghĩ một điều kiện lọc trả 10 dòng nhưng thực tế trả 10 triệu, nhiều quyết định phía sau có thể sai. Nested-loop phép nối (join / 조인) hợp lý khi phía ngoài nhỏ có thể trở thành thảm họa khi phía ngoài rất lớn.
 
 **Ước lượng số lượng bản ghi (cardinality estimation)** cố dự đoán số dòng sau quét, lọc hoặc nối. Thống kê thường gồm tổng số dòng, số giá trị khác nhau, histogram, tỷ lệ `NULL` và thông tin tương quan.
-
-> **Nối mạch:** **Giả định độc lập** nối từ **Số lượng bản ghi là biến trung tâm** sang **Mô hình chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giả định độc lập
 
@@ -26,15 +22,11 @@ Một nguồn sai số phổ biến là giả định các điều kiện độc
 
 Thống kê nhiều cột giúp giảm vấn đề nhưng không thể nắm mọi phụ thuộc trong dữ liệu.
 
-> **Nối mạch:** **Mô hình chi phí** nối từ **Giả định độc lập** sang **Khả năng tận dụng chỉ mục**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Mô hình chi phí
 
 “chi phí (cost / 비용)” trong bộ tối ưu thường không phải số mili-giây chính xác. Nó là mô hình tương đối kết hợp chi phí I/O, CPU, truy cập ngẫu nhiên/tuần tự và đôi khi cả mức song song. Phần cứng mới, trạng thái bộ nhớ đệm (cache / 캐시) hoặc lưu trữ đám mây có thể khiến các hằng số mặc định lệch khỏi thực tế.
 
 Bộ tối ưu chỉ cần mô hình đủ tốt để xếp hạng các kế hoạch, không cần dự đoán chính xác tuyệt đối độ trễ.
-
-> **Nối mạch:** **Khả năng tận dụng chỉ mục** nối từ **Mô hình chi phí** sang **Độ nhạy với tham số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng tận dụng chỉ mục
 
@@ -42,15 +34,11 @@ Một điều kiện **có khả năng tìm kiếm bằng chỉ mục (SARGable)
 
 Hiểu SARGability hữu ích hơn việc học thuộc mẹo “hãy đánh chỉ mục (index / 인덱스) cột này”, vì nó giải thích đường truy cập nào thật sự tồn tại trong không gian kế hoạch.
 
-> **Nối mạch:** **Độ nhạy với tham số** nối từ **Khả năng tận dụng chỉ mục** sang **Thống kê cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ nhạy với tham số
 
 Prepared statement có tham số với phân bố dữ liệu lệch có thể cần kế hoạch khác nhau cho các giá trị khác nhau. Kế hoạch tối ưu cho giá trị hiếm không nhất thiết phù hợp với giá trị xuất hiện rất nhiều.
 
 Các DBMS xử lý bằng kế hoạch chung/riêng, bind peeking hoặc cơ chế thích nghi khác nhau. Đây là một nguồn của hiện tượng “cùng câu SQL nhưng lúc nhanh lúc chậm”.
-
-> **Nối mạch:** **Thống kê cũ** nối từ **Độ nhạy với tham số** sang **Bộ tối ưu và thiết kế chỉ mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thống kê cũ
 
@@ -58,13 +46,9 @@ Phân bố dữ liệu thay đổi nhưng thống kê chưa cập nhật sẽ l�
 
 Khi đọc kế hoạch thực thi, nên so số dòng ước lượng với số dòng thực tế ở từng toán tử. Sai lệch xuất hiện sớm thường lan truyền xuống phần còn lại của kế hoạch.
 
-> **Nối mạch:** **Bộ tối ưu và thiết kế chỉ mục** nối từ **Thống kê cũ** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bộ tối ưu và thiết kế chỉ mục
 
 Chỉ mục không chỉ giảm chi phí tra cứu; nó thay đổi không gian kế hoạch, thứ tự dữ liệu và các phương án nối. Thứ tự cột trong chỉ mục ghép nên phản ánh kiểu truy cập, độ chọn lọc và yêu cầu sắp xếp, thay vì áp dụng máy móc quy tắc “cột chọn lọc nhất luôn đứng trước”.
-
-> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Bộ tối ưu và thiết kế chỉ mục**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

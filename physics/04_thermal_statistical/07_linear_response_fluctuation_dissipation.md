@@ -10,8 +10,6 @@ Khi một hệ đang gần cân bằng bị tác động rất yếu, đáp ứn
 
 Khung này nối cơ học thống kê với hệ số vận chuyển, nhiễu điện, độ nhớt, khuếch tán, đáp ứng điện môi, quang phổ học và vật lý nhiều hạt.
 
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Đáp ứng tuyến tính như xấp xỉ bậc nhất** nối từ **Câu hỏi trung tâm** sang **Phần thực và phần ảo của susceptibility**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Đáp ứng tuyến tính như xấp xỉ bậc nhất
 
 Giả sử một lực suy rộng ngoài `f(t)` ghép với đại lượng `A`. Với tác động đủ nhỏ, thay đổi của giá trị kỳ vọng đại lượng `B` có thể viết
@@ -35,8 +33,6 @@ Trong miền tần số,
 
 Phép tích chập theo thời gian trở thành phép nhân theo tần số. Đây là lý do Fourier là ngôn ngữ tự nhiên của hệ tuyến tính.
 
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Phần thực và phần ảo của susceptibility** nối từ **Đáp ứng tuyến tính như xấp xỉ bậc nhất** sang **Nhân quả và quan hệ Kramers–Kronig**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phần thực và phần ảo của susceptibility
 
 Ta thường viết
@@ -53,8 +49,6 @@ Trong nhiều hệ:
 Ví dụ, trong điện môi, phần ảo của hằng số điện môi liên hệ với hấp thụ. Trong dao động cơ học, phần ảo của compliance liên hệ với mất mát năng lượng.
 
 Tiêu tán không phải một chi tiết phụ: nó quyết định entropy môi trường vận hành (production / 운영 환경), độ rộng cộng hưởng và thời gian sống của chế độ (mode / 모드).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Nhân quả và quan hệ Kramers–Kronig** nối từ **Phần thực và phần ảo của susceptibility** sang **Trực giác của định lý thăng giáng–tiêu tán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhân quả và quan hệ Kramers–Kronig
 
@@ -80,8 +74,6 @@ Có quan hệ ngược lại cho `\chi''`.
 
 Về vật lý, tán sắc và hấp thụ là hai mặt của cùng một đáp ứng nhân quả. Trong quang học, sự thay đổi chiết suất gần một vạch hấp thụ là ví dụ trực tiếp.
 
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Trực giác của định lý thăng giáng–tiêu tán** nối từ **Nhân quả và quan hệ Kramers–Kronig** sang **Quan hệ Einstein giữa khuếch tán và độ linh động**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trực giác của định lý thăng giáng–tiêu tán
 
 Nếu một bậc tự do bị môi trường làm giảm chuyển động mạnh, cùng môi trường đó cũng phải gây các cú đá ngẫu nhiên ở nhiệt độ hữu hạn.
@@ -102,8 +94,6 @@ Trong mô hình nhiễu trắng cổ điển,
 ```
 
 Nhiễu mạnh hơn khi nhiệt độ cao hơn hoặc coupling gây tiêu tán mạnh hơn.
-
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Quan hệ Einstein giữa khuếch tán và độ linh động** nối từ **Trực giác của định lý thăng giáng–tiêu tán** sang **Nhiễu Johnson–Nyquist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Einstein giữa khuếch tán và độ linh động
 
@@ -133,8 +123,6 @@ D=\frac{k_BT}{\gamma}.
 
 Khuếch tán ngẫu nhiên và lực cản tiêu tán vì vậy là hai biểu hiện của cùng coupling với môi trường nhiệt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Nhiễu Johnson–Nyquist** nối từ **Quan hệ Einstein giữa khuếch tán và độ linh động** sang **Quan hệ Green–Kubo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Nhiễu Johnson–Nyquist
 
 Một điện trở ở nhiệt độ `T` có dao động điện áp ngay cả khi không đặt điện áp ngoài.
@@ -148,8 +136,6 @@ S_V(f)=4k_BTR.
 Điện trở `R` đo mức tiêu tán của mạch; chính `R` và `T` cũng quyết định độ mạnh của nhiễu nhiệt.
 
 Ở tần số cao hoặc nhiệt độ rất thấp, cần hiệu chỉnh lượng tử và không thể tiếp tục dùng biểu thức cổ điển một cách máy móc.
-
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Quan hệ Green–Kubo** nối từ **Nhiễu Johnson–Nyquist** sang **Công thức Kubo trong cơ học lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Green–Kubo
 
@@ -165,8 +151,6 @@ D=\frac{1}{d}\int_0^\infty
 Độ nhớt và hệ số dẫn nhiệt cũng có công thức Green–Kubo tương ứng dùng tự tương quan của tensor ứng suất hoặc dòng nhiệt.
 
 Đây là một kết quả sâu: hệ số mô tả đáp ứng không thuận nghịch ở quy mô vĩ mô có thể được tính từ cách các dao động cân bằng vi mô mất tương quan theo thời gian.
-
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Công thức Kubo trong cơ học lượng tử** nối từ **Quan hệ Green–Kubo** sang **Động (dynamic / 동적) cấu trúc (structure / 구조) factor và quang phổ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức Kubo trong cơ học lượng tử
 
@@ -189,8 +173,6 @@ Hàm bước `\theta(t)` bảo đảm nhân quả. Commutator xuất hiện vì 
 
 Độ dẫn điện, susceptibility từ và đáp ứng quang học của hệ nhiều hạt thường được suy ra bằng formalism Kubo.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Động (dynamic / 동적) cấu trúc (structure / 구조) factor và quang phổ học** nối từ **Công thức Kubo trong cơ học lượng tử** sang **Quan hệ thuận nghịch Onsager**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Động (dynamic / 동적) cấu trúc (structure / 구조) factor và quang phổ học
 
 Dao động mật độ trong vật chất có thể được mô tả bằng động (dynamic / 동적) cấu trúc (structure / 구조) factor `S(q,\omega)`.
@@ -198,8 +180,6 @@ Dao động mật độ trong vật chất có thể được mô tả bằng đ
 Tán xạ neutron, tia X và ánh sáng đo các đại lượng liên quan đến `S`. Vị trí peak cho biết chế độ (mode / 모드) tập thể, còn độ rộng peak liên hệ với damping và thời gian sống.
 
 FDT nối phổ thăng giáng với phần tiêu tán của susceptibility. Vì vậy đo nhiễu tự phát và đo đáp ứng cưỡng bức có thể cung cấp thông tin về cùng động lực vi mô.
-
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Quan hệ thuận nghịch Onsager** nối từ **Động (dynamic / 동적) cấu trúc (structure / 구조) factor và quang phổ học** sang **Entropy môi trường vận hành (production / 운영 환경) trong nhiệt động lực học không thuận nghịch tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ thuận nghịch Onsager
 
@@ -219,8 +199,6 @@ Khi có từ trường hoặc biến đổi có tính lẻ dưới đảo thời
 
 Hiệu ứng Seebeck–Peltier trong nhiệt điện là ví dụ quan trọng về vận chuyển ghép chéo.
 
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Entropy môi trường vận hành (production / 운영 환경) trong nhiệt động lực học không thuận nghịch tuyến tính** nối từ **Quan hệ thuận nghịch Onsager** sang **Trọng yếu (critical / 중요) slowing down**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Entropy môi trường vận hành (production / 운영 환경) trong nhiệt động lực học không thuận nghịch tuyến tính
 
 Tốc độ sinh entropy thường có dạng
@@ -233,15 +211,11 @@ Tốc độ sinh entropy thường có dạng
 
 Đây là cầu nối giữa nhiệt động lực học không cân bằng dạng hiện tượng luận và lý thuyết tương quan vi mô.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Trọng yếu (critical / 중요) slowing down** nối từ **Entropy môi trường vận hành (production / 운영 환경) trong nhiệt động lực học không thuận nghịch tuyến tính** sang **Khi đáp ứng tuyến tính thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Trọng yếu (critical / 중요) slowing down
 
 Gần chuyển pha liên tục, độ dài tương quan tăng và thời gian thư giãn cũng có thể tăng mạnh.
 
 Hệ không chỉ dao động mạnh hơn mà còn mất nhiều thời gian hơn để quên một fluctuation. Do đó susceptibility cân bằng, biên độ thăng giáng và động lực không cân bằng liên hệ với nhau qua scaling tới hạn.
-
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Khi đáp ứng tuyến tính thất bại** nối từ **Trọng yếu (critical / 중요) slowing down** sang **Ví dụ: bậc tự do overdamped chịu lực bậc thang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi đáp ứng tuyến tính thất bại
 
@@ -254,8 +228,6 @@ B=\chi^{(1)}f+\chi^{(2)}f^2+\chi^{(3)}f^3+\cdots.
 Hệ xa cân bằng, có hysteresis mạnh, active driving hoặc bộ nhớ dài có thể không tuân FDT cân bằng chuẩn.
 
 Khi đó cần các khung tổng quát hơn như đáp ứng phi tuyến, stochastic thermodynamics hoặc phương trình động học đầy đủ.
-
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Khi đáp ứng tuyến tính thất bại** nêu quy tắc; **Ví dụ: bậc tự do overdamped chịu lực bậc thang** thử quy tắc trong tình huống, rồi **Đơn vị và kiểm tra thứ nguyên** mở rộng hệ quả.
 
 ## Ví dụ: bậc tự do overdamped chịu lực bậc thang
 
@@ -278,8 +250,6 @@ Cùng hệ số `\gamma` quyết định thời gian thư giãn và, qua FDT, đ
 
 Vì vậy đo thăng giáng tự phát có thể giúp suy ra tham số đáp ứng mà không cần kích thích hệ mạnh.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Ví dụ: bậc tự do overdamped chịu lực bậc thang** nêu quy tắc; **Đơn vị và kiểm tra thứ nguyên** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
-
 ## Đơn vị và kiểm tra thứ nguyên
 
 Susceptibility có đơn vị phụ thuộc cặp đại lượng đầu vào–đầu ra. Ví dụ độ linh động `\mu` có đơn vị vận tốc chia lực.
@@ -293,8 +263,6 @@ D=\mu k_BT,
 `k_BT` có đơn vị năng lượng, nên tích với `\mu` phải cho đơn vị `m^2/s` của hệ số khuếch tán.
 
 Các kiểm tra thứ nguyên như vậy đặc biệt hữu ích vì tuyến tính (linear / 선형) phản hồi (response / 응답) thường chứa nhiều hệ số hiện tượng luận.
-
-> **Nối mạch:** Trong **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Đơn vị và kiểm tra thứ nguyên** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -311,8 +279,6 @@ microscopic coupling
 → susceptibility
 → dissipation / transport
 ```
-
-> **Nối mạch:** Ở chặng này của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -331,8 +297,6 @@ Không nhất thiết. Tính không thuận nghịch vĩ mô có thể nổi lê
 ### “Phần ảo của susceptibility chỉ là thủ thuật số phức”
 
 Không. Nó thường mang thông tin trực tiếp về hấp thụ và mất mát năng lượng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đáp ứng tuyến tính và định lý thăng giáng–tiêu tán**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -12,15 +12,11 @@ Ngược lại, một số tạp chất lại được chủ động thêm vào 
 
 Khuyết tật tinh thể cũng phải được quản lý vì tâm bẫy điện tích và tâm tái hợp có thể làm giảm hiệu suất hoặc độ tin cậy của linh kiện.
 
-> **Nối mạch:** Purified silicon and crystal growth set the material baseline; doping tunes carrier concentration, then gate dielectric/interface chemistry controls how that charge becomes device behavior.
-
 ## Pha tạp
 
 **Pha tạp (doping)** thay một phần nhỏ nguyên tử trong mạng silicon bằng nguyên tố khác để điều chỉnh mật độ electron hoặc lỗ trống.
 
 Boron thường tạo silicon loại p, còn phosphorus hoặc arsenic thường tạo silicon loại n. Đây là ví dụ trực tiếp cho thấy thay đổi hóa học rất nhỏ về thành phần có thể thay đổi mạnh mức Fermi và tính dẫn điện của vật liệu.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Điện môi cổng và bề mặt phân cách** nối từ **Pha tạp** sang **Quang khắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện môi cổng và bề mặt phân cách
 
@@ -30,8 +26,6 @@ Mật độ bẫy ở bề mặt, điện tích cố định và khuyết tật 
 
 Các điện môi có hằng số điện môi cao (**high-k dielectric**) hiện đại đòi hỏi kỹ thuật lắng đọng có kiểm soát ở cấp gần nguyên tử, vì sai khác vài lớp nguyên tử có thể ảnh hưởng rõ tới tính chất điện.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Quang khắc** nối từ **Điện môi cổng và bề mặt phân cách** sang **Lắng đọng màng mỏng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Quang khắc
 
 Chất cản quang (**photoresist**) là vật liệu polymer trải qua phản ứng do ánh sáng kích hoạt, từ đó thay đổi độ tan trong dung dịch hiện ảnh.
@@ -39,8 +33,6 @@ Chất cản quang (**photoresist**) là vật liệu polymer trải qua phản 
 Vì vậy quang khắc là sự kết hợp giữa quang học và quang hóa polymer.
 
 Các bước khắc bằng hóa chất hoặc plasma sau đó loại bỏ vật liệu có chọn lọc dựa trên tốc độ phản ứng và độ bay hơi của sản phẩm. Độ chọn lọc khắc là bài toán hóa học bề mặt chứ không chỉ là vấn đề hình học của mẫu mạch.
-
-> **Nối mạch:** Trong **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Lắng đọng màng mỏng** nối từ **Quang khắc** sang **Kim loại và đường liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lắng đọng màng mỏng
 
@@ -50,8 +42,6 @@ Lắng đọng lớp nguyên tử (**Atomic layer Deposition, ALD**) chia quá t
 
 Việc chọn tiền chất phải cân bằng nhiều yêu cầu: đủ bay hơi, bền khi lưu trữ, phản ứng tốt trên bề mặt, không để lại tạp chất khó loại và tạo sản phẩm phụ dễ thoát khỏi buồng phản ứng.
 
-> **Nối mạch:** Ở chặng này của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, sau nội dung của **Lắng đọng màng mỏng**, **Kim loại và đường liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **LED và màn hình** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Kim loại và đường liên kết
 
 Đồng và aluminum được dùng cho đường liên kết nhờ độ dẫn điện cao, nhưng hiệu năng thực tế còn phụ thuộc kích thước hạt, bề mặt phân cách, lớp cản khuếch tán và độ tinh khiết.
@@ -59,8 +49,6 @@ Việc chọn tiền chất phải cân bằng nhiều yêu cầu: đủ bay hơ
 Ở kích thước rất nhỏ, **điện di kim loại (electromigration)** có thể làm nguyên tử kim loại dịch chuyển dưới mật độ dòng lớn, dần tạo lỗ rỗng hoặc chỗ tích tụ và gây hỏng mạch.
 
 Đây là ví dụ cho thấy độ tin cậy điện tử có thể bị giới hạn bởi vận chuyển nguyên tử chứ không chỉ bởi mạch điện lý tưởng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **LED và màn hình** nối từ **Kim loại và đường liên kết** sang **Pin trong thiết bị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## LED và màn hình
 
@@ -70,15 +58,11 @@ LED vô cơ sử dụng chất bán dẫn hợp chất, giếng lượng tử v�
 
 Màu phát sáng, hiệu suất và tuổi thọ đều liên quan tới cấu trúc điện tử, hóa học vật liệu và chất lượng bề mặt phân cách.
 
-> **Nối mạch:** Trong **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Pin trong thiết bị** nối từ **LED và màn hình** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pin trong thiết bị
 
 Điện thoại và laptop dựa vào hóa học xen cài lithium, vận chuyển ion và phản ứng oxy hóa-khử thuận nghịch. Phần mềm quản lý pin chỉ có thể hoạt động tốt khi mô hình hóa đúng giới hạn hóa học và nhiệt của cell.
 
 Vì vậy nguồn điện của một thiết bị hiện đại là điểm giao của điện hóa học, vật liệu và phần mềm nhúng.
-
-> **Nối mạch:** Ở chặng này của **Hóa học và Điện tử — thiết bị điện tử là vật chất được kiểm soát**, **Mô hình tư duy** tổng hợp từ **Pin trong thiết bị** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

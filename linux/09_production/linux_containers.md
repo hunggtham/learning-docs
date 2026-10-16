@@ -10,8 +10,6 @@ Bộ chứa (container / 컨테이너) thường được giới thiệu như "m
 
 Bộ chứa (container / 컨테이너) đóng gói một hệ thống tệp không gian người dùng hoặc ảnh (image / 이미지), sau đó dùng các cơ chế cô lập của kernel để mỗi khối lượng công việc có góc nhìn riêng mà không cần một guest kernel đầy đủ.
 
-> **Nối mạch:** Trong **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Không gian tên (namespace / 네임스페이스): cô lập góc nhìn** nối từ **Bộ chứa (container / 컨테이너) muốn giải quyết vấn đề gì?** sang **Cgroup: thống kê và kiểm soát tài nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Không gian tên (namespace / 네임스페이스): cô lập góc nhìn
 
 **Vùng tên (namespace)** của Linux cho tiến trình nhìn một phần hoặc một phiên bản riêng của một số tài nguyên vốn có phạm vi toàn hệ thống. Các loại không gian tên (namespace / 네임스페이스) thường gặp liên quan tới PID, mount, mạng, IPC, UTS, người dùng và cgroup.
@@ -24,8 +22,6 @@ Mount không gian tên (namespace / 네임스페이스) tạo một góc nhìn m
 
 Mô hình tư duy quan trọng là: không gian tên (namespace / 네임스페이스) không nhất thiết tạo ra một tài nguyên vật lý mới; nó thay **khả năng nhìn thấy và ngữ cảnh** của tiến trình đối với một nhóm tài nguyên.
 
-> **Nối mạch:** Ở chặng này của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Cgroup: thống kê và kiểm soát tài nguyên** nối từ **Không gian tên (namespace / 네임스페이스): cô lập góc nhìn** sang **Ảnh (image / 이미지) và hệ thống tệp nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cgroup: thống kê và kiểm soát tài nguyên
 
 **Nhóm điều khiển (control groups / cgroups / 컨트롤 그룹)** tổ chức các tiến trình để thống kê hoặc giới hạn tài nguyên như CPU, bộ nhớ và I/O tùy khả năng của phiên bản kernel.
@@ -33,8 +29,6 @@ Mô hình tư duy quan trọng là: không gian tên (namespace / 네임스페�
 Giới hạn bộ nhớ của bộ chứa (container / 컨테이너) vì vậy có thể nhỏ hơn RAM của host. Tiến trình có thể bị OOM do cgroup dù `free -h` trên host vẫn cho thấy còn nhiều bộ nhớ.
 
 Giới hạn CPU cũng không có nghĩa bộ chứa (container / 컨테이너) sở hữu CPU vật lý riêng. Bộ lập lịch vẫn phân phối CPU của host theo các quy tắc và giới hạn của cgroup.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Ảnh (image / 이미지) và hệ thống tệp nhiều lớp** nối từ **Cgroup: thống kê và kiểm soát tài nguyên** sang **Volume và dữ liệu bền vững**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ảnh (image / 이미지) và hệ thống tệp nhiều lớp
 
@@ -44,23 +38,17 @@ Giới hạn CPU cũng không có nghĩa bộ chứa (container / 컨테이너) 
 
 **Trạng thái mong muốn (desired state)** nên được mô tả trong ảnh (image / 이미지), cấu hình và hệ thống quản lý volume thay vì dựa vào các lần chỉnh sửa thủ công giống SSH trong một bộ chứa (container / 컨테이너) tạm thời.
 
-> **Nối mạch:** Trong **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Ảnh (image / 이미지) và hệ thống tệp nhiều lớp** đặt vấn đề; **Volume và dữ liệu bền vững** đối chiếu bằng chứng, rồi **PID 1 trong bộ chứa (container / 컨테이너)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Volume và dữ liệu bền vững
 
 Lớp ghi của bộ chứa (container / 컨테이너) thường gắn với vòng đời bộ chứa (container / 컨테이너). Dữ liệu cần tồn tại lâu hơn nên dùng volume, bind mount hoặc hệ thống lưu trữ bên ngoài theo kiến trúc.
 
 Quyền hệ thống tệp vẫn dựa trên ngữ nghĩa `UID`/`GID`. Tên người dùng hiển thị trong host và bộ chứa (container / 컨테이너) có thể khác, nhưng kernel quan tâm tới ánh xạ danh tính dạng số. người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) còn có thể ánh xạ lại các danh tính này.
 
-> **Nối mạch:** Ở chặng này của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Volume và dữ liệu bền vững** đặt vấn đề; **PID 1 trong bộ chứa (container / 컨테이너)** đối chiếu bằng chứng, rồi **Bộ chứa (container / 컨테이너) không phải ranh giới bảo mật tuyệt đối** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## `PID 1` trong bộ chứa (container / 컨테이너)
 
 Tiến trình mang `PID 1` trong không gian tên (namespace / 네임스페이스) có trách nhiệm và ngữ nghĩa tín hiệu (signal / 신호) đáng chú ý. Nếu ứng dụng không xử lý tín hiệu (signal / 신호) hoặc thu nhận trạng thái tiến trình con đúng cách, bộ chứa (container / 컨테이너) có thể dừng chậm hoặc tích lũy zombie. thời gian chạy (runtime / 런타임) hoặc một init wrapper có thể hỗ trợ, nhưng vòng đời tiến trình của ứng dụng vẫn cần được thiết kế đúng.
 
 Đây là mối liên hệ trực tiếp với [Tiến trình, luồng, tín hiệu và tác vụ](../04_process/processes_threads_signals_jobs.md).
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Bộ chứa (container / 컨테이너) không phải ranh giới bảo mật tuyệt đối** nối từ **PID 1 trong bộ chứa (container / 컨테이너)** sang **Gỡ lỗi mạng trong bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ chứa (container / 컨테이너) không phải ranh giới bảo mật tuyệt đối
 
@@ -70,23 +58,17 @@ Chạy bộ chứa (container / 컨테이너) với `--privileged`, gắn socket
 
 Bảo mật bộ chứa (container / 컨테이너) cần nguồn gốc ảnh (image / 이미지) đáng tin cậy, đặc quyền tối thiểu, hệ thống tệp chỉ đọc khi phù hợp, giảm capabilities, vá lỗi và gia cố host.
 
-> **Nối mạch:** Trong **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Gỡ lỗi mạng trong bộ chứa (container / 컨테이너)** nối từ **Bộ chứa (container / 컨테이너) không phải ranh giới bảo mật tuyệt đối** sang **Liên hệ với Docker và Kubernetes**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Gỡ lỗi mạng trong bộ chứa (container / 컨테이너)
 
 `localhost` trong mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) của bộ chứa (container / 컨테이너) thường là loopback của chính không gian tên (namespace / 네임스페이스) đó, không phải host. Nếu ứng dụng trong bộ chứa (container / 컨테이너) gọi `localhost:5432`, nó đang tìm dịch vụ trong cùng ngữ cảnh mạng, trừ khi dùng một chế độ mạng đặc biệt.
 
 Khi gỡ lỗi cần biết câu lệnh đang chạy trong không gian tên (namespace / 네임스페이스) của host hay của bộ chứa (container / 컨테이너). Đây là ví dụ cho thấy cùng một địa chỉ có thể mang ý nghĩa khác nhau tùy ngữ cảnh không gian tên (namespace / 네임스페이스).
 
-> **Nối mạch:** Ở chặng này của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Liên hệ với Docker và Kubernetes** nối từ **Gỡ lỗi mạng trong bộ chứa (container / 컨테이너)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên hệ với Docker và Kubernetes
 
 Docker, containerd và các thời gian chạy (runtime / 런타임) theo CRI điều phối các cơ chế kernel, quản lý ảnh (image / 이미지) và vòng đời bộ chứa (container / 컨테이너). Kubernetes bổ sung lập lịch, trạng thái mong muốn, khám phá dịch vụ và các lớp trừu tượng mạng/lưu trữ trên nhiều nút (node / 노드).
 
 Hiểu mô hình tiến trình, mạng và hệ thống tệp của Linux làm việc gỡ lỗi Kubernetes bớt "ma thuật": pod crash vẫn liên quan vòng đời tiến trình; quyền volume vẫn liên quan danh tính của hệ thống tệp; kết nối dịch vụ (service / 서비스) cuối cùng vẫn đi qua DNS, IP và socket.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ với Docker và Kubernetes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -100,8 +82,6 @@ kernel của host
 
 Máy ảo khác ở chỗ hệ điều hành khách thường có kernel riêng chạy trên ranh giới phần cứng được ảo hóa.
 
-> **Nối mạch:** Trong **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
 **"bộ chứa (container / 컨테이너) có kernel riêng."** bộ chứa (container / 컨테이너) Linux thông thường dùng chung kernel của host.
@@ -113,8 +93,6 @@ Máy ảo khác ở chỗ hệ điều hành khách thường có kernel riêng 
 **"`localhost` trong bộ chứa (container / 컨테이너) là host."** Thông thường đó là loopback của mạng (network / 네트워크) không gian tên (namespace / 네임스페이스) hiện tại.
 
 **"bộ chứa (container / 컨테이너) mặc định là sandbox bảo mật tuyệt đối."** Mức cô lập phụ thuộc các cơ chế kernel và cấu hình đặc quyền của thời gian chạy (runtime / 런타임).
-
-> **Nối mạch:** Ở chặng này của **Các cơ chế Linux phía sau bộ chứa (container / 컨테이너)**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -18,8 +18,6 @@
 
 Năng lượng là đại lượng vô hướng nên rất mạnh khi phân tích sự chuyển đổi và bảo toàn năng lượng. Động lượng giữ cả độ lớn lẫn thông tin về hướng, vì vậy đặc biệt hữu ích trong các bài toán va chạm, giật lùi và hệ nhiều vật.
 
-> **Nối mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Xung lượng** nối từ **Tại sao cần động lượng khi đã có động năng?** sang **Bảo toàn động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Xung lượng
 
 Xung lượng (Impulse / 충격량) là tích phân của lực theo thời gian:
@@ -42,8 +40,6 @@ Nếu chỉ biết lực trung bình trong khoảng thời gian `\Delta t`, ta c
 
 Với cùng một độ biến thiên động lượng `\Delta p`, kéo dài thời gian va chạm sẽ làm giảm độ lớn lực trung bình. Túi khí ô tô, vùng hấp thụ va chạm của thân xe, thảm tập và động tác co tay khi bắt bóng đều khai thác nguyên lý này.
 
-> **Nối mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Bảo toàn động lượng** nối từ **Xung lượng** sang **Va chạm đàn hồi và không đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bảo toàn động lượng
 
 Với một hệ gồm nhiều vật, tổng động lượng là:
@@ -65,8 +61,6 @@ Nếu tổng ngoại lực bằng không:
 ```
 
 Bảo toàn động lượng không phụ thuộc vào việc va chạm có đàn hồi hay không. Ở mức cơ học, nó xuất hiện khi hệ được cô lập khỏi ngoại lực. Ở mức sâu hơn, bảo toàn động lượng liên hệ với đối xứng tịnh tiến (translational symmetry / 병진 대칭) của không gian.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Va chạm đàn hồi và không đàn hồi** nối từ **Bảo toàn động lượng** sang **Tâm khối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Va chạm đàn hồi và không đàn hồi
 
@@ -92,8 +86,6 @@ v_f=\frac{m_1}{m_1+m_2}v_1
 
 Động năng trước và sau nói chung không bằng nhau. Phần động năng giảm đi không biến mất mà chuyển sang các dạng năng lượng khác của hệ.
 
-> **Nối mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Tâm khối** nối từ **Va chạm đàn hồi và không đàn hồi** sang **Tên lửa và hệ có khối lượng thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tâm khối
 
 Tâm khối (Center of Mass / 질량중심) là trung bình có trọng số theo khối lượng của vị trí các phần tử trong hệ:
@@ -118,8 +110,6 @@ Nội lực có thể làm hệ biến dạng, quay hoặc thậm chí nổ thà
 
 Nếu một người đứng trên ván trượt ném một quả bóng về phía trước, người và ván trượt lùi lại. Các phần của hệ trao đổi động lượng với nhau, trong khi chuyển động của tâm khối toàn hệ vẫn tuân theo ngoại lực tác dụng lên hệ.
 
-> **Nối mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Tên lửa và hệ có khối lượng thay đổi** nối từ **Tâm khối** sang **Bài toán giật lùi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tên lửa và hệ có khối lượng thay đổi
 
 Tên lửa là trường hợp cần cẩn thận khi dùng dạng đơn giản `F=ma`, vì khối lượng của tên lửa thay đổi khi nhiên liệu được phụt ra. Bảo toàn động lượng dẫn tới phương trình tên lửa Tsiolkovsky:
@@ -138,8 +128,6 @@ Logarithm xuất hiện vì mỗi phần tăng vận tốc đạt được khi t
 
 Đây là một ví dụ điển hình cho cấu trúc logarit xuất hiện trong một quá trình có sự thay đổi theo tỉ lệ của đại lượng hiện có.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Bài toán giật lùi** nối từ **Tên lửa và hệ có khối lượng thay đổi** sang **Bảo toàn như một bất biến của hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bài toán giật lùi
 
 Một khẩu súng và viên đạn ban đầu đứng yên. Nếu viên đạn khối lượng `m` bay ra với vận tốc `v`, còn súng khối lượng `M` giật lùi với vận tốc `V`, bảo toàn động lượng cho:
@@ -156,21 +144,15 @@ V=-\frac{m}{M}v
 
 Dấu âm cho biết súng chuyển động ngược hướng với viên đạn. Vì `M` thường lớn hơn `m` rất nhiều, độ lớn vận tốc giật lùi của súng nhỏ hơn nhiều so với vận tốc viên đạn.
 
-> **Nối mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Bảo toàn như một bất biến của hệ** nối từ **Bài toán giật lùi** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bảo toàn như một bất biến của hệ
 
 Có thể liên hệ trực giác với một hệ thống kế toán hoặc một giao dịch cơ sở dữ liệu: một bất biến (invariant / 불변식) là điều kiện phải được giữ sau mọi thao tác hợp lệ. Trong một hệ cô lập, các tương tác nội bộ có thể chuyển động lượng từ thành phần này sang thành phần khác, nhưng tổng động lượng của toàn hệ không đổi.
 
 Điểm khác biệt quan trọng là định luật bảo toàn trong vật lý không phải quy ước do con người đặt ra. Nó là cấu trúc được kiểm chứng thực nghiệm và, ở mức lý thuyết sâu hơn, liên hệ với đối xứng của tự nhiên.
 
-> **Nối mạch:** Ở chặng này của **Động lượng, xung lượng, va chạm và tâm khối**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Bảo toàn như một bất biến của hệ**, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Động lượng có thể được hình dung như một “sổ cái chuyển động có hướng”. Ngoại lực tạo dòng động lượng đi vào hoặc đi ra khỏi hệ; các tương tác nội bộ chỉ chuyển động lượng giữa các phần của hệ. Khi chọn đúng ranh giới hệ, nhiều bài toán va chạm phức tạp trở thành bài toán cân bằng một đại lượng vectơ.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lượng, xung lượng, va chạm và tâm khối**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -181,8 +163,6 @@ Không. `p=mv` là vectơ và tuyến tính theo `v`, còn `K=mv²/2` là vô h�
 ### “Động lượng chỉ bảo toàn trong va chạm đàn hồi”
 
 Sai. Động lượng được bảo toàn trong mọi loại va chạm nếu hệ cô lập. Chỉ động năng mới có thêm điều kiện bảo toàn trong va chạm đàn hồi.
-
-> **Nối mạch:** Trong **Động lượng, xung lượng, va chạm và tâm khối**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

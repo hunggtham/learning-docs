@@ -27,8 +27,6 @@ Learned Model + New Data → Prediction
 
 Điều này không có nghĩa AI lúc nào cũng học từ dữ liệu (data / 데이터). Classical AI còn dùng tìm kiếm (search / 검색), lô-gic (logic / 논리), planning, ràng buộc (constraint / 제약조건) solving và kiến thức (knowledge / 지식) biểu diễn (representation / 표현). Vì vậy Machine học tập (learning / 학습) chỉ là một nhánh rất lớn bên trong AI, không phải định nghĩa của toàn bộ AI.
 
-> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** tiếp nhận điểm tựa từ **Từ automation đến intelligence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic
 
 Một hệ thống (system / 시스템) được gọi là “intelligent” thường vì nó có một hoặc nhiều năng lực (capability / 역량) sau: perception, lập luận (reasoning / 추론), học tập (learning / 학습), planning, ngôn ngữ (language / 언어) understanding, prediction, quyết định (decision / 결정) making hoặc hành động (action / 동작). Không nên gộp tất cả thành một khái niệm mơ hồ.
@@ -41,25 +39,21 @@ Mô hình tư duy (mental model / 사고 모델) hữu ích là:
 Intelligence ≈ khả năng biến information thành useful behavior dưới constraints
 ```
 
-“Useful hành vi (behavior / 동작)” phụ thuộc vào mục tiêu (objective / 목표). Với recommender hệ thống (system / 시스템), đó có thể là ranking item. Với robot, đó có thể là hành động vật lý. Với LLM, đó có thể là chuỗi (sequence / 시퀀스) đơn vị từ (token / 토큰) trả lời phù hợp. Với autonomous tác nhân (agent / 에이전트), đó có thể là một chuỗi hành động (action / 동작) hướng tới goal.
-
-> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** tiếp nhận điểm tựa từ **Intelligence nên được nhìn như năng lực (capability / 역량), không phải magic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+“Useful hành vi (behavior / 동작)” phụ thuộc vào mục tiêu (objective / 목표). Với recommender hệ thống (system / 시스템), đó có thể là ranking item. Với robot, đó có thể là hành động vật lý. Với LLM, đó có thể là chuỗi (sequence / 시퀀스) token (토큰) trả lời phù hợp. Với autonomous tác nhân (agent / 에이전트), đó có thể là một chuỗi hành động (action / 동작) hướng tới goal.
 
 ## Một AI hệ thống (system / 시스템) cần biểu diễn thế giới
 
-Máy không trực tiếp nhìn thấy “con mèo”, “khách hàng rời bỏ dịch vụ” hay “ý nghĩa của câu”. Nó chỉ nhận một biểu diễn (representation / 표현): điểm ảnh (pixel / 픽셀), đơn vị từ (token / 토큰), véc-tơ (vector / 벡터), đồ thị (graph / 그래프), tính năng (feature / 기능) hoặc trạng thái (state / 상태). biểu diễn (representation / 표현) là cầu nối giữa world và computation.
+Máy không trực tiếp nhìn thấy “con mèo”, “khách hàng rời bỏ dịch vụ” hay “ý nghĩa của câu”. Nó chỉ nhận một biểu diễn (representation / 표현): điểm ảnh (pixel / 픽셀), token (토큰), véc-tơ (vector / 벡터), đồ thị (graph / 그래프), tính năng (feature / 기능) hoặc trạng thái (state / 상태). biểu diễn (representation / 표현) là cầu nối giữa world và computation.
 
 Điều này dẫn tới một nguyên lý quan trọng:
 
 > **Một mô hình (model / 모델) chỉ có thể xử lý những gì đã được biểu diễn theo một dạng mà computation của nó có thể thao tác.**
 
-Một ảnh RGB có thể trở thành tensor. Một câu có thể trở thành đơn vị từ (token / 토큰) IDs rồi embedding vectors. Một board game có thể trở thành trạng thái (state / 상태). Một mạng xã hội có thể trở thành đồ thị (graph / 그래프). Nếu biểu diễn (representation / 표현) làm mất thông tin quan trọng, mô hình (model / 모델) phía sau khó có thể phục hồi điều không còn tồn tại trong đầu vào (input / 입력).
+Một ảnh RGB có thể trở thành tensor. Một câu có thể trở thành token (토큰) IDs rồi embedding vectors. Một board game có thể trở thành trạng thái (state / 상태). Một mạng xã hội có thể trở thành đồ thị (graph / 그래프). Nếu biểu diễn (representation / 표현) làm mất thông tin quan trọng, mô hình (model / 모델) phía sau khó có thể phục hồi điều không còn tồn tại trong đầu vào (input / 입력).
 
 Vì vậy biểu diễn (representation / 표현) không chỉ là bước “format dữ liệu (data / 데이터)”. Nó quyết định mô hình (model / 모델) có thể nhìn thấy cấu trúc nào của bài toán (problem / 문제).
 
 Xem thêm: [Problem Representation](./03_problem_representation.md).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence là gì?**, **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** tiếp nhận điểm tựa từ **Một AI hệ thống (system / 시스템) cần biểu diễn thế giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Weak AI, General AI và terminology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?
 
@@ -75,8 +69,6 @@ Bốn từ này thường bị trộn lẫn.
 
 Các cơ chế này thường kết hợp. Reinforcement học tập (learning / 학습) có học tập (learning / 학습) + tối ưu hóa (optimization / 최적화) + planning. LLM tác nhân (agent / 에이전트) có ngôn ngữ (language / 언어) mô hình (model / 모델) + công cụ (tool / 도구) use + tìm kiếm (search / 검색)/planning. môi trường vận hành (production / 운영 환경) recommendation hệ thống (system / 시스템) có mô hình (model / 모델) học tập (learning / 학습) + ranking tối ưu hóa (optimization / 최적화) + nghiệp vụ (business / 비즈니스) các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Weak AI, General AI và terminology** tiếp nhận điểm tựa từ **Tìm kiếm (search / 검색), lập luận (reasoning / 추론), học tập (learning / 학습) và tối ưu hóa (optimization / 최적화) khác nhau như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI có “hiểu” không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Weak AI, General AI và terminology
 
 Trong nhiều tài liệu, **Narrow AI** hoặc **Weak AI (약인공지능)** chỉ những hệ thống (system / 시스템) được tối ưu cho một phạm vi tác vụ (task / 작업) nhất định. Đây là phần gần như toàn bộ AI deployed hiện nay.
@@ -87,15 +79,11 @@ Trong nhiều tài liệu, **Narrow AI** hoặc **Weak AI (약인공지능)** ch
 
 Thư viện (library / 라이브러리) này ưu tiên những khái niệm có cơ chế (mechanism / 메커니즘) rõ ràng và có thể kiểm chứng, đồng thời vẫn giải thích terminology để người đọc hiểu discussion hiện đại.
 
-> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, **AI có “hiểu” không?** tiếp nhận điểm tựa từ **Weak AI, General AI và terminology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## AI có “hiểu” không?
 
 Câu hỏi này phụ thuộc vào định nghĩa của “understanding”. Nếu “understanding” nghĩa là hệ thống (system / 시스템) có nội bộ (internal / 내부) biểu diễn (representation / 표현) đủ để dự đoán, suy luận hoặc hành động đúng trong một lớp (class / 클래스) of situations, nhiều mô hình (model / 모델) rõ ràng thể hiện một dạng functional understanding. Nếu “understanding” được định nghĩa theo subjective conscious experience, hiện không thể suy ra điều đó chỉ từ đầu ra (output / 출력) hành vi (behavior / 동작).
 
 Trong kỹ thuật (engineering / 엔지니어링), cách an toàn hơn là tránh anthropomorphism và hỏi những câu có thể đo được: mô hình (model / 모델) giữ được ngữ cảnh (context / 맥락) bao lâu, có generalize sang phân phối (distribution / 분포) mới không, có grounded vào bên ngoài (external / 외부) nguồn (source / 소스) không, calibration thế nào, dạng thất bại (failure mode / 실패 모드) nào thường gặp, và hành vi (behavior / 동작) có stable dưới perturbation không.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence là gì?**, **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **AI có “hiểu” không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## AI là một hệ thống (system / 시스템) bài toán (problem / 문제)
 
@@ -118,8 +106,6 @@ Dữ liệu (data / 데이터) chất lượng (quality / 품질), độ trễ (
 
 Đây là lý do thư viện (library / 라이브러리) sau này tách rõ `AI model` và `AI system`.
 
-> **Chuyển mạch:** Trong **Artificial Intelligence là gì?**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **AI là một hệ thống (system / 시스템) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Dùng chung (common / 공통) Misconceptions
 
 ### “AI = Machine học tập (learning / 학습)”
@@ -137,8 +123,6 @@ Quy mô (scale / 규모) có thể cải thiện nhiều năng lực (capability
 ### “AI đầu ra (output / 출력) nghe hợp lý thì có nghĩa là đúng”
 
 Fluency và factual tính đúng đắn (correctness / 정확성) là hai thuộc tính (property / 속성) khác nhau. Đặc biệt với generative mô hình (model / 모델), một chuỗi (sequence / 시퀀스) có xác suất ngôn ngữ cao vẫn có thể sai về factual world. Vì vậy grounding, retrieval, xác minh (verification / 확인) và evaluation là phần cốt lõi của hệ thống (system / 시스템) thiết kế (design / 설계).
-
-> **Chuyển mạch:** Ở chặng này của **Artificial Intelligence là gì?**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

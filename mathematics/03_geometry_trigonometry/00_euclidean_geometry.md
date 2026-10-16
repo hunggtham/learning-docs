@@ -28,8 +28,6 @@ real object
 
 Khi dùng kết quả hình học cho đời thực, ta luôn phải nhớ bước quay lại mô hình (model / 모델): nếu đối tượng (object / 객체) vật lý cong, biến dạng hoặc đo lường (measurement / 측정) có noise, Euclidean kết quả (result / 결과) chỉ là approximation.
 
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **2. Axiom: toán học không bắt đầu từ hư không** nối từ **1. Từ vật thể thật đến đối tượng (object / 객체) lý tưởng** sang **3. Distance là cấu trúc (structure / 구조), không chỉ là formula**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 2. Axiom: toán học không bắt đầu từ hư không
 
 Một hệ hình học cần axioms/postulates — các quy tắc nền được chấp nhận làm starting điểm (point / 지점).
@@ -39,8 +37,6 @@ Một postulate đặc trưng của Euclidean hình học (geometry / 기하학)
 Điều này nghe hiển nhiên vì trực giác của ta được xây từ không gian gần phẳng. Nhưng nếu đổi mô hình (model / 모델) không gian (space / 공간), statement không còn đúng.
 
 Trên sphere, “đường thẳng tự nhiên” được thay bằng geodesic như great circle. Hai great circles thường giao nhau. Vì vậy theorem hình học phải luôn được hiểu cùng các giả định (assumptions / 가정들) về không gian (space / 공간).
-
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **3. Distance là cấu trúc (structure / 구조), không chỉ là formula** nối từ **2. Axiom: toán học không bắt đầu từ hư không** sang **4. Góc là quan hệ giữa directions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Distance là cấu trúc (structure / 구조), không chỉ là formula
 
@@ -71,8 +67,6 @@ triangle inequality
 
 Do đó Manhattan distance, đồ thị (graph / 그래프) shortest-path distance hay cosine distance-like measures có thể phù hợp hơn trong lĩnh vực (domain / 도메인) khác.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **4. Góc là quan hệ giữa directions** nối từ **3. Distance là cấu trúc (structure / 구조), không chỉ là formula** sang **5. Congruence: cùng shape và cùng kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 4. Góc là quan hệ giữa directions
 
 Góc (angle / 각) đo độ quay giữa hai rays/directions.
@@ -97,8 +91,6 @@ Radian là natural đơn vị (unit / 단위) vì nó không cần conversion co
 
 chỉ có form sạch như vậy khi `x` đo bằng radian.
 
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **5. Congruence: cùng shape và cùng kích thước (size / 크기)** nối từ **4. Góc là quan hệ giữa directions** sang **6. Similarity: cùng shape, khác quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 5. Congruence: cùng shape và cùng kích thước (size / 크기)
 
 Hai figures congruent (합동 / congruent) nếu có thể đưa trùng nhau bằng rigid transformations: translation, rotation hoặc reflection.
@@ -108,8 +100,6 @@ Rigid transformation bảo toàn distance. Vì distance được bảo toàn, an
 Đây là một idea sâu: thay vì so từng cạnh/góc riêng lẻ, ta có thể hỏi liệu có một transformation bảo toàn cấu trúc (structure / 구조) đưa đối tượng (object / 객체) A thành đối tượng (object / 객체) B hay không.
 
 Trong hiện đại (modern / 현대적) mathematics, classification thông qua allowed transformations là một chiến lược (strategy / 전략) rất phổ biến.
-
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **6. Similarity: cùng shape, khác quy mô (scale / 규모)** nối từ **5. Congruence: cùng shape và cùng kích thước (size / 크기)** sang **7. Triangle là thành phần nguyên thủy (primitive / 기본 요소) cấu trúc (structure / 구조) của Euclidean hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Similarity: cùng shape, khác quy mô (scale / 규모)
 
@@ -137,8 +127,6 @@ V'=k^3V.
 
 Similarity nối hình học (geometry / 기하학) với dimensional phân tích (analysis / 분석), ảnh (image / 이미지) resizing, map quy mô (scale / 규모) và square-cube law trong biology/kỹ thuật (engineering / 엔지니어링).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **7. Triangle là thành phần nguyên thủy (primitive / 기본 요소) cấu trúc (structure / 구조) của Euclidean hình học (geometry / 기하학)** nối từ **6. Similarity: cùng shape, khác quy mô (scale / 규모)** sang **8. Tổng góc tam giác và giả định (assumption / 가정) Euclidean**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 7. Triangle là thành phần nguyên thủy (primitive / 기본 요소) cấu trúc (structure / 구조) của Euclidean hình học (geometry / 기하학)
 
 Triangle đặc biệt vì ba non-collinear points xác định một shape tối giản trong plane.
@@ -155,8 +143,6 @@ và cyclic variants, thì triangle được xác định đến congruence.
 
 Triangle inequality phản ánh ý tưởng: đường đi trực tiếp giữa hai points không dài hơn đường vòng qua điểm (point / 지점) thứ ba.
 
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **8. Tổng góc tam giác và giả định (assumption / 가정) Euclidean** nối từ **7. Triangle là thành phần nguyên thủy (primitive / 기본 요소) cấu trúc (structure / 구조) của Euclidean hình học (geometry / 기하학)** sang **9. Pythagoras như orthogonal decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 8. Tổng góc tam giác và giả định (assumption / 가정) Euclidean
 
 Trong Euclidean plane:
@@ -172,8 +158,6 @@ Proof này dùng parallel postulate. Vì vậy theorem không hoàn toàn “t�
 Trên sphere, triangle angle sum có thể lớn hơn `π`; trong hyperbolic hình học (geometry / 기하학) có thể nhỏ hơn `π`.
 
 Đây là lesson quan trọng về theorem các giả định (assumptions / 가정들): proof cho ta biết theorem đang dựa vào cấu trúc (structure / 구조) nào.
-
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **9. Pythagoras như orthogonal decomposition** nối từ **8. Tổng góc tam giác và giả định (assumption / 가정) Euclidean** sang **10. Circle là locus của constant distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Pythagoras như orthogonal decomposition
 
@@ -197,8 +181,6 @@ u\cdot v=0.
 
 Vì vậy Pythagoras không dừng ở hình học (geometry / 기하학) school; nó đi thẳng sang vectors, least squares, variance decomposition và Hilbert-space intuition.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **10. Circle là locus của constant distance** nối từ **9. Pythagoras như orthogonal decomposition** sang **11. Area là measure phải tương thích với decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 10. Circle là locus của constant distance
 
 Circle center `c` radius `r` được định nghĩa bởi
@@ -218,8 +200,6 @@ Equation đến từ definition, không cần học thuộc độc lập.
 Circle symmetry giải thích nhiều tính chất: mọi rotation quanh center giữ circle không đổi.
 
 Trong physics và kỹ thuật (engineering / 엔지니어링), symmetry thường giúp giảm số variables cần xét.
-
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **11. Area là measure phải tương thích với decomposition** nối từ **10. Circle là locus của constant distance** sang **12. Volume và Cavalieri intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Area là measure phải tương thích với decomposition
 
@@ -255,8 +235,6 @@ Một intuition là chia thành nhiều sectors rồi sắp xen kẽ. Khi số s
 
 Đây là cầu nối (bridge / 브리지) tự nhiên từ hình học (geometry / 기하학) sang limit/tích hợp (integration / 통합).
 
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **12. Volume và Cavalieri intuition** nối từ **11. Area là measure phải tương thích với decomposition** sang **13. Transformation và bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 12. Volume và Cavalieri intuition
 
 Prism/cylinder có
@@ -277,8 +255,6 @@ V=\int A(z)\,dz.
 
 Hình học (geometry / 기하학) và calculus không phải hai thế giới tách biệt; calculus formalize accumulation của infinitesimal cross-sections.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **13. Transformation và bất biến (invariant / 불변식)** nối từ **12. Volume và Cavalieri intuition** sang **14. Coordinate hệ thống (system / 시스템) không phải hình học (geometry / 기하학) itself**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 13. Transformation và bất biến (invariant / 불변식)
 
 Translation, rotation và reflection bảo toàn Euclidean distances. Uniform scaling không bảo toàn length nhưng bảo toàn angle và ratios.
@@ -295,8 +271,6 @@ projective transform → straight lines preserved, metric quantities generally n
 
 Trong computer vision, chọn đúng bất biến (invariant / 불변식) giúp recognition robust hơn với camera transformation.
 
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **14. Coordinate hệ thống (system / 시스템) không phải hình học (geometry / 기하학) itself** nối từ **13. Transformation và bất biến (invariant / 불변식)** sang **15. Worked Example: indirect đo lường (measurement / 측정) bằng similarity**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 14. Coordinate hệ thống (system / 시스템) không phải hình học (geometry / 기하학) itself
 
 Một điểm (point / 지점) có thể có nhiều coordinate representations tùy origin và basis.
@@ -308,8 +282,6 @@ Nếu đổi coordinates đúng cách, geometric distance/angle của đối tư
 > biểu diễn (representation / 표현) có thể đổi, đối tượng (object / 객체) không nhất thiết đổi.
 
 Nó quay lại trong tuyến tính (linear / 선형) algebra với thay đổi (change / 변경) of basis, trong physics với tham chiếu (reference / 참조) frame và trong ML với biểu diễn (representation / 표현) học tập (learning / 학습).
-
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **14. Coordinate hệ thống (system / 시스템) không phải hình học (geometry / 기하학) itself** nêu quy tắc; **15. Worked Example: indirect đo lường (measurement / 측정) bằng similarity** thử quy tắc trong tình huống, rồi **16. Worked Example: hình học (geometry / 기하학) của tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
 
 ## 15. Worked Example: indirect đo lường (measurement / 측정) bằng similarity
 
@@ -330,8 +302,6 @@ H=12\cdot\frac{1.8}{1.5}=14.4\text{ m}.
 Điểm quan trọng không phải phép nhân cuối. giả định (assumption / 가정) chính là same sun angle và ground hình học (geometry / 기하학) đủ phẳng.
 
 Nếu terrain nghiêng hoặc measurements không cùng thời điểm, mô hình (model / 모델) similarity bị phá.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **15. Worked Example: indirect đo lường (measurement / 측정) bằng similarity** nêu quy tắc; **16. Worked Example: hình học (geometry / 기하학) của tối ưu hóa (optimization / 최적화)** thử quy tắc trong tình huống, rồi **17. liên kết (connection / 연결) với Physics** mở rộng hệ quả.
 
 ## 16. Worked Example: hình học (geometry / 기하학) của tối ưu hóa (optimization / 최적화)
 
@@ -363,15 +333,11 @@ A(x)=x\left(\frac P2-x\right).
 
 Hình học (geometry / 기하학) tạo ràng buộc (constraint / 제약조건); algebra biến thành one-variable hàm (function / 함수); calculus tìm maximum. Đây là ví dụ một bài toán (problem / 문제) đi qua nhiều layers toán học thay vì ở trong một chapter cô lập.
 
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **16. Worked Example: hình học (geometry / 기하학) của tối ưu hóa (optimization / 최적화)** nêu quy tắc; **17. liên kết (connection / 연결) với Physics** thử quy tắc trong tình huống, rồi **18. liên kết (connection / 연결) với Khoa học máy tính (computer science / 컴퓨터 과학)** mở rộng hệ quả.
-
 ## 17. liên kết (connection / 연결) với Physics
 
 Euclidean hình học (geometry / 기하학) là nền cho kinematics cục bộ (local / 로컬): displacement, velocity vectors, force decomposition và torque hình học (geometry / 기하학).
 
 Nhưng ở large-scale curved spacetime hoặc trên curved surfaces, Euclidean các giả định (assumptions / 가정들) có thể thất bại (fail / 실패). Điều này nhắc ta rằng mô hình (model / 모델) hình học (geometry / 기하학) là một phần của physics giả định (assumption / 가정).
-
-> **Nối mạch:** Ở chặng này của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **18. liên kết (connection / 연결) với Khoa học máy tính (computer science / 컴퓨터 과학)** nối từ **17. liên kết (connection / 연결) với Physics** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. liên kết (connection / 연결) với Khoa học máy tính (computer science / 컴퓨터 과학)
 
@@ -387,13 +353,9 @@ Hình học (geometry / 기하학) xuất hiện trong:
 
 Nhưng computing thường phải thêm numerical concerns: floating-point tolerance, discretization, coordinate conventions và hiệu năng (performance / 성능) trade-offs.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **18. liên kết (connection / 연결) với Khoa học máy tính (computer science / 컴퓨터 과학)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Euclidean hình học (geometry / 기하학) là study của cấu trúc (structure / 구조) trong một không gian (space / 공간) phẳng: distance và angle tạo ra shape; transformations cho biết biểu diễn (representation / 표현)/đối tượng (object / 객체) có thể thay đổi thế nào; invariants cho biết điều gì thực sự thuộc về geometric đối tượng (object / 객체) chứ không phụ thuộc cách nhìn.
-
-> **Nối mạch:** Trong **Hình học Euclid: từ trực giác không gian đến cấu trúc bất biến**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

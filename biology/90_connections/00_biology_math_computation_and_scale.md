@@ -2,7 +2,6 @@
 
 > **Mạch đọc:** [README Biology](../README.md) là owner của nhánh kết nối này. File đi từ quy mô và hình học sang tốc độ, phản hồi, xác suất, mạng lưới rồi quay lại mô phỏng và các motif chung; mỗi bước chỉ giữ quan hệ có thể dùng để đọc các chapter Biology khác.
 
-
 Nếu đọc từng chapter riêng, ta có thể thấy nhiều khái niệm khác tên: khuếch tán (diffusion), động học enzym (enzyme kinetics), quần thể (population) sinh trưởng (growth), điện thế hoạt động (action potential), gen (gene) mạng lưới (network), lưới thức ăn (food web), giải trình tự (sequencing). Nhưng khi lùi lại một bước, các hệ này lặp lại một số **các mô-típ toán học và tính toán (mathematical and computational motifs)** giống nhau: tốc độ (rate), chênh lệch (gradient), phản hồi (feedback / 피드백), xác suất (probability / 확률), mạng lưới (network), tối ưu hóa (optimization / 최적화) và thông tin (information / 정보).
 
 Chapter này không phải summary môn Sinh học. Nó là bản đồ các mẫu (pattern / 패턴) tái xuất hiện ở nhiều quy mô (scale / 규모), giúp người đọc transfer lập luận (reasoning / 추론) từ chapter này sang chapter khác.
@@ -39,8 +38,6 @@ nên:
 - lá (leaf)/rễ (root) kiến trúc (architecture / 아키텍처) ưu tiên giao diện (interface / 인터페이스).
 
 Một equation hình học (geometry / 기하학) tạo consequences ở nhiều chapter.
-
-> **Nối mạch:** Surface-area-to-volume ratio đặt giới hạn trao đổi theo kích thước; **tỷ lệ thay đổi** chuyển câu hỏi sang dynamics, nơi cần biết hệ đổi nhanh đến đâu so với capacity vận chuyển.
 
 ## 3. tỷ lệ (rate / 비율) of thay đổi (change / 변경)
 
@@ -104,8 +101,6 @@ Decibel, thông tin (information / 정보) measure, fold-change visualization v�
 Log hữu ích khi quantity span nhiều thứ tự (order / 순서) of magnitude. Nó biến multiplicative difference thành additive quy mô (scale / 규모).
 
 Ví dụ pH 6 và 7 khác khoảng 10 lần [H⁺], không phải “1 đơn vị (unit / 단위) nhỏ”.
-
-> **Nối mạch:** Logarithm nén nhiều bậc độ lớn thành thang dễ so sánh; **7. Chênh lệch** chuyển từ độ lớn sang hướng, vì gradient cho biết chất hoặc năng lượng sẽ đi về đâu.
 
 ## 7. Chênh lệch
 
@@ -196,8 +191,6 @@ Nếu disease hiếm, dương tính giả (false positive) từ population healt
 
 Biology và statistics không thể tách trong diagnostic lập luận (reasoning / 추론).
 
-> **Nối mạch:** Prevalence cho thấy cùng một kết quả dương tính có thể mang ý nghĩa khác; **13. Sampling và độ bất định** kiểm tra sai số khi ta chỉ quan sát một phần quần thể.
-
 ## 13. Sampling và độ bất định (uncertainty / 불확실성)
 
 Experiment dùng mẫu (sample / 표본) để infer population. mẫu (sample / 표본) mean có độ bất định; lần lặp (replicate) giúp estimate variance.
@@ -223,8 +216,6 @@ Nhân quả (causal / 인과적) suy luận (inference / 추론) cần intervent
 Directed acyclic đồ thị (graph / 그래프) (DAG) giúp reason confounder/mediator.
 
 Tư duy khoa học (scientific thinking) chapter quay lại bằng formal mô hình (model / 모델).
-
-> **Nối mạch:** Correlation mô tả đồng biến nhưng không chỉ ra cấu trúc quan hệ; **16. Lý thuyết đồ thị** biểu diễn nút, cạnh và đường dẫn để truy tìm phụ thuộc hoặc yếu tố gây nhiễu.
 
 ## 16. Lý thuyết đồ thị (graph theory)
 

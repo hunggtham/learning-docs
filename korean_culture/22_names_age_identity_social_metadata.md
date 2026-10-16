@@ -12,15 +12,11 @@ Tên Hàn thường gồm họ **성 (surname / 성씨)** và tên riêng **이�
 
 > Nếu coi một người như một đối tượng trong hệ thống, “tên” là mã nhận dạng; còn `호칭` giống một cách hiển thị phụ thuộc bối cảnh và quyền truy cập.
 
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **성씨 và 본관: cùng họ chưa chắc cùng dòng họ** nối từ **이름: tên không chỉ là một nhãn** sang **항렬자: khi tên mã hoá vị trí trong gia phả**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 성씨 và 본관: cùng họ chưa chắc cùng dòng họ
 
 **Bản quán (bon-gwan / 본관)** là khái niệm lịch sử gắn một dòng họ với địa điểm nguồn gốc. Vì các họ như 김, 이, 박 rất phổ biến, chỉ riêng họ không đủ để mô tả dòng họ truyền thống. `김해 김씨`, `경주 김씨` và các bản quán khác là những nhánh khác nhau dù cùng mang họ 김.
 
 Trong xã hội hiện đại, bản quán ít xuất hiện trong tương tác hằng ngày hơn trước, nhưng vẫn quan trọng để hiểu gia phả, `족보` và cấu trúc họ tộc lịch sử. Đây cũng là ví dụ cho việc thông tin văn hoá có thể tồn tại dưới dạng **siêu dữ liệu kế thừa (legacy metadata)**: không phải tình huống nào cũng dùng tới, nhưng cấu trúc dữ liệu vẫn còn.
-
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **항렬자: khi tên mã hoá vị trí trong gia phả** nối từ **성씨 và 본관: cùng họ chưa chắc cùng dòng họ** sang **Tên viết bằng 한자 và tên thuần Hangul**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 항렬자: khi tên mã hoá vị trí trong gia phả
 
@@ -28,15 +24,11 @@ Một số dòng họ từng sử dụng **tên thế hệ (generation name / �
 
 Có thể xem đây như một quy tắc mã hoá: tên vừa nhận dạng cá nhân vừa mang thông tin về thế hệ. Tuy nhiên thực hành này không phổ quát và ngày nay nhiều gia đình không còn áp dụng nghiêm ngặt.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tên viết bằng 한자 và tên thuần Hangul** nối từ **항렬자: khi tên mã hoá vị trí trong gia phả** sang **Tuổi: ba hệ thống dễ gây nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tên viết bằng 한자 và tên thuần Hangul
 
 Nhiều tên Hàn có thể được viết bằng **Hanja (한자 / chữ Hán)**, và cùng một âm có thể tương ứng với nhiều chữ mang nghĩa khác nhau. Vì vậy hai người có tên phát âm giống nhau chưa chắc tên có cùng ý nghĩa.
 
 Tên thuần Hangul cũng ngày càng phổ biến. Điều này cho thấy quy ước đặt tên không đứng yên: chính sách ngôn ngữ, thẩm mỹ, bản sắc và thị hiếu thế hệ cùng tác động lên cách cha mẹ đặt tên.
-
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tên viết bằng 한자 và tên thuần Hangul** đặt tiêu chí; **Tuổi: ba hệ thống dễ gây nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vì sao người ta hỏi năm sinh? (왜 몇 년생을 물어볼까?)** mở rộng hệ quả.
 
 ## Tuổi: ba hệ thống dễ gây nhầm
 
@@ -51,8 +43,6 @@ Trong lịch sử đời sống Hàn Quốc có nhiều cách tính tuổi. Ba k
 **만 나이 (international age / tuổi đầy đủ)** là cách tính dựa trên ngày sinh. Đây là chuẩn pháp lý chung hiện nay trong phần lớn hành chính dân sự sau cải cách thống nhất cách biểu thị tuổi từ năm 2023. Tuy vậy, một số luật hoặc lĩnh vực cụ thể vẫn có thể dùng cách tính theo năm sinh, vì quy tắc pháp lý phụ thuộc từng văn bản chứ không chỉ cách nói đời thường.
 
 Điểm quan trọng về văn hoá là chuẩn pháp lý thay đổi không làm thói quen hội thoại biến mất ngay lập tức. Một người có thể dùng `만 나이` trong giấy tờ nhưng vẫn hỏi `몇 년생이에요?` trong giao tiếp vì năm sinh đủ để xác định thế hệ và thứ tự tuổi tương đối.
-
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tuổi: ba hệ thống dễ gây nhầm** đặt tiêu chí; **Vì sao người ta hỏi năm sinh? (왜 몇 년생을 물어볼까?)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **빠른년생: trường hợp biên cho thấy quy tắc xã hội phức tạp hơn phép tính tuổi** mở rộng hệ quả.
 
 ## Vì sao người ta hỏi năm sinh? (왜 몇 년생을 물어볼까?)
 
@@ -72,15 +62,11 @@ chọn danh xưng + cấp độ lời nói
 
 Đây không phải quy tắc tuyệt đối. Vai trò công việc, khoá học, quan hệ gia đình và thoả thuận giữa hai người có thể quan trọng hơn tuổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **빠른년생: trường hợp biên cho thấy quy tắc xã hội phức tạp hơn phép tính tuổi** nối từ **Vì sao người ta hỏi năm sinh? (왜 몇 년생을 물어볼까?)** sang **동갑, 친구 và sự tương đương về tuổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 빠른년생: trường hợp biên cho thấy quy tắc xã hội phức tạp hơn phép tính tuổi
 
 Khái niệm **빠른년생** từng xuất hiện do hệ thống nhập học cho phép một số trẻ sinh đầu năm vào trường cùng khoá với người sinh cuối năm trước. Vì vậy tuổi theo ngày sinh và khoá học có thể không trùng nhau.
 
 Đây là một trường hợp biên (edge case / 경계 사례) thú vị. Nếu thứ bậc chỉ dựa trên tuổi sinh học thì gần như không có mơ hồ. Nhưng vì `친구`, `선후배`, năm học và tuổi cùng tham gia xác định quan hệ, xung đột có thể phát sinh. Hệ thống tuyển sinh đã thay đổi nên khái niệm này ít tạo ra những khoá mới, nhưng người trưởng thành thuộc các thế hệ trước vẫn có thể nhắc tới.
-
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **동갑, 친구 và sự tương đương về tuổi** nối từ **빠른년생: trường hợp biên cho thấy quy tắc xã hội phức tạp hơn phép tính tuổi** sang **생일 và các mốc tuổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 동갑, 친구 và sự tương đương về tuổi
 
@@ -88,23 +74,17 @@ Khái niệm **빠른년생** từng xuất hiện do hệ thống nhập học 
 
 Vì vậy từ tiếng Anh `friend` không ánh xạ hoàn toàn một-một sang `친구`. Một đồng nghiệp rất thân nhưng lớn hơn vài tuổi có thể không được gọi là `친구`, trong khi hai người mới gặp nhưng đồng tuổi có thể sớm dùng phạm trù này.
 
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **생일 và các mốc tuổi** nối từ **동갑, 친구 và sự tương đương về tuổi** sang **주민등록번호 và hạ tầng định danh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 생일 và các mốc tuổi
 
 Sinh nhật trong xã hội hiện đại gần với văn hoá tiêu dùng toàn cầu: bánh, quà, tin nhắn và bữa tối. Tuy nhiên một số mốc truyền thống như **돌 (first birthday / thôi nôi)** và **환갑 (60th birthday / mừng thọ 60)** có lớp lịch sử riêng.
 
 `돌` từng có trọng lượng lớn khi tỷ lệ tử vong trẻ sơ sinh cao hơn: vượt qua năm đầu đời là một ngưỡng rất thực. `환갑` dựa trên chu kỳ 60 năm của hệ can–chi Đông Á; trong quá khứ, đạt 60 tuổi là cột mốc lớn hơn khi tuổi thọ kỳ vọng thấp hơn hiện nay. Khi điều kiện sức khoẻ và tuổi thọ thay đổi, ý nghĩa của nghi lễ cũng thay đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **주민등록번호 và hạ tầng định danh** nối từ **생일 và các mốc tuổi** sang **Tên pháp lý, tên hiển thị và tên dùng trong quan hệ không phải một thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 주민등록번호 và hạ tầng định danh
 
 Không đi vào chi tiết nhạy cảm, có thể nói Hàn Quốc phát triển một hạ tầng định danh hành chính mạnh. Điều này hỗ trợ chính phủ điện tử, ngân hàng và nhiều dịch vụ trực tuyến, đồng thời làm nổi bật các câu hỏi về quyền riêng tư và bảo vệ dữ liệu.
 
 Liên hệ với khoa học máy tính rất rõ: hệ thống định danh càng tập trung và tái sử dụng nhiều thì việc xác thực càng thuận tiện, nhưng phạm vi ảnh hưởng khi dữ liệu bị rò rỉ cũng lớn hơn. Vì vậy văn hoá tiện lợi số và mối quan tâm về `개인정보` — thông tin cá nhân (personal information) — thường cùng tồn tại.
-
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tên pháp lý, tên hiển thị và tên dùng trong quan hệ không phải một thứ** nối từ **주민등록번호 và hạ tầng định danh** sang **로마자 표기: La-tinh hoá là vấn đề tương thích hệ thống, không chỉ phát âm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tên pháp lý, tên hiển thị và tên dùng trong quan hệ không phải một thứ
 
@@ -121,8 +101,6 @@ biệt danh / tên người dùng → biểu diễn bản sắc theo cộng đ�
 
 Sai lầm xuất hiện khi hệ thống giả định bốn lớp luôn trùng nhau. Một cơ sở dữ liệu có thể yêu cầu đúng tên pháp lý, trong khi đồng nghiệp lại chỉ biết tên tiếng Anh. Nếu không có trường ánh xạ, cùng một người có thể trông như hai hồ sơ khác nhau.
 
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **로마자 표기: La-tinh hoá là vấn đề tương thích hệ thống, không chỉ phát âm** nối từ **Tên pháp lý, tên hiển thị và tên dùng trong quan hệ không phải một thứ** sang **Người nước ngoài tại Hàn Quốc và ma sát của tên**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 로마자 표기: La-tinh hoá là vấn đề tương thích hệ thống, không chỉ phát âm
 
 Tên Hàn khi đi vào môi trường quốc tế phải được biểu diễn bằng bảng chữ cái La-tinh. Nhưng mục tiêu của dạng La-tinh không chỉ là giúp người nước ngoài phát âm; nó còn phải hoạt động với hộ chiếu, vé máy bay, ngân hàng, hồ sơ học tập, email và hệ thống nhân sự.
@@ -138,15 +116,11 @@ cùng một người
 
 Bài học rộng hơn là: tên người không phải khoá chính hoàn hảo. Hệ thống tốt cần mã định danh ổn định và chỉ dùng tên như thuộc tính hiển thị hoặc đối chiếu bổ sung.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Người nước ngoài tại Hàn Quốc và ma sát của tên** nối từ **로마자 표기: La-tinh hoá là vấn đề tương thích hệ thống, không chỉ phát âm** sang **직함, 영어이름 và công sở toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Người nước ngoài tại Hàn Quốc và ma sát của tên
 
 Tên không theo cấu trúc Hàn có thể tạo ma sát ngược lại. Một số hệ thống cũ có thể giả định độ dài tên, thứ tự họ–tên hoặc bộ ký tự quen thuộc. Người có nhiều tên đệm, tên dài hoặc cấu trúc họ khác có thể gặp lỗi nhập liệu, rút gọn không mong muốn hoặc cách gọi thiếu tự nhiên.
 
 Vấn đề này không phải “tên nước ngoài khó”; nó là **xung đột giữa dữ liệu thật và lược đồ dữ liệu (schema mismatch)**. Khi xã hội đa dạng hơn, lược đồ định danh cũng phải linh hoạt hơn.
-
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **직함, 영어이름 và công sở toàn cầu** nối từ **Người nước ngoài tại Hàn Quốc và ma sát của tên** sang **닉네임, 아이디, 핸들: danh tính số là một lớp riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 직함, 영어이름 và công sở toàn cầu
 
@@ -156,8 +130,6 @@ Một công ty có thể bỏ `대리`, `과장` khỏi cách gọi hằng ngày
 
 Trong nhóm đa quốc gia, tên tiếng Anh có thể giảm ma sát phát âm và giúp giao tiếp nhanh. Nhưng nếu tên này trở thành bắt buộc dù người dùng không muốn, sự tiện lợi của tổ chức lại được mua bằng chi phí bản sắc của cá nhân. Thiết kế tốt cho phép người dùng tự chọn cách hiển thị trong phạm vi hệ thống hỗ trợ được.
 
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **닉네임, 아이디, 핸들: danh tính số là một lớp riêng** nối từ **직함, 영어이름 và công sở toàn cầu** sang **Tuổi trong môi trường số: từ phép lịch sự thành thuộc tính phân khúc**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 닉네임, 아이디, 핸들: danh tính số là một lớp riêng
 
 Trên diễn đàn, trò chơi, mạng xã hội và cộng đồng trực tuyến, người dùng thường tương tác bằng **biệt danh số (nickname)** hoặc tên tài khoản. Danh tính này có thể tách khỏi tên pháp lý và cho phép người dùng thử một vai trò khác: chuyên gia, người hâm mộ, game thủ hoặc thành viên ẩn danh.
@@ -165,8 +137,6 @@ Trên diễn đàn, trò chơi, mạng xã hội và cộng đồng trực tuy�
 Tính tách lớp có hai mặt. Nó giảm chi phí phát biểu và bảo vệ riêng tư, nhưng cũng có thể giảm trách nhiệm nếu người dùng tin rằng hành vi trực tuyến không gắn với hậu quả ngoài đời.
 
 Do đó câu hỏi không chỉ là “ẩn danh hay tên thật tốt hơn?”, mà là mức **khả năng truy vết (traceability)** nào phù hợp với mục tiêu của cộng đồng.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tuổi trong môi trường số: từ phép lịch sự thành thuộc tính phân khúc** nối từ **닉네임, 아이디, 핸들: danh tính số là một lớp riêng** sang **Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuổi trong môi trường số: từ phép lịch sự thành thuộc tính phân khúc
 
@@ -183,8 +153,6 @@ tuổi giúp đặt giả thuyết
 
 Điều này nối trực tiếp với chương dân số và khả năng tiếp cận số.
 
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tuổi trong môi trường số: từ phép lịch sự thành thuộc tính phân khúc** đặt vấn đề; **Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập** đối chiếu bằng chứng, rồi **Liên hệ kiến thức: danh tính như một hệ nhiều lớp** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập
 
 Vì tuổi, năm sinh, chức danh, quê quán và quan hệ có thể giúp giảm bất định, tổ chức dễ rơi vào lô-gic (logic / 논리) “càng biết nhiều càng tốt”. Nhưng dữ liệu hữu ích về mặt xã hội không đồng nghĩa cần thiết về mặt nghiệp vụ.
@@ -199,8 +167,6 @@ nhưng đồng thời
 ```
 
 Vì vậy thiết kế định danh hiện đại phải cân bằng tiện lợi, khả năng phối hợp và quyền riêng tư.
-
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Tối thiểu hoá dữ liệu: không phải siêu dữ liệu nào hữu ích cũng nên thu thập** đặt vấn đề; **Liên hệ kiến thức: danh tính như một hệ nhiều lớp** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên hệ kiến thức: danh tính như một hệ nhiều lớp
 
@@ -218,13 +184,9 @@ Một xung đột xảy ra khi hai lớp dùng quy tắc khác nhau. Ví dụ ng
 
 Hiểu văn hoá Hàn Quốc sâu hơn không phải học một quy tắc “ai lớn thì trên”, mà học cách nhiều lớp siêu dữ liệu cùng được thương lượng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: danh tính như một hệ nhiều lớp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Tên, tuổi, chức danh và cách xưng hô trong tiếng Hàn tạo thành một “phần đầu” của tương tác. Phần đầu này giúp hai bên quyết định giao thức giao tiếp trước khi nội dung chính bắt đầu. Trong xã hội số và toàn cầu, phần đầu đó mở rộng thành nhiều lớp định danh: pháp lý, tổ chức, quan hệ và tài khoản số.
-
-> **Nối mạch:** Trong **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn tham khảo định hướng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -247,8 +209,6 @@ Trong đời sống thực, tên còn liên quan xác thực, danh xưng, bản 
 ### “Biết tuổi là đủ để biết nên cư xử thế nào”
 
 Không đúng. Tuổi chỉ là một trục; chức vụ, mức thân thiết, khoá, vai trò và bối cảnh có thể quan trọng hơn.
-
-> **Nối mạch:** Ở chặng này của **Tên, tuổi và siêu dữ liệu xã hội trong đời sống Hàn Quốc**, **Những hiểu lầm phổ biến** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

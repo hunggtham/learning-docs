@@ -38,8 +38,6 @@ block layer hoặc network
 
 VFS vì vậy không phải một filesystem lưu dữ liệu riêng. Nó là lớp giao diện và đối tượng chung để kernel thao tác nhiều filesystem theo cùng một mô hình.
 
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Các đối tượng quan trọng trong VFS** nối từ **Vì sao cần VFS?** sang **Dentry bộ nhớ đệm (cache / 캐시) và vì sao đường dẫn (path / 경로) lookup có thể nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Các đối tượng quan trọng trong VFS
 
 Để hiểu VFS, cần phân biệt vài đối tượng khái niệm:
@@ -57,8 +55,6 @@ Một pathname như:
 
 không được xử lý như một chuỗi nguyên khối. Kernel resolve từng thành phần (component / 컴포넌트) trong không gian tên (namespace / 네임스페이스), sử dụng dentry bộ nhớ đệm (cache / 캐시) khi có thể, kiểm tra mount boundaries và cuối cùng tới inode/đối tượng (object / 객체) đích.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Các đối tượng quan trọng trong VFS** đặt đầu vào cho **Dentry bộ nhớ đệm (cache / 캐시) và vì sao đường dẫn (path / 경로) lookup có thể nhanh**, rồi **Page bộ nhớ đệm (cache / 캐시) là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Dentry bộ nhớ đệm (cache / 캐시) và vì sao đường dẫn (path / 경로) lookup có thể nhanh
 
 Nếu mỗi lần `open()` đều phải đọc lại toàn bộ directory siêu dữ liệu (metadata / 메타데이터) từ disk, việc truy cập tệp (file / 파일) sẽ tốn kém. Linux giữ bộ nhớ đệm (cache / 캐시) cho pathname lookup gọi là **dentry bộ nhớ đệm (cache / 캐시) (dcache)**.
@@ -66,8 +62,6 @@ Nếu mỗi lần `open()` đều phải đọc lại toàn bộ directory siêu
 Điều này nghĩa là lần truy cập thứ hai vào một đường dẫn (path / 경로) thường có thể nhanh hơn vì một phần siêu dữ liệu (metadata / 메타데이터) cần cho việc phân giải tên đã ở RAM.
 
 Nhưng dentry bộ nhớ đệm (cache / 캐시) không đảm bảo đối tượng (object / 객체) luôn còn tồn tại. không gian tên (namespace / 네임스페이스) có thể thay đổi do rename, unlink hoặc mount. Kernel phải duy trì tính hợp lệ của bộ nhớ đệm (cache / 캐시) theo ngữ nghĩa (semantics / 의미론) của filesystem.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Dentry bộ nhớ đệm (cache / 캐시) và vì sao đường dẫn (path / 경로) lookup có thể nhanh** đặt đầu vào cho **Page bộ nhớ đệm (cache / 캐시) là gì?**, rồi **Page bộ nhớ đệm (cache / 캐시) và bộ nhớ của tiến trình (process / 프로세스) có phải hai thứ tách rời hoàn toàn?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Page bộ nhớ đệm (cache / 캐시) là gì?
 
@@ -85,8 +79,6 @@ page cache có dữ liệu?
 
 Do đó RAM trống thấp không phải luôn xấu. Linux chủ động dùng RAM để giảm I/O.
 
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Page bộ nhớ đệm (cache / 캐시) là gì?** đặt đầu vào cho **Page bộ nhớ đệm (cache / 캐시) và bộ nhớ của tiến trình (process / 프로세스) có phải hai thứ tách rời hoàn toàn?**, rồi **Buffered I/O và direct I/O** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Page bộ nhớ đệm (cache / 캐시) và bộ nhớ của tiến trình (process / 프로세스) có phải hai thứ tách rời hoàn toàn?
 
 Không. Một tệp (file / 파일) có thể được đọc bằng `read()` hoặc ánh xạ bằng `mmap()`. Trong cả hai trường hợp, page bộ nhớ đệm (cache / 캐시) có thể đóng vai trò backing cho dữ liệu file-backed.
@@ -95,8 +87,6 @@ Với `mmap()`, tiến trình (process / 프로세스) nhìn thấy vùng địa
 
 Đây là lý do cơ sở dữ liệu (database / 데이터베이스) engine, thời gian chạy (runtime / 런타임) và hệ thống lưu trữ phải hiểu rõ mối quan hệ giữa page bộ nhớ đệm (cache / 캐시) của OS và bộ nhớ đệm (cache / 캐시) riêng của ứng dụng.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Page bộ nhớ đệm (cache / 캐시) và bộ nhớ của tiến trình (process / 프로세스) có phải hai thứ tách rời hoàn toàn?** đặt đầu vào cho **Buffered I/O và direct I/O**, rồi **Ghi tệp (file / 파일): vì sao write() có thể trả về rất nhanh?** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Buffered I/O và direct I/O
 
 Phần lớn thao tác tệp (file / 파일) thông thường dùng **buffered I/O**, tức đi qua page bộ nhớ đệm (cache / 캐시).
@@ -104,8 +94,6 @@ Phần lớn thao tác tệp (file / 파일) thông thường dùng **buffered I
 Một số tải công việc (workload / 워크로드) có thể dùng **direct I/O** để giảm hoặc tránh page bộ nhớ đệm (cache / 캐시) cho các I/O nhất định. cơ sở dữ liệu (database / 데이터베이스) engine đôi khi dùng cách này để tự kiểm soát bộ nhớ đệm (cache / 캐시) và thứ tự (ordering / 순서) tốt hơn.
 
 Direct I/O không tự động nhanh hơn. Nó giảm một số lớp bộ nhớ đệm (cache / 캐시) nhưng yêu cầu alignment và quản lý I/O cẩn thận. Nếu ứng dụng không có chiến lược bộ nhớ đệm (cache / 캐시) tốt, bỏ page bộ nhớ đệm (cache / 캐시) có thể làm hiệu năng tệ hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Ghi tệp (file / 파일): vì sao write() có thể trả về rất nhanh?** nối từ **Buffered I/O và direct I/O** sang **Dirty page là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghi tệp (file / 파일): vì sao `write()` có thể trả về rất nhanh?
 
@@ -133,8 +121,6 @@ storage
 
 Điều này giúp tăng thông lượng (throughput / 처리량) vì ứng dụng không phải chờ mỗi lần ghi (write / 쓰기) nhỏ xuống thiết bị.
 
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Dirty page là gì?** nối từ **Ghi tệp (file / 파일): vì sao write() có thể trả về rất nhanh?** sang **Writeback diễn ra như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dirty page là gì?
 
 Một trang file-backed được gọi là **dirty** khi nội dung trong RAM mới hơn dữ liệu bền vững trên lưu trữ (storage / 저장소).
@@ -155,8 +141,6 @@ Writeback:    16000 kB
 `Dirty` cho biết lượng trang đang chờ ghi; `Writeback` cho biết lượng đang trong quá trình ghi xuống lưu trữ (storage / 저장소).
 
 Một giá trị lớn không tự động là lỗi. Cần nhìn xu hướng, tốc độ ghi, độ trễ (latency / 지연 시간) và tải công việc (workload / 워크로드).
-
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Writeback diễn ra như thế nào?** nối từ **Dirty page là gì?** sang **Khi dirty bộ nhớ (memory / 메모리) quá nhiều thì chuyện gì xảy ra?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Writeback diễn ra như thế nào?
 
@@ -179,8 +163,6 @@ sysctl vm.dirty_writeback_centisecs
 
 Không nên thay đổi các giá trị này theo bài tuning chung trên Internet. Chúng ảnh hưởng cân bằng giữa thông lượng (throughput / 처리량), độ trễ (latency / 지연 시간) burst và lượng dữ liệu chưa xuống lưu trữ (storage / 저장소).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Khi dirty bộ nhớ (memory / 메모리) quá nhiều thì chuyện gì xảy ra?** nối từ **Writeback diễn ra như thế nào?** sang **fsync() thay đổi điều gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi dirty bộ nhớ (memory / 메모리) quá nhiều thì chuyện gì xảy ra?
 
 Nếu tiến trình (process / 프로세스) ghi nhanh hơn lưu trữ (storage / 저장소) có thể hấp thụ, dirty pages tăng dần. Đến một mức, kernel có thể làm tiến trình (process / 프로세스) ghi bị throttled hoặc phải tham gia writeback.
@@ -197,8 +179,6 @@ lúc đầu write rất nhanh
 
 Đây là một ví dụ quan trọng cho thấy benchmark ngắn có thể gây hiểu nhầm. Một tải công việc (workload / 워크로드) ghi trong 5 giây có thể đo chủ yếu tốc độ RAM/page bộ nhớ đệm (cache / 캐시), không phản ánh sustained lưu trữ (storage / 저장소) thông lượng (throughput / 처리량).
 
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **fsync() thay đổi điều gì?** nối từ **Khi dirty bộ nhớ (memory / 메모리) quá nhiều thì chuyện gì xảy ra?** sang **fdatasync() và sự khác biệt khái niệm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `fsync()` thay đổi điều gì?
 
 `fsync(fd)` yêu cầu kernel đồng bộ dữ liệu và siêu dữ liệu (metadata / 메타데이터) cần thiết của tệp (file / 파일) theo ngữ nghĩa (semantics / 의미론) của hệ thống xuống lưu trữ (storage / 저장소).
@@ -209,15 +189,11 @@ Tuy nhiên `fsync()` có chi phí vì nó đưa độ trễ (latency / 지연 �
 
 Do đó cơ sở dữ liệu (database / 데이터베이스) thường dùng kỹ thuật batching hoặc group lần ghi nhận (commit / 커밋) để nhiều giao dịch (transaction / 트랜잭션) cùng chia sẻ chi phí flush.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **fdatasync() và sự khác biệt khái niệm** nối từ **fsync() thay đổi điều gì?** sang **Atomicity, visibility và durability là ba khái niệm khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## `fdatasync()` và sự khác biệt khái niệm
 
 `fdatasync()` tập trung vào dữ liệu và siêu dữ liệu (metadata / 메타데이터) cần thiết để đọc dữ liệu đúng, trong khi `fsync()` có thể có ngữ nghĩa (semantics / 의미론) rộng hơn về siêu dữ liệu (metadata / 메타데이터) tùy filesystem.
 
 Điểm cần nhớ không phải thuộc API chi tiết, mà là: **có nhiều mức guarantee khác nhau giữa “đã bản sao (copy / 복사) vào RAM” và “đã bền vững trên lưu trữ (storage / 저장소)”**.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Atomicity, visibility và durability là ba khái niệm khác nhau** nối từ **fdatasync() và sự khác biệt khái niệm** sang **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) có làm page bộ nhớ đệm (cache / 캐시) biến mất không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Atomicity, visibility và durability là ba khái niệm khác nhau
 
@@ -231,15 +207,11 @@ Ví dụ `rename()` trong cùng filesystem thường atomic về không gian tê
 
 Không nên đồng nhất “người đọc khác đã thấy tệp (file / 파일) mới” với “tệp (file / 파일) mới đã chắc chắn được ghi bền vững”.
 
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) có làm page bộ nhớ đệm (cache / 캐시) biến mất không?** nối từ **Atomicity, visibility và durability là ba khái niệm khác nhau** sang **Read-ahead**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Sao chép khi ghi (copy-on-write / 쓰기 시 복사) có làm page bộ nhớ đệm (cache / 캐시) biến mất không?
 
 Không. Filesystem dùng sao chép khi ghi (copy-on-write / 쓰기 시 복사) như Btrfs có chiến lược ghi siêu dữ liệu (metadata / 메타데이터)/dữ liệu (data / 데이터) khác, nhưng page bộ nhớ đệm (cache / 캐시) vẫn là một phần quan trọng của Linux I/O ngăn xếp (stack / 스택).
 
 Sao chép khi ghi (copy-on-write / 쓰기 시 복사) thay đổi cách blocks được cập nhật và giúp snapshot/checksum ở mức filesystem, nhưng không loại bỏ khái niệm bộ nhớ đệm (cache / 캐시), writeback hoặc durability.
-
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Read-ahead** nối từ **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) có làm page bộ nhớ đệm (cache / 캐시) biến mất không?** sang **Readahead quá lớn có thể gây tác dụng ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Read-ahead
 
@@ -249,15 +221,11 @@ Khi kernel nhận thấy tiến trình (process / 프로세스) đọc tuần t�
 
 Nhưng random truy cập (access / 접근) không hưởng lợi giống vậy. Đây là lý do sequential thông lượng (throughput / 처리량) và random IOPS là hai đặc tính rất khác nhau của lưu trữ (storage / 저장소).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Readahead quá lớn có thể gây tác dụng ngược** nối từ **Read-ahead** sang **dropcaches và vì sao không nên dùng để “tối ưu” môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Readahead quá lớn có thể gây tác dụng ngược
 
 Nếu tải công việc (workload / 워크로드) đọc ngẫu nhiên nhưng kernel đoán thành tuần tự, read-ahead có thể kéo vào RAM những dữ liệu không dùng tới, gây bộ nhớ đệm (cache / 캐시) pollution và I/O thừa.
 
 Tuning chỉ nên làm khi có đo lường cụ thể.
-
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **dropcaches và vì sao không nên dùng để “tối ưu” môi trường vận hành (production / 운영 환경)** nối từ **Readahead quá lớn có thể gây tác dụng ngược** sang **Page bộ nhớ đệm (cache / 캐시) và bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `drop_caches` và vì sao không nên dùng để “tối ưu” môi trường vận hành (production / 운영 환경)
 
@@ -272,8 +240,6 @@ Lệnh này đôi khi hữu ích trong benchmark kiểm soát, nhưng không ph�
 
 Xóa page bộ nhớ đệm (cache / 캐시) có thể làm lần đọc tiếp theo phải quay lại lưu trữ (storage / 저장소) và tăng độ trễ (latency / 지연 시간) mạnh.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Page bộ nhớ đệm (cache / 캐시) và bộ chứa (container / 컨테이너)** nối từ **dropcaches và vì sao không nên dùng để “tối ưu” môi trường vận hành (production / 운영 환경)** sang **Page bộ nhớ đệm (cache / 캐시) và Java**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Page bộ nhớ đệm (cache / 캐시) và bộ chứa (container / 컨테이너)
 
 Bộ chứa (container / 컨테이너) chia sẻ host kernel, nên page bộ nhớ đệm (cache / 캐시) là tài nguyên host-level theo ngữ nghĩa (semantics / 의미론) kernel, dù accounting trong cgroup có thể phân bổ chi phí bộ nhớ (memory / 메모리) theo điều khiển (control / 제어) group.
@@ -282,8 +248,6 @@ Hai bộ chứa (container / 컨테이너) đọc cùng một tệp (file / 파�
 
 Điều này cũng làm bộ nhớ (memory / 메모리) accounting phức tạp hơn việc chỉ nhìn RSS của từng tiến trình (process / 프로세스).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Page bộ nhớ đệm (cache / 캐시) và Java** nối từ **Page bộ nhớ đệm (cache / 캐시) và bộ chứa (container / 컨테이너)** sang **Quan sát thực tế**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Page bộ nhớ đệm (cache / 캐시) và Java
 
 Java ứng dụng (application / 애플리케이션) thường đọc JAR, cấu hình (config / 설정), static resources và log thông qua filesystem. Khi đọc lại dữ liệu, page bộ nhớ đệm (cache / 캐시) có thể làm I/O nhanh hơn.
@@ -291,8 +255,6 @@ Java ứng dụng (application / 애플리케이션) thường đọc JAR, cấu
 Một JVM có vùng nhớ động (heap / 힙) ổn định nhưng host bộ nhớ (memory / 메모리) “used” tăng không nhất thiết là leak; page bộ nhớ đệm (cache / 캐시) có thể tăng do tải công việc (workload / 워크로드) đọc tệp (file / 파일).
 
 Ngược lại, khi bộ nhớ (memory / 메모리) pressure cao, kernel reclaim page bộ nhớ đệm (cache / 캐시) và ứng dụng (application / 애플리케이션) có thể thấy I/O độ trễ (latency / 지연 시간) tăng vì bộ nhớ đệm (cache / 캐시) hit tỷ lệ (rate / 비율) giảm.
-
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Quan sát thực tế** nối từ **Page bộ nhớ đệm (cache / 캐시) và Java** sang **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): log burst làm API chậm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan sát thực tế
 
@@ -320,8 +282,6 @@ sudo strace -p <PID> -e trace=read,write,pread64,pwrite64,fsync,fdatasync
 
 `strace` có overhead, nên chỉ dùng có mục tiêu và trong khoảng thời gian cần thiết.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Quan sát thực tế** nêu quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): log burst làm API chậm** thử quy tắc trong tình huống, rồi **Một trường hợp (case / 사례) khác: deploy xong lần đầu chậm, lần sau nhanh** mở rộng hệ quả.
-
 ## Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): log burst làm API chậm
 
 Giả sử Java dịch vụ (service / 서비스) bình thường nhưng một lỗi upstream gây thử lại (retry / 재시도) liên tục và tạo log lớn.
@@ -344,8 +304,6 @@ Nếu chỉ nhìn CPU có thể thấy CPU vẫn thấp và kết luận sai r�
 
 Cần correlate log tỷ lệ (rate / 비율), `Dirty`, `iostat`, luồng thực thi (thread / 스레드) trạng thái (state / 상태) và ứng dụng (application / 애플리케이션) độ trễ (latency / 지연 시간).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): log burst làm API chậm** nêu quy tắc; **Một trường hợp (case / 사례) khác: deploy xong lần đầu chậm, lần sau nhanh** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
-
 ## Một trường hợp (case / 사례) khác: deploy xong lần đầu chậm, lần sau nhanh
 
 Sau reboot hoặc deploy sang host mới, page bộ nhớ đệm (cache / 캐시) còn lạnh. Lần đầu đọc JAR/cấu hình (config / 설정)/static files phải lấy từ lưu trữ (storage / 저장소). Sau đó các pages ở bộ nhớ đệm (cache / 캐시) nên lần truy cập kế tiếp nhanh hơn.
@@ -353,8 +311,6 @@ Sau reboot hoặc deploy sang host mới, page bộ nhớ đệm (cache / 캐시
 Đây là **bộ nhớ đệm (cache / 캐시) warming** tự nhiên.
 
 Một benchmark cần kiểm soát bộ nhớ đệm (cache / 캐시) trạng thái (state / 상태) nếu muốn so lưu trữ (storage / 저장소) thay vì đo bộ nhớ đệm (cache / 캐시).
-
-> **Nối mạch:** Trong **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Một trường hợp (case / 사례) khác: deploy xong lần đầu chậm, lần sau nhanh** nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả.
 
 ## Mô hình tư duy
 
@@ -376,8 +332,6 @@ device / network storage
 
 Khi đọc, page bộ nhớ đệm (cache / 캐시) cố tránh đi xuống các lớp dưới. Khi ghi, page bộ nhớ đệm (cache / 캐시) cho phép tách thời điểm ứng dụng ghi với thời điểm lưu trữ (storage / 저장소) thực sự hoàn thành.
 
-> **Nối mạch:** Ở chặng này của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Những hiểu lầm phổ biến
 
 **“`write()` trả về nghĩa dữ liệu đã nằm trên disk.”** Không nhất thiết; dữ liệu có thể mới ở page bộ nhớ đệm (cache / 캐시).
@@ -389,8 +343,6 @@ Khi đọc, page bộ nhớ đệm (cache / 캐시) cố tránh đi xuống các
 **“Benchmark ghi 2 giây phản ánh tốc độ SSD.”** Có thể chủ yếu phản ánh page bộ nhớ đệm (cache / 캐시) nếu chưa buộc flush.
 
 **“Atomic rename đồng nghĩa dữ liệu durable.”** Atomicity và durability là hai guarantee khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **VFS, page bộ nhớ đệm (cache / 캐시) và writeback trong Linux**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

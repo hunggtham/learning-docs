@@ -6,8 +6,6 @@
 
 Tệp (file / 파일) này không phải dictionary độc lập. Nó chuẩn hóa các concept lặp lại trong thư viện (library / 라이브러리) và chỉ ra **kiểu ở mã nguồn (source type / 소스 타입) nào phù hợp với loại câu hỏi nào**.
 
-> **Nối mạch:** **Cách dùng** chỉ ra lúc nào cần glossary; **Cốt lõi analytical terms** định nghĩa các từ dùng xuyên chapter, rồi **Nguồn hierarchy** chọn loại bằng chứng phù hợp với từng câu hỏi.
-
 ## Cốt lõi (core / 핵심) analytical terms
 
 ### Trạng thái (state / 상태) sức chứa (capacity / 용량) — năng lực nhà nước
@@ -98,8 +96,6 @@ Productivity benefits from density of firms, workers, suppliers and kiến thứ
 
 Chi phí (cost / 비용)/benefit of hành động (action / 동작) falling on others outside direct giao dịch (transaction / 트랜잭션), e.g. pollution or flood effects.
 
-> **Nối mạch:** Ở chặng này của **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Cốt lõi (core / 핵심) analytical terms** đặt vấn đề; **Nguồn (source / 소스) hierarchy: không có một hierarchy duy nhất cho mọi câu hỏi** đối chiếu bằng chứng, rồi **Recommended nguồn (source / 소스) owners by topic** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Nguồn (source / 소스) hierarchy: không có một hierarchy duy nhất cho mọi câu hỏi
 
 The right nguồn (source / 소스) depends on claim.
@@ -156,8 +152,6 @@ Strong for site description, legal status and preservation lịch sử (history 
 
 Best for synthesis and debate when peer-reviewed/source-based. Need compare schools and publication date when trường dữ liệu (field / 필드) evolves.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Nguồn (source / 소스) hierarchy: không có một hierarchy duy nhất cho mọi câu hỏi** đặt vấn đề; **Recommended nguồn (source / 소스) owners by topic** đối chiếu bằng chứng, rồi **Từ khóa (keyword / 키워드) conventions** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Recommended nguồn (source / 소스) owners by topic
 
 ### Ancient / archaeology
@@ -188,15 +182,11 @@ World Bank, IMF where appropriate, WTO, ASEAN, Vietnam statistical/legal sources
 
 Use recent dated dữ liệu (data / 데이터) and distinguish hiện tại (current / 현재) statistics from historical trend. Do not extrapolate old population/income figures as present.
 
-> **Nối mạch:** Trong **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Recommended nguồn (source / 소스) owners by topic** đặt vấn đề; **Từ khóa (keyword / 키워드) conventions** đối chiếu bằng chứng, rồi **Names and changing place names** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Từ khóa (keyword / 키워드) conventions
 
 Vietnamese term comes first when natural. Important scholarly từ khóa (keyword / 키워드) is noted in English. Korean term is added only when it helps comparison with Korean-history docs—for example **khoa cử (civil examination / 과거제)** or **Hán văn (Classical Chinese / 한문)**.
 
 Do not force Korean translation into every line; liên kết (connection / 연결) must be educationally useful.
-
-> **Nối mạch:** **Từ khóa conventions** thống nhất cách viết; **Names and changing place names** xử lý biến đổi địa danh, rồi **Evidence labels** cho biết mức chắc chắn của từng cách gọi.
 
 ## Names and changing place names
 
@@ -207,8 +197,6 @@ Use historically appropriate name in ngữ cảnh (context / 맥락), then hiệ
 - Phú Xuân/Huế depending political ngữ cảnh (context / 맥락).
 
 Do not silently modernize ancient place if it changes historical meaning.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Names and changing place names** nêu quy tắc; **Bằng chứng (evidence / 증거) labels used in this thư viện (library / 라이브러리)** thử quy tắc trong tình huống, rồi **Citation discipline for future updates** mở rộng hệ quả.
 
 ## Bằng chứng (evidence / 증거) labels used in this thư viện (library / 라이브러리)
 
@@ -222,8 +210,6 @@ Do not silently modernize ancient place if it changes historical meaning.
 
 **Bộ nhớ (memory / 메모리)/heritage claim:** bằng chứng (evidence / 증거) about how past is remembered rather than proof sự kiện (event / 이벤트) occurred as narrated.
 
-> **Nối mạch:** Trong **Glossary & Bản đồ mã nguồn (source map / 소스 맵) — Lịch sử Việt Nam**, **Bằng chứng (evidence / 증거) labels used in this thư viện (library / 라이브러리)** nêu quy tắc; **Citation discipline for future updates** thử quy tắc trong tình huống, rồi **Bàn giao** mở rộng hệ quả.
-
 ## Citation discipline for future updates
 
 When extending files:
@@ -233,8 +219,6 @@ When extending files:
 3. distinguish sự kiện (event / 이벤트) date from publication/nguồn (source / 소스) date;
 4. avoid long quotation—paraphrase and cite;
 5. cập nhật (update / 업데이트) nội bộ (internal / 내부) links when a concept gains đơn vị sở hữu chuẩn gốc (canonical owner / 정본 소유자).
-
-> **Nối mạch:** **Citation discipline for future updates** quy định cách ghi nguồn và ngày đối chiếu; **Bàn giao** chỉ rõ chapter/owner tiếp theo để cập nhật không làm mất provenance.
 
 ## Bàn giao
 

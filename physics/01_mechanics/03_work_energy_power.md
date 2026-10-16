@@ -14,8 +14,6 @@ Năng lượng không phải một “chất lỏng vô hình”. Nó là một 
 1\,J=1\,N\cdot m=1\,kg\cdot m^2/s^2
 ```
 
-> **Nối mạch:** Trong **Công, năng lượng, thế năng và công suất**, **Công: lực truyền năng lượng qua độ dời** nối từ **Tại sao cần năng lượng nếu đã có lực và gia tốc?** sang **Động năng và định lý công–động năng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Công: lực truyền năng lượng qua độ dời
 
 Công (Work / 일) của một lực không đổi khi vật dịch chuyển `\Delta \vec r`:
@@ -50,8 +48,6 @@ dW=\vec F\cdot d\vec r
 ```
 
 Đây là ví dụ rõ ràng về việc calculus được sinh ra bởi cấu trúc vật lý: khi tác động thay đổi liên tục, tổng hữu hạn (finite) cần tích phân.
-
-> **Nối mạch:** Ở chặng này của **Công, năng lượng, thế năng và công suất**, **Động năng và định lý công–động năng** nối từ **Công: lực truyền năng lượng qua độ dời** sang **Thế năng và lực bảo toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động năng và định lý công–động năng
 
@@ -121,8 +117,6 @@ K\propto v^2
 
 Nếu xe chạy nhanh gấp đôi, để dừng xe cần loại bỏ bốn lần động năng. Điều này nối trực tiếp với quãng đường phanh tăng theo `v²` nếu lực phanh gần như không đổi.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Công, năng lượng, thế năng và công suất**, **Thế năng và lực bảo toàn** nối từ **Động năng và định lý công–động năng** sang **Thế năng hấp dẫn gần mặt đất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thế năng và lực bảo toàn
 
 Một lực bảo toàn (Conservative Force / 보존력) là lực mà công giữa hai điểm chỉ phụ thuộc điểm đầu và cuối, không phụ thuộc đường đi. Ta có thể định nghĩa thế năng (Potential Energy / 위치에너지):
@@ -149,8 +143,6 @@ Trong nhiều chiều:
 
 Độ dốc (gradient / 기울기) chỉ hướng tăng nhanh nhất của vô hướng (scalar) trường (field) `U`; dấu âm khiến lực (force) hướng về giảm nhanh nhất. Đây là liên hệ (connection) trực tiếp sang học máy (Machine Learning): độ dốc (gradient / 기울기) descent cũng đi theo `-\nabla L` để giảm tổn hao (loss) hàm (function / 함수), dù “tổn hao” không phải vật lý (physical / 물리적) năng lượng (energy / 에너지).
 
-> **Nối mạch:** Trong **Công, năng lượng, thế năng và công suất**, **Thế năng hấp dẫn gần mặt đất** nối từ **Thế năng và lực bảo toàn** sang **Thế năng lò xo**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thế năng hấp dẫn gần mặt đất
 
 Với hấp dẫn (gravity) gần mặt đất, `F_y=-mg`. Ta muốn `F_y=-dU/dy`, nên:
@@ -172,8 +164,6 @@ U=mgh
 ```
 
 Giá trị tuyệt đối của thế năng phụ thuộc mốc; chênh lệch mới có ý nghĩa động lực học.
-
-> **Nối mạch:** Ở chặng này của **Công, năng lượng, thế năng và công suất**, **Thế năng lò xo** nối từ **Thế năng hấp dẫn gần mặt đất** sang **Bảo toàn cơ năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế năng lò xo
 
@@ -209,8 +199,6 @@ U=\frac12kx^2
 
 Dạng parabola này sẽ dẫn tự nhiên tới dao động điều hòa.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Công, năng lượng, thế năng và công suất**, **Bảo toàn cơ năng** nối từ **Thế năng lò xo** sang **Lực không bảo toàn và “mất năng lượng”**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bảo toàn cơ năng
 
 Nếu chỉ có lực bảo toàn làm công:
@@ -239,8 +227,6 @@ v=\sqrt{2gh}
 
 Kết quả trùng với kinematics, nhưng năng lượng phương thức (method / 메서드) không cần tính thời gian.
 
-> **Nối mạch:** Trong **Công, năng lượng, thế năng và công suất**, **Lực không bảo toàn và “mất năng lượng”** nối từ **Bảo toàn cơ năng** sang **Công suất**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Lực không bảo toàn và “mất năng lượng”
 
 Khi có ma sát, cơ năng (mechanical energy) giảm:
@@ -252,8 +238,6 @@ Khi có ma sát, cơ năng (mechanical energy) giảm:
 Nhưng tổng năng lượng của hệ rộng hơn không biến mất. cơ năng chuyển thành nội năng (internal energy), nhiệt, âm, biến dạng (deformation) hoặc các dạng khác.
 
 Cụm từ “năng lượng bị mất” thường chỉ nghĩa “năng lượng rời khỏi dạng mà ta đang theo dõi”. bảo toàn (Conservation) of năng lượng nói tổng năng lượng của một hệ cô lập không tự sinh ra hay biến mất.
-
-> **Nối mạch:** Ở chặng này của **Công, năng lượng, thế năng và công suất**, **Công suất** nối từ **Lực không bảo toàn và “mất năng lượng”** sang **Efficiency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công suất
 
@@ -279,8 +263,6 @@ Một động cơ 100 kW không nhất thiết có tổng năng lượng nhiều
 
 Trong điện toán (computing), công suất (power) consumption cũng là năng lượng per thời gian (time / 시간). Một CPU dùng 100 W tiêu thụ 100 J mỗi giây ở mức công suất đó. Nhiệt sinh ra, thời lượng pin (battery life) và giảm xung do nhiệt (thermal throttling) đều liên quan tới tốc độ chuyển đổi năng lượng (energy conversion rate).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Công, năng lượng, thế năng và công suất**, **Efficiency** nối từ **Công suất** sang **thế (Potential) well và cân bằng (equilibrium)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Efficiency
 
 Hiệu suất (Efficiency / 효율):
@@ -296,8 +278,6 @@ hoặc với steady tiến trình (process / 프로세스):
 ```
 
 `\eta<1` trong máy thực vì năng lượng phân tán thành nhiệt, âm, ma sát (friction), tổn hao điện (electrical loss)… nhưng năng lượng tổng (total) vẫn được bảo toàn.
-
-> **Nối mạch:** Trong **Công, năng lượng, thế năng và công suất**, **thế (Potential) well và cân bằng (equilibrium)** nối từ **Efficiency** sang **Bài toán mẫu: tàu lượn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## thế (Potential) well và cân bằng (equilibrium)
 
@@ -321,8 +301,6 @@ U(x)\approx U(x_0)+\frac12k(x-x_0)^2
 
 Đây là lý do họa âm (harmonic) bộ dao động (oscillator) xuất hiện ở rất nhiều hệ vật lý: bất kỳ cân bằng ổn định (stable equilibrium) trơn nào, khi nhiễu loạn (perturbation) nhỏ, thường có hành vi (behavior / 동작) gần lò xo.
 
-> **Nối mạch:** Ở chặng này của **Công, năng lượng, thế năng và công suất**, **Bài toán mẫu: tàu lượn** nối từ **thế (Potential) well và cân bằng (equilibrium)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bài toán mẫu: tàu lượn
 
 Một xe tàu lượn bắt đầu nghỉ ở độ cao `20 m`, bỏ qua ma sát. Hỏi tốc độ ở độ cao `5 m`.
@@ -343,13 +321,9 @@ v=\sqrt{2g(15)}\approx17.1\,m/s
 
 Không cần biết hình dạng đường ray. Đây là sức mạnh của lực bảo toàn (conservative force): đường đi (path) thông tin (information / 정보) được nén vào thế độ chênh (difference).
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Công, năng lượng, thế năng và công suất**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Bài toán mẫu: tàu lượn**, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > lực view hỏi “tại mỗi khoảnh khắc, tương tác đang bẻ quỹ đạo (trajectory) thế nào?”. năng lượng view hỏi “hệ có thể chuyển từ trạng thái này sang trạng thái kia hay không, và lượng khả năng chuyển đổi được phân phối giữa những dạng nào?”. Hai view không cạnh tranh; chúng là hai phép chiếu của cùng động lực học (dynamics).
-
-> **Nối mạch:** Trong **Công, năng lượng, thế năng và công suất**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -360,8 +334,6 @@ Không. lực có đơn vị N và là vectơ; năng lượng có đơn vị J v
 ### “Công bằng lực nhân quãng đường trong mọi trường hợp”
 
 Chỉ khi lực cùng hướng độ dịch chuyển và hằng số (constant). Dạng tổng quát là dot sản phẩm (product / 제품) và tích phân đường.
-
-> **Nối mạch:** Ở chặng này của **Công, năng lượng, thế năng và công suất**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

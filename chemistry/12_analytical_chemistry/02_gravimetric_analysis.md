@@ -144,19 +144,13 @@ Các cơ chế gồm nhiều loại.
 
 Ion tạp bám lên bề mặt hạt. Hiện tượng mạnh hơn với kết tủa keo có diện tích bề mặt lớn.
 
-> **Nối mạch:** Hấp phụ giữ chất phân tích trên bề mặt; occlusion nhốt chất trong tinh thể đang lớn, còn kẹt cơ học giữ dung dịch giữa các hạt—ba sai lệch đều làm khối lượng kết tủa cao giả.
-
 ## Bao giữ (occlusion)
 
 Một vùng dung dịch chứa tạp bị giữ lại khi tinh thể phát triển quá nhanh quanh nó.
 
-> **Nối mạch:** Ở chặng này của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Kẹt cơ học** nối từ **Bao giữ (occlusion)** sang **Thế vào mạng tinh thể**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Kẹt cơ học
 
 Tinh thể hoặc khối kết tủa giữ lại dung dịch mẹ trong các khe/hốc.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Thế vào mạng tinh thể** nối từ **Kẹt cơ học** sang **Điểm mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế vào mạng tinh thể
 
@@ -344,8 +338,6 @@ Nếu blank lớn hoặc biến thiên, độ tin cậy giảm dù cân rất ch
 
 # Điểm mạnh và giới hạn
 
-> **Nối mạch:** Trong **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Điểm mạnh** nối từ **Thế vào mạng tinh thể** sang **Giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Điểm mạnh
 
 Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability và độ đúng với thời gian, lượng mẫu và độ chọn lọc cần thiết. Các điểm mạnh sau giải thích vì sao phương pháp vẫn hữu ích dù chậm.
@@ -354,8 +346,6 @@ Trước khi chọn gravimetry, hãy cân bằng lợi ích về traceability v�
 - ít phụ thuộc đường hiệu chuẩn thiết bị;
 - có thể đạt độ đúng cao;
 - quy trình hóa học minh bạch, dễ kiểm tra mass balance.
-
-> **Nối mạch:** Ở chặng này của **Phân tích khối lượng — định lượng bằng khối lượng, cân bằng pha và hóa lượng**, **Điểm mạnh** đã nêu tiêu chí phân biệt, còn **Giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Giới hạn
 

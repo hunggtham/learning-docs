@@ -12,15 +12,11 @@ Sau liên kết (connection / 연결), ứng dụng (application / 애플리케�
 
 Vì vậy ứng dụng (application / 애플리케이션) giao thức (protocol / 프로토콜) phải tự framing: length-prefix, delimiter hoặc structured giao thức (protocol / 프로토콜).
 
-> **Nối mạch:** Socket nối application với network stack; port định danh endpoint chứ không phải process, còn IPv6 mở rộng address model trước khi NAT/firewall/VPN thêm các lớp boundary.
-
 ## Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID
 
 Cổng (port / 포트) number thuộc vận chuyển (transport / 전송) endpoint không gian tên (namespace / 네임스페이스) trên host/address. Một tiến trình (process / 프로세스) có thể mở nhiều ports; nhiều processes có thể phối hợp reuse cổng (port / 포트) tùy OS; một dịch vụ (service / 서비스) có thể có nhiều connections cùng cục bộ (local / 로컬) cổng (port / 포트) nhưng khác remote tuple.
 
 TCP liên kết (connection / 연결) thường được định danh bởi 4-tuple nguồn (source / 소스) IP/cổng (port / 포트) + destination IP/cổng (port / 포트).
-
-> **Nối mạch:** **Cổng (port / 포트) không phải tiến trình (process / 프로세스) ID** đặt đầu vào cho **IPv6 không chỉ là “nhiều địa chỉ hơn”**, rồi **NAT: rewrite addressing trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## IPv6 không chỉ là “nhiều địa chỉ hơn”
 
@@ -30,8 +26,6 @@ Address types gồm toàn cục (global / 전역) unicast, link-local, multicast
 
 IPv6 adoption không tự loại NAT ngay trong mọi triển khai (deployment / 배포), nhưng thiết kế end-to-end addressing ít phụ thuộc address scarcity hơn IPv4.
 
-> **Nối mạch:** **NAT: rewrite addressing trạng thái (state / 상태)** nối từ **IPv6 không chỉ là “nhiều địa chỉ hơn”** sang **Firewall: chính sách (policy / 정책) enforcement trên traffic**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## NAT: rewrite addressing trạng thái (state / 상태)
 
 Mạng (network / 네트워크) Address Translation sửa nguồn (source / 소스)/destination addresses/ports tại ranh giới (boundary / 경계). Home router thường dùng nguồn (source / 소스) NAT/PAT để nhiều private hosts chia sẻ một công khai (public / 공개) IPv4 address.
@@ -39,8 +33,6 @@ Mạng (network / 네트워크) Address Translation sửa nguồn (source / 소�
 NAT tạo trạng thái (state / 상태) ánh xạ (mapping / 매핑) outbound tuple → công khai (public / 공개) tuple. Inbound unsolicited traffic khó hơn vì không có ánh xạ (mapping / 매핑), nên cần cổng (port / 포트) forwarding hoặc traversal techniques.
 
 NAT không phải firewall về bản chất, dù bên tiêu thụ (consumer / 소비자) routers thường kết hợp hai chức năng.
-
-> **Nối mạch:** **Firewall: chính sách (policy / 정책) enforcement trên traffic** nối từ **NAT: rewrite addressing trạng thái (state / 상태)** sang **VPN: tạo secure overlay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Firewall: chính sách (policy / 정책) enforcement trên traffic
 
@@ -50,8 +42,6 @@ Layer-7 firewall/WAF có thể parse ứng dụng (application / 애플리케이
 
 Bảo mật (security / 보안) không nên dựa riêng “nằm sau NAT”; tường minh (explicit / 명시적) chính sách (policy / 정책) và authentication vẫn cần thiết.
 
-> **Nối mạch:** **VPN: tạo secure overlay** nối từ **Firewall: chính sách (policy / 정책) enforcement trên traffic** sang **MTU và fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## VPN: tạo secure overlay
 
 Virtual Private mạng (network / 네트워크) tạo tunnel lô-gic (logic / 논리) qua mạng (network / 네트워크) khác. Packets được encapsulate, thường encrypted/authenticated, giữa endpoints hoặc gateways.
@@ -60,23 +50,17 @@ VPN có thể là remote-access hoặc site-to-site. Split tunneling gửi chỉ
 
 VPN bảo vệ traffic trên segment/tunnel đường dẫn (path / 경로) nhưng không biến endpoint compromised thành trustworthy.
 
-> **Nối mạch:** **MTU và fragmentation** nối từ **VPN: tạo secure overlay** sang **Socket buffers và backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## MTU và fragmentation
 
 Link có Maximum Transmission đơn vị (unit / 단위) (MTU). Packet lớn hơn đường dẫn (path / 경로) hỗ trợ (support / 지원) có thể cần fragmentation hoặc đường dẫn (path / 경로) MTU Discovery.
 
 Tunnel thêm headers làm effective payload MTU nhỏ hơn. Misconfigured MTU có thể gây symptom “một số site/yêu cầu (request / 요청) treo” rất khó gỡ lỗi (debug / 디버그).
 
-> **Nối mạch:** **Socket buffers và backpressure** nối từ **MTU và fragmentation** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Socket buffers và backpressure
 
 Kernel có send/receive buffers. `send()` thành công có thể chỉ nghĩa bytes được bản sao (copy / 복사) vào send buffer, chưa tới peer.
 
 Nếu peer/mạng (network / 네트워크) chậm, buffer đầy rồi writer khối (block / 블록)/return backpressure. Application-level hàng đợi (queue / 큐) không được grow vô hạn chỉ vì socket API tạm nhận được dữ liệu (data / 데이터).
-
-> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Socket buffers và backpressure** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,13 +70,9 @@ Nếu peer/mạng (network / 네트워크) chậm, buffer đầy rồi writer kh
 
 **“VPN bảo mật mọi thứ.”** Nó bảo vệ tunnel traffic; endpoint malware, weak credentials và ứng dụng (application / 애플리케이션) vulnerabilities vẫn tồn tại.
 
-> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Socket là cục bộ (local / 로컬) handle tới giao thức (protocol / 프로토콜) trạng thái (state / 상태); NAT/firewall/VPN là transformations/policies ở mạng (network / 네트워크) boundaries. gỡ lỗi (debug / 디버그) mạng (network / 네트워크) cần biết bytes đang ở tiến trình (process / 프로세스) buffer, kernel socket, packet đường dẫn (path / 경로) hay tunnel tầng (layer / 계층) nào.
-
-> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

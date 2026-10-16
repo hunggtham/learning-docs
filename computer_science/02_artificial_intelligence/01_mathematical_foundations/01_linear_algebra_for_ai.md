@@ -2,7 +2,7 @@
 
 > **Mạch đọc:** [README](./README.md) là bản đồ owner của **Linear algebra cho AI**. Route đi từ scalar/vector/matrix/tensor → vector spaces/inner products → linear maps/eigenstructure → matrix factorization → representation and batch computation, để hình học nối với phép tính model.
 
-Tuyến tính (linear / 선형) Algebra (선형대수 / đại số tuyến tính) là ngôn ngữ dùng để biểu diễn nhiều đại lượng cùng lúc và mô tả cách chúng được biến đổi. Trong AI hiện đại, một mẫu (sample / 표본) hiếm khi chỉ là một số. Một ảnh có hàng trăm nghìn điểm ảnh (pixel / 픽셀), một câu trở thành hàng chục hoặc hàng nghìn đơn vị từ (token / 토큰), một embedding có hàng trăm đến hàng nghìn dimension, còn một neural mạng (network / 네트워크) có thể xử lý hàng nghìn mẫu (sample / 표본) song song trong một batch. tuyến tính (linear / 선형) Algebra giúp gom các quantity này thành véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và tensor để computation có thể được mô tả rõ ràng và chạy hiệu quả trên hardware.
+Tuyến tính (linear / 선형) Algebra (선형대수 / đại số tuyến tính) là ngôn ngữ dùng để biểu diễn nhiều đại lượng cùng lúc và mô tả cách chúng được biến đổi. Trong AI hiện đại, một mẫu (sample / 표본) hiếm khi chỉ là một số. Một ảnh có hàng trăm nghìn điểm ảnh (pixel / 픽셀), một câu trở thành hàng chục hoặc hàng nghìn token (토큰), một embedding có hàng trăm đến hàng nghìn dimension, còn một neural mạng (network / 네트워크) có thể xử lý hàng nghìn mẫu (sample / 표본) song song trong một batch. tuyến tính (linear / 선형) Algebra giúp gom các quantity này thành véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và tensor để computation có thể được mô tả rõ ràng và chạy hiệu quả trên hardware.
 
 Điểm quan trọng nhất không phải học thuộc phép nhân ma trận. Ta cần nhìn ma trận (matrix / 행렬) như một **transformation giữa các spaces**, véc-tơ (vector / 벡터) như một **biểu diễn (representation / 표현)**, và dot sản phẩm (product / 제품) như một phép đo **alignment**. Khi mô hình tư duy (mental model / 사고 모델) này rõ, nhiều công thức trong Machine học tập (learning / 학습), embeddings và Transformer trở nên tự nhiên hơn.
 
@@ -41,8 +41,6 @@ batch × height × width × channels
 
 Trong PyTorch convention thường gặp `N × C × H × W`, trong khi một số khung phần mềm (framework / 프레임워크) hoặc format khác dùng `N × H × W × C`. Shape không phải chi tiết nhỏ; rất nhiều bug ML đơn giản là tensor có đúng values nhưng sai axis.
 
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Véc-tơ (vector / 벡터) không gian (space / 공간): biểu diễn (representation / 표현) sống ở đâu?** tiếp nhận điểm tựa từ **Scalar, véc-tơ (vector / 벡터), ma trận (matrix / 행렬) và tensor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Addition và scalar multiplication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Véc-tơ (vector / 벡터) không gian (space / 공간): biểu diễn (representation / 표현) sống ở đâu?
 
 Một véc-tơ (vector / 벡터) không chỉ là danh sách (list / 목록) numbers. Khi ta nói:
@@ -58,8 +56,6 @@ Nếu embedding mô hình (model / 모델) map một sentence thành véc-tơ (v
 Đây là nguyên lý quan trọng:
 
 > hình học (geometry / 기하학) của embedding không gian (space / 공간) không phải meaning “có sẵn”; nó là cấu trúc (structure / 구조) được học từ mục tiêu (objective / 목표) và dữ liệu (data / 데이터).
-
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Addition và scalar multiplication** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) không gian (space / 공간): biểu diễn (representation / 표현) sống ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dot sản phẩm (product / 제품): từ phép nhân tới alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Addition và scalar multiplication
 
@@ -84,8 +80,6 @@ Trong neural mạng (network / 네트워크), residual liên kết (connection /
 \]
 
 sử dụng véc-tơ (vector / 벡터) addition để giữ một direct thông tin (information / 정보) đường dẫn (path / 경로). Đây là example cho thấy một thao tác (operation / 연산) rất cơ bản của tuyến tính (linear / 선형) Algebra trở thành architectural thành phần nguyên thủy (primitive / 기본 요소) trong Deep học tập (learning / 학습).
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Dot sản phẩm (product / 제품): từ phép nhân tới alignment** tiếp nhận điểm tựa từ **Addition và scalar multiplication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Norm: véc-tơ (vector / 벡터) lớn đến mức nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dot sản phẩm (product / 제품): từ phép nhân tới alignment
 
@@ -121,8 +115,6 @@ Khi hai véc-tơ (vector / 벡터) cùng hướng, dot sản phẩm (product / �
 
 Transformer attention sử dụng dot sản phẩm (product / 제품) giữa truy vấn (query / 쿼리) và Key để tạo score. Dense retrieval cũng thường dùng dot sản phẩm (product / 제품) để ranking embeddings.
 
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Norm: véc-tơ (vector / 벡터) lớn đến mức nào?** tiếp nhận điểm tựa từ **Dot sản phẩm (product / 제품): từ phép nhân tới alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Distance và similarity không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Norm: véc-tơ (vector / 벡터) lớn đến mức nào?
 
 Một **norm (노름 / chuẩn)** đo magnitude.
@@ -147,8 +139,6 @@ J(\theta)=L(\theta)+\lambda\|\theta\|_2^2
 
 L2 regularization discourages extremely large weights. L1 regularization có xu hướng tạo nhiều coefficient bằng hoặc gần 0, liên quan tới sparsity.
 
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Distance và similarity không giống nhau** tiếp nhận điểm tựa từ **Norm: véc-tơ (vector / 벡터) lớn đến mức nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận (matrix / 행렬) là tuyến tính (linear / 선형) transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Distance và similarity không giống nhau
 
 Euclidean distance:
@@ -170,8 +160,6 @@ bỏ qua quy mô (scale / 규모) và tập trung vào direction.
 Ví dụ hai embeddings cùng direction nhưng một véc-tơ (vector / 벡터) dài gấp đôi sẽ có cosine similarity bằng 1, dù Euclidean distance khác 0.
 
 Trong véc-tơ (vector / 벡터) tìm kiếm (search / 검색), chọn chỉ số (metric / 지표) phải phù hợp với cách embedding mô hình (model / 모델) được trained. Không nên mặc định cosine luôn tốt hơn dot sản phẩm (product / 제품) hoặc Euclidean distance.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Ma trận (matrix / 행렬) là tuyến tính (linear / 선형) transformation** tiếp nhận điểm tựa từ **Distance và similarity không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Affine transformation và độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Ma trận (matrix / 행렬) là tuyến tính (linear / 선형) transformation
 
@@ -225,8 +213,6 @@ thì:
 
 Nhiều tuyến tính (linear / 선형) transformations liên tiếp collapse thành một tuyến tính (linear / 선형) transformation duy nhất. Đây là lý do neural mạng (network / 네트워크) cần **nonlinearity**. Nếu bỏ activation functions, ngăn xếp (stack / 스택) 100 tuyến tính (linear / 선형) layers về mặt expressiveness vẫn chỉ tương đương một tuyến tính (linear / 선형) tầng (layer / 계층).
 
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Affine transformation và độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Ma trận (matrix / 행렬) là tuyến tính (linear / 선형) transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Affine transformation và độ lệch (bias / 편향)
 
 Trong ML ta thường có:
@@ -244,8 +230,6 @@ Một fully connected neural-network tầng (layer / 계층) về cơ bản là 
 \[
 \mathbf{h}=\phi(W\mathbf{x}+\mathbf{b})
 \]
-
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Batch computation** tiếp nhận điểm tựa từ **Affine transformation và độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transpose** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Batch computation
 
@@ -271,8 +255,6 @@ thay vì vòng lặp (loop / 루프) qua từng mẫu (sample / 표본).
 
 Đây là liên kết (connection / 연결) trực tiếp giữa tuyến tính (linear / 선형) Algebra và GPU computing: hiện đại (modern / 현대적) accelerators cực kỳ tối ưu cho large phép nhân ma trận (matrix multiplication / 행렬 곱셈).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Transpose** tiếp nhận điểm tựa từ **Batch computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis và coordinate hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Transpose
 
 Transpose đổi rows thành columns:
@@ -293,7 +275,7 @@ thì:
 QK^T\in\mathbb{R}^{n\times n}
 \]
 
-Ma trận (matrix / 행렬) kết quả chứa pairwise dot-product score giữa mỗi truy vấn (query / 쿼리) đơn vị từ (token / 토큰) và mỗi key đơn vị từ (token / 토큰).
+Ma trận (matrix / 행렬) kết quả chứa pairwise dot-product score giữa mỗi truy vấn (query / 쿼리) token (토큰) và mỗi key token (토큰).
 
 Shape lập luận (reasoning / 추론):
 
@@ -303,9 +285,7 @@ K^T     : d_k × n
 QK^T    : n × n
 ```
 
-Chỉ cần nhìn shape đã thấy attention đang tạo relationship giữa mọi pair đơn vị từ (token / 토큰) trong chuỗi (sequence / 시퀀스).
-
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Basis và coordinate hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Transpose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) independence, rank và redundant thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+Chỉ cần nhìn shape đã thấy attention đang tạo relationship giữa mọi pair token (토큰) trong chuỗi (sequence / 시퀀스).
 
 ## Basis và coordinate hệ thống (system / 시스템)
 
@@ -324,8 +304,6 @@ và:
 Trong Machine học tập (learning / 학습), tính năng (feature / 기능) dimensions hoặc latent dimensions cũng có thể được xem như coordinate axes, nhưng axis của learned latent không gian (space / 공간) thường không có ngữ nghĩa (semantic / 의미적) label đơn giản như “tuổi” hay “thu nhập”. Meaning có thể được phân tán (distributed / 분산) trên nhiều dimensions.
 
 Điều này giải thích vì sao interpret một neuron hoặc một embedding dimension riêng lẻ thường khó.
-
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Tuyến tính (linear / 선형) independence, rank và redundant thông tin (information / 정보)** tiếp nhận điểm tựa từ **Basis và coordinate hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eigenvectors và eigenvalues** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Tuyến tính (linear / 선형) independence, rank và redundant thông tin (information / 정보)
 
@@ -350,8 +328,6 @@ LoRA dùng idea:
 
 với rank `r` nhỏ hơn nhiều dimension gốc. Thay vì train toàn bộ `W`, ta train hai matrices nhỏ `A` và `B`, giảm số parameter cần cập nhật (update / 업데이트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Eigenvectors và eigenvalues** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) independence, rank và redundant thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Singular giá trị (value / 값) Decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Eigenvectors và eigenvalues
 
 Với square ma trận (matrix / 행렬) `A`, nếu:
@@ -367,8 +343,6 @@ Interpretation: `v` là direction đặc biệt mà transformation `A` không đ
 Eigen decomposition quan trọng trong spectral methods, Markov chains, đồ thị (graph / 그래프) phân tích (analysis / 분석) và PCA-related intuition.
 
 Không phải mọi ma trận (matrix / 행렬) đều có decomposition đơn giản trên real numbers, nên trong practical ML ta thường dùng Singular giá trị (value / 값) Decomposition tổng quát hơn.
-
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Singular giá trị (value / 값) Decomposition** tiếp nhận điểm tựa từ **Eigenvectors và eigenvalues** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PCA: tìm directions giải thích variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Singular giá trị (value / 값) Decomposition
 
@@ -400,8 +374,6 @@ A\approx U_k\Sigma_kV_k^T
 
 Điều này giúp compression, denoising và dimensionality reduction.
 
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **PCA: tìm directions giải thích variance** tiếp nhận điểm tựa từ **Singular giá trị (value / 값) Decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## PCA: tìm directions giải thích variance
 
 Principal thành phần (component / 컴포넌트) phân tích (analysis / 분석) tìm các orthogonal directions có variance lớn nhất trong centered dữ liệu (data / 데이터).
@@ -416,8 +388,6 @@ thì principal components liên hệ với eigenvectors của `C` hoặc right s
 
 PCA không “tìm tính năng (feature / 기능) quan trọng theo mọi nghĩa”. Nó tối ưu variance reconstruction dưới tuyến tính (linear / 선형) các giả định (assumptions / 가정들). Direction có variance lớn chưa chắc là direction tốt nhất cho classification.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Projection** tiếp nhận điểm tựa từ **PCA: tìm directions giải thích variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Least squares và normal equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Projection
 
 Projection một véc-tơ (vector / 벡터) `x` lên đơn vị (unit / 단위) véc-tơ (vector / 벡터) `u`:
@@ -429,8 +399,6 @@ proj_{\mathbf{u}}(\mathbf{x})=(\mathbf{x}^T\mathbf{u})\mathbf{u}
 Projection giúp hiểu dimensionality reduction, least squares và attention-like weighted combination.
 
 Trong least squares, ta có thể nhìn prediction như projection của mục tiêu (target / 대상) véc-tơ (vector / 벡터) lên column không gian (space / 공간) của thiết kế (design / 설계) ma trận (matrix / 행렬).
-
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Least squares và normal equation** tiếp nhận điểm tựa từ **Projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Embeddings: vectors có nghĩa như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Least squares và normal equation
 
@@ -448,11 +416,9 @@ Nếu các giả định (assumptions / 가정들) cho phép và ma trận (matr
 
 Trong practice không nên trực tiếp tính ma trận (matrix / 행렬) inverse nếu có numerical phương thức (method / 메서드) tốt hơn như QR decomposition hoặc SVD. Đây là điểm nối sang [Numerical Computation](./07_numerical_computation.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Embeddings: vectors có nghĩa như thế nào?** tiếp nhận điểm tựa từ **Least squares và normal equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention như một bài toán tuyến tính (linear / 선형) Algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Embeddings: vectors có nghĩa như thế nào?
 
-Embedding (임베딩) biến discrete đối tượng (object / 객체) như đơn vị từ (token / 토큰), sản phẩm (product / 제품), người dùng (user / 사용자) hoặc document thành dense véc-tơ (vector / 벡터).
+Embedding (임베딩) biến discrete đối tượng (object / 객체) như token (토큰), sản phẩm (product / 제품), người dùng (user / 사용자) hoặc document thành dense véc-tơ (vector / 벡터).
 
 Giả sử vocabulary có `V` tokens và embedding dimension là `d`, embedding bảng (table / 테이블) có shape:
 
@@ -462,11 +428,9 @@ E\in\mathbb{R}^{V\times d}
 
 Đơn vị từ (token / 토큰) ID chọn một row của `E`.
 
-Trong LLM, embedding ban đầu không phải final meaning. Qua các Transformer layers, hidden states được contextualize: cùng một đơn vị từ (token / 토큰) có thể có biểu diễn (representation / 표현) khác tùy ngữ cảnh (context / 맥락).
+Trong LLM, embedding ban đầu không phải final meaning. Qua các Transformer layers, hidden states được contextualize: cùng một token (토큰) có thể có biểu diễn (representation / 표현) khác tùy ngữ cảnh (context / 맥락).
 
 Ngữ nghĩa (semantic / 의미적) hình học (geometry / 기하학) hình thành vì huấn luyện (training / 학습) mục tiêu (objective / 목표) buộc mô hình (model / 모델) tổ chức representations theo cách hữu ích để predict hoặc discriminate.
-
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Attention như một bài toán tuyến tính (linear / 선형) Algebra** tiếp nhận điểm tựa từ **Embeddings: vectors có nghĩa như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **High-dimensional hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Attention như một bài toán tuyến tính (linear / 선형) Algebra
 
@@ -494,8 +458,6 @@ Các weight matrices học ba projections khác nhau của cùng hidden trạng 
 
 Tuyến tính (linear / 선형) Algebra cho ta thấy attention không phải “mô hình (model / 모델) nhìn vào từ quan trọng” theo nghĩa anthropomorphic. Nó là learned transformations + pairwise dot products + normalized weighted aggregation.
 
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **High-dimensional hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Attention như một bài toán tuyến tính (linear / 선형) Algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Broadcasting và shape ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## High-dimensional hình học (geometry / 기하학)
 
 Trong dimension cao, trực giác 2D có thể gây sai. Một số phenomena quan trọng:
@@ -509,8 +471,6 @@ Trong dimension cao, trực giác 2D có thể gây sai. Một số phenomena qu
 Biểu diễn (representation / 표현) học tập (learning / 학습) cố tìm latent không gian (space / 공간) nơi task-relevant cấu trúc (structure / 구조) trở nên compact hơn.
 
 Đây là liên kết (connection / 연결) với **manifold hypothesis**: high-dimensional observations có thể nằm gần một lower-dimensional structured manifold, dù hypothesis này không phải universal theorem cho mọi dataset.
-
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Broadcasting và shape ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **High-dimensional hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Broadcasting và shape ngữ nghĩa (semantics / 의미론)
 
@@ -528,8 +488,6 @@ H + b
 
 Broadcasting rất tiện nhưng cũng dễ tạo silent bug nếu dimension accidentally align. Vì vậy khi gỡ lỗi (debug / 디버그) mô hình (model / 모델), luôn kiểm tra shape và meaning của từng axis, không chỉ kiểm tra mã (code / 코드) chạy được.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Broadcasting và shape ngữ nghĩa (semantics / 의미론)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Có thể nén chapter này thành:
@@ -544,8 +502,6 @@ Rank    = số direction độc lập
 SVD/PCA = tìm structure và low-dimensional approximation
 Tensor  = cách đóng gói nhiều dimensions để computation chạy hàng loạt
 ```
-
-> **Chuyển mạch:** Trong **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -564,8 +520,6 @@ Cách hiểu sâu hơn là composition của transformations giữa véc-tơ (ve
 ### “Dimension càng nhiều càng tốt”
 
 Dimension lớn tăng representational sức chứa (capacity / 용량) nhưng tăng bộ nhớ (memory / 메모리), compute và có thể làm học tập (learning / 학습) khó hơn. Effective biểu diễn (representation / 표현) quan trọng hơn ambient dimension đơn thuần.
-
-> **Chuyển mạch:** Ở chặng này của **Tuyến tính (linear / 선형) Algebra cho Artificial Intelligence**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -46,8 +46,6 @@ F\approx-kx.
 
 Vì vậy định luật Hooke xuất hiện tự nhiên như gần đúng bậc thấp nhất của rất nhiều thế năng trơn quanh cực tiểu. Đây là lý do cùng phương trình dao động điều hòa xuất hiện ở lò xo, con lắc góc nhỏ, dao động phân tử, mạch LC và chế độ (mode / 모드) của trường.
 
-> **Nối mạch:** Trong **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Dao động điều hòa đơn** nối từ **Từ thế năng đến lực hồi phục** sang **Pha và không gian pha**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Dao động điều hòa đơn
 
 Phương trình Newton là
@@ -94,8 +92,6 @@ Sine và cosine xuất hiện vì đạo hàm hai lần của chúng trả lại
 \frac{d^2}{dt^2}\cos(\omega t)=-\omega^2\cos(\omega t).
 ```
 
-> **Nối mạch:** Ở chặng này của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Pha và không gian pha** nối từ **Dao động điều hòa đơn** sang **Năng lượng trong dao động điều hòa**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha và không gian pha
 
 Vận tốc là
@@ -107,8 +103,6 @@ v(t)=-A\omega_0\sin(\omega_0t+\phi).
 Trong mặt phẳng `x-v`, dao động điều hòa lý tưởng vẽ thành một đường kín. Nếu chuẩn hóa trục vận tốc theo `\omega_0`, quỹ đạo trở thành ellipse hoặc đường tròn tùy cách chọn tỉ lệ.
 
 Cách nhìn này quan trọng vì một trạng thái của dao động tử không chỉ cần vị trí mà còn cần vận tốc. Hai hệ có cùng `x` nhưng khác `v` sẽ có tương lai khác nhau.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Năng lượng trong dao động điều hòa** nối từ **Pha và không gian pha** sang **Ví dụ: con lắc đơn và điều kiện góc nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng trong dao động điều hòa
 
@@ -129,8 +123,6 @@ không đổi theo thời gian trong hệ lý tưởng.
 Ở biên `x=\pm A`, vận tốc bằng không nên toàn bộ năng lượng là thế năng. Tại `x=0`, thế năng nhỏ nhất và tốc độ đạt cực đại nên năng lượng chủ yếu là động năng.
 
 Dao động điều hòa có thể được hình dung như quá trình năng lượng liên tục trao đổi giữa hai “kho”: động năng và thế năng.
-
-> **Nối mạch:** Trong **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Năng lượng trong dao động điều hòa** nêu quy tắc; **Ví dụ: con lắc đơn và điều kiện góc nhỏ** thử quy tắc trong tình huống, rồi **Dao động tắt dần** mở rộng hệ quả.
 
 ## Ví dụ: con lắc đơn và điều kiện góc nhỏ
 
@@ -161,8 +153,6 @@ T\approx2\pi\sqrt{\frac{\ell}{g}}.
 ```
 
 Kết quả này không còn chính xác khi biên độ lớn. Khi đó chu kỳ tăng nhẹ theo biên độ và hệ trở thành phi tuyến. Đây là ví dụ quan trọng: **dao động điều hòa là xấp xỉ, không phải bản chất tuyệt đối của mọi dao động**.
-
-> **Nối mạch:** Ở chặng này của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Ví dụ: con lắc đơn và điều kiện góc nhỏ** nêu quy tắc; **Dao động tắt dần** thử quy tắc trong tình huống, rồi **Thời gian thư giãn và hệ số chất lượng** mở rộng hệ quả.
 
 ## Dao động tắt dần
 
@@ -234,8 +224,6 @@ Nếu
 
 hệ trở về cân bằng chậm mà không dao động. Lực cản quá lớn làm phản ứng ì hơn, chứ không phải lúc nào “nhiều damping hơn” cũng tốt hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Thời gian thư giãn và hệ số chất lượng** nối từ **Dao động tắt dần** sang **Kích thích cưỡng bức**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Thời gian thư giãn và hệ số chất lượng
 
 Với tắt dần yếu, thời gian đặc trưng để biên độ giảm đáng kể là bậc
@@ -251,8 +239,6 @@ Q\approx\frac{\omega_0}{2\gamma}
 ```
 
 cho hệ tắt dần yếu. `Q` lớn nghĩa hệ mất ít năng lượng trong mỗi chu kỳ và cộng hưởng hẹp, sắc. `Q` nhỏ nghĩa tổn hao lớn và đáp ứng theo tần số rộng hơn.
-
-> **Nối mạch:** Trong **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Kích thích cưỡng bức** nối từ **Thời gian thư giãn và hệ số chất lượng** sang **Cộng hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kích thích cưỡng bức
 
@@ -290,8 +276,6 @@ A(\omega)=
 
 Công thức này cho thấy cộng hưởng không chỉ là “tần số bằng nhau”. Nó là kết quả của sự cạnh tranh giữa quán tính, lực hồi phục và tổn hao.
 
-> **Nối mạch:** Ở chặng này của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Cộng hưởng** nối từ **Kích thích cưỡng bức** sang **Pha của đáp ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cộng hưởng
 
 Với tắt dần nhỏ, biên độ lớn nhất xảy ra gần
@@ -304,15 +288,11 @@ Với tắt dần nhỏ, biên độ lớn nhất xảy ra gần
 
 Tắt dần ngăn biên độ tăng vô hạn. Trong mô hình lý tưởng không có damping và kích thích đúng tần số riêng, nghiệm có thể tăng theo thời gian; hệ thực luôn có phi tuyến, tổn hao hoặc giới hạn cấu trúc trước khi điều đó xảy ra.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Pha của đáp ứng** nối từ **Cộng hưởng** sang **Cộng hưởng không phải lúc nào cũng có hại**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Pha của đáp ứng
 
 Không chỉ biên độ mà pha cũng thay đổi theo tần số. Ở tần số thấp, đáp ứng gần cùng pha với lực. Quanh cộng hưởng, độ trễ pha khoảng `\pi/2`. Ở tần số rất cao, đáp ứng gần ngược pha.
 
 Pha là thông tin quan trọng trong mạch điện, hệ điều khiển, cơ học kết cấu và phép đo đáp ứng tần số. Hai hệ có biên độ giống nhau nhưng pha khác nhau có thể hành xử rất khác khi ghép với hệ khác.
-
-> **Nối mạch:** Trong **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Cộng hưởng không phải lúc nào cũng có hại** nối từ **Pha của đáp ứng** sang **Từ một dao động tử đến nhiều chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng hưởng không phải lúc nào cũng có hại
 
@@ -320,23 +300,17 @@ Cộng hưởng được khai thác trong nhạc cụ, bộ lọc điện, đồ
 
 Bài toán kỹ thuật không phải “loại bỏ mọi cộng hưởng” mà là xác định chế độ (mode / 모드) nào tồn tại, chúng được kích thích bởi phổ lực nào, độ tắt dần bao nhiêu và biên độ có vượt giới hạn an toàn hay không.
 
-> **Nối mạch:** Ở chặng này của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Từ một dao động tử đến nhiều chế độ (mode / 모드)** nối từ **Cộng hưởng không phải lúc nào cũng có hại** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Từ một dao động tử đến nhiều chế độ (mode / 모드)
 
 Một hệ nhiều bậc tự do không có chỉ một tần số riêng. Nó có nhiều chế độ (mode / 모드) chuẩn, mỗi chế độ (mode / 모드) có tần số riêng. Lực ngoài kích thích mạnh chế độ (mode / 모드) nào phụ thuộc không chỉ tần số mà còn **hình dạng lực có ghép với hình dạng chế độ (mode / 모드) hay không**.
 
 Đây là cầu nối từ dao động đơn tới rung động kết cấu, âm học, phonon và lý thuyết trường.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Từ một dao động tử đến nhiều chế độ (mode / 모드)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một dao động cần ba thành phần: **xu hướng hồi phục, quán tính và điều kiện ban đầu**. Tắt dần thêm cơ chế mất năng lượng. Kích thích ngoài thêm nguồn năng lượng. Cộng hưởng xuất hiện khi nhịp cấp năng lượng phù hợp với nhịp tự nhiên của hệ và cơ chế ghép đủ mạnh.
 
 Dao động điều hòa là mô hình tuyến tính gần cân bằng. Khi biên độ lớn hoặc lực hồi phục phi tuyến, ta phải chuyển sang động lực học phi tuyến thay vì cố kéo dài công thức điều hòa quá miền áp dụng.
-
-> **Nối mạch:** Trong **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -351,8 +325,6 @@ Sai khi đi quá chế độ tới hạn. Hệ tắt dần mạnh có thể tr�
 ### “Cộng hưởng tạo năng lượng”
 
 Không. Năng lượng đến từ nguồn kích thích ngoài. Cộng hưởng chỉ làm truyền năng lượng hiệu quả hơn vào một chế độ (mode / 모드) của hệ.
-
-> **Nối mạch:** Ở chặng này của **Dao động, tắt dần, kích thích cưỡng bức và cộng hưởng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

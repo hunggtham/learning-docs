@@ -34,8 +34,6 @@ Trước tầng (layer / 계층) này nên nắm:
 
 Không nên đọc bảo mật (security / 보안) như một chủ đề tách khỏi kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경), vì nhiều rủi ro chỉ xuất hiện khi mô hình (model / 모델) được nối với retrieval, bộ nhớ (memory / 메모리), công cụ (tool / 도구) và quyền thực thi.
 
-> **Chuyển mạch:** **Kiến thức cần có trước** đặt nền về threat, model và systems; **Thứ tự đọc** sắp xếp chúng thành route trước khi **Bản đồ phụ thuộc** khóa prerequisite.
-
 ## Thứ tự đọc
 
 Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ hoặc quy trình có thể kiểm tra. Hãy xác định câu hỏi mà mục trả lời rồi nối kết luận với phần kế tiếp.
@@ -52,8 +50,6 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 08_secure_ai_system_design.md
 09_alignment_techniques_and_oversight.md
 ```
-
-> **Chuyển mạch:** **Bản đồ phụ thuộc** cho biết claim nào cần security, evaluation hay governance; **Checklist cho mỗi chapter** biến dependency đó thành evidence phải kiểm tra.
 
 ## Bản đồ phụ thuộc
 
@@ -76,8 +72,6 @@ flowchart TD
     SEC --> O
 ```
 
-> **Chuyển mạch:** **Checklist cho mỗi chapter** bảo đảm từng cơ chế có threat, control và limit; **Mô hình tư duy xuyên suốt** nối các control thành safety case.
-
 ## Checklist cho mỗi chapter
 
 Mỗi chapter trong tầng (layer / 계층) này phải trả lời đủ tám câu hỏi:
@@ -95,8 +89,6 @@ Mỗi chapter trong tầng (layer / 계층) này phải trả lời đủ tám c
 
 Nếu chỉ mô tả tên attack hoặc tên kỹ thuật mà không nối tới kiến trúc (architecture / 아키텍처) và khôi phục (recovery / 복구) thì chưa đủ cho production-level understanding.
 
-> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Mô hình tư duy xuyên suốt** gom các mảnh từ **Checklist cho mỗi chapter** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những phân biệt phải giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Mô hình tư duy xuyên suốt
 
 Phần này chốt mental model thành một chuỗi có thể dùng lại: bối cảnh → cơ chế → quan sát → giới hạn → quyết định. Hãy đọc sơ đồ như công cụ suy luận, không như một khẩu hiệu tách khỏi chapter.
@@ -111,8 +103,6 @@ xác định hazard / attacker / objective gap
 → giám sát production
 → thu hồi / rollback / phục hồi
 ```
-
-> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Những phân biệt phải giữ** gom các mảnh từ **Mô hình tư duy xuyên suốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cơ chế kiểm soát theo lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Những phân biệt phải giữ
 
@@ -134,8 +124,6 @@ Human approval                  ≠ Bảo đảm tự động
 Model alignment                 ≠ Access control
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Những phân biệt phải giữ** xác định đầu vào; **Cơ chế kiểm soát theo lớp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Từ mô hình đe dọa tới điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Cơ chế kiểm soát theo lớp
 
 Một môi trường vận hành (production / 운영 환경) AI hệ thống (system / 시스템) an toàn hơn thường kết hợp:
@@ -155,8 +143,6 @@ model behavior
 
 Không có một điều khiển (control / 제어) đơn lẻ nào đủ bao phủ toàn bộ thất bại (failure / 실패) surface.
 
-> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Cơ chế kiểm soát theo lớp** xác định đầu vào; **Từ mô hình đe dọa tới điều khiển (control / 제어)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
-
 ## Từ mô hình đe dọa tới điều khiển (control / 제어)
 
 Trước khi chọn defense, cần xác định:
@@ -171,8 +157,6 @@ failure nào phải fail closed?
 ```
 
 Từ đó mới chọn tỷ lệ (rate / 비율) limit, sandbox, ACL, verifier, approval hoặc isolation phù hợp.
-
-> **Chuyển mạch:** **Từ threat model tới control** tạo release criteria; **Production release gate** dùng criteria đó để chặn rủi ro có bằng chứng trước khi deploy.
 
 ## Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate
 
@@ -190,8 +174,6 @@ unit / schema test
 ```
 
 Một điểm benchmark tăng không đủ để promote nếu attack surface hoặc authority ranh giới (boundary / 경계) bị mở rộng.
-
-> **Chuyển mạch:** **Internal links chính** trả safety claim về canonical security, evaluation và systems owners; README khép ở đó để không tạo chapter trùng.
 
 ## Nội bộ (internal / 내부) links chính
 

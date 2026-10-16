@@ -32,8 +32,6 @@ intuition
 → mental model
 ```
 
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** nối từ **Tiêu chí chọn chapter** sang **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus
 
 Lần ghi nhận (commit / 커밋):
@@ -132,8 +130,6 @@ Các phần tăng sâu:
 - Maxwell/fluid/AI connections;
 - singularity/lĩnh vực (domain / 도메인) caveat trong flux theorem.
 
-> **Nối mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** nối từ **Batch 1 — hình học (geometry / 기하학), Harmonics và véc-tơ (vector / 벡터) Calculus** sang **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)
 
 Lần ghi nhận (commit / 커밋):
@@ -229,8 +225,6 @@ Các connections mới:
 - likelihood/mất mát (loss / 손실) choices trong AI;
 - Gaussian-tail limitations trong Finance.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** nối từ **Batch 2 — Combinatorics và Multivariate xác suất (probability / 확률)** sang **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)
 
 Lần ghi nhận (commit / 커밋):
@@ -297,8 +291,6 @@ Các phần tăng sâu:
 - Hamming hình học (geometry / 기하학);
 - tuyến tính (linear / 선형) codes over `GF(2)`;
 - tính năng (feature / 기능) selection/thông tin (information / 정보) bottleneck/perplexity caveats.
-
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** nối từ **Batch 3 — Trees, Orders, Lattices và thông tin (information / 정보) lý thuyết (theory / 이론)** sang **Độ sâu (depth / 깊이) balance sau Round 10**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers
 
@@ -374,8 +366,6 @@ Các phần tăng sâu:
 - preconditioning;
 - numerical eigenvalue methods.
 
-> **Nối mạch:** Ở chặng này của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Độ sâu (depth / 깊이) balance sau Round 10** nối từ **Batch 4 — Constrained tối ưu hóa (optimization / 최적화) và Numerical Solvers** sang **Priority hợp lý cho Round 11**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ sâu (depth / 깊이) balance sau Round 10
 
 Sau Round 10, các phụ thuộc (dependency / 의존성) chains sau đã tương đối đồng đều về độ sâu (depth / 깊이):
@@ -389,8 +379,6 @@ Optimization → Constraints/KKT → Numerical computation
 ```
 
 Coverage không có major gap mới. Vì vậy các round tiếp theo vẫn nên **rewrite/chỉnh phụ thuộc (dependency / 의존성)**, không nên tăng topic count một cách cơ học.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Priority hợp lý cho Round 11** nối từ **Độ sâu (depth / 깊이) balance sau Round 10** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Priority hợp lý cho Round 11
 
@@ -408,8 +396,6 @@ Các chapter tiếp theo đáng kiểm tra (audit / 감사) theo độ sâu (dep
 ```
 
 Nhưng trước khi rewrite cần kiểm tra (audit / 감사) content thực tế: tệp (file / 파일) kích thước (size / 크기) không phải criterion duy nhất. Một chapter ngắn nhưng conceptually complete không cần kéo dài chỉ để đồng đều số dòng.
-
-> **Nối mạch:** Trong **Chất lượng (quality / 품질) kiểm tra (audit / 감사) — Round 10: hình học (geometry / 기하학), xác suất (probability / 확률), discrete structures and numerical tối ưu hóa (optimization / 최적화)**, **Kết luận** tổng hợp từ **Priority hợp lý cho Round 11** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

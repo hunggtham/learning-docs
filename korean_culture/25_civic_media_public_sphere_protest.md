@@ -12,8 +12,6 @@ Chương này không đánh giá một đảng, phong trào hay lựa chọn ch�
 
 Sự mở rộng của xã hội dân sự tại Hàn Quốc gắn với công nghiệp hoá, đô thị hoá, phong trào lao động, phong trào sinh viên và quá trình dân chủ hoá. Khi giáo dục và mạng truyền thông mở rộng, chi phí phối hợp giữa người dân giảm và khả năng tổ chức hành động tập thể tăng.
 
-> **Nối mạch:** Trong **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **광장: quảng trường như một công nghệ giao tiếp** nối từ **시민: từ thần dân sang công dân** sang **촛불: ngọn nến như biểu tượng chi phí thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 광장: quảng trường như một công nghệ giao tiếp
 
 Từ **quảng trường (public square / 광장)** trong văn hoá chính trị Hàn Quốc mang ý nghĩa vượt ra ngoài hình học của một không gian vật lý. Quảng trường tập trung nhiều người, cho phép mỗi người nhìn thấy rằng nhiều người khác cũng có mối quan tâm tương tự.
@@ -28,15 +26,11 @@ bất mãn hoặc quan tâm riêng
 → năng lực hành động tập thể
 ```
 
-> **Nối mạch:** Ở chặng này của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **촛불: ngọn nến như biểu tượng chi phí thấp** nối từ **광장: quảng trường như một công nghệ giao tiếp** sang **집회 và 시위: tập hợp không đồng nghĩa hỗn loạn**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 촛불: ngọn nến như biểu tượng chi phí thấp
 
 Trong nhiều cuộc tập hợp lớn, **ngọn nến (candle / 촛불)** trở thành biểu tượng dễ nhận biết. Một biểu tượng hiệu quả thường có ba đặc điểm: chi phí thấp, dễ tái tạo và chứa nhiều ý nghĩa. Một ngọn nến có thể biểu thị tưởng niệm, sự cảnh giác hoặc sự hiện diện ôn hoà tuỳ bối cảnh.
 
 Không nên coi mọi cuộc tập hợp cầm nến là cùng một phong trào. Điều đáng học là cách một vật đơn giản có thể trở thành **mã phối hợp (coordination token)** cho đám đông.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **집회 và 시위: tập hợp không đồng nghĩa hỗn loạn** nối từ **촛불: ngọn nến như biểu tượng chi phí thấp** sang **노동조합 và thương lượng tập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 집회 và 시위: tập hợp không đồng nghĩa hỗn loạn
 
@@ -44,15 +38,11 @@ Không nên coi mọi cuộc tập hợp cầm nến là cùng một phong trào
 
 Một lỗi nhận thức phổ biến là thiên lệch sẵn có: hình ảnh đụng độ dễ được tin tức phát lại hơn hàng nghìn cuộc tập hợp không có bạo lực. Vì vậy mức độ hiển thị trên truyền thông không phải mẫu ngẫu nhiên của toàn bộ hoạt động biểu tình.
 
-> **Nối mạch:** Trong **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **노동조합 và thương lượng tập thể** nối từ **집회 và 시위: tập hợp không đồng nghĩa hỗn loạn** sang **언론 và portal: đường đi của tin tức thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 노동조합 và thương lượng tập thể
 
 **Công đoàn (labour union / 노동조합)** là thiết chế giúp người lao động phối hợp khi thương lượng với người sử dụng lao động. Nếu một lao động đơn lẻ có chi phí rời việc cao, quyền thương lượng của họ có thể thấp; tổ chức tập thể làm thay đổi tương quan quyền lực.
 
 Đây là lô-gic (logic / 논리) cơ bản của lý thuyết trò chơi. Công đoàn không tự động “tốt” hoặc “xấu”; tác động phụ thuộc ngành, cách quản trị, quy tắc thương lượng và điều kiện kinh tế. Điểm văn hoá cần hiểu là phong trào lao động có vị trí quan trọng trong lịch sử hiện đại hoá và dân chủ hoá Hàn Quốc.
-
-> **Nối mạch:** Ở chặng này của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **언론 và portal: đường đi của tin tức thay đổi** nối từ **노동조합 và thương lượng tập thể** sang **댓글 và dư luận trực tuyến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 언론 và portal: đường đi của tin tức thay đổi
 
@@ -69,15 +59,11 @@ phản hồi → hệ sinh thái xếp hạng
 
 Nền tảng vì vậy không chỉ là đường ống trung tính; lô-gic (logic / 논리) xếp hạng ảnh hưởng mức độ hiển thị.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **댓글 và dư luận trực tuyến** nối từ **언론 và portal: đường đi của tin tức thay đổi** sang **실시간 검색어 và dòng thác chú ý**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 댓글 và dư luận trực tuyến
 
 **Bình luận (comment / 댓글)** tạo cảm giác rằng dư luận hiển thị trực tiếp, nhưng thiên lệch mẫu có thể rất lớn. Người bình luận không phải mẫu ngẫu nhiên của toàn dân. Một số người dùng hoạt động cực nhiều có thể tạo lượng nội dung lớn hơn phần đông im lặng.
 
 Nếu một nhóm rất nhỏ người dùng tạo phần lớn bình luận, đọc bình luận rồi suy ra “người Hàn nghĩ thế này” là lỗi thống kê. Đây là **thiên lệch chọn mẫu (selection bias)**.
-
-> **Nối mạch:** Trong **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **실시간 검색어 và dòng thác chú ý** nối từ **댓글 và dư luận trực tuyến** sang **국민청원 và kiến nghị số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 실시간 검색어 và dòng thác chú ý
 
@@ -92,21 +78,15 @@ nhiều lượt tìm kiếm hơn
 
 Cơ chế tương tự xuất hiện ở hashtag thịnh hành, video lan truyền và hệ thống đề xuất.
 
-> **Nối mạch:** Ở chặng này của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **국민청원 và kiến nghị số** nối từ **실시간 검색어 và dòng thác chú ý** sang **지역사회 và 주민자치: đời sống công dân không chỉ ở Seoul**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 국민청원 và kiến nghị số
 
 Kiến nghị số biến khiếu nại hoặc yêu cầu thành đầu vào có cấu trúc và có thể tổng hợp. Ý nghĩa văn hoá nằm ở việc kỳ vọng của công dân về khả năng phản hồi của thiết chế tăng khi giao diện gửi ý kiến trở nên dễ dùng.
 
 Nhưng chi phí gửi thấp cũng tạo vấn đề về khối lượng: càng dễ gửi, thiết chế càng cần bộ lọc, ngưỡng và phân loại ưu tiên. Đây là cùng một đánh đổi mà hệ thống hỗ trợ phần mềm thường gặp.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **지역사회 và 주민자치: đời sống công dân không chỉ ở Seoul** nối từ **국민청원 và kiến nghị số** sang **정치적 양극화 và động lực nền tảng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 지역사회 và 주민자치: đời sống công dân không chỉ ở Seoul
 
 Hội cư dân địa phương, vấn đề khu phố, họp tái phát triển, nhóm phụ huynh và hoạt động tình nguyện là phần ít nổi bật trên truyền thông nhưng quan trọng của xã hội dân sự. Nếu chỉ học đời sống công dân Hàn Quốc qua các cuộc biểu tình toàn quốc ở Seoul, ta sẽ quá khớp với những sự kiện có độ hiển thị cao.
-
-> **Nối mạch:** Trong **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **정치적 양극화 và động lực nền tảng** nối từ **지역사회 và 주민자치: đời sống công dân không chỉ ở Seoul** sang **사실 확인: kiểm chứng thông tin như vệ sinh thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 정치적 양극화 và động lực nền tảng
 
@@ -114,15 +94,11 @@ Phân cực có thể xuất hiện khi bản sắc, lựa chọn truyền thôn
 
 Một hệ thống đề xuất tối ưu tương tác có thể ưu tiên nội dung tạo cảm xúc mạnh trong một số điều kiện. Nhưng mức tác động nhân quả phải dựa trên bằng chứng thực nghiệm; không thể chỉ nhìn bảng tin rồi kết luận nền tảng là nguyên nhân duy nhất.
 
-> **Nối mạch:** Ở chặng này của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **사실 확인: kiểm chứng thông tin như vệ sinh thông tin** nối từ **정치적 양극화 và động lực nền tảng** sang **Liên hệ kiến thức: không gian công luận như hệ thống phân tán**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## 사실 확인: kiểm chứng thông tin như vệ sinh thông tin
 
 Trong môi trường truyền thông tốc độ cao, thông tin sai có thể có lợi thế về tốc độ: tạo một khẳng định chỉ mất vài giây, còn kiểm chứng có thể mất nhiều thời gian. Đây là **chi phí bất đối xứng (asymmetric cost)**.
 
 Vì vậy hiểu biết thông tin không chỉ là “đọc nhiều nguồn”, mà còn là kiểm tra nguồn gốc, thời điểm, bối cảnh gốc và động lực của bên xuất bản.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **Liên hệ kiến thức: không gian công luận như hệ thống phân tán** nối từ **사실 확인: kiểm chứng thông tin như vệ sinh thông tin** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: không gian công luận như hệ thống phân tán
 
@@ -138,13 +114,9 @@ Hệ thống gặp những vấn đề quen thuộc:
 
 Ẩn dụ không hoàn hảo vì con người có khả năng lựa chọn và quyền lực không phân bố đều, nhưng nó giúp nhìn giao tiếp như một loại hạ tầng.
 
-> **Nối mạch:** Trong **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: không gian công luận như hệ thống phân tán** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Mô hình tư duy
 
 > Văn hoá công cộng không chỉ là “người dân nghĩ gì”, mà là đường ống biến mối quan tâm cá nhân thành thông tin công cộng: ai có thể nói, ở đâu, qua nền tảng nào, ai nhìn thấy và thiết chế phản hồi bằng cơ chế nào.
-
-> **Nối mạch:** Ở chặng này của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn tham khảo định hướng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -159,8 +131,6 @@ Không nhất thiết. Mức hiển thị của biểu tình còn phụ thuộc 
 ### “Truyền thông chỉ truyền lại sự kiện”
 
 Truyền thông còn lựa chọn câu chuyện, cách đóng khung, tiêu đề và vị trí hiển thị. Nền tảng tiếp tục thêm một lớp xếp hạng. Vì vậy người dùng nhìn thấy một môi trường thông tin đã được tuyển chọn chứ không phải toàn bộ thực tại.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đời sống công dân, truyền thông, biểu tình và không gian công luận**, **Những hiểu lầm phổ biến** đặt vấn đề; **Nguồn tham khảo định hướng** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo định hướng
 

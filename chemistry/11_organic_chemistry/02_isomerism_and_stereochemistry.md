@@ -14,8 +14,6 @@ Một công thức phân tử chỉ cho biết “có bao nhiêu nguyên tử m�
 
 Điều này cho thấy nhóm chức không phải nhãn gắn thêm sau cùng; nó xuất hiện trực tiếp từ cách kết nối nguyên tử.
 
-> **Nối mạch:** Constitutional isomers đổi cách nối; stereoisomers giữ graph nhưng đổi sắp xếp 3D, còn conformation là các trạng thái quay quanh liên kết và phải xét năng lượng.
-
 ## Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D
 
 **Đồng phân lập thể (stereoisomers / 입체 이성질체)** có cùng cách kết nối nhưng khác sắp xếp trong không gian.
@@ -27,8 +25,6 @@ Một phân biệt quan trọng:
 
 Enantiomer, nhiều diastereomer và alkene E/Z thuộc nhóm đồng phân cấu hình.
 
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Cấu dạng không phải “hình vẽ tùy ý”** nối từ **Đồng phân lập thể — cùng đồ thị, khác cách sắp xếp 3D** sang **Hình chiếu Newman — nhìn thẳng xuống một liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cấu dạng không phải “hình vẽ tùy ý”
 
 Liên kết đơn có thể quay nhưng sự quay không hoàn toàn tự do. Đẩy electron và tương tác lập thể tạo **cảnh quan năng lượng xoắn (torsional energy landscape)**.
@@ -39,15 +35,11 @@ Liên kết đơn có thể quay nhưng sự quay không hoàn toàn tự do. Đ
 
 Vì vậy trong dung dịch, một phân tử không tồn tại như một cấu dạng cứng duy nhất mà như một tập hợp cấu dạng có tỉ lệ dân số tuân theo phân bố Boltzmann.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, sau nội dung của **Cấu dạng không phải “hình vẽ tùy ý”**, **Hình chiếu Newman — nhìn thẳng xuống một liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cyclohexane — vì sao dạng ghế được ưu tiên** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Hình chiếu Newman — nhìn thẳng xuống một liên kết
 
 **Hình chiếu Newman (Newman projection / 뉴먼 투영식)** giúp trực quan góc nhị diện quanh liên kết C–C. Đây không chỉ là kỹ thuật vẽ; nó biến bài toán cấu dạng thành so sánh các tương tác che khuất, gauche và cản trở lập thể.
 
 Khi giải bài cấu dạng, nên xác định liên kết cần nhìn, vẽ đúng các nhóm thế trên carbon trước/sau rồi so sánh năng lượng thay vì cố xoay phân tử bằng trực giác 2D.
-
-> **Nối mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Cyclohexane — vì sao dạng ghế được ưu tiên** nối từ **Hình chiếu Newman — nhìn thẳng xuống một liên kết** sang **Tính đối quang — khi ảnh gương không thể chồng khít**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cyclohexane — vì sao dạng ghế được ưu tiên
 
@@ -59,8 +51,6 @@ Nhóm thế lớn thường ưu tiên vị trí equatorial vì vị trí axial t
 
 Nhóm methyl có xu hướng ưu tiên equatorial; tert-butyl còn ưu tiên mạnh hơn và thường gần như “khóa” vòng ở cấu dạng giữ tert-butyl ở equatorial.
 
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Tính đối quang — khi ảnh gương không thể chồng khít** nối từ **Cyclohexane — vì sao dạng ghế được ưu tiên** sang **Enantiomer — cặp ảnh gương không chồng khít**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính đối quang — khi ảnh gương không thể chồng khít
 
 Một vật thể hoặc phân tử là **đối quang (chiral / 키랄)** nếu ảnh gương của nó không thể chồng khít bằng phép quay và tịnh tiến.
@@ -69,8 +59,6 @@ Một nguồn phổ biến là carbon tứ diện liên kết với bốn nhóm 
 
 Điều quan trọng hơn là “có tâm lập thể” và “phân tử đối quang” không hoàn toàn tương đương, vì đối xứng có thể làm toàn phân tử trở thành không đối quang.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Enantiomer — cặp ảnh gương không chồng khít** nối từ **Tính đối quang — khi ảnh gương không thể chồng khít** sang **Cấu hình R/S — hệ tọa độ cho tính đối quang**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Enantiomer — cặp ảnh gương không chồng khít
 
 Hai ảnh gương không chồng khít gọi là **enantiomer (đồng phân đối quang / 거울상 이성질체)**.
@@ -78,8 +66,6 @@ Hai ảnh gương không chồng khít gọi là **enantiomer (đồng phân đ�
 Trong môi trường không đối quang, hai enantiomer thường có cùng nhiệt độ nóng chảy, nhiệt độ sôi và nhiều phổ thông thường. Nhưng chúng tương tác khác nhau với môi trường đối quang.
 
 Ánh sáng phân cực phẳng bị quay theo hai chiều ngược nhau với độ lớn bằng nhau đối với hai enantiomer tinh khiết, nhưng dấu \((+) / (-)\) không thể suy ra từ nhãn R/S.
-
-> **Nối mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Cấu hình R/S — hệ tọa độ cho tính đối quang** nối từ **Enantiomer — cặp ảnh gương không chồng khít** sang **Phân tử có nhiều tâm lập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu hình R/S — hệ tọa độ cho tính đối quang
 
@@ -97,8 +83,6 @@ Nếu nhóm ưu tiên thấp nhất hướng về phía người nhìn, kết qu
 
 R/S chỉ là nhãn cấu hình tuyệt đối. Nó không cho biết phân tử quay ánh sáng phân cực theo chiều nào và cũng không cho biết hoạt tính sinh học bên nào mạnh hơn.
 
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Phân tử có nhiều tâm lập thể** nối từ **Cấu hình R/S — hệ tọa độ cho tính đối quang** sang **Hợp chất meso — có tâm lập thể nhưng không đối quang**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Phân tử có nhiều tâm lập thể
 
 Nếu một phân tử có \(n\) tâm lập thể độc lập, số đồng phân cấu hình tối đa thường là:
@@ -111,15 +95,11 @@ Tuy nhiên đối xứng có thể làm số thực tế thấp hơn.
 
 Hai đồng phân lập thể không phải ảnh gương của nhau gọi là **diastereomer (đồng phân không đối quang / 부분입체 이성질체)**. Không giống enantiomer, diastereomer thường có tính chất vật lý khác nhau ngay trong môi trường không đối quang, nên dễ tách bằng kết tinh hoặc sắc ký thông thường hơn.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Hợp chất meso — có tâm lập thể nhưng không đối quang** nối từ **Phân tử có nhiều tâm lập thể** sang **Hóa lập thể alkene — quay bị khóa bởi liên kết π**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hợp chất meso — có tâm lập thể nhưng không đối quang
 
 **Hợp chất meso (meso compound / 메소 화합물)** có nhiều tâm lập thể nhưng đối xứng nội làm ảnh gương chồng khít được.
 
 Đây là phản ví dụ quan trọng cho khẩu quyết “có tâm lập thể ⇒ đối quang”. Tính đối quang là tính chất của toàn phân tử chứ không phải danh sách kiểm tra cục bộ.
-
-> **Nối mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, sau nội dung của **Hợp chất meso — có tâm lập thể nhưng không đối quang**, **Hóa lập thể alkene — quay bị khóa bởi liên kết π** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tính lập thể không chỉ xuất hiện ở carbon tứ diện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hóa lập thể alkene — quay bị khóa bởi liên kết π
 
@@ -134,15 +114,11 @@ Nếu mỗi carbon alkene gắn với hai nhóm khác nhau, hình học bị kh�
 
 Cis/trans chỉ đáng tin cậy cho trường hợp đơn giản có nhóm tương ứng rõ; E/Z tổng quát hơn.
 
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Tính lập thể không chỉ xuất hiện ở carbon tứ diện** nối từ **Hóa lập thể alkene — quay bị khóa bởi liên kết π** sang **Tiền đối quang và hai mặt của nhóm phẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Tính lập thể không chỉ xuất hiện ở carbon tứ diện
 
 Allene có thể đối quang do hai hệ π vuông góc. Biphenyl thế có hàng rào quay đủ lớn có thể tạo **đồng phân atrop (atropisomerism)**. Phức kim loại có tính đối quang Δ/Λ. Tâm sulfur và phosphorus cũng có thể tạo lập thể.
 
 Điều này củng cố nguyên lý: hóa lập thể xuất phát từ **đối xứng + chuyển động bị hạn chế**, không phải chỉ từ quy tắc “carbon gắn bốn nhóm khác nhau”.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Tiền đối quang và hai mặt của nhóm phẳng** nối từ **Tính lập thể không chỉ xuất hiện ở carbon tứ diện** sang **Hóa lập thể của phản ứng là bằng chứng về cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiền đối quang và hai mặt của nhóm phẳng
 
@@ -151,8 +127,6 @@ Carbonyl carbon tam giác phẳng có hai mặt. Nucleophile tấn công từ ha
 Hai mặt có thể được gán ký hiệu **Re/Si** theo quy tắc gần giống CIP. Đây là nền tảng để hiểu xúc tác bất đối xứng và tính chọn lọc của enzyme.
 
 Một phân tử chưa đối quang có thể trở thành đối quang chỉ sau một bước phản ứng; đó là **tiền đối quang (prochirality)**.
-
-> **Nối mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Tiền đối quang và hai mặt của nhóm phẳng** đặt vấn đề; **Hóa lập thể của phản ứng là bằng chứng về cơ chế** đối chiếu bằng chứng, rồi **Độ dư đối quang và thành phần hỗn hợp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hóa lập thể của phản ứng là bằng chứng về cơ chế
 
@@ -163,8 +137,6 @@ Phản ứng \(S_N2\) yêu cầu nucleophile tấn công từ phía sau vào orb
 Phản ứng E2 thường cần hình học C–H và C–LG **đối phẳng (anti-periplanar)**. Vì vậy cấu hình ban đầu có thể quyết định alkene nào được tạo.
 
 Hydrogen hóa trên bề mặt kim loại thường cộng hai hydrogen cùng phía (syn), còn brom hóa alkene qua chất trung gian bromonium thường cho cộng đối phía (anti). Các khuôn mẫu này nối trực tiếp hình học lập thể với cơ chế.
-
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Hóa lập thể của phản ứng là bằng chứng về cơ chế** đặt vấn đề; **Độ dư đối quang và thành phần hỗn hợp** đối chiếu bằng chứng, rồi **Hóa lập thể trong sinh học** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ dư đối quang và thành phần hỗn hợp
 
@@ -178,8 +150,6 @@ ee = \frac{|n_R-n_S|}{n_R+n_S}\times100\%
 
 Trong tổng hợp bất đối xứng, ee hữu ích hơn việc chỉ nói “enantiomer chính” vì nó định lượng độ chọn lọc.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Hóa lập thể trong sinh học** nối từ **Độ dư đối quang và thành phần hỗn hợp** sang **Hiệu ứng lập thể-điện tử**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hóa lập thể trong sinh học
 
 Enzyme protein được xây từ amino acid đối quang nên vị trí hoạt động là môi trường đối quang. Receptor, chất vận chuyển và enzyme chuyển hóa vì vậy có thể phân biệt enantiomer rất mạnh.
@@ -188,15 +158,11 @@ Một enantiomer thuốc có thể liên kết mục tiêu tốt hơn; enantiome
 
 Đường và amino acid cũng cho thấy sinh học lựa chọn những họ lập thể cụ thể. Tính chọn lọc này lan lên cấu trúc đại phân tử và nhận diện phân tử.
 
-> **Nối mạch:** Trong **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Hiệu ứng lập thể-điện tử** nối từ **Hóa lập thể trong sinh học** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hiệu ứng lập thể-điện tử
 
 Khả năng phản ứng không chỉ phụ thuộc cản trở lập thể. Orbital cũng phải định hướng đúng để cho hoặc nhận mật độ electron.
 
 Yêu cầu anti-periplanar của E2 là một **hiệu ứng lập thể-điện tử (stereoelectronic effect)**. Hiệu ứng anomeric trong carbohydrate cũng liên quan tương tác orbital cho–nhận. Vì vậy “cấu trúc 3D” không chỉ là vị trí nguyên tử; định hướng orbital cũng rất quan trọng.
-
-> **Nối mạch:** Ở chặng này của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Những hiểu lầm thường gặp** nối từ **Hiệu ứng lập thể-điện tử** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -215,8 +181,6 @@ Hợp chất meso là phản ví dụ rõ ràng.
 ### “Lật ghế làm nhóm thế đổi up thành down”
 
 Không. Axial/equatorial đổi, còn up/down giữ nguyên.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Đồng phân và hóa lập thể — cùng công thức, khác phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

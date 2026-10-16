@@ -38,15 +38,11 @@ Nếu tên lịch sử có Hán tự và cách đọc Hán–Việt giúp ngư�
 | Huấn Dân Chính Âm | 훈민정음 | Hunminjeongeum |
 | Chiến tranh Nhâm Thìn | 임진왜란 | Imjin War |
 
-> **Nối mạch:** Trong **Quy ước tên riêng Việt–Hàn–Anh**, **Khi nào không nên dịch cưỡng ép** nối từ **Khi nào dịch sang Hán–Việt** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khi nào không nên dịch cưỡng ép
 
 Tên hiện đại mà cách Hán–Việt ít được người Việt sử dụng hoặc khiến việc tra cứu khó hơn sẽ giữ dạng Latin hoá (romanization) làm tên chính, đồng thời vẫn kèm Hangul và tên tiếng Anh. Ví dụ: **Seoul (서울 / Seoul)**, **Gwangju (광주 / Gwangju)**, **Busan (부산 / Busan)**, **đảo Jeju (제주도 / Jeju Island)** và **Park Chung-hee (박정희 / Park Chung-hee)**.
 
 Sau lần xuất hiện đầu tiên, tài liệu có thể dùng dạng ngắn hơn nếu bối cảnh đã rõ. Tên tệp (file / 파일) vẫn giữ tiếng Anh hoặc dạng Latin hoá để đường dẫn, Git và liên kết chéo ổn định.
-
-> **Nối mạch:** Ở chặng này của **Quy ước tên riêng Việt–Hàn–Anh**, **Mô hình tư duy** tổng hợp từ **Khi nào không nên dịch cưỡng ép** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

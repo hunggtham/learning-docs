@@ -28,8 +28,6 @@ Bảng này dùng để kiểm tra **điều gì đã đổi giữa hai giai đo
 - **Institution chịu áp lực** không nhất thiết biến mất; nó có thể tái cấu trúc, đổi tên hoặc bị tầng (layer / 계층) bởi institution mới.
 - **Continuity** ngăn periodization biến thành câu chuyện “cũ chết, mới sinh”.
 
-> **Nối mạch:** Cách đọc bảng xác định điều kiện, tác nhân và hệ quả trong cùng một hàng phân tích. **Ba kiểu chuyển tiếp** dùng khung đó để phân biệt thay đổi dần, đứt gãy và tái cấu trúc.
-
 ## Ba kiểu chuyển tiếp (transition / 전이)
 
 1. **Accumulation:** sức chứa (capacity / 용량) tích lũy dần, như writing → accounting → bureaucracy.

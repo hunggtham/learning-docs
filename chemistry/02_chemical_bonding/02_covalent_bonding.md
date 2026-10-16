@@ -25,15 +25,11 @@ quá gần      → năng lượng tăng rất mạnh
 
 Khoảng cách tại cực tiểu chính là **độ dài liên kết cân bằng**.
 
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phân tử hydrogen — ví dụ tối giản** nêu quy tắc; **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** thử quy tắc trong tình huống, rồi **Mô hình cặp electron Lewis** mở rộng hệ quả.
-
 ## Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?
 
 Nếu electron tập trung giữa hai hạt nhân, lực hút electron–hạt nhân tác dụng theo hướng giữ hai hạt nhân lại gần nhau.
 
 Có thể hình dung electron density ở giữa như một “vùng keo lượng tử”, nhưng phải nhớ đây chỉ là trực giác. Bản chất chính xác đến từ nghiệm của Hamiltonian nhiều hạt.
-
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình cặp electron Lewis** nối từ **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** sang **Liên kết đơn, đôi và ba**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình cặp electron Lewis
 
@@ -63,8 +59,6 @@ Nhưng nó không trực tiếp mô tả:
 
 Vì vậy Lewis là mô hình bookkeeping rất tốt, không phải bản đồ mật độ electron thực.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Mô hình cặp electron Lewis**, **Liên kết đơn, đôi và ba** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết sigma và pi** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liên kết đơn, đôi và ba
 
 Trong biểu diễn Lewis, liên kết đơn thường tương ứng với một cặp electron dùng chung; liên kết đôi có hai cặp; liên kết ba có ba cặp.
@@ -79,8 +73,6 @@ Ví dụ giữa hai carbon:
 ```
 
 Nhưng không nên hiểu “liên kết đôi mạnh gấp đôi liên kết đơn”. Năng lượng không tăng tuyến tính vì thành phần sigma và pi có bản chất chồng phủ khác nhau.
-
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết sigma và pi** nối từ **Liên kết đơn, đôi và ba** sang **Liên kết cộng hóa trị và obitan phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết sigma và pi
 
@@ -110,8 +102,6 @@ Liên kết π hạn chế quay vì xoay quanh trục làm hai orbital p mất s
 - độ phẳng của alkene;
 - conjugation.
 
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cộng hóa trị và obitan phân tử** nối từ **Liên kết sigma và pi** sang **Bậc liên kết trong MO**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết cộng hóa trị và obitan phân tử
 
 Trong **lý thuyết obitan phân tử (molecular orbital theory)**, hai atomic orbitals có thể tổ hợp thành:
@@ -137,8 +127,6 @@ Orbital phản liên kết có nút (node / 노드) giữa hai hạt nhân và e
 
 Điều này giúp giải thích sâu hơn vì sao không phải chỉ “có electron” là tạo liên kết; **electron nằm ở orbital nào** mới quyết định hiệu ứng liên kết.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Bậc liên kết trong MO** nối từ **Liên kết cộng hóa trị và obitan phân tử** sang **HOMO và LUMO**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Bậc liên kết trong MO
 
 Một định nghĩa hữu ích:
@@ -155,8 +143,6 @@ Ví dụ này quan trọng khi giải thích:
 - trạng thái kích thích;
 - quang hóa;
 - phản ứng làm yếu liên kết.
-
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **HOMO và LUMO** nối từ **Bậc liên kết trong MO** sang **Độ phân cực của liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## HOMO và LUMO
 
@@ -180,8 +166,6 @@ Nếu hai orbital có:
 
 thì tương tác có thể mạnh hơn.
 
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **HOMO và LUMO**, **Độ phân cực của liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độ âm điện không phải đại lượng độc lập với môi trường** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Độ phân cực của liên kết
 
 Trong liên kết H–H hoặc Cl–Cl, khả năng hút electron của hai hạt nhân gần như giống nhau nên mật độ electron tương đối đối xứng.
@@ -196,8 +180,6 @@ Liên kết vẫn là cộng hóa trị nhưng có phân cực.
 
 Chênh lệch độ âm điện giúp dự đoán xu hướng, nhưng không có một ngưỡng tuyệt đối biến liên kết từ “cộng hóa trị” thành “ion”. Hai mô hình nằm trên một phổ liên tục.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Độ âm điện không phải đại lượng độc lập với môi trường** nối từ **Độ phân cực của liên kết** sang **Mômen lưỡng cực**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Độ âm điện không phải đại lượng độc lập với môi trường
 
 Giá trị độ âm điện trong bảng là mô hình hữu ích, nhưng khả năng hút electron thực tế phụ thuộc:
@@ -209,8 +191,6 @@ Giá trị độ âm điện trong bảng là mô hình hữu ích, nhưng khả
 - nhóm thế xung quanh.
 
 Do đó không nên suy mọi phân bố electron chỉ từ một bảng độ âm điện.
-
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mômen lưỡng cực** nối từ **Độ âm điện không phải đại lượng độc lập với môi trường** sang **Khả năng phân cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen lưỡng cực
 
@@ -236,8 +216,6 @@ Do đó:
 độ phân cực liên kết ≠ độ phân cực phân tử
 ```
 
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Khả năng phân cực** nối từ **Mômen lưỡng cực** sang **Năng lượng phân ly liên kết và năng lượng liên kết trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Khả năng phân cực
 
 **Khả năng phân cực (polarizability)** mô tả mức độ đám mây electron dễ bị biến dạng bởi điện trường hoặc species lân cận.
@@ -253,8 +231,6 @@ Polarizability ảnh hưởng:
 - tính chất quang học.
 
 Đây là cầu nối giữa covalent bonding và intermolecular forces.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Khả năng phân cực**, **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng liên kết và năng lượng phản ứng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Năng lượng phân ly liên kết và năng lượng liên kết trung bình
 
@@ -272,8 +248,6 @@ Trong khi đó **năng lượng liên kết trung bình (average bond enthalpy)*
 
 Hai khái niệm không nên dùng thay nhau khi cần độ chính xác cơ chế.
 
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng liên kết và năng lượng phản ứng** nối từ **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** sang **Phá liên kết đồng ly và dị ly**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Năng lượng liên kết và năng lượng phản ứng
 
 Có thể ước lượng:
@@ -287,8 +261,6 @@ Có thể ước lượng:
 Công thức giúp sửa một hiểu lầm phổ biến:
 
 > phá liên kết **cần năng lượng**; phản ứng tỏa nhiệt khi các liên kết mới hình thành giải phóng nhiều năng lượng hơn lượng cần để phá liên kết cũ.
-
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phá liên kết đồng ly và dị ly** nối từ **Năng lượng liên kết và năng lượng phản ứng** sang **Liên kết cho–nhận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phá liên kết đồng ly và dị ly
 
@@ -314,8 +286,6 @@ Môi trường dung môi ảnh hưởng rất mạnh đến heterolysis vì ion 
 
 Khác biệt này rất quan trọng trong hóa hữu cơ và cơ chế phản ứng.
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cho–nhận** nối từ **Phá liên kết đồng ly và dị ly** sang **Cộng hưởng và phi định xứ**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết cho–nhận
 
 Trong **liên kết cho–nhận (coordinate covalent bond / 배위 공유 결합)**, cả hai electron của cặp liên kết ban đầu đến từ cùng một nguyên tử theo bookkeeping Lewis.
@@ -332,8 +302,6 @@ Sau khi liên kết hình thành, không tồn tại “một loại liên kết
 
 Điều này nối Lewis acid–cơ sở (base / 기반) với coordination chemistry.
 
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cộng hưởng và phi định xứ** nối từ **Liên kết cho–nhận** sang **Năng lượng cộng hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Cộng hưởng và phi định xứ
 
 Một cấu trúc Lewis đôi khi không đủ.
@@ -343,8 +311,6 @@ Ion carbonate `CO3²⁻` có nhiều resonance contributors hợp lệ.
 Các hình này không phải phân tử nhảy qua lại giữa nhiều cấu trúc. Trạng thái thật có electron phi định xứ trên nhiều bond.
 
 Kết quả là ba liên kết C–O có độ dài gần nhau thay vì một đôi và hai đơn hoàn toàn tách biệt.
-
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng cộng hưởng** nối từ **Cộng hưởng và phi định xứ** sang **Conjugation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng cộng hưởng
 
@@ -359,8 +325,6 @@ Nó quan trọng trong:
 - amide;
 - allyl hệ thống (system / 시스템);
 - aromatic ion.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Conjugation** nối từ **Năng lượng cộng hưởng** sang **Hyperconjugation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conjugation
 
@@ -382,8 +346,6 @@ Conjugation làm thay đổi:
 
 Đây là lý do polyene dài hấp thụ ánh sáng ở wavelength dài hơn.
 
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hyperconjugation** nối từ **Conjugation** sang **Liên kết đa tâm**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Hyperconjugation
 
 **Siêu liên hợp (hyperconjugation)** là tương tác giữa orbital sigma, thường C–H/C–C, với orbital p hoặc π lân cận.
@@ -396,8 +358,6 @@ Nó góp phần giải thích:
 
 Không nên mô tả mọi xu hướng này chỉ bằng “inductive tác động (effect / 효과)”.
 
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hyperconjugation**, **Liên kết đa tâm** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hypervalency** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liên kết đa tâm
 
 Không phải mọi liên kết cộng hóa trị đều phù hợp mô hình “hai tâm–hai electron”.
@@ -405,8 +365,6 @@ Không phải mọi liên kết cộng hóa trị đều phù hợp mô hình �
 Một số phân tử electron-deficient như diborane có **liên kết ba tâm hai electron (3-center–2-electron bond)**.
 
 Điều này cho thấy octet/Lewis là mô hình rất mạnh nhưng không phải quy luật tuyệt đối của mọi compound.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hypervalency** nối từ **Liên kết đa tâm** sang **Liên kết cộng hóa trị trong chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hypervalency
 
@@ -420,8 +378,6 @@ Mô tả hiện đại thường nhấn mạnh:
 - molecular orbitals.
 
 Điều quan trọng là không gắn một hình hybridization đơn giản như lời giải vật lý tuyệt đối.
-
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hypervalency**, **Liên kết cộng hóa trị trong chất rắn** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cùng nguyên tố, topology khác, tính chất khác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết cộng hóa trị trong chất rắn
 
@@ -438,8 +394,6 @@ Tính chất của mạng phụ thuộc:
 - band cấu trúc (structure / 구조);
 - defect;
 - topology.
-
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cùng nguyên tố, topology khác, tính chất khác** nối từ **Liên kết cộng hóa trị trong chất rắn** sang **Liên kết và trạng thái kích thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cùng nguyên tố, topology khác, tính chất khác
 
@@ -460,8 +414,6 @@ thành phần hóa học không đủ
 → phải biết cấu trúc liên kết
 ```
 
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Cùng nguyên tố, topology khác, tính chất khác**, **Liên kết và trạng thái kích thích** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết và spectroscopy** mở rộng hệ quả hoặc giới hạn liên quan.
-
 ## Liên kết và trạng thái kích thích
 
 Khi phân tử hấp thụ photon, electron có thể chuyển từ orbital liên kết sang orbital phản liên kết.
@@ -477,8 +429,6 @@ Nếu bond thứ tự (order / 순서) giảm đáng kể, liên kết có thể
 
 Vì vậy bonding không chỉ quyết định cấu trúc ground trạng thái (state / 상태) mà còn quyết định phản ứng ở excited trạng thái (state / 상태).
 
-> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết và spectroscopy** nối từ **Liên kết và trạng thái kích thích** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
-
 ## Liên kết và spectroscopy
 
 Các vibration stretching/bending phụ thuộc bond stiffness và reduced mass.
@@ -492,8 +442,6 @@ Gần đúng oscillator điều hòa:
 Liên kết mạnh hơn thường có force constant lớn hơn và vibration frequency cao hơn, nhưng conjugation, hydrogen bonding và môi trường làm peak dịch chuyển.
 
 Đây là cách spectroscopy “nhìn thấy” bonding gián tiếp.
-
-> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Các hiểu lầm thường gặp** nối từ **Liên kết và spectroscopy** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -520,8 +468,6 @@ Không. Hybridization là mô hình localized bonding hữu ích; MO lý thuyế
 ### “Phá liên kết giải phóng năng lượng”
 
 Không. Phá bond cần năng lượng; quá trình tổng có thể tỏa nhiệt vì bond mới hình thành bù nhiều hơn.
-
-> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 
